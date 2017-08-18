@@ -1,18 +1,18 @@
 
-$*  PU @PU #1->0 
-VALOR 	 [vALOR] <*> <am> <ac> <unit> N M S @NPHR §DENOM #2->0 
-ECONÔMICO 	 [econômico] <prop> <*> <np-close> ADJ M S @N< #3->2 
-$*  PU @PU #4->0 
+$"  PU @PU #1->0 
+VALOR 	 [vALOR] <*1> <*> <am> <ac> <unit> N M S @NPHR §DENOM #2->0 
+ECONÔMICO 	 [econômico] <prop> <*> <*2> <np-close> ADJ M S @N< #3->2 
+$"  PU @PU #4->0 
 
 Jornal 	 [jornal] <*> <sem-r> N M S @NPHR §DENOM #5->0 
 impresso 	 [imprimir] <vH> <jh> <mv> <np-close> V PCP PAS M S @ICL-N< §ATR #6->5 
 em 	 [em] PRP @<ADVL #7->6 
 formato 	 [formato] <ac> N M S @P< §LOC #8->7 
-$*  PU @PU #9->0 
-standard 	 [standard] <nh> <np-close> ADJ M S @N< #10->8 
-$*  PU @PU #11->0 
-com 	 [com] PRP @<ADVL #12->6 
-circulação 	 [circulação] <activity> N F S @P< §ADV #13->12 
+$"  PU @PU #9->0 
+standard 	 [standard] <*1> <*2> <nh> <np-close> ADJ M S @N< #10->8 
+$"  PU @PU #11->0 
+com 	 [com] <np-long> PRP @N< #12->8 
+circulação 	 [circulação] <activity> N F S @P< §ATR #13->12 
 nacional 	 [nacional] <jh> <np-close> ADJ F S @N< #14->13 
 $.  PU @PU #15->0 
 
@@ -247,18 +247,17 @@ semanais 	 [semanal] <nh> <np-close> ADJ M P @N< #19->18
 $.  PU @PU #20->0 
 
 O 	 [o] <*> <artd> DET M S @>N #1->3 
-$*  PU @PU #2->0 
-Valor 	 [valor] <*> <am> <ac> <unit> N M S @SUBJ> §PAT #3->7 
-Econômico 	 [econômico] <prop> <*> <np-close> ADJ M S @N< #4->3 
-$*  PU @PU #5->0 
-também 	 [também] <setop> ADV @ADVL> §FOC #6->9 
-passou 	 [passar] <fmc> <aux> V PS 3S IND VFIN @FS-STA #7->0 
-a 	 [a] PRP @PRT-AUX< #8->7 
-editar 	 [editar] <vH> <mv> <uninfl> V INF 3S @ICL-AUX< §PRED #9->7 
-os 	 [o] <artd> DET M P @>N #10->12 
-seguintes 	 [seguinte] <nh> ADJ M P @>N #11->12 
-anuários 	 [anuário] <cc-r> N M P @<ACC §PAT #12->9 
-$:  PU @PU #13->0 
+$"  PU @PU #2->0 
+Valor=Econômico 	 [Valor=Econômico] <org> <*> <*1> <*2> PROP M S @SUBJ> §PAT #3->6 
+$"  PU @PU #4->0 
+também 	 [também] <setop> ADV @ADVL> §FOC #5->8 
+passou 	 [passar] <fmc> <aux> V PS 3S IND VFIN @FS-STA #6->0 
+a 	 [a] PRP @PRT-AUX< #7->6 
+editar 	 [editar] <vH> <mv> <uninfl> V INF 3S @ICL-AUX< §PRED #8->6 
+os 	 [o] <artd> DET M P @>N #9->11 
+seguintes 	 [seguinte] <nh> ADJ M P @>N #10->11 
+anuários 	 [anuário] <cc-r> N M P @<ACC §PAT #11->8 
+$:  PU @PU #12->0 
 
 $"  PU @PU #1->0 
 Executivos=de=Valor 	 [Executivos=de=Valor] <cjt-head> <tit> <*> <*1> <*2> PROP M S @NPHR §DENOM #2->0 
@@ -297,48 +296,47 @@ primeira 	 [primeiro] <NUM-ord> <jh> ADJ F S @>N #5->6
 edição 	 [edição] <act> <sem-r> N F S @P< #6->3 
 $,  PU @PU #7->0 
 afirmava 	 [afirmar] <fmc> <vH> <mv> V IMPF 3S IND VFIN @FS-STA §PRED #8->0 
-que 	 [que] <clb> <clb-fs> KS @SUB #9->15 
+que 	 [que] <clb> <clb-fs> KS @SUB #9->14 
 o 	 [o] <artd> DET M S @>N #10->12 
-$*  PU @PU #11->0 
-Valor 	 [valor] <*> <am> <ac> <unit> N M S @SUBJ> §PAT #12->15 
-Econômico 	 [econômico] <prop> <*> <np-close> ADJ M S @N< #13->12 
-$*  PU @PU #14->0 
-surgia 	 [surgir] <mv> V IMPF 3S IND VFIN @FS-<ACC §RES #15->8 
-como 	 [como] <com> <adv-rel> PRP @<ADVL #16->15 
-um 	 [um] <arti> DET M S @>N #17->18 
-jornal 	 [jornal] <asarg> <sem-r> N M S @P< §COMP #18->16 
-comprometido 	 [comprometer] <jh> <vH> <np-close> V PCP M S @N< #19->18 
-com 	 [com] <np-long> PRP @N< #20->18 
-a 	 [o] <artd> DET F S @>N #21->22 
-defesa 	 [defesa] <act> <anzo> <HH> <act-s> N F S @P< §COM #22->20 
-de 	 [de] <sam-> <np-close> PRP @N< #23->22 
-o 	 [o] <-sam> <artd> DET M S @>N #24->26 
-$"  PU @PU #25->0 
-desenvolvimento 	 [desenvolvimento] <*1> <process> <act> N M S @P< §PAT #26->23 
-de 	 [de] <sam-> <np-close> PRP @N< #27->26 
-o 	 [o] <-sam> <artd> DET M S @>N #28->29 
-mercado 	 [mercado] <inst> N M S @P< §PAT #29->27 
-de 	 [de] <np-close> PRP @N< #30->29 
-capitais 	 [capital] <*2> <mon> N M P @P< #31->30 
-$"  PU @PU #32->0 
-e 	 [e] KC @CO #33->31 
-em 	 [em] PRP @A< #34->19 
-denunciar 	 [denunciar] <vH> <mv> <uninfl> V INF 3S @ICL-P< #35->34 
-a 	 [o] <artd> DET F S @>N #36->37 
-corrupção 	 [corrupção] <cjt-head> <am> N F S @<ACC §TH #37->35 
-e 	 [e] <co-acc> KC @CO #38->37 
-a 	 [o] <artd> DET F S @>N #39->41 
-$"  PU @PU #40->0 
-incompetência 	 [incompetência] <cjt> <*1> <am> N F S @<ACC §PAT #41->37 
-em 	 [em] <sam-> PRP @<ADVL #42->35 
-o 	 [o] <-sam> <artd> DET M S @>N #43->44 
-trato 	 [trato] <f-psych> <Labs> <per> <sem-c> <talk> N M S @P< §LOC #44->42 
-de 	 [de] <sam-> <np-close> PRP @N< #45->44 
-os 	 [o] <-sam> <artd> DET M P @>N #46->47 
-assuntos 	 [assunto] <sem-c> N M P @P< #47->45 
-públicos 	 [público] <*2> <jh> <np-close> ADJ M P @N< #48->47 
-$"  PU @PU #49->0 
-$.  PU @PU #50->0 
+$"  PU @PU #11->0 
+Valor=Econômico 	 [Valor=Econômico] <tit> <*> <*1> <*2> PROP M S @SUBJ> §PAT #12->14 
+$"  PU @PU #13->0 
+surgia 	 [surgir] <mv> V IMPF 3S IND VFIN @FS-<ACC §RES #14->8 
+como 	 [como] <com> <adv-rel> PRP @<ADVL #15->14 
+um 	 [um] <arti> DET M S @>N #16->17 
+jornal 	 [jornal] <asarg> <sem-r> N M S @P< §COMP #17->15 
+comprometido 	 [comprometer] <jh> <vH> <np-close> V PCP M S @N< #18->17 
+com 	 [com] <np-long> PRP @N< #19->17 
+a 	 [o] <artd> DET F S @>N #20->21 
+defesa 	 [defesa] <act> <anzo> <HH> <act-s> N F S @P< §COM #21->19 
+de 	 [de] <sam-> <np-close> PRP @N< #22->21 
+o 	 [o] <-sam> <artd> DET M S @>N #23->25 
+$"  PU @PU #24->0 
+desenvolvimento 	 [desenvolvimento] <*1> <process> <act> N M S @P< §PAT #25->22 
+de 	 [de] <sam-> <np-close> PRP @N< #26->25 
+o 	 [o] <-sam> <artd> DET M S @>N #27->28 
+mercado 	 [mercado] <inst> N M S @P< §PAT #28->26 
+de 	 [de] <np-close> PRP @N< #29->28 
+capitais 	 [capital] <*2> <mon> N M P @P< #30->29 
+$"  PU @PU #31->0 
+e 	 [e] KC @CO #32->30 
+em 	 [em] PRP @A< #33->18 
+denunciar 	 [denunciar] <vH> <mv> <uninfl> V INF 3S @ICL-P< #34->33 
+a 	 [o] <artd> DET F S @>N #35->36 
+corrupção 	 [corrupção] <cjt-head> <am> N F S @<ACC §TH #36->34 
+e 	 [e] <co-acc> KC @CO #37->36 
+a 	 [o] <artd> DET F S @>N #38->40 
+$"  PU @PU #39->0 
+incompetência 	 [incompetência] <cjt> <*1> <am> N F S @<ACC §PAT #40->36 
+em 	 [em] <sam-> PRP @<ADVL #41->34 
+o 	 [o] <-sam> <artd> DET M S @>N #42->43 
+trato 	 [trato] <f-psych> <Labs> <per> <sem-c> <talk> N M S @P< §LOC #43->41 
+de 	 [de] <sam-> <np-close> PRP @N< #44->43 
+os 	 [o] <-sam> <artd> DET M P @>N #45->46 
+assuntos 	 [assunto] <sem-c> N M P @P< #46->44 
+públicos 	 [público] <*2> <jh> <np-close> ADJ M P @N< #47->46 
+$"  PU @PU #48->0 
+$.  PU @PU #49->0 
 
 Em 	 [em] <*> PRP @ADVL> #1->5 
 2000 	 [2000] <card> <date> <year> NUM M/F S @P< §LOC-TMP #2->1 
@@ -577,9 +575,9 @@ a 	 [o] <-sam> <artd> DET F S @>N #35->36
 parceria 	 [parceria] <HH> <com> N F S @P< #36->34 
 entre 	 [entre] <np-close> PRP @<ADVL @N< #37->32 
 o 	 [o] <artd> DET M S @>N #38->40 
-$*  PU @PU #39->0 
-Valor 	 [valor] <cjt-head> <*> <am> <ac> <unit> N M S @P< §LOC #40->37 
-$*  PU @PU #41->0 
+$"  PU @PU #39->0 
+Valor 	 [valor] <cjt-head> <prop> <*> <*1> <*2> <am> <ac> <unit> N M S @P< §LOC #40->37 
+$"  PU @PU #41->0 
 e 	 [e] <co-prparg> KC @CO #42->40 
 o 	 [o] <artd> DET M S @>N #43->44 
 Instituto=Ethos 	 [Instituto=Ethos] <cjt> <inst> <*> <foreign> PROP M S @P< £CLE §LOC #44->40 
@@ -619,34 +617,33 @@ $.  PU @PU #15->0
 Os 	 [o] <*> <artd> DET M P @>N #1->4 
 três 	 [três] <card> NUM M P @>N #2->4 
 primeiros 	 [primeiro] <NUM-ord> ADJ M P @>N #3->4 
-anos 	 [ano] <dur> <temp> <per> <unit> N M P @ADVL> §LOC-TMP #4->12 
+anos 	 [ano] <dur> <temp> <per> <unit> N M P @ADVL> §LOC-TMP #4->11 
 de 	 [de] <sam-> <np-close> PRP @N< #5->4 
 o 	 [o] <-sam> <artd> DET M S @>N #6->8 
-$*  PU @PU #7->0 
-Valor 	 [valor] <*> <am> <ac> <unit> N M S @P< #8->5 
-Econômico 	 [econômico] <prop> <*> <np-close> ADJ M S @N< #9->8 
-$*  PU @PU #10->0 
-foram 	 [ser] <fmc> <aux> V PS/MQP 3P IND VFIN @FS-STA #11->0 
-marcados 	 [marcar] <vH> <mv> V PCP PAS M P @ICL-AUX< §PRED #12->11 
-por 	 [por] PRP @<PASS #13->12 
-dificuldades 	 [dificuldade] <am> N F P @P< §AG #14->13 
-financeiras 	 [financeiro] <nh> <np-close> ADJ F P @N< #15->14 
-$,  PU @PU #16->0 
-como 	 [como] <prd> <adv-rel> <np-long> PRP @N< #17->14 
-baixa 	 [baixo] <jh> ADJ F S @>N #18->19 
-circulação 	 [circulação] <cjt-head> <asarg> <activity> N F S @P< §ROLE #19->17 
-$,  PU @PU #20->0 
-reduzida 	 [reduzido] <jh> ADJ F S @>N #21->22 
-receita 	 [receita] <cjt> <asarg> <mon> <sem-r> N F S @P< §ROLE #22->19 
-publicitária 	 [publicitário] <jh> <np-close> ADJ F S @N< #23->22 
-e 	 [e] KC @CO #24->19 
-prejuízos 	 [prejuízo] <cjt> <asarg> <sem-c> N M P @P< §ROLE #25->19 
-sucessivos 	 [sucessivo] <jh> <np-close> ADJ M P @N< #26->25 
-de 	 [de] <np-close> PRP @N< #27->25 
-2000 	 [2000] NUM M/F P @P< #28->27 
-a 	 [a] PRP @N< #29->28 
-2003 	 [2003] NUM M/F P @P< §DES #30->29 
-$.  PU @PU #31->0 
+$"  PU @PU #7->0 
+Valor=Econômico 	 [Valor=Econômico] <tit> <*> <*1> <*2> PROP M S @P< #8->5 
+$"  PU @PU #9->0 
+foram 	 [ser] <fmc> <aux> V PS/MQP 3P IND VFIN @FS-STA #10->0 
+marcados 	 [marcar] <vH> <mv> V PCP PAS M P @ICL-AUX< §PRED #11->10 
+por 	 [por] PRP @<PASS #12->11 
+dificuldades 	 [dificuldade] <am> N F P @P< §AG #13->12 
+financeiras 	 [financeiro] <nh> <np-close> ADJ F P @N< #14->13 
+$,  PU @PU #15->0 
+como 	 [como] <prd> <adv-rel> <np-long> PRP @N< #16->13 
+baixa 	 [baixo] <jh> ADJ F S @>N #17->18 
+circulação 	 [circulação] <cjt-head> <asarg> <activity> N F S @P< §ROLE #18->16 
+$,  PU @PU #19->0 
+reduzida 	 [reduzido] <jh> ADJ F S @>N #20->21 
+receita 	 [receita] <cjt> <asarg> <mon> <sem-r> N F S @P< §ROLE #21->18 
+publicitária 	 [publicitário] <jh> <np-close> ADJ F S @N< #22->21 
+e 	 [e] KC @CO #23->18 
+prejuízos 	 [prejuízo] <cjt> <asarg> <sem-c> N M P @P< §ROLE #24->18 
+sucessivos 	 [sucessivo] <jh> <np-close> ADJ M P @N< #25->24 
+de 	 [de] <np-close> PRP @N< #26->24 
+2000 	 [2000] NUM M/F P @P< #27->26 
+a 	 [a] PRP @N< #28->27 
+2003 	 [2003] NUM M/F P @P< §DES #29->28 
+$.  PU @PU #30->0 
 
 Tal 	 [tal] <*> <diff> <KOMP> DET M S @>N #1->2 
 quadro 	 [quadro] <furn> <pict> <cc-r> <sit> <HH> <sem-c> N M S @SUBJ> §AG #2->3 
@@ -849,11 +846,10 @@ de 	 [de] <np-close> PRP @N< #43->42
 jornalistas 	 [jornalista] <Hprof> N M/F P @P< §PAT #44->43 
 de 	 [de] <sam-> <np-close> PRP @N< #45->44 
 o 	 [o] <-sam> <artd> DET M S @>N #46->48 
-$*  PU @PU #47->0 
-Valor 	 [valor] <*> <am> <ac> <unit> N M S @P< #48->45 
-Econômico 	 [econômico] <prop> <*> <np-close> ADJ M S @N< #49->48 
-$*  PU @PU #50->0 
-$.  PU @PU #51->0 
+$"  PU @PU #47->0 
+Valor=Econômico 	 [Valor=Econômico] <tit> <*> <*1> <*2> PROP M S @P< #48->45 
+$"  PU @PU #49->0 
+$.  PU @PU #50->0 
 
 De=acordo 	 [de=acordo] <pp> <*> ADV @ADVL> §MNR #1->26 
 com 	 [com] PRP @A< #2->1 
