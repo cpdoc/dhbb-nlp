@@ -1,14 +1,14 @@
-# newdoc id = /Users/arademaker/work/cpdoc/dhbb/raw/6204.raw
-# # newpar
+# newdoc id = ../raw/6204.raw
+# newpar
 # sent_id = 1
-# text = *PARTIDO REPUBLICANO DEMOCRÁTICO*
-1	*	*	PUNCT	_	_	2	punct	_	SpacesBefore=\n|SpaceAfter=No
+# text = «PARTIDO REPUBLICANO DEMOCRÁTICO»
+1	«	«	PUNCT	_	_	2	punct	_	SpacesBefore=\n|SpaceAfter=No
 2	PARTIDO	Partido	PROPN	_	Gender=Masc|Number=Sing	0	root	_	_
 3	REPUBLICANO	Republicano	PROPN	_	Number=Sing	2	flat:name	_	_
 4	DEMOCRÁTICO	Democrático	PROPN	_	Number=Sing	2	flat:name	_	SpaceAfter=No
-5	*	*	PUNCT	_	_	2	punct	_	SpacesAfter=\n\n
+5	»	»	PUNCT	_	_	2	punct	_	_
 
-# # newpar
+# newpar
 # sent_id = 2
 # text = Partido político de âmbito nacional fundado em 1945 no Rio de Janeiro, então Distrito Federal, pelo educador José de Sousa Marques, ao lado de Jairo de Morais e Anselmo Páscoa.
 1	Partido	partido	NOUN	_	Gender=Masc|Number=Sing	0	root	_	_
@@ -16,7 +16,7 @@
 3	de	de	ADP	_	_	4	case	_	_
 4	âmbito	âmbito	NOUN	_	Gender=Masc|Number=Sing	1	nmod	_	_
 5	nacional	nacional	ADJ	_	Gender=Masc|Number=Sing	4	amod	_	_
-6	fundado	fundar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	1	acl	_	_
+6	fundado	fundar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	4	acl	_	_
 7	em	em	ADP	_	_	8	case	_	_
 8	1945	1945	NUM	_	NumType=Card	6	obl	_	_
 9-10	no	_	_	_	_	_	_	_	_
@@ -25,11 +25,11 @@
 11	Rio	Rio	PROPN	_	Gender=Masc|Number=Sing	6	obl	_	_
 12	de	de	ADP	_	_	13	case	_	_
 13	Janeiro	Janeiro	PROPN	_	Number=Sing	11	nmod	_	SpaceAfter=No
-14	,	,	PUNCT	_	_	6	punct	_	SpacesAfter=\n
+14	,	,	PUNCT	_	_	6	punct	_	_
 15	então	então	ADV	_	_	1	advmod	_	_
-16	Distrito	Distrito	PROPN	_	Number=Sing	1	flat:name	_	_
-17	Federal	Federal	PROPN	_	Number=Sing	1	flat:name	_	SpaceAfter=No
-18	,	,	PUNCT	_	_	21	punct	_	_
+16	Distrito	Distrito	PROPN	_	Number=Sing	15	flat:name	_	_
+17	Federal	Federal	PROPN	_	Number=Sing	15	flat:name	_	SpaceAfter=No
+18	,	,	PUNCT	_	_	15	punct	_	_
 19-20	pelo	_	_	_	_	_	_	_	_
 19	por	por	ADP	_	_	21	case	_	_
 20	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	21	det	_	_
@@ -42,8 +42,8 @@
 27-28	ao	_	_	_	_	_	_	_	_
 27	a	a	ADP	_	_	29	case	_	_
 28	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	29	det	_	_
-29	lado	lado	NOUN	_	_	1	nmod	_	_
-30	de	de	ADP	_	_	31	case	_	SpacesAfter=\n
+29	lado	lado	NOUN	_	_	21	nmod	_	_
+30	de	de	ADP	_	_	31	case	_	_
 31	Jairo	Jairo	PROPN	_	Gender=Masc|Number=Sing	29	nmod	_	_
 32	de	de	ADP	_	_	33	case	_	_
 33	Morais	Morais	PROPN	_	Number=Sing	31	nmod	_	_
@@ -54,16 +54,16 @@
 
 # sent_id = 3
 # text = Era ligado a grupos protestantes.
-1	Era	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	2	aux:pass	_	_
-2	ligado	ligar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
-3	a	o	ADP	_	_	4	case	_	_
+1	Era	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	2	cop	_	_
+2	ligado	ligar	VERB	_	Gender=Masc|Number=Sing	0	root	_	_
+3	a	a	DET	_	_	4	case	_	_
 4	grupos	grupo	NOUN	_	Gender=Masc|Number=Plur	2	obl	_	_
 5	protestantes	protestante	ADJ	_	Gender=Masc|Number=Plur	4	amod	_	SpaceAfter=No
 6	.	.	PUNCT	_	_	2	punct	_	_
 
 # sent_id = 4
 # text = Foi extinto em 1948, quando seus membros fundaram o Partido Trabalhista Democrático.
-1	Foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	aux	_	SpacesAfter=\n
+1	Foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	cop	_	_
 2	extinto	extinguir	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	0	root	_	_
 3	em	em	ADP	_	_	4	case	_	_
 4	1948	1948	NUM	_	NumType=Card	2	obl	_	SpaceAfter=No
@@ -71,14 +71,14 @@
 6	quando	quando	ADV	_	_	9	advmod	_	_
 7	seus	seu	DET	_	Gender=Masc|Number=Plur|PronType=Prs	8	det	_	_
 8	membros	membro	NOUN	_	Gender=Masc|Number=Plur	9	nsubj	_	_
-9	fundaram	fundar	VERB	_	Mood=Ind|Number=Plur|Person=3|VerbForm=Fin	2	advcl	_	_
+9	fundaram	fundar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	2	advcl	_	_
 10	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	_	_
 11	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	9	obj	_	_
-12	Trabalhista	trabalhista	PROPN	_	Number=Sing	11	flat:name	_	SpacesAfter=\n
+12	Trabalhista	trabalhista	PROPN	_	Number=Sing	11	flat:name	_	_
 13	Democrático	Democrático	PROPN	_	Number=Sing	11	flat:name	_	SpaceAfter=No
-14	.	.	PUNCT	_	_	2	punct	_	SpacesAfter=\n\n
+14	.	.	PUNCT	_	_	2	punct	_	_
 
-# # newpar
+# newpar
 # sent_id = 5
 # text = Os principais pontos de seu programa defendiam o regime federativo republicano e um governo democrático, que respeitasse a liberdade de expressão e de culto e o direito de associação e de reunião.
 1	Os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	3	det	_	_
@@ -90,25 +90,25 @@
 7	defendiam	defender	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	0	root	_	_
 8	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	9	det	_	_
 9	regime	regime	NOUN	_	Gender=Masc|Number=Sing	7	obj	_	_
-10	federativo	federativo	ADJ	_	Gender=Masc|Number=Sing	9	amod	_	SpacesAfter=\n
+10	federativo	federativo	ADJ	_	Gender=Masc|Number=Sing	9	amod	_	_
 11	republicano	republicano	ADJ	_	Gender=Masc|Number=Sing	9	amod	_	_
 12	e	e	CCONJ	_	_	14	cc	_	_
 13	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	14	det	_	_
-14	governo	governo	NOUN	_	Gender=Masc|Number=Sing	9	conj	_	_
+14	governo	governo	NOUN	_	Gender=Masc|Number=Sing	11	conj	_	_
 15	democrático	democrático	ADJ	_	Gender=Masc|Number=Sing	14	amod	_	SpaceAfter=No
-16	,	,	PUNCT	_	_	7	punct	_	_
+16	,	,	PUNCT	_	_	11	punct	_	_
 17	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	18	nsubj	_	_
-18	respeitasse	respeitar	VERB	_	Mood=Sub|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	7	acl:relcl	_	_
+18	respeitasse	respeitar	VERB	_	Mood=Sub|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	14	acl:relcl	_	_
 19	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	20	det	_	_
 20	liberdade	liberdade	NOUN	_	Gender=Fem|Number=Sing	18	obj	_	_
-21	de	de	ADP	_	_	22	case	_	SpacesAfter=\n
+21	de	de	ADP	_	_	22	case	_	_
 22	expressão	expressão	NOUN	_	Gender=Fem|Number=Sing	20	nmod	_	_
 23	e	e	CCONJ	_	_	25	cc	_	_
 24	de	de	ADP	_	_	25	case	_	_
-25	culto	culto	NOUN	_	Gender=Masc|Number=Sing|VerbForm=Part	22	conj	_	_
+25	culto	culto	NOUN	_	Gender=Masc|Number=Sing	22	conj	_	_
 26	e	e	CCONJ	_	_	28	cc	_	_
 27	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	28	det	_	_
-28	direito	direito	NOUN	_	Gender=Masc|Number=Sing	7	conj	_	_
+28	direito	direito	NOUN	_	Gender=Masc|Number=Sing	22	conj	_	_
 29	de	de	ADP	_	_	30	case	_	_
 30	associação	associação	NOUN	_	Gender=Fem|Number=Sing	28	nmod	_	_
 31	e	e	CCONJ	_	_	33	cc	_	_
@@ -119,28 +119,28 @@
 # sent_id = 6
 # text = Eram ainda reivindicados o direito de todos os indivíduos ao trabalho e aos meios de remuneração, o direito do povo à educação, a manutenção da propriedade privada, o direito dos empregados a participar nos lucros das empresas, a extinção dos latifúndios, o direito de greve e a abolição de todos os impostos sobre os gêneros de primeira necessidade, visando ao barateamento do custo de vida.
 1	Eram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	3	aux	_	_
-2	ainda	ainda	ADV	_	_	3	advmod	_	SpacesAfter=\n
+2	ainda	ainda	ADV	_	_	3	advmod	_	_
 3	reivindicados	reivindicar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part	0	root	_	_
 4	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	5	det	_	_
 5	direito	direito	NOUN	_	Gender=Masc|Number=Sing	3	obj	_	_
 6	de	de	ADP	_	_	9	case	_	_
 7	todos	todo	DET	_	Gender=Masc|Number=Plur|PronType=Tot	9	det	_	_
-8	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	7	fixed	_	_
+8	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	9	det	_	_
 9	indivíduos	indivíduo	NOUN	_	Gender=Masc|Number=Plur	5	nmod	_	_
 10-11	ao	_	_	_	_	_	_	_	_
 10	a	a	ADP	_	_	12	case	_	_
 11	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	12	det	_	_
-12	trabalho	trabalho	NOUN	_	Gender=Masc|Number=Sing	5	nmod	_	_
+12	trabalho	trabalho	NOUN	_	Gender=Masc|Number=Sing	9	nmod	_	_
 13	e	e	CCONJ	_	_	16	cc	_	_
 14-15	aos	_	_	_	_	_	_	_	_
 14	a	a	ADP	_	_	16	case	_	_
 15	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	16	det	_	_
-16	meios	meio	NOUN	_	Gender=Masc|Number=Plur	12	conj	_	SpacesAfter=\n
+16	meios	meio	NOUN	_	Gender=Masc|Number=Plur	12	conj	_	_
 17	de	de	ADP	_	_	18	case	_	_
 18	remuneração	remuneração	NOUN	_	Gender=Fem|Number=Sing	16	nmod	_	SpaceAfter=No
 19	,	,	PUNCT	_	_	3	punct	_	_
 20	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	21	det	_	_
-21	direito	direito	NOUN	_	Gender=Masc|Number=Sing	3	conj	_	_
+21	direito	direito	NOUN	_	Gender=Masc|Number=Sing	3	nsubj	_	_
 22-23	do	_	_	_	_	_	_	_	_
 22	de	de	ADP	_	_	24	case	_	_
 23	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	24	det	_	_
@@ -149,17 +149,17 @@
 25	a	a	ADP	_	_	27	case	_	_
 26	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	27	det	_	_
 27	educação	educação	NOUN	_	Gender=Fem|Number=Sing	21	nmod	_	SpaceAfter=No
-28	,	,	PUNCT	_	_	3	punct	_	_
+28	,	,	PUNCT	_	_	30	punct	_	_
 29	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	30	det	_	_
-30	manutenção	manutenção	NOUN	_	Gender=Fem|Number=Sing	3	conj	_	_
-31-32	da	_	_	_	_	_	_	_	SpacesAfter=\n
+30	manutenção	manutenção	NOUN	_	Gender=Fem|Number=Sing	21	conj	_	_
+31-32	da	_	_	_	_	_	_	_	_
 31	de	de	ADP	_	_	33	case	_	_
 32	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	33	det	_	_
 33	propriedade	propriedade	NOUN	_	Gender=Fem|Number=Sing	30	nmod	_	_
 34	privada	privado	ADJ	_	Gender=Fem|Number=Sing	33	amod	_	SpaceAfter=No
-35	,	,	PUNCT	_	_	3	punct	_	_
+35	,	,	PUNCT	_	_	37	punct	_	_
 36	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	37	det	_	_
-37	direito	direito	NOUN	_	Gender=Masc|Number=Sing	3	conj	_	_
+37	direito	direito	NOUN	_	Gender=Masc|Number=Sing	21	conj	_	_
 38-39	dos	_	_	_	_	_	_	_	_
 38	de	de	ADP	_	_	40	case	_	_
 39	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	40	det	_	_
@@ -169,14 +169,14 @@
 43-44	nos	_	_	_	_	_	_	_	_
 43	em	em	ADP	_	_	45	case	_	_
 44	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	45	det	_	_
-45	lucros	lucro	NOUN	_	Gender=Masc|Number=Plur	42	obl	_	SpacesAfter=\n
+45	lucros	lucro	NOUN	_	Gender=Masc|Number=Plur	42	obl	_	_
 46-47	das	_	_	_	_	_	_	_	_
 46	de	de	ADP	_	_	48	case	_	_
 47	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	48	det	_	_
 48	empresas	empresa	NOUN	_	Gender=Fem|Number=Plur	45	nmod	_	SpaceAfter=No
 49	,	,	PUNCT	_	_	3	punct	_	_
 50	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	51	det	_	_
-51	extinção	extinção	NOUN	_	Gender=Fem|Number=Sing	3	conj	_	_
+51	extinção	extinção	NOUN	_	Gender=Fem|Number=Sing	3	obj	_	_
 52-53	dos	_	_	_	_	_	_	_	_
 52	de	de	ADP	_	_	54	case	_	_
 53	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	54	det	_	_
@@ -187,11 +187,11 @@
 58	de	de	ADP	_	_	59	case	_	_
 59	greve	greve	NOUN	_	Gender=Fem|Number=Sing	57	nmod	_	_
 60	e	e	CCONJ	_	_	62	cc	_	_
-61	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	62	det	_	SpacesAfter=\n
-62	abolição	abolição	NOUN	_	Gender=Fem|Number=Sing	3	conj	_	_
+61	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	62	det	_	_
+62	abolição	abolição	NOUN	_	Gender=Fem|Number=Sing	51	conj	_	_
 63	de	de	ADP	_	_	66	case	_	_
 64	todos	todo	DET	_	Gender=Masc|Number=Plur|PronType=Tot	66	det	_	_
-65	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	64	fixed	_	_
+65	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	66	det	_	_
 66	impostos	imposto	NOUN	_	Gender=Masc|Number=Plur	62	nmod	_	_
 67	sobre	sobre	ADP	_	_	69	case	_	_
 68	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	69	det	_	_
@@ -199,8 +199,8 @@
 70	de	de	ADP	_	_	72	case	_	_
 71	primeira	primeiro	ADJ	_	Gender=Fem|Number=Sing|NumType=Ord	72	amod	_	_
 72	necessidade	necessidade	NOUN	_	Gender=Fem|Number=Sing	69	nmod	_	SpaceAfter=No
-73	,	,	PUNCT	_	_	74	punct	_	SpacesAfter=\n
-74	visando	visar	VERB	_	VerbForm=Ger	3	acl	_	_
+73	,	,	PUNCT	_	_	74	punct	_	_
+74	visando	visar	VERB	_	VerbForm=Ger	3	advcl	_	_
 75-76	ao	_	_	_	_	_	_	_	_
 75	a	a	ADP	_	_	77	case	_	_
 76	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	77	det	_	_
@@ -211,9 +211,9 @@
 80	custo	custo	NOUN	_	Gender=Masc|Number=Sing	77	nmod	_	_
 81	de	de	ADP	_	_	82	case	_	_
 82	vida	vida	NOUN	_	Gender=Fem|Number=Sing	80	nmod	_	SpaceAfter=No
-83	.	.	PUNCT	_	_	3	punct	_	SpacesAfter=\n\n
+83	.	.	PUNCT	_	_	3	punct	_	_
 
-# # newpar
+# newpar
 # sent_id = 7
 # text = Embora tenham sido organizados núcleos do partido nos estados de Pernambuco, Bahia, Espírito Santo e Minas Gerais, sua sede e principal centro de atuação localizou-se no Rio de Janeiro.
 1	Embora	embora	SCONJ	_	_	4	mark	_	_
@@ -228,11 +228,11 @@
 9-10	nos	_	_	_	_	_	_	_	_
 9	em	em	ADP	_	_	11	case	_	_
 10	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	11	det	_	_
-11	estados	estado	NOUN	_	Gender=Masc|Number=Plur	5	nmod	_	_
-12	de	de	ADP	_	_	13	case	_	SpacesAfter=\n
+11	estados	estado	NOUN	_	Gender=Masc|Number=Plur	4	obl	_	_
+12	de	de	ADP	_	_	13	case	_	_
 13	Pernambuco	Pernambuco	PROPN	_	Gender=Masc|Number=Sing	11	nmod	_	SpaceAfter=No
 14	,	,	PUNCT	_	_	15	punct	_	_
-15	Bahia	Bahia	PROPN	_	Gender=Fem|Number=Sing	13	conj	_	SpaceAfter=No
+15	Bahia	Bahia	PROPN	_	Gender=Masc|Number=Sing	13	conj	_	SpaceAfter=No
 16	,	,	PUNCT	_	_	17	punct	_	_
 17	Espírito	Espírito	PROPN	_	Gender=Masc|Number=Sing	13	conj	_	_
 18	Santo	Santo	PROPN	_	Number=Sing	17	flat:name	_	_
@@ -243,22 +243,22 @@
 23	sua	seu	DET	_	Gender=Fem|Number=Sing|PronType=Prs	24	det	_	_
 24	sede	sede	NOUN	_	Gender=Fem|Number=Sing	13	conj	_	_
 25	e	e	CCONJ	_	_	27	cc	_	_
-26	principal	principal	ADJ	_	Gender=Masc|Number=Sing	27	amod	_	SpacesAfter=\n
+26	principal	principal	ADJ	_	Gender=Masc|Number=Sing	27	amod	_	_
 27	centro	centro	NOUN	_	Gender=Masc|Number=Sing	13	conj	_	_
 28	de	de	ADP	_	_	29	case	_	_
 29	atuação	atuação	NOUN	_	Gender=Fem|Number=Sing	27	nmod	_	_
 30-31	localizou-se	_	_	_	_	_	_	_	_
 30	localizou	localizar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
-31	se	se	PRON	_	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	30	obj	_	_
+31	se	se	PRON	_	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	30	expl	_	_
 32-33	no	_	_	_	_	_	_	_	_
 32	em	em	ADP	_	_	34	case	_	_
 33	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	34	det	_	_
 34	Rio	Rio	PROPN	_	Gender=Masc|Number=Sing	30	obl	_	_
 35	de	de	ADP	_	_	36	case	_	_
 36	Janeiro	Janeiro	PROPN	_	Number=Sing	34	nmod	_	SpaceAfter=No
-37	.	.	PUNCT	_	_	30	punct	_	SpacesAfter=\n\n
+37	.	.	PUNCT	_	_	30	punct	_	_
 
-# # newpar
+# newpar
 # sent_id = 8
 # text = Nas eleições de 1945, a atuação do partido foi fraca, chegando a haver risco de cassação de registro pelo Tribunal Superior Eleitoral.
 1-2	Nas	_	_	_	_	_	_	_	_
@@ -275,11 +275,11 @@
 10	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	_	_
 11	partido	partido	NOUN	_	Gender=Masc|Number=Sing	8	nmod	_	_
 12	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	13	cop	_	_
-13	fraca	fraco	ADJ	_	Gender=Fem|Number=Sing	0	root	_	SpaceAfter=No
+13	fraca	fracar	VERB	_	Gender=Fem|Number=Sing	0	root	_	SpaceAfter=No
 14	,	,	PUNCT	_	_	15	punct	_	_
 15	chegando	chegar	VERB	_	VerbForm=Ger	13	advcl	_	_
 16	a	a	ADP	_	_	17	mark	_	_
-17	haver	haver	VERB	_	VerbForm=Inf	15	xcomp	_	SpacesAfter=\n
+17	haver	haver	VERB	_	VerbForm=Inf	15	xcomp	_	_
 18	risco	risco	NOUN	_	Gender=Masc|Number=Sing	17	obj	_	_
 19	de	de	ADP	_	_	20	case	_	_
 20	cassação	cassação	NOUN	_	Gender=Fem|Number=Sing	18	nmod	_	_
@@ -288,7 +288,7 @@
 23-24	pelo	_	_	_	_	_	_	_	_
 23	por	por	ADP	_	_	25	case	_	_
 24	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	25	det	_	_
-25	Tribunal	Tribunal	PROPN	_	Gender=Masc|Number=Sing	17	nmod	_	_
+25	Tribunal	Tribunal	PROPN	_	Gender=Masc|Number=Sing	17	obl	_	_
 26	Superior	Superior	PROPN	_	Number=Sing	25	flat:name	_	_
 27	Eleitoral	Eleitoral	PROPN	_	Number=Sing	25	flat:name	_	SpaceAfter=No
 28	.	.	PUNCT	_	_	13	punct	_	_
@@ -297,7 +297,7 @@
 # text = Em 1946, o grupo protestante que exercia o controle partidário foi fortalecido pela adesão de alguns paulistas, liderados pelo pastor metodista Guaraci da Silveira, que havia sido eleito deputado federal pelo Partido Trabalhista Brasileiro (PTB).
 1	Em	em	ADP	_	_	2	case	_	_
 2	1946	1946	NUM	_	NumType=Card	13	obl	_	SpaceAfter=No
-3	,	,	PUNCT	_	_	2	punct	_	SpacesAfter=\n
+3	,	,	PUNCT	_	_	2	punct	_	_
 4	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	5	det	_	_
 5	grupo	grupo	NOUN	_	Gender=Masc|Number=Sing	13	nsubj:pass	_	_
 6	protestante	protestante	ADJ	_	Gender=Masc|Number=Sing	5	amod	_	_
@@ -307,7 +307,7 @@
 10	controle	controle	NOUN	_	Gender=Masc|Number=Sing	8	obj	_	_
 11	partidário	partidário	ADJ	_	Gender=Masc|Number=Sing	10	amod	_	_
 12	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	13	aux:pass	_	_
-13	fortalecido	fortalecer	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	SpacesAfter=\n
+13	fortalecido	fortalecer	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
 14-15	pela	_	_	_	_	_	_	_	_
 14	por	por	ADP	_	_	16	case	_	_
 15	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	16	det	_	_
@@ -316,13 +316,13 @@
 18	alguns	algum	DET	_	Gender=Masc|Number=Plur|PronType=Ind	19	det	_	_
 19	paulistas	paulista	NOUN	_	Gender=Masc|Number=Plur	16	nmod	_	SpaceAfter=No
 20	,	,	PUNCT	_	_	21	punct	_	_
-21	liderados	liderar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part	16	acl	_	_
+21	liderados	liderar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	19	acl	_	_
 22-23	pelo	_	_	_	_	_	_	_	_
 22	por	por	ADP	_	_	24	case	_	_
 23	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	24	det	_	_
-24	pastor	pastor	NOUN	_	Gender=Masc|Number=Sing	21	obl	_	_
+24	pastor	pastor	NOUN	_	Gender=Masc|Number=Sing	21	obl:agent	_	_
 25	metodista	metodista	ADJ	_	Gender=Masc|Number=Sing	24	amod	_	_
-26	Guaraci	Guaraci	PROPN	_	Gender=Masc|Number=Sing	24	appos	_	SpacesAfter=\n
+26	Guaraci	Guaraci	PROPN	_	Gender=Masc|Number=Sing	24	appos	_	_
 27-28	da	_	_	_	_	_	_	_	_
 27	de	de	ADP	_	_	29	case	_	_
 28	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	29	det	_	_
@@ -330,14 +330,14 @@
 30	,	,	PUNCT	_	_	21	punct	_	_
 31	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	34	nsubj:pass	_	_
 32	havia	haver	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	34	aux	_	_
-33	sido	ser	AUX	_	Gender=Masc|Number=Sing|VerbForm=Part	34	aux:pass	_	_
-34	eleito	eleger	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	16	acl:relcl	_	_
-35	deputado	deputado	NOUN	_	Gender=Masc|Number=Sing	34	obj	_	_
+33	sido	ser	AUX	_	VerbForm=Part	34	aux:pass	_	_
+34	eleito	eleger	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	24	acl:relcl	_	_
+35	deputado	deputado	NOUN	_	Gender=Masc|Number=Sing	34	nsubj:pass	_	_
 36	federal	federal	ADJ	_	Gender=Masc|Number=Sing	35	amod	_	_
 37-38	pelo	_	_	_	_	_	_	_	_
 37	por	por	ADP	_	_	39	case	_	_
 38	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	39	det	_	_
-39	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	34	obl:agent	_	SpacesAfter=\n
+39	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	35	nmod	_	_
 40	Trabalhista	trabalhista	PROPN	_	Number=Sing	39	flat:name	_	_
 41	Brasileiro	brasileiro	PROPN	_	Number=Sing	39	flat:name	_	_
 42	(	(	PUNCT	_	_	43	punct	_	SpaceAfter=No
@@ -355,8 +355,8 @@
 5-6	tornou-se	_	_	_	_	_	_	_	_
 5	tornou	tornar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 6	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	5	expl	_	_
-7	então	então	ADV	_	_	5	advmod	_	SpacesAfter=\n
-8	presidente	presidente	NOUN	_	Gender=Masc|Number=Sing	14	appos	_	_
+7	então	então	ADV	_	_	5	advmod	_	_
+8	presidente	presidente	NOUN	_	Gender=Masc|Number=Sing	5	nsubj	_	_
 9-10	do	_	_	_	_	_	_	_	_
 9	de	de	ADP	_	_	11	case	_	_
 10	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	_	_
@@ -370,24 +370,24 @@
 17	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	18	det	_	_
 18	Rio	Rio	PROPN	_	Gender=Masc|Number=Sing	27	nmod	_	_
 19	de	de	ADP	_	_	20	case	_	_
-20	Janeiro	Janeiro	PROPN	_	Number=Sing	18	nmod	_	SpacesAfter=\n
+20	Janeiro	Janeiro	PROPN	_	Number=Sing	18	nmod	_	_
 21	seu	seu	DET	_	Gender=Masc|Number=Sing|PronType=Prs	22	det	_	_
 22	membro	membro	NOUN	_	Gender=Masc|Number=Sing	27	nsubj	_	_
 23	mais	mais	ADV	_	_	24	advmod	_	_
 24	destacado	destacado	ADJ	_	Gender=Masc|Number=Sing|VerbForm=Part	22	amod	_	_
-25	continuasse	continuasse	NOUN	_	Mood=Sub|Number=Sing|Person=1|Tense=Imp|VerbForm=Fin	22	nmod:npmod	_	_
+25	continuasse	continuasse	NOUN	_	Mood=Sub|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	22	nmod:npmod	_	_
 26	sendo	ser	AUX	_	VerbForm=Ger	27	cop	_	_
 27	José	José	PROPN	_	Gender=Masc|Number=Sing	5	dep	_	_
 28	de	de	ADP	_	_	29	case	_	_
 29	Sousa	Sousa	PROPN	_	Number=Sing	27	nmod	_	_
 30	Marques	Marques	PROPN	_	Number=Sing	29	flat:name	_	SpaceAfter=No
-31	.	.	PUNCT	_	_	5	punct	_	SpacesAfter=\n\n
+31	.	.	PUNCT	_	_	5	punct	_	_
 
-# # newpar
+# newpar
 # sent_id = 11
 # text = A despeito das novas adesões, o desempenho dos republicanos democráticos nas eleições de 1947 foi mais uma vez inexpressivo.
-1	A	o	DET	_	_	2	det	_	_
-2	despeito	despeito	NOUN	_	_	0	root	_	_
+1	A	o	DET	_	_	2	case	_	_
+2	despeito	despeito	NOUN	_	_	23	obl	_	_
 3-4	das	_	_	_	_	_	_	_	_
 3	de	de	ADP	_	_	6	case	_	_
 4	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	6	det	_	_
@@ -399,7 +399,7 @@
 10-11	dos	_	_	_	_	_	_	_	_
 10	de	de	ADP	_	_	12	case	_	_
 11	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	12	det	_	_
-12	republicanos	republicano	NOUN	_	Gender=Masc|Number=Plur	9	nmod	_	SpacesAfter=\n
+12	republicanos	republicano	NOUN	_	Gender=Masc|Number=Plur	9	nmod	_	_
 13	democráticos	democrático	ADJ	_	Gender=Masc|Number=Plur	12	amod	_	_
 14-15	nas	_	_	_	_	_	_	_	_
 14	em	em	ADP	_	_	16	case	_	_
@@ -411,14 +411,14 @@
 20	mais	mais	NOUN	_	_	23	obl	_	_
 21	uma	uma	ADP	_	NumType=Card	22	case	_	_
 22	vez	vez	NOUN	_	Gender=Masc|Number=Sing	20	nmod	_	_
-23	inexpressivo	inexpressivo	ADJ	_	Gender=Masc|Number=Sing	2	acl:relcl	_	SpaceAfter=No
-24	.	.	PUNCT	_	_	2	punct	_	SpacesAfter=\n
+23	inexpressivo	inexpressivo	ADJ	_	Gender=Masc|Number=Sing	0	root	_	SpaceAfter=No
+24	.	.	PUNCT	_	_	23	punct	_	_
 
 # sent_id = 12
 # text = Ameaçado de extinção devido à sua fragilidade eleitoral, o partido decidiu reformular-se, abrindo seus quadros a membros não protestantes.
-1	Ameaçado	ameaçado	NOUN	_	Gender=Masc|Number=Sing|VerbForm=Part	13	obl	_	_
+1	Ameaçado	ameaçar	VERB	_	Gender=Masc|Number=Sing	13	dep	_	_
 2	de	de	ADP	_	_	3	case	_	_
-3	extinção	extinção	NOUN	_	Gender=Fem|Number=Sing	1	nmod	_	_
+3	extinção	extinção	NOUN	_	Gender=Fem|Number=Sing	1	obl	_	_
 4	devido	devido	ADV	_	Gender=Masc|Number=Sing|VerbForm=Part	3	advmod	_	_
 5-6	à	_	_	_	_	_	_	_	_
 5	a	a	ADP	_	_	8	case	_	_
@@ -428,20 +428,20 @@
 9	eleitoral	eleitoral	ADJ	_	Gender=Fem|Number=Sing	8	amod	_	SpaceAfter=No
 10	,	,	PUNCT	_	_	1	punct	_	_
 11	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	12	det	_	_
-12	partido	partido	NOUN	_	Gender=Masc|Number=Sing	13	nsubj	_	SpacesAfter=\n
+12	partido	partido	NOUN	_	Gender=Masc|Number=Sing	13	nsubj	_	_
 13	decidiu	decidir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 14-15	reformular-se	_	_	_	_	_	_	_	SpaceAfter=No
 14	reformular	reformular	VERB	_	VerbForm=Inf	13	xcomp	_	_
-15	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	14	expl	_	_
+15	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	14	obj	_	_
 16	,	,	PUNCT	_	_	17	punct	_	_
-17	abrindo	abrir	VERB	_	VerbForm=Ger	13	advcl	_	_
+17	abrindo	abrir	VERB	_	VerbForm=Ger	14	advcl	_	_
 18	seus	seu	DET	_	Gender=Masc|Number=Plur|PronType=Prs	19	det	_	_
 19	quadros	quadro	NOUN	_	Gender=Masc|Number=Plur	17	obj	_	_
 20	a	a	ADP	_	_	21	case	_	_
 21	membros	membro	NOUN	_	Gender=Masc|Number=Plur	17	obl	_	_
 22	não	não	ADV	_	Polarity=Neg	23	advmod	_	_
 23	protestantes	protestante	ADJ	_	Gender=Masc|Number=Plur	21	amod	_	SpaceAfter=No
-24	.	.	PUNCT	_	_	13	punct	_	SpacesAfter=\n
+24	.	.	PUNCT	_	_	13	punct	_	_
 
 # sent_id = 13
 # text = Em conseqüência dessa reformulação, o Partido Republicano Democrático foi extinto, surgindo em seu lugar o Partido Trabalhista Democrático.
@@ -455,7 +455,7 @@
 7	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	8	det	_	_
 8	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	12	nsubj	_	_
 9	Republicano	Republicano	PROPN	_	Number=Sing	8	flat:name	_	_
-10	Democrático	Democrático	PROPN	_	Number=Sing	8	flat:name	_	SpacesAfter=\n
+10	Democrático	Democrático	PROPN	_	Number=Sing	8	flat:name	_	_
 11	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	12	aux	_	_
 12	extinto	extinguir	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	0	root	_	SpaceAfter=No
 13	,	,	PUNCT	_	_	14	punct	_	_
@@ -464,8 +464,8 @@
 16	seu	seu	DET	_	Gender=Masc|Number=Sing|PronType=Prs	17	det	_	_
 17	lugar	lugar	NOUN	_	Gender=Masc|Number=Sing	14	obl	_	_
 18	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	19	det	_	_
-19	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	14	obj	_	_
+19	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	17	appos	_	_
 20	Trabalhista	trabalhista	PROPN	_	Number=Sing	19	flat:name	_	_
 21	Democrático	Democrático	PROPN	_	Number=Sing	19	flat:name	_	SpaceAfter=No
-22	.	.	PUNCT	_	_	12	punct	_	SpacesAfter=\n
+22	.	.	PUNCT	_	_	12	punct	_	_
 

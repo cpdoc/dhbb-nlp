@@ -41,17 +41,10 @@ Para separar metadados:
   done
 #+END_SRC
 
-* Executing Freeling
+* The UDP directory
 
-Using =screen=:
+awk -F \: 'BEGIN {OFS="|"} {n=split($2, arr, /\|/); for (i=1;i<=n;++i) print $1, NR, arr[i] }' nomes.txt > nomes-splited.txt
 
-#+BEGIN_SRC sh
-analyze -f pt.cfg --server --port 50005
-ls *.raw > lixo
-cat lixo | parallel -j 3 --results out analyzer_client 50005
-#+END_SRC
-
-* Executing UDPipe
 
 #+BEGIN_SRC bash
 time find ~/work/cpdoc/dhbb/raw -name "*.raw" | xargs ./udpipe --tokenize --tag --parse --outfile=../../cpdoc/dhbb/udp/{}.conllu ../udpipe-ud-2.0-conll17-170315/models/portuguese-ud-2.0-conll17-170315.udpipe
