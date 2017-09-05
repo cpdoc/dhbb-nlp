@@ -2,7 +2,7 @@
 (ql:quickload :cl-conllu)
 
 
-;; problems with misc field
+;; problems in the misc field
 
 (defun fix-sentence (s)
   (dolist (alist (list (sentence-tokens s) (sentence-mtokens s)) s)
