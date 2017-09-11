@@ -2,6 +2,32 @@
 (ql:quickload :cl-conllu)
 
 
+(defun linerialize (sentence token filter &key (direction :both))
+  (let ((childs (token-childs token sentence :fn-filter filter))
+	pre pos)
+    (dolist (c childs)
+      (if (< (token-id c) (token-id token))
+	  (push c pre)
+	  (push c pos)))
+    (let ((lhs (mappend (lambda (tk)
+			  (linerialize sentence tk filter :direction :both))
+			(reverse pre)))
+	  (rhs (mappend (lambda (tk)
+			  (linerialize sentence tk filter :direction :both))
+			(reverse pos))))
+      (case direction
+	(:both  (append lhs (list token) rhs))
+	(:lhs   (append lhs (list token)))
+	(:rhs   (cons token rhs))))))
+
+
+(defun get-phrases (sent fn-filter fn-key filter-rel &key (direction :both))
+  (mapcar (lambda (atk)
+	    (mapcar fn-key (linerialize sent atk filter-rel :direction direction)))
+	  (remove-if-not fn-filter (sentence-tokens sent))))
+
+
+
 ;; problems in the misc field
 
 (defun fix-sentence (s)
