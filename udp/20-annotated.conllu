@@ -6,7 +6,7 @@
 2	Dorival	Dorival	PROPN	_	Gender=Masc|Number=Sing	7	nsubj	_	_
 3	Masci	Masci	PROPN	_	Number=Sing	2	flat:name	_	_
 4	de	de	ADP	_	_	5	case	_	_
-5	Abreu	Abreu	PROPN	_	Number=Sing	2	nmod	_	SpaceAfter=No
+5	Abreu	Abreu	PROPN	_	Number=Sing	2	flat:name	_	SpaceAfter=No
 6	*	*	PUNCT	_	_	2	punct	_	_
 7	nasceu	nascer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 8-9	na	_	_	_	_	_	_	_	_
@@ -23,18 +23,18 @@
 18	de	de	ADP	_	_	19	case	_	_
 19	1933	1933	NUM	_	NumType=Card	17	nmod	_	SpaceAfter=No
 20	,	,	PUNCT	_	_	21	punct	_	_
-21	filho	filho	NOUN	_	Gender=Masc|Number=Sing	7	appos	_	_
+21	filho	filho	NOUN	_	Gender=Masc|Number=Sing	2	appos	_	&vinculo-fam
 22	de	de	ADP	_	_	23	case	_	_
 23	José	José	PROPN	_	Gender=Masc|Number=Sing	21	nmod	_	_
 24	Guimarães	Guimarães	PROPN	_	Number=Sing	23	flat:name	_	_
 25	de	de	ADP	_	_	26	case	_	_
-26	Abreu	Abreu	PROPN	_	Number=Sing	23	nmod	_	_
+26	Abreu	Abreu	PROPN	_	Number=Sing	23	flat:name	_	_
 27	e	e	CCONJ	_	_	29	cc	_	_
 28	de	de	ADP	_	_	29	case	_	_
 29	Joana	Joana	PROPN	_	Gender=Fem|Number=Sing	23	conj	_	_
 30	Masci	Masci	PROPN	_	Number=Sing	29	flat:name	_	_
 31	de	de	ADP	_	_	32	case	_	_
-32	Abreu	Abreu	PROPN	_	Number=Sing	29	nmod	_	SpaceAfter=No
+32	Abreu	Abreu	PROPN	_	Number=Sing	29	flat:name	_	SpaceAfter=No
 33	.	.	PUNCT	_	_	7	punct	_	_
 
 # sent_id = 2
@@ -42,14 +42,14 @@
 1	Seu	seu	DET	_	Gender=Masc|Number=Sing|PronType=Prs	2	det	_	_
 2	irmão	irmão	NOUN	_	Gender=Masc|Number=Sing	20	nsubj	_	SpaceAfter=No
 3	,	,	PUNCT	_	_	4	punct	_	_
-4	José	José	PROPN	_	Gender=Masc|Number=Sing	2	appos	_	_
+4	José	José	PROPN	_	Gender=Masc|Number=Sing	2	appos	_	&vinculo-fam-inv
 5	Masci	Masci	PROPN	_	Number=Sing	4	flat:name	_	_
 6	de	de	ADP	_	_	7	case	_	_
-7	Abreu	Abreu	PROPN	_	Number=Sing	4	nmod	_	SpaceAfter=No
+7	Abreu	Abreu	PROPN	_	Number=Sing	4	flat:name	_	SpaceAfter=No
 8	,	,	PUNCT	_	_	4	punct	_	_
 9	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	20	cop	_	_
 10	deputado	deputado	NOUN	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	20	nsubj	_	_
-11	federal	federal	ADJ	_	Gender=Masc|Number=Sing	10	amod	_	_
+11	federal	federal	ADJ	_	Gender=Masc|Number=Sing	10	compound	_	_
 12	por	por	ADP	_	_	13	case	_	_
 13	São	São	PROPN	_	Gender=Masc|Number=Sing	10	nmod	_	_
 14	Paulo	Paulo	PROPN	_	Number=Sing	13	flat:name	_	_
@@ -98,11 +98,11 @@
 5	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	6	det	_	_
 6	Faculdade	Faculdade	PROPN	_	Gender=Fem|Number=Sing	3	nmod	_	_
 7	de	de	ADP	_	_	8	case	_	_
-8	Direito	Direito	PROPN	_	Number=Sing	6	nmod	_	_
+8	Direito	Direito	PROPN	_	Number=Sing	6	compound	_	_
 9	de	de	ADP	_	_	10	case	_	_
-10	Bragança	Bragança	PROPN	_	Number=Sing	8	nmod	_	_
+10	Bragança	Bragança	PROPN	_	Number=Sing	6	compound	_	_
 11	(	(	PUNCT	_	_	12	punct	_	SpaceAfter=No
-12	SP	SP	PROPN	_	Gender=Masc|Number=Sing	6	appos	_	SpaceAfter=No
+12	SP	SP	PROPN	_	Gender=Masc|Number=Sing	10	appos	_	&loc|SpaceAfter=No
 13	)	)	PUNCT	_	_	12	punct	_	SpaceAfter=No
 14	,	,	PUNCT	_	_	1	punct	_	_
 15	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	17	nsubj	_	_
@@ -138,9 +138,9 @@
 5	elegeu	eleger	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 6	se	se	PRON	_	_	5	expl	_	_
 7	deputado	deputado	NOUN	_	Gender=Masc|Number=Sing	5	obl	_	_
-8	federal	federal	ADJ	_	Gender=Masc|Number=Sing	7	amod	_	_
+8	federal	federal	ADJ	_	Gender=Masc|Number=Sing	7	compound	_	_
 9	por	por	ADP	_	_	7	case	_	_
-10	São	São	PROPN	_	Gender=Masc|Number=Sing	7	appos	_	_
+10	São	São	PROPN	_	Gender=Masc|Number=Sing	7	nmod	_	_
 11	Paulo	Paulo	PROPN	_	Number=Sing	10	flat:name	_	_
 12-13	na	_	_	_	_	_	_	_	_
 12	em	em	ADP	_	_	14	case	_	_
@@ -150,13 +150,13 @@
 15	de	de	ADP	_	_	17	case	_	_
 16	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	17	det	_	_
 17	Movimento	Movimento	PROPN	_	Gender=Masc|Number=Sing	14	nmod	_	_
-18	Democrático	Democrático	PROPN	_	Number=Sing	17	flat:name	_	_
-19	Brasileiro	Brasileiro	PROPN	_	Number=Sing	17	flat:name	_	_
+18	Democrático	Democrático	PROPN	_	Number=Sing	17	compound	_	_
+19	Brasileiro	Brasileiro	PROPN	_	Number=Sing	17	compound	_	_
 20	(	(	PUNCT	_	_	21	punct	_	SpaceAfter=No
-21	MDB	MDB	PROPN	_	Gender=Masc|Number=Sing	17	appos	_	SpaceAfter=No
+21	MDB	MDB	PROPN	_	Gender=Masc|Number=Sing	17	appos	_	&ident|SpaceAfter=No
 22	)	)	PUNCT	_	_	21	punct	_	SpaceAfter=No
 23	,	,	PUNCT	_	_	24	punct	_	_
-24	partido	partido	NOUN	_	Gender=Masc|Number=Sing	17	appos	_	_
+24	partido	partido	NOUN	_	Gender=Masc|Number=Sing	17	appos	_	&attrib
 25	de	de	ADP	_	_	26	case	_	_
 26	oposição	oposição	NOUN	_	Gender=Fem|Number=Sing	24	nmod	_	_
 27-28	ao	_	_	_	_	_	_	_	_
@@ -194,11 +194,11 @@
 3	de	de	ADP	_	_	5	case	_	_
 4	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	5	det	_	_
 5	Ato	ato	PROPN	_	Gender=Masc|Number=Sing	2	nmod	_	_
-6	Institucional	Institucional	ADJ	_	Number=Sing	5	amod	_	_
+6	Institucional	Institucional	ADJ	_	Number=Sing	5	compound	_	_
 7	nº	nº	NOUN	_	Gender=Masc|Number=Sing	5	nmod:npmod	_	_
-8	5	5	NUM	_	NumType=Card	7	nummod	_	_
+8	5	5	NUM	_	NumType=Card	5	compound	_	_
 9	(	(	PUNCT	_	_	10	punct	_	SpaceAfter=No
-10	13/12/68	13/12/68	NUM	_	NumType=Card	5	appos	_	SpaceAfter=No
+10	13/12/68	13/12/68	NUM	_	NumType=Card	5	appos	_	&date|SpaceAfter=No
 11	)	)	PUNCT	_	_	10	punct	_	SpaceAfter=No
 12	,	,	PUNCT	_	_	2	punct	_	_
 13	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	14	aux:pass	_	_
@@ -247,7 +247,7 @@
 22	em	em	ADP	_	_	24	case	_	_
 23	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	24	det	_	_
 24	siderúrgica	siderúrgica	NOUN	_	Gender=Fem|Number=Sing	21	obl	_	_
-25	Sidelpa	Sidelpa	PROPN	_	Gender=Fem|Number=Sing	24	appos	_	_
+25	Sidelpa	Sidelpa	PROPN	_	Gender=Fem|Number=Sing	24	appos	_	&role-inv
 26	e	e	CCONJ	_	_	29	cc	_	_
 27-28	na	_	_	_	_	_	_	_	_
 27	em	em	ADP	_	_	29	case	_	_
@@ -257,10 +257,10 @@
 31	fundição	fundição	NOUN	_	Gender=Fem|Number=Sing	29	nmod	_	_
 32	de	de	ADP	_	_	33	case	_	_
 33	aço	aço	NOUN	_	Gender=Masc|Number=Sing	31	nmod	_	_
-34	Eletroaço	Eletroaço	PROPN	_	Gender=Masc|Number=Sing	33	appos	_	_
+34	Eletroaço	Eletroaço	PROPN	_	Gender=Masc|Number=Sing	29	appos	_	&role-inv
 35	Marconi	Marconi	PROPN	_	Number=Sing	34	flat:name	_	SpaceAfter=No
 36	,	,	PUNCT	_	_	37	punct	_	_
-37	ambas	ambos	DET	_	Gender=Fem|Number=Plur|PronType=Tot	33	appos	_	_
+37	ambas	ambos	DET	_	Gender=Fem|Number=Plur|PronType=Tot	24	appos	_	&attrib
 38	de	de	ADP	_	_	40	case	_	_
 39	sua	seu	DET	_	Gender=Fem|Number=Sing|PronType=Prs	40	det	_	_
 40	propriedade	propriedade	NOUN	_	Gender=Fem|Number=Sing	37	nmod	_	SpaceAfter=No
@@ -329,11 +329,11 @@
 5	de	de	ADP	_	_	7	case	_	_
 6	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	7	det	_	_
 7	recriado	recriado	NOUN	_	Gender=Masc|Number=Sing|VerbForm=Part	4	nmod	_	_
-8	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	7	appos	_	_
-9	Trabalhista	trabalhista	PROPN	_	Number=Sing	8	flat:name	_	_
-10	Nacional	Nacional	PROPN	_	Number=Sing	8	flat:name	_	_
+8	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	4	obl	_	_
+9	Trabalhista	trabalhista	PROPN	_	Number=Sing	8	compound	_	_
+10	Nacional	Nacional	PROPN	_	Number=Sing	8	compound	_	_
 11	(	(	PUNCT	_	_	12	punct	_	SpaceAfter=No
-12	PTN	PTN	PROPN	_	Gender=Masc|Number=Sing	8	appos	_	SpaceAfter=No
+12	PTN	PTN	PROPN	_	Gender=Masc|Number=Sing	8	appos	_	&ident|SpaceAfter=No
 13	)	)	PUNCT	_	_	12	punct	_	SpaceAfter=No
 14	,	,	PUNCT	_	_	15	punct	_	_
 15	assumindo	assumir	VERB	_	VerbForm=Ger	4	advcl	_	_
@@ -390,7 +390,7 @@
 7	por	por	ADP	_	_	9	case	_	_
 8	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	9	det	_	_
 9	PTN	PTN	PROPN	_	Gender=Masc|Number=Sing	6	obl:agent	_	_
-10	candidato	candidato	NOUN	_	Gender=Masc|Number=Sing	9	appos	_	_
+10	candidato	candidato	NOUN	_	Gender=Masc|Number=Sing	6	nsubj	_	_
 11-12	à	_	_	_	_	_	_	_	_
 11	a	a	ADP	_	_	13	case	_	_
 12	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	13	det	_	_
@@ -421,7 +421,7 @@
 # text = Dorival de Abreu casou-se com Teresa Oliveira de Abreu.
 1	Dorival	Dorival	NOUN	_	Gender=Masc|Number=Sing	4	nsubj	_	_
 2	de	de	ADP	_	_	3	case	_	_
-3	Abreu	Abreu	PROPN	_	Number=Sing	1	nmod	_	_
+3	Abreu	Abreu	PROPN	_	Number=Sing	1	flat:name	_	_
 4-5	casou-se	_	_	_	_	_	_	_	_
 4	casou	caser	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 5	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Plur|Person=3|PronType=Prs	4	expl	_	_
@@ -429,6 +429,6 @@
 7	Teresa	Teresa	PROPN	_	Gender=Fem|Number=Sing	4	obl	_	_
 8	Oliveira	Oliveira	PROPN	_	Number=Sing	7	flat:name	_	_
 9	de	de	ADP	_	_	10	case	_	_
-10	Abreu	Abreu	PROPN	_	Number=Sing	7	nmod	_	SpaceAfter=No
+10	Abreu	Abreu	PROPN	_	Number=Sing	7	flat:name	_	SpaceAfter=No
 11	.	.	PUNCT	_	_	4	punct	_	_
 
