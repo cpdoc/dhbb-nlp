@@ -1,7 +1,6 @@
 
 (ql:quickload :cl-conllu)
 
-
 ;; names: sequence of names from a gazette
 
 (defun expand-names (names &optional res)
@@ -17,10 +16,9 @@
 			  (t (cons (car names) res))))))
 
 (defun sentences ()
-  (mapcar (lambda (s) (mapcar #'token-form (sentence-tokens s)))
-	  (reduce (lambda (l a) (append l (read-conllu a)))
-		  (directory #P"~/work/cpdoc/dhbb-nlp/udp/21*.conllu")
-		  :initial-value nil)))
+  (reduce (lambda (l a) (append l (read-conllu a)))
+	  (append (directory "?.conllu") (directory "1?.conllu") (directory "2?.conllu"))
+	  :initial-value nil))
 
 (defun names ()
   (with-open-file (in #P"~/work/cpdoc/dhbb/dic/pessoa-individuo.txt")
@@ -44,11 +42,20 @@
   (let ((sents (sentences))
 	(names (names)))
     (time (loop for n in names
-		for v = (remove-if-not (lambda (sent)
-					 (search n sent :test #'equal))
-				       sents)
+		for v = (remove-if #'null (mapcar (lambda (sent)
+						    (let* ((tks (sentence-tokens sent))
+							   (pos (search n tks
+									:test #'equal
+								       :key (lambda (v)
+									      (if (stringp v)
+										  v
+										  (token-form v))))))
+						      (and pos
+							   (cons (sentence-text sent)
+								 (subseq tks pos (+ pos (length n)))))))
+						  sents))
 		when v
-		collect (list n (length v))))))
+		collect (cons n v)))))
 
 
 (defun find-occurrences ()
