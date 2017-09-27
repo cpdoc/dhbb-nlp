@@ -20,8 +20,8 @@
 	  (append (directory "?.conllu") (directory "1?.conllu") (directory "2?.conllu"))
 	  :initial-value nil))
 
-(defun names ()
-  (with-open-file (in #P"~/work/cpdoc/dhbb/dic/pessoa-individuo.txt")
+(defun names (file)
+  (with-open-file (in file)
     (loop for line = (read-line in nil nil)
 	  while line
 	  collect (expand-names (cl-ppcre:split "[ ]+"
@@ -38,9 +38,9 @@
 			   trigger)))))))
 
 
-(defun find-occurrences ()
+(defun find-occurrences (file)
   (let ((sents (sentences))
-	(names (names)))
+	(names (names file)))
     (time (loop for n in names
 		for v = (remove-if #'null (mapcar (lambda (sent)
 						    (let* ((tks (sentence-tokens sent))
