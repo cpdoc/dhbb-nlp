@@ -308,9 +308,8 @@ one file at time, which prevents stack overflow."
                          token-id
                          (if (and (= token-id
                                      (cl-conllu:token-head tk))
-                                  (not (equal
-                                        (cl-conllu:token-deprel tk)
-                                        "appos")))
+                                  (member (cl-conllu:token-deprel tk)
+                                        (list "det" "case" "nmod" "flat:name" "compound" "fixed" "amod" "nummod" "conj" "cc") :test #'equal))
                              (cons tk related)
                              related)))))
 
@@ -338,12 +337,12 @@ one file at time, which prevents stack overflow."
           (sent-get-appos sent)))
 
 (defun filter-n-order-tks (tk-sent)
-  (mapcar #'cl-conllu:token-form
+  (format nil "~{~a~^ ~}" (mapcar #'cl-conllu:token-form
           (remove-if (lambda (tk)
                (equal (cl-conllu:token-upostag tk) "PUNCT"))
                (sort tk-sent (lambda (tk1 tk2)
                                (< (cl-conllu:token-id tk1)
-                                  (cl-conllu:token-id tk2)))))))
+                                  (cl-conllu:token-id tk2))))))))
 
 (defun dir-get-appos-triples (file-paths &optional triples)
   (if (endp file-paths)
