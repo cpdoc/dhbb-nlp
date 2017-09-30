@@ -27,6 +27,7 @@
 (ql:quickload :cl-conllu)
 (ql:quickload :split-sequence)
 (ql:quickload :alexandria)
+(ql:quickload :cl-ppcre)
 
 (load (compile-file #P"~/git/ed-2017-2/src/projeto/rec-entities.lisp"))
 
@@ -320,9 +321,12 @@ one file at time, which prevents stack overflow."
                     (aux-get-related-tks sent token-id)))))
 
 (defun get-appos-triple (sent head appos)
-  (list* (cl-conllu:token-misc appos)
-         (list (get-related-tks sent head)
-               (get-related-tks sent appos))))
+  (list* (cl-ppcre:scan-to-strings "&[a-z-]+|\\?"
+                                   (cl-conllu:token-misc appos))
+         (list (filter-n-order-tks (get-related-tks
+                                               sent head))
+               (filter-n-order-tks (get-related-tks
+                                               sent appos)))))
 
 (defun sent-get-appos-triple (sent)
   (mapcar (lambda (appos-tk)
@@ -332,6 +336,29 @@ one file at time, which prevents stack overflow."
                                                appos-tk))
                               appos-tk))
           (sent-get-appos sent)))
+
+(defun filter-n-order-tks (tk-sent)
+  (mapcar #'cl-conllu:token-form
+          (remove-if (lambda (tk)
+               (equal (cl-conllu:token-upostag tk) "PUNCT"))
+               (sort tk-sent (lambda (tk1 tk2)
+                               (< (cl-conllu:token-id tk1)
+                                  (cl-conllu:token-id tk2)))))))
+
+(defun dir-get-appos-triples (file-paths &optional triples)
+  (if (endp file-paths)
+      triples
+      (let* ((file-path (first file-paths))
+             (file-id (file-namestring file-path))
+             (raw-sents (cl-conllu:read-file file-path))
+             (tk-sents (cons-tokens-from-sentences raw-sents)))
+      (dir-get-appos-triples (rest file-paths)
+                             (cons (list* file-id
+                                          (alexandria:mappend
+                                           #'sent-get-appos-triple
+                                           tk-sents))
+                                   triples)))))
+                                     
   
   
 
