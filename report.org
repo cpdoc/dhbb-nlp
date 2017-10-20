@@ -1,27 +1,28 @@
 
-Número de relações semânticas obtida com
+Número de relações semânticas obtida com (see udp/golden)
 
 #+BEGIN_SRC bash
 $ awk '$0 ~ /^[0-9]+/ && $8 ~ /appos/ {split($10,a,"|"); print a[1]}' *-annotated.conllu {21..27}.conllu | sort | uniq -c | sort -n
 #+END_SRC
 
-#+name: teste
-|   1 | &vinculo-pers    |
+|   1 | date             |
 |   2 | &date-inv        |
 |   2 | &part            |
-|   9 | &attrib-inv      |
-|   9 | &loc             |
-|  13 | &vinculo-inst    |
-|  21 | &vinculo-fam-inv |
-|  28 | &vinculo-fam     |
-|  38 | &date            |
-|  40 | &role            |
-|  43 | &attrib          |
-|  51 | SpaceAfter=No    |
-|  53 | &part-inv        |
-|  90 | _                |
-| 175 | &ident           |
-| 216 | &role-inv        |
+|   2 | &vinculo-pers    |
+|   2 | SpaceAfter=No    |
+|  11 | &loc             |
+|  11 | &vinculo-inst    |
+|  12 | _                |
+|  16 | &attrib-inv      |
+|  21 | &govern          |
+|  26 | &vinculo-fam-inv |
+|  33 | &vinculo-fam     |
+|  43 | &role            |
+|  58 | &date            |
+|  60 | &part-inv        |
+|  62 | &attrib          |
+| 193 | &ident           |
+| 246 | &role-inv        |
 
 
 #+BEGIN_SRC elisp :var dados=teste

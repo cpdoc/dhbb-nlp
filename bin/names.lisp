@@ -1,6 +1,15 @@
 
 (ql:quickload :cl-conllu)
 
+;; data
+
+(defvar corpus (reduce (lambda (l f) (append l (read-conllu f)))
+		       (append (directory "1.conllu")
+			       (directory "2?.conllu")
+			       (directory "30.conllu")
+			       (directory "*-annotated.conllu")) :initial-value nil))
+
+
 ;; names: sequence of names from a gazette
 
 (defun expand-names (names &optional res)
@@ -15,11 +24,6 @@
 			   (cons "a" (cons "de" res)))
 			  (t (cons (car names) res))))))
 
-(defun sentences ()
-  (reduce (lambda (l a) (append l (read-conllu a)))
-	  (append (directory "?.conllu") (directory "1?.conllu") (directory "2?.conllu"))
-	  :initial-value nil))
-
 (defun names (file)
   (with-open-file (in file)
     (loop for line = (read-line in nil nil)
@@ -28,14 +32,14 @@
 						(string-trim '(#\Space #\Tab) line))))))
 
 
-(defun block-scanner (trigger)
-  (let* ((curr trigger))
-    (lambda (data)
-      (dolist (w data (not curr))
-	(if curr
-	    (setq curr (if (equal (car curr) w)
-			   (cdr curr) 
-			   trigger)))))))
+;; (defun block-scanner (trigger)
+;;   (let* ((curr trigger))
+;;     (lambda (data)
+;;       (dolist (w data (not curr))
+;; 	(if curr
+;; 	    (setq curr (if (equal (car curr) w)
+;; 			   (cdr curr) 
+;; 			   trigger)))))))
 
 
 (defun find-occurrences (file)
@@ -83,10 +87,7 @@
 		when v
 		collect (list n (length v))))))
 
-(defvar teste *)
 
-(in-package :rcl)
-(r-init)
 
 (with-open-file (out "saida.txt" :direction :output)
   (format out "~a~%~%" cl-conllu::teste)
