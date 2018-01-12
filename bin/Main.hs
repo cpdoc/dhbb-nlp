@@ -3,30 +3,43 @@ module Main where
 
 import UD
 import ConlluReader as CR hiding (main)
+import NLP
 
+import Data.Maybe
+import Data.Tree
 import System.Directory
 import System.Environment
 import System.FilePath
 import Control.Monad
 
-readDhbb :: Int -> IO [Document]
-readDhbb 0 = do return []
-readDhbb n = do d <- CR.readFile $ "/home/bruno/git/dhbb-nlp/udp/" </> ((show n :: FilePath) ++ ".conllu")
-                ds <- readDhbb (n - 1)
-                return $ (d:ds)
+readDhbb :: Int -> FilePath -> IO [Document]
+readDhbb 0 fp = return []
+readDhbb n fp = do
+  d <- CR.readFile $ fp </> ((show n :: FilePath) ++ ".conllu")
+  ds <- readDhbb (n - 1) fp
+  return (d : ds)
 
-docToTrees :: Document -> (String,[TTree])
-docToTrees d = let ts = map (fst . toETree) $ sents d
-                   f  = file d
-               in (d,ts)
+docToTrees :: Document -> [TTree]
+docToTrees d = map (fst . toETree) $ sents d
 
---extractRelation :: Pos -> TTree
---extractRelation pos tt = foldMap
+getApposType :: Token -> String
+getApposType t = takeWhile (/= '|') $ fromMaybe "" $ misc t
 
---findRelation :: Dep -> TTree
---findRelation dep tt = mfilter tt
+treeGetAppos :: TTree -> [(String,(String,String))]
+treeGetAppos t =
+  let ps = getRel APPOS t
+      pss = map (mapP ttreeToStr) ps
+      subs = map (getApposType . rootLabel . fst) ps
+  in zip subs pss
 
+tripleToStr :: (String, (String, String)) -> String
+tripleToStr (a, (b, c)) = concat ["<<", a, "|", b, "|", c, ">>\n"]
+
+---
+-- main
 main :: IO ()
-main = do [n] <- getArgs
-          ds <- readDhbb (read n :: Int)
-          putStr $ show ds
+main = do [n,fp] <- getArgs
+          ds <- readDhbb (read n :: Int) fp
+          let ts  = concatMap docToTrees ds
+              trs = concatMap treeGetAppos ts
+          putStrLn $ concatMap tripleToStr trs
