@@ -59,7 +59,7 @@ tksGetAppos ts =
   in zip subs pss
                             
 tripleToStr :: String -> (String, (String, String)) -> String
-tripleToStr l (a, (b, c)) = concat [l, "<<", a, "|", b, "|", c, ">>\n"]
+tripleToStr l (a, (b, c)) = concat [l, "|", a, "|", b, "|", c, "\n"]
 
 ---
 -- main
