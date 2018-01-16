@@ -29,7 +29,11 @@ docToTrees Document {_file = fid, _sents = ss} =
   in (fid, zip ids tss)
 
 getApposType :: Token -> String
-getApposType t = takeWhile (/= '|') $ fromMaybe "" $ _misc t
+getApposType t =
+  let st = takeWhile (/= '|') $ fromMaybe "" $ _misc t
+  in if elem '&' st
+       then st
+       else "NA"
 
 getDHBBRel :: [Token] -> [(TTree, TTree)]
 getDHBBRel ts =
@@ -57,7 +61,7 @@ tksGetAppos ts =
       pss = map (mapP tTreeToStr) ps
       subs = map (getApposType . rootLabel . snd) ps
   in zip subs pss
-                            
+
 tripleToStr :: String -> (String, (String, String)) -> String
 tripleToStr l (a, (b, c)) = concat [l, "|", a, "|", b, "|", c, "\n"]
 
