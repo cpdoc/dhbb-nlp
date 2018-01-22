@@ -1,0 +1,16 @@
+#+TITLE: DHHB scripts and programs
+
+* DhbbTriples.hs
+  extracts APPOS triples and their manually annotated (in the MISC
+  field) subtypes.
+
+** usage
+   install the Hs-conllu library (instructions [[https://github.com/odanoburu/hs-conllu/blob/master/README.org][here]]), then:
+   #+BEGIN_SRC sh
+   # compile script
+   ghc -o dhbb DhbbTriples.hs
+   # where $DHBB is the path to the conllu files,
+   ./dhbb 30 $DHBB
+   #+END_SRC
+   this will read from the file 30.conllu to file 1.conllu in the
+   $DHBB path.
