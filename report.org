@@ -1,28 +1,27 @@
 
 Número de relações semânticas obtida com (see udp/golden)
 
-#+BEGIN_SRC bash
-$ awk '$0 ~ /^[0-9]+/ && $8 ~ /appos/ {split($10,a,"|"); print a[1]}' *-annotated.conllu {21..27}.conllu | sort | uniq -c | sort -n
+#+BEGIN_SRC bash :results table
+awk '$0 ~ /^[0-9]+/ && $8 ~ /appos/ {split($10,a,"|"); print a[1]}' {1..35}.conllu | sort | uniq -c | sort -n
 #+END_SRC
 
-|   1 | date             |
-|   2 | &date-inv        |
-|   2 | &part            |
-|   2 | &vinculo-pers    |
-|   2 | SpaceAfter=No    |
-|  11 | &loc             |
+#+name: teste
+|   1 | &date-inv        |
+|   1 | &part            |
+|   1 | &vinculo-pers    |
+|   5 | _                |
+|   6 | &loc             |
 |  11 | &vinculo-inst    |
-|  12 | _                |
-|  16 | &attrib-inv      |
-|  21 | &govern          |
-|  26 | &vinculo-fam-inv |
-|  33 | &vinculo-fam     |
-|  43 | &role            |
-|  58 | &date            |
-|  60 | &part-inv        |
-|  62 | &attrib          |
-| 193 | &ident           |
-| 246 | &role-inv        |
+|  13 | &attrib-inv      |
+|  15 | &govern          |
+|  28 | &vinculo-fam-inv |
+|  37 | &vinculo-fam     |
+|  46 | &role            |
+|  61 | &part-inv        |
+|  65 | &attrib          |
+|  72 | &date            |
+| 200 | &ident           |
+| 253 | &role-inv        |
 
 
 #+BEGIN_SRC elisp :var dados=teste
@@ -30,13 +29,14 @@ $ awk '$0 ~ /^[0-9]+/ && $8 ~ /appos/ {split($10,a,"|"); print a[1]}' *-annotate
 #+END_SRC
 
 #+RESULTS:
-: 650
+: 815
 
 Tabela dos dados originais antes de alterar os arquivos:
 
 #+name: tab1
 | file      | app | npred | appos |
 |-----------+-----+-------+-------|
+| 1.conllu  |     |       |       |
 | 2.conllu  |  21 |    25 |    58 |
 | 3.conllu  |   2 |     8 |    12 |
 | 4.conllu  |   4 |    12 |    24 |
@@ -75,39 +75,46 @@ Tabela dos dados originais antes de alterar os arquivos:
 Tabela resultado do comando:
 
 #+BEGIN_SRC bash
-awk '$0 ~ /^[0-9]+/ && $8 ~ /appos/ {split($10,a,"|"); print FILENAME}' *-annotated.conllu {21..27}.conllu | sort | uniq -c  | sort -n
+awk '$0 ~ /^[0-9]+/ && $8 ~ /appos/ {split($10,a,"|"); print FILENAME}' {1..35}.conllu | sort | uniq -c  | sort -n
 #+END_SRC
 
 #+name: tab2
 | rel | file      |
 |-----+-----------|
+|   6 | 3.conllu  |
+|   6 | 5.conllu  |
 |   7 | 27.conllu |
-|   8 | 1.conllu  |
+|   7 | 29.conllu |
 |   8 | 12.conllu |
-|   8 | 3.conllu  |
-|   9 | 5.conllu  |
-|   9 | 9.conllu  |
+|   8 | 9.conllu  |
+|   9 | 1.conllu  |
 |  10 | 17.conllu |
+|  10 | 20.conllu |
 |  10 | 24.conllu |
+|  10 | 31.conllu |
 |  11 | 14.conllu |
-|  12 | 16.conllu |
+|  11 | 16.conllu |
+|  11 | 30.conllu |
+|  12 | 13.conllu |
 |  12 | 21.conllu |
-|  13 | 13.conllu |
-|  13 | 20.conllu |
+|  12 | 34.conllu |
+|  12 | 35.conllu |
 |  15 | 11.conllu |
+|  20 | 4.conllu  |
 |  24 | 26.conllu |
-|  24 | 4.conllu  |
+|  24 | 6.conllu  |
+|  27 | 28.conllu |
 |  28 | 23.conllu |
-|  32 | 19.conllu |
-|  32 | 6.conllu  |
-|  35 | 18.conllu |
-|  36 | 15.conllu |
-|  37 | 10.conllu |
-|  53 | 22.conllu |
-|  60 | 7.conllu  |
-|  61 | 2.conllu  |
-|  89 | 25.conllu |
-| 135 | 8.conllu  |
+|  30 | 33.conllu |
+|  31 | 19.conllu |
+|  32 | 15.conllu |
+|  34 | 18.conllu |
+|  35 | 10.conllu |
+|  48 | 7.conllu  |
+|  50 | 22.conllu |
+|  54 | 2.conllu  |
+|  88 | 25.conllu |
+| 103 | 8.conllu  |
 
 
 #+name: tab3
