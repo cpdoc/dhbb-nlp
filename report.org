@@ -6,25 +6,21 @@ awk '$0 ~ /^[0-9]+/ && $8 ~ /appos/ {split($10,a,"|"); print a[1]}' {1..35}.conl
 #+END_SRC
 
 #+name: tab-semantic
-| freq | type             |
-|------+------------------|
-|    1 | &date-inv        |
-|    1 | &part            |
-|    1 | &vinculo-pers    |
-|    2 | _                |
-|    5 | &other           |
-|    6 | &loc             |
-|   11 | &vinculo-inst    |
-|   12 | &attrib-inv      |
-|   15 | SpaceAfter=No    |
-|   28 | &vinculo-fam-inv |
-|   37 | &vinculo-fam     |
-|   45 | &role            |
-|   59 | &date            |
-|   61 | &attrib          |
-|   61 | &part-inv        |
-|  199 | &ident           |
-|  253 | &role-inv        |
+|   1 | &date-inv        |
+|   1 | &part            |
+|   1 | &vinculo-pers    |
+|   5 | &other           |
+|   6 | &loc             |
+|  11 | &vinculo-inst    |
+|  12 | &attrib-inv      |
+|  28 | &vinculo-fam-inv |
+|  37 | &vinculo-fam     |
+|  47 | &role            |
+|  61 | &attrib          |
+|  61 | &part-inv        |
+|  72 | &date            |
+| 200 | &ident           |
+| 253 | &role-inv        |
 
 
 #+BEGIN_SRC elisp :var dados=tab-semantic
@@ -32,7 +28,7 @@ awk '$0 ~ /^[0-9]+/ && $8 ~ /appos/ {split($10,a,"|"); print a[1]}' {1..35}.conl
 #+END_SRC
 
 #+RESULTS:
-: 815
+: 796
 
 Tabela dos dados originais do diretório PAL:
 
