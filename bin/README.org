@@ -37,10 +37,11 @@ instructions [[https://github.com/odanoburu/hs-conllu/blob/master/README.org][he
    #+BEGIN_SRC sh
      # compile script
      ghc -o correct CorrectAndPrint.hs
-     ./correct tokenizations.txt lexicon.txt {1..35}.conllu
+     ./correct tokenizations.txt lexicon.txt output-dir/ {1..35}.conllu
    #+END_SRC
-   this will write a new corrected file with the extension
-   =.lex.conllu=.
+   this will write a the input files to the =output-dir/=. make sure
+   it is not the same directory as the one the files are in, else they
+   will be overwritten.
 * Appos.hs
   this will compare versions of the same file and check their
   differences w.r.t. the =appos= DEPREL annotation. the idea is that
@@ -70,5 +71,5 @@ instructions [[https://github.com/odanoburu/hs-conllu/blob/master/README.org][he
    compare matching files in the =old/= and =new/= directories, and
    write the results to =result.txt=.
    #+BEGIN_SRC sh
-     ./diffMaker old/ new/ result.txt
+     sh diffMaker old/ new/ result.txt
    #+END_SRC
