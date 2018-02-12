@@ -55,5 +55,5 @@ main = do
   d2 <- readConlluFile fp2
   let dd = diffDoc d1 d2
       add = apposDocDiff dd
-  putStrLn $ show $ add
+  print add
   return ()

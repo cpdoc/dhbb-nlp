@@ -1,16 +1,74 @@
 #+TITLE: DHHB scripts and programs
 
+all Haskell executables require the =hs-conllu= library (installation
+instructions [[https://github.com/odanoburu/hs-conllu/blob/master/README.org][here]]).
+
 * DhbbTriples.hs
   extracts APPOS triples and their manually annotated (in the MISC
   field) subtypes.
 
 ** usage
-   install the Hs-conllu library (instructions [[https://github.com/odanoburu/hs-conllu/blob/master/README.org][here]]), then:
    #+BEGIN_SRC sh
-   # compile script
-   ghc -o dhbb DhbbTriples.hs
-   # where $DHBB is the path to the conllu files,
-   ./dhbb 30 $DHBB
+     # compile script
+     ghc -o dhbb DhbbTriples.hs
+     # where $DHBB is the path to the conllu files,
+     ./dhbb 30 $DHBB
    #+END_SRC
    this will read from the file 30.conllu to file 1.conllu in the
    $DHBB path.
+
+* CorrectAndPrint.hs
+  corrects names from a lexicon. names are corrected as follows: all
+  tokens in a name are made to point to the HEAD of the name, unless
+  their DEPREL is one of =case=, =nmod=, =punct= (this can be
+  changed). moreover, any token in the sentence pointing to a token in
+  the name will be made to point to the name's HEAD.
+
+** usage
+   you will need:
+   - a lexicon :: a text file with a name on every line, with
+                  spaces separating the tokens: "Companhia de Águas,
+                  Energia e Algo" -> "Companhia de Águas , Energia e
+                  Algo"
+   - a tokenization list :: this is a text file with a word to be
+        tokenized on every line. the first token is the word, the rest
+        is its components, all separated by spaces, as in: "vámonos
+        vamos nos"
+   #+BEGIN_SRC sh
+     # compile script
+     ghc -o correct CorrectAndPrint.hs
+     ./correct tokenizations.txt lexicon.txt {1..35}.conllu
+   #+END_SRC
+   this will write a new corrected file with the extension
+   =.lex.conllu=.
+* Appos.hs
+  this will compare versions of the same file and check their
+  differences w.r.t. the =appos= DEPREL annotation. the idea is that
+  the first version is the one output by a parser, and the second one
+  has been corrected in some way.
+  
+  all tokens that have been tagged as having an =appos= DEPREL are
+  compared to their annotation in the other version, and are
+  classified as follows:
+  - Correct :: both annotations match in HEAD and DEPREL
+  - ErrDep :: annotations match in HEAD, but the former hasn't tagged
+              the token as having an =appos= DEPREL
+  - ErrHead :: annotations match in DEPREL, but the former has
+               incorrectly tagged the HEAD.
+  - ErrMissingA :: the former annotation got both the DEPREL and HEAD
+                   fields wrong (w.r.t. the second annotation).
+  - ErrNotA :: the former annotation tagged the token as having an
+               =appos= DEPREL, but the second one didn't.
+
+** usage
+   #+BEGIN_SRC sh
+     # compile script
+     ghc -o apposDhbb Appos.hs
+     ./apposDhbb old/1.conllu new/1.conllu
+   #+END_SRC
+   alternatively, one can use the =apposMaker.sh= script, which will
+   compare matching files in the =old/= and =new/= directories, and
+   write the results to =result.txt=.
+   #+BEGIN_SRC sh
+     ./diffMaker old/ new/ result.txt
+   #+END_SRC
