@@ -73,3 +73,14 @@ instructions [[https://github.com/odanoburu/hs-conllu/blob/master/README.org][he
    #+BEGIN_SRC sh
      sh diffMaker old/ new/ result.txt
    #+END_SRC
+
+* NumberAppos.hs
+  this will calculate the number of sentences with at least one token
+  whose DEPREL is =appos=.
+
+** usage
+   #+BEGIN_SRC sh
+     # compile script
+     ghc -o nappos NumberAppos.hs
+     ./nappos *.conllu
+   #+END_SRC
