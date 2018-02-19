@@ -1,4 +1,6 @@
 #!/bin/bash
-for f in {1..35};
-do ./apposDhbb ~/appos/old/${f}.conllu ~/appos/new/${f}.conllu >> ~/appos/diff.diff;
+for file in ${1}/*.conllu;
+do
+    f=$(basename $file)
+    ./apposDhbb ${1}/${f} ${2}/${f} >> ${3}
 done
