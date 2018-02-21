@@ -21,7 +21,7 @@ main = do
        let stkss = map sentSTks $ _sents d
        in mapM
             (\stks ->
-               mapM_ (putStrLn . show . map (fromJust . _form)) $
+               mapM_ (putStrLn . show . map (fromMaybe "" . _form)) $
                recTks tt stks)
             stkss)
     ds

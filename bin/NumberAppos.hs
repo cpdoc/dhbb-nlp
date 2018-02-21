@@ -13,7 +13,7 @@ main = do
        mapM_
          (\s ->
             if any (\t -> isSToken t && depIs APPOS t) $ _tokens s
-              then putStrLn "t"
+              then putStrLn $ show s
               else return ()) $
        _sents d)
     ds
