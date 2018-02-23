@@ -71,7 +71,7 @@ Tabela dos dados originais do diretório PAL:
 | 34.conllu |   5 |    12 |
 | 35.conllu |   3 |     7 |
 
-Tabelas do diretorio =ud= versão inicial e versão depios das revisões:
+Tabelas do diretorio =ud= versão inicial e versão depois das revisões:
 
 #+BEGIN_SRC bash
 awk '$0 ~ /^[0-9]+/ && $8 ~ /appos/ {split($10,a,"|"); print FILENAME}' {1..35}.conllu | sort | uniq -c  | sort -n
@@ -213,7 +213,6 @@ tmp
 #+RESULTS:
 : rel.x rel.y   app npred   pal 
 :   954   815   321   476   797 
-
 
 * Pending
 
