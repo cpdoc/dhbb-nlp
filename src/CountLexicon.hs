@@ -18,11 +18,14 @@ main = do
   ds <- mapM readConlluFile fps
   mapM
     (\d ->
-       let stkss = map sentSTks $ _sents d
-       in mapM
-            (\stks ->
-               mapM_ (putStrLn . show . map (fromMaybe "" . _form)) $
-               recTks tt stks)
-            stkss)
+       let stkss =
+             map (\s -> (snd . head $ _meta s, sentSTks s)) $ _sents d
+       in do putStrLn $ _file d
+             mapM
+               (\(sid, stks) -> do
+                  putStr (sid ++ ":")
+                  mapM_ (putStrLn . show . map (fromMaybe "" . _form)) $
+                    recTks tt stks)
+               stkss)
     ds
   return ()
