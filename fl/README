@@ -1,0 +1,14 @@
+
+Compile the lisp code
+
+$ load sbcl
+* (load "splitter.lisp")
+* (sb-ext:save-lisp-and-die "splitter" :toplevel #'main :executable t)
+
+Open Freeling server on another terminal:
+
+  analyze -f pt.cfg --output json --noflush --server --port 8000
+
+Execute
+
+  sh make.sh
