@@ -10,7 +10,3 @@ for f in ../raw/*.raw; do
     ./splitter $TMP $JSO $OUT
     rm $TMP $JSO
 done
-
-
-
-
