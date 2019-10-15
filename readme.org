@@ -1,19 +1,10 @@
 #+Title: DHBB 
 
-* Removing BOM from files
-
-https://stackoverflow.com/questions/1068650/using-awk-to-remove-the-byte-order-mark
-
-#+BEGIN_SRC bash
-for f in $(find ../raw -size 0); do BN=$(basename $f .raw); awk 'NR==1{sub(/^\xef\xbb\xbf/,"")}1' $BN.text > $BN.new; done
-#+END_SRC
-
-Arquivo 6087.text tem tabelas que foram retiradas manualmente antes
-dos processamentos NLP.
-
 * Split meta from text
 
-Para debugar 
+O comando abaixo identifica arquivos com BOM. Para os arquivos
+listados, vc pode confirmar o encoding 'UTF-8 Unicode (with BOM) text'
+com o comando =file= e remover com o comando =dos2unix=.
 
 #+BEGIN_SRC sh
 egrep -c "^---$" *.text | awk -F : '$2 == 1 { print }'
@@ -27,7 +18,7 @@ for f in $(egrep '^cargos:' *.text | awk -F ':' '{ print $1 }'); do cp $f test/;
 
 Para separar textos:
 
-#+BEGIN_SRC sh
+#+BEGIN_SRC bash
   for f in *.text; do
       awk 'BEGIN { text=0; } text>1 {print} /^---$/ { text = text + 1; }' $f > $(basename $f .text).raw ;
   done
@@ -39,6 +30,14 @@ Para separar metadados:
   for f in *.text; do
       awk 'BEGIN { text=0; } text<=1 {print} /^---$/ { text = text + 1; }' $f > $(basename $f .text).meta ;
   done
+#+END_SRC
+
+* Removing BOM from files
+
+https://stackoverflow.com/questions/1068650/using-awk-to-remove-the-byte-order-mark
+
+#+BEGIN_SRC bash
+for f in $(find ../raw -size 0); do BN=$(basename $f .raw); awk 'NR==1{sub(/^\xef\xbb\xbf/,"")}1' $BN.text > $BN.new; done
 #+END_SRC
 
 * The UDP directory
@@ -81,3 +80,229 @@ This dictionary has seven directories:
 
 - http://pyyaml.org/wiki/PyYAMLDocumentation
 - http://www.w3.org/TR/rdf-sparql-query/
+
+* Reports
+
+Número de relações semânticas obtida com (see udp/golden)
+
+#+BEGIN_SRC bash :results table
+awk '$0 ~ /^[0-9]+/ && $8 ~ /appos/ {split($10,a,"|"); print a[1]}' {1..35}.conllu | sort | uniq -c | sort -n
+#+END_SRC
+
+#+name: tab-semantic
+|   1 | &date-inv        |
+|   1 | &part            |
+|   1 | &vinculo-pers    |
+|   5 | &other           |
+|   6 | &loc             |
+|  11 | &vinculo-inst    |
+|  12 | &attrib-inv      |
+|  28 | &vinculo-fam-inv |
+|  37 | &vinculo-fam     |
+|  47 | &role            |
+|  61 | &attrib          |
+|  61 | &part-inv        |
+|  72 | &date            |
+| 200 | &ident           |
+| 253 | &role-inv        |
+
+
+#+BEGIN_SRC elisp :var dados=tab-semantic
+(apply #'+ (mapcar #'car dados))
+#+END_SRC
+
+#+RESULTS:
+: 796
+
+Tabela dos dados originais do diretório PAL:
+
+#+name: tab-palavras
+| file      | app | npred |
+|-----------+-----+-------|
+| 1.conllu  |   4 |     2 |
+| 2.conllu  |  21 |    25 |
+| 3.conllu  |   2 |     8 |
+| 4.conllu  |   4 |    12 |
+| 5.conllu  |   3 |     2 |
+| 6.conllu  |  19 |    11 |
+| 7.conllu  |  19 |    39 |
+| 8.conllu  |  40 |    59 |
+| 9.conllu  |   8 |    18 |
+| 10.conllu |  19 |    15 |
+| 11.conllu |  11 |     9 |
+| 12.conllu |   3 |     4 |
+| 13.conllu |   8 |     5 |
+| 14.conllu |   5 |     7 |
+| 15.conllu |   4 |    34 |
+| 16.conllu |   7 |     7 |
+| 17.conllu |   4 |     6 |
+| 18.conllu |  16 |    10 |
+| 19.conllu |  16 |    27 |
+| 20.conllu |   4 |     3 |
+| 21.conllu |   2 |     9 |
+| 22.conllu |  12 |    16 |
+| 23.conllu |   8 |    16 |
+| 24.conllu |   6 |     4 |
+| 25.conllu |  25 |    30 |
+| 26.conllu |  16 |    19 |
+| 27.conllu |   4 |     3 |
+| 28.conllu |   7 |    14 |
+| 29.conllu |   3 |     9 |
+| 30.conllu |   3 |     8 |
+| 31.conllu |   2 |     6 |
+| 32.conllu |   0 |     0 |
+| 33.conllu |   8 |    20 |
+| 34.conllu |   5 |    12 |
+| 35.conllu |   3 |     7 |
+
+Tabelas do diretorio =ud= versão inicial e versão depois das revisões:
+
+#+BEGIN_SRC bash
+awk '$0 ~ /^[0-9]+/ && $8 ~ /appos/ {split($10,a,"|"); print FILENAME}' {1..35}.conllu | sort | uniq -c  | sort -n
+#+END_SRC
+
+#+name: tab-old
+| rel | file      |
+|-----+-----------|
+|   6 | 5.conllu  |
+|   7 | 27.conllu |
+|   8 | 1.conllu  |
+|   9 | 12.conllu |
+|   9 | 9.conllu  |
+|  10 | 31.conllu |
+|  11 | 29.conllu |
+|  12 | 16.conllu |
+|  12 | 24.conllu |
+|  12 | 3.conllu  |
+|  12 | 35.conllu |
+|  13 | 13.conllu |
+|  13 | 17.conllu |
+|  13 | 20.conllu |
+|  13 | 21.conllu |
+|  14 | 30.conllu |
+|  15 | 11.conllu |
+|  15 | 14.conllu |
+|  18 | 34.conllu |
+|  24 | 4.conllu  |
+|  25 | 26.conllu |
+|  26 | 23.conllu |
+|  26 | 28.conllu |
+|  30 | 19.conllu |
+|  30 | 6.conllu  |
+|  33 | 33.conllu |
+|  38 | 10.conllu |
+|  38 | 18.conllu |
+|  42 | 15.conllu |
+|  58 | 22.conllu |
+|  61 | 2.conllu  |
+|  68 | 7.conllu  |
+|  91 | 25.conllu |
+| 142 | 8.conllu  |
+
+#+name: tab-new
+| rel | file      |
+|-----+-----------|
+|   6 | 3.conllu  |
+|   6 | 5.conllu  |
+|   7 | 27.conllu |
+|   7 | 29.conllu |
+|   8 | 12.conllu |
+|   8 | 9.conllu  |
+|   9 | 1.conllu  |
+|  10 | 17.conllu |
+|  10 | 20.conllu |
+|  10 | 24.conllu |
+|  10 | 31.conllu |
+|  11 | 14.conllu |
+|  11 | 16.conllu |
+|  11 | 30.conllu |
+|  12 | 13.conllu |
+|  12 | 21.conllu |
+|  12 | 34.conllu |
+|  12 | 35.conllu |
+|  15 | 11.conllu |
+|  20 | 4.conllu  |
+|  24 | 26.conllu |
+|  24 | 6.conllu  |
+|  27 | 28.conllu |
+|  28 | 23.conllu |
+|  30 | 33.conllu |
+|  31 | 19.conllu |
+|  32 | 15.conllu |
+|  34 | 18.conllu |
+|  35 | 10.conllu |
+|  48 | 7.conllu  |
+|  50 | 22.conllu |
+|  54 | 2.conllu  |
+|  88 | 25.conllu |
+| 103 | 8.conllu  |
+
+
+tmp$X <- tmp$rel - tmp$appos
+tmp$Y <- tmp$rel - (tmp$app + tmp$npred)
+
+#+name: tab3
+#+BEGIN_SRC R :var tab1=tab-old :var tab2=tab-new tab3=tab-palavras :results table :colnames true
+tmp.1 <- merge(tab1,tab2, by.x = "file", by.y = "file")
+tmp   <- merge(tmp.1,tab3, by.x = "file", by.y = "file")
+tmp$pal <- tmp$app + tmp$npred
+tmp
+#+END_SRC
+
+#+name: tab3
+#+RESULTS: tab3
+| file      | rel.x | rel.y | app | npred | pal |
+|-----------+-------+-------+-----+-------+-----|
+| 1.conllu  |     8 |     9 |   4 |     2 |   6 |
+| 10.conllu |    38 |    35 |  19 |    15 |  34 |
+| 11.conllu |    15 |    15 |  11 |     9 |  20 |
+| 12.conllu |     9 |     8 |   3 |     4 |   7 |
+| 13.conllu |    13 |    12 |   8 |     5 |  13 |
+| 14.conllu |    15 |    11 |   5 |     7 |  12 |
+| 15.conllu |    42 |    32 |   4 |    34 |  38 |
+| 16.conllu |    12 |    11 |   7 |     7 |  14 |
+| 17.conllu |    13 |    10 |   4 |     6 |  10 |
+| 18.conllu |    38 |    34 |  16 |    10 |  26 |
+| 19.conllu |    30 |    31 |  16 |    27 |  43 |
+| 2.conllu  |    61 |    54 |  21 |    25 |  46 |
+| 20.conllu |    13 |    10 |   4 |     3 |   7 |
+| 21.conllu |    13 |    12 |   2 |     9 |  11 |
+| 22.conllu |    58 |    50 |  12 |    16 |  28 |
+| 23.conllu |    26 |    28 |   8 |    16 |  24 |
+| 24.conllu |    12 |    10 |   6 |     4 |  10 |
+| 25.conllu |    91 |    88 |  25 |    30 |  55 |
+| 26.conllu |    25 |    24 |  16 |    19 |  35 |
+| 27.conllu |     7 |     7 |   4 |     3 |   7 |
+| 28.conllu |    26 |    27 |   7 |    14 |  21 |
+| 29.conllu |    11 |     7 |   3 |     9 |  12 |
+| 3.conllu  |    12 |     6 |   2 |     8 |  10 |
+| 30.conllu |    14 |    11 |   3 |     8 |  11 |
+| 31.conllu |    10 |    10 |   2 |     6 |   8 |
+| 33.conllu |    33 |    30 |   8 |    20 |  28 |
+| 34.conllu |    18 |    12 |   5 |    12 |  17 |
+| 35.conllu |    12 |    12 |   3 |     7 |  10 |
+| 4.conllu  |    24 |    20 |   4 |    12 |  16 |
+| 5.conllu  |     6 |     6 |   3 |     2 |   5 |
+| 6.conllu  |    30 |    24 |  19 |    11 |  30 |
+| 7.conllu  |    68 |    48 |  19 |    39 |  58 |
+| 8.conllu  |   142 |   103 |  40 |    59 |  99 |
+| 9.conllu  |     9 |     8 |   8 |    18 |  26 |
+
+
+#+BEGIN_SRC R :var dados=tab3 :results output
+tmp <- colSums(dados[,-1])
+tmp
+#+END_SRC
+
+#+RESULTS:
+: rel.x rel.y   app npred   pal 
+:   954   815   321   476   797 
+
+* Pending
+
+- quantas mudanças houve em cada arquivo mesmo? Os numeros refletem
+  agregado mas podem ter sido tirados 10 e incluidas 11 somando 1 na
+  tabela 3.
+
+- tambem não sabemos se as relações mudaram pais/filhos.
+
