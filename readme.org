@@ -66,15 +66,18 @@ time find ~/work/cpdoc/dhbb/raw -name "*.raw" | xargs ./udpipe --tokenize --tag 
 	 (format file "~{~{~a~^|~}~%~}" *))
 #+END_SRC
 
-* Files
-  
-This dictionary has seven directories: 
+* Sentences
 
-- ref :: Holds the reference text in each dictionary entry.
+Tem erros nos dados também, em geral o OpenNLP foi mais robusto à
+estes erros, veja
+https://github.com/cpdoc/dhbb/commit/fb4244a3e19ec6fa4aa3383f1fec70a075b178f1
+e https://github.com/cpdoc/dhbb/issues/19#issuecomment-542485053:
 
-- text :: Holds the text body in each dictionary entry.
-
-- wks :: see readme inside it.
+#+begin_src bash
+$ for f in fl/*.sent; do diff -q $f opennlp/$(basename $f) >> log ; done
+$ wc -l log
+    2264 log
+#+end_src
      
 * Links
 

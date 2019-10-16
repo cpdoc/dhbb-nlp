@@ -9,4 +9,5 @@ for f in ../raw/*.raw; do
     analyzer_client 8000 < $TMP > $JSO
     ./splitter $TMP $JSO $OUT
     rm $TMP $JSO
+    gsed -i 's/ \+/ /g' $OUT
 done
