@@ -15,5 +15,3 @@ for f in ../raw/*.raw; do
     gsed -i 's/ \+/ /g' $S2
     rm $TMP $S1
 done
-
-
