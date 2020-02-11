@@ -10,6 +10,7 @@ awk 'NF {printf "%s " ,$0 ; next} {print ""}' $1 > $T1
 $ONLP/bin/opennlp SentenceDetector $ONLP/models/pt-sent.bin < $T1 > $T2
 awk '$0 ~ /^$/ {next} {print}' $T2 > $R
 gsed -i ':a;N;$!ba;s/S\.\nPaulo/S\. Paulo/g' $R
-gsed -E -i ':a;N;$!ba;s/([SsdD])r\.\n/\1r\. /g' $R
+gsed -E -i ':a;N;$!ba;s/([SsdD]ra?)\.\n/\1\. /g' $R
+gsed -E -i ':a;N;$!ba;s/ ([A-Z])\.\n([A-Z])/ \1\. \2/g' $R
 gsed -i 's/ \+/ /g' $R
 rm $T1 $T2
