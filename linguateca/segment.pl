@@ -13,12 +13,6 @@ foreach my $y (@var) {
     $text = join '', $text, $y;
     }
     
-my @frases = frases($text);
+my $frases = separa_frases("$text ");
 
-my $output = '';
-
-foreach my $line (@frases){
-    $output = join '', $output,$line,"\n";
-    }
-
-print $output;
+print $frases;
