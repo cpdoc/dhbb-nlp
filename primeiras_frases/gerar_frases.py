@@ -38,7 +38,7 @@ if __name__ == '__main__':
         if dir_[-1] != "/":
             dir_ += "/"
     except IndexError:
-        print("Necessita do path do diretório raw como argumento. Exemplo: python3 gerar_frases.py path/to/fl")
+        print("Necessita do path do diretório sents como argumento. Exemplo: python3 gerar_frases.py path/to/sents")
         exit()
     files = [t for t in os.listdir(dir_) if 'sent' in t]
     sent = []
