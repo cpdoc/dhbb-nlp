@@ -1,14 +1,14 @@
 Para extrair as frases revisadas do conjunto de frases em revisão, execute
 
 ```
-python3 extrair_frases.py > frases_treino.conllu 2> frases_teste.sent
+python3 extrair_frases.py
 ```
 
 Para resetar o índice sent_id do frases_target.conllu, execute
 
 ```
 awk '{if ($0 ~ /sent_id/) {print "# sent_id = ",i=i+1} else {print $0}}' frases_target.conllu > frases_target.temp
-mv frases_target.tmp frases_target.conllu
+mv frases_target.temp frases_target.conllu
 ```
 
 Baixe o conjunto de treino do [UD-Bosque](https://github.com/UniversalDependencies/UD_Portuguese-Bosque/):
@@ -37,7 +37,7 @@ udpipe --train model_bosque.bin pt_bosque-ud-train.conllu
 Para analisar o conjunto de teste com os modelos, digite
 
 ```
-udpipe --tokenize --tag --parse nome_modelo.bin frases_target.sent
+udpipe --tokenize --tokenizer="presegmented" --tag --parse nome_modelo.bin frases_target.sent
 ```
 
 

@@ -3,10 +3,10 @@ from sys import argv,exit, stderr
 
 
 """
-O script gera:
-        1) No stdin: os primeiros 65% de frases analisadas em formato conllu do arquivo frases.conllu
-        2) No stderr: as últimas 35% de frases (formato sent) contidas no arquivo frases.conllu
-        3) Salva um arquivo chamado frases_target.conllu onde contém as 35% últimas análisadas em formato conllu contida no arquivo frases.conllu
+O script gera 3 arquivos: 
+    1) frases_treino.conllu -> conjunto de frases revisadas para frases_treino em formato conllu
+    2) frases_teste.sent -> conjunto de frases revisadas para teste, em formato sent
+    3) frases_target.conllu -> conjunto das mesmas frases do frases_teste em formato conllu, revisadas manualmente
 """
 
 data = open("../frases.conllu").read()
@@ -40,9 +40,12 @@ while i < len(revisado):
 t = t
 conllu = conllu
 
-print(conllu)
-print(t,file=stderr)
+with open('frases_treino.conllu','w') as arq:
+    arq.write(conllu)
 
+with open('frases_teste.sent','w') as arq:
+        arq.write(t)
+        
 with open('frases_target.conllu','w') as arq:
     arq.write(target)
     arq.close()
