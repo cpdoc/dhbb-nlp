@@ -1,5 +1,5 @@
 #!/bin/bash
 
 echo $1 > tmp
-udpipe --tokenize --tag --parse model/model_bosque.bin tmp 
+udpipe --tokenize --tokenizer="presegmented" --tag --parse $2 tmp 
 rm tmp
