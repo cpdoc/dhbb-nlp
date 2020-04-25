@@ -1,3 +1,47 @@
+
+JAVA Program
+
+compile:
+
+javac -cp "/Users/ar/work/apache-opennlp-1.9.2/lib/*" Detector.java
+
+run:
+
+java -cp "/Users/ar/work/apache-opennlp-1.9.2/lib/*:." Detector
+
+EVAL
+
+Performance:
+
+ar@leme opennlp % time sh make.sh
+...
+sh make.sh  109.56s user 183.61s system 74% cpu 6:31.34 total
+
+
+ar@leme opennlp % time make
+...
+make  3303.68s user 807.21s system 147% cpu 46:31.28 total
+
+diffs between make.sh and Makefile are due to some sentences with an
+extra space in the end in the version produced using the lib. But I
+also found:
+
+6321.sent
+211c211
+< Por outro lado, a produção industrial diversificou-se, ganhando maior ênfase o setor de bens de produção, conforme se verifica pela leitura do seguinte quadro:
+
+5802.sent
+61c61
+< Prevaleceu, todavia, o voto de que se proseguisse, gradativamente, a incorporação dos trabalhadores dos campos ao regime do direito social, concedendo-se-lhes o direito às férias, além de lhes serem tornadas extensivas as garantias para a celebração de contrato individual e o direito, que já o código civil estabelecia, ao aviso prévio;
+
+8781.sent
+12c12
+< As propostas concretas para esse planejamento distribuíram-se pelas seguintes áreas:
+
+
+
+TRAINING
+
 Os arquivos pertinentes ao treino do modelo são:
 
 amostras_DHBB.sent

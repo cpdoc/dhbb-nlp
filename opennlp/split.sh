@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ONLP=/Users/ar/work/apache-opennlp-1.9.0
+ONLP=/Users/ar/work/apache-opennlp-1.9.2
 
 T1=$(basename $1 .raw).tmp1
 T2=$(basename $1 .raw).tmp2
