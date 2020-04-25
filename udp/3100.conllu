@@ -1,8 +1,8 @@
-# newdoc id = ../raw/3100.raw
+# newdoc
 # newpar
 # sent_id = 1
 # text = «José Machado Sobrinho» nasceu em Guanhães (MG) no dia 12 de dezembro de 1932, filho do comerciante Venâncio Machado e de Sara Carvalho Machado.
-1	«	«	PUNCT	_	_	2	punct	_	SpacesBefore=\n|SpaceAfter=No
+1	«	«	PUNCT	_	_	2	punct	_	SpaceAfter=No
 2	José	José	PROPN	_	Gender=Masc|Number=Sing	6	nsubj	_	_
 3	Machado	Machado	PROPN	_	Number=Sing	2	flat:name	_	_
 4	Sobrinho	sobrinho	PROPN	_	Number=Sing	2	flat:name	_	SpaceAfter=No
@@ -19,11 +19,11 @@
 14	dia	dia	NOUN	_	Gender=Masc|Number=Sing	6	obl	_	_
 15	12	12	NUM	_	NumType=Card	14	nummod	_	_
 16	de	de	ADP	_	_	17	case	_	_
-17	dezembro	dezembro	NOUN	_	Gender=Masc|Number=Sing	14	nmod:tmod	_	_
+17	dezembro	dezembro	NOUN	_	Gender=Masc|Number=Sing	14	nmod	_	_
 18	de	de	ADP	_	_	19	case	_	_
 19	1932	1932	NUM	_	NumType=Card	17	nmod	_	SpaceAfter=No
 20	,	,	PUNCT	_	_	21	punct	_	_
-21	filho	filho	NOUN	_	Gender=Masc|Number=Sing	6	nsubj	_	_
+21	filho	filho	NOUN	_	Gender=Masc|Number=Sing	2	appos	_	_
 22-23	do	_	_	_	_	_	_	_	_
 22	de	de	ADP	_	_	24	case	_	_
 23	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	24	det	_	_
@@ -35,53 +35,52 @@
 29	Sara	Sara	PROPN	_	Gender=Fem|Number=Sing	24	conj	_	_
 30	Carvalho	Carvalho	PROPN	_	Number=Sing	29	flat:name	_	_
 31	Machado	Machado	PROPN	_	Number=Sing	29	flat:name	_	SpaceAfter=No
-32	.	.	PUNCT	_	_	6	punct	_	_
+32	.	.	PUNCT	_	_	6	punct	_	SpacesAfter=\n
 
 # sent_id = 2
 # text = Seu irmão, Guilherme Machado, foi deputado federal entre 1951 e 1959, 1961 e 1965, e 1966 e 1971.
 1	Seu	seu	DET	_	Gender=Masc|Number=Sing|PronType=Prs	2	det	_	_
-2	irmão	irmão	NOUN	_	Gender=Masc|Number=Sing	8	nsubj	_	SpaceAfter=No
+2	irmão	irmão	NOUN	_	Gender=Masc|Number=Sing	8	nsubj:pass	_	SpaceAfter=No
 3	,	,	PUNCT	_	_	4	punct	_	_
 4	Guilherme	Guilherme	PROPN	_	Gender=Masc|Number=Sing	2	appos	_	_
 5	Machado	Machado	PROPN	_	Number=Sing	4	flat:name	_	SpaceAfter=No
 6	,	,	PUNCT	_	_	4	punct	_	_
-7	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	8	cop	_	_
-8	deputado	deputado	NOUN	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
-9	federal	federal	ADJ	_	Gender=Masc|Number=Sing	8	amod	_	_
+7	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	8	aux:pass	_	_
+8	deputado	deputar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
+9	federal	federal	NOUN	_	Gender=Masc|Number=Sing	8	obj	_	_
 10	entre	entre	ADP	_	_	11	case	_	_
-11	1951	1951	NUM	_	NumType=Card	8	nmod	_	_
+11	1951	1951	NUM	_	NumType=Card	9	nmod	_	_
 12	e	e	CCONJ	_	_	13	cc	_	_
 13	1959	1959	NUM	_	NumType=Card	11	conj	_	SpaceAfter=No
 14	,	,	PUNCT	_	_	15	punct	_	_
-15	1961	1961	NUM	_	NumType=Card	8	conj	_	_
+15	1961	1961	NUM	_	NumType=Card	11	conj	_	_
 16	e	e	CCONJ	_	_	17	cc	_	_
-17	1965	1965	NUM	_	NumType=Card	8	conj	_	SpaceAfter=No
+17	1965	1965	NUM	_	NumType=Card	11	conj	_	SpaceAfter=No
 18	,	,	PUNCT	_	_	20	punct	_	_
 19	e	e	CCONJ	_	_	20	cc	_	_
-20	1966	1966	NUM	_	NumType=Card	8	conj	_	_
+20	1966	1966	NUM	_	NumType=Card	9	conj	_	_
 21	e	e	CCONJ	_	_	22	cc	_	_
-22	1971	1971	NUM	_	NumType=Card	20	conj	_	SpaceAfter=No
-23	.	.	PUNCT	_	_	8	punct	_	_
+22	1971	1971	NUM	_	NumType=Card	8	conj	_	SpaceAfter=No
+23	.	.	PUNCT	_	_	8	punct	_	SpacesAfter=\n
 
-# newpar
 # sent_id = 3
 # text = Cursou o secundário nos colégios Arnaldo e Afonso Arinos em Belo Horizonte, ingressando posteriormente na Escola Superior de Agricultura e Veterinária de Viçosa (MG).
-1	Cursou	Cursar	VERB	_	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	_	_
+1	Cursou	Cursar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
-3	secundário	secundário	ADJ	_	Gender=Masc|Number=Sing	1	obj	_	_
+3	secundário	secundário	NOUN	_	Gender=Masc|Number=Sing	1	obj	_	_
 4-5	nos	_	_	_	_	_	_	_	_
 4	em	em	ADP	_	_	6	case	_	_
 5	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	6	det	_	_
 6	colégios	colégio	NOUN	_	Gender=Masc|Number=Plur	1	obl	_	_
-7	Arnaldo	Arnaldo	PROPN	_	Gender=Masc|Number=Sing	6	amod	_	_
+7	Arnaldo	Arnaldo	PROPN	_	Gender=Masc|Number=Sing	6	appos	_	_
 8	e	e	CCONJ	_	_	9	cc	_	_
 9	Afonso	Afonso	PROPN	_	Gender=Masc|Number=Sing	7	conj	_	_
 10	Arinos	Arinos	PROPN	_	Number=Sing	9	flat:name	_	_
 11	em	em	ADP	_	_	12	case	_	_
-12	Belo	Belo	PROPN	_	Gender=Masc|Number=Sing	1	obl	_	_
+12	Belo	Belo	PROPN	_	Gender=Masc|Number=Sing	9	nmod	_	_
 13	Horizonte	Horizonte	PROPN	_	Number=Sing	12	flat:name	_	SpaceAfter=No
 14	,	,	PUNCT	_	_	15	punct	_	_
-15	ingressando	ingressar	VERB	_	VerbForm=Ger	1	advcl	_	_
+15	ingressando	ingressar	VERB	_	VerbForm=Ger	9	advcl	_	_
 16	posteriormente	posteriormente	ADV	_	_	15	advmod	_	_
 17-18	na	_	_	_	_	_	_	_	_
 17	em	em	ADP	_	_	19	case	_	_
@@ -93,56 +92,56 @@
 23	e	e	CCONJ	_	_	24	cc	_	_
 24	Veterinária	Veterinária	PROPN	_	Gender=Fem|Number=Sing	19	conj	_	_
 25	de	de	ADP	_	_	26	case	_	_
-26	Viçosa	Viçosa	PROPN	_	Gender=Fem|Number=Sing	24	nmod	_	_
+26	Viçosa	Viçosa	PROPN	_	Number=Sing	24	nmod	_	_
 27	(	(	PUNCT	_	_	28	punct	_	SpaceAfter=No
-28	MG	MG	PROPN	_	Gender=Masc|Number=Sing	24	appos	_	SpaceAfter=No
+28	MG	MG	PROPN	_	Gender=Masc|Number=Sing	24	parataxis	_	SpaceAfter=No
 29	)	)	PUNCT	_	_	28	punct	_	SpaceAfter=No
-30	.	.	PUNCT	_	_	1	punct	_	_
+30	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
 
 # sent_id = 4
 # text = Não tendo completado o curso, bacharelou-se em 1958 pela Faculdade de Direito da Universidade de Minas Gerais (UMG), atual Universidade Federal de Minas Gerais (UFMG).
 1	Não	não	ADV	_	Polarity=Neg	3	advmod	_	_
 2	tendo	ter	AUX	_	VerbForm=Ger	3	aux	_	_
-3	completado	completar	VERB	_	VerbForm=Part	7	dep	_	_
+3	completado	completar	VERB	_	VerbForm=Part	7	advcl	_	_
 4	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	5	det	_	_
 5	curso	curso	NOUN	_	Gender=Masc|Number=Sing	3	obj	_	SpaceAfter=No
 6	,	,	PUNCT	_	_	3	punct	_	_
 7-8	bacharelou-se	_	_	_	_	_	_	_	_
 7	bacharelou	bacharelar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
-8	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	7	expl	_	_
+8	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	7	obj	_	_
 9	em	em	ADP	_	_	10	case	_	_
 10	1958	1958	NUM	_	NumType=Card	7	obl	_	_
 11-12	pela	_	_	_	_	_	_	_	_
 11	por	por	ADP	_	_	13	case	_	_
 12	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	13	det	_	_
-13	Faculdade	Faculdade	PROPN	_	Gender=Fem|Number=Sing	7	obl	_	_
+13	Faculdade	Faculdade	PROPN	_	Gender=Fem|Number=Sing	10	nmod	_	_
 14	de	de	ADP	_	_	15	case	_	_
 15	Direito	Direito	PROPN	_	Number=Sing	13	nmod	_	_
 16-17	da	_	_	_	_	_	_	_	_
 16	de	de	ADP	_	_	18	case	_	_
 17	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	18	det	_	_
-18	Universidade	Universidade	PROPN	_	Number=Sing	15	nmod	_	_
+18	Universidade	universidade	PROPN	_	Gender=Fem|Number=Sing	13	nmod	_	_
 19	de	de	ADP	_	_	20	case	_	_
-20	Minas	Minas	PROPN	_	Gender=Masc|Number=Sing	18	nmod	_	_
+20	Minas	Minas	PROPN	_	Number=Sing	18	nmod	_	_
 21	Gerais	Gerais	PROPN	_	Number=Sing	20	flat:name	_	_
 22	(	(	PUNCT	_	_	23	punct	_	SpaceAfter=No
-23	UMG	UMG	PROPN	_	Gender=Masc|Number=Sing	20	appos	_	SpaceAfter=No
+23	UMG	UMG	PROPN	_	Gender=Masc|Number=Sing	13	appos	_	SpaceAfter=No
 24	)	)	PUNCT	_	_	23	punct	_	SpaceAfter=No
-25	,	,	PUNCT	_	_	27	punct	_	_
-26	atual	atual	ADJ	_	Gender=Fem|Number=Sing	27	amod	_	_
-27	Universidade	Universidade	PROPN	_	Gender=Fem|Number=Sing	20	appos	_	_
+25	,	,	PUNCT	_	_	26	punct	_	_
+26	atual	atual	ADJ	_	Gender=Masc|Number=Sing	10	amod	_	_
+27	Universidade	Universidade	PROPN	_	Gender=Masc|Number=Sing	10	appos	_	_
 28	Federal	Federal	PROPN	_	Number=Sing	27	flat:name	_	_
 29	de	de	ADP	_	_	30	case	_	_
-30	Minas	Minas	PROPN	_	Gender=Masc|Number=Sing	27	nmod	_	_
+30	Minas	Minas	PROPN	_	Number=Sing	27	nmod	_	_
 31	Gerais	Gerais	PROPN	_	Number=Sing	30	flat:name	_	_
 32	(	(	PUNCT	_	_	33	punct	_	SpaceAfter=No
-33	UFMG	UFMG	PROPN	_	Gender=Masc|Number=Sing	27	appos	_	SpaceAfter=No
+33	UFMG	UFMG	PROPN	_	Gender=Fem|Number=Sing	27	appos	_	SpaceAfter=No
 34	)	)	PUNCT	_	_	33	punct	_	SpaceAfter=No
-35	.	.	PUNCT	_	_	7	punct	_	_
+35	.	.	PUNCT	_	_	7	punct	_	SpacesAfter=\n
 
 # sent_id = 5
 # text = Filiado à União Democrática Nacional (UDN), presidiu o departamento estudantil do partido.
-1	Filiado	Filiar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	11	dep	_	_
+1	Filiado	Filiar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	11	acl	_	_
 2-3	à	_	_	_	_	_	_	_	_
 2	a	a	ADP	_	_	4	case	_	_
 3	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	4	det	_	_
@@ -150,7 +149,7 @@
 5	Democrática	Democrática	PROPN	_	Number=Sing	4	flat:name	_	_
 6	Nacional	Nacional	PROPN	_	Number=Sing	4	flat:name	_	_
 7	(	(	PUNCT	_	_	8	punct	_	SpaceAfter=No
-8	UDN	UDN	PROPN	_	Gender=Masc|Number=Sing	4	appos	_	SpaceAfter=No
+8	UDN	UDN	PROPN	_	Gender=Fem|Number=Sing	4	appos	_	SpaceAfter=No
 9	)	)	PUNCT	_	_	8	punct	_	SpaceAfter=No
 10	,	,	PUNCT	_	_	1	punct	_	_
 11	presidiu	presidir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
@@ -161,17 +160,16 @@
 15	de	de	ADP	_	_	17	case	_	_
 16	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	17	det	_	_
 17	partido	partido	NOUN	_	Gender=Masc|Number=Sing	13	nmod	_	SpaceAfter=No
-18	.	.	PUNCT	_	_	11	punct	_	_
+18	.	.	PUNCT	_	_	11	punct	_	SpacesAfter=\n
 
-# newpar
 # sent_id = 6
 # text = Após exercer a advocacia em Belo Horizonte, foi subchefe de gabinete do ministro Gabriel Passos, das Minas e Energia, de 1961 a 1962, e chefe de gabinete dos ministros João Mangabeira e Eliezer Batista da Silva, da mesma pasta, entre 1962 e 1963.
-1	Após	após	ADP	_	_	2	mark	_	_
+1	Após	após	SCONJ	_	_	2	mark	_	_
 2	exercer	exercer	VERB	_	VerbForm=Inf	10	advcl	_	_
 3	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	4	det	_	_
 4	advocacia	advocacia	NOUN	_	Gender=Fem|Number=Sing	2	obj	_	_
 5	em	em	ADP	_	_	6	case	_	_
-6	Belo	Belo	PROPN	_	Gender=Masc|Number=Sing	2	obl	_	_
+6	Belo	Belo	PROPN	_	Gender=Masc|Number=Sing	4	nmod	_	_
 7	Horizonte	Horizonte	PROPN	_	Number=Sing	6	flat:name	_	SpaceAfter=No
 8	,	,	PUNCT	_	_	2	punct	_	_
 9	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	10	cop	_	_
@@ -181,24 +179,24 @@
 13-14	do	_	_	_	_	_	_	_	_
 13	de	de	ADP	_	_	15	case	_	_
 14	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	15	det	_	_
-15	ministro	ministro	NOUN	_	Gender=Masc|Number=Sing	10	nmod	_	_
-16	Gabriel	Gabriel	ADP	_	Gender=Masc|Number=Sing	17	case	_	_
-17	Passos	passo	NOUN	_	Gender=Masc|Number=Plur|PronType=Prs	15	nmod	_	SpaceAfter=No
-18	,	,	PUNCT	_	_	10	punct	_	_
+15	ministro	ministro	NOUN	_	Gender=Masc|Number=Sing	12	nmod	_	_
+16	Gabriel	Gabriel	PROPN	_	Gender=Masc|Number=Sing	15	appos	_	_
+17	Passos	passos	PROPN	_	Number=Sing	16	flat:name	_	SpaceAfter=No
+18	,	,	PUNCT	_	_	23	punct	_	_
 19-20	das	_	_	_	_	_	_	_	_
 19	de	de	ADP	_	_	21	case	_	_
 20	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	21	det	_	_
-21	Minas	minas	PROPN	_	Gender=Fem|Number=Plur	10	nmod	_	_
+21	Minas	Minas	PROPN	_	Number=Sing	15	nmod	_	_
 22	e	e	CCONJ	_	_	23	cc	_	_
-23	Energia	energia	PROPN	_	_	21	conj	_	SpaceAfter=No
-24	,	,	PUNCT	_	_	31	punct	_	_
+23	Energia	energia	PROPN	_	Number=Sing	10	conj	_	SpaceAfter=No
+24	,	,	PUNCT	_	_	23	punct	_	_
 25	de	de	ADP	_	_	26	case	_	_
-26	1961	1961	NUM	_	NumType=Card	21	nmod	_	_
+26	1961	1961	NUM	_	NumType=Card	23	obl	_	_
 27	a	a	ADP	_	_	28	case	_	_
 28	1962	1962	NUM	_	NumType=Card	26	nmod	_	SpaceAfter=No
 29	,	,	PUNCT	_	_	31	punct	_	_
 30	e	e	CCONJ	_	_	31	cc	_	_
-31	chefe	chefe	NOUN	_	Gender=Masc|Number=Sing	21	conj	_	_
+31	chefe	chefe	NOUN	_	Gender=Masc|Number=Sing	10	conj	_	_
 32	de	de	ADP	_	_	33	case	_	_
 33	gabinete	gabinete	NOUN	_	Gender=Masc|Number=Sing	31	nmod	_	_
 34-35	dos	_	_	_	_	_	_	_	_
@@ -213,21 +211,20 @@
 42-43	da	_	_	_	_	_	_	_	_
 42	de	de	ADP	_	_	44	case	_	_
 43	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	44	det	_	_
-44	Silva	Silva	PROPN	_	Number=Sing	40	nmod	_	SpaceAfter=No
+44	Silva	Silva	PROPN	_	Number=Sing	40	flat:name	_	SpaceAfter=No
 45	,	,	PUNCT	_	_	49	punct	_	_
 46-47	da	_	_	_	_	_	_	_	_
 46	de	de	ADP	_	_	49	case	_	_
 47	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	49	det	_	_
 48	mesma	mesmo	ADJ	_	Gender=Fem|Number=Sing	49	amod	_	_
-49	pasta	pasta	NOUN	_	Gender=Fem|Number=Sing	37	conj	_	SpaceAfter=No
+49	pasta	pasta	NOUN	_	Gender=Fem|Number=Sing	37	nmod	_	SpaceAfter=No
 50	,	,	PUNCT	_	_	49	punct	_	_
 51	entre	entre	ADP	_	_	52	case	_	_
 52	1962	1962	NUM	_	NumType=Card	49	nmod	_	_
 53	e	e	CCONJ	_	_	54	cc	_	_
 54	1963	1963	NUM	_	NumType=Card	52	conj	_	SpaceAfter=No
-55	.	.	PUNCT	_	_	10	punct	_	_
+55	.	.	PUNCT	_	_	10	punct	_	SpacesAfter=\n
 
-# newpar
 # sent_id = 7
 # text = No pleito de novembro de 1970, elegeu-se deputado federal pelo estado de Minas Gerais na legenda da Aliança Renovadora Nacional (Arena), partido de apoio ao regime militar instaurado no país em abril de 1964.
 1-2	No	_	_	_	_	_	_	_	_
@@ -241,20 +238,20 @@
 8	,	,	PUNCT	_	_	3	punct	_	_
 9-10	elegeu-se	_	_	_	_	_	_	_	_
 9	elegeu	eleger	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
-10	se	se	PRON	_	Case=Acc|Gender=Unsp|PronType=Prs	9	nsubj	_	_
-11	deputado	deputado	NOUN	_	Gender=Masc|Number=Sing	9	obj	_	_
+10	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	9	obj	_	_
+11	deputado	deputado	NOUN	_	Gender=Masc|Number=Sing	9	nsubj	_	_
 12	federal	federal	ADJ	_	Gender=Masc|Number=Sing	11	amod	_	_
 13-14	pelo	_	_	_	_	_	_	_	_
 13	por	por	ADP	_	_	15	case	_	_
 14	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	15	det	_	_
-15	estado	estado	NOUN	_	Gender=Masc|Number=Sing	9	obl	_	_
+15	estado	estado	NOUN	_	Gender=Masc|Number=Sing	11	nmod	_	_
 16	de	de	ADP	_	_	17	case	_	_
 17	Minas	Minas	PROPN	_	Gender=Masc|Number=Sing	15	nmod	_	_
 18	Gerais	Gerais	PROPN	_	Number=Sing	17	flat:name	_	_
 19-20	na	_	_	_	_	_	_	_	_
 19	em	em	ADP	_	_	21	case	_	_
 20	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	21	det	_	_
-21	legenda	legenda	NOUN	_	Gender=Fem|Number=Sing	9	obl	_	_
+21	legenda	legenda	NOUN	_	Gender=Fem|Number=Sing	11	nmod	_	_
 22-23	da	_	_	_	_	_	_	_	_
 22	de	de	ADP	_	_	24	case	_	_
 23	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	24	det	_	_
@@ -265,13 +262,13 @@
 28	Arena	Arena	PROPN	_	Gender=Fem|Number=Sing	24	appos	_	SpaceAfter=No
 29	)	)	PUNCT	_	_	28	punct	_	SpaceAfter=No
 30	,	,	PUNCT	_	_	31	punct	_	_
-31	partido	partido	NOUN	_	Gender=Masc|Number=Sing	24	appos	_	_
+31	partido	partido	NOUN	_	Gender=Masc|Number=Sing	11	appos	_	_
 32	de	de	ADP	_	_	33	case	_	_
 33	apoio	apoio	NOUN	_	Gender=Masc|Number=Sing	31	nmod	_	_
 34-35	ao	_	_	_	_	_	_	_	_
 34	a	a	ADP	_	_	36	case	_	_
 35	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	36	det	_	_
-36	regime	regime	NOUN	_	Gender=Masc|Number=Sing	33	nmod	_	_
+36	regime	regime	NOUN	_	Gender=Masc|Number=Sing	31	nmod	_	_
 37	militar	militar	ADJ	_	Gender=Masc|Number=Sing	36	amod	_	_
 38	instaurado	instaurar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	36	acl	_	_
 39-40	no	_	_	_	_	_	_	_	_
@@ -282,7 +279,7 @@
 43	abril	abril	NOUN	_	Gender=Masc|Number=Sing	38	obl	_	_
 44	de	de	ADP	_	_	45	case	_	_
 45	1964	1964	NUM	_	NumType=Card	43	nmod	_	SpaceAfter=No
-46	.	.	PUNCT	_	_	9	punct	_	_
+46	.	.	PUNCT	_	_	9	punct	_	SpacesAfter=\n
 
 # sent_id = 8
 # text = Assumindo o mandato em fevereiro de 1971, participou dos trabalhos da Câmara como suplente da Comissão de Transportes, Comunicações e Obras Públicas, e, como membro efetivo, da Comissão de Minas e Energia, da qual foi presidente em 1973.
@@ -298,49 +295,49 @@
 10-11	dos	_	_	_	_	_	_	_	_
 10	de	de	ADP	_	_	12	case	_	_
 11	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	12	det	_	_
-12	trabalhos	trabalho	NOUN	_	Gender=Masc|Number=Plur	9	obl	_	_
+12	trabalhos	trabalho	NOUN	_	Gender=Masc|Number=Plur	9	obj	_	_
 13-14	da	_	_	_	_	_	_	_	_
 13	de	de	ADP	_	_	15	case	_	_
 14	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	15	det	_	_
 15	Câmara	câmara	NOUN	_	Gender=Fem|Number=Sing	12	nmod	_	_
 16	como	como	ADP	_	_	17	case	_	_
-17	suplente	suplente	NOUN	_	Gender=Masc|Number=Sing	9	obl	_	_
+17	suplente	suplente	NOUN	_	Gender=Masc|Number=Sing	12	nmod	_	_
 18-19	da	_	_	_	_	_	_	_	_
 18	de	de	ADP	_	_	20	case	_	_
 19	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	20	det	_	_
 20	Comissão	Comissão	PROPN	_	Gender=Fem|Number=Sing	17	nmod	_	_
-21	de	de	ADP	_	_	22	case	_	_
-22	Transportes	Transportes	PROPN	_	Number=Sing	20	nmod	_	SpaceAfter=No
-23	,	,	PUNCT	_	_	22	punct	_	_
-24	Comunicações	Comunicações	PROPN	_	Number=Sing	22	flat:name	_	_
-25	e	e	CCONJ	_	_	22	flat:name	_	_
-26	Obras	Obras	PROPN	_	_	22	flat:name	_	_
-27	Públicas	Públicas	PROPN	_	Number=Sing	22	flat:name	_	SpaceAfter=No
+21	de	de	ADP	_	_	20	flat:name	_	_
+22	Transportes	transportes	PROPN	_	Number=Sing	20	flat:name	_	SpaceAfter=No
+23	,	,	PUNCT	_	_	24	punct	_	_
+24	Comunicações	Comunicações	PROPN	_	Number=Sing	20	flat:name	_	_
+25	e	e	CCONJ	_	_	26	cc	_	_
+26	Obras	Obras	PROPN	_	Gender=Masc|Number=Sing	20	conj	_	_
+27	Públicas	públicas	PROPN	_	Number=Sing	26	flat:name	_	SpaceAfter=No
 28	,	,	PUNCT	_	_	47	punct	_	_
 29	e	e	CCONJ	_	_	47	cc	_	SpaceAfter=No
-30	,	,	PUNCT	_	_	47	punct	_	_
+30	,	,	PUNCT	_	_	32	punct	_	_
 31	como	como	ADP	_	_	32	case	_	_
-32	membro	membro	NOUN	_	Gender=Masc|Number=Sing	47	nmod	_	_
+32	membro	membro	NOUN	_	Gender=Masc|Number=Sing	47	obl	_	_
 33	efetivo	efetivo	ADJ	_	Gender=Masc|Number=Sing	32	amod	_	SpaceAfter=No
-34	,	,	PUNCT	_	_	37	punct	_	_
+34	,	,	PUNCT	_	_	32	punct	_	_
 35-36	da	_	_	_	_	_	_	_	_
 35	de	de	ADP	_	_	37	case	_	_
 36	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	37	det	_	_
-37	Comissão	Comissão	PROPN	_	_	47	nmod	_	_
+37	Comissão	Comissão	PROPN	_	Gender=Fem|Number=Sing	32	nmod	_	_
 38	de	de	ADP	_	_	39	case	_	_
-39	Minas	Minas	PROPN	_	Gender=Fem|Number=Plur	37	nmod	_	_
+39	Minas	Minas	PROPN	_	Number=Sing	37	nmod	_	_
 40	e	e	CCONJ	_	_	39	flat:name	_	_
-41	Energia	energia	PROPN	_	_	39	flat:name	_	SpaceAfter=No
-42	,	,	PUNCT	_	_	37	punct	_	_
+41	Energia	energia	PROPN	_	Number=Sing	39	flat:name	_	SpaceAfter=No
+42	,	,	PUNCT	_	_	32	punct	_	_
 43-44	da	_	_	_	_	_	_	_	_
 43	de	de	ADP	_	_	45	case	_	_
-44	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	45	det	_	_
-45	qual	qual	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	47	nmod	_	_
+44	a	o	DET	_	Gender=Fem|Number=Sing|PronType=Art	45	det	_	_
+45	qual	qual	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	37	nmod	_	_
 46	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	47	cop	_	_
 47	presidente	presidente	NOUN	_	Gender=Masc|Number=Sing	20	conj	_	_
 48	em	em	ADP	_	_	49	case	_	_
 49	1973	1973	NUM	_	NumType=Card	47	nmod	_	SpaceAfter=No
-50	.	.	PUNCT	_	_	9	punct	_	_
+50	.	.	PUNCT	_	_	9	punct	_	SpacesAfter=\n
 
 # sent_id = 9
 # text = Em novembro de 1974, foi reeleito deputado federal na mesma legenda, participando em 1975 dos trabalhos da Comissão de Relações Exteriores da Câmara e tornando-se suplente da Comissão de Minas e Energia.
@@ -372,16 +369,16 @@
 23	Comissão	Comissão	PROPN	_	Gender=Fem|Number=Sing	20	nmod	_	_
 24	de	de	ADP	_	_	25	case	_	_
 25	Relações	Relações	PROPN	_	Number=Sing	23	nmod	_	_
-26	Exteriores	Exteriores	PROPN	_	Number=Sing	25	flat:name	_	_
+26	Exteriores	exteriores	PROPN	_	Number=Sing	25	flat:name	_	_
 27-28	da	_	_	_	_	_	_	_	_
 27	de	de	ADP	_	_	29	case	_	_
 28	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	29	det	_	_
-29	Câmara	câmara	NOUN	_	_	25	nmod	_	_
+29	Câmara	câmara	NOUN	_	Gender=Fem|Number=Sing	20	nmod	_	_
 30	e	e	CCONJ	_	_	31	cc	_	_
 31-32	tornando-se	_	_	_	_	_	_	_	_
-31	tornando	tornar	VERB	_	VerbForm=Ger	7	conj	_	_
+31	tornando	tornar	VERB	_	VerbForm=Ger	15	conj	_	_
 32	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	31	expl	_	_
-33	suplente	suplente	ADJ	_	_	31	advmod	_	_
+33	suplente	suplente	ADV	_	_	31	advmod	_	_
 34-35	da	_	_	_	_	_	_	_	_
 34	de	de	ADP	_	_	36	case	_	_
 35	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	36	det	_	_
@@ -389,8 +386,8 @@
 37	de	de	ADP	_	_	38	case	_	_
 38	Minas	Minas	PROPN	_	Number=Sing	36	nmod	_	_
 39	e	e	CCONJ	_	_	38	flat:name	_	_
-40	Energia	energia	PROPN	_	Gender=Fem|Number=Sing	38	flat:name	_	SpaceAfter=No
-41	.	.	PUNCT	_	_	7	punct	_	_
+40	Energia	energia	PROPN	_	Number=Sing	38	flat:name	_	SpaceAfter=No
+41	.	.	PUNCT	_	_	7	punct	_	SpacesAfter=\n
 
 # sent_id = 10
 # text = Em 1978, participou como representante do Congresso Nacional na Reunião Interparlamentar, realizada em Sófia, Bulgária.
@@ -399,7 +396,7 @@
 3	,	,	PUNCT	_	_	2	punct	_	_
 4	participou	participar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 5	como	como	ADP	_	_	6	case	_	_
-6	representante	representante	NOUN	_	Gender=Masc|Number=Sing	4	obl	_	_
+6	representante	representante	NOUN	_	Gender=Masc|Number=Sing	4	xcomp	_	_
 7-8	do	_	_	_	_	_	_	_	_
 7	de	de	ADP	_	_	9	case	_	_
 8	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	9	det	_	_
@@ -408,23 +405,22 @@
 11-12	na	_	_	_	_	_	_	_	_
 11	em	em	ADP	_	_	13	case	_	_
 12	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	13	det	_	_
-13	Reunião	reunião	PROPN	_	Gender=Fem|Number=Sing	4	obl	_	_
-14	Interparlamentar	Interparlamentar	PROPN	_	Number=Sing	13	flat:name	_	SpaceAfter=No
+13	Reunião	reunião	NOUN	_	Gender=Fem|Number=Sing	4	obl	_	_
+14	Interparlamentar	Interparlamentar	ADJ	_	Gender=Fem|Number=Sing	13	amod	_	SpaceAfter=No
 15	,	,	PUNCT	_	_	16	punct	_	_
 16	realizada	realizar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	13	acl	_	_
 17	em	em	ADP	_	_	18	case	_	_
 18	Sófia	Sófia	PROPN	_	Gender=Fem|Number=Sing	16	obl	_	SpaceAfter=No
 19	,	,	PUNCT	_	_	16	punct	_	_
-20	Bulgária	Bulgária	PROPN	_	Gender=Fem|Number=Sing	18	appos	_	SpaceAfter=No
-21	.	.	PUNCT	_	_	4	punct	_	_
+20	Bulgária	Bulgária	PROPN	_	Gender=Fem|Number=Sing	13	appos	_	SpaceAfter=No
+21	.	.	PUNCT	_	_	4	punct	_	SpacesAfter=\n
 
-# newpar
 # sent_id = 11
 # text = Reeleito novamente em novembro desse mesmo ano, em março de 1979 afastou-se da Câmara Federal para assumir o cargo de secretário de Administração do governo de Minas Gerais na gestão de Francelino Pereira (1979-1983).
-1	Reeleito	reeleito	NOUN	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	14	nsubj	_	_
+1	Reeleito	reeleger	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	14	advcl	_	_
 2	novamente	novamente	ADV	_	_	1	advmod	_	_
 3	em	em	ADP	_	_	4	case	_	_
-4	novembro	novembro	NOUN	_	Gender=Masc|Number=Sing	1	nmod	_	_
+4	novembro	novembro	NOUN	_	Gender=Masc|Number=Sing	1	obl	_	_
 5-6	desse	_	_	_	_	_	_	_	_
 5	de	de	ADP	_	_	8	case	_	_
 6	esse	esse	DET	_	Gender=Masc|Number=Sing|PronType=Dem	8	det	_	_
@@ -432,7 +428,7 @@
 8	ano	ano	NOUN	_	Gender=Masc|Number=Sing	4	nmod	_	SpaceAfter=No
 9	,	,	PUNCT	_	_	1	punct	_	_
 10	em	em	ADP	_	_	11	case	_	_
-11	março	março	NOUN	_	Gender=Masc|Number=Sing	14	obl	_	_
+11	março	março	NOUN	_	Gender=Masc|Number=Sing	1	obl	_	_
 12	de	de	ADP	_	_	13	case	_	_
 13	1979	1979	NUM	_	NumType=Card	11	nmod	_	_
 14-15	afastou-se	_	_	_	_	_	_	_	_
@@ -441,16 +437,16 @@
 16-17	da	_	_	_	_	_	_	_	_
 16	de	de	ADP	_	_	18	case	_	_
 17	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	18	det	_	_
-18	Câmara	câmara	PROPN	_	Gender=Fem|Number=Sing	14	obl	_	_
+18	Câmara	Câmara	PROPN	_	Gender=Fem|Number=Sing	14	obl	_	_
 19	Federal	Federal	PROPN	_	Number=Sing	18	flat:name	_	_
-20	para	para	ADP	_	_	21	mark	_	_
-21	assumir	assumir	VERB	_	VerbForm=Inf	14	advcl	_	_
+20	para	para	SCONJ	_	_	21	mark	_	_
+21	assumir	assumir	VERB	_	VerbForm=Inf	18	acl	_	_
 22	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	23	det	_	_
 23	cargo	cargo	NOUN	_	Gender=Masc|Number=Sing	21	obj	_	_
 24	de	de	ADP	_	_	25	case	_	_
 25	secretário	secretário	NOUN	_	Gender=Masc|Number=Sing	23	nmod	_	_
 26	de	de	ADP	_	_	27	case	_	_
-27	Administração	administração	NOUN	_	_	25	nmod	_	_
+27	Administração	administração	NOUN	_	Gender=Fem|Number=Sing	25	nmod	_	_
 28-29	do	_	_	_	_	_	_	_	_
 28	de	de	ADP	_	_	30	case	_	_
 29	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	30	det	_	_
@@ -461,16 +457,15 @@
 34-35	na	_	_	_	_	_	_	_	_
 34	em	em	ADP	_	_	36	case	_	_
 35	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	36	det	_	_
-36	gestão	gestão	NOUN	_	Gender=Fem|Number=Sing	23	nmod	_	_
+36	gestão	gestão	NOUN	_	Gender=Fem|Number=Sing	14	obl	_	_
 37	de	de	ADP	_	_	38	case	_	_
 38	Francelino	Francelino	PROPN	_	Gender=Masc|Number=Sing	36	nmod	_	_
 39	Pereira	Pereira	PROPN	_	Number=Sing	38	flat:name	_	_
 40	(	(	PUNCT	_	_	41	punct	_	SpaceAfter=No
 41	1979-1983	1979-1983	NUM	_	NumType=Card	38	appos	_	SpaceAfter=No
 42	)	)	PUNCT	_	_	41	punct	_	SpaceAfter=No
-43	.	.	PUNCT	_	_	14	punct	_	_
+43	.	.	PUNCT	_	_	14	punct	_	SpacesAfter=\n
 
-# newpar
 # sent_id = 12
 # text = Com a extinção em novembro de 1979 do bipartidarismo e a conseqüente reorganização partidária, ingressou no Partido Democrático Social (PDS), agremiação que deu continuidade à antiga Arena, da qual foi membro do diretório nacional e do diretório municipal de Belo Horizonte.
 1	Com	com	ADP	_	_	3	case	_	_
@@ -487,10 +482,10 @@
 11	e	e	CCONJ	_	_	14	cc	_	_
 12	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	14	det	_	_
 13	conseqüente	conseqüente	ADJ	_	Gender=Fem|Number=Sing	14	amod	_	_
-14	reorganização	reorganização	NOUN	_	Gender=Fem|Number=Sing	10	conj	_	_
+14	reorganização	reorganização	NOUN	_	Gender=Fem|Number=Sing	3	conj	_	_
 15	partidária	partidário	ADJ	_	Gender=Fem|Number=Sing	14	amod	_	SpaceAfter=No
 16	,	,	PUNCT	_	_	3	punct	_	_
-17	ingressou	ingresser	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+17	ingressou	ingressar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 18-19	no	_	_	_	_	_	_	_	_
 18	em	em	ADP	_	_	20	case	_	_
 19	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	20	det	_	_
@@ -500,7 +495,7 @@
 23	(	(	PUNCT	_	_	24	punct	_	SpaceAfter=No
 24	PDS	PDS	PROPN	_	Gender=Masc|Number=Sing	20	appos	_	SpaceAfter=No
 25	)	)	PUNCT	_	_	24	punct	_	SpaceAfter=No
-26	,	,	PUNCT	_	_	20	punct	_	_
+26	,	,	PUNCT	_	_	27	punct	_	_
 27	agremiação	agremiação	NOUN	_	Gender=Fem|Number=Sing	20	appos	_	_
 28	que	que	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	29	nsubj	_	_
 29	deu	dar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	27	acl:relcl	_	_
@@ -510,13 +505,13 @@
 32	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	34	det	_	_
 33	antiga	antigo	ADJ	_	Gender=Fem|Number=Sing	34	amod	_	_
 34	Arena	Arena	PROPN	_	Gender=Fem|Number=Sing	29	obl	_	SpaceAfter=No
-35	,	,	PUNCT	_	_	40	punct	_	_
+35	,	,	PUNCT	_	_	29	punct	_	_
 36-37	da	_	_	_	_	_	_	_	_
 36	de	de	ADP	_	_	38	case	_	_
-37	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	38	det	_	_
+37	a	o	DET	_	Gender=Fem|Number=Sing|PronType=Art	38	det	_	_
 38	qual	qual	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	40	nmod	_	_
 39	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	40	cop	_	_
-40	membro	membro	NOUN	_	Gender=Masc|Number=Sing	34	acl:relcl	_	_
+40	membro	membro	NOUN	_	Gender=Masc|Number=Sing	29	advcl	_	_
 41-42	do	_	_	_	_	_	_	_	_
 41	de	de	ADP	_	_	43	case	_	_
 42	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	43	det	_	_
@@ -531,17 +526,17 @@
 50	de	de	ADP	_	_	51	case	_	_
 51	Belo	Belo	PROPN	_	Gender=Masc|Number=Sing	48	nmod	_	_
 52	Horizonte	Horizonte	PROPN	_	Number=Sing	51	flat:name	_	SpaceAfter=No
-53	.	.	PUNCT	_	_	17	punct	_	_
+53	.	.	PUNCT	_	_	17	punct	_	SpacesAfter=\n
 
 # sent_id = 13
 # text = Reassumindo seu assento na Câmara em 1982, em novembro desse ano voltou a eleger-se deputado federal, desta feita na legenda do PDS mineiro.
-1	Reassumindo	Reassumir	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	17	dep	_	_
+1	Reassumindo	Reassumir	VERB	_	VerbForm=Ger	15	xcomp	_	_
 2	seu	seu	DET	_	Gender=Masc|Number=Sing|PronType=Prs	3	det	_	_
 3	assento	assento	NOUN	_	Gender=Masc|Number=Sing	1	obj	_	_
 4-5	na	_	_	_	_	_	_	_	_
 4	em	em	ADP	_	_	6	case	_	_
 5	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	6	det	_	_
-6	Câmara	Câmara	NOUN	_	Gender=Fem|Number=Sing	1	obl	_	_
+6	Câmara	câmara	NOUN	_	Gender=Fem|Number=Sing	1	obl	_	_
 7	em	em	ADP	_	_	8	case	_	_
 8	1982	1982	NUM	_	NumType=Card	1	obl	_	SpaceAfter=No
 9	,	,	PUNCT	_	_	1	punct	_	_
@@ -551,10 +546,10 @@
 12	de	de	ADP	_	_	14	case	_	_
 13	esse	esse	DET	_	Gender=Masc|Number=Sing|PronType=Dem	14	det	_	_
 14	ano	ano	NOUN	_	Gender=Masc|Number=Sing	11	nmod	_	_
-15	voltou	voltar	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	17	aux	_	_
-16	a	a	ADP	_	_	17	obl	_	_
+15	voltou	voltar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+16	a	a	SCONJ	_	_	17	mark	_	_
 17-18	eleger-se	_	_	_	_	_	_	_	_
-17	eleger	eleger	VERB	_	VerbForm=Inf	0	root	_	_
+17	eleger	eleger	VERB	_	VerbForm=Inf	1	xcomp	_	_
 18	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	17	expl	_	_
 19	deputado	deputado	NOUN	_	Gender=Masc|Number=Sing	17	obl	_	_
 20	federal	federal	ADJ	_	Gender=Masc|Number=Sing	19	amod	_	SpaceAfter=No
@@ -571,13 +566,12 @@
 28	de	de	ADP	_	_	30	case	_	_
 29	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	30	det	_	_
 30	PDS	PDS	PROPN	_	Gender=Masc|Number=Sing	27	nmod	_	_
-31	mineiro	mineiro	NOUN	_	Gender=Masc|Number=Sing	30	appos	_	SpaceAfter=No
-32	.	.	PUNCT	_	_	17	punct	_	_
+31	mineiro	mineiro	PROPN	_	Number=Sing	30	flat:name	_	SpaceAfter=No
+32	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
 
-# newpar
 # sent_id = 14
 # text = Empossado em fevereiro de 1983, na sessão da Câmara de 25 de abril de 1984, votou a favor da emenda Dante de Oliveira, que propunha o restabelecimento das eleições diretas para presidente da República em novembro seguinte.
-1	Empossado	empossar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	20	dep	_	_
+1	Empossado	empossar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	20	acl	_	_
 2	em	em	ADP	_	_	3	case	_	_
 3	fevereiro	fevereiro	NOUN	_	Gender=Masc|Number=Sing	1	obl	_	_
 4	de	de	ADP	_	_	5	case	_	_
@@ -594,23 +588,23 @@
 13	de	de	ADP	_	_	14	case	_	_
 14	25	25	NUM	_	NumType=Card	12	nmod	_	_
 15	de	de	ADP	_	_	16	case	_	_
-16	abril	abril	NOUN	_	Gender=Masc|Number=Sing	14	nmod:tmod	_	_
+16	abril	abril	NOUN	_	Gender=Masc|Number=Sing	14	nmod	_	_
 17	de	de	ADP	_	_	18	case	_	_
 18	1984	1984	NUM	_	NumType=Card	16	nmod	_	SpaceAfter=No
 19	,	,	PUNCT	_	_	1	punct	_	_
 20	votou	votar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
-21	a	a	ADP	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	22	case	_	_
-22	favor	favor	NOUN	_	_	20	obl	_	_
+21	a	a	ADP	_	_	22	case	_	_
+22	favor	favor	NOUN	_	Gender=Masc|Number=Sing	20	obj	_	_
 23-24	da	_	_	_	_	_	_	_	_
 23	de	de	ADP	_	_	25	case	_	_
 24	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	25	det	_	_
-25	emenda	emenda	NOUN	_	Number=Sing	22	nmod	_	_
-26	Dante	Dante	PROPN	_	Number=Sing	25	flat:name	_	_
+25	emenda	emenda	NOUN	_	Gender=Fem|Number=Sing	22	nmod	_	_
+26	Dante	Dante	ADJ	_	Gender=Fem|Number=Sing	25	amod	_	_
 27	de	de	ADP	_	_	28	case	_	_
-28	Oliveira	Oliveira	PROPN	_	Number=Sing	25	nmod	_	SpaceAfter=No
+28	Oliveira	Oliveira	PROPN	_	Gender=Masc|Number=Sing	25	nmod	_	SpaceAfter=No
 29	,	,	PUNCT	_	_	20	punct	_	_
 30	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	31	nsubj	_	_
-31	propunha	propor	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	25	acl:relcl	_	_
+31	propunha	propor	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	28	acl:relcl	_	_
 32	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	33	det	_	_
 33	restabelecimento	restabelecimento	NOUN	_	Gender=Masc|Number=Sing	31	obj	_	_
 34-35	das	_	_	_	_	_	_	_	_
@@ -627,16 +621,16 @@
 43	em	em	ADP	_	_	44	case	_	_
 44	novembro	novembro	NOUN	_	Gender=Masc|Number=Sing	31	obl	_	_
 45	seguinte	seguinte	ADJ	_	Gender=Masc|Number=Sing	44	amod	_	SpaceAfter=No
-46	.	.	PUNCT	_	_	20	punct	_	_
+46	.	.	PUNCT	_	_	20	punct	_	SpacesAfter=\n
 
 # sent_id = 15
 # text = Constatada a insuficiência de votos para que a emenda fosse submetida à apreciação do Senado, convocou-se em 15 de janeiro de 1985 o Colégio Eleitoral.
-1	Constatada	Constatar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	19	dep	_	_
+1	Constatada	Constatar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	19	advcl	_	_
 2	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	3	det	_	_
 3	insuficiência	insuficiência	NOUN	_	Gender=Fem|Number=Sing	1	obj	_	_
 4	de	de	ADP	_	_	5	case	_	_
-5	votos	voto	NOUN	_	Gender=Fem|Number=Plur	3	nmod	_	_
-6	para	para	ADP	_	_	11	mark	_	_
+5	votos	votos	NOUN	_	Gender=Masc|Number=Plur	3	nmod	_	_
+6	para	para	SCONJ	_	_	11	mark	_	_
 7	que	que	SCONJ	_	_	11	mark	_	_
 8	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	9	det	_	_
 9	emenda	emenda	NOUN	_	Gender=Fem|Number=Sing	11	nsubj:pass	_	_
@@ -645,44 +639,44 @@
 12-13	à	_	_	_	_	_	_	_	_
 12	a	a	ADP	_	_	14	case	_	_
 13	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	14	det	_	_
-14	apreciação	apreciação	NOUN	_	Gender=Fem|Number=Sing	11	obl	_	_
+14	apreciação	apreciação	NOUN	_	Gender=Fem|Number=Sing	11	obj	_	_
 15-16	do	_	_	_	_	_	_	_	_
 15	de	de	ADP	_	_	17	case	_	_
 16	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	17	det	_	_
 17	Senado	senado	NOUN	_	Gender=Masc|Number=Sing	14	nmod	_	SpaceAfter=No
-18	,	,	PUNCT	_	_	11	punct	_	_
+18	,	,	PUNCT	_	_	1	punct	_	_
 19-20	convocou-se	_	_	_	_	_	_	_	_
 19	convocou	convocar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 20	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	19	expl	_	_
 21	em	em	ADP	_	_	22	case	_	_
 22	15	15	NUM	_	NumType=Card	19	obl	_	_
 23	de	de	ADP	_	_	24	case	_	_
-24	janeiro	janeiro	NOUN	_	Gender=Masc|Number=Sing	22	nmod:tmod	_	_
+24	janeiro	janeiro	NOUN	_	Gender=Masc|Number=Sing	22	nmod	_	_
 25	de	de	ADP	_	_	26	case	_	_
 26	1985	1985	NUM	_	NumType=Card	24	nmod	_	_
 27	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	28	det	_	_
-28	Colégio	Colégio	PROPN	_	Number=Sing	19	nsubj	_	_
+28	Colégio	colégio	PROPN	_	Gender=Masc|Number=Sing	19	nsubj	_	_
 29	Eleitoral	Eleitoral	PROPN	_	Number=Sing	28	flat:name	_	SpaceAfter=No
-30	.	.	PUNCT	_	_	19	punct	_	_
+30	.	.	PUNCT	_	_	19	punct	_	SpacesAfter=\n
 
 # sent_id = 16
 # text = José Machado ajudou a eleger Tancredo Neves, candidato da Aliança Democrática, coligação do Partido do Movimento Democrático Brasileiro (PMDB) com a dissidência do PDS abrigada na Frente Liberal, que derrotou Paulo Maluf, lançado pela legenda pedessista.
 1	José	José	PROPN	_	Gender=Masc|Number=Sing	3	nsubj	_	_
 2	Machado	Machado	PROPN	_	Number=Sing	1	flat:name	_	_
 3	ajudou	ajudar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
-4	a	o	DET	_	_	5	det	_	_
-5	eleger	eleger	NOUN	_	VerbForm=Inf	3	obj	_	_
-6	Tancredo	Tancredo	PROPN	_	Gender=Masc|Number=Sing	5	appos	_	_
+4	a	a	SCONJ	_	_	5	mark	_	_
+5	eleger	eleger	VERB	_	VerbForm=Inf	3	advcl	_	_
+6	Tancredo	Tancredo	PROPN	_	Gender=Masc|Number=Sing	5	obj	_	_
 7	Neves	Neves	PROPN	_	Number=Sing	6	flat:name	_	SpaceAfter=No
 8	,	,	PUNCT	_	_	9	punct	_	_
-9	candidato	candidato	NOUN	_	Gender=Masc|Number=Sing	5	conj	_	_
+9	candidato	candidato	NOUN	_	Gender=Masc|Number=Sing	6	appos	_	_
 10-11	da	_	_	_	_	_	_	_	_
 10	de	de	ADP	_	_	12	case	_	_
 11	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	12	det	_	_
 12	Aliança	Aliança	PROPN	_	Gender=Fem|Number=Sing	9	nmod	_	_
 13	Democrática	Democrática	PROPN	_	Number=Sing	12	flat:name	_	SpaceAfter=No
-14	,	,	PUNCT	_	_	15	punct	_	_
-15	coligação	coligação	NOUN	_	Gender=Fem|Number=Sing	5	appos	_	_
+14	,	,	PUNCT	_	_	9	punct	_	_
+15	coligação	coligação	NOUN	_	Gender=Fem|Number=Sing	5	obl	_	_
 16-17	do	_	_	_	_	_	_	_	_
 16	de	de	ADP	_	_	18	case	_	_
 17	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	18	det	_	_
@@ -690,11 +684,11 @@
 19-20	do	_	_	_	_	_	_	_	_
 19	de	de	ADP	_	_	21	case	_	_
 20	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	21	det	_	_
-21	Movimento	Movimento	PROPN	_	Gender=Masc|Number=Sing	18	nmod	_	_
-22	Democrático	Democrático	PROPN	_	Number=Sing	21	flat:name	_	_
-23	Brasileiro	Brasileiro	PROPN	_	Number=Sing	21	flat:name	_	_
+21	Movimento	Movimento	NOUN	_	Gender=Masc|Number=Sing	18	nmod	_	_
+22	Democrático	democrático	PROPN	_	Gender=Masc|Number=Sing	21	appos	_	_
+23	Brasileiro	Brasileiro	PROPN	_	Number=Sing	22	flat:name	_	_
 24	(	(	PUNCT	_	_	25	punct	_	SpaceAfter=No
-25	PMDB	PMDB	PROPN	_	Gender=Masc|Number=Sing	21	appos	_	SpaceAfter=No
+25	PMDB	PMDB	PROPN	_	Gender=Masc|Number=Sing	18	appos	_	SpaceAfter=No
 26	)	)	PUNCT	_	_	25	punct	_	_
 27	com	com	ADP	_	_	29	case	_	_
 28	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	29	det	_	_
@@ -702,51 +696,51 @@
 30-31	do	_	_	_	_	_	_	_	_
 30	de	de	ADP	_	_	32	case	_	_
 31	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	32	det	_	_
-32	PDS	PDS	PROPN	_	Gender=Masc|Number=Sing	29	nmod	_	_
+32	PDS	Pd	NOUN	_	Gender=Masc|Number=Plur	29	nmod	_	_
 33	abrigada	abrigar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	32	acl	_	_
 34-35	na	_	_	_	_	_	_	_	_
 34	em	em	ADP	_	_	36	case	_	_
 35	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	36	det	_	_
 36	Frente	Frente	PROPN	_	Gender=Fem|Number=Sing	33	obl	_	_
 37	Liberal	liberal	PROPN	_	Number=Sing	36	flat:name	_	SpaceAfter=No
-38	,	,	PUNCT	_	_	33	punct	_	_
+38	,	,	PUNCT	_	_	40	punct	_	_
 39	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	40	nsubj	_	_
 40	derrotou	derrotar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	36	acl:relcl	_	_
 41	Paulo	Paulo	PROPN	_	Gender=Masc|Number=Sing	40	obj	_	_
 42	Maluf	Maluf	PROPN	_	Number=Sing	41	flat:name	_	SpaceAfter=No
-43	,	,	PUNCT	_	_	40	punct	_	_
-44	lançado	lançar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	36	acl	_	_
+43	,	,	PUNCT	_	_	44	punct	_	_
+44	lançado	lançar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	41	acl	_	_
 45-46	pela	_	_	_	_	_	_	_	_
 45	por	por	ADP	_	_	47	case	_	_
 46	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	47	det	_	_
 47	legenda	legenda	NOUN	_	Gender=Fem|Number=Sing	44	obl:agent	_	_
 48	pedessista	pedessista	ADJ	_	Gender=Fem|Number=Sing	47	amod	_	SpaceAfter=No
-49	.	.	PUNCT	_	_	3	punct	_	_
+49	.	.	PUNCT	_	_	3	punct	_	SpacesAfter=\n
 
 # sent_id = 17
 # text = Acometido por uma grave enfermidade, que o vitimou em 21 de abril de 1985, Tancredo não chegou a ser empossado na presidência da República.
-1	Acometido	Acometir	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	22	dep	_	_
+1	Acometido	Acometer	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	17	acl	_	_
 2	por	por	ADP	_	_	5	case	_	_
 3	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	5	det	_	_
 4	grave	grave	ADJ	_	Gender=Fem|Number=Sing	5	amod	_	_
 5	enfermidade	enfermidade	NOUN	_	Gender=Fem|Number=Sing	1	obl:agent	_	SpaceAfter=No
-6	,	,	PUNCT	_	_	1	punct	_	_
+6	,	,	PUNCT	_	_	9	punct	_	_
 7	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	9	nsubj	_	_
 8	o	ele	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	9	obj	_	_
 9	vitimou	vitimar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	acl:relcl	_	_
 10	em	em	ADP	_	_	11	case	_	_
 11	21	21	NUM	_	NumType=Card	9	obl	_	_
 12	de	de	ADP	_	_	13	case	_	_
-13	abril	abril	NOUN	_	Gender=Masc|Number=Sing	11	nmod:tmod	_	_
+13	abril	abril	NOUN	_	Gender=Masc|Number=Sing	11	nmod	_	_
 14	de	de	ADP	_	_	15	case	_	_
 15	1985	1985	NUM	_	NumType=Card	13	nmod	_	SpaceAfter=No
 16	,	,	PUNCT	_	_	9	punct	_	_
 17	Tancredo	Tancredo	PROPN	_	Gender=Masc|Number=Sing	22	nsubj:pass	_	_
 18	não	não	ADV	_	Polarity=Neg	22	advmod	_	_
-19	chegou	chegar	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	22	aux	_	_
-20	a	a	ADP	_	_	22	obl	_	_
+19	chegou	chegar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+20	a	a	SCONJ	_	_	22	mark	_	_
 21	ser	ser	AUX	_	VerbForm=Inf	22	aux:pass	_	_
-22	empossado	empossar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
+22	empossado	empossar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	19	xcomp	_	_
 23-24	na	_	_	_	_	_	_	_	_
 23	em	em	ADP	_	_	25	case	_	_
 24	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	25	det	_	_
@@ -754,8 +748,8 @@
 26-27	da	_	_	_	_	_	_	_	_
 26	de	de	ADP	_	_	28	case	_	_
 27	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	28	det	_	_
-28	República	República	PROPN	_	Gender=Fem|Number=Sing	25	nmod	_	SpaceAfter=No
-29	.	.	PUNCT	_	_	22	punct	_	_
+28	República	República	PROPN	_	Number=Sing	25	nmod	_	SpaceAfter=No
+29	.	.	PUNCT	_	_	22	punct	_	SpacesAfter=\n
 
 # sent_id = 18
 # text = Substituiu-o no cargo o vice José Sarney, que já vinha exercendo a chefia interina do Executivo desde 15 de março.
@@ -765,15 +759,15 @@
 3-4	no	_	_	_	_	_	_	_	_
 3	em	em	ADP	_	_	5	case	_	_
 4	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	5	det	_	_
-5	cargo	cargo	NOUN	_	Gender=Masc|Number=Sing	1	obl	_	_
+5	cargo	cargo	NOUN	_	Gender=Masc|Number=Sing	1	iobj	_	_
 6	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	7	det	_	_
 7	vice	vice	NOUN	_	Gender=Masc|Number=Sing	1	nsubj	_	_
 8	José	José	PROPN	_	Gender=Masc|Number=Sing	7	appos	_	_
 9	Sarney	Sarney	PROPN	_	Number=Sing	8	flat:name	_	SpaceAfter=No
-10	,	,	PUNCT	_	_	1	punct	_	_
+10	,	,	PUNCT	_	_	13	punct	_	_
 11	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	13	nsubj	_	_
 12	já	já	ADV	_	_	13	advmod	_	_
-13	vinha	ver	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	7	acl:relcl	_	_
+13	vinha	vir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	8	acl:relcl	_	_
 14	exercendo	exercer	VERB	_	VerbForm=Ger	13	advcl	_	_
 15	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	16	det	_	_
 16	chefia	chefia	NOUN	_	Gender=Fem|Number=Sing	14	obj	_	_
@@ -781,14 +775,13 @@
 18-19	do	_	_	_	_	_	_	_	_
 18	de	de	ADP	_	_	20	case	_	_
 19	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	20	det	_	_
-20	Executivo	Executivo	NOUN	_	Gender=Masc|Number=Sing	16	nmod	_	_
+20	Executivo	executivo	NOUN	_	Gender=Masc|Number=Sing	16	nmod	_	_
 21	desde	desde	ADP	_	_	22	case	_	_
 22	15	15	NUM	_	NumType=Card	14	obl	_	_
 23	de	de	ADP	_	_	24	case	_	_
-24	março	março	NOUN	_	Gender=Masc|Number=Sing	22	nmod:tmod	_	SpaceAfter=No
-25	.	.	PUNCT	_	_	1	punct	_	_
+24	março	março	NOUN	_	Gender=Masc|Number=Sing	22	nmod	_	SpaceAfter=No
+25	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
 
-# newpar
 # sent_id = 19
 # text = Durante esse mandato, José Machado foi membro da Comissão de Relações Exteriores.
 1	Durante	durante	ADP	_	_	3	case	_	_
@@ -806,21 +799,21 @@
 12	de	de	ADP	_	_	13	case	_	_
 13	Relações	Relações	PROPN	_	Number=Sing	11	nmod	_	_
 14	Exteriores	Exteriores	PROPN	_	Number=Sing	13	flat:name	_	SpaceAfter=No
-15	.	.	PUNCT	_	_	8	punct	_	_
+15	.	.	PUNCT	_	_	8	punct	_	SpacesAfter=\n
 
 # sent_id = 20
 # text = Decidido a não mais disputar cargos eletivos, deixou a Câmara dos Deputados em janeiro de 1987, ao final da legislatura.
-1	Decidido	decidir	AUX	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	5	aux	_	_
-2	a	a	ADP	_	_	5	obl	_	_
-3	não	não	ADV	_	Polarity=Neg	4	advmod	_	_
+1	Decidido	decidir	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	9	advcl	_	_
+2	a	a	ADP	_	_	3	case	_	_
+3	não	não	ADV	_	_	5	advmod	_	_
 4	mais	mais	ADV	_	_	5	advmod	_	_
-5	disputar	disputar	ADJ	_	VerbForm=Inf	9	dep	_	_
+5	disputar	disputar	VERB	_	Mood=Sub|Number=Sing|Person=3|Tense=Fut|VerbForm=Fin	1	xcomp	_	_
 6	cargos	cargo	NOUN	_	Gender=Masc|Number=Plur	5	obj	_	_
 7	eletivos	eletivo	ADJ	_	Gender=Masc|Number=Plur	6	amod	_	SpaceAfter=No
-8	,	,	PUNCT	_	_	5	punct	_	_
+8	,	,	PUNCT	_	_	1	punct	_	_
 9	deixou	deixar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 10	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	11	det	_	_
-11	Câmara	Câmara	NOUN	_	Gender=Fem|Number=Sing	9	nsubj	_	_
+11	Câmara	câmara	NOUN	_	Gender=Fem|Number=Sing	9	obj	_	_
 12-13	dos	_	_	_	_	_	_	_	_
 12	de	de	ADP	_	_	14	case	_	_
 13	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	14	det	_	_
@@ -838,12 +831,11 @@
 23	de	de	ADP	_	_	25	case	_	_
 24	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	25	det	_	_
 25	legislatura	legislatura	NOUN	_	Gender=Fem|Number=Sing	22	nmod	_	SpaceAfter=No
-26	.	.	PUNCT	_	_	9	punct	_	_
+26	.	.	PUNCT	_	_	9	punct	_	SpacesAfter=\n
 
-# newpar
 # sent_id = 21
 # text = Convidado por Aureliano Chaves, ministro das Minas e Energia no governo do presidente José Sarney (1985-1990), José Machado tornou-se assessor especial da pasta.
-1	Convidado	convidar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	26	dep	_	_
+1	Convidado	convidar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	26	advcl	_	_
 2	por	por	ADP	_	_	3	case	_	_
 3	Aureliano	Aureliano	PROPN	_	Gender=Masc|Number=Sing	1	obl:agent	_	_
 4	Chaves	Chaves	PROPN	_	Number=Sing	3	flat:name	_	SpaceAfter=No
@@ -852,13 +844,13 @@
 7-8	das	_	_	_	_	_	_	_	_
 7	de	de	ADP	_	_	9	case	_	_
 8	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	9	det	_	_
-9	Minas	minas	PROPN	_	Gender=Fem|Number=Plur	6	nmod	_	_
-10	e	e	CCONJ	_	_	11	cc	_	_
-11	Energia	energia	PROPN	_	_	6	conj	_	_
+9	Minas	Minas	PROPN	_	Number=Sing	6	nmod	_	_
+10	e	e	CCONJ	_	_	9	flat:name	_	_
+11	Energia	energia	PROPN	_	Number=Sing	9	flat:name	_	_
 12-13	no	_	_	_	_	_	_	_	_
 12	em	em	ADP	_	_	14	case	_	_
 13	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	14	det	_	_
-14	governo	governo	NOUN	_	Gender=Masc|Number=Sing	11	nmod	_	_
+14	governo	governo	NOUN	_	Gender=Masc|Number=Sing	6	nmod	_	_
 15-16	do	_	_	_	_	_	_	_	_
 15	de	de	ADP	_	_	17	case	_	_
 16	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	17	det	_	_
@@ -866,21 +858,21 @@
 18	José	José	PROPN	_	Gender=Masc|Number=Sing	17	appos	_	_
 19	Sarney	Sarney	PROPN	_	Number=Sing	18	flat:name	_	_
 20	(	(	PUNCT	_	_	21	punct	_	SpaceAfter=No
-21	1985-1990	1985-1990	NUM	_	NumType=Card	17	appos	_	SpaceAfter=No
+21	1985-1990	1985-1990	NUM	_	NumType=Card	17	parataxis	_	SpaceAfter=No
 22	)	)	PUNCT	_	_	21	punct	_	SpaceAfter=No
-23	,	,	PUNCT	_	_	6	punct	_	_
-24	José	José	PROPN	_	Gender=Masc|Number=Sing	26	nsubj	_	_
+23	,	,	PUNCT	_	_	24	punct	_	_
+24	José	José	PROPN	_	Gender=Masc|Number=Sing	17	appos	_	_
 25	Machado	Machado	PROPN	_	Number=Sing	24	flat:name	_	_
 26-27	tornou-se	_	_	_	_	_	_	_	_
 26	tornou	tornar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
-27	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	26	expl	_	_
+27	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	28	expl	_	_
 28	assessor	assessor	NOUN	_	Gender=Masc|Number=Sing	26	obj	_	_
 29	especial	especial	ADJ	_	Gender=Masc|Number=Sing	28	amod	_	_
 30-31	da	_	_	_	_	_	_	_	_
 30	de	de	ADP	_	_	32	case	_	_
 31	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	32	det	_	_
 32	pasta	pasta	NOUN	_	Gender=Fem|Number=Sing	28	nmod	_	SpaceAfter=No
-33	.	.	PUNCT	_	_	26	punct	_	_
+33	.	.	PUNCT	_	_	26	punct	_	SpacesAfter=\n
 
 # sent_id = 22
 # text = Entre 1993 e 1995, desempenhou a função de diretor da Petrobras.
@@ -891,24 +883,23 @@
 5	,	,	PUNCT	_	_	2	punct	_	_
 6	desempenhou	desempenhar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 7	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	8	det	_	_
-8	função	função	NOUN	_	Gender=Fem|Number=Sing	6	nsubj	_	_
+8	função	função	NOUN	_	Gender=Fem|Number=Sing	6	obj	_	_
 9	de	de	ADP	_	_	10	case	_	_
 10	diretor	diretor	NOUN	_	Gender=Masc|Number=Sing	8	nmod	_	_
 11-12	da	_	_	_	_	_	_	_	_
 11	de	de	ADP	_	_	13	case	_	_
 12	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	13	det	_	_
-13	Petrobras	Petrobras	PROPN	_	_	10	nmod	_	SpaceAfter=No
-14	.	.	PUNCT	_	_	6	punct	_	_
+13	Petrobras	Petrobras	PROPN	_	Number=Sing	10	nmod	_	SpaceAfter=No
+14	.	.	PUNCT	_	_	6	punct	_	SpacesAfter=\n
 
-# newpar
 # sent_id = 23
 # text = Casou-se com Aurora Campos Machado.
 1-2	Casou-se	_	_	_	_	_	_	_	_
 1	Casou	Casar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
-2	se	se	PRON	_	Case=Acc|Gender=Unsp|PronType=Prs	1	expl	_	_
+2	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	1	expl	_	_
 3	com	com	ADP	_	_	4	case	_	_
-4	Aurora	Aurora	PROPN	_	Number=Sing	1	obl	_	_
-5	Campos	Campos	PROPN	_	Number=Sing	4	flat:name	_	_
-6	Machado	Machado	PROPN	_	Number=Sing	4	flat:name	_	SpaceAfter=No
-7	.	.	PUNCT	_	_	1	punct	_	_
+4	Aurora	Aurora	ADV	_	_	1	advmod	_	_
+5	Campos	Campos	PROPN	_	Gender=Masc|Number=Sing	1	nsubj	_	_
+6	Machado	Machado	PROPN	_	Number=Sing	5	flat:name	_	SpaceAfter=No
+7	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
 

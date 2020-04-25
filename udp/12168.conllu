@@ -1,18 +1,18 @@
-# newdoc id = ../raw/12168.raw
+# newdoc
 # newpar
 # sent_id = 1
 # text = «George Vidor de Mello» nasceu em 22 de setembro de 1952, no Rio de Janeiro, então Distrito Federal.
-1	«	«	PUNCT	_	_	2	punct	_	SpacesBefore=\n|SpaceAfter=No
+1	«	«	PUNCT	_	_	2	punct	_	SpaceAfter=No
 2	George	George	PROPN	_	Gender=Masc|Number=Sing	7	nsubj	_	_
 3	Vidor	Vidor	PROPN	_	Number=Sing	2	flat:name	_	_
 4	de	de	ADP	_	_	5	case	_	_
-5	Mello	Mello	PROPN	_	Number=Sing	2	nmod	_	SpaceAfter=No
+5	Mello	Mello	PROPN	_	Number=Sing	2	flat:name	_	SpaceAfter=No
 6	»	»	PUNCT	_	_	2	punct	_	_
 7	nasceu	nascer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 8	em	em	ADP	_	_	9	case	_	_
 9	22	22	NUM	_	NumType=Card	7	obl	_	_
 10	de	de	ADP	_	_	11	case	_	_
-11	setembro	setembro	NOUN	_	Gender=Masc|Number=Sing	9	nmod:tmod	_	_
+11	setembro	setembro	NOUN	_	Gender=Masc|Number=Sing	9	nmod	_	_
 12	de	de	ADP	_	_	13	case	_	_
 13	1952	1952	NUM	_	NumType=Card	11	nmod	_	SpaceAfter=No
 14	,	,	PUNCT	_	_	7	punct	_	_
@@ -21,12 +21,12 @@
 16	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	17	det	_	_
 17	Rio	Rio	PROPN	_	Gender=Masc|Number=Sing	7	obl	_	_
 18	de	de	ADP	_	_	19	case	_	_
-19	Janeiro	Janeiro	PROPN	_	Number=Sing	17	nmod	_	SpaceAfter=No
-20	,	,	PUNCT	_	_	22	punct	_	_
+19	Janeiro	Janeiro	PROPN	_	Number=Sing	17	flat:name	_	SpaceAfter=No
+20	,	,	PUNCT	_	_	7	punct	_	_
 21	então	então	ADV	_	_	22	advmod	_	_
-22	Distrito	Distrito	PROPN	_	Gender=Masc|Number=Sing	17	appos	_	_
+22	Distrito	Distrito	PROPN	_	Gender=Masc|Number=Sing	17	acl	_	_
 23	Federal	Federal	PROPN	_	Number=Sing	22	flat:name	_	SpaceAfter=No
-24	.	.	PUNCT	_	_	7	punct	_	_
+24	.	.	PUNCT	_	_	7	punct	_	SpacesAfter=\n
 
 # sent_id = 2
 # text = Seu pai era ligado à música, e sua mãe, dedicada aos afazeres domésticos.
@@ -47,20 +47,20 @@
 14-15	aos	_	_	_	_	_	_	_	_
 14	a	a	ADP	_	_	16	case	_	_
 15	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	16	det	_	_
-16	afazeres	afazer	NOUN	_	Gender=Masc|Number=Plur	13	obl	_	_
+16	afazeres	afazer	NOUN	_	Gender=Masc|Number=Plur	13	obj	_	_
 17	domésticos	doméstico	ADJ	_	Gender=Masc|Number=Plur	16	amod	_	SpaceAfter=No
-18	.	.	PUNCT	_	_	4	punct	_	_
+18	.	.	PUNCT	_	_	4	punct	_	SpacesAfter=\n
 
 # sent_id = 3
 # text = Seu avô paterno foi militar, e, durante a Segunda Guerra Mundial, serviu em Natal, ocasião em que seu pai foi convidado a trabalhar lá como intérprete em inglês.
 1	Seu	seu	DET	_	Gender=Masc|Number=Sing|PronType=Prs	2	det	_	_
 2	avô	avô	NOUN	_	Gender=Masc|Number=Sing	5	nsubj	_	_
-3	paterno	paterno	ADJ	_	Gender=Masc|Number=Sing	2	amod	_	_
-4	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	aux	_	_
+3	paterno	paterele	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	5	obj	_	_
+4	foi	ir	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	aux	_	_
 5	militar	militar	VERB	_	VerbForm=Inf	0	root	_	SpaceAfter=No
 6	,	,	PUNCT	_	_	15	punct	_	_
 7	e	e	CCONJ	_	_	15	cc	_	SpaceAfter=No
-8	,	,	PUNCT	_	_	15	punct	_	_
+8	,	,	PUNCT	_	_	11	punct	_	_
 9	durante	durante	ADP	_	_	11	case	_	_
 10	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	11	det	_	_
 11	Segunda	Segunda	PROPN	_	Gender=Fem|Number=Sing	15	obl	_	_
@@ -70,24 +70,23 @@
 15	serviu	servir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	conj	_	_
 16	em	em	ADP	_	_	17	case	_	_
 17	Natal	Natal	PROPN	_	Gender=Masc|Number=Sing	15	obl	_	SpaceAfter=No
-18	,	,	PUNCT	_	_	19	punct	_	_
-19	ocasião	ocasião	NOUN	_	Gender=Fem|Number=Sing	17	appos	_	_
+18	,	,	PUNCT	_	_	5	punct	_	_
+19	ocasião	ocasião	NOUN	_	Gender=Masc|Number=Sing	5	obj	_	_
 20	em	em	ADP	_	_	21	case	_	_
 21	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	25	obl	_	_
 22	seu	seu	DET	_	Gender=Masc|Number=Sing|PronType=Prs	23	det	_	_
 23	pai	pai	NOUN	_	Gender=Masc|Number=Sing	25	nsubj:pass	_	_
 24	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	25	aux:pass	_	_
 25	convidado	convidar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	19	acl:relcl	_	_
-26	a	a	ADP	_	_	27	mark	_	_
-27	trabalhar	trabalhar	VERB	_	VerbForm=Inf	25	xcomp	_	_
+26	a	a	SCONJ	_	_	27	mark	_	_
+27	trabalhar	trabalhar	VERB	_	VerbForm=Inf	25	advcl	_	_
 28	lá	lá	ADV	_	_	27	advmod	_	_
-29	como	como	ADP	_	_	30	case	_	_
-30	intérprete	intérprete	NOUN	_	Gender=Masc|Number=Sing	27	obl	_	_
+29	como	como	ADP	_	_	28	fixed	_	_
+30	intérprete	intérprete	NOUN	_	Gender=Masc|Number=Sing	27	obj	_	_
 31	em	em	ADP	_	_	32	case	_	_
 32	inglês	inglês	NOUN	_	Gender=Masc|Number=Sing	30	nmod	_	SpaceAfter=No
-33	.	.	PUNCT	_	_	5	punct	_	_
+33	.	.	PUNCT	_	_	5	punct	_	SpacesAfter=\n
 
-# newpar
 # sent_id = 4
 # text = Vidor fez seus estudos no Rio de Janeiro, tendo cursado o secundário no Colégio Pedro II, e, mais tarde, economia na Faculdade Cândido Mendes.
 1	Vidor	Vidor	PROPN	_	Gender=Masc|Number=Sing	2	nsubj	_	_
@@ -102,43 +101,42 @@
 9	Janeiro	Janeiro	PROPN	_	Number=Sing	7	nmod	_	SpaceAfter=No
 10	,	,	PUNCT	_	_	12	punct	_	_
 11	tendo	ter	AUX	_	VerbForm=Ger	12	aux	_	_
-12	cursado	cursar	VERB	_	VerbForm=Part	2	advcl	_	_
+12	cursado	cursar	VERB	_	VerbForm=Part	2	parataxis	_	_
 13	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	14	det	_	_
-14	secundário	secundário	ADJ	_	Gender=Masc|Number=Sing	12	obj	_	_
+14	secundário	secundário	NOUN	_	Gender=Masc|Number=Sing	12	obj	_	_
 15-16	no	_	_	_	_	_	_	_	_
 15	em	em	ADP	_	_	17	case	_	_
 16	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	17	det	_	_
-17	Colégio	Colégio	PROPN	_	Gender=Masc|Number=Sing	12	obl	_	_
+17	Colégio	colégio	NOUN	_	Gender=Masc|Number=Sing	12	obl	_	_
 18	Pedro	Pedro	PROPN	_	Gender=Masc|Number=Sing	17	appos	_	_
 19	II	II	PROPN	_	Number=Sing	18	flat:name	_	SpaceAfter=No
-20	,	,	PUNCT	_	_	26	punct	_	_
-21	e	e	CCONJ	_	_	26	cc	_	SpaceAfter=No
-22	,	,	PUNCT	_	_	26	punct	_	_
+20	,	,	PUNCT	_	_	21	punct	_	_
+21	e	e	CCONJ	_	_	24	cc	_	SpaceAfter=No
+22	,	,	PUNCT	_	_	21	punct	_	_
 23	mais	mais	ADV	_	_	24	advmod	_	_
-24	tarde	tarde	ADV	_	_	26	advmod	_	SpaceAfter=No
+24	tarde	tarde	ADV	_	_	17	conj	_	SpaceAfter=No
 25	,	,	PUNCT	_	_	24	punct	_	_
-26	economia	economer	VERB	_	Gender=Fem|Number=Sing	17	conj	_	_
+26	economia	economer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	12	advcl	_	_
 27-28	na	_	_	_	_	_	_	_	_
 27	em	em	ADP	_	_	29	case	_	_
 28	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	29	det	_	_
-29	Faculdade	Faculdade	PROPN	_	Gender=Fem|Number=Sing	26	obl	_	_
-30	Cândido	Cândido	PROPN	_	Number=Sing	29	flat:name	_	_
+29	Faculdade	faculdade	PROPN	_	Gender=Fem|Number=Sing	26	obl	_	_
+30	Cândido	cândido	PROPN	_	Number=Sing	29	flat:name	_	_
 31	Mendes	Mendes	PROPN	_	Number=Sing	29	flat:name	_	SpaceAfter=No
-32	.	.	PUNCT	_	_	2	punct	_	_
+32	.	.	PUNCT	_	_	2	punct	_	SpacesAfter=\n
 
-# newpar
 # sent_id = 5
 # text = Sua entrada para o Colégio Pedro II, em 1964, coincidiu com o golpe que depôs o presidente João Goulart e instalou o regime militar no país.
 1	Sua	seu	DET	_	Gender=Fem|Number=Sing|PronType=Prs	2	det	_	_
 2	entrada	entrada	NOUN	_	Gender=Fem|Number=Sing	12	nsubj	_	_
 3	para	para	ADP	_	_	5	case	_	_
 4	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	5	det	_	_
-5	Colégio	Colégio	PROPN	_	Gender=Masc|Number=Sing	2	nmod	_	_
+5	Colégio	colégio	NOUN	_	Gender=Masc|Number=Sing	2	nmod	_	_
 6	Pedro	Pedro	PROPN	_	Gender=Masc|Number=Sing	5	appos	_	_
 7	II	II	PROPN	_	Number=Sing	6	flat:name	_	SpaceAfter=No
 8	,	,	PUNCT	_	_	10	punct	_	_
 9	em	em	ADP	_	_	10	case	_	_
-10	1964	1964	NUM	_	NumType=Card	2	nmod	_	SpaceAfter=No
+10	1964	1964	NUM	_	NumType=Card	12	obl	_	SpaceAfter=No
 11	,	,	PUNCT	_	_	10	punct	_	_
 12	coincidiu	coincidir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 13	com	com	ADP	_	_	15	case	_	_
@@ -159,33 +157,33 @@
 27	em	em	ADP	_	_	29	case	_	_
 28	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	29	det	_	_
 29	país	país	NOUN	_	Gender=Masc|Number=Sing	25	nmod	_	SpaceAfter=No
-30	.	.	PUNCT	_	_	12	punct	_	_
+30	.	.	PUNCT	_	_	12	punct	_	SpacesAfter=\n
 
 # sent_id = 6
 # text = Este fato acabou tendo importância em sua formação política, pois Vidor viveu a experiência de ter professores cassados, o que despertou o seu interesse pela política estudantil.
 1	Este	este	DET	_	Gender=Masc|Number=Sing|PronType=Dem	2	det	_	_
-2	fato	fato	NOUN	_	Gender=Masc|Number=Sing	5	nsubj	_	_
-3	acabou	acabar	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	aux	_	_
-4	tendo	ter	AUX	_	VerbForm=Ger	5	aux	_	_
-5	importância	importâncer	VERB	_	Gender=Fem|Number=Sing	0	root	_	_
+2	fato	fato	NOUN	_	Gender=Masc|Number=Sing	3	nsubj	_	_
+3	acabou	acabar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+4	tendo	ter	AUX	_	VerbForm=Ger	5	cop	_	_
+5	importância	importância	NOUN	_	Gender=Fem|Number=Sing	3	ccomp	_	_
 6	em	em	ADP	_	_	8	case	_	_
 7	sua	seu	DET	_	Gender=Fem|Number=Sing|PronType=Prs	8	det	_	_
-8	formação	formação	NOUN	_	Gender=Fem|Number=Sing	5	obl	_	_
+8	formação	formação	NOUN	_	Gender=Fem|Number=Sing	3	obl	_	_
 9	política	político	ADJ	_	Gender=Fem|Number=Sing	8	amod	_	SpaceAfter=No
-10	,	,	PUNCT	_	_	5	punct	_	_
-11	pois	pois	SCONJ	_	_	13	advmod	_	_
-12	Vidor	Vidor	PROPN	_	Gender=Fem|Number=Sing	13	nsubj	_	_
-13	viveu	viver	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	advcl	_	_
+10	,	,	PUNCT	_	_	3	punct	_	_
+11	pois	pois	SCONJ	_	_	13	mark	_	_
+12	Vidor	Vidor	PROPN	_	Gender=Masc|Number=Sing	13	nsubj	_	_
+13	viveu	viver	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	advcl	_	_
 14	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	15	det	_	_
 15	experiência	experiência	NOUN	_	Gender=Fem|Number=Sing	13	obj	_	_
-16	de	de	ADP	_	_	17	mark	_	_
+16	de	de	SCONJ	_	_	17	mark	_	_
 17	ter	ter	VERB	_	VerbForm=Inf	15	acl	_	_
 18	professores	professor	NOUN	_	Gender=Masc|Number=Plur	17	obj	_	_
-19	cassados	cassado	ADJ	_	Gender=Masc|Number=Plur|VerbForm=Part	18	amod	_	SpaceAfter=No
+19	cassados	cassar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part	18	acl	_	SpaceAfter=No
 20	,	,	PUNCT	_	_	17	punct	_	_
-21	o	o	PRON	_	Gender=Masc|Number=Sing|PronType=Dem	22	det	_	_
+21	o	o	PRON	_	Gender=Masc|Number=Sing|PronType=Dem	13	appos	_	_
 22	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	23	nsubj	_	_
-23	despertou	despertar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	13	xcomp	_	_
+23	despertou	despertar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	21	acl:relcl	_	_
 24	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	26	det	_	_
 25	seu	seu	DET	_	Gender=Masc|Number=Sing|PronType=Prs	26	det	_	_
 26	interesse	interesse	NOUN	_	Gender=Masc|Number=Sing	23	obj	_	_
@@ -194,7 +192,7 @@
 28	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	29	det	_	_
 29	política	política	NOUN	_	Gender=Fem|Number=Sing	23	obl	_	_
 30	estudantil	estudantil	ADJ	_	Gender=Fem|Number=Sing	29	amod	_	SpaceAfter=No
-31	.	.	PUNCT	_	_	5	punct	_	_
+31	.	.	PUNCT	_	_	3	punct	_	SpacesAfter=\n
 
 # sent_id = 7
 # text = Neste sentido, uma de suas primeiras atribuições políticas foi preparar o jornal do Colégio, tomando então como modelos o «Correio da Manhã» e «O País».
@@ -203,39 +201,39 @@
 2	este	este	DET	_	Gender=Masc|Number=Sing|PronType=Dem	3	det	_	_
 3	sentido	sentido	NOUN	_	Gender=Masc|Number=Sing	12	obl	_	SpaceAfter=No
 4	,	,	PUNCT	_	_	3	punct	_	_
-5	uma	um	NUM	_	NumType=Card	12	nsubj	_	_
+5	uma	uma	NUM	_	NumType=Card	12	nsubj	_	_
 6	de	de	ADP	_	_	9	case	_	_
 7	suas	seu	DET	_	Gender=Fem|Number=Plur|PronType=Prs	9	det	_	_
 8	primeiras	primeiro	ADJ	_	Gender=Fem|Number=Plur|NumType=Ord	9	amod	_	_
 9	atribuições	atribuição	NOUN	_	Gender=Fem|Number=Plur	5	nmod	_	_
 10	políticas	político	ADJ	_	Gender=Fem|Number=Plur	9	amod	_	_
-11	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	12	aux	_	_
+11	foi	ir	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	12	cop	_	_
 12	preparar	preparar	VERB	_	VerbForm=Inf	0	root	_	_
 13	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	14	det	_	_
 14	jornal	jornal	NOUN	_	Gender=Masc|Number=Sing	12	obj	_	_
 15-16	do	_	_	_	_	_	_	_	_
 15	de	de	ADP	_	_	17	case	_	_
 16	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	17	det	_	_
-17	Colégio	colégio	PROPN	_	Gender=Masc|Number=Sing	14	nmod	_	SpaceAfter=No
+17	Colégio	colégio	NOUN	_	Gender=Masc|Number=Sing	14	nmod	_	SpaceAfter=No
 18	,	,	PUNCT	_	_	19	punct	_	_
 19	tomando	tomar	VERB	_	VerbForm=Ger	12	advcl	_	_
 20	então	então	ADV	_	_	19	advmod	_	_
 21	como	como	ADP	_	_	22	case	_	_
-22	modelos	modelo	NOUN	_	Gender=Masc|Number=Plur	19	xcomp	_	_
+22	modelos	modelo	NOUN	_	Gender=Unsp|Number=Plur	19	xcomp	_	_
 23	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	25	det	_	_
 24	«	«	PUNCT	_	_	25	punct	_	SpaceAfter=No
-25	Correio	Correio	PROPN	_	Gender=Fem|Number=Sing	22	appos	_	_
+25	Correio	Correio	PROPN	_	Gender=Masc|Number=Sing	19	nsubj	_	_
 26-27	da	_	_	_	_	_	_	_	_
 26	de	de	ADP	_	_	28	case	_	_
 27	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	28	det	_	_
-28	Manhã	Manhã	PROPN	_	Number=Sing	25	nmod	_	SpaceAfter=No
-29	»	»	PUNCT	_	_	32	punct	_	_
+28	Manhã	manhã	PROPN	_	Number=Sing	25	nmod	_	SpaceAfter=No
+29	»	»	PUNCT	_	_	25	punct	_	_
 30	e	e	CCONJ	_	_	32	cc	_	_
 31	«	«	PUNCT	_	_	32	punct	_	SpaceAfter=No
-32	O	O	DET	_	Gender=Masc|Number=Sing|PronType=Art	25	conj	_	_
+32	O	O	PROPN	_	Gender=Masc|Number=Sing|PronType=Art	25	conj	_	_
 33	País	país	PROPN	_	Number=Sing	32	flat:name	_	SpaceAfter=No
 34	»	»	PUNCT	_	_	32	punct	_	SpaceAfter=No
-35	.	.	PUNCT	_	_	12	punct	_	_
+35	.	.	PUNCT	_	_	12	punct	_	SpacesAfter=\n
 
 # sent_id = 8
 # text = O resultado foi uma paginação moderna para época, podendo ser identificado como um jornal comercial.
@@ -244,26 +242,25 @@
 3	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	cop	_	_
 4	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	5	det	_	_
 5	paginação	paginação	NOUN	_	Gender=Fem|Number=Sing	0	root	_	_
-6	moderna	modernar	VERB	_	Gender=Fem|Number=Sing	5	acl	_	_
+6	moderna	moderno	ADJ	_	Gender=Fem|Number=Sing	5	amod	_	_
 7	para	para	ADP	_	_	8	case	_	_
-8	época	época	NOUN	_	Gender=Fem|Number=Sing	6	obl	_	SpaceAfter=No
-9	,	,	PUNCT	_	_	12	punct	_	_
-10	podendo	poder	AUX	_	VerbForm=Ger	12	aux	_	_
+8	época	época	NOUN	_	Gender=Fem|Number=Sing	5	nmod	_	SpaceAfter=No
+9	,	,	PUNCT	_	_	10	punct	_	_
+10	podendo	poder	VERB	_	VerbForm=Ger	5	advcl	_	_
 11	ser	ser	AUX	_	VerbForm=Inf	12	aux:pass	_	_
-12	identificado	identificar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	6	advcl	_	_
+12	identificado	identificar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	10	xcomp	_	_
 13	como	como	ADP	_	_	15	case	_	_
 14	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	15	det	_	_
-15	jornal	jornal	NOUN	_	Gender=Masc|Number=Sing	12	xcomp	_	_
+15	jornal	jornal	NOUN	_	Gender=Masc|Number=Sing	12	obl	_	_
 16	comercial	comercial	ADJ	_	Gender=Masc|Number=Sing	15	amod	_	SpaceAfter=No
-17	.	.	PUNCT	_	_	5	punct	_	_
+17	.	.	PUNCT	_	_	5	punct	_	SpacesAfter=\n
 
-# newpar
 # sent_id = 9
 # text = Quando o «Correio da Manhã» promoveu um concurso de jornalismo escolar, Vidor inscreveu o jornal do Colégio Pedro II, ganhando então o primeiro lugar: um estágio remunerado de três meses no jornal e uma viagem de ida-e-volta à Bahia, com acompanhante e ajuda de custo.
-1	Quando	quando	ADV	_	_	9	advmod	_	_
+1	Quando	Quar	VERB	_	VerbForm=Ger	9	mark	_	_
 2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	4	det	_	_
 3	«	«	PUNCT	_	_	4	punct	_	SpaceAfter=No
-4	Correio	Correio	PROPN	_	Gender=Fem|Number=Sing	9	nsubj	_	_
+4	Correio	Correio	PROPN	_	Gender=Masc|Number=Sing	9	nsubj	_	_
 5-6	da	_	_	_	_	_	_	_	_
 5	de	de	ADP	_	_	7	case	_	_
 6	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	7	det	_	_
@@ -276,14 +273,14 @@
 13	jornalismo	jornalismo	NOUN	_	Gender=Masc|Number=Sing	11	nmod	_	_
 14	escolar	escolar	ADJ	_	Gender=Masc|Number=Sing	13	amod	_	SpaceAfter=No
 15	,	,	PUNCT	_	_	9	punct	_	_
-16	Vidor	Vidor	PROPN	_	Gender=Fem|Number=Sing	17	nsubj	_	_
+16	Vidor	Vidor	PROPN	_	Gender=Masc|Number=Sing	17	nsubj	_	_
 17	inscreveu	inscrever	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 18	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	19	det	_	_
 19	jornal	jornal	NOUN	_	Gender=Masc|Number=Sing	17	obj	_	_
 20-21	do	_	_	_	_	_	_	_	_
 20	de	de	ADP	_	_	22	case	_	_
 21	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	22	det	_	_
-22	Colégio	colégio	PROPN	_	Gender=Masc|Number=Sing	19	nmod	_	_
+22	Colégio	colégio	NOUN	_	Gender=Masc|Number=Sing	19	nmod	_	_
 23	Pedro	Pedro	PROPN	_	Gender=Masc|Number=Sing	22	appos	_	_
 24	II	II	PROPN	_	Number=Sing	23	flat:name	_	SpaceAfter=No
 25	,	,	PUNCT	_	_	26	punct	_	_
@@ -295,35 +292,35 @@
 31	:	:	PUNCT	_	_	26	punct	_	_
 32	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	33	det	_	_
 33	estágio	estágio	NOUN	_	Gender=Masc|Number=Sing	30	appos	_	_
-34	remunerado	remunerar	VERB	_	Gender=Masc|Number=Sing	33	acl	_	_
+34	remunerado	remunerar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	33	acl	_	_
 35	de	de	ADP	_	_	37	case	_	_
 36	três	três	NUM	_	NumType=Card	37	nummod	_	_
-37	meses	mês	NOUN	_	Gender=Masc|Number=Plur	34	obl	_	_
+37	meses	mês	NOUN	_	Gender=Masc|Number=Plur	34	obj	_	_
 38-39	no	_	_	_	_	_	_	_	_
 38	em	em	ADP	_	_	40	case	_	_
 39	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	40	det	_	_
-40	jornal	jornal	NOUN	_	Gender=Masc|Number=Sing	34	obl	_	_
+40	jornal	jornal	NOUN	_	Gender=Masc|Number=Sing	37	nmod	_	_
 41	e	e	CCONJ	_	_	43	cc	_	_
 42	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	43	det	_	_
-43	viagem	viagem	NOUN	_	Gender=Fem|Number=Sing	34	conj	_	_
+43	viagem	viagem	NOUN	_	Gender=Fem|Number=Sing	37	conj	_	_
 44	de	de	ADP	_	_	45	case	_	_
 45	ida-e-volta	ida-e-volta	NOUN	_	Gender=Fem|Number=Sing	43	nmod	_	_
 46-47	à	_	_	_	_	_	_	_	_
 46	a	a	ADP	_	_	48	case	_	_
 47	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	48	det	_	_
-48	Bahia	Bahia	PROPN	_	Gender=Fem|Number=Sing	43	nmod	_	SpaceAfter=No
+48	Bahia	Bahia	PROPN	_	Gender=Fem|Number=Sing	45	nmod	_	SpaceAfter=No
 49	,	,	PUNCT	_	_	51	punct	_	_
 50	com	com	ADP	_	_	51	case	_	_
-51	acompanhante	acompanhante	NOUN	_	Gender=Masc|Number=Sing	43	nmod	_	_
+51	acompanhante	acompanhante	NOUN	_	Gender=Masc|Number=Sing	43	conj	_	_
 52	e	e	CCONJ	_	_	53	cc	_	_
-53	ajuda	ajuda	NOUN	_	Gender=Fem|Number=Sing	51	conj	_	_
+53	ajuda	ajudar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	51	conj	_	_
 54	de	de	ADP	_	_	55	case	_	_
-55	custo	custo	NOUN	_	Gender=Masc|Number=Sing	53	nmod	_	SpaceAfter=No
-56	.	.	PUNCT	_	_	17	punct	_	_
+55	custo	custo	NOUN	_	Gender=Masc|Number=Sing	51	nmod	_	SpaceAfter=No
+56	.	.	PUNCT	_	_	17	punct	_	SpacesAfter=\n
 
 # sent_id = 10
 # text = Já em maio de 1969, quando cursava o segundo ano científico e dava início ao estágio no jornal, teve a sua matrícula no colégio cassada, junto com outros 60 alunos, sob o pretexto de que tinha participado politicamente dos protestos do ano anterior, ocasião em que ocupava a secretária-geral do Grêmio.
-1	Já	já	ADV	_	_	3	advmod	_	_
+1	Já	já	SCONJ	_	_	3	advmod	_	_
 2	em	em	ADP	_	_	3	case	_	_
 3	maio	maio	NOUN	_	Gender=Masc|Number=Sing	23	obl	_	_
 4	de	de	ADP	_	_	5	case	_	_
@@ -341,12 +338,12 @@
 16-17	ao	_	_	_	_	_	_	_	_
 16	a	a	ADP	_	_	18	case	_	_
 17	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	18	det	_	_
-18	estágio	estágio	NOUN	_	Gender=Masc|Number=Sing	14	obl	_	_
+18	estágio	estágio	NOUN	_	Gender=Masc|Number=Sing	14	iobj	_	_
 19-20	no	_	_	_	_	_	_	_	_
 19	em	em	ADP	_	_	21	case	_	_
 20	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	21	det	_	_
-21	jornal	jornal	NOUN	_	Gender=Masc|Number=Sing	14	obl	_	SpaceAfter=No
-22	,	,	PUNCT	_	_	14	punct	_	_
+21	jornal	jornal	NOUN	_	Gender=Masc|Number=Sing	18	nmod	_	SpaceAfter=No
+22	,	,	PUNCT	_	_	8	punct	_	_
 23	teve	ter	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 24	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	26	det	_	_
 25	sua	seu	DET	_	Gender=Fem|Number=Sing|PronType=Prs	26	det	_	_
@@ -355,21 +352,21 @@
 27	em	em	ADP	_	_	29	case	_	_
 28	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	29	det	_	_
 29	colégio	colégio	NOUN	_	Gender=Masc|Number=Sing	23	obl	_	_
-30	cassada	cassar	VERB	_	Gender=Fem|Number=Sing	29	acl	_	SpaceAfter=No
-31	,	,	PUNCT	_	_	30	punct	_	_
-32	junto	junto	ADV	_	_	30	advmod	_	_
+30	cassada	cassar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	29	acl	_	SpaceAfter=No
+31	,	,	PUNCT	_	_	23	punct	_	_
+32	junto	junto	ADV	_	_	23	advmod	_	_
 33	com	com	ADP	_	_	36	case	_	_
 34	outros	outro	DET	_	Gender=Masc|Number=Plur|PronType=Ind	36	det	_	_
 35	60	60	NUM	_	NumType=Card	36	nummod	_	_
-36	alunos	aluno	NOUN	_	Gender=Masc|Number=Plur	32	obl	_	SpaceAfter=No
-37	,	,	PUNCT	_	_	30	punct	_	_
+36	alunos	aluno	NOUN	_	Gender=Masc|Number=Plur	23	obl	_	SpaceAfter=No
+37	,	,	PUNCT	_	_	23	punct	_	_
 38	sob	sob	ADP	_	_	40	case	_	_
 39	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	40	det	_	_
-40	pretexto	pretexto	NOUN	_	Gender=Masc|Number=Sing	30	obl	_	_
-41	de	de	ADP	_	_	44	mark	_	_
-42	que	que	SCONJ	_	_	44	mark	_	_
+40	pretexto	pretexto	NOUN	_	Gender=Masc|Number=Sing	23	obj	_	_
+41	de	de	ADP	_	_	42	case	_	_
+42	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	44	obj	_	_
 43	tinha	ter	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	44	aux	_	_
-44	participado	participar	VERB	_	VerbForm=Part	40	acl	_	_
+44	participado	participar	VERB	_	VerbForm=Part	40	acl:relcl	_	_
 45	politicamente	politicamente	ADV	_	_	44	advmod	_	_
 46-47	dos	_	_	_	_	_	_	_	_
 46	de	de	ADP	_	_	48	case	_	_
@@ -381,17 +378,17 @@
 51	ano	ano	NOUN	_	Gender=Masc|Number=Sing	48	nmod	_	_
 52	anterior	anterior	ADJ	_	Gender=Masc|Number=Sing	51	amod	_	SpaceAfter=No
 53	,	,	PUNCT	_	_	54	punct	_	_
-54	ocasião	ocasião	NOUN	_	Gender=Fem|Number=Sing	51	appos	_	_
+54	ocasião	ocasião	NOUN	_	Gender=Masc|Number=Sing	51	appos	_	_
 55	em	em	ADP	_	_	56	case	_	_
 56	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	57	obl	_	_
 57	ocupava	ocupar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	54	acl:relcl	_	_
 58	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	59	det	_	_
-59	secretária-geral	secretária-geral	NOUN	_	Gender=Masc|Number=Sing	57	nsubj	_	_
+59	secretária-geral	secretária-geral	NOUN	_	Gender=Fem|Number=Sing	57	obj	_	_
 60-61	do	_	_	_	_	_	_	_	_
 60	de	de	ADP	_	_	62	case	_	_
 61	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	62	det	_	_
 62	Grêmio	Grêmio	PROPN	_	Gender=Masc|Number=Sing	59	nmod	_	SpaceAfter=No
-63	.	.	PUNCT	_	_	23	punct	_	_
+63	.	.	PUNCT	_	_	23	punct	_	SpacesAfter=\n
 
 # sent_id = 11
 # text = Nesse momento George Vidor tinha ligações com o Partido Comunista Brasileiro (PCB).
@@ -411,35 +408,34 @@
 13	(	(	PUNCT	_	_	14	punct	_	SpaceAfter=No
 14	PCB	PCB	PROPN	_	Gender=Masc|Number=Sing	10	appos	_	SpaceAfter=No
 15	)	)	PUNCT	_	_	14	punct	_	SpaceAfter=No
-16	.	.	PUNCT	_	_	6	punct	_	_
+16	.	.	PUNCT	_	_	6	punct	_	SpacesAfter=\n
 
-# newpar
 # sent_id = 12
 # text = Quando começou a trabalhar no «Correio da Manhã», o jornal já se encontrava em profunda crise.
-1	Quando	quando	ADV	_	_	4	advmod	_	_
-2	começou	começar	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	aux	_	_
-3	a	a	ADP	_	_	4	obl	_	_
+1	Quando	quando	PROPN	_	Gender=Masc|Number=Sing	4	nsubj	_	_
+2	começou	começar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+3	a	a	SCONJ	_	_	4	mark	_	_
 4	trabalhar	trabalhar	VERB	_	VerbForm=Inf	18	advcl	_	_
 5-6	no	_	_	_	_	_	_	_	_
 5	em	em	ADP	_	_	8	case	_	_
 6	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	8	det	_	_
 7	«	«	PUNCT	_	_	8	punct	_	SpaceAfter=No
-8	Correio	Correio	PROPN	_	Gender=Fem|Number=Sing	4	obl	_	_
+8	Correio	Correio	PROPN	_	Gender=Masc|Number=Sing	4	obl	_	_
 9-10	da	_	_	_	_	_	_	_	_
 9	de	de	ADP	_	_	11	case	_	_
 10	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	11	det	_	_
-11	Manhã	Manhã	PROPN	_	Number=Sing	8	nmod	_	SpaceAfter=No
+11	Manhã	manhã	PROPN	_	Number=Sing	8	nmod	_	SpaceAfter=No
 12	»	»	PUNCT	_	_	8	punct	_	SpaceAfter=No
 13	,	,	PUNCT	_	_	4	punct	_	_
 14	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	15	det	_	_
 15	jornal	jornal	NOUN	_	Gender=Masc|Number=Sing	18	nsubj	_	_
 16	já	já	ADV	_	_	18	advmod	_	_
 17	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	18	expl	_	_
-18	encontrava	encontrar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	0	root	_	_
+18	encontrava	encontrar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	2	xcomp	_	_
 19	em	em	ADP	_	_	21	case	_	_
 20	profunda	profundo	ADJ	_	Gender=Fem|Number=Sing|NumType=Ord	21	amod	_	_
-21	crise	crise	NOUN	_	Gender=Fem|Number=Sing	18	obl	_	SpaceAfter=No
-22	.	.	PUNCT	_	_	18	punct	_	_
+21	crise	crise	NOUN	_	Gender=Fem|Number=Sing	18	obj	_	SpaceAfter=No
+22	.	.	PUNCT	_	_	18	punct	_	SpacesAfter=\n
 
 # sent_id = 13
 # text = O jornal após a edição do Ato Institucional nº 1 (abril de 1964), havia percebido que havia claros indícios de que se partia para uma ditadura militar, e passou a denunciar as torturas e arbitrariedades cometidas pelo novo regime.
@@ -453,48 +449,48 @@
 7	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	8	det	_	_
 8	Ato	ato	PROPN	_	Gender=Masc|Number=Sing	5	nmod	_	_
 9	Institucional	Institucional	PROPN	_	Number=Sing	8	flat:name	_	_
-10	nº	nº	PROPN	_	Gender=Masc|Number=Sing	2	appos	_	_
-11	1	1	PROPN	_	NumType=Card	10	appos	_	_
+10	nº	nº	PROPN	_	Number=Sing	8	flat:name	_	_
+11	1	1	PROPN	_	Number=Sing	8	flat:name	_	_
 12	(	(	PUNCT	_	_	13	punct	_	SpaceAfter=No
-13	abril	abril	NOUN	_	Gender=Masc|Number=Sing	2	appos	_	_
+13	abril	abril	NOUN	_	Gender=Masc|Number=Sing	8	appos	_	_
 14	de	de	ADP	_	_	15	case	_	_
 15	1964	1964	NUM	_	NumType=Card	13	nmod	_	SpaceAfter=No
 16	)	)	PUNCT	_	_	13	punct	_	SpaceAfter=No
 17	,	,	PUNCT	_	_	2	punct	_	_
 18	havia	haver	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	19	aux	_	_
-19	percebido	perceber	VERB	_	VerbForm=Part	0	root	_	_
+19	percebido	perceber	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	0	root	_	_
 20	que	que	SCONJ	_	_	21	mark	_	_
 21	havia	haver	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	19	ccomp	_	_
-22	claros	claro	ADJ	_	Gender=Masc|Number=Plur	23	amod	_	_
-23	indícios	indício	NOUN	_	Gender=Masc|Number=Plur	21	obj	_	_
-24	de	de	ADP	_	_	27	mark	_	_
-25	que	que	SCONJ	_	_	27	mark	_	_
-26	se	se	PRON	_	Case=Acc|Gender=Unsp|PronType=Prs	27	nsubj	_	_
-27	partia	partir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	23	acl	_	_
+22	claros	claro	NOUN	_	Gender=Masc|Number=Plur	21	obj	_	_
+23	indícios	indício	ADJ	_	Gender=Masc|Number=Plur	22	amod	_	_
+24	de	de	ADP	_	_	25	case	_	_
+25	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	27	obj	_	_
+26	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	27	expl	_	_
+27	partia	partir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	22	acl:relcl	_	_
 28	para	para	ADP	_	_	30	case	_	_
 29	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	30	det	_	_
 30	ditadura	ditadura	NOUN	_	Gender=Fem|Number=Sing	27	obl	_	_
 31	militar	militar	ADJ	_	Gender=Fem|Number=Sing	30	amod	_	SpaceAfter=No
-32	,	,	PUNCT	_	_	36	punct	_	_
+32	,	,	PUNCT	_	_	34	punct	_	_
 33	e	e	CCONJ	_	_	36	cc	_	_
-34	passou	passar	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	36	aux	_	_
-35	a	a	ADP	_	_	36	obl	_	_
-36	denunciar	denunciar	VERB	_	VerbForm=Inf	27	conj	_	_
+34	passou	passar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	21	conj	_	_
+35	a	a	SCONJ	_	_	36	mark	_	_
+36	denunciar	denunciar	VERB	_	VerbForm=Inf	21	conj	_	_
 37	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	38	det	_	_
 38	torturas	tortura	NOUN	_	Gender=Fem|Number=Plur	36	obj	_	_
 39	e	e	CCONJ	_	_	40	cc	_	_
 40	arbitrariedades	arbitrariedade	NOUN	_	Gender=Fem|Number=Plur	38	conj	_	_
-41	cometidas	cometer	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part|Voice=Pass	40	acl	_	_
+41	cometidas	cometer	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part|Voice=Pass	36	xcomp	_	_
 42-43	pelo	_	_	_	_	_	_	_	_
 42	por	por	ADP	_	_	45	case	_	_
 43	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	45	det	_	_
 44	novo	novo	ADJ	_	Gender=Masc|Number=Sing	45	amod	_	_
 45	regime	regime	NOUN	_	Gender=Masc|Number=Sing	41	obl:agent	_	SpaceAfter=No
-46	.	.	PUNCT	_	_	19	punct	_	_
+46	.	.	PUNCT	_	_	19	punct	_	SpacesAfter=\n
 
 # sent_id = 14
 # text = Tal posição gerou o corte na publicidade mantida por algumas agências estrangeiras, dando início às sérias dificuldades econômicas que passaram a ser vividas pelo jornal, e as contínuas demissões de jornalistas.
-1	Tal	tal	DET	_	Gender=Fem|Number=Sing|PronType=Ind	2	det	_	_
+1	Tal	tal	DET	_	Gender=Fem|Number=Sing|PronType=Dem	2	det	_	_
 2	posição	posição	NOUN	_	Gender=Fem|Number=Sing	3	nsubj	_	_
 3	gerou	gerar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 4	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	5	det	_	_
@@ -515,13 +511,13 @@
 17	a	a	ADP	_	_	20	case	_	_
 18	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	20	det	_	_
 19	sérias	sério	ADJ	_	Gender=Fem|Number=Plur	20	amod	_	_
-20	dificuldades	dificuldade	NOUN	_	Gender=Fem|Number=Plur	15	obl	_	_
+20	dificuldades	dificuldade	NOUN	_	Gender=Fem|Number=Plur	15	iobj	_	_
 21	econômicas	econômico	ADJ	_	Gender=Fem|Number=Plur	20	amod	_	_
 22	que	que	PRON	_	Gender=Fem|Number=Plur|PronType=Rel	26	nsubj:pass	_	_
-23	passaram	passar	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	26	aux	_	_
-24	a	a	ADP	_	_	26	obl	_	_
+23	passaram	passar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	20	acl:relcl	_	_
+24	a	a	SCONJ	_	_	26	mark	_	_
 25	ser	ser	AUX	_	VerbForm=Inf	26	aux:pass	_	_
-26	vividas	viver	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part|Voice=Pass	20	acl:relcl	_	_
+26	vividas	viver	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part|Voice=Pass	23	xcomp	_	_
 27-28	pelo	_	_	_	_	_	_	_	_
 27	por	por	ADP	_	_	29	case	_	_
 28	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	29	det	_	_
@@ -529,27 +525,27 @@
 30	,	,	PUNCT	_	_	34	punct	_	_
 31	e	e	CCONJ	_	_	34	cc	_	_
 32	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	34	det	_	_
-33	contínuas	contínuo	ADJ	_	NumType=Card	34	amod	_	_
-34	demissões	demissão	NOUN	_	Gender=Fem|Number=Plur	26	conj	_	_
+33	contínuas	contínu	ADJ	_	Gender=Fem|Number=Plur	34	amod	_	_
+34	demissões	demissão	NOUN	_	Gender=Fem|Number=Plur	23	conj	_	_
 35	de	de	ADP	_	_	36	case	_	_
 36	jornalistas	jornalista	NOUN	_	Gender=Unsp|Number=Plur	34	nmod	_	SpaceAfter=No
-37	.	.	PUNCT	_	_	3	punct	_	_
+37	.	.	PUNCT	_	_	3	punct	_	SpacesAfter=\n
 
 # sent_id = 15
 # text = Assim, quando Vidor começou a trabalhar no jornal, metade da redação já havia sido demitida e ele como estagiário teve que assumir funções de um profissional, mesmo contando então com apenas 17 anos incompletos.
 1	Assim	assim	ADV	_	_	19	advmod	_	SpaceAfter=No
 2	,	,	PUNCT	_	_	1	punct	_	_
 3	quando	quando	ADV	_	_	7	advmod	_	_
-4	Vidor	Vidor	PROPN	_	Gender=Fem|Number=Sing	7	nsubj	_	_
-5	começou	começar	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	7	aux	_	_
-6	a	a	ADP	_	_	7	obl	_	_
+4	Vidor	Vidor	PROPN	_	Gender=Masc|Number=Sing	7	nsubj	_	_
+5	começou	começar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+6	a	a	SCONJ	_	_	7	mark	_	_
 7	trabalhar	trabalhar	VERB	_	VerbForm=Inf	19	advcl	_	_
 8-9	no	_	_	_	_	_	_	_	_
 8	em	em	ADP	_	_	10	case	_	_
 9	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	10	det	_	_
 10	jornal	jornal	NOUN	_	Gender=Masc|Number=Sing	7	obl	_	SpaceAfter=No
 11	,	,	PUNCT	_	_	7	punct	_	_
-12	metade	metade	NOUN	_	Gender=Fem|Number=Sing	7	obj	_	_
+12	metade	metade	NOUN	_	Gender=Fem|Number=Sing	19	nsubj:pass	_	_
 13-14	da	_	_	_	_	_	_	_	_
 13	de	de	ADP	_	_	15	case	_	_
 14	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	15	det	_	_
@@ -557,30 +553,29 @@
 16	já	já	ADV	_	_	19	advmod	_	_
 17	havia	haver	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	19	aux	_	_
 18	sido	ser	AUX	_	VerbForm=Part	19	aux:pass	_	_
-19	demitida	demitir	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
-20	e	e	CCONJ	_	_	24	cc	_	_
-21	ele	ele	PRON	_	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	24	nsubj	_	_
+19	demitida	demiter	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	5	xcomp	_	_
+20	e	e	CCONJ	_	_	21	cc	_	_
+21	ele	ele	PRON	_	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	19	conj	_	_
 22	como	como	ADP	_	_	23	case	_	_
-23	estagiário	estagiário	NOUN	_	Gender=Masc|Number=Sing	21	nmod	_	_
-24	teve	ter	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	19	conj	_	_
+23	estagiário	estagiário	NOUN	_	Gender=Masc|Number=Sing	19	obl	_	_
+24	teve	ter	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	26	aux	_	_
 25	que	que	SCONJ	_	_	26	mark	_	_
-26	assumir	assumir	VERB	_	VerbForm=Inf	24	ccomp	_	_
+26	assumir	assumir	VERB	_	VerbForm=Inf	19	xcomp	_	_
 27	funções	função	NOUN	_	Gender=Fem|Number=Plur	26	obj	_	_
 28	de	de	ADP	_	_	30	case	_	_
 29	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	30	det	_	_
 30	profissional	profissional	NOUN	_	Gender=Masc|Number=Sing	27	nmod	_	SpaceAfter=No
-31	,	,	PUNCT	_	_	26	punct	_	_
+31	,	,	PUNCT	_	_	33	punct	_	_
 32	mesmo	mesmo	ADV	_	_	33	advmod	_	_
 33	contando	contar	VERB	_	VerbForm=Ger	26	advcl	_	_
 34	então	então	ADV	_	_	33	advmod	_	_
 35	com	com	ADP	_	_	38	case	_	_
 36	apenas	apenas	ADV	_	_	37	advmod	_	_
 37	17	17	NUM	_	NumType=Card	38	nummod	_	_
-38	anos	ano	NOUN	_	Gender=Masc|Number=Plur	33	obl	_	_
+38	anos	ano	NOUN	_	Gender=Masc|Number=Plur	33	obj	_	_
 39	incompletos	incompleto	ADJ	_	Gender=Masc|Number=Plur	38	amod	_	SpaceAfter=No
-40	.	.	PUNCT	_	_	19	punct	_	_
+40	.	.	PUNCT	_	_	19	punct	_	SpacesAfter=\n
 
-# newpar
 # sent_id = 16
 # text = Uma das matérias que fez nesta época foi comparar dados sobre o Projeto Apollo, desenvolvido pela Agencia Espacial dos Estados Unidos (NASA) com o objetivo de enviar o homem à lua, comparando os dados disponíveis então e os orçamentos nacionais de vários países.
 1	Uma	um	NUM	_	NumType=Card	11	nsubj	_	_
@@ -599,10 +594,10 @@
 12	dados	dado	NOUN	_	Gender=Masc|Number=Plur	11	obj	_	_
 13	sobre	sobre	ADP	_	_	15	case	_	_
 14	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	15	det	_	_
-15	Projeto	Projeto	PROPN	_	Gender=Masc|Number=Sing	11	obl	_	_
+15	Projeto	Projeto	PROPN	_	Gender=Masc|Number=Sing	12	nmod	_	_
 16	Apollo	Apollo	PROPN	_	Number=Sing	15	flat:name	_	SpaceAfter=No
 17	,	,	PUNCT	_	_	18	punct	_	_
-18	desenvolvido	desenvolver	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	11	advcl	_	_
+18	desenvolvido	desenvolver	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	12	acl	_	_
 19-20	pela	_	_	_	_	_	_	_	_
 19	por	por	ADP	_	_	21	case	_	_
 20	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	21	det	_	_
@@ -614,33 +609,33 @@
 25	Estados	Estados	PROPN	_	Gender=Masc|Number=Plur	21	nmod	_	_
 26	Unidos	Unidos	PROPN	_	Number=Sing	25	flat:name	_	_
 27	(	(	PUNCT	_	_	28	punct	_	SpaceAfter=No
-28	NASA	NASA	PROPN	_	Gender=Fem|Number=Sing	21	appos	_	SpaceAfter=No
+28	NASA	Nasa	PROPN	_	Gender=Fem|Number=Sing	21	appos	_	SpaceAfter=No
 29	)	)	PUNCT	_	_	28	punct	_	_
 30	com	com	ADP	_	_	32	case	_	_
 31	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	32	det	_	_
 32	objetivo	objetivo	NOUN	_	Gender=Masc|Number=Sing	18	obl	_	_
-33	de	de	ADP	_	_	34	mark	_	_
+33	de	de	SCONJ	_	_	34	mark	_	_
 34	enviar	enviar	VERB	_	VerbForm=Inf	32	acl	_	_
 35	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	36	det	_	_
 36	homem	homem	NOUN	_	Gender=Masc|Number=Sing	34	obj	_	_
 37-38	à	_	_	_	_	_	_	_	_
 37	a	a	ADP	_	_	39	case	_	_
 38	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	39	det	_	_
-39	lua	lua	NOUN	_	Gender=Fem|Number=Sing	34	obl	_	SpaceAfter=No
+39	lua	lua	NOUN	_	Gender=Fem|Number=Sing	36	nmod	_	SpaceAfter=No
 40	,	,	PUNCT	_	_	41	punct	_	_
-41	comparando	comparar	VERB	_	VerbForm=Ger	34	conj	_	_
+41	comparando	comparar	VERB	_	VerbForm=Ger	11	advcl	_	_
 42	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	43	det	_	_
 43	dados	dado	NOUN	_	Gender=Masc|Number=Plur	41	obj	_	_
 44	disponíveis	disponível	ADJ	_	Gender=Masc|Number=Plur	43	amod	_	_
-45	então	então	ADV	_	_	41	advmod	_	_
+45	então	então	ADV	_	_	43	advmod	_	_
 46	e	e	CCONJ	_	_	48	cc	_	_
 47	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	48	det	_	_
-48	orçamentos	orçamento	NOUN	_	Gender=Masc|Number=Plur	32	conj	_	_
+48	orçamentos	orçamento	NOUN	_	Gender=Masc|Number=Plur	45	conj	_	_
 49	nacionais	nacional	ADJ	_	Gender=Masc|Number=Plur	48	amod	_	_
 50	de	de	ADP	_	_	52	case	_	_
 51	vários	vários	DET	_	Gender=Masc|Number=Plur|PronType=Ind	52	det	_	_
 52	países	país	NOUN	_	Gender=Masc|Number=Plur	48	nmod	_	SpaceAfter=No
-53	.	.	PUNCT	_	_	11	punct	_	_
+53	.	.	PUNCT	_	_	11	punct	_	SpacesAfter=\n
 
 # sent_id = 17
 # text = O texto de Vidor foi publicado no suplemento de domingo «Correio Econômico» e teve repercussão positiva.
@@ -657,14 +652,14 @@
 10	de	de	ADP	_	_	11	case	_	_
 11	domingo	domingo	NOUN	_	Gender=Masc|Number=Sing	9	nmod	_	_
 12	«	«	PUNCT	_	_	13	punct	_	SpaceAfter=No
-13	Correio	correio	PROPN	_	Gender=Fem|Number=Sing	11	appos	_	_
-14	Econômico	econômico	PROPN	_	Number=Sing	13	flat:name	_	SpaceAfter=No
+13	Correio	Correio	PROPN	_	Gender=Masc|Number=Sing	11	appos	_	_
+14	Econômico	Econômico	PROPN	_	Number=Sing	13	flat:name	_	SpaceAfter=No
 15	»	»	PUNCT	_	_	13	punct	_	_
 16	e	e	CCONJ	_	_	17	cc	_	_
 17	teve	ter	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	conj	_	_
 18	repercussão	repercussão	NOUN	_	Gender=Fem|Number=Sing	17	obj	_	_
 19	positiva	positivo	ADJ	_	Gender=Fem|Number=Sing	18	amod	_	SpaceAfter=No
-20	.	.	PUNCT	_	_	6	punct	_	_
+20	.	.	PUNCT	_	_	6	punct	_	SpacesAfter=\n
 
 # sent_id = 18
 # text = Por conta dessa experiência, foi transferido para o noticiário de economia que tratava basicamente da Bolsa de Valores, e da cotação de produtos, como café e outros, sem apresentar análises econômicas.
@@ -682,148 +677,146 @@
 11	noticiário	noticiário	NOUN	_	Gender=Masc|Number=Sing	8	obl	_	_
 12	de	de	ADP	_	_	13	case	_	_
 13	economia	economia	NOUN	_	Gender=Fem|Number=Sing	11	nmod	_	_
-14	que	que	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	15	nsubj	_	_
+14	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	15	nsubj	_	_
 15	tratava	tratar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	13	acl:relcl	_	_
 16	basicamente	basicamente	ADV	_	_	15	advmod	_	_
 17-18	da	_	_	_	_	_	_	_	_
 17	de	de	ADP	_	_	19	case	_	_
 18	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	19	det	_	_
-19	Bolsa	Bolsa	PROPN	_	Gender=Fem|Number=Sing	15	obl	_	_
+19	Bolsa	Bolsa	NOUN	_	Gender=Fem|Number=Sing	16	obl	_	_
 20	de	de	ADP	_	_	21	case	_	_
-21	Valores	Valores	PROPN	_	Number=Sing	19	nmod	_	SpaceAfter=No
+21	Valores	Valor	NOUN	_	Gender=Masc|Number=Plur	19	nmod	_	SpaceAfter=No
 22	,	,	PUNCT	_	_	26	punct	_	_
 23	e	e	CCONJ	_	_	26	cc	_	_
 24-25	da	_	_	_	_	_	_	_	_
 24	de	de	ADP	_	_	26	case	_	_
 25	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	26	det	_	_
-26	cotação	cotação	NOUN	_	Gender=Fem|Number=Sing	8	conj	_	_
+26	cotação	cotação	NOUN	_	Gender=Fem|Number=Sing	19	conj	_	_
 27	de	de	ADP	_	_	28	case	_	_
 28	produtos	produto	NOUN	_	Gender=Masc|Number=Plur	26	nmod	_	SpaceAfter=No
-29	,	,	PUNCT	_	_	31	punct	_	_
+29	,	,	PUNCT	_	_	8	punct	_	_
 30	como	como	ADP	_	_	31	case	_	_
-31	café	café	NOUN	_	Gender=Masc|Number=Sing	26	conj	_	_
+31	café	café	NOUN	_	Gender=Masc|Number=Sing	8	obl	_	_
 32	e	e	CCONJ	_	_	33	cc	_	_
-33	outros	outro	PRON	_	Gender=Masc|Number=Plur|PronType=Ind	26	conj	_	SpaceAfter=No
-34	,	,	PUNCT	_	_	36	punct	_	_
-35	sem	sem	ADP	_	_	36	mark	_	_
-36	apresentar	apresentar	VERB	_	VerbForm=Inf	26	acl	_	_
-37	análises	análises	NOUN	_	Gender=Fem|Number=Plur	36	obj	_	_
+33	outros	outro	DET	_	Gender=Masc|Number=Plur|PronType=Ind	31	conj	_	SpaceAfter=No
+34	,	,	PUNCT	_	_	8	punct	_	_
+35	sem	sem	SCONJ	_	_	36	mark	_	_
+36	apresentar	apresentar	VERB	_	VerbForm=Inf	8	advcl	_	_
+37	análises	análise	NOUN	_	Gender=Fem|Number=Plur	36	obj	_	_
 38	econômicas	econômico	ADJ	_	Gender=Fem|Number=Plur	37	amod	_	SpaceAfter=No
-39	.	.	PUNCT	_	_	8	punct	_	_
+39	.	.	PUNCT	_	_	8	punct	_	SpacesAfter=\n
 
-# newpar
 # sent_id = 19
 # text = Como estagiário recebia muito pouco e atrasado, o que o levou, junto com outros estagiários, à greve.
-1	Como	como	ADP	_	_	2	case	_	_
-2	estagiário	estagiário	NOUN	_	Gender=Masc|Number=Sing	3	obl	_	_
+1	Como	como	ADP	_	_	3	mark	_	_
+2	estagiário	estagiário	NOUN	_	Gender=Masc|Number=Sing	3	nsubj	_	_
 3	recebia	receber	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	0	root	_	_
 4	muito	muito	ADV	_	_	5	advmod	_	_
 5	pouco	pouco	ADV	_	_	3	advmod	_	_
 6	e	e	CCONJ	_	_	7	cc	_	_
 7	atrasado	atrasar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	5	conj	_	SpaceAfter=No
 8	,	,	PUNCT	_	_	3	punct	_	_
-9	o	o	PRON	_	Gender=Masc|Number=Sing|PronType=Dem	10	det	_	_
+9	o	o	PRON	_	Gender=Masc|Number=Sing|PronType=Dem	3	appos	_	_
 10	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	12	nsubj	_	_
 11	o	ele	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	12	obj	_	_
-12	levou	levar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	xcomp	_	SpaceAfter=No
-13	,	,	PUNCT	_	_	14	punct	_	_
-14	junto	junto	ADV	_	_	12	advmod	_	_
+12	levou	levar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	9	acl:relcl	_	SpaceAfter=No
+13	,	,	PUNCT	_	_	3	punct	_	_
+14	junto	junto	ADV	_	_	3	advmod	_	_
 15	com	com	ADP	_	_	17	case	_	_
 16	outros	outro	DET	_	Gender=Masc|Number=Plur|PronType=Ind	17	det	_	_
 17	estagiários	estagiário	NOUN	_	Gender=Masc|Number=Plur	14	obl	_	SpaceAfter=No
-18	,	,	PUNCT	_	_	14	punct	_	_
+18	,	,	PUNCT	_	_	3	punct	_	_
 19-20	à	_	_	_	_	_	_	_	_
 19	a	a	ADP	_	_	21	case	_	_
 20	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	21	det	_	_
-21	greve	greve	NOUN	_	Gender=Fem|Number=Sing	14	obl	_	SpaceAfter=No
-22	.	.	PUNCT	_	_	3	punct	_	_
+21	greve	greve	NOUN	_	Gender=Fem|Number=Sing	3	obl	_	SpaceAfter=No
+22	.	.	PUNCT	_	_	3	punct	_	SpacesAfter=\n
 
 # sent_id = 20
 # text = Foram todos demitidos no mês de julho de 1969.
-1	Foram	ser	AUX	_	_	2	cop	_	_
-2	todos	todo	PRON	_	Gender=Masc|Number=Plur|PronType=Tot	0	root	_	_
-3	demitidos	demitir	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part	2	acl	_	_
+1	Foram	foram	ADV	_	_	3	advmod	_	_
+2	todos	todo	PRON	_	Gender=Masc|Number=Plur|PronType=Tot	3	nsubj	_	_
+3	demitidos	demitir	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part	0	root	_	_
 4-5	no	_	_	_	_	_	_	_	_
 4	em	em	ADP	_	_	6	case	_	_
 5	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	6	det	_	_
 6	mês	mês	NOUN	_	Gender=Masc|Number=Sing	3	obl	_	_
 7	de	de	ADP	_	_	8	case	_	_
-8	julho	julho	NOUN	_	Gender=Masc|Number=Sing	6	nmod:tmod	_	_
+8	julho	julho	NOUN	_	Gender=Masc|Number=Sing	6	nmod	_	_
 9	de	de	ADP	_	_	10	case	_	_
 10	1969	1969	NUM	_	NumType=Card	8	nmod	_	SpaceAfter=No
-11	.	.	PUNCT	_	_	2	punct	_	_
+11	.	.	PUNCT	_	_	3	punct	_	SpacesAfter=\n
 
 # sent_id = 21
 # text = Mas logo depois o «Correio da Manhã» foi arrendado à empreiteira Metropolitana, e o redator-chefe do jornal, Franklin de Oliveira, o convidou a retomar as atividades como contratado, dentro da recém-criada Editoria de Economia.
 1	Mas	mas	CCONJ	_	_	12	cc	_	_
-2	logo	logo	ADV	_	_	3	advmod	_	_
-3	depois	depois	ADV	_	_	12	advmod	_	_
+2	logo	logo	ADV	_	_	12	advmod	_	_
+3	depois	depois	ADV	_	_	2	advmod	_	_
 4	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	6	det	_	_
 5	«	«	PUNCT	_	_	6	punct	_	SpaceAfter=No
-6	Correio	Correio	PROPN	_	Gender=Fem|Number=Sing	12	nsubj	_	_
+6	Correio	Correio	PROPN	_	Gender=Masc|Number=Sing	12	nsubj:pass	_	_
 7-8	da	_	_	_	_	_	_	_	_
 7	de	de	ADP	_	_	9	case	_	_
 8	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	9	det	_	_
 9	Manhã	manhã	PROPN	_	Number=Sing	6	nmod	_	SpaceAfter=No
 10	»	»	PUNCT	_	_	6	punct	_	_
-11	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	12	aux	_	_
-12	arrendado	arrendar	VERB	_	Gender=Masc|Number=Sing	0	root	_	_
+11	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	12	aux:pass	_	_
+12	arrendado	arrendar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
 13-14	à	_	_	_	_	_	_	_	_
 13	a	a	ADP	_	_	15	case	_	_
 14	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	15	det	_	_
 15	empreiteira	empreiteira	NOUN	_	Gender=Fem|Number=Sing	12	obl	_	_
 16	Metropolitana	Metropolitana	PROPN	_	Gender=Fem|Number=Sing	15	appos	_	SpaceAfter=No
-17	,	,	PUNCT	_	_	20	punct	_	_
-18	e	e	CCONJ	_	_	20	cc	_	_
+17	,	,	PUNCT	_	_	12	punct	_	_
+18	e	e	CCONJ	_	_	30	cc	_	_
 19	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	20	det	_	_
-20	redator-chefe	redator-chefe	NOUN	_	Gender=Masc|Number=Sing	12	conj	_	_
+20	redator-chefe	redator-chefe	NOUN	_	Gender=Masc|Number=Sing	30	nsubj	_	_
 21-22	do	_	_	_	_	_	_	_	_
 21	de	de	ADP	_	_	23	case	_	_
 22	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	23	det	_	_
 23	jornal	jornal	NOUN	_	Gender=Masc|Number=Sing	20	nmod	_	SpaceAfter=No
 24	,	,	PUNCT	_	_	25	punct	_	_
-25	Franklin	Franklin	PROPN	_	Gender=Masc|Number=Sing	20	conj	_	_
+25	Franklin	Franklin	PROPN	_	Gender=Masc|Number=Sing	20	appos	_	_
 26	de	de	ADP	_	_	27	case	_	_
 27	Oliveira	Oliveira	PROPN	_	Number=Sing	25	nmod	_	SpaceAfter=No
-28	,	,	PUNCT	_	_	20	punct	_	_
-29	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	30	det	_	_
-30	convidou	convidou	NOUN	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	12	obj	_	_
-31	a	a	ADP	_	_	32	mark	_	_
-32	retomar	retomar	VERB	_	VerbForm=Inf	30	acl	_	_
+28	,	,	PUNCT	_	_	25	punct	_	_
+29	o	ele	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	30	obj	_	_
+30	convidou	convidar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	12	conj	_	_
+31	a	a	SCONJ	_	_	32	mark	_	_
+32	retomar	retomar	VERB	_	VerbForm=Inf	30	xcomp	_	_
 33	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	34	det	_	_
 34	atividades	atividade	NOUN	_	Gender=Fem|Number=Plur	32	obj	_	_
 35	como	como	ADP	_	_	36	case	_	_
-36	contratado	contratar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	34	acl	_	SpaceAfter=No
-37	,	,	PUNCT	_	_	36	punct	_	_
+36	contratado	contratado	NOUN	_	Gender=Masc|Number=Sing	34	nmod	_	SpaceAfter=No
+37	,	,	PUNCT	_	_	38	punct	_	_
 38	dentro	dentro	ADV	_	_	36	advmod	_	_
 39-40	da	_	_	_	_	_	_	_	_
 39	de	de	ADP	_	_	41	case	_	_
 40	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	41	det	_	_
-41	recém-criada	recém-criada	NOUN	_	Gender=Fem|Number=Sing|VerbForm=Part	38	obl	_	_
+41	recém-criada	recém-criada	NOUN	_	Gender=Fem|Number=Sing	38	obl	_	_
 42	Editoria	Editoria	PROPN	_	Gender=Fem|Number=Sing	41	appos	_	_
 43	de	de	ADP	_	_	44	case	_	_
 44	Economia	Economia	PROPN	_	Number=Sing	42	nmod	_	SpaceAfter=No
-45	.	.	PUNCT	_	_	12	punct	_	_
+45	.	.	PUNCT	_	_	12	punct	_	SpacesAfter=\n
 
 # sent_id = 22
 # text = Voltou para cobrir assuntos gerais de economia.
 1	Voltou	voltar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
-2	para	para	ADP	_	_	3	mark	_	_
+2	para	para	SCONJ	_	_	3	mark	_	_
 3	cobrir	cobrir	VERB	_	VerbForm=Inf	1	advcl	_	_
 4	assuntos	assunto	NOUN	_	Gender=Masc|Number=Plur	3	obj	_	_
 5	gerais	geral	ADJ	_	Gender=Masc|Number=Plur	4	amod	_	_
 6	de	de	ADP	_	_	7	case	_	_
 7	economia	economia	NOUN	_	Gender=Fem|Number=Sing	4	nmod	_	SpaceAfter=No
-8	.	.	PUNCT	_	_	1	punct	_	_
+8	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
 
-# newpar
 # sent_id = 23
 # text = Em dezembro de 1969 George Vidor foi preso pelo Centro de Informações da Marinha (CENIMAR), já então subordinado ao Ministério da Marinha, que vinha sendo empregado na repressão à luta armada deflagrada no país pelas organizações de extrema esquerda.
 1	Em	em	ADP	_	_	2	case	_	_
 2	dezembro	dezembro	NOUN	_	Gender=Masc|Number=Sing	8	obl	_	_
-3	de	de	ADP	_	_	5	case	_	_
-4	1969	1969	NUM	_	NumType=Card	5	nummod	_	_
-5	George	George	PROPN	_	Gender=Masc|Number=Sing	2	nmod	_	_
+3	de	de	ADP	_	_	4	case	_	_
+4	1969	1969	NUM	_	NumType=Card	2	nmod	_	_
+5	George	George	PROPN	_	Gender=Masc|Number=Sing	4	conj	_	_
 6	Vidor	Vidor	PROPN	_	Number=Sing	5	flat:name	_	_
 7	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	8	aux:pass	_	_
 8	preso	prender	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
@@ -836,24 +829,24 @@
 14-15	da	_	_	_	_	_	_	_	_
 14	de	de	ADP	_	_	16	case	_	_
 15	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	16	det	_	_
-16	Marinha	Marinha	PROPN	_	Gender=Fem|Number=Sing	11	nmod	_	_
+16	Marinha	Marinha	PROPN	_	Number=Sing	13	nmod	_	_
 17	(	(	PUNCT	_	_	18	punct	_	SpaceAfter=No
-18	CENIMAR	CENIMAR	PROPN	_	Gender=Masc|Number=Sing	11	appos	_	SpaceAfter=No
+18	CENIMAR	CENIMAR	PROPN	_	Gender=Fem|Number=Sing	11	appos	_	SpaceAfter=No
 19	)	)	PUNCT	_	_	18	punct	_	SpaceAfter=No
 20	,	,	PUNCT	_	_	8	punct	_	_
-21	já	já	ADV	_	_	23	advmod	_	_
+21	já	já	ADV	_	_	22	advmod	_	_
 22	então	então	ADV	_	_	23	advmod	_	_
 23	subordinado	subordinar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	8	advcl	_	_
 24-25	ao	_	_	_	_	_	_	_	_
 24	a	a	ADP	_	_	26	case	_	_
 25	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	26	det	_	_
-26	Ministério	Ministério	PROPN	_	Gender=Masc|Number=Sing	23	obl	_	_
+26	Ministério	Ministério	PROPN	_	Gender=Masc|Number=Sing	23	obj	_	_
 27-28	da	_	_	_	_	_	_	_	_
 27	de	de	ADP	_	_	29	case	_	_
 28	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	29	det	_	_
-29	Marinha	Marinha	PROPN	_	Gender=Fem|Number=Sing	26	nmod	_	SpaceAfter=No
-30	,	,	PUNCT	_	_	23	punct	_	_
-31	que	que	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	32	nsubj	_	_
+29	Marinha	Marinha	PROPN	_	Number=Sing	26	nmod	_	SpaceAfter=No
+30	,	,	PUNCT	_	_	32	punct	_	_
+31	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	32	nsubj	_	_
 32	vinha	ver	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	26	acl:relcl	_	_
 33	sendo	ser	AUX	_	VerbForm=Ger	34	aux:pass	_	_
 34	empregado	empregar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	32	xcomp	_	_
@@ -864,9 +857,9 @@
 38-39	à	_	_	_	_	_	_	_	_
 38	a	a	ADP	_	_	40	case	_	_
 39	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	40	det	_	_
-40	luta	luta	NOUN	_	Gender=Fem|Number=Sing	34	obl	_	_
+40	luta	luta	NOUN	_	Gender=Fem|Number=Sing	37	nmod	_	_
 41	armada	armar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	40	acl	_	_
-42	deflagrada	deflagrar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	40	acl	_	_
+42	deflagrada	deflagrar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	41	acl	_	_
 43-44	no	_	_	_	_	_	_	_	_
 43	em	em	ADP	_	_	45	case	_	_
 44	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	45	det	_	_
@@ -875,10 +868,10 @@
 46	por	por	ADP	_	_	48	case	_	_
 47	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	48	det	_	_
 48	organizações	organização	NOUN	_	Gender=Fem|Number=Plur	42	obl	_	_
-49	de	de	ADP	_	_	51	case	_	_
-50	extrema	extremo	ADJ	_	Gender=Fem|Number=Sing	51	amod	_	_
-51	esquerda	esquerda	NOUN	_	Gender=Fem|Number=Sing	48	nmod	_	SpaceAfter=No
-52	.	.	PUNCT	_	_	8	punct	_	_
+49	de	de	ADP	_	_	50	case	_	_
+50	extrema	extrema	NOUN	_	Gender=Fem|Number=Sing	48	nmod	_	_
+51	esquerda	esquerdo	ADJ	_	Gender=Fem|Number=Sing	50	amod	_	SpaceAfter=No
+52	.	.	PUNCT	_	_	8	punct	_	SpacesAfter=\n
 
 # sent_id = 24
 # text = Na ocasião foi acusado de abrigar em sua casa alguns perseguidos políticos.
@@ -888,65 +881,64 @@
 3	ocasião	ocasião	NOUN	_	Gender=Fem|Number=Sing	5	obl	_	_
 4	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	aux:pass	_	_
 5	acusado	acusar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
-6	de	de	ADP	_	_	7	mark	_	_
+6	de	de	SCONJ	_	_	7	mark	_	_
 7	abrigar	abrigar	VERB	_	VerbForm=Inf	5	xcomp	_	_
 8	em	em	ADP	_	_	10	case	_	_
 9	sua	seu	DET	_	Gender=Fem|Number=Sing|PronType=Prs	10	det	_	_
 10	casa	casa	NOUN	_	Gender=Fem|Number=Sing	7	obl	_	_
 11	alguns	algum	DET	_	Gender=Masc|Number=Plur|PronType=Ind	12	det	_	_
-12	perseguidos	perseguido	NOUN	_	Gender=Masc|Number=Plur|VerbForm=Part	7	obj	_	_
+12	perseguidos	perseguido	NOUN	_	Gender=Masc|Number=Plur	5	nsubj:pass	_	_
 13	políticos	político	ADJ	_	Gender=Masc|Number=Plur	12	amod	_	SpaceAfter=No
-14	.	.	PUNCT	_	_	5	punct	_	_
+14	.	.	PUNCT	_	_	5	punct	_	SpacesAfter=\n
 
 # sent_id = 25
 # text = Ao deixar a prisão afastou-se do jornal.
 1-2	Ao	_	_	_	_	_	_	_	_
-1	A	a	ADP	_	_	3	mark	_	_
+1	A	a	SCONJ	_	_	3	mark	_	_
 2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
 3	deixar	deixar	VERB	_	VerbForm=Inf	6	advcl	_	_
 4	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	5	det	_	_
 5	prisão	prisão	NOUN	_	Gender=Fem|Number=Sing	3	obj	_	_
 6-7	afastou-se	_	_	_	_	_	_	_	_
 6	afastou	afastar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
-7	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	6	expl	_	_
+7	se	se	PRON	_	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	6	expl	_	_
 8-9	do	_	_	_	_	_	_	_	_
 8	de	de	ADP	_	_	10	case	_	_
 9	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	10	det	_	_
-10	jornal	jornal	NOUN	_	Gender=Masc|Number=Sing	6	obl	_	SpaceAfter=No
-11	.	.	PUNCT	_	_	6	punct	_	_
+10	jornal	jornal	NOUN	_	Gender=Masc|Number=Sing	6	obj	_	SpaceAfter=No
+11	.	.	PUNCT	_	_	6	punct	_	SpacesAfter=\n
 
-# newpar
 # sent_id = 26
 # text = Alguns meses depois, amigos que também tinham deixado o «Correio da Manhã», resolveram criar aqui no Rio de Janeiro uma sucursal do jornal «Tribuna da Bahia», e convidaram Vidor a fazer matérias de economia.
 1	Alguns	algum	DET	_	Gender=Masc|Number=Plur|PronType=Ind	2	det	_	_
-2	meses	mês	NOUN	_	Gender=Masc|Number=Plur	18	obl	_	_
+2	meses	mês	NOUN	_	Gender=Masc|Number=Plur	0	root	_	_
 3	depois	depois	ADV	_	_	2	advmod	_	SpaceAfter=No
 4	,	,	PUNCT	_	_	2	punct	_	_
-5	amigos	amigo	NOUN	_	Gender=Masc|Number=Plur	18	nsubj	_	_
-6	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	9	nsubj	_	_
+5	amigos	amigo	NOUN	_	Gender=Masc|Number=Plur	2	appos	_	_
+6	que	que	PRON	_	Gender=Masc|Number=Plur|PronType=Rel	9	nsubj	_	_
 7	também	também	ADV	_	_	9	advmod	_	_
 8	tinham	ter	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	9	aux	_	_
 9	deixado	deixar	VERB	_	VerbForm=Part	5	acl:relcl	_	_
 10	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	12	det	_	_
 11	«	«	PUNCT	_	_	12	punct	_	SpaceAfter=No
-12	Correio	Correio	PROPN	_	Gender=Fem|Number=Sing	9	obj	_	_
+12	Correio	Correio	PROPN	_	Gender=Masc|Number=Sing	18	nsubj	_	_
 13-14	da	_	_	_	_	_	_	_	_
 13	de	de	ADP	_	_	15	case	_	_
 14	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	15	det	_	_
-15	Manhã	Manhã	PROPN	_	Number=Sing	12	nmod	_	SpaceAfter=No
+15	Manhã	manhã	PROPN	_	Number=Sing	12	nmod	_	SpaceAfter=No
 16	»	»	PUNCT	_	_	12	punct	_	SpaceAfter=No
-17	,	,	PUNCT	_	_	9	punct	_	_
-18	resolveram	resolver	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
-19	criar	criar	VERB	_	VerbForm=Inf	18	xcomp	_	_
+17	,	,	PUNCT	_	_	19	punct	_	_
+18	resolveram	resolver	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	9	xcomp	_	_
+19	criar	criar	VERB	_	VerbForm=Inf	12	acl	_	_
 20	aqui	aqui	ADV	_	_	19	advmod	_	_
 21-22	no	_	_	_	_	_	_	_	_
 21	em	em	ADP	_	_	23	case	_	_
 22	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	23	det	_	_
 23	Rio	Rio	PROPN	_	Gender=Masc|Number=Sing	19	obl	_	_
 24	de	de	ADP	_	_	25	case	_	_
-25	Janeiro	Janeiro	PROPN	_	Number=Sing	23	nmod	_	_
+25	Janeiro	janeiro	PROPN	_	Number=Sing	23	nmod	_	_
 26	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	27	det	_	_
-27	sucursal	sucursal	NOUN	_	Gender=Masc|Number=Sing	19	obj	_	_
+27	sucursal	sucursal	NOUN	_	Gender=Fem|Number=Sing	19	obj	_	_
 28-29	do	_	_	_	_	_	_	_	_
 28	de	de	ADP	_	_	30	case	_	_
 29	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	30	det	_	_
@@ -960,19 +952,19 @@
 36	»	»	PUNCT	_	_	32	punct	_	SpaceAfter=No
 37	,	,	PUNCT	_	_	39	punct	_	_
 38	e	e	CCONJ	_	_	39	cc	_	_
-39	convidaram	convidar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	18	conj	_	_
-40	Vidor	Vidor	PROPN	_	Gender=Fem|Number=Sing	39	obj	_	_
-41	a	a	ADP	_	_	42	mark	_	_
-42	fazer	fazer	VERB	_	VerbForm=Inf	39	xcomp	_	_
+39	convidaram	convidar	VERB	_	Mood=Ind|Number=Plur|Person=3|VerbForm=Fin	30	conj	_	_
+40	Vidor	Vidor	VERB	_	VerbForm=Inf	39	xcomp	_	_
+41	a	a	SCONJ	_	_	42	mark	_	_
+42	fazer	fazer	VERB	_	VerbForm=Inf	40	xcomp	_	_
 43	matérias	matéria	NOUN	_	Gender=Fem|Number=Plur	42	obj	_	_
 44	de	de	ADP	_	_	45	case	_	_
 45	economia	economia	NOUN	_	Gender=Fem|Number=Sing	43	nmod	_	SpaceAfter=No
-46	.	.	PUNCT	_	_	18	punct	_	_
+46	.	.	PUNCT	_	_	2	punct	_	SpacesAfter=\n
 
 # sent_id = 27
 # text = Logo depois, foi convidado pelo recém-criado «Boletim Cambial», jornal especializado em economia, de propriedade de João Alberto Leite Barbosa, irmão de Marcelo Leite Barbosa, então dono da maior corretora de valores do Rio, e por ele passaram todos os primeiros jornalistas de economia.
 1	Logo	logo	ADV	_	_	2	advmod	_	_
-2	depois	depois	ADV	_	_	5	advmod	_	SpaceAfter=No
+2	depois	depois	ADV	_	_	5	obl	_	SpaceAfter=No
 3	,	,	PUNCT	_	_	2	punct	_	_
 4	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	aux:pass	_	_
 5	convidado	convidar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
@@ -985,7 +977,7 @@
 11	Cambial	cambial	PROPN	_	Number=Sing	10	flat:name	_	SpaceAfter=No
 12	»	»	PUNCT	_	_	10	punct	_	SpaceAfter=No
 13	,	,	PUNCT	_	_	15	punct	_	_
-14	jornal	jornal	NOUN	_	Gender=Masc|Number=Sing	10	appos	_	_
+14	jornal	jornal	NOUN	_	Gender=Masc|Number=Sing	8	appos	_	_
 15	especializado	especializar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	14	acl	_	_
 16	em	em	ADP	_	_	17	case	_	_
 17	economia	economia	NOUN	_	Gender=Fem|Number=Sing	15	obl	_	SpaceAfter=No
@@ -1005,12 +997,12 @@
 31	Barbosa	Barbosa	PROPN	_	Number=Sing	29	flat:name	_	SpaceAfter=No
 32	,	,	PUNCT	_	_	27	punct	_	_
 33	então	então	ADV	_	_	34	advmod	_	_
-34	dono	dono	NOUN	_	Gender=Masc|Number=Sing	14	appos	_	_
+34	dono	dono	ADJ	_	Gender=Masc|Number=Sing	27	amod	_	_
 35-36	da	_	_	_	_	_	_	_	_
 35	de	de	ADP	_	_	38	case	_	_
 36	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	38	det	_	_
 37	maior	grande	ADJ	_	Gender=Fem|Number=Sing	38	amod	_	_
-38	corretora	corretora	NOUN	_	Gender=Fem|Number=Sing	34	nmod	_	_
+38	corretora	corretor	NOUN	_	Gender=Fem|Number=Sing	34	obl	_	_
 39	de	de	ADP	_	_	40	case	_	_
 40	valores	valor	NOUN	_	Gender=Masc|Number=Plur	38	nmod	_	_
 41-42	do	_	_	_	_	_	_	_	_
@@ -1020,48 +1012,47 @@
 44	,	,	PUNCT	_	_	48	punct	_	_
 45	e	e	CCONJ	_	_	48	cc	_	_
 46	por	por	ADP	_	_	47	case	_	_
-47	ele	ele	PRON	_	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	48	obl	_	_
-48	passaram	passar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	43	conj	_	_
+47	ele	ele	PRON	_	Gender=Masc|Number=Sing|Person=3|PronType=Prs	48	obl	_	_
+48	passaram	passar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	40	conj	_	_
 49	todos	todo	DET	_	Gender=Masc|Number=Plur|PronType=Tot	52	det	_	_
 50	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	52	det	_	_
 51	primeiros	primeiro	ADJ	_	Gender=Masc|Number=Plur|NumType=Ord	52	amod	_	_
 52	jornalistas	jornalista	NOUN	_	Gender=Masc|Number=Plur	48	obj	_	_
 53	de	de	ADP	_	_	54	case	_	_
 54	economia	economia	NOUN	_	Gender=Fem|Number=Sing	52	nmod	_	SpaceAfter=No
-55	.	.	PUNCT	_	_	5	punct	_	_
+55	.	.	PUNCT	_	_	5	punct	_	SpacesAfter=\n
 
 # sent_id = 28
 # text = Vidor passou então a acumular as duas funções, e a partir de 1970 com mais um emprego, agora na «Gazeta Mercantil».
 1	Vidor	Vidor	PROPN	_	Gender=Masc|Number=Sing	5	nsubj	_	_
-2	passou	passar	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	aux	_	_
+2	passou	passar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 3	então	então	ADV	_	_	5	advmod	_	_
-4	a	a	ADP	_	_	5	obl	_	_
-5	acumular	acumular	VERB	_	VerbForm=Inf	0	root	_	_
+4	a	a	SCONJ	_	_	5	mark	_	_
+5	acumular	acumular	VERB	_	VerbForm=Inf	2	xcomp	_	_
 6	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	8	det	_	_
 7	duas	dois	NUM	_	NumType=Card	8	nummod	_	_
 8	funções	função	NOUN	_	Gender=Fem|Number=Plur	5	obj	_	SpaceAfter=No
 9	,	,	PUNCT	_	_	12	punct	_	_
 10	e	e	CCONJ	_	_	12	cc	_	_
-11	a	a	ADP	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	12	case	_	_
-12	partir	partir	NOUN	_	_	5	conj	_	_
+11	a	a	ADP	_	_	12	case	_	_
+12	partir	partir	VERB	_	VerbForm=Inf	5	conj	_	_
 13	de	de	ADP	_	_	14	case	_	_
-14	1970	1970	NUM	_	NumType=Card	12	nmod	_	_
+14	1970	1970	NUM	_	NumType=Card	12	obl	_	_
 15	com	com	ADP	_	_	18	case	_	_
 16	mais	mais	ADV	_	_	17	advmod	_	_
 17	um	um	NUM	_	NumType=Card	18	nummod	_	_
 18	emprego	emprego	NOUN	_	Gender=Masc|Number=Sing	14	nmod	_	SpaceAfter=No
-19	,	,	PUNCT	_	_	24	punct	_	_
-20	agora	agora	ADV	_	_	24	advmod	_	_
+19	,	,	PUNCT	_	_	12	punct	_	_
+20	agora	agora	ADV	_	_	12	advmod	_	_
 21-22	na	_	_	_	_	_	_	_	_
 21	em	em	ADP	_	_	24	case	_	_
 22	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	24	det	_	_
 23	«	«	PUNCT	_	_	24	punct	_	SpaceAfter=No
-24	Gazeta	Gazeta	PROPN	_	Gender=Masc|Number=Sing	18	appos	_	_
+24	Gazeta	Gazeta	PROPN	_	Gender=Fem|Number=Sing	12	obl	_	_
 25	Mercantil	Mercantil	PROPN	_	Number=Sing	24	flat:name	_	SpaceAfter=No
 26	»	»	PUNCT	_	_	24	punct	_	SpaceAfter=No
-27	.	.	PUNCT	_	_	5	punct	_	_
+27	.	.	PUNCT	_	_	5	punct	_	SpacesAfter=\n
 
-# newpar
 # sent_id = 29
 # text = Em 1972, Evandro Carlos de Andrade assumiu a chefia da redação do jornal «O Globo» tendo a intenção de transformá-lo para fazer concorrência com o «Jornal do Brasil».
 1	Em	em	ADP	_	_	2	case	_	_
@@ -1083,81 +1074,81 @@
 15	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	16	det	_	_
 16	jornal	jornal	NOUN	_	Gender=Masc|Number=Sing	13	nmod	_	_
 17	«	«	PUNCT	_	_	18	punct	_	SpaceAfter=No
-18	O	O	DET	_	Gender=Masc|Number=Sing|PronType=Art	16	appos	_	_
+18	O	O	PROPN	_	Gender=Masc|Number=Sing|PronType=Art	16	appos	_	_
 19	Globo	Globo	PROPN	_	Number=Sing	18	flat:name	_	SpaceAfter=No
 20	»	»	PUNCT	_	_	18	punct	_	_
-21	tendo	ter	VERB	_	VerbForm=Ger	8	advcl	_	_
+21	tendo	ter	AUX	_	VerbForm=Ger	8	advcl	_	_
 22	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	23	det	_	_
 23	intenção	intenção	NOUN	_	Gender=Fem|Number=Sing	21	obj	_	_
-24	de	de	ADP	_	_	25	mark	_	_
+24	de	de	SCONJ	_	_	25	mark	_	_
 25-26	transformá-lo	_	_	_	_	_	_	_	_
 25	transformá	transformar	VERB	_	VerbForm=Inf	23	acl	_	_
 26	lo	ele	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	25	obj	_	_
-27	para	para	ADP	_	_	28	mark	_	_
+27	para	para	SCONJ	_	_	28	mark	_	_
 28	fazer	fazer	VERB	_	VerbForm=Inf	25	advcl	_	_
 29	concorrência	concorrência	NOUN	_	Gender=Fem|Number=Sing	28	obj	_	_
 30	com	com	ADP	_	_	33	case	_	_
 31	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	33	det	_	_
 32	«	«	PUNCT	_	_	33	punct	_	SpaceAfter=No
-33	Jornal	Jornal	PROPN	_	Gender=Masc|Number=Sing	29	nmod	_	_
+33	Jornal	Jornal	PROPN	_	Gender=Masc|Number=Sing	28	obl	_	_
 34-35	do	_	_	_	_	_	_	_	_
 34	de	de	ADP	_	_	36	case	_	_
 35	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	36	det	_	_
-36	Brasil	Brasil	PROPN	_	Number=Sing	33	nmod	_	SpaceAfter=No
+36	Brasil	Brasil	PROPN	_	Gender=Masc|Number=Sing	33	nmod	_	SpaceAfter=No
 37	»	»	PUNCT	_	_	33	punct	_	SpaceAfter=No
-38	.	.	PUNCT	_	_	8	punct	_	_
+38	.	.	PUNCT	_	_	8	punct	_	SpacesAfter=\n
 
 # sent_id = 30
 # text = Para tanto, convidou Ismar Cardona para ser o editor de Economia, que para estruturar a editoria convidou vários repórteres, entre eles George Vidor.
 1	Para	para	ADP	_	_	2	case	_	_
-2	tanto	tanto	PRON	_	Gender=Masc|Number=Sing	4	obl	_	SpaceAfter=No
+2	tanto	tanto	ADV	_	_	4	obl	_	SpaceAfter=No
 3	,	,	PUNCT	_	_	2	punct	_	_
 4	convidou	convidar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 5	Ismar	Ismar	PROPN	_	Gender=Masc|Number=Sing	4	nsubj	_	_
 6	Cardona	Cardona	PROPN	_	Number=Sing	5	flat:name	_	_
-7	para	para	ADP	_	_	10	mark	_	_
-8	ser	ser	AUX	_	VerbForm=Inf	10	cop	_	_
+7	para	para	SCONJ	_	_	8	mark	_	_
+8	ser	ser	VERB	_	VerbForm=Inf	4	advcl	_	_
 9	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	10	det	_	_
-10	editor	editor	NOUN	_	Gender=Masc|Number=Sing	4	advcl	_	_
+10	editor	editor	NOUN	_	Gender=Masc|Number=Sing	8	obj	_	_
 11	de	de	ADP	_	_	12	case	_	_
-12	Economia	Economia	PROPN	_	_	10	nmod	_	SpaceAfter=No
-13	,	,	PUNCT	_	_	10	punct	_	_
-14	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	19	nsubj	_	_
-15	para	para	ADP	_	_	16	mark	_	_
-16	estruturar	estruturar	VERB	_	VerbForm=Inf	19	advcl	_	_
+12	Economia	Economia	PROPN	_	Gender=Masc|Number=Sing	10	nmod	_	SpaceAfter=No
+13	,	,	PUNCT	_	_	16	punct	_	_
+14	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	16	nsubj	_	_
+15	para	para	SCONJ	_	_	16	mark	_	_
+16	estruturar	estruturar	VERB	_	VerbForm=Inf	10	acl:relcl	_	_
 17	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	18	det	_	_
 18	editoria	editoria	NOUN	_	Gender=Fem|Number=Sing	16	obj	_	_
-19	convidou	convidar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	10	acl:relcl	_	_
+19	convidou	convidar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	16	conj	_	_
 20	vários	vários	DET	_	Gender=Masc|Number=Plur|PronType=Ind	21	det	_	_
-21	repórteres	repórteres	NOUN	_	Gender=Masc|Number=Plur	19	obj	_	SpaceAfter=No
-22	,	,	PUNCT	_	_	24	punct	_	_
+21	repórteres	repórter	NOUN	_	Gender=Masc|Number=Plur	19	obj	_	SpaceAfter=No
+22	,	,	PUNCT	_	_	19	punct	_	_
 23	entre	entre	ADP	_	_	24	case	_	_
-24	eles	eles	PRON	_	Gender=Masc|Number=Plur|Person=3|PronType=Prs	21	nmod	_	_
+24	eles	eles	PRON	_	Gender=Masc|Number=Plur|Person=3|PronType=Prs	19	obl	_	_
 25	George	George	PROPN	_	Gender=Masc|Number=Sing	24	appos	_	_
 26	Vidor	Vidor	PROPN	_	Number=Sing	25	flat:name	_	SpaceAfter=No
-27	.	.	PUNCT	_	_	4	punct	_	_
+27	.	.	PUNCT	_	_	4	punct	_	SpacesAfter=\n
 
 # sent_id = 31
 # text = Ao aceitar o convite para trabalhar no jornal, Vidor encontrou sérias restrições por parte de seus amigos, já que «O Globo» era considerado politicamente direitista.
 1-2	Ao	_	_	_	_	_	_	_	_
-1	A	a	ADP	_	_	3	mark	_	_
+1	A	a	SCONJ	_	_	3	mark	_	_
 2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
 3	aceitar	aceitar	VERB	_	VerbForm=Inf	13	advcl	_	_
 4	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	5	det	_	_
 5	convite	convite	NOUN	_	Gender=Masc|Number=Sing	3	obj	_	_
-6	para	para	ADP	_	_	7	mark	_	_
+6	para	para	SCONJ	_	_	7	mark	_	_
 7	trabalhar	trabalhar	VERB	_	VerbForm=Inf	5	acl	_	_
 8-9	no	_	_	_	_	_	_	_	_
 8	em	em	ADP	_	_	10	case	_	_
 9	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	10	det	_	_
 10	jornal	jornal	NOUN	_	Gender=Masc|Number=Sing	7	obl	_	SpaceAfter=No
-11	,	,	PUNCT	_	_	7	punct	_	_
-12	Vidor	Vidor	PROPN	_	Gender=Fem|Number=Sing	13	nsubj	_	_
+11	,	,	PUNCT	_	_	3	punct	_	_
+12	Vidor	Vidor	PROPN	_	Gender=Masc|Number=Sing	13	nsubj	_	_
 13	encontrou	encontrar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
-14	sérias	sério	DET	_	Gender=Fem|Number=Plur	15	det	_	_
+14	sérias	sérios	DET	_	Gender=Fem|Number=Plur|PronType=Ind	15	det	_	_
 15	restrições	restrição	NOUN	_	Gender=Fem|Number=Plur	13	obj	_	_
 16	por	por	ADP	_	_	17	case	_	_
-17	parte	parte	NOUN	_	_	13	obl	_	_
+17	parte	parte	NOUN	_	Gender=Fem|Number=Sing	15	nmod	_	_
 18	de	de	ADP	_	_	20	case	_	_
 19	seus	seu	DET	_	Gender=Masc|Number=Plur|PronType=Prs	20	det	_	_
 20	amigos	amigo	NOUN	_	Gender=Masc|Number=Plur	17	nmod	_	SpaceAfter=No
@@ -1165,53 +1156,52 @@
 22	já	já	ADV	_	_	29	mark	_	_
 23	que	que	SCONJ	_	_	22	fixed	_	_
 24	«	«	PUNCT	_	_	25	punct	_	SpaceAfter=No
-25	O	O	DET	_	Gender=Masc|Number=Sing|PronType=Art	29	nsubj:pass	_	_
+25	O	O	PROPN	_	Gender=Masc|Number=Sing|PronType=Art	29	nsubj:pass	_	_
 26	Globo	Globo	PROPN	_	Number=Sing	25	flat:name	_	SpaceAfter=No
 27	»	»	PUNCT	_	_	25	punct	_	_
 28	era	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	29	aux:pass	_	_
 29	considerado	considerar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	13	advcl	_	_
 30	politicamente	politicamente	ADV	_	_	31	advmod	_	_
 31	direitista	direitista	ADJ	_	Gender=Masc|Number=Sing	29	xcomp	_	SpaceAfter=No
-32	.	.	PUNCT	_	_	13	punct	_	_
+32	.	.	PUNCT	_	_	13	punct	_	SpacesAfter=\n
 
 # sent_id = 32
 # text = O que não sabiam é que Cardona era ligado ao Partido Comunista.
-1	O	o	PRON	_	Gender=Masc|Number=Sing|PronType=Dem	2	det	_	_
+1	O	o	PRON	_	Gender=Masc|Number=Sing|PronType=Dem	0	root	_	_
 2	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	4	nsubj	_	_
 3	não	não	ADV	_	Polarity=Neg	4	advmod	_	_
-4	sabiam	saber	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	0	root	_	_
-5	é	é	ADV	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	advmod	_	_
+4	sabiam	saber	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	1	acl:relcl	_	_
+5	é	é	SCONJ	_	_	9	mark	_	_
 6	que	que	SCONJ	_	_	9	mark	_	_
-7	Cardona	Cardona	PROPN	_	Gender=Masc|Number=Sing	9	nsubj:pass	_	_
-8	era	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	9	aux:pass	_	_
-9	ligado	ligar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	4	ccomp	_	_
+7	Cardona	Cardona	PROPN	_	Gender=Masc|Number=Sing	9	nsubj	_	_
+8	era	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	9	cop	_	_
+9	ligado	ligar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	4	xcomp	_	_
 10-11	ao	_	_	_	_	_	_	_	_
 10	a	a	ADP	_	_	12	case	_	_
 11	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	12	det	_	_
 12	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	9	obl	_	_
 13	Comunista	Comunista	PROPN	_	Number=Sing	12	flat:name	_	SpaceAfter=No
-14	.	.	PUNCT	_	_	4	punct	_	_
+14	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
 
-# newpar
 # sent_id = 33
 # text = O primeiro caderno econômico que fizeram em «O Globo» chamava-se «Panorama Econômico», com 170 páginas, que em pouco tempo se tornou um espaço de discussões econômicas, questões de tecnologia nacional, e temas relacionados à conduta da política econômica.
 1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
 2	primeiro	primeiro	ADJ	_	Gender=Masc|Number=Sing|NumType=Ord	3	amod	_	_
 3	caderno	caderno	NOUN	_	Gender=Masc|Number=Sing	12	nsubj	_	_
 4	econômico	econômico	ADJ	_	Gender=Masc|Number=Sing	3	amod	_	_
-5	que	que	PRON	_	Gender=Masc|Number=Plur|PronType=Rel	6	nsubj	_	_
-6	fizeram	fazer	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	3	acl:relcl	_	_
+5	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	6	nsubj	_	_
+6	fizeram	fazer	VERB	_	Mood=Ind|Number=Plur|Person=3|VerbForm=Fin	3	acl:relcl	_	_
 7	em	em	ADP	_	_	9	case	_	_
 8	«	«	PUNCT	_	_	9	punct	_	SpaceAfter=No
-9	O	O	DET	_	Gender=Masc|Number=Sing|PronType=Art	6	obl	_	_
+9	O	O	PROPN	_	Gender=Masc|Number=Sing|PronType=Art	6	obl	_	_
 10	Globo	Globo	PROPN	_	Number=Sing	9	flat:name	_	SpaceAfter=No
 11	»	»	PUNCT	_	_	9	punct	_	_
 12-13	chamava-se	_	_	_	_	_	_	_	_
 12	chamava	chamar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	0	root	_	_
 13	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	12	expl	_	_
 14	«	«	PUNCT	_	_	15	punct	_	SpaceAfter=No
-15	Panorama	panorama	PROPN	_	Gender=Masc|Number=Sing	12	xcomp	_	_
-16	Econômico	econômico	PROPN	_	Number=Sing	15	flat:name	_	SpaceAfter=No
+15	Panorama	panorama	PROPN	_	Gender=Masc|Number=Sing	12	obj	_	_
+16	Econômico	Econômico	PROPN	_	Number=Sing	15	flat:name	_	SpaceAfter=No
 17	»	»	PUNCT	_	_	15	punct	_	SpaceAfter=No
 18	,	,	PUNCT	_	_	21	punct	_	_
 19	com	com	ADP	_	_	21	case	_	_
@@ -1225,29 +1215,29 @@
 27	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	28	expl	_	_
 28	tornou	tornar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	15	acl:relcl	_	_
 29	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	30	det	_	_
-30	espaço	espaço	NOUN	_	Gender=Masc|Number=Sing	28	xcomp	_	_
+30	espaço	espaço	NOUN	_	Gender=Masc|Number=Sing	28	obj	_	_
 31	de	de	ADP	_	_	32	case	_	_
-32	discussões	discussõ	NOUN	_	Gender=Fem|Number=Plur	30	nmod	_	_
+32	discussões	discussão	NOUN	_	Gender=Fem|Number=Plur	30	nmod	_	_
 33	econômicas	econômico	ADJ	_	Gender=Fem|Number=Plur	32	amod	_	SpaceAfter=No
 34	,	,	PUNCT	_	_	35	punct	_	_
-35	questões	questão	NOUN	_	Gender=Fem|Number=Plur	32	conj	_	_
+35	questões	questão	NOUN	_	Gender=Fem|Number=Plur	30	conj	_	_
 36	de	de	ADP	_	_	37	case	_	_
 37	tecnologia	tecnologia	NOUN	_	Gender=Fem|Number=Sing	35	nmod	_	_
 38	nacional	nacional	ADJ	_	Gender=Fem|Number=Sing	37	amod	_	SpaceAfter=No
-39	,	,	PUNCT	_	_	41	punct	_	_
+39	,	,	PUNCT	_	_	35	punct	_	_
 40	e	e	CCONJ	_	_	41	cc	_	_
 41	temas	tema	NOUN	_	Gender=Masc|Number=Plur	30	conj	_	_
 42	relacionados	relacionar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part	41	acl	_	_
 43-44	à	_	_	_	_	_	_	_	_
 43	a	a	ADP	_	_	45	case	_	_
 44	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	45	det	_	_
-45	conduta	conduta	NOUN	_	Gender=Fem|Number=Sing	42	obl	_	_
+45	conduta	conduta	NOUN	_	Gender=Fem|Number=Sing	42	obj	_	_
 46-47	da	_	_	_	_	_	_	_	_
 46	de	de	ADP	_	_	48	case	_	_
 47	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	48	det	_	_
 48	política	política	NOUN	_	Gender=Fem|Number=Sing	45	nmod	_	_
 49	econômica	econômico	ADJ	_	Gender=Fem|Number=Sing	48	amod	_	SpaceAfter=No
-50	.	.	PUNCT	_	_	12	punct	_	_
+50	.	.	PUNCT	_	_	12	punct	_	SpacesAfter=\n
 
 # sent_id = 34
 # text = Para sua elaboração, a equipe ouvia tanto os economistas opositores do regime militar como aqueles que apoiavam a política do governo.
@@ -1257,18 +1247,18 @@
 4	,	,	PUNCT	_	_	3	punct	_	_
 5	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	6	det	_	_
 6	equipe	equipe	NOUN	_	Gender=Fem|Number=Sing	7	nsubj	_	_
-7	ouvia	ouviar	VERB	_	Gender=Fem|Number=Sing	0	root	_	_
+7	ouvia	ouver	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	0	root	_	_
 8	tanto	tanto	ADV	_	_	7	advmod	_	_
-9	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	11	det	_	_
-10	economistas	economista	ADJ	_	Gender=Masc|Number=Plur	11	amod	_	_
-11	opositores	opositor	NOUN	_	Gender=Masc|Number=Plur	7	obj	_	_
+9	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	10	det	_	_
+10	economistas	economista	NOUN	_	Gender=Masc|Number=Plur	15	nsubj	_	_
+11	opositores	opositor	ADJ	_	Gender=Masc|Number=Plur	10	amod	_	_
 12-13	do	_	_	_	_	_	_	_	_
 12	de	de	ADP	_	_	14	case	_	_
 13	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	14	det	_	_
-14	regime	regime	NOUN	_	Gender=Masc|Number=Sing	11	nmod	_	_
-15	militar	militar	ADJ	_	Gender=Masc|Number=Sing	14	amod	_	_
+14	regime	regime	NOUN	_	Gender=Masc|Number=Sing	10	nmod	_	_
+15	militar	militar	VERB	_	Number=Sing|Person=3|VerbForm=Inf	7	xcomp	_	_
 16	como	como	ADP	_	_	17	case	_	_
-17	aqueles	aquele	PRON	_	Gender=Masc|Number=Plur|PronType=Dem	14	det	_	_
+17	aqueles	aquele	PRON	_	Gender=Masc|Number=Plur|PronType=Dem	15	xcomp	_	_
 18	que	que	PRON	_	Gender=Masc|Number=Plur|PronType=Rel	19	nsubj	_	_
 19	apoiavam	apoiar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	17	acl:relcl	_	_
 20	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	21	det	_	_
@@ -1277,7 +1267,7 @@
 22	de	de	ADP	_	_	24	case	_	_
 23	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	24	det	_	_
 24	governo	governo	NOUN	_	Gender=Masc|Number=Sing	21	nmod	_	SpaceAfter=No
-25	.	.	PUNCT	_	_	7	punct	_	_
+25	.	.	PUNCT	_	_	7	punct	_	SpacesAfter=\n
 
 # sent_id = 35
 # text = Em pouco tempo, já estavam fazendo um suplemento muito mais à esquerda do que o «Jornal do Brasil», que passou a ser lido por um público que antes era contrário ao jornal.
@@ -1289,7 +1279,7 @@
 6	estavam	estar	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	7	aux	_	_
 7	fazendo	fazer	VERB	_	VerbForm=Ger	0	root	_	_
 8	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	9	det	_	_
-9	suplemento	suplemento	NOUN	_	Gender=Masc|Number=Sing	7	nsubj	_	_
+9	suplemento	suplemento	NOUN	_	Gender=Masc|Number=Sing	7	obj	_	_
 10	muito	muito	ADV	_	_	11	advmod	_	_
 11	mais	mais	ADV	_	_	14	advmod	_	_
 12-13	à	_	_	_	_	_	_	_	_
@@ -1297,23 +1287,23 @@
 13	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	14	det	_	_
 14	esquerda	esquerda	NOUN	_	Gender=Fem|Number=Sing	9	nmod	_	_
 15-16	do	_	_	_	_	_	_	_	_
-15	de	de	ADP	_	_	16	case	_	_
-16	o	o	PRON	_	Gender=Masc|Number=Sing|PronType=Dem	14	nmod	_	_
-17	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	16	fixed	_	_
+15	de	de	ADP	_	_	20	case	_	_
+16	o	o	PRON	_	Gender=Masc|Number=Sing|PronType=Dem	15	fixed	_	_
+17	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	15	fixed	_	_
 18	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	20	det	_	_
 19	«	«	PUNCT	_	_	20	punct	_	SpaceAfter=No
-20	Jornal	Jornal	PROPN	_	Gender=Masc|Number=Sing	16	appos	_	_
+20	Jornal	Jornal	PROPN	_	Gender=Masc|Number=Sing	14	nmod	_	_
 21-22	do	_	_	_	_	_	_	_	_
 21	de	de	ADP	_	_	23	case	_	_
 22	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	23	det	_	_
 23	Brasil	Brasil	PROPN	_	Number=Sing	20	nmod	_	SpaceAfter=No
 24	»	»	PUNCT	_	_	20	punct	_	SpaceAfter=No
-25	,	,	PUNCT	_	_	16	punct	_	_
+25	,	,	PUNCT	_	_	14	punct	_	_
 26	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	30	nsubj:pass	_	_
-27	passou	passar	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	30	aux	_	_
-28	a	a	ADP	_	_	30	obl	_	_
+27	passou	passar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	14	acl:relcl	_	_
+28	a	a	SCONJ	_	_	30	mark	_	_
 29	ser	ser	AUX	_	VerbForm=Inf	30	aux:pass	_	_
-30	lido	ler	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	20	acl:relcl	_	_
+30	lido	ler	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	27	xcomp	_	_
 31	por	por	ADP	_	_	33	case	_	_
 32	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	33	det	_	_
 33	público	público	NOUN	_	Gender=Masc|Number=Sing	30	obl:agent	_	_
@@ -1325,9 +1315,8 @@
 38	a	a	ADP	_	_	40	case	_	_
 39	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	40	det	_	_
 40	jornal	jornal	NOUN	_	Gender=Masc|Number=Sing	37	obl	_	SpaceAfter=No
-41	.	.	PUNCT	_	_	7	punct	_	_
+41	.	.	PUNCT	_	_	7	punct	_	SpacesAfter=\n
 
-# newpar
 # sent_id = 36
 # text = Em 1976 foi designado para a coluna “Panorama Econômico”, escrita em parceria com o jornalista Luiz Alberto Bettencourt.
 1	Em	em	ADP	_	_	2	case	_	_
@@ -1338,20 +1327,20 @@
 6	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	7	det	_	_
 7	coluna	coluna	NOUN	_	Gender=Fem|Number=Sing	4	obl	_	_
 8	“	“	PUNCT	_	_	9	punct	_	SpaceAfter=No
-9	Panorama	panorama	PROPN	_	Gender=Masc|Number=Sing	7	appos	_	_
-10	Econômico	econômico	PROPN	_	Number=Sing	9	flat:name	_	SpaceAfter=No
-11	”	”	PUNCT	_	_	9	punct	_	SpaceAfter=No
+9	Panorama	panorama	PROPN	_	Gender=Fem|Number=Sing	7	appos	_	_
+10	Econômico	Econômico	PROPN	_	Number=Sing	9	flat:name	_	SpaceAfter=No
+11	”	”	PUNCT	_	_	22	punct	_	SpaceAfter=No
 12	,	,	PUNCT	_	_	13	punct	_	_
 13	escrita	escrever	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	9	acl	_	_
 14	em	em	ADP	_	_	15	case	_	_
 15	parceria	parceria	NOUN	_	Gender=Fem|Number=Sing	13	obl	_	_
 16	com	com	ADP	_	_	18	case	_	_
 17	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	18	det	_	_
-18	jornalista	jornalista	NOUN	_	Gender=Masc|Number=Sing	15	nmod	_	_
+18	jornalista	jornalista	NOUN	_	Gender=Masc|Number=Sing	13	obj	_	_
 19	Luiz	Luiz	PROPN	_	Gender=Masc|Number=Sing	18	appos	_	_
 20	Alberto	Alberto	PROPN	_	Number=Sing	19	flat:name	_	_
 21	Bettencourt	Bettencourt	PROPN	_	Number=Sing	19	flat:name	_	SpaceAfter=No
-22	.	.	PUNCT	_	_	9	punct	_	_
+22	.	.	PUNCT	_	_	9	punct	_	SpacesAfter=\n
 
 # sent_id = 37
 # text = Três anos depois, já assumia a subeditoria de Economia.
@@ -1362,19 +1351,18 @@
 5	já	já	ADV	_	_	6	advmod	_	_
 6	assumia	assumir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	0	root	_	_
 7	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	8	det	_	_
-8	subeditoria	subeditoria	NOUN	_	Gender=Fem|Number=Sing	6	nsubj	_	_
+8	subeditoria	subeditoria	NOUN	_	Gender=Fem|Number=Sing	6	obj	_	_
 9	de	de	ADP	_	_	10	case	_	_
-10	Economia	Economia	PROPN	_	_	8	nmod	_	SpaceAfter=No
-11	.	.	PUNCT	_	_	6	punct	_	_
+10	Economia	Economia	NOUN	_	Gender=Fem|Number=Sing	8	nmod	_	SpaceAfter=No
+11	.	.	PUNCT	_	_	6	punct	_	SpacesAfter=\n
 
-# newpar
 # sent_id = 38
 # text = Em 1981, contudo, Ismar Cardona se afastou do jornal, por desentendimentos com Evandro Carlos de Andrade, que indicou Vidor como novo editor do caderno econômico.
 1	Em	em	ADP	_	_	2	case	_	_
 2	1981	1981	NUM	_	NumType=Card	9	obl	_	SpaceAfter=No
 3	,	,	PUNCT	_	_	2	punct	_	_
-4	contudo	contudo	NOUN	_	_	9	obl	_	SpaceAfter=No
-5	,	,	PUNCT	_	_	4	punct	_	_
+4	contudo	contudo	CCONJ	_	_	9	cc	_	SpaceAfter=No
+5	,	,	PUNCT	_	_	6	punct	_	_
 6	Ismar	Ismar	PROPN	_	Gender=Masc|Number=Sing	9	nsubj	_	_
 7	Cardona	Cardona	PROPN	_	Number=Sing	6	flat:name	_	_
 8	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	9	expl	_	_
@@ -1382,28 +1370,28 @@
 10-11	do	_	_	_	_	_	_	_	_
 10	de	de	ADP	_	_	12	case	_	_
 11	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	12	det	_	_
-12	jornal	jornal	NOUN	_	Gender=Masc|Number=Sing	9	obl	_	SpaceAfter=No
-13	,	,	PUNCT	_	_	9	punct	_	_
+12	jornal	jornal	NOUN	_	Gender=Masc|Number=Sing	9	obj	_	SpaceAfter=No
+13	,	,	PUNCT	_	_	15	punct	_	_
 14	por	por	ADP	_	_	15	case	_	_
-15	desentendimentos	desentendimento	NOUN	_	Gender=Masc|Number=Plur	9	obl	_	_
+15	desentendimentos	desentendimento	NOUN	_	Gender=Masc|Number=Plur	12	nmod	_	_
 16	com	com	ADP	_	_	17	case	_	_
 17	Evandro	Evandro	PROPN	_	Gender=Masc|Number=Sing	15	nmod	_	_
 18	Carlos	Carlos	PROPN	_	Number=Sing	17	flat:name	_	_
 19	de	de	ADP	_	_	20	case	_	_
 20	Andrade	Andrade	PROPN	_	Number=Sing	17	nmod	_	SpaceAfter=No
-21	,	,	PUNCT	_	_	9	punct	_	_
+21	,	,	PUNCT	_	_	15	punct	_	_
 22	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	23	nsubj	_	_
-23	indicou	indicar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	15	acl:relcl	_	_
-24	Vidor	Vidor	PROPN	_	Gender=Fem|Number=Sing	23	obj	_	_
+23	indicou	indicar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	17	acl:relcl	_	_
+24	Vidor	Vidor	PROPN	_	Gender=Masc|Number=Sing	23	obj	_	_
 25	como	como	ADP	_	_	27	case	_	_
 26	novo	novo	ADJ	_	Gender=Masc|Number=Sing	27	amod	_	_
-27	editor	editor	NOUN	_	Gender=Masc|Number=Sing	23	xcomp	_	_
+27	editor	editor	NOUN	_	Gender=Masc|Number=Sing	24	nmod	_	_
 28-29	do	_	_	_	_	_	_	_	_
 28	de	de	ADP	_	_	30	case	_	_
 29	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	30	det	_	_
 30	caderno	caderno	NOUN	_	Gender=Masc|Number=Sing	27	nmod	_	_
 31	econômico	econômico	ADJ	_	Gender=Masc|Number=Sing	30	amod	_	SpaceAfter=No
-32	.	.	PUNCT	_	_	9	punct	_	_
+32	.	.	PUNCT	_	_	9	punct	_	SpacesAfter=\n
 
 # sent_id = 39
 # text = Como tal, foi o responsável pela criação, em 1982, da primeira página de informática do jornal, além da página de «Indicadores Financeiros» e a coluna «Marcas e patentes».
@@ -1412,20 +1400,20 @@
 3	,	,	PUNCT	_	_	2	punct	_	_
 4	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	cop	_	_
 5	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	6	det	_	_
-6	responsável	responsável	ADJ	_	Gender=Masc|Number=Sing	0	root	_	_
+6	responsável	responsável	NOUN	_	Gender=Masc|Number=Sing	0	root	_	_
 7-8	pela	_	_	_	_	_	_	_	_
 7	por	por	ADP	_	_	9	case	_	_
 8	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	9	det	_	_
-9	criação	criação	NOUN	_	Gender=Fem|Number=Sing	6	obl	_	SpaceAfter=No
-10	,	,	PUNCT	_	_	6	punct	_	_
+9	criação	criação	NOUN	_	Gender=Fem|Number=Sing	6	nmod	_	SpaceAfter=No
+10	,	,	PUNCT	_	_	12	punct	_	_
 11	em	em	ADP	_	_	12	case	_	_
-12	1982	1982	NUM	_	NumType=Card	6	obl	_	SpaceAfter=No
-13	,	,	PUNCT	_	_	6	punct	_	_
+12	1982	1982	NUM	_	NumType=Card	9	nmod	_	SpaceAfter=No
+13	,	,	PUNCT	_	_	12	punct	_	_
 14-15	da	_	_	_	_	_	_	_	_
 14	de	de	ADP	_	_	17	case	_	_
 15	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	17	det	_	_
 16	primeira	primeiro	ADJ	_	Gender=Fem|Number=Sing|NumType=Ord	17	amod	_	_
-17	página	página	NOUN	_	Gender=Fem|Number=Sing	6	obl	_	_
+17	página	página	NOUN	_	Gender=Fem|Number=Sing	6	nmod	_	_
 18	de	de	ADP	_	_	19	case	_	_
 19	informática	informática	NOUN	_	Gender=Fem|Number=Sing	17	nmod	_	_
 20-21	do	_	_	_	_	_	_	_	_
@@ -1433,60 +1421,60 @@
 21	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	22	det	_	_
 22	jornal	jornal	NOUN	_	Gender=Masc|Number=Sing	19	nmod	_	SpaceAfter=No
 23	,	,	PUNCT	_	_	6	punct	_	_
-24	além	além	ADV	_	_	6	advmod	_	_
+24	além	além	ADV	_	_	27	cc	_	_
 25-26	da	_	_	_	_	_	_	_	_
 25	de	de	ADP	_	_	27	case	_	_
 26	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	27	det	_	_
-27	página	página	NOUN	_	Gender=Fem|Number=Sing	24	obl	_	_
+27	página	página	NOUN	_	Gender=Fem|Number=Sing	6	nmod	_	_
 28	de	de	ADP	_	_	30	case	_	_
 29	«	«	PUNCT	_	_	30	punct	_	SpaceAfter=No
 30	Indicadores	indicadores	PROPN	_	Gender=Masc|Number=Plur	27	nmod	_	_
-31	Financeiros	financeiros	PROPN	_	Gender=Masc|Number=Plur	30	flat:name	_	SpaceAfter=No
-32	»	»	PUNCT	_	_	35	punct	_	_
+31	Financeiros	financeiros	PROPN	_	Number=Sing	30	flat:name	_	SpaceAfter=No
+32	»	»	PUNCT	_	_	30	punct	_	_
 33	e	e	CCONJ	_	_	35	cc	_	_
 34	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	35	det	_	_
-35	coluna	coluna	NOUN	_	Gender=Fem|Number=Sing	30	conj	_	_
+35	coluna	coluna	NOUN	_	Gender=Fem|Number=Sing	27	conj	_	_
 36	«	«	PUNCT	_	_	37	punct	_	SpaceAfter=No
-37	Marcas	marcas	PROPN	_	Gender=Fem|Number=Plur	35	appos	_	_
+37	Marcas	marca	ADJ	_	Gender=Fem|Number=Plur	35	amod	_	_
 38	e	e	CCONJ	_	_	39	cc	_	_
-39	patentes	patente	NOUN	_	Gender=Fem|Number=Plur	37	conj	_	SpaceAfter=No
+39	patentes	patente	ADJ	_	Gender=Fem|Number=Plur	37	conj	_	SpaceAfter=No
 40	»	»	PUNCT	_	_	37	punct	_	SpaceAfter=No
-41	.	.	PUNCT	_	_	6	punct	_	_
+41	.	.	PUNCT	_	_	6	punct	_	SpacesAfter=\n
 
 # sent_id = 40
 # text = Sua permanência na função, no entanto, durou pouco tempo: em agosto deste ano, no momento em que o país vivia a crise da dívida externa, Vidor fez uma matéria mostrando que Delfim Neto, então ministro do Planejamento, almoçara em Paris em um restaurante pagando 50 dólares por pessoa.
 1	Sua	seu	DET	_	Gender=Fem|Number=Sing|PronType=Prs	2	det	_	_
-2	permanência	permanência	NOUN	_	Gender=Fem|Number=Sing	11	nsubj	_	_
+2	permanência	permanência	NOUN	_	Gender=Fem|Number=Sing	0	root	_	_
 3-4	na	_	_	_	_	_	_	_	_
 3	em	em	ADP	_	_	5	case	_	_
 4	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	5	det	_	_
 5	função	função	NOUN	_	Gender=Fem|Number=Sing	2	nmod	_	SpaceAfter=No
 6	,	,	PUNCT	_	_	9	punct	_	_
 7-8	no	_	_	_	_	_	_	_	_
-7	em	em	ADP	_	_	9	case	_	_
-8	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	9	det	_	_
-9	entanto	entanto	NOUN	_	Gender=Masc|Number=Sing	5	nmod	_	SpaceAfter=No
+7	em	em	ADP	_	_	11	cc	_	_
+8	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	7	fixed	_	_
+9	entanto	entanto	NOUN	_	Gender=Masc|Number=Sing	7	fixed	_	SpaceAfter=No
 10	,	,	PUNCT	_	_	9	punct	_	_
-11	durou	durar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	37	advcl	_	_
+11	durou	durar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	conj	_	_
 12	pouco	pouco	DET	_	Gender=Masc|Number=Sing|PronType=Ind	13	det	_	_
-13	tempo	tempo	NOUN	_	Gender=Masc|Number=Sing	11	obl	_	SpaceAfter=No
-14	:	:	PUNCT	_	_	11	punct	_	_
+13	tempo	tempo	NOUN	_	Gender=Masc|Number=Sing	11	obj	_	SpaceAfter=No
+14	:	:	PUNCT	_	_	37	punct	_	_
 15	em	em	ADP	_	_	16	case	_	_
-16	agosto	agosto	NOUN	_	Gender=Masc|Number=Sing	11	obl	_	_
+16	agosto	agosto	NOUN	_	Gender=Masc|Number=Sing	37	obl	_	_
 17-18	deste	_	_	_	_	_	_	_	_
 17	de	de	ADP	_	_	19	case	_	_
 18	este	este	DET	_	Gender=Masc|Number=Sing|PronType=Dem	19	det	_	_
 19	ano	ano	NOUN	_	Gender=Masc|Number=Sing	16	nmod	_	SpaceAfter=No
-20	,	,	PUNCT	_	_	11	punct	_	_
+20	,	,	PUNCT	_	_	23	punct	_	_
 21-22	no	_	_	_	_	_	_	_	_
 21	em	em	ADP	_	_	23	case	_	_
 22	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	23	det	_	_
-23	momento	momento	NOUN	_	Gender=Masc|Number=Sing	37	obl	_	_
+23	momento	momento	NOUN	_	Gender=Masc|Number=Sing	16	conj	_	_
 24	em	em	ADP	_	_	25	case	_	_
 25	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	28	obl	_	_
 26	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	27	det	_	_
 27	país	país	NOUN	_	Gender=Masc|Number=Sing	28	nsubj	_	_
-28	vivia	viver	VERB	_	Mood=Ind|Number=Sing|Person=1|Tense=Imp|VerbForm=Fin	23	acl:relcl	_	_
+28	vivia	viver	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	23	acl:relcl	_	_
 29	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	30	det	_	_
 30	crise	crise	NOUN	_	Gender=Fem|Number=Sing	28	obj	_	_
 31-32	da	_	_	_	_	_	_	_	_
@@ -1494,24 +1482,24 @@
 32	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	33	det	_	_
 33	dívida	dívida	NOUN	_	Gender=Fem|Number=Sing	30	nmod	_	_
 34	externa	externo	ADJ	_	Gender=Fem|Number=Sing	33	amod	_	SpaceAfter=No
-35	,	,	PUNCT	_	_	28	punct	_	_
-36	Vidor	Vidor	PROPN	_	Gender=Fem|Number=Sing	37	nsubj	_	_
-37	fez	fazer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+35	,	,	PUNCT	_	_	16	punct	_	_
+36	Vidor	Vidor	PROPN	_	Gender=Masc|Number=Sing	37	nsubj	_	_
+37	fez	fazer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	11	advcl	_	_
 38	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	39	det	_	_
 39	matéria	matéria	NOUN	_	Gender=Fem|Number=Sing	37	obj	_	_
-40	mostrando	mostrar	VERB	_	VerbForm=Ger	39	acl	_	_
+40	mostrando	mostrar	VERB	_	VerbForm=Ger	37	advcl	_	_
 41	que	que	SCONJ	_	_	51	mark	_	_
-42	Delfim	Delfim	PROPN	_	Number=Sing	51	nsubj	_	_
-43	Neto	neto	PROPN	_	Number=Sing	42	flat:name	_	SpaceAfter=No
-44	,	,	PUNCT	_	_	51	punct	_	_
-45	então	então	ADV	_	_	51	advmod	_	_
-46	ministro	ministro	NOUN	_	Gender=Masc|Number=Sing	51	nsubj	_	_
+42	Delfim	Delfim	PROPN	_	Gender=Masc|Number=Sing	51	nsubj	_	_
+43	Neto	Neto	PROPN	_	Number=Sing	42	flat:name	_	SpaceAfter=No
+44	,	,	PUNCT	_	_	46	punct	_	_
+45	então	então	ADV	_	_	46	advmod	_	_
+46	ministro	ministro	NOUN	_	Gender=Masc|Number=Sing	42	appos	_	_
 47-48	do	_	_	_	_	_	_	_	_
 47	de	de	ADP	_	_	49	case	_	_
 48	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	49	det	_	_
-49	Planejamento	planejamento	NOUN	_	Number=Sing	46	nmod	_	SpaceAfter=No
+49	Planejamento	Planejamento	PROPN	_	Gender=Masc|Number=Sing	46	nmod	_	SpaceAfter=No
 50	,	,	PUNCT	_	_	46	punct	_	_
-51	almoçara	almoçar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pqp|VerbForm=Fin	40	ccomp	_	_
+51	almoçara	almoçar	VERB	_	Mood=Ind|Number=Sing|Tense=Pqp|VerbForm=Fin	40	ccomp	_	_
 52	em	em	ADP	_	_	53	case	_	_
 53	Paris	Paris	PROPN	_	Gender=Masc|Number=Sing	51	obl	_	_
 54	em	em	ADP	_	_	56	case	_	_
@@ -1521,8 +1509,8 @@
 58	50	50	NUM	_	NumType=Card	59	nummod	_	_
 59	dólares	dólar	NOUN	_	Gender=Masc|Number=Plur	57	obj	_	_
 60	por	por	ADP	_	_	61	case	_	_
-61	pessoa	pessoa	NOUN	_	Gender=Fem|Number=Sing	59	nmod	_	SpaceAfter=No
-62	.	.	PUNCT	_	_	37	punct	_	_
+61	pessoa	pessoa	NOUN	_	Gender=Fem|Number=Sing	57	obl	_	SpaceAfter=No
+62	.	.	PUNCT	_	_	2	punct	_	SpacesAfter=\n
 
 # sent_id = 41
 # text = Essa matéria levou à sua demissão, pois o jornalista não consultara a Evandro sobre a pertinência de sua publicação.
@@ -1533,42 +1521,41 @@
 4	a	a	ADP	_	_	7	case	_	_
 5	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	7	det	_	_
 6	sua	seu	DET	_	Gender=Fem|Number=Sing|PronType=Prs	7	det	_	_
-7	demissão	demissão	NOUN	_	Gender=Fem|Number=Sing	3	obl	_	SpaceAfter=No
+7	demissão	demissão	NOUN	_	Gender=Fem|Number=Sing	3	obj	_	SpaceAfter=No
 8	,	,	PUNCT	_	_	3	punct	_	_
-9	pois	pois	SCONJ	_	_	13	advmod	_	_
+9	pois	pois	SCONJ	_	_	13	mark	_	_
 10	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	_	_
 11	jornalista	jornalista	NOUN	_	Gender=Masc|Number=Sing	13	nsubj	_	_
 12	não	não	ADV	_	Polarity=Neg	13	advmod	_	_
 13	consultara	consultar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pqp|VerbForm=Fin	3	advcl	_	_
-14	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	15	det	_	_
-15	Evandro	Evandro	PROPN	_	Gender=Masc|Number=Sing	13	obj	_	_
+14	a	a	ADP	_	_	15	case	_	_
+15	Evandro	Evandro	NOUN	_	Gender=Masc|Number=Sing	13	obl	_	_
 16	sobre	sobre	ADP	_	_	18	case	_	_
 17	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	18	det	_	_
-18	pertinência	pertinência	NOUN	_	Gender=Fem|Number=Sing	13	obl	_	_
+18	pertinência	pertinência	NOUN	_	Gender=Fem|Number=Sing	15	nmod	_	_
 19	de	de	ADP	_	_	21	case	_	_
 20	sua	seu	DET	_	Gender=Fem|Number=Sing|PronType=Prs	21	det	_	_
 21	publicação	publicação	NOUN	_	Gender=Fem|Number=Sing	18	nmod	_	SpaceAfter=No
-22	.	.	PUNCT	_	_	3	punct	_	_
+22	.	.	PUNCT	_	_	3	punct	_	SpacesAfter=\n
 
 # sent_id = 42
 # text = Sua demissão acabou tendo grande repercussão no Congresso e em outros jornais.
 1	Sua	seu	DET	_	Gender=Fem|Number=Sing|PronType=Prs	2	det	_	_
-2	demissão	demissão	NOUN	_	Gender=Fem|Number=Sing	4	nsubj	_	_
-3	acabou	acabar	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	aux	_	_
-4	tendo	ter	VERB	_	VerbForm=Ger	0	root	_	_
+2	demissão	demissão	NOUN	_	Gender=Fem|Number=Sing	3	nsubj	_	_
+3	acabou	acabar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+4	tendo	ter	AUX	_	VerbForm=Ger	6	cop	_	_
 5	grande	grande	ADJ	_	Gender=Fem|Number=Sing	6	amod	_	_
-6	repercussão	repercussão	NOUN	_	Gender=Fem|Number=Sing	4	obj	_	_
+6	repercussão	repercussão	NOUN	_	Gender=Fem|Number=Sing	3	xcomp	_	_
 7-8	no	_	_	_	_	_	_	_	_
 7	em	em	ADP	_	_	9	case	_	_
 8	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	9	det	_	_
-9	Congresso	congresso	NOUN	_	Gender=Masc|Number=Sing	4	obl	_	_
+9	Congresso	congresso	PROPN	_	Gender=Masc|Number=Sing	6	nmod	_	_
 10	e	e	CCONJ	_	_	13	cc	_	_
 11	em	em	ADP	_	_	13	case	_	_
 12	outros	outro	DET	_	Gender=Masc|Number=Plur|PronType=Ind	13	det	_	_
 13	jornais	jornal	NOUN	_	Gender=Masc|Number=Plur	9	conj	_	SpaceAfter=No
-14	.	.	PUNCT	_	_	4	punct	_	_
+14	.	.	PUNCT	_	_	3	punct	_	SpacesAfter=\n
 
-# newpar
 # sent_id = 43
 # text = Já em 1983, foi convidado pelo o «Jornal do Brasil» para ser o editor de Economia, cargo em que não permaneceria por muito tempo.
 1	Já	já	ADV	_	_	3	advmod	_	_
@@ -1588,22 +1575,22 @@
 13	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	14	det	_	_
 14	Brasil	Brasil	PROPN	_	Number=Sing	11	nmod	_	SpaceAfter=No
 15	»	»	PUNCT	_	_	11	punct	_	_
-16	para	para	ADP	_	_	19	mark	_	_
+16	para	para	SCONJ	_	_	19	mark	_	_
 17	ser	ser	AUX	_	VerbForm=Inf	19	cop	_	_
 18	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	19	det	_	_
-19	editor	editor	NOUN	_	Gender=Masc|Number=Sing	6	obl	_	_
+19	editor	editor	NOUN	_	Gender=Masc|Number=Sing	6	advcl	_	_
 20	de	de	ADP	_	_	21	case	_	_
-21	Economia	Economia	NOUN	_	_	19	nmod	_	SpaceAfter=No
-22	,	,	PUNCT	_	_	23	punct	_	_
-23	cargo	cargo	NOUN	_	Gender=Masc|Number=Sing	19	appos	_	_
+21	Economia	Economia	PROPN	_	Gender=Masc|Number=Sing	19	nmod	_	SpaceAfter=No
+22	,	,	PUNCT	_	_	6	punct	_	_
+23	cargo	cargo	NOUN	_	Gender=Masc|Number=Sing	6	appos	_	_
 24	em	em	ADP	_	_	25	case	_	_
 25	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	27	obl	_	_
 26	não	não	ADV	_	Polarity=Neg	27	advmod	_	_
 27	permaneceria	permanecer	VERB	_	Mood=Cnd|Number=Sing|Person=3|VerbForm=Fin	23	acl:relcl	_	_
-28	por	por	ADP	_	_	30	case	_	_
-29	muito	muito	DET	_	Gender=Masc|Number=Sing|PronType=Ind	30	det	_	_
-30	tempo	tempo	NOUN	_	Gender=Masc|Number=Sing	27	obl	_	SpaceAfter=No
-31	.	.	PUNCT	_	_	6	punct	_	_
+28	por	por	ADP	_	_	29	case	_	_
+29	muito	muito	NOUN	_	Gender=Masc|Number=Sing	27	obl:agent	_	_
+30	tempo	tempo	ADJ	_	Gender=Masc|Number=Sing	29	amod	_	SpaceAfter=No
+31	.	.	PUNCT	_	_	6	punct	_	SpacesAfter=\n
 
 # sent_id = 44
 # text = Os problemas começaram por ocasião da campanha eleitoral de Tancredo Neves à presidência da República.
@@ -1615,20 +1602,20 @@
 6-7	da	_	_	_	_	_	_	_	_
 6	de	de	ADP	_	_	8	case	_	_
 7	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	8	det	_	_
-8	campanha	campanha	NOUN	_	_	5	nmod	_	_
-9	eleitoral	eleitoral	ADJ	_	_	8	amod	_	_
+8	campanha	campanha	NOUN	_	Gender=Fem|Number=Sing	5	nmod	_	_
+9	eleitoral	eleitoral	ADJ	_	Gender=Fem|Number=Sing	8	amod	_	_
 10	de	de	ADP	_	_	11	case	_	_
-11	Tancredo	Tancredo	PROPN	_	Gender=Masc|Number=Sing	8	nmod	_	_
+11	Tancredo	Tancredo	PROPN	_	Gender=Fem|Number=Sing	8	nmod	_	_
 12	Neves	Neves	PROPN	_	Number=Sing	11	flat:name	_	_
 13-14	à	_	_	_	_	_	_	_	_
 13	a	a	ADP	_	_	15	case	_	_
 14	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	15	det	_	_
-15	presidência	presidência	NOUN	_	Gender=Fem|Number=Sing	8	nmod	_	_
+15	presidência	presidência	NOUN	_	Gender=Fem|Number=Sing	5	nmod	_	_
 16-17	da	_	_	_	_	_	_	_	_
 16	de	de	ADP	_	_	18	case	_	_
 17	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	18	det	_	_
-18	República	República	PROPN	_	Gender=Fem|Number=Sing	15	nmod	_	SpaceAfter=No
-19	.	.	PUNCT	_	_	3	punct	_	_
+18	República	República	PROPN	_	Number=Sing	15	nmod	_	SpaceAfter=No
+19	.	.	PUNCT	_	_	3	punct	_	SpacesAfter=\n
 
 # sent_id = 45
 # text = O «JB» era crítico das eleições diretas, apoiando discretamente a candidatura governista de Paulo Maluf, mas em janeiro de 1985, quando se definiu a eleição de Tancredo, o jornal mudou toda a redação.
@@ -1644,7 +1631,7 @@
 9	eleições	eleição	NOUN	_	Gender=Fem|Number=Plur	6	obl	_	_
 10	diretas	direto	ADJ	_	Gender=Fem|Number=Plur	9	amod	_	SpaceAfter=No
 11	,	,	PUNCT	_	_	12	punct	_	_
-12	apoiando	apoiar	VERB	_	VerbForm=Ger	6	conj	_	_
+12	apoiando	apoiar	VERB	_	VerbForm=Ger	6	advcl	_	_
 13	discretamente	discretamente	ADV	_	_	12	advmod	_	_
 14	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	15	det	_	_
 15	candidatura	candidatura	NOUN	_	Gender=Fem|Number=Sing	12	obj	_	_
@@ -1652,28 +1639,28 @@
 17	de	de	ADP	_	_	18	case	_	_
 18	Paulo	Paulo	PROPN	_	Gender=Masc|Number=Sing	15	nmod	_	_
 19	Maluf	Maluf	PROPN	_	Number=Sing	18	flat:name	_	SpaceAfter=No
-20	,	,	PUNCT	_	_	37	punct	_	_
-21	mas	mas	CCONJ	_	_	37	cc	_	_
+20	,	,	PUNCT	_	_	29	punct	_	_
+21	mas	mas	CCONJ	_	_	29	cc	_	_
 22	em	em	ADP	_	_	23	case	_	_
-23	janeiro	janeiro	NOUN	_	Gender=Masc|Number=Sing	37	obl	_	_
+23	janeiro	janeiro	NOUN	_	Gender=Masc|Number=Sing	29	obl	_	_
 24	de	de	ADP	_	_	25	case	_	_
 25	1985	1985	NUM	_	NumType=Card	23	nmod	_	SpaceAfter=No
 26	,	,	PUNCT	_	_	23	punct	_	_
 27	quando	quando	ADV	_	_	29	advmod	_	_
 28	se	se	PRON	_	Case=Acc|Gender=Unsp|PronType=Prs	29	nsubj	_	_
-29	definiu	definir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	37	advcl	_	_
+29	definiu	definer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	15	acl:relcl	_	_
 30	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	31	det	_	_
 31	eleição	eleição	NOUN	_	Gender=Fem|Number=Sing	29	obj	_	_
 32	de	de	ADP	_	_	33	case	_	_
-33	Tancredo	Tancredo	PROPN	_	Gender=Unsp|Number=Sing	31	nmod	_	SpaceAfter=No
+33	Tancredo	Tancredo	PROPN	_	Gender=Masc|Number=Sing	31	nmod	_	SpaceAfter=No
 34	,	,	PUNCT	_	_	29	punct	_	_
 35	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	36	det	_	_
 36	jornal	jornal	NOUN	_	Gender=Masc|Number=Sing	37	nsubj	_	_
-37	mudou	mudar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	conj	_	_
+37	mudou	mudar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	29	advcl	_	_
 38	toda	todo	DET	_	Gender=Fem|Number=Sing|PronType=Tot	40	det	_	_
 39	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	38	fixed	_	_
 40	redação	redação	NOUN	_	Gender=Fem|Number=Sing	37	obj	_	SpaceAfter=No
-41	.	.	PUNCT	_	_	6	punct	_	_
+41	.	.	PUNCT	_	_	6	punct	_	SpacesAfter=\n
 
 # sent_id = 46
 # text = Nesta ocasião, Vidor perdeu a editoria, e embora não fosse demitido, ficara sem função clara.
@@ -1682,7 +1669,7 @@
 2	esta	este	DET	_	Gender=Fem|Number=Sing|PronType=Dem	3	det	_	_
 3	ocasião	ocasião	NOUN	_	Gender=Fem|Number=Sing	6	obl	_	SpaceAfter=No
 4	,	,	PUNCT	_	_	3	punct	_	_
-5	Vidor	Vidor	PROPN	_	Gender=Fem|Number=Sing	6	nsubj	_	_
+5	Vidor	Vidor	PROPN	_	Gender=Masc|Number=Sing	6	nsubj	_	_
 6	perdeu	perder	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 7	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	8	det	_	_
 8	editoria	editoria	NOUN	_	Gender=Fem|Number=Sing	6	obj	_	SpaceAfter=No
@@ -1693,17 +1680,17 @@
 13	fosse	ser	AUX	_	Mood=Sub|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	14	aux:pass	_	_
 14	demitido	demitir	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	6	conj	_	SpaceAfter=No
 15	,	,	PUNCT	_	_	16	punct	_	_
-16	ficara	ficar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pqp|VerbForm=Fin	6	conj	_	_
+16	ficara	ficar	VERB	_	Mood=Ind|Number=Sing|Tense=Pqp|VerbForm=Fin	6	conj	_	_
 17	sem	sem	ADP	_	_	18	case	_	_
-18	função	função	NOUN	_	Gender=Fem|Number=Sing	6	obl	_	_
+18	função	função	NOUN	_	Gender=Fem|Number=Sing	16	obl	_	_
 19	clara	claro	ADJ	_	Gender=Fem|Number=Sing	18	amod	_	SpaceAfter=No
-20	.	.	PUNCT	_	_	6	punct	_	_
+20	.	.	PUNCT	_	_	6	punct	_	SpacesAfter=\n
 
 # sent_id = 47
 # text = Decidiu-se então pela demissão, indo em seguida para a revista «Veja», onde trabalhou três meses, pois não se adaptou, ao trabalho na revista, bem diferente do que estava habituado a fazer no jornal.
 1-2	Decidiu-se	_	_	_	_	_	_	_	_
-1	Decidiu	decidir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
-2	se	se	PRON	_	Case=Acc|Gender=Unsp|PronType=Prs	1	nsubj	_	_
+1	Decidiu	decider	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+2	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	1	expl	_	_
 3	então	então	ADV	_	_	1	advmod	_	_
 4-5	pela	_	_	_	_	_	_	_	_
 4	por	por	ADP	_	_	6	case	_	_
@@ -1715,16 +1702,16 @@
 10	seguida	seguida	NOUN	_	Gender=Fem|Number=Sing	8	obl	_	_
 11	para	para	ADP	_	_	13	case	_	_
 12	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	13	det	_	_
-13	revista	revista	NOUN	_	Gender=Fem|Number=Sing	10	nmod	_	_
+13	revista	revista	NOUN	_	Gender=Fem|Number=Sing	8	obl	_	_
 14	«	«	PUNCT	_	_	15	punct	_	SpaceAfter=No
 15	Veja	Veja	PROPN	_	Gender=Fem|Number=Sing	13	appos	_	SpaceAfter=No
 16	»	»	PUNCT	_	_	15	punct	_	SpaceAfter=No
-17	,	,	PUNCT	_	_	10	punct	_	_
-18	onde	onde	ADV	_	_	19	advmod	_	_
+17	,	,	PUNCT	_	_	8	punct	_	_
+18	onde	onde	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	19	obl	_	_
 19	trabalhou	trabalhar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	13	acl:relcl	_	_
 20	três	três	NUM	_	NumType=Card	21	nummod	_	_
-21	meses	mês	NOUN	_	Gender=Masc|Number=Plur	19	obj	_	SpaceAfter=No
-22	,	,	PUNCT	_	_	19	punct	_	_
+21	meses	mês	NOUN	_	Gender=Masc|Number=Plur	19	nsubj	_	SpaceAfter=No
+22	,	,	PUNCT	_	_	8	punct	_	_
 23	pois	pois	SCONJ	_	_	26	advmod	_	_
 24	não	não	ADV	_	Polarity=Neg	26	advmod	_	_
 25	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	26	expl	_	_
@@ -1737,38 +1724,38 @@
 31-32	na	_	_	_	_	_	_	_	_
 31	em	em	ADP	_	_	33	case	_	_
 32	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	33	det	_	_
-33	revista	revista	NOUN	_	Gender=Fem|Number=Sing	26	obl	_	SpaceAfter=No
+33	revista	revista	NOUN	_	Gender=Fem|Number=Sing	30	nmod	_	SpaceAfter=No
 34	,	,	PUNCT	_	_	36	punct	_	_
 35	bem	bem	ADV	_	_	36	advmod	_	_
-36	diferente	diferente	ADJ	_	Gender=Masc|Number=Sing	33	amod	_	_
+36	diferente	diferente	ADJ	_	Gender=Masc|Number=Sing	30	amod	_	_
 37-38	do	_	_	_	_	_	_	_	_
 37	de	de	ADP	_	_	38	case	_	_
 38	o	o	PRON	_	Gender=Masc|Number=Sing|PronType=Dem	36	obl	_	_
 39	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	41	nsubj	_	_
 40	estava	estar	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	41	cop	_	_
 41	habituado	habituado	ADJ	_	Gender=Masc|Number=Sing	38	acl:relcl	_	_
-42	a	a	ADP	_	_	43	mark	_	_
+42	a	a	SCONJ	_	_	43	mark	_	_
 43	fazer	fazer	VERB	_	VerbForm=Inf	41	xcomp	_	_
 44-45	no	_	_	_	_	_	_	_	_
 44	em	em	ADP	_	_	46	case	_	_
 45	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	46	det	_	_
 46	jornal	jornal	NOUN	_	Gender=Masc|Number=Sing	43	obl	_	SpaceAfter=No
-47	.	.	PUNCT	_	_	1	punct	_	_
+47	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
 
 # sent_id = 48
 # text = Foi em seguida convidado pela «Gazeta Mercantil» para trabalhar na sucursal do Rio de Janeiro.
 1	Foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	cop	_	_
 2	em	em	ADP	_	_	3	case	_	_
-3	seguida	seguida	NOUN	_	Gender=Fem|Number=Sing|VerbForm=Part	0	root	_	_
-4	convidado	convidar	VERB	_	Gender=Masc|Number=Sing	3	acl	_	_
+3	seguida	seguida	NOUN	_	Gender=Fem|Number=Sing	0	root	_	_
+4	convidado	convidar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	3	acl	_	_
 5-6	pela	_	_	_	_	_	_	_	_
 5	por	por	ADP	_	_	8	case	_	_
 6	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	8	det	_	_
 7	«	«	PUNCT	_	_	8	punct	_	SpaceAfter=No
-8	Gazeta	Gazeta	PROPN	_	Gender=Masc|Number=Sing	4	obl:agent	_	_
+8	Gazeta	Gazeta	PROPN	_	Gender=Fem|Number=Sing	4	obl:agent	_	_
 9	Mercantil	Mercantil	PROPN	_	Number=Sing	8	flat:name	_	SpaceAfter=No
 10	»	»	PUNCT	_	_	8	punct	_	_
-11	para	para	ADP	_	_	12	mark	_	_
+11	para	para	SCONJ	_	_	12	mark	_	_
 12	trabalhar	trabalhar	VERB	_	VerbForm=Inf	4	advcl	_	_
 13-14	na	_	_	_	_	_	_	_	_
 13	em	em	ADP	_	_	15	case	_	_
@@ -1780,43 +1767,42 @@
 18	Rio	Rio	PROPN	_	Gender=Masc|Number=Sing	15	nmod	_	_
 19	de	de	ADP	_	_	20	case	_	_
 20	Janeiro	Janeiro	PROPN	_	Number=Sing	18	nmod	_	SpaceAfter=No
-21	.	.	PUNCT	_	_	3	punct	_	_
+21	.	.	PUNCT	_	_	3	punct	_	SpacesAfter=\n
 
-# newpar
 # sent_id = 49
 # text = Findo o regime militar, George Vidor voltou em 1986 para «O Globo», convidado por Evandro Carlos de Andrade, para fazer a coluna «Panorama Econômico».
-1	Findo	findar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	10	dep	_	_
+1	Findo	Fir	VERB	_	VerbForm=Ger	8	advcl	_	_
 2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
-3	regime	regime	NOUN	_	Gender=Masc|Number=Sing	10	nsubj	_	_
+3	regime	regime	NOUN	_	Gender=Masc|Number=Sing	8	nsubj	_	_
 4	militar	militar	ADJ	_	Gender=Masc|Number=Sing	3	amod	_	SpaceAfter=No
-5	,	,	PUNCT	_	_	6	punct	_	_
-6	George	George	PROPN	_	Gender=Masc|Number=Sing	10	nsubj	_	_
+5	,	,	PUNCT	_	_	1	punct	_	_
+6	George	George	PROPN	_	Gender=Masc|Number=Sing	3	appos	_	_
 7	Vidor	Vidor	PROPN	_	Number=Sing	6	flat:name	_	_
-8	voltou	voltar	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	10	cop	_	_
+8	voltou	voltar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 9	em	em	ADP	_	_	10	case	_	_
-10	1986	1986	NUM	_	NumType=Card	0	root	_	_
+10	1986	1986	NUM	_	NumType=Card	8	obl	_	_
 11	para	para	ADP	_	_	13	case	_	_
 12	«	«	PUNCT	_	_	13	punct	_	SpaceAfter=No
-13	O	O	DET	_	Gender=Masc|Number=Sing|PronType=Art	10	obl	_	_
+13	O	O	PROPN	_	Gender=Masc|Number=Sing|PronType=Art	10	nmod	_	_
 14	Globo	Globo	PROPN	_	Number=Sing	13	flat:name	_	SpaceAfter=No
 15	»	»	PUNCT	_	_	13	punct	_	SpaceAfter=No
 16	,	,	PUNCT	_	_	17	punct	_	_
-17	convidado	convidar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	13	acl	_	_
+17	convidado	convidado	NOUN	_	Gender=Masc|Number=Sing	10	appos	_	_
 18	por	por	ADP	_	_	19	case	_	_
 19	Evandro	Evandro	PROPN	_	Gender=Masc|Number=Sing	17	obl:agent	_	_
 20	Carlos	Carlos	PROPN	_	Number=Sing	19	flat:name	_	_
 21	de	de	ADP	_	_	22	case	_	_
 22	Andrade	Andrade	PROPN	_	Number=Sing	19	nmod	_	SpaceAfter=No
-23	,	,	PUNCT	_	_	17	punct	_	_
-24	para	para	ADP	_	_	25	mark	_	_
-25	fazer	fazer	VERB	_	VerbForm=Inf	17	advcl	_	_
+23	,	,	PUNCT	_	_	25	punct	_	_
+24	para	para	SCONJ	_	_	25	mark	_	_
+25	fazer	fazer	VERB	_	VerbForm=Inf	19	acl	_	_
 26	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	27	det	_	_
 27	coluna	coluna	NOUN	_	Gender=Fem|Number=Sing	25	obj	_	_
 28	«	«	PUNCT	_	_	29	punct	_	SpaceAfter=No
-29	Panorama	panorama	PROPN	_	Gender=Masc|Number=Sing	27	appos	_	_
+29	Panorama	panorama	PROPN	_	Gender=Fem|Number=Sing	27	appos	_	_
 30	Econômico	Econômico	PROPN	_	Number=Sing	29	flat:name	_	SpaceAfter=No
 31	»	»	PUNCT	_	_	29	punct	_	SpaceAfter=No
-32	.	.	PUNCT	_	_	10	punct	_	_
+32	.	.	PUNCT	_	_	8	punct	_	SpacesAfter=\n
 
 # sent_id = 50
 # text = Após cinco anos, assumiu a função de editorialista, cargo em que se mantem até os dias de hoje, sendo substituído na coluna por Mirian Leitão.
@@ -1826,15 +1812,15 @@
 4	,	,	PUNCT	_	_	3	punct	_	_
 5	assumiu	assumir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 6	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	7	det	_	_
-7	função	função	NOUN	_	Gender=Fem|Number=Sing	5	obj	_	_
+7	função	função	NOUN	_	Gender=Fem|Number=Sing	5	nsubj	_	_
 8	de	de	ADP	_	_	9	case	_	_
-9	editorialista	editorialista	NOUN	_	Gender=Fem|Number=Sing	7	nmod	_	SpaceAfter=No
+9	editorialista	editorialista	NOUN	_	Gender=Masc|Number=Sing	7	nmod	_	SpaceAfter=No
 10	,	,	PUNCT	_	_	11	punct	_	_
-11	cargo	cargo	NOUN	_	Gender=Masc|Number=Sing	9	appos	_	_
+11	cargo	cargo	NOUN	_	Gender=Masc|Number=Sing	7	appos	_	_
 12	em	em	ADP	_	_	13	case	_	_
 13	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	15	obl	_	_
-14	se	se	PRON	_	Case=Acc|Gender=Unsp|PronType=Prs	15	nsubj	_	_
-15	mantem	manter	VERB	_	Mood=Sub|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	11	acl:relcl	_	_
+14	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Plur|Person=3|PronType=Prs	15	expl	_	_
+15	mantem	manter	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	11	acl:relcl	_	_
 16	até	até	ADP	_	_	18	case	_	_
 17	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	18	det	_	_
 18	dias	dia	NOUN	_	Gender=Masc|Number=Plur	15	obl	_	_
@@ -1848,60 +1834,60 @@
 25	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	26	det	_	_
 26	coluna	coluna	NOUN	_	Gender=Fem|Number=Sing	23	obl	_	_
 27	por	por	ADP	_	_	28	case	_	_
-28	Mirian	Mirian	PROPN	_	Gender=Masc|Number=Sing	26	nmod	_	_
+28	Mirian	Mirian	PROPN	_	Gender=Masc|Number=Sing	23	obl:agent	_	_
 29	Leitão	Leitão	PROPN	_	Number=Sing	28	flat:name	_	SpaceAfter=No
-30	.	.	PUNCT	_	_	5	punct	_	_
+30	.	.	PUNCT	_	_	5	punct	_	SpacesAfter=\n
 
 # sent_id = 51
 # text = A partir de 1995, passou a assinar no mesmo jornal uma coluna sobre economia, que leva o seu nome.
-1	A	a	ADP	_	_	2	case	_	_
-2	partir	partir	NOUN	_	_	8	obl	_	_
-3	de	de	ADP	_	_	4	case	_	_
-4	1995	1995	NUM	_	NumType=Card	2	nmod	_	SpaceAfter=No
-5	,	,	PUNCT	_	_	2	punct	_	_
-6	passou	passar	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	8	aux	_	_
-7	a	a	ADP	_	_	8	obl	_	_
-8	assinar	assinar	VERB	_	VerbForm=Inf	0	root	_	_
+1	A	a	SCONJ	_	_	4	case	_	_
+2	partir	partir	VERB	_	VerbForm=Inf	1	fixed	_	_
+3	de	de	ADP	_	_	1	fixed	_	_
+4	1995	1995	NUM	_	NumType=Card	8	obl	_	SpaceAfter=No
+5	,	,	PUNCT	_	_	4	punct	_	_
+6	passou	passar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+7	a	a	SCONJ	_	_	8	mark	_	_
+8	assinar	assinar	VERB	_	VerbForm=Inf	6	xcomp	_	_
 9-10	no	_	_	_	_	_	_	_	_
 9	em	em	ADP	_	_	12	case	_	_
 10	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	12	det	_	_
 11	mesmo	mesmo	ADJ	_	Gender=Masc|Number=Sing	12	amod	_	_
-12	jornal	jornal	NOUN	_	Gender=Masc|Number=Sing	8	obl	_	_
+12	jornal	jornal	NOUN	_	Gender=Masc|Number=Sing	8	obj	_	_
 13	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	14	det	_	_
-14	coluna	coluna	NOUN	_	Gender=Fem|Number=Sing	8	obj	_	_
+14	coluna	coluna	NOUN	_	Gender=Fem|Number=Sing	12	appos	_	_
 15	sobre	sobre	ADP	_	_	16	case	_	_
 16	economia	economia	NOUN	_	Gender=Fem|Number=Sing	14	nmod	_	SpaceAfter=No
-17	,	,	PUNCT	_	_	8	punct	_	_
+17	,	,	PUNCT	_	_	19	punct	_	_
 18	que	que	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	19	nsubj	_	_
 19	leva	levar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	14	acl:relcl	_	_
 20	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	22	det	_	_
 21	seu	seu	DET	_	Gender=Masc|Number=Sing|PronType=Prs	22	det	_	_
 22	nome	nome	NOUN	_	Gender=Masc|Number=Sing	19	obj	_	SpaceAfter=No
-23	.	.	PUNCT	_	_	8	punct	_	_
+23	.	.	PUNCT	_	_	8	punct	_	SpacesAfter=\n
 
 # sent_id = 52
 # text = Passou também a tentar a televisão – teve rápidas passagens nas TVs Bandeirantes e Educativa –, acabando por se fixar na GloboNews, onde participa da edição das 18:00 horas do jornal comandado pela âncora Leilane Neubarth, na seção «Conta Corrente».
 1	Passou	passar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
-2	também	também	ADV	_	_	1	advmod	_	_
-3	a	a	ADP	_	_	4	mark	_	_
+2	também	também	ADV	_	_	4	advmod	_	_
+3	a	a	SCONJ	_	_	4	mark	_	_
 4	tentar	tentar	VERB	_	VerbForm=Inf	1	xcomp	_	_
 5	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	6	det	_	_
 6	televisão	televisão	NOUN	_	Gender=Fem|Number=Sing	4	obj	_	_
-7	–	–	PUNCT	_	_	8	punct	_	_
-8	teve	ter	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	advcl	_	_
+7	–	–	PUNCT	_	_	4	punct	_	_
+8	teve	ter	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	1	parataxis	_	_
 9	rápidas	rápido	ADJ	_	Gender=Fem|Number=Plur	10	amod	_	_
 10	passagens	passagem	NOUN	_	Gender=Fem|Number=Plur	8	obj	_	_
 11-12	nas	_	_	_	_	_	_	_	_
 11	em	em	ADP	_	_	13	case	_	_
 12	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	13	det	_	_
-13	TVs	TVs	PROPN	_	Gender=Fem|Number=Sing	8	obl	_	_
+13	TVs	TVs	PROPN	_	Gender=Fem|Number=Plur	8	obl	_	_
 14	Bandeirantes	Bandeirantes	PROPN	_	Number=Sing	13	flat:name	_	_
 15	e	e	CCONJ	_	_	13	flat:name	_	_
 16	Educativa	Educativa	PROPN	_	Number=Sing	13	flat:name	_	_
 17	–	–	PUNCT	_	_	19	punct	_	SpaceAfter=No
 18	,	,	PUNCT	_	_	19	punct	_	_
 19	acabando	acabar	VERB	_	VerbForm=Ger	8	advcl	_	_
-20	por	por	ADP	_	_	22	mark	_	_
+20	por	por	SCONJ	_	_	22	mark	_	_
 21	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	22	expl	_	_
 22	fixar	fixar	VERB	_	VerbForm=Inf	19	xcomp	_	_
 23-24	na	_	_	_	_	_	_	_	_
@@ -1909,12 +1895,12 @@
 24	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	25	det	_	_
 25	GloboNews	GloboNews	PROPN	_	Gender=Masc|Number=Sing	22	obl	_	SpaceAfter=No
 26	,	,	PUNCT	_	_	22	punct	_	_
-27	onde	onde	ADV	_	_	28	advmod	_	_
+27	onde	onde	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	28	obl	_	_
 28	participa	participar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	25	acl:relcl	_	_
 29-30	da	_	_	_	_	_	_	_	_
 29	de	de	ADP	_	_	31	case	_	_
 30	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	31	det	_	_
-31	edição	edição	NOUN	_	Gender=Fem|Number=Sing	28	obl	_	_
+31	edição	edição	NOUN	_	Gender=Fem|Number=Sing	28	obj	_	_
 32-33	das	_	_	_	_	_	_	_	_
 32	de	de	ADP	_	_	35	case	_	_
 33	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	35	det	_	_
@@ -1930,91 +1916,89 @@
 41	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	42	det	_	_
 42	âncora	âncora	NOUN	_	Gender=Fem|Number=Sing	39	obl:agent	_	_
 43	Leilane	Leilane	PROPN	_	Gender=Fem|Number=Sing	42	appos	_	_
-44	Neubarth	Neubarth	PROPN	_	Gender=Fem|Number=Sing	43	appos	_	SpaceAfter=No
+44	Neubarth	Neubarth	PROPN	_	Number=Sing	43	flat:name	_	SpaceAfter=No
 45	,	,	PUNCT	_	_	48	punct	_	_
 46-47	na	_	_	_	_	_	_	_	_
 46	em	em	ADP	_	_	48	case	_	_
 47	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	48	det	_	_
 48	seção	seção	NOUN	_	Gender=Fem|Number=Sing	38	nmod	_	_
 49	«	«	PUNCT	_	_	50	punct	_	SpaceAfter=No
-50	Conta	conta	PROPN	_	Gender=Fem|Number=Sing	48	appos	_	_
-51	Corrente	corrente	PROPN	_	Gender=Fem|Number=Sing	50	flat:name	_	SpaceAfter=No
+50	Conta	Conta	PROPN	_	Gender=Fem|Number=Sing	48	appos	_	_
+51	Corrente	corrente	PROPN	_	Number=Sing	50	flat:name	_	SpaceAfter=No
 52	»	»	PUNCT	_	_	50	punct	_	SpaceAfter=No
-53	.	.	PUNCT	_	_	1	punct	_	_
+53	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
 
-# newpar
 # sent_id = 53
 # text = Na internet, no portal de «O Globo», mantém desde julho de 2003, um blog que leva seu nome, também sobre economia.
 1-2	Na	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	3	case	_	_
 2	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	3	det	_	_
-3	internet	internet	NOUN	_	Number=Sing	14	obl	_	SpaceAfter=No
+3	internet	internet	PROPN	_	Gender=Fem|Number=Sing	0	root	_	SpaceAfter=No
 4	,	,	PUNCT	_	_	3	punct	_	_
 5-6	no	_	_	_	_	_	_	_	_
 5	em	em	ADP	_	_	7	case	_	_
 6	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	7	det	_	_
-7	portal	portal	NOUN	_	Gender=Masc|Number=Sing	14	obl	_	_
+7	portal	portal	NOUN	_	Gender=Masc|Number=Sing	3	nmod	_	_
 8	de	de	ADP	_	_	10	case	_	_
 9	«	«	PUNCT	_	_	10	punct	_	SpaceAfter=No
-10	O	O	DET	_	Gender=Masc|Number=Sing|PronType=Art	7	nmod	_	_
+10	O	O	PROPN	_	Gender=Masc|Number=Sing|PronType=Art	7	nmod	_	_
 11	Globo	Globo	PROPN	_	Number=Sing	10	flat:name	_	SpaceAfter=No
 12	»	»	PUNCT	_	_	10	punct	_	SpaceAfter=No
-13	,	,	PUNCT	_	_	7	punct	_	_
-14	mantém	manter	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+13	,	,	PUNCT	_	_	14	punct	_	_
+14	mantém	manter	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	acl:relcl	_	_
 15	desde	desde	ADP	_	_	16	case	_	_
 16	julho	julho	NOUN	_	Gender=Masc|Number=Sing	14	obl	_	_
 17	de	de	ADP	_	_	18	case	_	_
 18	2003	2003	NUM	_	NumType=Card	16	nmod	_	SpaceAfter=No
-19	,	,	PUNCT	_	_	21	punct	_	_
+19	,	,	PUNCT	_	_	14	punct	_	_
 20	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	21	det	_	_
-21	blog	blog	NOUN	_	Gender=Masc|Number=Sing	16	appos	_	_
+21	blog	blog	NOUN	_	Gender=Masc|Number=Sing	7	appos	_	_
 22	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	23	nsubj	_	_
 23	leva	levar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	21	acl:relcl	_	_
 24	seu	seu	DET	_	Gender=Masc|Number=Sing|PronType=Prs	25	det	_	_
 25	nome	nome	NOUN	_	Gender=Masc|Number=Sing	23	obj	_	SpaceAfter=No
-26	,	,	PUNCT	_	_	23	punct	_	_
+26	,	,	PUNCT	_	_	29	punct	_	_
 27	também	também	ADV	_	_	29	advmod	_	_
 28	sobre	sobre	ADP	_	_	29	case	_	_
-29	economia	economia	NOUN	_	Gender=Fem|Number=Sing	21	nmod	_	SpaceAfter=No
-30	.	.	PUNCT	_	_	14	punct	_	_
+29	economia	economia	NOUN	_	Gender=Fem|Number=Sing	25	conj	_	SpaceAfter=No
+30	.	.	PUNCT	_	_	3	punct	_	SpacesAfter=\n
 
 # sent_id = 54
 # text = Além disso, é responsável pela «Globo a Mais», revista digital destinada a assinantes em tablets.
-1	Além	além	ADV	_	_	6	advmod	_	_
+1	Além	além	ADV	_	_	3	cc	_	_
 2-3	disso	_	_	_	_	_	_	_	SpaceAfter=No
-2	de	de	ADP	_	_	3	case	_	_
-3	isso	isso	PRON	_	Gender=Masc|Number=Sing|PronType=Dem	1	obl	_	_
-4	,	,	PUNCT	_	_	1	punct	_	_
+2	de	de	ADP	_	_	1	fixed	_	_
+3	isso	isso	PRON	_	Gender=Masc|Number=Sing|PronType=Dem	6	obl	_	_
+4	,	,	PUNCT	_	_	3	punct	_	_
 5	é	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	cop	_	_
-6	responsável	responsável	ADJ	_	Gender=Fem|Number=Sing	0	root	_	_
+6	responsável	responsável	ADJ	_	Gender=Masc|Number=Sing	15	parataxis	_	_
 7-8	pela	_	_	_	_	_	_	_	_
 7	por	por	ADP	_	_	10	case	_	_
 8	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	10	det	_	_
 9	«	«	PUNCT	_	_	10	punct	_	SpaceAfter=No
-10	Globo	Globo	PROPN	_	Gender=Fem|Number=Sing	6	obl	_	_
-11	a	a	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	10	flat:name	_	_
+10	Globo	Globo	PROPN	_	Gender=Masc|Number=Sing	6	obl:agent	_	_
+11	a	a	DET	_	Number=Sing|PronType=Art	10	flat:name	_	_
 12	Mais	mais	PROPN	_	Number=Sing	10	flat:name	_	SpaceAfter=No
 13	»	»	PUNCT	_	_	6	punct	_	SpaceAfter=No
-14	,	,	PUNCT	_	_	6	punct	_	_
-15	revista	revista	NOUN	_	Gender=Fem|Number=Sing	6	obl	_	_
-16	digital	digital	ADJ	_	Gender=Fem|Number=Sing	15	amod	_	_
-17	destinada	destinar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	15	acl	_	_
-18	a	o	DET	_	_	19	case	_	_
-19	assinantes	assinante	NOUN	_	Gender=Masc|Number=Plur	17	obl	_	_
+14	,	,	PUNCT	_	_	15	punct	_	_
+15	revista	revistar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+16	digital	digital	NOUN	_	Gender=Fem|Number=Sing	15	obj	_	_
+17	destinada	destinar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	16	acl	_	_
+18	a	a	ADP	_	_	19	case	_	_
+19	assinantes	assinante	NOUN	_	Gender=Masc|Number=Plur	17	obj	_	_
 20	em	em	ADP	_	_	21	case	_	_
-21	tablets	tablet	NOUN	_	Gender=Masc|Number=Plur	17	obl	_	SpaceAfter=No
-22	.	.	PUNCT	_	_	6	punct	_	_
+21	tablets	tablet	NOUN	_	Gender=Masc|Number=Plur	19	nmod	_	SpaceAfter=No
+22	.	.	PUNCT	_	_	15	punct	_	SpacesAfter=\n
 
-# newpar
 # sent_id = 55
 # text = Casado com a jornalista Heloisa Vidor de Mello.
 1	Casado	casar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	0	root	_	_
 2	com	com	ADP	_	_	4	case	_	_
 3	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	4	det	_	_
 4	jornalista	jornalista	NOUN	_	Gender=Fem|Number=Sing	1	obl	_	_
-5	Heloisa	Heloisa	PROPN	_	Number=Sing	4	flat:name	_	_
-6	Vidor	Vidor	PROPN	_	Number=Sing	4	flat:name	_	_
+5	Heloisa	Heloisa	PROPN	_	Gender=Fem|Number=Sing	4	appos	_	_
+6	Vidor	Vidor	PROPN	_	Number=Sing	5	flat:name	_	_
 7	de	de	ADP	_	_	8	case	_	_
 8	Mello	Mello	PROPN	_	Number=Sing	4	nmod	_	SpaceAfter=No
-9	.	.	PUNCT	_	_	1	punct	_	_
+9	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
 

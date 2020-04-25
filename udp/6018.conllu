@@ -1,11 +1,11 @@
-# newdoc id = ../raw/6018.raw
+# newdoc
 # newpar
 # sent_id = 1
 # text = Organização de trabalhadores formada pela Corrente Renovadora do Movimento Marxista Brasileiro em setembro de 1957 em São Paulo.
-1	Organização	Organização	NOUN	_	Gender=Fem|Number=Sing	0	root	_	SpacesBefore=\s\n
+1	Organização	Organização	NOUN	_	Gender=Fem|Number=Sing	0	root	_	_
 2	de	de	ADP	_	_	3	case	_	_
 3	trabalhadores	trabalhador	NOUN	_	Gender=Masc|Number=Plur	1	nmod	_	_
-4	formada	formar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	1	acl	_	_
+4	formada	formar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	3	acl	_	_
 5-6	pela	_	_	_	_	_	_	_	_
 5	por	por	ADP	_	_	7	case	_	_
 6	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	7	det	_	_
@@ -14,32 +14,31 @@
 9-10	do	_	_	_	_	_	_	_	_
 9	de	de	ADP	_	_	11	case	_	_
 10	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	_	_
-11	Movimento	Movimento	PROPN	_	Gender=Masc|Number=Sing	7	nmod	_	_
+11	Movimento	Movimento	PROPN	_	Number=Sing	7	nmod	_	_
 12	Marxista	marxista	PROPN	_	Number=Sing	11	flat:name	_	_
 13	Brasileiro	Brasileiro	PROPN	_	Number=Sing	11	flat:name	_	_
 14	em	em	ADP	_	_	15	case	_	_
-15	setembro	setembro	NOUN	_	Gender=Masc|Number=Sing	11	nmod	_	_
+15	setembro	setembro	NOUN	_	Gender=Masc|Number=Sing	4	obl	_	_
 16	de	de	ADP	_	_	17	case	_	_
 17	1957	1957	NUM	_	NumType=Card	15	nmod	_	_
 18	em	em	ADP	_	_	19	case	_	_
-19	São	São	PROPN	_	Gender=Masc|Number=Sing	15	nmod	_	_
+19	São	São	PROPN	_	Gender=Masc|Number=Sing	17	nmod	_	_
 20	Paulo	Paulo	PROPN	_	Number=Sing	19	flat:name	_	SpaceAfter=No
-21	.	.	PUNCT	_	_	1	punct	_	_
+21	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
 
 # sent_id = 2
 # text = Desapareceu em 1961.
 1	Desapareceu	desaparecer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2	em	em	ADP	_	_	3	case	_	_
 3	1961	1961	NUM	_	NumType=Card	1	obl	_	SpaceAfter=No
-4	.	.	PUNCT	_	_	1	punct	_	_
+4	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
 
-# newpar
 # sent_id = 3
 # text = Após os intensos debates travados entre os membros do comitê central do Partido Comunista Brasileiro (PCB) durante o ano de 1956, um grupo conhecido com o nome de Corrente Renovadora do Movimento Marxista Brasileiro decidiu romper com o partido, no mês de maio de 1957.
-1	Após	após	ADP	_	_	4	case	_	_
+1	Após	após	ADP	_	_	41	mark	_	_
 2	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	4	det	_	_
 3	intensos	intenso	ADJ	_	Gender=Masc|Number=Plur	4	amod	_	_
-4	debates	debate	NOUN	_	Gender=Masc|Number=Plur	41	obl	_	_
+4	debates	debate	NOUN	_	Gender=Masc|Number=Plur	41	nsubj	_	_
 5	travados	travar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part	4	acl	_	_
 6	entre	entre	ADP	_	_	8	case	_	_
 7	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	8	det	_	_
@@ -54,7 +53,7 @@
 14	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	15	det	_	_
 15	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	11	nmod	_	_
 16	Comunista	Comunista	PROPN	_	Number=Sing	15	flat:name	_	_
-17	Brasileiro	Brasileiro	PROPN	_	Number=Sing	15	flat:name	_	_
+17	Brasileiro	brasileiro	PROPN	_	Number=Sing	15	flat:name	_	_
 18	(	(	PUNCT	_	_	19	punct	_	SpaceAfter=No
 19	PCB	PCB	PROPN	_	Gender=Masc|Number=Sing	15	appos	_	SpaceAfter=No
 20	)	)	PUNCT	_	_	19	punct	_	_
@@ -63,10 +62,10 @@
 23	ano	ano	NOUN	_	Gender=Masc|Number=Sing	5	obl	_	_
 24	de	de	ADP	_	_	25	case	_	_
 25	1956	1956	NUM	_	NumType=Card	23	nmod	_	SpaceAfter=No
-26	,	,	PUNCT	_	_	5	punct	_	_
+26	,	,	PUNCT	_	_	28	punct	_	_
 27	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	28	det	_	_
-28	grupo	grupo	NOUN	_	Gender=Masc|Number=Sing	41	nsubj	_	_
-29	conhecido	conhecido	ADJ	_	Gender=Masc|Number=Sing|VerbForm=Part	28	amod	_	_
+28	grupo	grupo	NOUN	_	Gender=Masc|Number=Sing	4	appos	_	_
+29	conhecido	conhecer	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	28	acl	_	_
 30	com	com	ADP	_	_	32	case	_	_
 31	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	32	det	_	_
 32	nome	nome	NOUN	_	Gender=Masc|Number=Sing	28	nmod	_	_
@@ -76,24 +75,24 @@
 36-37	do	_	_	_	_	_	_	_	_
 36	de	de	ADP	_	_	38	case	_	_
 37	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	38	det	_	_
-38	Movimento	Movimento	PROPN	_	Gender=Masc|Number=Sing	32	nmod	_	_
-39	Marxista	marxista	PROPN	_	Number=Sing	38	flat:name	_	_
-40	Brasileiro	Brasileiro	PROPN	_	Number=Sing	38	flat:name	_	_
+38	Movimento	Movimento	PROPN	_	Number=Sing	34	flat:name	_	_
+39	Marxista	marxista	PROPN	_	Number=Sing	34	flat:name	_	_
+40	Brasileiro	Brasileiro	PROPN	_	Number=Sing	34	flat:name	_	_
 41	decidiu	decidir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 42	romper	romper	VERB	_	VerbForm=Inf	41	xcomp	_	_
 43	com	com	ADP	_	_	45	case	_	_
 44	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	45	det	_	_
-45	partido	partido	NOUN	_	Gender=Masc|Number=Sing	42	obl	_	SpaceAfter=No
+45	partido	partido	NOUN	_	Gender=Masc|Number=Sing	42	obj	_	SpaceAfter=No
 46	,	,	PUNCT	_	_	42	punct	_	_
 47-48	no	_	_	_	_	_	_	_	_
 47	em	em	ADP	_	_	49	case	_	_
 48	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	49	det	_	_
 49	mês	mês	NOUN	_	Gender=Masc|Number=Sing	42	obl	_	_
 50	de	de	ADP	_	_	51	case	_	_
-51	maio	maio	NOUN	_	Gender=Masc|Number=Sing	49	nmod:tmod	_	_
+51	maio	maio	NOUN	_	Gender=Masc|Number=Sing	49	nmod	_	_
 52	de	de	ADP	_	_	53	case	_	_
 53	1957	1957	NUM	_	NumType=Card	51	nmod	_	SpaceAfter=No
-54	.	.	PUNCT	_	_	41	punct	_	_
+54	.	.	PUNCT	_	_	41	punct	_	SpacesAfter=\n
 
 # sent_id = 4
 # text = A Corrente Renovadora era integrada pela maioria dos membros da comissão sindical do PCB, particularmente por militantes vinculados aos sindicatos dos jornalistas, dos metalúrgicos e dos trabalhadores têxteis de São Paulo.
@@ -119,15 +118,15 @@
 16	de	de	ADP	_	_	18	case	_	_
 17	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	18	det	_	_
 18	PCB	PCB	PROPN	_	Gender=Masc|Number=Sing	14	nmod	_	SpaceAfter=No
-19	,	,	PUNCT	_	_	23	punct	_	_
+19	,	,	PUNCT	_	_	5	punct	_	_
 20	particularmente	particularmente	ADV	_	_	22	advmod	_	_
 21	por	por	ADP	_	_	22	case	_	_
-22	militantes	militante	NOUN	_	Gender=Masc|Number=Plur	14	nmod	_	_
+22	militantes	militante	NOUN	_	Gender=Masc|Number=Plur	5	obl	_	_
 23	vinculados	vincular	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part	22	acl	_	_
 24-25	aos	_	_	_	_	_	_	_	_
 24	a	a	ADP	_	_	26	case	_	_
 25	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	26	det	_	_
-26	sindicatos	sindicato	NOUN	_	Gender=Masc|Number=Plur	23	obl	_	_
+26	sindicatos	sindicato	NOUN	_	Gender=Masc|Number=Plur	23	obj	_	_
 27-28	dos	_	_	_	_	_	_	_	_
 27	de	de	ADP	_	_	29	case	_	_
 28	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	29	det	_	_
@@ -142,13 +141,12 @@
 35	de	de	ADP	_	_	37	case	_	_
 36	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	37	det	_	_
 37	trabalhadores	trabalhador	NOUN	_	Gender=Masc|Number=Plur	29	conj	_	_
-38	têxteis	têxtel	ADJ	_	Gender=Masc|Number=Plur	37	amod	_	_
+38	têxteis	têxtil	ADJ	_	Gender=Masc|Number=Plur	37	amod	_	_
 39	de	de	ADP	_	_	40	case	_	_
 40	São	São	PROPN	_	Gender=Masc|Number=Sing	37	nmod	_	_
 41	Paulo	Paulo	PROPN	_	Number=Sing	40	flat:name	_	SpaceAfter=No
-42	.	.	PUNCT	_	_	5	punct	_	_
+42	.	.	PUNCT	_	_	5	punct	_	SpacesAfter=\n
 
-# newpar
 # sent_id = 5
 # text = No mês de setembro, esses dissidentes decidiram formar o Movimento Socialista Renovador, denominação esta que foi substituída por Movimento de Renovação Sindical (MRS), tão logo o grupo se aglutinou em torno do jornal «Correio Sindical».
 1-2	No	_	_	_	_	_	_	_	_
@@ -159,47 +157,46 @@
 5	setembro	setembro	NOUN	_	Gender=Masc|Number=Sing	3	nmod	_	SpaceAfter=No
 6	,	,	PUNCT	_	_	3	punct	_	_
 7	esses	esse	DET	_	Gender=Masc|Number=Plur|PronType=Dem	8	det	_	_
-8	dissidentes	dissidentes	NOUN	_	Gender=Masc|Number=Plur	9	nsubj	_	_
-9	decidiram	decidir	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
-10	formar	formar	VERB	_	VerbForm=Inf	9	xcomp	_	_
+8	dissidentes	dissidente	NOUN	_	Gender=Masc|Number=Plur	9	nsubj	_	_
+9	decidiram	decidir	VERB	_	Mood=Ind|Number=Plur|Person=3|VerbForm=Fin	0	root	_	_
+10	formar	formar	ADP	_	_	12	case	_	_
 11	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	12	det	_	_
-12	Movimento	Movimento	PROPN	_	Gender=Masc|Number=Sing	10	obj	_	_
-13	Socialista	socialista	PROPN	_	Number=Sing	12	flat:name	_	_
+12	Movimento	Movimento	PROPN	_	Number=Sing	9	obl	_	_
+13	Socialista	Socialista	PROPN	_	Number=Sing	12	flat:name	_	_
 14	Renovador	Renovador	PROPN	_	Number=Sing	12	flat:name	_	SpaceAfter=No
-15	,	,	PUNCT	_	_	16	punct	_	_
-16	denominação	denominação	NOUN	_	Gender=Fem|Number=Sing	12	appos	_	_
+15	,	,	PUNCT	_	_	9	punct	_	_
+16	denominação	denominação	NOUN	_	Gender=Fem|Number=Sing	9	obl	_	_
 17	esta	este	PRON	_	Gender=Fem|Number=Sing|PronType=Dem	16	appos	_	_
 18	que	que	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	20	nsubj:pass	_	_
 19	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	20	aux:pass	_	_
 20	substituída	substituir	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	17	acl:relcl	_	_
 21	por	por	ADP	_	_	22	case	_	_
-22	Movimento	Movimento	PROPN	_	Gender=Masc|Number=Sing	20	obl:agent	_	_
+22	Movimento	movimento	PROPN	_	Gender=Masc|Number=Sing	20	obl:agent	_	_
 23	de	de	ADP	_	_	24	case	_	_
-24	Renovação	renovação	PROPN	_	Gender=Fem|Number=Sing	22	nmod	_	_
-25	Sindical	Sindical	PROPN	_	Gender=Fem|Number=Sing	24	amod	_	_
+24	Renovação	renovação	PROPN	_	Number=Sing	22	nmod	_	_
+25	Sindical	Sindical	PROPN	_	Number=Sing	24	flat:name	_	_
 26	(	(	PUNCT	_	_	27	punct	_	SpaceAfter=No
 27	MRS	MRS	PROPN	_	Gender=Masc|Number=Sing	22	appos	_	SpaceAfter=No
 28	)	)	PUNCT	_	_	27	punct	_	SpaceAfter=No
 29	,	,	PUNCT	_	_	20	punct	_	_
-30	tão	tão	ADV	_	_	31	advmod	_	_
+30	tão	tão	ADV	_	_	35	advmod	_	_
 31	logo	logo	ADV	_	_	35	advmod	_	_
 32	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	33	det	_	_
 33	grupo	grupo	NOUN	_	Gender=Masc|Number=Sing	35	nsubj	_	_
 34	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	35	expl	_	_
 35	aglutinou	aglutinar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	20	advcl	_	_
-36	em	em	ADP	_	_	37	case	_	_
-37	torno	torno	NOUN	_	_	35	obl	_	_
+36	em	em	ADP	_	_	40	case	_	_
+37	torno	torno	NOUN	_	Gender=Masc|Number=Sing	36	fixed	_	_
 38-39	do	_	_	_	_	_	_	_	_
-38	de	de	ADP	_	_	40	case	_	_
+38	de	de	ADP	_	_	36	fixed	_	_
 39	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	40	det	_	_
-40	jornal	jornal	NOUN	_	Gender=Masc|Number=Sing	37	nmod	_	_
+40	jornal	jornal	NOUN	_	Gender=Masc|Number=Sing	35	obl	_	_
 41	«	«	PUNCT	_	_	42	punct	_	SpaceAfter=No
-42	Correio	correio	PROPN	_	Gender=Fem|Number=Sing	40	appos	_	_
+42	Correio	Correio	PROPN	_	Gender=Masc|Number=Sing	40	appos	_	_
 43	Sindical	Sindical	PROPN	_	Number=Sing	42	flat:name	_	SpaceAfter=No
 44	»	»	PUNCT	_	_	42	punct	_	SpaceAfter=No
-45	.	.	PUNCT	_	_	9	punct	_	_
+45	.	.	PUNCT	_	_	9	punct	_	SpacesAfter=\n
 
-# newpar
 # sent_id = 6
 # text = A organização pregava a autonomia dos sindicatos em relação ao Ministério do Trabalho, propondo o entendimento direto com os patrões para a solução dos problemas trabalhistas.
 1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
@@ -211,12 +208,12 @@
 6	de	de	ADP	_	_	8	case	_	_
 7	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	8	det	_	_
 8	sindicatos	sindicato	NOUN	_	Gender=Masc|Number=Plur	5	nmod	_	_
-9	em	em	ADP	_	_	10	case	_	_
-10	relação	relação	NOUN	_	_	8	nmod	_	_
+9	em	em	ADP	_	_	13	case	_	_
+10	relação	relação	NOUN	_	Gender=Fem|Number=Sing	9	fixed	_	_
 11-12	ao	_	_	_	_	_	_	_	_
-11	a	a	ADP	_	_	13	case	_	_
+11	a	a	ADP	_	_	9	fixed	_	_
 12	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	13	det	_	_
-13	Ministério	Ministério	PROPN	_	Gender=Masc|Number=Sing	10	nmod	_	_
+13	Ministério	Ministério	PROPN	_	Gender=Masc|Number=Sing	8	nmod	_	_
 14-15	do	_	_	_	_	_	_	_	_
 14	de	de	ADP	_	_	16	case	_	_
 15	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	16	det	_	_
@@ -237,7 +234,7 @@
 29	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	30	det	_	_
 30	problemas	problema	NOUN	_	Gender=Masc|Number=Plur	27	nmod	_	_
 31	trabalhistas	trabalhista	ADJ	_	Gender=Masc|Number=Plur	30	amod	_	SpaceAfter=No
-32	.	.	PUNCT	_	_	3	punct	_	_
+32	.	.	PUNCT	_	_	3	punct	_	SpacesAfter=\n
 
 # sent_id = 7
 # text = Reivindicava ainda a abolição do Imposto Sindical, considerado fonte de manipulação irregular das verbas do sindicato, e condenava as greves de caráter político.
@@ -251,8 +248,8 @@
 7	Imposto	Imposto	PROPN	_	Gender=Masc|Number=Sing	4	nmod	_	_
 8	Sindical	Sindical	PROPN	_	Number=Sing	7	flat:name	_	SpaceAfter=No
 9	,	,	PUNCT	_	_	10	punct	_	_
-10	considerado	considerar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	4	acl	_	_
-11	fonte	fonte	NOUN	_	Gender=Fem|Number=Sing	10	xcomp	_	_
+10	considerado	considerar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	4	acl	_	_
+11	fonte	fonte	NOUN	_	Gender=Masc|Number=Sing	10	obj	_	_
 12	de	de	ADP	_	_	13	case	_	_
 13	manipulação	manipulação	NOUN	_	Gender=Fem|Number=Sing	11	nmod	_	_
 14	irregular	irregular	ADJ	_	Gender=Fem|Number=Sing	13	amod	_	_
@@ -264,22 +261,22 @@
 18	de	de	ADP	_	_	20	case	_	_
 19	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	20	det	_	_
 20	sindicato	sindicato	NOUN	_	Gender=Masc|Number=Sing	17	nmod	_	SpaceAfter=No
-21	,	,	PUNCT	_	_	10	punct	_	_
+21	,	,	PUNCT	_	_	23	punct	_	_
 22	e	e	CCONJ	_	_	23	cc	_	_
-23	condenava	condenar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	10	conj	_	_
+23	condenava	condenar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	1	conj	_	_
 24	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	25	det	_	_
-25	greves	grev	NOUN	_	Gender=Fem|Number=Plur	23	obj	_	_
+25	greves	greve	NOUN	_	Gender=Fem|Number=Plur	23	obj	_	_
 26	de	de	ADP	_	_	27	case	_	_
-27	caráter	caráter	NOUN	_	VerbForm=Inf	25	nmod	_	_
+27	caráter	caráter	NOUN	_	Gender=Masc|Number=Sing	25	nmod	_	_
 28	político	político	ADJ	_	Gender=Masc|Number=Sing	27	amod	_	SpaceAfter=No
-29	.	.	PUNCT	_	_	1	punct	_	_
+29	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
 
 # sent_id = 8
 # text = O Correio Sindical denunciava permanentemente a corrupção reinante nos sindicatos paulistas, atribuindo-a aos membros do PCB e do Partido Trabalhista Brasileiro (PTB), assim como aos líderes das confederações e aos grupos de apoio ao ex-governador Ademar de Barros.
 1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	_	_
-2	Correio	correio	PROPN	_	Gender=Fem|Number=Sing	4	nsubj	_	_
+2	Correio	Correio	PROPN	_	Gender=Masc|Number=Sing	4	nsubj	_	_
 3	Sindical	Sindical	PROPN	_	Number=Sing	2	flat:name	_	_
-4	denunciava	denunciavar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	0	root	_	_
+4	denunciava	denunciar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	0	root	_	_
 5	permanentemente	permanentemente	ADV	_	_	4	advmod	_	_
 6	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	7	det	_	_
 7	corrupção	corrupção	NOUN	_	Gender=Fem|Number=Sing	4	obj	_	_
@@ -287,16 +284,16 @@
 9-10	nos	_	_	_	_	_	_	_	_
 9	em	em	ADP	_	_	11	case	_	_
 10	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	11	det	_	_
-11	sindicatos	sindicato	NOUN	_	Gender=Masc|Number=Plur	7	nmod	_	_
+11	sindicatos	sindicato	NOUN	_	Gender=Masc|Number=Plur	4	obl	_	_
 12	paulistas	paulista	ADJ	_	Gender=Masc|Number=Plur	11	amod	_	SpaceAfter=No
 13	,	,	PUNCT	_	_	14	punct	_	_
 14-15	atribuindo-a	_	_	_	_	_	_	_	_
 14	atribuindo	atribuir	VERB	_	VerbForm=Ger	4	advcl	_	_
-15	a	a	ADP	_	_	18	case	_	_
+15	a	ela	PRON	_	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	14	obj	_	_
 16-17	aos	_	_	_	_	_	_	_	_
 16	a	a	ADP	_	_	18	case	_	_
 17	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	18	det	_	_
-18	membros	membro	NOUN	_	Gender=Masc|Number=Plur	14	obl	_	_
+18	membros	membro	NOUN	_	Gender=Masc|Number=Plur	14	iobj	_	_
 19-20	do	_	_	_	_	_	_	_	_
 19	de	de	ADP	_	_	21	case	_	_
 20	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	21	det	_	_
@@ -305,9 +302,9 @@
 23-24	do	_	_	_	_	_	_	_	_
 23	de	de	ADP	_	_	25	case	_	_
 24	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	25	det	_	_
-25	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	21	conj	_	_
+25	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	18	conj	_	_
 26	Trabalhista	trabalhista	PROPN	_	Number=Sing	25	flat:name	_	_
-27	Brasileiro	Brasileiro	PROPN	_	Number=Sing	25	flat:name	_	_
+27	Brasileiro	brasileiro	PROPN	_	Number=Sing	25	flat:name	_	_
 28	(	(	PUNCT	_	_	29	punct	_	SpaceAfter=No
 29	PTB	PTB	PROPN	_	Gender=Masc|Number=Sing	25	appos	_	SpaceAfter=No
 30	)	)	PUNCT	_	_	29	punct	_	SpaceAfter=No
@@ -326,7 +323,7 @@
 41-42	aos	_	_	_	_	_	_	_	_
 41	a	a	ADP	_	_	43	case	_	_
 42	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	43	det	_	_
-43	grupos	grupo	NOUN	_	Gender=Masc|Number=Plur	39	conj	_	_
+43	grupos	grupo	NOUN	_	Gender=Masc|Number=Plur	36	conj	_	_
 44	de	de	ADP	_	_	45	case	_	_
 45	apoio	apoio	NOUN	_	Gender=Masc|Number=Sing	43	nmod	_	_
 46-47	ao	_	_	_	_	_	_	_	_
@@ -336,34 +333,33 @@
 49	Ademar	Ademar	PROPN	_	Gender=Masc|Number=Sing	48	appos	_	_
 50	de	de	ADP	_	_	51	case	_	_
 51	Barros	Barros	PROPN	_	Number=Sing	49	nmod	_	SpaceAfter=No
-52	.	.	PUNCT	_	_	4	punct	_	_
+52	.	.	PUNCT	_	_	4	punct	_	SpacesAfter=\n
 
-# newpar
 # sent_id = 9
 # text = O MRS criticava também severamente as tendências que a ele se opunham.
 1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	_	_
 2	MRS	MRS	PROPN	_	Gender=Masc|Number=Sing	3	nsubj	_	_
 3	criticava	criticar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	0	root	_	_
-4	também	também	ADV	_	_	5	advmod	_	_
+4	também	também	ADV	_	_	3	advmod	_	_
 5	severamente	severamente	ADV	_	_	3	advmod	_	_
 6	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	7	det	_	_
 7	tendências	tendência	NOUN	_	Gender=Fem|Number=Plur	3	obj	_	_
 8	que	que	PRON	_	Gender=Fem|Number=Plur|PronType=Rel	12	nsubj	_	_
-9	a	a	ADP	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	10	case	_	_
-10	ele	ele	PRON	_	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	12	obl	_	_
+9	a	a	ADP	_	_	10	case	_	_
+10	ele	ele	PRON	_	Gender=Masc|Number=Sing|Person=3|PronType=Prs	12	obl	_	_
 11	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Plur|Person=3|PronType=Prs	12	expl	_	_
-12	opunham	opor	VERB	_	Mood=Sub|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	7	acl:relcl	_	SpaceAfter=No
-13	.	.	PUNCT	_	_	3	punct	_	_
+12	opunham	opor	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	7	acl:relcl	_	SpaceAfter=No
+13	.	.	PUNCT	_	_	3	punct	_	SpacesAfter=\n
 
 # sent_id = 10
-# text = O líder têxtil “renovador” Nélson Rustici acusava Antônio Chamorro, líder do Sindicato dos Têxteis de São Paulo — de orientação comunista — de desviar as verbas daquela entidade para o PCB.
+# text = O líder têxtil “renovador” Nélson Rustici acusava Antônio Chamorro, líder do Sindicato dos Têxteis de São Paulo - de orientação comunista - de desviar as verbas daquela entidade para o PCB.
 1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	_	_
 2	líder	líder	NOUN	_	Gender=Masc|Number=Sing	9	nsubj	_	_
 3	têxtil	têxtil	ADJ	_	Gender=Masc|Number=Sing	2	amod	_	_
 4	“	“	PUNCT	_	_	5	punct	_	SpaceAfter=No
-5	renovador	renovador	NOUN	_	Gender=Masc|Number=Sing	2	conj	_	SpaceAfter=No
+5	renovador	renovador	NOUN	_	Gender=Masc|Number=Sing	2	appos	_	SpaceAfter=No
 6	”	”	PUNCT	_	_	5	punct	_	_
-7	Nélson	Nélson	PROPN	_	Gender=Masc|Number=Sing	5	appos	_	_
+7	Nélson	Nélson	PROPN	_	Gender=Masc|Number=Sing	2	appos	_	_
 8	Rustici	Rustici	PROPN	_	Number=Sing	7	flat:name	_	_
 9	acusava	acusar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	0	root	_	_
 10	Antônio	Antônio	PROPN	_	Gender=Masc|Number=Sing	9	obj	_	_
@@ -373,21 +369,21 @@
 14-15	do	_	_	_	_	_	_	_	_
 14	de	de	ADP	_	_	16	case	_	_
 15	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	16	det	_	_
-16	Sindicato	sindicato	PROPN	_	Gender=Masc|Number=Sing	13	nmod	_	_
+16	Sindicato	Sindicato	PROPN	_	Gender=Masc|Number=Sing	13	nmod	_	_
 17-18	dos	_	_	_	_	_	_	_	_
 17	de	de	ADP	_	_	19	case	_	_
 18	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	19	det	_	_
-19	Têxteis	Têxteis	PROPN	_	Gender=Masc|Number=Plur	16	nmod	_	_
+19	Têxteis	Têxtel	NOUN	_	Gender=Masc|Number=Plur	16	nmod	_	_
 20	de	de	ADP	_	_	21	case	_	_
 21	São	São	PROPN	_	Gender=Masc|Number=Sing	19	nmod	_	_
 22	Paulo	Paulo	PROPN	_	Number=Sing	21	flat:name	_	_
-23	—	—	PUNCT	_	_	13	punct	_	_
+23	-	-	PUNCT	_	_	13	punct	_	_
 24	de	de	ADP	_	_	25	case	_	_
 25	orientação	orientação	NOUN	_	Gender=Fem|Number=Sing	13	nmod	_	_
 26	comunista	comunista	ADJ	_	Gender=Fem|Number=Sing	25	amod	_	_
-27	—	—	PUNCT	_	_	13	punct	_	_
-28	de	de	ADP	_	_	29	mark	_	_
-29	desviar	desviar	VERB	_	VerbForm=Inf	13	acl	_	_
+27	-	-	PUNCT	_	_	13	punct	_	_
+28	de	de	SCONJ	_	_	29	mark	_	_
+29	desviar	desviar	VERB	_	VerbForm=Inf	9	xcomp	_	_
 30	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	31	det	_	_
 31	verbas	verba	NOUN	_	Gender=Fem|Number=Plur	29	obj	_	_
 32-33	daquela	_	_	_	_	_	_	_	_
@@ -396,8 +392,8 @@
 34	entidade	entidade	NOUN	_	Gender=Fem|Number=Sing	31	nmod	_	_
 35	para	para	ADP	_	_	37	case	_	_
 36	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	37	det	_	_
-37	PCB	PCB	PROPN	_	Gender=Masc|Number=Sing	29	obl	_	SpaceAfter=No
-38	.	.	PUNCT	_	_	9	punct	_	_
+37	PCB	PCB	PROPN	_	Gender=Masc|Number=Sing	34	nmod	_	SpaceAfter=No
+38	.	.	PUNCT	_	_	9	punct	_	SpacesAfter=\n
 
 # sent_id = 11
 # text = O Sindicato dos Operários da Construção Civil de São Paulo sofria críticas semelhantes.
@@ -406,21 +402,20 @@
 3-4	dos	_	_	_	_	_	_	_	_
 3	de	de	ADP	_	_	5	case	_	_
 4	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	5	det	_	_
-5	Operários	operários	PROPN	_	Gender=Masc|Number=Plur	2	nmod	_	_
+5	Operários	operário	NOUN	_	Gender=Masc|Number=Plur	2	nmod	_	_
 6-7	da	_	_	_	_	_	_	_	_
 6	de	de	ADP	_	_	8	case	_	_
 7	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	8	det	_	_
-8	Construção	construção	PROPN	_	Number=Sing	5	nmod	_	_
+8	Construção	construção	PROPN	_	Gender=Fem|Number=Sing	5	nmod	_	_
 9	Civil	Civil	PROPN	_	Number=Sing	8	flat:name	_	_
 10	de	de	ADP	_	_	11	case	_	_
-11	São	São	PROPN	_	Number=Sing	8	nmod	_	_
+11	São	São	PROPN	_	Gender=Masc|Number=Sing	8	nmod	_	_
 12	Paulo	Paulo	PROPN	_	Number=Sing	11	flat:name	_	_
 13	sofria	sofrer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	0	root	_	_
-14	críticas	crítica	NOUN	_	Gender=Fem|Number=Plur	13	obj	_	_
+14	críticas	crítico	NOUN	_	Gender=Fem|Number=Plur	13	obj	_	_
 15	semelhantes	semelhante	ADJ	_	Gender=Fem|Number=Plur	14	amod	_	SpaceAfter=No
-16	.	.	PUNCT	_	_	13	punct	_	_
+16	.	.	PUNCT	_	_	13	punct	_	SpacesAfter=\n
 
-# newpar
 # sent_id = 12
 # text = Em dezembro de 1959, ao lado do Conselho Sindical dos Trabalhadores (CST) de São Paulo, organização intersindical formada no ano anterior, o MRS se opôs à realização em São Paulo de uma greve geral de protesto contra a inflação, planejada pelos membros do PCB, do PTB, da Liga Socialista Independente e do Partido Socialista Brasileiro.
 1	Em	em	ADP	_	_	2	case	_	_
@@ -431,7 +426,7 @@
 6-7	ao	_	_	_	_	_	_	_	_
 6	a	a	ADP	_	_	8	case	_	_
 7	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	8	det	_	_
-8	lado	lado	NOUN	_	_	2	nmod	_	_
+8	lado	lado	NOUN	_	Gender=Masc|Number=Sing	34	obl	_	_
 9-10	do	_	_	_	_	_	_	_	_
 9	de	de	ADP	_	_	11	case	_	_
 10	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	_	_
@@ -447,8 +442,8 @@
 19	de	de	ADP	_	_	20	case	_	_
 20	São	São	PROPN	_	Gender=Masc|Number=Sing	11	nmod	_	_
 21	Paulo	Paulo	PROPN	_	Number=Sing	20	flat:name	_	SpaceAfter=No
-22	,	,	PUNCT	_	_	25	punct	_	_
-23	organização	organização	NOUN	_	Gender=Fem|Number=Sing	11	appos	_	_
+22	,	,	PUNCT	_	_	23	punct	_	_
+23	organização	organização	NOUN	_	Gender=Fem|Number=Sing	11	conj	_	_
 24	intersindical	intersindical	ADJ	_	Gender=Fem|Number=Sing	23	amod	_	_
 25	formada	formar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	23	acl	_	_
 26-27	no	_	_	_	_	_	_	_	_
@@ -456,7 +451,7 @@
 27	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	28	det	_	_
 28	ano	ano	NOUN	_	Gender=Masc|Number=Sing	25	obl	_	_
 29	anterior	anterior	ADJ	_	Gender=Masc|Number=Sing	28	amod	_	SpaceAfter=No
-30	,	,	PUNCT	_	_	25	punct	_	_
+30	,	,	PUNCT	_	_	8	punct	_	_
 31	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	32	det	_	_
 32	MRS	MRS	PROPN	_	Gender=Masc|Number=Sing	34	nsubj	_	_
 33	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	34	expl	_	_
@@ -464,13 +459,13 @@
 35-36	à	_	_	_	_	_	_	_	_
 35	a	a	ADP	_	_	37	case	_	_
 36	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	37	det	_	_
-37	realização	realização	NOUN	_	Gender=Fem|Number=Sing	34	obl	_	_
+37	realização	realização	NOUN	_	Gender=Fem|Number=Sing	34	obj	_	_
 38	em	em	ADP	_	_	39	case	_	_
 39	São	São	PROPN	_	Gender=Masc|Number=Sing	34	obl	_	_
 40	Paulo	Paulo	PROPN	_	Number=Sing	39	flat:name	_	_
 41	de	de	ADP	_	_	43	case	_	_
 42	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	43	det	_	_
-43	greve	greve	NOUN	_	Gender=Fem|Number=Sing	34	obl	_	_
+43	greve	greve	NOUN	_	Gender=Fem|Number=Sing	39	nmod	_	_
 44	geral	geral	ADJ	_	Gender=Fem|Number=Sing	43	amod	_	_
 45	de	de	ADP	_	_	46	case	_	_
 46	protesto	protesto	NOUN	_	Gender=Masc|Number=Sing	43	nmod	_	_
@@ -491,13 +486,13 @@
 59-60	do	_	_	_	_	_	_	_	_
 59	de	de	ADP	_	_	61	case	_	_
 60	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	61	det	_	_
-61	PTB	PTB	PROPN	_	Number=Sing	57	nmod	_	SpaceAfter=No
+61	PTB	PTB	PROPN	_	Gender=Masc|Number=Sing	54	nmod	_	SpaceAfter=No
 62	,	,	PUNCT	_	_	61	punct	_	_
 63-64	da	_	_	_	_	_	_	_	_
 63	de	de	ADP	_	_	65	case	_	_
 64	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	65	det	_	_
-65	Liga	Liga	PROPN	_	Gender=Fem|Number=Sing	57	nmod	_	_
-66	Socialista	socialista	PROPN	_	Number=Sing	65	flat:name	_	_
+65	Liga	Liga	PROPN	_	Gender=Fem|Number=Sing	61	nmod	_	_
+66	Socialista	Socialista	PROPN	_	Number=Sing	65	flat:name	_	_
 67	Independente	Independente	PROPN	_	Number=Sing	65	flat:name	_	_
 68	e	e	CCONJ	_	_	71	cc	_	_
 69-70	do	_	_	_	_	_	_	_	_
@@ -506,7 +501,7 @@
 71	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	65	conj	_	_
 72	Socialista	Socialista	PROPN	_	Number=Sing	71	flat:name	_	_
 73	Brasileiro	brasileiro	PROPN	_	Number=Sing	71	flat:name	_	SpaceAfter=No
-74	.	.	PUNCT	_	_	34	punct	_	_
+74	.	.	PUNCT	_	_	34	punct	_	SpacesAfter=\n
 
 # sent_id = 13
 # text = O MRS considerava que a greve precipitaria um golpe militar, cancelando as eleições presidenciais de outubro de 1960.
@@ -516,7 +511,7 @@
 4	que	que	SCONJ	_	_	7	mark	_	_
 5	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	6	det	_	_
 6	greve	greve	NOUN	_	Gender=Fem|Number=Sing	7	nsubj	_	_
-7	precipitaria	precipitar	VERB	_	Mood=Cnd|Number=Sing|Person=1|VerbForm=Fin	3	ccomp	_	_
+7	precipitaria	precipitar	VERB	_	Mood=Cnd|Number=Sing|Person=3|VerbForm=Fin	3	ccomp	_	_
 8	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	9	det	_	_
 9	golpe	golpe	NOUN	_	Gender=Masc|Number=Sing	7	obj	_	_
 10	militar	militar	ADJ	_	Gender=Masc|Number=Sing	9	amod	_	SpaceAfter=No
@@ -529,12 +524,11 @@
 17	outubro	outubro	NOUN	_	Gender=Masc|Number=Sing	14	nmod	_	_
 18	de	de	ADP	_	_	19	case	_	_
 19	1960	1960	NUM	_	NumType=Card	17	nmod	_	SpaceAfter=No
-20	.	.	PUNCT	_	_	3	punct	_	_
+20	.	.	PUNCT	_	_	3	punct	_	SpacesAfter=\n
 
-# newpar
 # sent_id = 14
 # text = Ainda em dezembro de 1959, o MRS e o CST manifestaram-se contra a intervenção do Ministério do Trabalho na Federação dos Metalúrgicos de São Paulo com o objetivo de impedir a posse do presidente eleito, o janista Domingos Álvares.
-1	Ainda	ainda	ADV	_	Gender=Masc|Number=Sing	3	advmod	_	_
+1	Ainda	ainda	ADV	_	_	3	advmod	_	_
 2	em	em	ADP	_	_	3	case	_	_
 3	dezembro	dezembro	NOUN	_	Gender=Masc|Number=Sing	12	obl	_	_
 4	de	de	ADP	_	_	5	case	_	_
@@ -546,8 +540,8 @@
 10	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	_	_
 11	CST	CST	PROPN	_	Gender=Masc|Number=Sing	8	conj	_	_
 12-13	manifestaram-se	_	_	_	_	_	_	_	_
-12	manifestaram	manifestar	VERB	_	Mood=Ind|Number=Plur|Person=3|VerbForm=Fin	0	root	_	_
-13	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	12	expl	_	_
+12	manifestaram	manifestar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+13	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Plur|Person=3|PronType=Prs	12	expl	_	_
 14	contra	contra	ADP	_	_	16	case	_	_
 15	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	16	det	_	_
 16	intervenção	intervenção	NOUN	_	Gender=Fem|Number=Sing	12	obl	_	_
@@ -562,18 +556,18 @@
 23-24	na	_	_	_	_	_	_	_	_
 23	em	em	ADP	_	_	25	case	_	_
 24	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	25	det	_	_
-25	Federação	federação	PROPN	_	Gender=Fem|Number=Sing	19	nmod	_	_
+25	Federação	Federação	PROPN	_	Gender=Fem|Number=Sing	12	obl	_	_
 26-27	dos	_	_	_	_	_	_	_	_
 26	de	de	ADP	_	_	28	case	_	_
 27	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	28	det	_	_
-28	Metalúrgicos	Metalúrgicos	PROPN	_	Number=Sing	25	nmod	_	_
+28	Metalúrgicos	Metalúrgicos	NOUN	_	Gender=Masc|Number=Plur	25	nmod	_	_
 29	de	de	ADP	_	_	30	case	_	_
-30	São	São	PROPN	_	Gender=Masc|Number=Sing	25	nmod	_	_
+30	São	São	PROPN	_	Gender=Masc|Number=Sing	28	nmod	_	_
 31	Paulo	Paulo	PROPN	_	Number=Sing	30	flat:name	_	_
 32	com	com	ADP	_	_	34	case	_	_
 33	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	34	det	_	_
 34	objetivo	objetivo	NOUN	_	Gender=Masc|Number=Sing	12	obl	_	_
-35	de	de	ADP	_	_	36	mark	_	_
+35	de	de	SCONJ	_	_	36	mark	_	_
 36	impedir	impedir	VERB	_	VerbForm=Inf	34	acl	_	_
 37	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	38	det	_	_
 38	posse	posse	NOUN	_	Gender=Fem|Number=Sing	36	obj	_	_
@@ -582,12 +576,12 @@
 40	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	41	det	_	_
 41	presidente	presidente	NOUN	_	Gender=Masc|Number=Sing	38	nmod	_	_
 42	eleito	eleger	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	41	acl	_	SpaceAfter=No
-43	,	,	PUNCT	_	_	36	punct	_	_
+43	,	,	PUNCT	_	_	12	punct	_	_
 44	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	45	det	_	_
 45	janista	janista	NOUN	_	Gender=Masc|Number=Sing	12	obj	_	_
 46	Domingos	Domingos	PROPN	_	Gender=Masc|Number=Sing	45	appos	_	_
 47	Álvares	Álvares	PROPN	_	Number=Sing	46	flat:name	_	SpaceAfter=No
-48	.	.	PUNCT	_	_	12	punct	_	_
+48	.	.	PUNCT	_	_	12	punct	_	SpacesAfter=\n
 
 # sent_id = 15
 # text = A intervenção foi finalmente suspensa em março de 1960, quando a posse de Álvares representou uma vitória para os janistas.
@@ -601,20 +595,19 @@
 8	de	de	ADP	_	_	9	case	_	_
 9	1960	1960	NUM	_	NumType=Card	7	nmod	_	SpaceAfter=No
 10	,	,	PUNCT	_	_	5	punct	_	_
-11	quando	quando	ADV	_	_	16	advmod	_	_
+11	quando	quando	ADP	_	_	16	mark	_	_
 12	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	13	det	_	_
 13	posse	posse	NOUN	_	Gender=Fem|Number=Sing	16	nsubj	_	_
 14	de	de	ADP	_	_	15	case	_	_
-15	Álvares	Álvares	PROPN	_	Gender=Masc|Number=Plur	13	nmod	_	_
+15	Álvares	Álvares	PROPN	_	Gender=Masc|Number=Sing	13	nmod	_	_
 16	representou	representar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	advcl	_	_
 17	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	18	det	_	_
 18	vitória	vitória	NOUN	_	Gender=Fem|Number=Sing	16	obj	_	_
 19	para	para	ADP	_	_	21	case	_	_
 20	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	21	det	_	_
 21	janistas	janista	NOUN	_	Gender=Masc|Number=Plur	18	nmod	_	SpaceAfter=No
-22	.	.	PUNCT	_	_	5	punct	_	_
+22	.	.	PUNCT	_	_	5	punct	_	SpacesAfter=\n
 
-# newpar
 # sent_id = 16
 # text = Em preparação ao III Congresso Sindical Nacional, marcado para agosto de 1960 no Rio de Janeiro, passaram a reunir-se os representantes das várias tendências atuantes no sindicalismo paulista.
 1	Em	em	ADP	_	_	2	case	_	_
@@ -622,12 +615,12 @@
 3-4	ao	_	_	_	_	_	_	_	_
 3	a	a	ADP	_	_	5	case	_	_
 4	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	5	det	_	_
-5	III	Iii	PROPN	_	Gender=Masc|Number=Sing	2	nmod	_	_
+5	III	III	PROPN	_	Gender=Masc|Number=Sing	2	nmod	_	_
 6	Congresso	Congresso	PROPN	_	Number=Sing	5	flat:name	_	_
 7	Sindical	Sindical	PROPN	_	Number=Sing	5	flat:name	_	_
 8	Nacional	Nacional	PROPN	_	Number=Sing	5	flat:name	_	SpaceAfter=No
-9	,	,	PUNCT	_	_	10	punct	_	_
-10	marcado	marcar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	5	acl	_	_
+9	,	,	PUNCT	_	_	2	punct	_	_
+10	marcado	marcar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	2	acl	_	_
 11	para	para	ADP	_	_	12	case	_	_
 12	agosto	agosto	NOUN	_	Gender=Masc|Number=Sing	10	obl	_	_
 13	de	de	ADP	_	_	14	case	_	_
@@ -635,29 +628,29 @@
 15-16	no	_	_	_	_	_	_	_	_
 15	em	em	ADP	_	_	17	case	_	_
 16	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	17	det	_	_
-17	Rio	Rio	PROPN	_	Gender=Masc|Number=Sing	10	obl	_	_
+17	Rio	Rio	PROPN	_	Gender=Masc|Number=Sing	14	nmod	_	_
 18	de	de	ADP	_	_	19	case	_	_
 19	Janeiro	Janeiro	PROPN	_	Number=Sing	17	nmod	_	SpaceAfter=No
 20	,	,	PUNCT	_	_	10	punct	_	_
-21	passaram	passar	AUX	_	Mood=Ind|Number=Plur|Person=3|VerbForm=Fin	23	aux	_	_
-22	a	a	ADP	_	_	23	obl	_	_
+21	passaram	passar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+22	a	a	SCONJ	_	_	23	mark	_	_
 23-24	reunir-se	_	_	_	_	_	_	_	_
-23	reunir	reunir	VERB	_	VerbForm=Inf	0	root	_	_
-24	se	se	PRON	_	_	23	expl	_	_
+23	reunir	reunir	VERB	_	VerbForm=Inf	21	xcomp	_	_
+24	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Plur|Person=3|PronType=Prs	23	expl	_	_
 25	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	26	det	_	_
 26	representantes	representante	NOUN	_	Gender=Masc|Number=Plur	23	nsubj	_	_
 27-28	das	_	_	_	_	_	_	_	_
 27	de	de	ADP	_	_	30	case	_	_
 28	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	30	det	_	_
 29	várias	várias	DET	_	Gender=Fem|Number=Plur|PronType=Ind	30	det	_	_
-30	tendências	tendência	NOUN	_	Gender=Fem|Number=Plur	26	nmod	_	_
+30	tendências	tendências	NOUN	_	Gender=Fem|Number=Plur	26	nmod	_	_
 31	atuantes	atuante	ADJ	_	Gender=Fem|Number=Plur	30	amod	_	_
 32-33	no	_	_	_	_	_	_	_	_
 32	em	em	ADP	_	_	34	case	_	_
 33	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	34	det	_	_
 34	sindicalismo	sindicalismo	NOUN	_	Gender=Masc|Number=Sing	23	obl	_	_
 35	paulista	paulista	ADJ	_	Gender=Masc|Number=Sing	34	amod	_	SpaceAfter=No
-36	.	.	PUNCT	_	_	23	punct	_	_
+36	.	.	PUNCT	_	_	23	punct	_	SpacesAfter=\n
 
 # sent_id = 17
 # text = O MRS manteve-se favorável à abolição do Imposto Sindical e à criação de uma central sindical para agir “contra as pretensões dos comunistas”.
@@ -665,12 +658,12 @@
 2	MRS	MRS	PROPN	_	Gender=Masc|Number=Sing	3	nsubj	_	_
 3-4	manteve-se	_	_	_	_	_	_	_	_
 3	manteve	manter	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
-4	se	se	PRON	_	Case=Acc|Gender=Unsp|PronType=Prs	3	obj	_	_
-5	favorável	favorável	ADJ	_	Gender=Unsp|Number=Sing	3	xcomp	_	_
+4	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	3	expl	_	_
+5	favorável	favorável	ADJ	_	Gender=Masc|Number=Sing	3	xcomp	_	_
 6-7	à	_	_	_	_	_	_	_	_
 6	a	a	ADP	_	_	8	case	_	_
 7	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	8	det	_	_
-8	abolição	abolição	NOUN	_	Gender=Fem|Number=Sing	5	obl	_	_
+8	abolição	abolição	NOUN	_	Gender=Fem|Number=Sing	3	obl	_	_
 9-10	do	_	_	_	_	_	_	_	_
 9	de	de	ADP	_	_	11	case	_	_
 10	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	_	_
@@ -685,9 +678,9 @@
 18	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	19	det	_	_
 19	central	central	NOUN	_	Gender=Fem|Number=Sing	16	nmod	_	_
 20	sindical	sindical	ADJ	_	Gender=Fem|Number=Sing	19	amod	_	_
-21	para	para	ADP	_	_	22	mark	_	_
+21	para	para	SCONJ	_	_	22	mark	_	_
 22	agir	agir	VERB	_	VerbForm=Inf	19	acl	_	_
-23	“	“	PUNCT	_	_	22	punct	_	SpaceAfter=No
+23	“	“	PUNCT	_	_	26	punct	_	SpaceAfter=No
 24	contra	contra	ADP	_	_	26	case	_	_
 25	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	26	det	_	_
 26	pretensões	pretensão	NOUN	_	Gender=Fem|Number=Plur	22	obl	_	_
@@ -695,19 +688,18 @@
 27	de	de	ADP	_	_	29	case	_	_
 28	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	29	det	_	_
 29	comunistas	comunista	NOUN	_	Gender=Masc|Number=Plur	26	nmod	_	SpaceAfter=No
-30	”	”	PUNCT	_	_	22	punct	_	SpaceAfter=No
-31	.	.	PUNCT	_	_	3	punct	_	_
+30	”	”	PUNCT	_	_	26	punct	_	SpaceAfter=No
+31	.	.	PUNCT	_	_	3	punct	_	SpacesAfter=\n
 
-# newpar
 # sent_id = 18
 # text = O MRS e o Correio Sindical apoiaram as eleições presidenciais de outubro de 1960.
 1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	_	_
 2	MRS	MRS	PROPN	_	Gender=Masc|Number=Sing	7	nsubj	_	_
 3	e	e	CCONJ	_	_	5	cc	_	_
 4	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	5	det	_	_
-5	Correio	correio	PROPN	_	Gender=Fem|Number=Sing	2	conj	_	_
+5	Correio	Correio	PROPN	_	Gender=Masc|Number=Sing	2	conj	_	_
 6	Sindical	Sindical	PROPN	_	Number=Sing	5	flat:name	_	_
-7	apoiaram	apoiar	VERB	_	Mood=Ind|Number=Plur|Person=3|VerbForm=Fin	0	root	_	_
+7	apoiaram	apoiar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 8	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	9	det	_	_
 9	eleições	eleição	NOUN	_	Gender=Fem|Number=Plur	7	obj	_	_
 10	presidenciais	presidencial	ADJ	_	Gender=Fem|Number=Plur	9	amod	_	_
@@ -715,7 +707,7 @@
 12	outubro	outubro	NOUN	_	Gender=Masc|Number=Sing	9	nmod	_	_
 13	de	de	ADP	_	_	14	case	_	_
 14	1960	1960	NUM	_	NumType=Card	12	nmod	_	SpaceAfter=No
-15	.	.	PUNCT	_	_	7	punct	_	_
+15	.	.	PUNCT	_	_	7	punct	_	SpacesAfter=\n
 
 # sent_id = 19
 # text = O jornal foi provavelmente financiado por grupos favoráveis a Jânio Quadros, interessados na conquista de bases trabalhistas.
@@ -728,20 +720,19 @@
 7	grupos	grupo	NOUN	_	Gender=Masc|Number=Plur	5	obl:agent	_	_
 8	favoráveis	favorável	ADJ	_	Gender=Masc|Number=Plur	7	amod	_	_
 9	a	a	ADP	_	_	10	case	_	_
-10	Jânio	Jânio	PROPN	_	Gender=Masc|Number=Sing	7	nmod	_	_
+10	Jânio	Jânio	PROPN	_	Gender=Masc|Number=Sing	5	obl	_	_
 11	Quadros	Quadros	PROPN	_	Number=Sing	10	flat:name	_	SpaceAfter=No
-12	,	,	PUNCT	_	_	5	punct	_	_
-13	interessados	interessado	ADJ	_	Gender=Masc|Number=Plur	7	amod	_	_
+12	,	,	PUNCT	_	_	13	punct	_	_
+13	interessados	interessado	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part	10	acl	_	_
 14-15	na	_	_	_	_	_	_	_	_
 14	em	em	ADP	_	_	16	case	_	_
 15	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	16	det	_	_
 16	conquista	conquista	NOUN	_	Gender=Fem|Number=Sing	13	obl	_	_
 17	de	de	ADP	_	_	18	case	_	_
-18	bases	bases	NOUN	_	Gender=Fem|Number=Plur	16	nmod	_	_
-19	trabalhistas	trabalhista	ADJ	_	Gender=Masc|Number=Plur	18	amod	_	SpaceAfter=No
-20	.	.	PUNCT	_	_	5	punct	_	_
+18	bases	base	NOUN	_	Gender=Fem|Number=Plur	16	nmod	_	_
+19	trabalhistas	trabalhista	ADJ	_	Gender=Fem|Number=Plur	18	amod	_	SpaceAfter=No
+20	.	.	PUNCT	_	_	5	punct	_	SpacesAfter=\n
 
-# newpar
 # sent_id = 20
 # text = Em janeiro de 1961, o MRS começou a perder seus membros mais ativos.
 1	Em	em	ADP	_	_	2	case	_	_
@@ -751,14 +742,14 @@
 5	,	,	PUNCT	_	_	2	punct	_	_
 6	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	7	det	_	_
 7	MRS	MRS	PROPN	_	Gender=Masc|Number=Sing	10	nsubj	_	_
-8	começou	começar	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	10	aux	_	_
-9	a	a	ADP	_	_	10	obl	_	_
-10	perder	perder	VERB	_	VerbForm=Inf	0	root	_	_
+8	começou	começar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+9	a	a	SCONJ	_	_	10	mark	_	_
+10	perder	perder	VERB	_	VerbForm=Inf	8	xcomp	_	_
 11	seus	seu	DET	_	Gender=Masc|Number=Plur|PronType=Prs	12	det	_	_
 12	membros	membro	NOUN	_	Gender=Masc|Number=Plur	10	obj	_	_
 13	mais	mais	ADV	_	_	14	advmod	_	_
 14	ativos	ativo	ADJ	_	Gender=Masc|Number=Plur	12	amod	_	SpaceAfter=No
-15	.	.	PUNCT	_	_	10	punct	_	_
+15	.	.	PUNCT	_	_	10	punct	_	SpacesAfter=\n
 
 # sent_id = 21
 # text = O metalúrgico Carleto Ferrer Favali, mantendo basicamente a mesma posição da época em que rompeu com o PCB, retirou-se da organização, sendo acompanhado por aproximadamente 50 operários.
@@ -768,29 +759,29 @@
 4	Ferrer	Ferrer	PROPN	_	Number=Sing	3	flat:name	_	_
 5	Favali	Favali	PROPN	_	Number=Sing	3	flat:name	_	SpaceAfter=No
 6	,	,	PUNCT	_	_	7	punct	_	_
-7	mantendo	manter	VERB	_	VerbForm=Ger	22	advcl	_	_
+7	mantendo	manter	VERB	_	VerbForm=Ger	2	acl	_	_
 8	basicamente	basicamente	ADV	_	_	7	advmod	_	_
 9	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	11	det	_	_
 10	mesma	mesmo	ADJ	_	Gender=Fem|Number=Sing	11	amod	_	_
-11	posição	posição	NOUN	_	Gender=Fem|Number=Sing	22	nsubj	_	_
+11	posição	posição	NOUN	_	Gender=Fem|Number=Sing	7	obj	_	_
 12-13	da	_	_	_	_	_	_	_	_
 12	de	de	ADP	_	_	14	case	_	_
 13	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	14	det	_	_
 14	época	época	NOUN	_	Gender=Fem|Number=Sing	11	nmod	_	_
 15	em	em	ADP	_	_	16	case	_	_
-16	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	17	obl	_	_
-17	rompeu	romper	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	11	acl:relcl	_	_
+16	que	que	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	17	obl	_	_
+17	rompeu	romper	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	14	acl:relcl	_	_
 18	com	com	ADP	_	_	20	case	_	_
 19	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	20	det	_	_
-20	PCB	PCB	PROPN	_	Gender=Masc|Number=Sing	17	obl	_	SpaceAfter=No
+20	PCB	PCB	PROPN	_	Gender=Masc|Number=Sing	17	obj	_	SpaceAfter=No
 21	,	,	PUNCT	_	_	17	punct	_	_
 22-23	retirou-se	_	_	_	_	_	_	_	_
 22	retirou	retirar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
-23	se	se	PRON	_	Case=Acc|Gender=Unsp|PronType=Prs	22	expl	_	_
+23	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	22	expl	_	_
 24-25	da	_	_	_	_	_	_	_	_
 24	de	de	ADP	_	_	26	case	_	_
 25	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	26	det	_	_
-26	organização	organização	NOUN	_	Gender=Fem|Number=Sing	22	obl	_	SpaceAfter=No
+26	organização	organização	NOUN	_	Gender=Fem|Number=Sing	22	obj	_	SpaceAfter=No
 27	,	,	PUNCT	_	_	29	punct	_	_
 28	sendo	ser	AUX	_	VerbForm=Ger	29	aux:pass	_	_
 29	acompanhado	acompanhar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	22	advcl	_	_
@@ -798,7 +789,7 @@
 31	aproximadamente	aproximadamente	ADV	_	_	33	advmod	_	_
 32	50	50	NUM	_	NumType=Card	33	nummod	_	_
 33	operários	operário	NOUN	_	Gender=Masc|Number=Plur	29	obl:agent	_	SpaceAfter=No
-34	.	.	PUNCT	_	_	22	punct	_	_
+34	.	.	PUNCT	_	_	22	punct	_	SpacesAfter=\n
 
 # sent_id = 22
 # text = No mesmo mês, Favali anunciou a formação da Aliança Sindical de Libertação Operária.
@@ -820,5 +811,5 @@
 14	de	de	ADP	_	_	15	case	_	_
 15	Libertação	Libertação	PROPN	_	Number=Sing	12	nmod	_	_
 16	Operária	Operária	PROPN	_	Number=Sing	15	flat:name	_	SpaceAfter=No
-17	.	.	PUNCT	_	_	7	punct	_	_
+17	.	.	PUNCT	_	_	7	punct	_	SpacesAfter=\n
 
