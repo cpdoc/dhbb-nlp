@@ -1,7 +1,14 @@
 
 (ql:quickload :cl-conllu)
 
-(in-package :cl-conllu)
+;; http://cl-cookbook.sourceforge.net/packages.html
+
+(defpackage :working
+  (:use :cl :cl-conllu))
+
+(in-package :working)
+
+;; util
 
 (defun merge-it (old new)
   (setf (sentence-meta new)
@@ -10,6 +17,42 @@
 	(sentence-meta new))
   new)
 
+
+;; firt approach : more imperative style using hash-table
+
+(defun index (fn)
+  (let ((tb    (make-hash-table :test #'equal))
+	(sents (remove-if-not (lambda (s)
+				(equal "revisado" (sentence-meta-value s "status")))
+			      (read-conllu fn))))
+    (dolist (s sents tb)
+      (setf (gethash (sentence-text s) tb)
+	    s))))
+
+
+(defun update-files (files tb)
+  (dolist (fn files tb)
+    (if (> (hash-table-count tb) 0)
+	(let (changed updated)
+	  (format t "update-file ~a ~a~%" fn (hash-table-count tb))
+	  (dolist (s (read-conllu fn))
+	    (let ((rs (gethash (sentence-text s) tb nil)))
+	      (if rs
+		  (progn (push (merge-it s rs) updated)
+			 (remhash (sentence-text s) tb) ;; not necessary
+			 (setf changed t))
+		  (push s updated))))
+	  (if changed
+	      (write-conllu (reverse updated) fn)))
+	(format t "update-file ~a no sentence remain.~%" fn))))
+
+
+(defun main ()
+  (update-files (directory "~/work/cpdoc/dhbb-nlp/udp/*.conllu")
+		(index #P"frases.conllu")))
+
+
+;; second approach : more functional style 
 
 (defun update-file (fn sents)
   (format t "update-file ~a ~a~%" fn (length sents))
