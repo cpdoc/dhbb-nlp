@@ -12,8 +12,8 @@ awk '{split($2,a,/\+/); print $1,a[1]}' $MORPHO_DIR/*.dict | sort | uniq -c | aw
 
 # cria um arquivo com os lemas que estão em verbs.verb e não estão no
 # morpho.verb
-join -v 1 verbs.dhbb verbs.morpho > verb-lemmas-not-morpho.csv
+join -v 1 verbs.dhbb verbs.morpho > verb-lemmas-not-morpho.tsv
 
 # now by form instead of lemma
-join -v 1 tverbs.dhbb tverbs.morpho > verb-forms-not-morpho.csv
+join -v 1 tverbs.dhbb tverbs.morpho > verb-forms-not-morpho.tsv
 rm verbs.dhbb tverbs.dhbb verbs.morpho tverbs.morpho
