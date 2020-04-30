@@ -6,7 +6,7 @@ for f in ../raw/*.raw; do
 done
 
 echo run java...
-java -cp "/Users/ar/work/apache-opennlp-1.9.2/lib/*:." Detector /Users/ar/work/apache-opennlp-1.9.2/models/pt-sent.bin . .tmp .out
+java -cp "/Users/ar/work/apache-opennlp-1.9.2/lib/*:." Detector bosque_model.bin . .tmp .out
 
 echo post processing...
 for f in *.out; do
