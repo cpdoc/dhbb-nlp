@@ -4,7 +4,7 @@ sh gen_dataset.sh
 sh word2vec.sh
 mv model_enhanced.bin model_enhanced.prev
 
-udpipe --train --tokenizer --tagger --parser="transition_system=swap;transition_oracle=static_lazy" model_enhanced.bin --heldout=data_dev.conllu datas_train.conllu
+udpipe --train --tokenizer --tagger --parser="transition_system=swap;transition_oracle=static_lazy" model_enhanced.bin --heldout=data_dev.conllu data_train.conllu
 
 SENT_PATH=../sents
 

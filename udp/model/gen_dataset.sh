@@ -18,4 +18,4 @@ cat "$BOSQUE_DIR/pt_bosque-ud-dev.conllu" gold_dev.conllu > data_dev.conllu
 
 echo "Datasets created...\nTrain set: data_train.conllu \nTest set: data_test.conllu \nDev set: data_dev.conllu\n"
 
-rm frases_rev.tmp gold_*
+rm gold_*
