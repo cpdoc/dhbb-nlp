@@ -46,11 +46,9 @@
 	(format t "update-file ~a no sentence remain.~%" fn))))
 
 
-(defun main ()
-  (update-files (directory "~/work/cpdoc/dhbb-nlp/udp/*.conllu")
-		(index #P"frases.conllu")))
-
-
+;(defun main ()
+;  (update-files (directory "~/work/cpdoc/dhbb-nlp/udp/*.conllu")
+;		(index #P"frases.conllu")))
 
 
 ;; f : filename -> list of sentences
@@ -59,19 +57,66 @@
 		   (equal "revisado" (sentence-meta-value s "status")))
 		 (read-conllu fn)))
 
-(defun collect-revised (pathspec)
+ (defun collect-revised (pathspec)
   (reduce (lambda (res fn)
 	    (format t "Looking ~a~%" fn)
 	    (let ((r (collect-from-file fn)))
 	      (if r (cons (cons fn r) res) res)))
 	  (directory pathspec) :initial-value nil))
 
-(defun collect-revised (pathspec)
-  (loop for fn in (directory pathspec)
-	for sents = (collect-from-file fn)
-	do (format t "Looking ~a~%" fn)
-	when sents
-	  collect (cons fn sents)))
+;;(defun collect-revised (pathspec)
+;;  (loop for fn in (directory pathspec)
+;;	for sents = (collect-from-file fn)
+;;	do (format t "Looking ~a~%" fn)
+;;	when sents
+;;	  collect (cons fn sents)))
+
+(defun write-from-revised (sent)
+  (let (sents)
+    (loop for obj in sent
+      do (push  (cadr obj) sents)
+         (push (cons "file" (file-namestring (car obj))) (sentence-meta (cadr obj))))
+        (write-conllu (reverse sents) "frases_rev.tmp")))
+
+(defun to-udp (file udp)
+  (let ((sent (read-conllu file)))
+    (loop for obj in sent
+         do (let ((sent_num (parse-integer (cdr (car (remove-if-not (lambda (s) (equal "sent_id" (car s))) (sentence-meta obj)))))))
+         (let((fn (cdr (car (sentence-meta obj)))))
+           (let ((udp_file (read-conllu (merge-pathnames udp (parse-namestring fn)))))
+             (setf (sentence-meta obj) (cdr (sentence-meta obj)))
+             (setf (nth (- sent_num 1) udp_file) obj)
+             (write-conllu udp_file (merge-pathnames udp (parse-namestring fn)))
+             (format t "Done file ~a~%" fn)))))))
+
+(defun gen-dataset (path)
+  (let ((sents (read-conllu path)))
+    (let ((len (list-length sents)))
+      (let ((train_len (round (* 0.65 len))))
+        (let ((test_len (round (* 0.175 len))))
+            (let ((train_set (subseq sents 0 train_len)))
+              (let ((test_set (subseq sents train_len (+ train_len test_len))))
+                (let ((dev_set (subseq sents (+ train_len test_len) len)))
+                  (write-conllu train_set "gold_train.conllu")
+                  (format t "~a~%" "train set saved in gold_train.conllu...")
+                  (write-conllu test_set "gold_test.conllu")
+                  (format t "~a~%" "test set saved in gold_test.conllu...")
+                  (write-conllu dev_set "gold_dev.conllu")
+                  (format t "~a~%" "dev set saved in gold_dev.conllu...")
+
+
+
+))))))))
+
+;;(defun main()
+;;  (write-from-revised (collect-revised #P"/media/lucas/Lucas/work/dhbb-nlp/udpipe_2/"))
+;;  (to-udp #P"/media/lucas/Lucas/work/dhbb-nlp/primeiras_frases/frases.texte" #P"/media/lucas/Lucas/work/dhbb-nlp/udpipe_2")
+;;)
+
+;(defun create-revised-file (fn)
+;  (let ((sents (collect-revised #P"/media/lucas/Lucas/work/dhbb-nlp/udp/*.conllu")))
+;       (write-conllu sents fn)))
+  
 
 ;; dhbb-train.conllu dhbb-test.conllu dhbb-dev.conllu
 
