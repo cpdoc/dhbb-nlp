@@ -1,44 +1,16 @@
 
-JAVA Program
+Java Code (deprecated)
 
 compile:
-
 javac -cp "/Users/ar/work/apache-opennlp-1.9.2/lib/*" Detector.java
 
 run:
-
 java -cp "/Users/ar/work/apache-opennlp-1.9.2/lib/*:." Detector
 
-EVAL
+ABCL Lisp 
 
-Performance:
-
-ar@leme opennlp % time sh make.sh
-...
-sh make.sh  109.56s user 183.61s system 74% cpu 6:31.34 total
-
-
-ar@leme opennlp % time make
-...
-make  3303.68s user 807.21s system 147% cpu 46:31.28 total
-
-diffs between make.sh and Makefile are due to some sentences with an
-extra space in the end in the version produced using the lib. But I
-also found:
-
-6321.sent
-211c211
-< Por outro lado, a produção industrial diversificou-se, ganhando maior ênfase o setor de bens de produção, conforme se verifica pela leitura do seguinte quadro:
-
-5802.sent
-61c61
-< Prevaleceu, todavia, o voto de que se proseguisse, gradativamente, a incorporação dos trabalhadores dos campos ao regime do direito social, concedendo-se-lhes o direito às férias, além de lhes serem tornadas extensivas as garantias para a celebração de contrato individual e o direito, que já o código civil estabelecia, ao aviso prévio;
-
-8781.sent
-12c12
-< As propostas concretas para esse planejamento distribuíram-se pelas seguintes áreas:
-
-
+run:
+./make.sh
 
 TRAINING
 
@@ -47,16 +19,23 @@ Os arquivos pertinentes ao treino do modelo são:
 amostras_DHBB.sent
 param.txt
 
-O arquivo amostras_DHBB.sent contém uma amostra de aproximadamente 200 frases do DHBB onde o modelo pré treinado do Bosque errou a segmentação O arquivo param.txt possui os parâmetros do treino. A ideia é unir essas frases ao Bosque e retreinar o modelo. 
+O arquivo amostras_DHBB.sent contém uma amostra de aproximadamente 200
+frases do DHBB onde o modelo pré treinado do Bosque errou a
+segmentação O arquivo param.txt possui os parâmetros do treino. A
+ideia é unir essas frases ao Bosque e retreinar o modelo.
 
-Para tal, proceda da seguinte maneira, faça o download do arquivo de treino do Bosque:
+Para tal, proceda da seguinte maneira, faça o download do arquivo de
+treino do Bosque:
+
 
 ´´´
 wget https://github.com/UniversalDependencies/UD_Portuguese-Bosque/raw/master/pt_bosque-ud-train.conllu
 
 ´´´
 
-Utilize o conversor do OpenNLP para extrair as sentenças do arquivo .conllu de treino do Bosque.
+Utilize o conversor do OpenNLP para extrair as sentenças do arquivo
+.conllu de treino do Bosque.
+
 
 ´´´
 opennlp SentenceDetectorConverter conllu -sentencesPerSample 10 -data pt_bosque-ud-train.conllu > bosque_train.sent
@@ -79,6 +58,7 @@ Remova os arquivos não mais necessários
 ´´´ 
 rm amostras_dhbb.sent arquivo_treino.sent bosque_train.sent pt_bosque-ud-train.conllu 
 ´´´
+
 Ou rode
 
 ´´´ 

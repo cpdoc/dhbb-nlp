@@ -7,11 +7,11 @@
 	(directory "/Users/ar/work/apache-opennlp-1.9.2/lib/*.jar"))
 
 ;; we can also use ¶ to mark paragraphs. we can avoid the two calls
-;; for regex-replace-all.
+;; for regex-replace-all? we can pre-compile the regular expressions
+;; too.
 (defun read-content (fn)
-  (let* ((d1 (cl-ppcre:regex-replace-all "\\n" (alexandria:read-file-into-string fn) " "))
-	 (d3 (string-trim '(#\Space) (cl-ppcre:regex-replace-all "[ ]+" d1 " "))))
-    d3))
+  (let* ((d1 (cl-ppcre:regex-replace-all "\\n" (alexandria:read-file-into-string fn) " ")))
+    (string-trim '(#\Space) (cl-ppcre:regex-replace-all "[ ]{2,}" d1 " "))))
 
 
 (defun main ()
