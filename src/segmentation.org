@@ -1,0 +1,53 @@
+#+title: Comparação de Segmentação de Sentenças
+#+author: Alexandre Rademaker
+
+#+BEGIN_SRC lisp
+  (ql:quickload :serapeum)
+
+  (defun read-lines (fn)
+    (with-open-file (in fn)
+      (loop for line = (read-line in nil nil)
+	    while line
+	    collect line)))
+
+  (defun stat (fn)
+    (list (length (read-lines fn))
+	  (length (read-lines (merge-pathnames #P"../nltk/" fn)))
+	  (length (read-lines (merge-pathnames #P"../fl/" fn)))))
+
+  (defun main ()
+    (serapeum:assort (mapcar #'stat (directory "../opennlp/*.sent"))
+		     :key (lambda (lst) (length (remove-duplicates lst)))))
+#+END_SRC
+
+#+BEGIN_SRC lisp :results list
+(mapcar #'length (main))
+#+END_SRC
+
+#+RESULTS:
+- 6054 // all eq
+- 1251 // two eq
+- 388  // no eq 
+
+
+#+BEGIN_SRC lisp :results list
+  (let* ((res (main))
+	 (teq (cadr res))
+	 (neq (caddr res)))
+    (list (mapcar #'length (serapeum:assort teq :key (lambda (lst)
+						       (cond ((equal (car lst) (cadr lst)) 12)
+							     ((equal (car lst) (caddr lst)) 13)
+							     ((equal (cadr lst) (caddr lst)) 23)))))
+	  (mapcar #'length (multiple-value-list (serapeum:partition (lambda (lst) (apply #'> lst)) neq)))))
+#+END_SRC
+
+#+RESULTS:
+- (265 333 653)
+- (271 117)
+
+Vale examinar os 117 casos onde o OpenNLP não produziu mais sentenças
+que o NLTK que não produziu mais setenças que o Freeling, o que era o
+esperado. Estes podem ser casos onde o OpenNLP não está segmentando o
+que os outros estão. NLTK-Freeling concordam quase 2x mais que
+OpenNLP-NLTK e OpenNLP-Freeling.
+
