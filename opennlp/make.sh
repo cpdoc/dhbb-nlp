@@ -1,4 +1,2 @@
-#!/bin/bash
-
-abcl --load detector.lisp --eval '(main)' --eval '(quit)'
-
+#!/usr/bin/env bash
+abcl --batch --load detector.lisp --eval '(main)' --eval '(quit)'

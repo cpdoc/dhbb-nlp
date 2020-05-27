@@ -1,5 +1,5 @@
 
-;; to be runned in ABCL
+;; to be runned with ABCL Lisp
 
 (ql:quickload '(:cl-ppcre :alexandria))
 
