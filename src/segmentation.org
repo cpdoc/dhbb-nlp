@@ -58,12 +58,12 @@ dizer que NLTK e Freeling estejam mais certos, pelo contrário, eles
 podem estar errando juntos.
 
 
-#+BEGIN_SRC lisp :results list
+#+BEGIN_SRC lisp :results list :cache yes
   (subseq (remove-if-not (lambda (lst) (< (cadr lst) (caddr lst))) (caddr (main)))
 	  0 10)
 #+END_SRC
 
-#+RESULTS:
+#+RESULTS[6454b1d17bb58557f15e110f44a0e619862058be]:
 - ("10928" 15 16 13)
 - ("11046" 31 32 30)
 - ("11160" 67 70 66)
@@ -75,3 +75,6 @@ podem estar errando juntos.
 - ("11547" 36 39 37)
 - ("11587" 39 40 38)
 
+
+Outros filtros são possíveis para acharmos os subsets que
+potencialmente são os casos complicados.
