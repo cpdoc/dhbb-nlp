@@ -11,41 +11,45 @@
 	    collect line)))
 
   (defun stat (fn)
-    (list (length (read-lines fn))
+    (list (pathname-name fn)
+	  (length (read-lines fn))
 	  (length (read-lines (merge-pathnames #P"../nltk/" fn)))
 	  (length (read-lines (merge-pathnames #P"../fl/" fn)))))
 
   (defun main ()
     (serapeum:assort (mapcar #'stat (directory "../opennlp/*.sent"))
-		     :key (lambda (lst) (length (remove-duplicates lst)))))
-#+END_SRC
-
-#+BEGIN_SRC lisp :results list
-(mapcar #'length (main))
+		     :key (lambda (lst) (length (remove-duplicates (cdr lst))))))
 #+END_SRC
 
 #+RESULTS:
-- 6054 // all eq
-- 1251 // two eq
-- 388  // no eq 
+: MAIN
+
+#+BEGIN_SRC lisp :results list 
+  (mapcar (lambda (a b) (list (length a) b)) (main) '(all-eq two-eq no-eq))
+#+END_SRC
+
+#+RESULTS[d1c66e04f04e8d8604d5fe7a0fec634f191ec957]:
+- (6055 ALL-EQ)
+- (1251 TWO-EQ)
+- (387 NO-EQ)
 
 
-#+BEGIN_SRC lisp :results list
+#+BEGIN_SRC lisp :results list 
   (let* ((res (main))
 	 (teq (cadr res))
 	 (neq (caddr res)))
     (list (mapcar #'length (serapeum:assort teq :key (lambda (lst)
-						       (cond ((equal (car lst) (cadr lst)) 12)
-							     ((equal (car lst) (caddr lst)) 13)
-							     ((equal (cadr lst) (caddr lst)) 23)))))
-	  (mapcar #'length (multiple-value-list (serapeum:partition (lambda (lst) (apply #'> lst)) neq)))))
+						       (cond ((equal (cadr lst) (caddr lst)) 12)
+							     ((equal (cadr lst) (cadddr lst)) 13)
+							     ((equal (caddr lst) (cadddr lst)) 23)))))
+	  (mapcar #'length (multiple-value-list (serapeum:partition (lambda (lst) (apply #'> (cdr lst))) neq)))))
 #+END_SRC
 
-#+RESULTS:
-- (265 333 653)
-- (271 117)
+#+RESULTS[28d9fa48c5cdefa3f9a429fcbd54a0a3ff96d37d]:
+- (265 332 654)
+- (271 116)
 
-Vale examinar os 117 casos onde o OpenNLP não produziu mais sentenças
+Vale examinar os 116 casos onde o OpenNLP não produziu mais sentenças
 que o NLTK que não produziu mais setenças que o Freeling, o que era o
 esperado. Estes podem ser casos onde o OpenNLP não está segmentando o
 que os outros estão. NLTK-Freeling concordam quase 2x mais que
@@ -54,4 +58,20 @@ dizer que NLTK e Freeling estejam mais certos, pelo contrário, eles
 podem estar errando juntos.
 
 
+#+BEGIN_SRC lisp :results list
+  (subseq (remove-if-not (lambda (lst) (< (cadr lst) (caddr lst))) (caddr (main)))
+	  0 10)
+#+END_SRC
+
+#+RESULTS:
+- ("10928" 15 16 13)
+- ("11046" 31 32 30)
+- ("11160" 67 70 66)
+- ("11419" 29 34 26)
+- ("11440" 40 41 38)
+- ("11512" 14 15 13)
+- ("11526" 20 23 16)
+- ("11530" 22 23 21)
+- ("11547" 36 39 37)
+- ("11587" 39 40 38)
 
