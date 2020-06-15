@@ -1,4 +1,9 @@
-# pyconll documentation: https://readthedocs.org/projects/pyconll/downloads/pdf/latest/
+"""
+pyconll documentation: https://readthedocs.org/projects/pyconll/downloads/pdf/latest/
+
+Utiliza a bibioteca pyconll para adicionar flags que informam 
+se a segmentação da sentença e se a análise sintática foram revisadas.
+"""
 
 import os
 import pyconll
@@ -16,9 +21,11 @@ if __name__ == '__main__':
 	for file in files:
 		conllu = pyconll.load_from_file(dir_+file)
 		for sentence in conllu:
-			sentence.set_meta("reviewed", "no")
+			if sentence.meta_present("golden_split") == False:
+				sentence.set_meta("golden_split", "no")
+			if sentence.meta_present("golden_sintactic") == False:
+				sentence.set_meta("golden_syntactic", "no")
 		f = open(dir_+file, "w")
 		f.write(conllu.conll())
 		f.close()
-
 
