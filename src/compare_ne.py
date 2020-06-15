@@ -1,10 +1,6 @@
 from conllu import parse
-import json, os
+import json, os, pickle
 
-'''
-Compara as entidades geradas em dhbb-json com as análises sintáticas geradas pelo udp em dhbb-nlp e cria um log das entidades que não estão em uma subárvore na análise do udpipe.
-A premissa é que tais entidades estão erroneamente classificadas nos conllu.
-'''
 
 ###Funções para decidir se determinado MWT está corretamente analisado em um arquivo .conllu
 
@@ -138,13 +134,20 @@ if __name__ == '__main__':
     path_json = '/media/lucas/Lucas/work/dhbb-json/JSON/'
     path_udp = '/media/lucas/Lucas/work/dhbb-nlp/udp/'
     files = [x.replace('.conllu','') for x in os.listdir('/media/lucas/Lucas/work/dhbb-nlp/udp') if '.conllu' in x]
+    corr = open('corretos.log','w')
     dic = {}
     file_ = open('entidades.log','w')
+    error = open('error.log','w')
+    pic = open('dict_stats.pickle', 'wb')
     cont1 = 0
     for arq in files:
         cont1+=1
         cont2=0
-        data = json.load(open(path_json+arq+'.json'))
+        try:
+            data = json.load(open(path_json+arq+'.json'))
+        except:
+            error.write("Erro na leitura do arquivo {}.json\n".format(arq))
+            continue
         ne = [x for x in data['entities'] if len(x['text'].split()) > 1]
         for js in ne:
             cont2+=1
@@ -157,20 +160,24 @@ if __name__ == '__main__':
                 print("Erro na execução: token {}, arquivo {}.".format(token,arq))
                 file_.write('token="{}" file={}.conllu sent_id={} tipo={} status=ERROR_EXEC\n'.format(token,arq,numero,js['type']))
                 continue
+            numero = get_tree(path_udp+arq+'.conllu',token,position=True,get_first=True)
             if boo == False:
-                numero = get_tree(path_udp+arq+'.conllu',token,position=True,get_first=True)
                 #print('Token "{}" provavelmente mal analisado no arquivo {}, sentença número {}.\n'.format(token,arq,numero))
                 file_.write('token="{}" file={}.conllu sent_id={} tipo={} status=OK\n'.format(token,arq,numero,js['type']))
                 if js['type'] not in dic.keys():
-                    dic['type'] = {'correto':0,'errado':1}
+                    dic[js['type']] = {'correto':0,'errado':1}
                 else:
-                    dic['type']['errado']+=1
+                    dic[js['type']]['errado']+=1
             else:
+                corr.write('token="{}" file={}.conllu sent_id={} tipo={} status=OK\n'.format(token,arq,numero,js['type']))
                 if js['type'] not in dic.keys():
-                    dic['type'] = {'correto':1,'errado':0}
+                    dic[js['type']] = {'correto':1,'errado':0}
                 else:
-                    dic['type']['correto']+=1    
+                    dic[js['type']]['correto']+=1    
             print('Arquivo {}, numero {} de {}, {}% completo...'.format(arq,cont1,len(files), 100*round(cont2/len(ne),2)),end='\r')
+            if cont2 == len(ne):
+                print("Salvando dicionário de estatísticas...\n")
+                pickle.dump(dic,pic)
     for x in dic.keys():
         print("Tipo: {}, Total: {}, Análises corretas: {}, Análises erradas: {}\n".format(x,dic[x]['correto']+dic[x]['errado'],dic[x]['correto'],dic[x]['errado']))
                 
