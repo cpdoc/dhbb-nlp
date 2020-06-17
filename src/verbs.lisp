@@ -4,6 +4,9 @@
 (in-package :conllu.user)
 
 
+(defparameter *exdeprel* '("punct" "mark" "cc"))
+
+
 (defun collect-verb-from-sent (s stack)
   (do ((node (pop stack) (pop stack))
        (first t nil)
@@ -13,7 +16,7 @@
       (if (equal "VERB" (token-upostag node))
 	  (push (list (token-lemma node)
 		      (mapcar #'token-deprel (remove-if (lambda (n)
-							  (equal "PUNCT" (token-upostag n)))
+							  (member (token-deprel n) *exdeprel* :test #'equal))
 							children)))
 		result))
       (dolist (c children) (push c stack)))))
