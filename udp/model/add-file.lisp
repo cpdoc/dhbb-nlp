@@ -80,7 +80,7 @@
          (push (cons "file" (file-namestring (car obj))) (sentence-meta (cadr obj))))
         (write-conllu (reverse sents) "frases_rev.tmp")))
 
-;; given a file_path and a path, write every sentence in fild to its respective place in the folder with conllu sentences 
+;; given a file_path and a path, write every sentence in file to its respective place in the folder with conllu sentences 
 
 (defun to-udp (file udp)
   (let ((sent (read-conllu file)))

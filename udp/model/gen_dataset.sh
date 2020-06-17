@@ -4,7 +4,7 @@ BOSQUE_DIR="/media/lucas/Lucas/work/UD_Portuguese-Bosque"
 
 sbcl --load add-file.lisp --eval '(in-package :working)' --eval '(write-from-revised (collect-revised #P"../*.conllu"))' --non-interactive
 
-sbcl --load add-file.lisp --eval '(in-package :working)' --eval '(to-udp #P"./frases_rev.tmp" #P"../")' --non-interactive
+#sbcl --load add-file.lisp --eval '(in-package :working)' --eval '(to-udp #P"./frases_rev.tmp" #P"../")' --non-interactive
 
 echo "Creating datasets...\n"
 

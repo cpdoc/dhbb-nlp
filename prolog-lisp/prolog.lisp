@@ -51,15 +51,10 @@
   "remove all clauses (for all predicates) from the data base."
   (mapc #'clear-predicate *db-predicates*))
   
-(defun variables-in (exp)
-  "Return a list of all the variables in EXP."
-  (unique-find-anywhere-if #'non-anon-variable-p exp))
 
-(defun rename-variables (x)
-  "replace all variables in x with new ones."
-  (sublis (mapcar #'(lambda (var) (cons var (gensym (string var))))
-                  (variables-in x))
-          x))
+(defun non-anon-variable-p (x)
+  (and (variable-p x) (not (eq x '?))))
+  
 
 (defun unique-find-anywhere-if (predicate tree
                                 &optional found-so-far)
@@ -74,6 +69,17 @@
         (first tree)
         (unique-find-anywhere-if predicate (rest tree)
                                  found-so-far))))
+  
+(defun variables-in (exp)
+  "Return a list of all the variables in EXP."
+  (unique-find-anywhere-if #'non-anon-variable-p exp))
+
+(defun rename-variables (x)
+  "replace all variables in x with new ones."
+  (sublis (mapcar #'(lambda (var) (cons var (gensym (string var))))
+                  (variables-in x))
+          x))
+
 
 (defun find-anywhere-if (predicate tree)
   "does predicate apply to any atom in the tree?"
@@ -83,6 +89,12 @@
           (find-anywhere-if predicate (rest tree)))))
 
 (defmacro ?- (&rest goals) `(top-level-prove ',(replace-?-vars goals)))
+
+(defun prove-all (goals bindings)
+  "Find a solution to the conjunction of goals."
+  (cond ((eq bindings fail) fail)
+        ((null goals) bindings)
+        (t (prove (first goals) bindings (rest goals)))))
 
 (defun prove (goal bindings other-goals)
   "Return a list of possible solutions to goal."
@@ -100,19 +112,6 @@
         (funcall clauses (rest goal) bindings
                  other-goals))))
 
-(defun prove-all (goals bindings)
-  "Find a solution to the conjunction of goals."
-  (cond ((eq bindings fail) fail)
-        ((null goals) bindings)
-        (t (prove (first goals) bindings (rest goals)))))
-
-
-(defun top-level-prove (goals)
-  (prove-all `(,@goals (show-prolog-vars ,@(variables-in goals)))
-             no-bindings)
-  (format t "~&No.")
-  (values))
-
 (defun show-prolog-vars (vars bindings other-goals)
   "Print each variable with its binding.
   Then ask the user if more solutions are desired."
@@ -124,6 +123,13 @@
   (if (continue-p)
       fail
       (prove-all other-goals bindings)))
+
+(defun top-level-prove (goals)
+  (prove-all `(,@goals (show-prolog-vars ,@(variables-in goals)))
+             no-bindings)
+  (format t "~&No.")
+  (values))
+
 
 (setf (get 'show-prolog-vars 'clauses) 'show-prolog-vars)
 
@@ -138,8 +144,5 @@
       (continue-p))))
 
 
-
-(defun non-anon-variable-p (x)
-  (and (variable-p x) (not (eq x '?))))
 
 

@@ -3,9 +3,11 @@ import nltk, re, pprint
 from nltk import word_tokenize
 import os
 
-sent_tokenizer = nltk.data.load('tokenizers/punkt/portuguese.pickle')
-pathi = "/Users/ar/work/cpdoc/dhbb-nlp/raw/"
-patho = "/Users/ar/work/cpdoc/dhbb-nlp/nltk/"
+sent_tokenizer = nltk.data.load('model_trained.pickle')
+pathi = "../raw/"
+patho = "../nltk/"
+
+
 
 for fn in os.listdir(pathi):
     if fn.endswith(".raw"):
@@ -22,6 +24,8 @@ for fn in os.listdir(pathi):
             outf.write(s.strip())
             outf.write("\n")
         outf.close()
+        
+        
             
 # words = [w.lower() for w in tokens]
 # vocab = sorted(set(words))
