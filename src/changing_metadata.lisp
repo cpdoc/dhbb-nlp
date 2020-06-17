@@ -1,20 +1,20 @@
 
-(ql:quickload :cl-conllu)
+(ql:quickload '(:alexandria :cl-conllu))
 
 (in-package :conllu.user)
 
 (defun add-meta-and-save (fn)
-  (let ((sents (read-conllu fn))
-	(changed nil))
+  (let ((sents (read-conllu fn)))
     (dolist (s sents)
-      (mapc (lambda (field)
-	      (if (not (sentence-meta-value s field))
-		  (progn
-		    (setf changed t)
-		    (push (cons field "no")
-			  (sentence-meta s)))))
-	    '("golden_split" "golden_syntactic")))
-    (if changed (write-conllu sents fn))))
+      (let ((tb (alexandria:alist-hash-table (sentence-meta s) :test #'equal)))
+	(if (equal "revisado" (gethash "status" tb))
+	    (setf (gethash "status" tb)
+		  "syntax"))
+	(remhash "golden_syntactic" tb)
+	(remhash "golden_split" tb)
+	(setf (sentence-meta s)
+	      (alexandria:hash-table-alist tb))))
+    (write-conllu sents fn)))
 
 (defun main ()
   (mapc #'add-meta-and-save (directory "../udp/*.conllu")))
