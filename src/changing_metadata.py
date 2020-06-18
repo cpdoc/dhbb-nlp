@@ -1,8 +1,13 @@
 """
+
 pyconll documentation: https://readthedocs.org/projects/pyconll/downloads/pdf/latest/
 
-Utiliza a bibioteca pyconll para adicionar flags que informam 
-se a segmentação da sentença e se a análise sintática foram revisadas.
+Utiliza a bibioteca pyconll para adicionar flags que informam se a
+segmentação da sentença e se a análise sintática foram
+revisadas. 
+
+Deprecated, see the changing_metadata.lisp
+
 """
 
 import os
