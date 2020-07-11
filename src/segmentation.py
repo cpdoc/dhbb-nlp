@@ -7,8 +7,6 @@ sent_tokenizer = nltk.data.load('model_trained.pickle')
 pathi = "../raw/"
 patho = "../nltk/"
 
-
-
 for fn in os.listdir(pathi):
     if fn.endswith(".raw"):
         print(">> processing %s" % fn)

@@ -35,6 +35,16 @@
 	    res))))
 
 
+(defun nltk (txt)
+  (let* ((in  (make-string-input-stream txt))
+	 (out (uiop:run-program (list "python" "segmentation.py") :input in :output :string))
+	 (res nil))
+    (dolist (o (cl-ppcre:split "\\n" out)
+	       (make-array (length res) :initial-contents (reverse res)))
+      (push (cl-ppcre:regex-replace-all "\\n+" (subseq txt (nth 0 o) (nth 1 o)) " ")
+	    res))))
+
+
 ;; we can also use ¶ to mark paragraphs. we can avoid the two calls
 ;; for regex-replace-all? we can pre-compile the regular expressions
 ;; too.

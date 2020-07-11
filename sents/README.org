@@ -6,7 +6,21 @@ probabilidade de serem segmentações corretas.
 Para gerar os arquivos, rode nesta pasta o comando abaixo após 
 iniciar o servidor freeling (vide abaixo).
 
+1) open Freeling server on another terminal:
+
+$ analyze -f pt.cfg --output json --noflush --server --port 8000
+
+2) carregar o virtual environment do python (com python3, nltk dependencies)
+
+$ source ~/env/bin/active
+
+3) rodar abcl Lisp
+
 $ ./make.sh
+
+* NLTK
+
+... 
 
 * Freeling 
 
@@ -22,10 +36,6 @@ Configure Freling
 
 - the file splitter.dat must add the markers « »
 - the file tokenizer.dat must remove the abbreviation "pt."
-
-Open Freeling server on another terminal:
-
-  analyze -f pt.cfg --output json --noflush --server --port 8000
 
 * OpenNLP
   
