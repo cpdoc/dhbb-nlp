@@ -1,12 +1,6 @@
 import nltk, sys
 
-text=""
-for line in sys.stdin:
-    if(line=="\n"):
-        break
-    text=text+" "+line.rstrip("\n")
-text=text[1:]
-
+text = sys.stdin.read()
 sents=nltk.sent_tokenize(text)
 for element in sents:
     pos=text.find(element)
