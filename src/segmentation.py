@@ -1,5 +1,4 @@
-import nltk
-import sys
+import nltk, sys
 
 text=""
 for line in sys.stdin:
