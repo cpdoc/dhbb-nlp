@@ -1,32 +1,14 @@
+import nltk
+import sys
 
-import nltk, re, pprint
-from nltk import word_tokenize
-import os
+text=""
+for line in sys.stdin:
+    if(line=="\n"):
+        break
+    text=text+" "+line.rstrip("\n")
+text=text[1:]
 
-sent_tokenizer = nltk.data.load('model_trained.pickle')
-pathi = "../raw/"
-patho = "../nltk/"
-
-for fn in os.listdir(pathi):
-    if fn.endswith(".raw"):
-        print(">> processing %s" % fn)
-        fin = pathi + fn
-        fou = patho + fn.replace(".raw",".sent")
-        raw = open(fin).read()
-        # tokens = word_tokenize(raw)
-        sentences = sent_tokenizer.tokenize(raw)
-        outf = open(fou, "w")
-        for s in sentences:
-            s = re.sub(r"\n"," ", s)
-            s = re.sub(r"[ ]+", " ", s)
-            outf.write(s.strip())
-            outf.write("\n")
-        outf.close()
-        
-        
-            
-# words = [w.lower() for w in tokens]
-# vocab = sorted(set(words))
-
-# text = nltk.Text(tokens)
-# myc  = text.collocations()
+sents=nltk.sent_tokenize(text)
+for element in sents:
+    pos=text.find(element)
+    print(str(pos)+" "+str(pos+len(element)))
