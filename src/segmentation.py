@@ -1,7 +1,7 @@
 import nltk.tokenize.punkt
 import sys, pickle
 
-arq=open("model_trained.pickle","rb")
+arq=open(sys.argv[1],"rb")
 model=pickle.load(arq)
 text = sys.stdin.read()
 sents = model.sentences_from_text(text)

@@ -28,16 +28,6 @@ Para separar metadados:
 
 Execute `make`, o arquivo `Makefile` controla o processo chamando o `extract.awk`.
 
-* The sents directory
-
-Vide issues. O processo documentado em =sents/README.org=. Note que os
-arquivos `.sent` contém spans indicadores de inicio de fim de
-sentenças, dois números por linha, indicando o segmento: =[start,end)=.
-
-Os char-based spans são referentes a uma determinada versão do
-`.raw`. Se o arquivo `.raw` é alterado, os respectivos `.sent` ficam
-inválidos.
-
 * UDP directory
 
 awk -F \: 'BEGIN {OFS="|"} {n=split($2, arr, /\|/); for (i=1;i<=n;++i) print $1, NR, arr[i] }' nomes.txt > nomes-splited.txt
@@ -67,4 +57,108 @@ time find ~/work/cpdoc/dhbb/raw -name "*.raw" | xargs ./udpipe --tokenize --tag 
 
 - http://pyyaml.org/wiki/PyYAMLDocumentation
 - http://www.w3.org/TR/rdf-sparql-query/
+
+* Python NLTK
+
+Criar um ambiente virtual para o Python e activar ele. Vc pode ter um
+ambiente específico para o projeto ou algum ambiente compartilhado no
+seu home.
+
+https://docs.python.org/3/tutorial/venv.html
+
+Instalar o NLTK depois de activar o virtual environment:
+
+source bin/activate
+pip install nltk
+
+** treino NLTK Punkt
+
+...
+
+** inspecionar modelo Punkt
+
+...
+
+
+* Sentences
+
+Note que os arquivos `.sent` contém spans indicadores de inicio de fim
+de sentenças, dois números por linha, indicando o segmento:
+=[start,end)=. Os char-based spans são referentes a uma determinada
+versão do `.raw`. Se o arquivo `.raw` é alterado, os respectivos
+`.sent` ficam inválidos.
+
+Nesta pasta, contém os arquivos .sent onde tanto Freeling quanto
+OpenNLP convergiram em sua segmentação, ou seja, onde temos uma alta
+probabilidade de serem segmentações corretas.
+
+Para gerar os arquivos, rode nesta pasta o comando abaixo após 
+iniciar o servidor freeling (vide abaixo).
+
+1) open Freeling server on another terminal:
+
+$ analyze -f pt.cfg --output json --noflush --server --port 8000
+
+2) carregar o virtual environment do python (com python3, nltk dependencies)
+
+$ source ~/env/bin/active
+
+3) rodar abcl Lisp
+
+$ ./make.sh
+
+deprecated code:
+
+#+BEGIN_SRC batch
+$ sbcl
+(load "splitter.lisp")
+(sb-ext:save-lisp-and-die "splitter" :toplevel #'main :executable t)
+#+END_SRC
+
+Configure Freling
+- the file splitter.dat must add the markers « »
+- the file tokenizer.dat must remove the abbreviation "pt."
+
+** training the model
+
+Os arquivos pertinentes ao treino do modelo são:
+
+sentences_gold.sent
+param.txt
+
+O arquivo amostras_DHBB.sent contém uma amostra de aproximadamente 200
+frases do DHBB onde o modelo pré treinado do Bosque errou a
+segmentação O arquivo param.txt possui os parâmetros do treino. A
+ideia é unir essas frases ao Bosque e retreinar o modelo.
+
+Para tal, proceda da seguinte maneira, faça o download do arquivo de
+treino do Bosque:
+
+: wget https://github.com/UniversalDependencies/UD_Portuguese-Bosque/raw/master/pt_bosque-ud-train.conllu
+
+Utilize o conversor do OpenNLP para extrair as sentenças do arquivo
+.conllu de treino do Bosque.
+
+: opennlp SentenceDetectorConverter conllu -sentencesPerSample 10 -data pt_bosque-ud-train.conllu > bosque_train.sent
+
+Agora una os dois arquivos 
+
+: cat bosque_train.sent amostras_dhbb.sent > arquivo_treino.sent
+
+Use o arquivo arquivo_treino.sent para treinar o modelo
+
+: opennlp SentenceDetectorTrainer -lang portuguese -model bosque_model.opennlp -data arquivo_treino.sent -encoding utf-8 -params param.txt
+
+Remova os arquivos não mais necessários
+
+: rm amostras_dhbb.sent arquivo_treino.sent bosque_train.sent pt_bosque-ud-train.conllu 
+
+Ou rode
+
+: make_model.sh path/to/opennlp
+
+* Next Stesp
+
+ - Issue 
+ - https://stackoverflow.com/questions/47274540/how-to-improve-sentence-segmentation-of-nltk
 
