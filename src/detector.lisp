@@ -73,7 +73,7 @@
 
 
 (defun main ()
-  (let* ((mfile    (jinput-stream "bosque_model.bin"))
+  (let* ((mfile    (jinput-stream "model_opennlp.bin"))
 	 (model    (jnew "opennlp.tools.sentdetect.SentenceModel" mfile))
 	 (detector (jnew "opennlp.tools.sentdetect.SentenceDetectorME" model))
 	 (detect   (jmethod "opennlp.tools.sentdetect.SentenceDetectorME" "sentPosDetect" 1)))
