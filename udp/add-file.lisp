@@ -12,7 +12,7 @@
 (defun merge-it (old new)
   (setf (sentence-meta new)
 	(sentence-meta old))
-  (push (cons "status" "revisado")
+  (push (cons "status" "syntax")
 	(sentence-meta new))
   new)
 
@@ -22,7 +22,7 @@
 (defun index (fn)
   (let ((tb    (make-hash-table :test #'equal))
 	(sents (remove-if-not (lambda (s)
-				(equal "revisado" (sentence-meta-value s "status")))
+				(equal "syntax" (sentence-meta-value s "status")))
 			      (read-conllu fn))))
     (dolist (s sents tb)
       (setf (gethash (sentence-text s) tb)
@@ -54,7 +54,7 @@
 ;; f : filename -> list of sentences
 (defun collect-from-file (fn)
   (remove-if-not (lambda (s)
-		   (equal "revisado" (sentence-meta-value s "status")))
+		   (equal "syntax" (sentence-meta-value s "status")))
 		 (read-conllu fn)))
 
  (defun collect-revised (pathspec)
@@ -90,6 +90,7 @@
            (let ((udp_file (read-conllu (merge-pathnames udp (parse-namestring fn)))))
              (setf (sentence-meta obj) (cdr (sentence-meta obj)))
              (setf (nth (- sent_num 1) udp_file) obj)
+             (delete-if (lambda (x) (equal (car x) "file")) (cl-conllu:sentence-meta obj))
              (write-conllu udp_file (merge-pathnames udp (parse-namestring fn)))
              (format t "Done file ~a~%" fn)))))))
 

@@ -41,4 +41,23 @@ Lembrando que para rodar o modelo, é necessário o data_set de treino e dev.
 
 O parser treinado pelo UDPipe é configurado com o sistema de transição *swap* que permite a criação de árvores sintáticas não projetivas. 
 
+# Recuperando as frases gold
 
+Caso queira recuperar as frases "gold" do repositório, basta rodar
+
+``` sh pull_gold.sh ```
+
+# Inserindo frases gold
+
+Caso queira **inserir** frases gold no repositório, coloque-as em um arquivo chamado **frases_rev.tmp**, onde no **o primeiro metadato de cada sentença deve ser da forma:**
+
+``` file = x.conllu ```
+
+indicando o arquivo de origem da frase. Isso é para evitar o código ler todo o repositório para devolver as frases. 
+
+# Batches
+
+Como os golds são gerados por motivos específicos, é inserido um outro metadado chamado *batch*, que consta as levas de gold que criamos. Atuelmente temos as batches:
+
+1. Batch 1: Correção das primeiras frases de alguns verbetes, contendo informação sobre naturalidade, nascimento e família de políticos.
+1. Batch 2: Correção de frases onde corrigimos inicialmente o POS tagging, com a finalidade de tentar melhorar o output do parser.
