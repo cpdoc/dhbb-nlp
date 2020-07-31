@@ -72,6 +72,10 @@
       (values (sort int #'<= :key #'car) (sort u-i #'<= :key #'car)))))
 
 
+(defun construct-out-path (fn extension)
+  (let ((dir (reverse (cons "sents" (cdr (reverse (pathname-directory fn)))))))
+    (make-pathname :directory dir :type extension :defaults fn)))
+
 (defun main ()
   (let* ((mfile    (jinput-stream "model_opennlp.bin"))
 	 (model    (jnew "opennlp.tools.sentdetect.SentenceModel" mfile))
@@ -85,5 +89,5 @@
 	(multiple-value-bind (int union-int)
 	    (diff spans-1 spans-2)
 	  (if union-int
-	      (save-pairs union-int (make-pathname :directory nil :type "diff" :defaults fn)))
-	  (save-pairs int (make-pathname :directory nil :type "sent" :defaults fn)))))))
+	      (save-pairs union-int (construct-out-path fn "diff")))
+	  (save-pairs int (construct-out-path fn "sent")))))))
