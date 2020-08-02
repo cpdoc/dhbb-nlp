@@ -28,14 +28,6 @@ Para separar metadados:
 
 Execute `make`, o arquivo `Makefile` controla o processo chamando o `extract.awk`.
 
-* UDP directory
-
-awk -F \: 'BEGIN {OFS="|"} {n=split($2, arr, /\|/); for (i=1;i<=n;++i) print $1, NR, arr[i] }' nomes.txt > nomes-splited.txt
-
-#+BEGIN_SRC bash
-time find ~/work/cpdoc/dhbb/raw -name "*.raw" | xargs ./udpipe --tokenize --tag --parse --outfile=../../cpdoc/dhbb/udp/{}.conllu ../udpipe-ud-2.0-conll17-170315/models/portuguese-ud-2.0-conll17-170315.udpipe
-#+END_SRC
-
 * Dictionaries
 
 #+BEGIN_SRC lisp
@@ -52,34 +44,8 @@ time find ~/work/cpdoc/dhbb/raw -name "*.raw" | xargs ./udpipe --tokenize --tag 
 (with-open-file (file "dic/titles-from-meta.text" :direction :output :if-exists :supersede)
 	 (format file "~{~{~a~^|~}~%~}" *))
 #+END_SRC
-     
-* Links
 
-- http://pyyaml.org/wiki/PyYAMLDocumentation
-- http://www.w3.org/TR/rdf-sparql-query/
-
-* Python NLTK
-
-Criar um ambiente virtual para o Python e activar ele. Vc pode ter um
-ambiente específico para o projeto ou algum ambiente compartilhado no
-seu home.
-
-https://docs.python.org/3/tutorial/venv.html
-
-Instalar o NLTK depois de activar o virtual environment:
-
-source bin/activate
-pip install nltk
-
-** treino NLTK Punkt
-
-...
-
-** inspecionar modelo Punkt
-
-...
-
-* Sentences
+* Sentenças
 
 Note que os arquivos `.sent` contém spans indicadores de inicio de fim
 de sentenças, dois números por linha, indicando o segmento:
@@ -102,27 +68,12 @@ $ analyze -f ./pt.cfg --output json --noflush --server --port 8000
 (note: no arquivo pt.cfg em etc, temos referencias aos arquivos
 splitter.dat e tokenizer.dat)
 
-2) carregar o virtual environment do python (com python3, nltk dependencies)
+3) Executar o codigo lisp que 'chama' Freeling e OpenNLP gerando os
+   arquivos em 'sents' diff ou sent.
 
-$ source ~/env/bin/active
+$ src/detector.sh
 
-3) rodar abcl Lisp
-
-$ ./make.sh
-
-deprecated code:
-
-#+BEGIN_SRC batch
-$ sbcl
-(load "splitter.lisp")
-(sb-ext:save-lisp-and-die "splitter" :toplevel #'main :executable t)
-#+END_SRC
-
-Configure Freling
-- the file splitter.dat must add the markers « »
-- the file tokenizer.dat must remove the abbreviation "pt."
-
-** training the model
+** treino modelo OpenNLP
 
 Os arquivos pertinentes ao treino do modelo são:
 
@@ -159,6 +110,41 @@ Remova os arquivos não mais necessários
 Ou rode
 
 : make_model.sh path/to/opennlp
+
+** Python NLTK
+
+  Criar um ambiente virtual para o Python e activar ele. Vc pode ter um
+  ambiente específico para o projeto ou algum ambiente compartilhado no
+  seu home.
+
+  https://docs.python.org/3/tutorial/venv.html
+
+  Instalar o NLTK depois de activar o virtual environment:
+
+  source bin/activate
+  pip install nltk
+
+  Carregar o virtual environment do python (com python3, nltk
+  dependencies)
+
+  $ source ~/env/bin/active
+
+ treino NLTK Punkt?
+
+ inspecionar modelo Punkt?
+
+* UDP directory
+
+awk -F \: 'BEGIN {OFS="|"} {n=split($2, arr, /\|/); for (i=1;i<=n;++i) print $1, NR, arr[i] }' nomes.txt > nomes-splited.txt
+
+#+BEGIN_SRC bash
+time find ~/work/cpdoc/dhbb/raw -name "*.raw" | xargs ./udpipe --tokenize --tag --parse --outfile=../../cpdoc/dhbb/udp/{}.conllu ../udpipe-ud-2.0-conll17-170315/models/portuguese-ud-2.0-conll17-170315.udpipe
+#+END_SRC
+     
+* Links
+
+- http://pyyaml.org/wiki/PyYAMLDocumentation
+- http://www.w3.org/TR/rdf-sparql-query/
 
 * Next Stesp
 
