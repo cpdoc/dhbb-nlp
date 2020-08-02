@@ -95,3 +95,16 @@ instructions [[https://github.com/odanoburu/hs-conllu/blob/master/README.org][he
      ghc -o count-lex CountLexicon.hs
      ./count-lex tokenizations.txt lexicon.txt *.conllu
    #+END_SRC
+
+* PosEvaluate.py
+  this script evaluates POS score (matching of POS/FEATS/LEMMAS between two conllu files with the same *sentences in the same order*)
+
+** usage
+   ./PosEvaluate.py [options] gold.conllu target.conllu
+   Where [options] = pos parse OR pos OR parse
+
+* CorrectPos.py
+  this script takes as argument a conllu file and corrects its POS tag by comparing it with MorphoBr entries. If the conllu file is the test set of the Bosque dataset, it will output a non-empty gold_bosque.conllu (with the golden files of bosque that were corrected) and a treated_bosque.conllu (the conllu files with the corrected pos tags). If the conllu file is another file, the gold_bosque.conllu will be empty and treated_bosque.conllu will be the corrected one. *Must edit the Morpho path inside the .py file.*
+
+** usage
+   ./CorrectPos.py file.conllu
