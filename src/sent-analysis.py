@@ -1,5 +1,7 @@
-#Recebe como argumento o número do arquivo (apenas número) e transforma o conjunto numero-??.sent em
-#um arquivo numero.sent e, caso haja divergência, um numero.diff
+
+# recebe como argumento o número do arquivo (apenas número) e
+# transforma o conjunto numero-??.sent em um arquivo numero.sent e,
+# caso haja divergência, um numero.diff
 
 import sys
 
@@ -28,6 +30,10 @@ def lst_write(lst,f):
 
 
 number=str(sys.argv[1])
+
+# 1. lista arquivos NNN-*.sent
+# 2. obtem os arquivos e seus sufixos: fl, nl, op...
+# 3. no diff saida, usar os sufixos do passo anterior
 
 fl=to_list(open(number+"-fl.sent","r").readlines())
 nl=to_list(open(number+"-nl.sent","r").readlines())
