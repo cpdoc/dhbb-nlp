@@ -1,42 +1,35 @@
-#Arg1 = Mode: 1 -> file, 2 -> directory
-#Arg2 = Log (booleano 0/1)
-#Arg3 = model_trained_file ( model_punkt.pickle )
-
-#Para modo 1:
-#Arg4 = file_in
-#Arg5 = file_out
-
-#Para modo 2:
-#Arg4 = path_raw ( ../raw/ )
-#Arg5 = path_out ( ../sents/ )
-
-
 import nltk.tokenize.punkt
-import sys, pickle, os, time
+import sys, pickle, os, time, argparse
 
+parser = argparse.ArgumentParser()
+parser.add_argument("-m","--model",help="model trained file path")
+parser.add_argument("indir",help="file or directory of raw to be processed")
+parser.add_argument("outdir", help="file or directory of processed sents")
+parser.add_argument("-i","--infile",help="unique file processing mode", type=bool, const=True, nargs='?')
+parser.add_argument("-s","--status",help="show status on stdout during running", type=bool, const=True, nargs='?')
+args = parser.parse_args()
 
-if(int(sys.argv[2])): t0=time.time()
-if(int(sys.argv[2])): print("Carregando modelo")
-arq=open(sys.argv[3],"rb")
+t0=time.time()
+if args.status:	print("Carregando modelo.")
+if args.model: arq=open(args.model,"rb")
+else: arq=open("model_punkt.pickle","rb")
 model=pickle.load(arq)
-if(int(sys.argv[2])): print("Modelo carregado em: {:.3} s".format(time.time()-t0))
+if args.status: print("Modelo carregado em: {:.3} s".format(time.time()-t0))
 
-if(sys.argv[1]=='1'):
-	text = open(sys.argv[4], 'r').read()
+if args.infile:
+	text = open(args.indir, 'r').read()
 	sents = model.span_tokenize(text)
-	with open(sys.argv[5],'w') as out_file:
+	with open(args.outdir,'w') as out_file:
 		for element in sents:
 			out_file.write(str(element[0]) + " " + str(element[1])+"\n")
-
-
-if(sys.argv[1]=='2'):
-	if(int(sys.argv[2])): print("Processando raw")
-	for file in os.listdir(sys.argv[4]):
+			
+else:
+	if args.status: print("Processando raw")
+	for file in os.listdir(args.indir):
 		if file.endswith(".raw"):
-			text = open(os.path.join(sys.argv[4],file), 'r').read()
+			text = open(os.path.join(args.indir,file), 'r').read()
 			sents = model.span_tokenize(text)
-			with open(os.path.join(sys.argv[5],file.replace(".raw","-nk.sent")), "w") as out_file:
+			with open(os.path.join(args.outdir,file.replace(".raw","-nk.sent")), "w") as out_file:
 				for element in sents:
 					out_file.write(str(element[0]) + " " + str(element[1])+"\n")
-
-if(int(sys.argv[2])): print("Tempo total: {:.3} s".format(time.time()-t0))
+	if args.status: print("Tempo total: {:.3} s".format(time.time()-t0))
