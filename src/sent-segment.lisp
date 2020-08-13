@@ -2,10 +2,13 @@
 ;; to be runned with ABCL Lisp
 ;; useful info https://abcl.org/releases/1.7.0/abcl-1.7.0.pdf
 
-(ql:quickload '(:alexandria :cl-json :cl-ppcre))
+(ql:quickload '(:alexandria :cl-json :cl-ppcre :cl-fad))
 
 (mapcar #'add-to-classpath
 	(directory "/Users/ar/work/apache-opennlp-1.9.2/lib/*.jar"))
+
+(setf (logical-pathname-translations "dhbb")
+      '(("**;*.*"   "~/work/cpdoc/dhbb-nlp/**/*.*")))
 
 (defun offset (obj)
   (let ((sents (cdr (assoc :sentences obj)))
@@ -67,12 +70,7 @@
       (values (sort int #'<= :key #'car) (sort u-i #'<= :key #'car)))))
 
 
-(defun construct-out-path (fn suffix extension)
-  (let ((dir (reverse (cons "sents" (cdr (reverse (pathname-directory fn))))))
-	(nm  (format nil "~a-~a" (pathname-name fn) suffix)))
-    (make-pathname :directory dir :name nm :type extension :defaults fn)))
-
-(defun main ()
+(defun main-deprecated ()
   (let* ((mfile    (jinput-stream "model_opennlp.bin"))
 	 (model    (jnew "opennlp.tools.sentdetect.SentenceModel" mfile))
 	 (detector (jnew "opennlp.tools.sentdetect.SentenceDetectorME" model))
@@ -84,3 +82,29 @@
 	(format t "=> Processing ~a~%" fn)
 	(save-array spans-1 (construct-out-path fn "op" "sent"))
 	(save-array spans-2 (construct-out-path fn "fl" "sent"))))))
+
+
+(defun construct-out-path (fn dir suffix extension)
+  (let ((nm  (format nil "~a-~a" (pathname-name fn) suffix)))
+    (make-pathname :directory (pathname-directory dir) :name nm :type extension)))
+
+
+(defun main (indir outdir model-file &key (single-file nil) (verbose t))
+  (let* ((mfile    (jinput-stream model-file))
+	 (din      (cl-fad:pathname-as-directory indir))
+	 (dout     (cl-fad:pathname-as-directory outdir))
+	 (model    (jnew "opennlp.tools.sentdetect.SentenceModel" mfile))
+	 (detector (jnew "opennlp.tools.sentdetect.SentenceDetectorME" model))
+	 (detect   (jmethod "opennlp.tools.sentdetect.SentenceDetectorME" "sentPosDetect" 1)))
+    (if single-file
+	(let* ((fn      (cl-fad:merge-pathnames-as-file din single-file))
+	       (txt     (read-content fn))
+	       (spans-1 (get-2-array (jcall detect detector txt))))
+	  (if verbose (format t "=> Processing ~a~%" fn))
+	  (save-array spans-1 (construct-out-path fn dout "op" "sent")))
+	(dolist (fn (directory  (make-pathname :name :wild :type "raw" :defaults din)))
+	  (let* ((txt     (read-content fn))
+		 (spans-1 (get-2-array (jcall detect detector txt))))
+	    (if verbose (format t "=> Processing ~a~%" fn))
+	    (save-array spans-1 (construct-out-path fn dout "op" "sent")))))))
+
