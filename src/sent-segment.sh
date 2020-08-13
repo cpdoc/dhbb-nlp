@@ -6,7 +6,7 @@ usage()
     echo "usage: sent-segment.sh [-i directory -o directory -m model [-f filename] [-v] | -h]"
 }
 
-source="${BASH_SOURCE[0]}"
+source=`dirname $(realpath $0)`
 model=
 indir=
 outdir=
@@ -45,7 +45,7 @@ if [ -z "$model" ] || [ -z "$indir" ] || [ -z "$outdir" ]; then
 fi
 
 if [ -z "$file" ]; then
-    abcl --batch --load sent-segment.lisp --eval "(main \"$indir\" \"$outdir\" \"$model\")" --eval '(quit)'
+    abcl --batch --load $source/sent-segment.lisp --eval "(main \"$indir\" \"$outdir\" \"$model\")" --eval '(quit)'
 else
-    abcl --batch --load sent-segment.lisp --eval "(main \"$indir\" \"$outdir\" \"$model\" :single-file \"$file\")" --eval '(quit)'
+    abcl --batch --load $source/sent-segment.lisp --eval "(main \"$indir\" \"$outdir\" \"$model\" :single-file \"$file\")" --eval '(quit)'
 fi

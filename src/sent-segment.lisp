@@ -7,9 +7,6 @@
 (mapcar #'add-to-classpath
 	(directory "/Users/ar/work/apache-opennlp-1.9.2/lib/*.jar"))
 
-(setf (logical-pathname-translations "dhbb")
-      '(("**;*.*"   "~/work/cpdoc/dhbb-nlp/**/*.*")))
-
 (defun offset (obj)
   (let ((sents (cdr (assoc :sentences obj)))
 	(res nil))
