@@ -15,45 +15,35 @@ def to_tuples(f,cod):
     return l  
 
 def simplify(U):
-    try:
-        for i in range(len(U)):
-            j=i+1
-            while j<len(U):
-                if U[j][0]>U[i][0]: break
-                if (U[i][0]==U[j][0] and U[i][1]==U[j][1]):
-                    U[i]=(U[i][0],U[i][1],U[i][2]+' '+U[j][2])
-                    U.pop(j)
-                else:
-                    j += 1
-    except: pass
-    return(U)
+    t=list(set([(e[0],e[1],'') for e in U]))
+    t.sort()
+    for i in range(len(t)):
+        cor=[e for e in U if (e[0],e[1],'')==t[i]]
+        ext=[elem[2] for elem in cor]
+        ext.sort()
+        t[i]=(t[i][0],t[i][1],' '.join(ext))
+    return t
 
 def universe_generator(*files):
     U=[]
-    union=''
+    union=[]
     for tool in files:
         cod = re.search('-(.*).sent', tool)
         U = U + to_tuples(open(tool,'r').readlines(),cod.group(1))
-        union=(union+' '+cod.group(1)).lstrip()
-    U.sort(key=lambda tup: tup[0])
+        union.append(cod.group(1))
     U = simplify(U)
-    return(U,union)
+    union.sort()
+    ext=' '.join(union)
+    return(U,ext)
 
 def classify(U,union):
-    shared, different = [], []
-    for tuples in U:
-        if tuples[2]==union: shared.append(tuples)
-        else: different.append(tuples)
-    return(shared,different)
+    return([tuples for tuples in U if tuples[2]==union], [tuples for tuples in U if tuples[2]!=union])
 
 def getnum(*files):
     return(files[0][:-8])
 
 def find_files(path,name):
-    l=[]
-    for filename in os.listdir(path):
-        if re.findall("^"+name+"-", filename): l.append(path+filename)
-    return l
+    return [path+filename for filename in os.listdir(path) if re.findall("^"+name+"-", filename)]
 
 
 def record_shared(shared, path):
