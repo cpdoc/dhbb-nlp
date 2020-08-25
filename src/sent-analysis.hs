@@ -1,6 +1,10 @@
+--Após compilado, chamar como ./sent-analysis file1 file2 file3...
+--Ele vai gerar os arquivos '.sent' e, se houver, '.diff' no diretório do file1
+
 import Data.List
 import System.Environment
 import Text.Printf
+import System.IO
 
 --Configurações do DataType a ser ultilizado
 data Sent = Sent { begin::Int,
@@ -55,10 +59,11 @@ sentGenerator [] _ = []
 sentGenerator (x:xs) (y:ys) = (file2sent x y) ++ (sentGenerator xs ys)
 
 --Função de exibição da lista de Sent em tuplas
-imprime :: [Sent] -> IO ()
-imprime (x:xs) = do
-    putStrLn (show (begin x)++" "++show (end x)++" "++(intercalate " " (tool x)))
-    if xs/=[] then imprime xs else return()
+imprime :: [Sent] -> [String]
+imprime [] = []
+imprime (x:xs) = str where
+    str = [(show (begin x)++" "++show (end x)++" "++(intercalate " " (tool x)))] ++ (imprime xs)
+    
 
 --Chamar simplifica pra lista de Sent para gerar resultado final (usa as auxiliares)
 simplifica :: [Sent] -> [Sent]
@@ -72,10 +77,9 @@ main = do
     lista <- mapM readFile args
     let tools = [takename x | x <- args]
     let toolnum = length tools
+    let name = remove (args!!0) '-' 
     let universe = simplifica (sentGenerator lista tools)
     let shared = intercept universe toolnum
     let different = diff universe toolnum
-    putStrLn "SENT:\n"
-    imprime shared
-    putStrLn "\nDIFF:\n"
-    imprime different
+    writeFile (name++".sent") (intercalate "\n" (imprime shared))
+    if different /= [] then writeFile (name++".diff") (intercalate "\n" (imprime different)) else return()
