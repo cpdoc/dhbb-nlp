@@ -47,15 +47,22 @@ Execute `make`, o arquivo `Makefile` controla o processo chamando o `extract.awk
 
 * Sentenças
 
-Note que os arquivos `.sent` contém spans indicadores de inicio de fim
-de sentenças, dois números por linha, indicando o segmento:
+Na pasta =sents/= executar o comando =make= após estar em virtual
+environment do python que tenha a biblioteca NLTK instalada.
+
+Para cada arquivo em =raw/= temos um arquivo =.sent-= e um arquivo
+=.diff= se ferramentas de segmentação discordarem na segmentação de
+sentenças do respectivo arquivo raw.
+
+Os arquivos `.sent` contém spans indicadores de inicio de fim de
+sentenças, dois números por linha, indicando o segmento:
 =[start,end)=. Os char-based spans são referentes a uma determinada
 versão do `.raw`. Se o arquivo `.raw` é alterado, os respectivos
-`.sent` ficam inválidos.
+`.sent` ficam inválidos. Também ficam nesta pasta arquivos `.diff` que
+contem além do span, uma lista de inicias indicando as ferramentas que
+produziram os respectivos span.
 
-Nesta pasta, contém os arquivos .sent onde tanto Freeling quanto
-OpenNLP convergiram em sua segmentação, ou seja, onde temos uma alta
-probabilidade de serem segmentações corretas.
+(abaixo deprecated ainda)
 
 Para gerar os arquivos, rode nesta pasta o comando abaixo após 
 iniciar o servidor freeling (vide abaixo).
@@ -67,11 +74,6 @@ $ analyze -f ./pt.cfg --output json --noflush --server --port 8000
 
 (note: no arquivo pt.cfg em etc, temos referencias aos arquivos
 splitter.dat e tokenizer.dat)
-
-3) Executar o codigo lisp que 'chama' Freeling e OpenNLP gerando os
-   arquivos em 'sents' diff ou sent.
-
-$ src/detector.sh
 
 ** treino modelo OpenNLP
 
@@ -133,6 +135,7 @@ Ou rode
 
  inspecionar modelo Punkt?
 
+ 
 * UDP directory
 
 awk -F \: 'BEGIN {OFS="|"} {n=split($2, arr, /\|/); for (i=1;i<=n;++i) print $1, NR, arr[i] }' nomes.txt > nomes-splited.txt
