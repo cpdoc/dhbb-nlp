@@ -1,19 +1,20 @@
 #!/usr/bin/env /usr/local/bin/sbcl --script
 
 (load (merge-pathnames ".sbclrc" (user-homedir-pathname)))
-(ql:quickload :alexandria :silent t)
+(ql:quickload '(:cl-ppcre :alexandria) :silent t)
 
 (defun read-segments (fn)
   (with-open-file (in fn)
-    (loop for x = (read in nil nil)
-	  for y = (read in nil nil)
-	  while (and x y)
-	  collect (cons x y))))
+    (loop for x = (read-line in nil nil)
+	  while x
+	  collect (cl-ppcre:split " " x))))
 
 (defun main (rawfile tuples)
   (let ((pairs (read-segments tuples))
 	(raw   (alexandria:read-file-into-string rawfile)))
     (loop for x in pairs
-	  do (format t "~a~%" (subseq raw (car x) (cdr x))))))
+	  do (format t "~a: ~a~%" (subseq x 2) (subseq raw
+						       (parse-integer (car x))
+						       (parse-integer (cadr x)))))))
 
 (main (nth 1 sb-ext:*posix-argv*) (nth 2 sb-ext:*posix-argv*))

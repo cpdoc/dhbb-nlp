@@ -3,12 +3,15 @@
 -- diretório do file1
 
 import Data.List
+import Data.Char
 import System.Environment
 import Text.Printf
 import System.IO
 import System.FilePath.Posix
+import qualified Data.ByteString.Lazy.Char8 as LC
+import Data.Maybe
 
---Configurações do DataType a ser ultilizado
+-- configurações do DataType a ser ultilizado
 
 data Sent = Sent { begin :: Int,
                    end   :: Int,
@@ -19,23 +22,17 @@ instance Eq Sent where
 
 instance Ord Sent where
     compare x y = compare ((begin x,end x)) ((begin y,end y))
-    (<=) x y = or [begin x <= begin y,and (begin x == begin y, end x <= end y)]
+    (<=) x y = or [begin x <= begin y, and (begin x == begin y, end x <= end y)]
 
 
---Funções auxiliares de processamento do DataType
-
-
---Substituimos a função ordena pelo sort interno (teoricamente otimizado)?
--- ordena :: Sent -> [Sent] -> [Sent]
--- ordena n [] = [n]
--- ordena n (x:xs) | n<x = n:x:xs
---                 | otherwise = x:ordena n xs
+--funções auxiliares de processamento do DataType
 
 merge :: Sent -> [Sent] -> [Sent]
 merge s [] = [s]
-merge s (x:xs) | s<x = s:x:xs
-               | s==x = (Sent (begin x) (end x) (tool x ++ tool s)):xs
-               | otherwise = x:merge s xs
+merge s (x:xs)
+  | s < x     = s : x : xs
+  | s == x    = (Sent (begin x) (end x) (tool x ++ tool s)) : xs
+  | otherwise = x : merge s xs
 
 
 intercept :: [Sent] -> Int -> [Sent]
@@ -58,14 +55,30 @@ split c xs = case break (==c) xs of
   
 takename fn = (split '-' (takeBaseName fn))!!1
 
-file2sent :: String -> String -> [Sent]
-file2sent str ext = lista where
-    leitura = [[read e :: Int |e <- words l] |l <- lines str]
-    lista = [Sent (element!!0) (element!!1) [ext] |element <- leitura]    
+parseLines :: LC.ByteString -> String -> [Sent]
+parseLines content tool =
+  map (\line ->
+         let a = (LC.words line)
+             begin = fst $ fromJust $ LC.readInt (a!!0)
+             end   = fst $ fromJust $ LC.readInt (a!!1)
+         in
+           Sent begin end [tool])
+  $ LC.lines content
 
-sentGenerator :: [String] -> [String] -> [Sent]
+-- cost of words+readInt vs. span+read? we should use parse
+-- combinators anyway.
+parseLine :: String -> (Int, Int)
+parseLine str =
+  let (digs1, rest1) = span isDigit str
+      (_    , rest2) = span isSeparator rest1
+      (digs2, rest3) = span isDigit str
+      in
+    (read digs1, read digs2)
+  
+
+sentGenerator :: [LC.ByteString] -> [String] -> [Sent]
 sentGenerator [] _ = []
-sentGenerator (x:xs) (y:ys) = (file2sent x y) ++ (sentGenerator xs ys)
+sentGenerator (x:xs) (y:ys) = (parseLines x y) ++ (sentGenerator xs ys)
 
 -- função de exibição da lista de Sent em tuplas
 imprime :: [Sent] -> [String]
@@ -77,10 +90,8 @@ imprime (x:xs) = str where
 -- chamar simplifica pra lista de Sent para gerar resultado final (usa as auxiliares)
 
 simplifica :: [Sent] -> [Sent]
---simplifica l = foldr merge [] $ foldr ordena [] l 
-simplifica l = foldr merge [] $ sort l --Vale trocar ordena pelo sort visando ganhar tempo de processamento?
+simplifica l = foldr merge [] $ sort l 
 
--- chamar código com nome dos arquivos como parâmetros
 
 save :: [Char] -> [Sent] -> [Sent] -> IO()
 save name shared [] =
@@ -93,11 +104,11 @@ save name shared diff =
 main :: IO ()
 main = do
   args  <- getArgs
-  lista <- mapM readFile args
+  contents <- mapM LC.readFile args
   let tools     = [takename x | x <- args]
       toolnum   = length tools
       name      = (split '-' $ takeBaseName (args!!0))!!0
-      universe  = simplifica (sentGenerator lista tools)
+      universe  = simplifica (sentGenerator contents tools)
       shared    = intercept universe toolnum
       different = diff universe toolnum in
     save name shared different
