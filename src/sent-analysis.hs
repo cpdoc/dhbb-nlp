@@ -81,11 +81,11 @@ simplifica l = foldr merge [] $ foldr ordena [] l
 
 save :: [Char] -> [Sent] -> [Sent] -> IO()
 save name shared [] =
-  writeFile (name ++ ".sent") (intercalate "\n" (imprime shared))
+  writeFile (name ++ ".sent") $ (intercalate "\n" (imprime shared)) ++ "\n"
 save name shared diff =
   do
-    writeFile (name ++ ".sent") (intercalate "\n" (imprime shared))
-    writeFile (name ++ ".diff") (intercalate "\n" (imprime diff))
+    writeFile (name ++ ".sent") $ (intercalate "\n" (imprime shared)) ++ "\n"
+    writeFile (name ++ ".diff") $ (intercalate "\n" (imprime diff)) ++ "\n"
 
 main :: IO ()
 main = do
