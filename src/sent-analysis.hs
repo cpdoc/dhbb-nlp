@@ -1,18 +1,14 @@
--- após compilado, chamar como ./sent-analysis file1 file2 file3...
--- ele vai gerar os arquivos '.sent' e, se houver, '.diff' no
--- diretório do file1
+-- After compiling, execute as ./sent-analysis file1 file2 file3...
+
+-- Script will produce the files '.sent' and, maybe, '.diff'
+-- at the same path of file1.
 
 import Data.List
 import Data.Char
 import System.Environment
-import Text.Printf
-import System.IO
-import System.FilePath.Posix
-import qualified Data.ByteString.Lazy.Char8 as LC
-import Data.Maybe
+import Text.ParserCombinators.ReadP
 
--- configurações do DataType a ser ultilizado
-
+-- DataType setup
 data Sent = Sent { begin :: Int,
                    end   :: Int,
                    tool  :: [String]} deriving (Show)
@@ -24,9 +20,40 @@ instance Ord Sent where
     compare x y = compare ((begin x,end x)) ((begin y,end y))
     (<=) x y = or [begin x <= begin y, and (begin x == begin y, end x <= end y)]
 
+-- Parser to readd file content do Sent
+getSents :: String -> String -> [Sent] 
+getSents filecontent extension= l where
+  tuples = fst (last (readP_to_S  (many $ digits) filecontent))
+  l = map (\tuple -> Sent (fst tuple) (snd tuple) [extension]) tuples
 
---funções auxiliares de processamento do DataType
+digits :: ReadP (Int,Int) 
+digits = do
+    n1 <- munch isDigit
+    munch isSpace
+    n2 <- munch isDigit
+    string "\n"
+    return (read n1,read n2)
 
+-- Parser to read filenames to prefix and sufix
+getname :: String -> (String, String) 
+getname str = fst $ head $ readP_to_S filename str
+
+filename :: ReadP (String,String) 
+filename = do
+    prefix <- munch (\char -> char /= '-')
+    char '-'
+    sufix <- munch (\char -> char /= '.')
+    string ".sent"
+    return (prefix,sufix)
+
+-- Convert file into Sent list
+universe :: [String] -> [String] -> [Sent]
+universe [] _ = []
+universe (x:xs) (y:ys) = s ++ universe xs ys where
+  (_,sufix) = getname y
+  s = getSents x sufix
+
+-- Merge sent to sent list updating tool list
 merge :: Sent -> [Sent] -> [Sent]
 merge s [] = [s]
 merge s (x:xs)
@@ -34,81 +61,40 @@ merge s (x:xs)
   | s == x    = (Sent (begin x) (end x) (tool x ++ tool s)) : xs
   | otherwise = x : merge s xs
 
-
+-- Separate intersection of tools from Sent list
 intercept :: [Sent] -> Int -> [Sent]
 intercept [] _ = []
-intercept (x:xs) tam = if length(tool x) == tam then
-  (Sent (begin x) (end x) []) : intercept xs tam else intercept xs tam
+intercept (x:xs) numtools = if length(tool x) == numtools then
+  (Sent (begin x) (end x) []) : intercept xs numtools else intercept xs numtools
 
+-- Separate divergence of tools from Sent list
+differ :: [Sent] -> Int -> [Sent]
+differ [] _ = []
+differ (x:xs) numtools = if length(tool x)<numtools then x:differ xs numtools else differ xs numtools
 
-diff :: [Sent] -> Int -> [Sent]
-diff [] _ = []
-diff (x:xs) tam = if length(tool x)<tam then x:diff xs tam else diff xs tam
+-- Formats the sent list to strings to be written in file
+format :: [Sent] -> [String]
+format [] = []
+format (x:xs) = [(show (begin x)++" "++show (end x)++" "++(intercalate " " (tool x)))] ++ (format xs)
 
+-- Creates Sent list from files
+files2sent x y = foldr merge [] $ sort $ universe x y
 
---Funções auxiliares de conversão de arquivos
-
-split :: Char -> String -> [String]
-split c xs = case break (==c) xs of 
-  (ls, "") -> [ls]
-  (ls, x:rs) -> ls : split c rs
-  
-takename fn = (split '-' (takeBaseName fn))!!1
-
-parseLines :: LC.ByteString -> String -> [Sent]
-parseLines content tool =
-  map (\line ->
-         let a = (LC.words line)
-             begin = fst $ fromJust $ LC.readInt (a!!0)
-             end   = fst $ fromJust $ LC.readInt (a!!1)
-         in
-           Sent begin end [tool])
-  $ LC.lines content
-
--- cost of words+readInt vs. span+read? we should use parse
--- combinators anyway.
-parseLine :: String -> (Int, Int)
-parseLine str =
-  let (digs1, rest1) = span isDigit str
-      (_    , rest2) = span isSeparator rest1
-      (digs2, rest3) = span isDigit str
-      in
-    (read digs1, read digs2)
-  
-
-sentGenerator :: [LC.ByteString] -> [String] -> [Sent]
-sentGenerator [] _ = []
-sentGenerator (x:xs) (y:ys) = (parseLines x y) ++ (sentGenerator xs ys)
-
--- função de exibição da lista de Sent em tuplas
-imprime :: [Sent] -> [String]
-imprime [] = []
-imprime (x:xs) = str where
-    str = [(show (begin x)++" "++show (end x)++" "++(intercalate " " (tool x)))] ++ (imprime xs)
-    
-
--- chamar simplifica pra lista de Sent para gerar resultado final (usa as auxiliares)
-
-simplifica :: [Sent] -> [Sent]
-simplifica l = foldr merge [] $ sort l 
-
-
+-- Save results to '.sent' and '.diff' files
 save :: [Char] -> [Sent] -> [Sent] -> IO()
 save name shared [] =
-  writeFile (name ++ ".sent") $ (intercalate "\n" (imprime shared)) ++ "\n"
+  writeFile (name ++ ".sent") $ (intercalate "\n" (format shared)) ++ "\n"
 save name shared diff =
   do
-    writeFile (name ++ ".sent") $ (intercalate "\n" (imprime shared)) ++ "\n"
-    writeFile (name ++ ".diff") $ (intercalate "\n" (imprime diff)) ++ "\n"
+    writeFile (name ++ ".sent") $ (intercalate "\n" (format shared)) ++ "\n"
+    writeFile (name ++ ".diff") $ (intercalate "\n" (format diff)) ++ "\n"
 
-main :: IO ()
 main = do
-  args  <- getArgs
-  contents <- mapM LC.readFile args
-  let tools     = [takename x | x <- args]
-      toolnum   = length tools
-      name      = (split '-' $ takeBaseName (args!!0))!!0
-      universe  = simplifica (sentGenerator contents tools)
-      shared    = intercept universe toolnum
-      different = diff universe toolnum in
-    save name shared different
+  args <- getArgs
+  contents <- mapM readFile args
+  let sentlist = files2sent contents args
+      numtools = length args
+      eq = intercept sentlist numtools
+      diff = differ sentlist numtools
+      (path,_) = getname $ head args
+  save path eq diff
