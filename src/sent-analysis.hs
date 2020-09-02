@@ -22,7 +22,7 @@ instance Ord Sent where
 
 -- Parser to readd file content do Sent
 getSents :: String -> String -> [Sent] 
-getSents filecontent extension= l where
+getSents filecontent extension = l where
   tuples = fst (last (readP_to_S  (many $ digits) filecontent))
   l = map (\tuple -> Sent (fst tuple) (snd tuple) [extension]) tuples
 
@@ -42,7 +42,7 @@ filename :: ReadP (String,String)
 filename = do
     prefix <- munch (\char -> char /= '-')
     char '-'
-    sufix <- munch (\char -> char /= '.')
+    sufix  <- munch (\char -> char /= '.')
     string ".sent"
     return (prefix,sufix)
 
