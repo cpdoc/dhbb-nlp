@@ -24,28 +24,11 @@ Para separar metadados:
   done
 #+END_SRC
 
-* The raw directory
+* raw directory
 
 Execute `make`, o arquivo `Makefile` controla o processo chamando o `extract.awk`.
 
-* Dictionaries
-
-#+BEGIN_SRC lisp
-(ql:quickload :cpdoc)
-(in-package :cpdoc)
-
-(mapcar (lambda (file)
-		 (let ((bd (extract-meta file)))
-		   (list (pathname-name file)
-			 (gethash "natureza" bd)
-			 (gethash "title" bd))))
-	       (directory "text/*.text"))
-
-(with-open-file (file "dic/titles-from-meta.text" :direction :output :if-exists :supersede)
-	 (format file "~{~{~a~^|~}~%~}" *))
-#+END_SRC
-
-* Sentenças
+* sentenças
 
 Na pasta =sents/= executar o comando =make= após estar em virtual
 environment do python que tenha a biblioteca NLTK instalada.
@@ -62,7 +45,7 @@ versão do `.raw`. Se o arquivo `.raw` é alterado, os respectivos
 contem além do span, uma lista de inicias indicando as ferramentas que
 produziram os respectivos span.
 
-(abaixo deprecated ainda)
+** freeling (deprecated)
 
 Para gerar os arquivos, rode nesta pasta o comando abaixo após 
 iniciar o servidor freeling (vide abaixo).
@@ -77,10 +60,36 @@ splitter.dat e tokenizer.dat)
 
 ** treino modelo OpenNLP
 
+No diretório sent:
+
+1. `.offset` arquivos com begin/end para cada sentença do respectivo arquivo raw
+2. `.goffset` golden offset onde todos os begin/end foram conferidos
+3. `.sent` arquivos temporarios com uma sentença por linha (criados via descompactacao de .offset ou .goffset)
+4. `.diff` arquivos praticamente iguais aos .offset ou .goffset mas
+   contendo id da ferramenta que produziu o begin/end
+
+um ciclo de revisao de quebras de sentenças em um arquivo:
+
+1. sent-descompat 45.offset > 45.sent
+2. sent-compact 45.sent > 45.goffset
+3. apaga 45.offset e 45.sent
+
+para treinar:
+
+1. for f in *.goffset; sent-descompat $f >> golden.sent; done
+2. chamar openNLP para treinar com golden.sent
+3. remover golden.sent
+
+Executar:
+
+: src/train-opennlp.sh
+
+Este script basicamente executa:
+
 Os arquivos pertinentes ao treino do modelo são:
 
 sentences_gold.sent
-param.txt
+src/params.opennlp
 
 O arquivo amostras_DHBB.sent contém uma amostra de aproximadamente 200
 frases do DHBB onde o modelo pré treinado do Bosque errou a
@@ -108,10 +117,6 @@ Use o arquivo arquivo_treino.sent para treinar o modelo
 Remova os arquivos não mais necessários
 
 : rm amostras_dhbb.sent arquivo_treino.sent bosque_train.sent pt_bosque-ud-train.conllu 
-
-Ou rode
-
-: make_model.sh path/to/opennlp
 
 ** Python NLTK
 
