@@ -40,7 +40,7 @@ if args.infile:
         text  = open(fin, 'r').read()
         sents = model.span_tokenize(text)
         fnout = os.path.join(args.outdir,
-                             args.infile.replace(".raw","-nk.sent"))
+                             args.infile.replace(".raw","-nk.offset"))
         with open(fnout,'w') as out_file:
                 for element in sents:
                         out_file.write(str(element[0]) + " " + str(element[1])+"\n")
@@ -50,7 +50,7 @@ else:
         for fn in glob.glob(os.path.join(args.indir,"*.raw")):
                 text = open(fn, 'r').read()
                 sents = model.span_tokenize(text)
-                fnout = os.path.join(args.outdir, os.path.basename(fn).replace(".raw","-nk.sent"))
+                fnout = os.path.join(args.outdir, os.path.basename(fn).replace(".raw","-nk.offset"))
                 with open(os.path.join(args.outdir,fnout), "w") as out:
                         for element in sents:
                                 out.write(str(element[0]) + " " + str(element[1])+"\n")

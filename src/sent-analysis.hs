@@ -1,6 +1,6 @@
 -- After compiling, execute as ./sent-analysis file1 file2 file3...
 
--- Script will produce the files '.sent' and, maybe, '.diff'
+-- Script will produce the files '.offset' and, maybe, '.diff'
 -- at the same path of file1.
 
 import Data.List
@@ -43,7 +43,7 @@ filename = do
     prefix <- munch (\char -> char /= '-')
     char '-'
     sufix  <- munch (\char -> char /= '.')
-    string ".sent"
+    string ".offset"
     return (prefix,sufix)
 
 -- Convert file into Sent list
@@ -80,13 +80,13 @@ format (x:xs) = [(show (begin x)++" "++show (end x)++" "++(intercalate " " (tool
 -- Creates Sent list from files
 files2sent x y = foldr merge [] $ sort $ universe x y
 
--- Save results to '.sent' and '.diff' files
+-- Save results to '.offset' and '.diff' files
 save :: [Char] -> [Sent] -> [Sent] -> IO()
 save name shared [] =
-  writeFile (name ++ ".sent") $ (intercalate "\n" (format shared)) ++ "\n"
+  writeFile (name ++ ".offset") $ (intercalate "\n" (format shared)) ++ "\n"
 save name shared diff =
   do
-    writeFile (name ++ ".sent") $ (intercalate "\n" (format shared)) ++ "\n"
+    writeFile (name ++ ".offset") $ (intercalate "\n" (format shared)) ++ "\n"
     writeFile (name ++ ".diff") $ (intercalate "\n" (format diff)) ++ "\n"
 
 main = do

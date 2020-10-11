@@ -1,6 +1,6 @@
 
 clean:
-	find . -name '*.sent' | xargs rm
+	find . -name '*.offset' | xargs rm
 	find . -name '*.diff' | xargs rm
 
 all:

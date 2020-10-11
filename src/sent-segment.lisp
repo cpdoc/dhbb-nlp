@@ -77,8 +77,8 @@
 	     (spans-1 (get-2-array (jcall detect detector txt)))
 	     (spans-2 (freeling txt)))
 	(format t "=> Processing ~a~%" fn)
-	(save-array spans-1 (construct-out-path fn "op" "sent"))
-	(save-array spans-2 (construct-out-path fn "fl" "sent"))))))
+	(save-array spans-1 (construct-out-path fn "op" "offset"))
+	(save-array spans-2 (construct-out-path fn "fl" "offset"))))))
 
 
 (defun construct-out-path (fn dir suffix extension)
@@ -98,10 +98,10 @@
 	       (txt     (read-content fn))
 	       (spans-1 (get-2-array (jcall detect detector txt))))
 	  (if verbose (format t "=> Processing ~a~%" fn))
-	  (save-array spans-1 (construct-out-path fn dout "op" "sent")))
+	  (save-array spans-1 (construct-out-path fn dout "op" "offset")))
 	(dolist (fn (directory  (make-pathname :name :wild :type "raw" :defaults din)))
 	  (let* ((txt     (read-content fn))
 		 (spans-1 (get-2-array (jcall detect detector txt))))
 	    (if verbose (format t "=> Processing ~a~%" fn))
-	    (save-array spans-1 (construct-out-path fn dout "op" "sent")))))))
+	    (save-array spans-1 (construct-out-path fn dout "op" "offset")))))))
 
