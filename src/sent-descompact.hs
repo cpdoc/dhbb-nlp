@@ -11,7 +11,7 @@ digits = do
     n1 <- munch isDigit
     munch isSpace
     n2 <- munch isDigit
-    munch isSpace
+    char ' '
     t <- munch (\c -> c /= '\n')
     string "\n"
     return (read n1,read n2, t)
