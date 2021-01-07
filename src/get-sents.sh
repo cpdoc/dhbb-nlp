@@ -8,7 +8,7 @@ for file in $tmp; do
 	then
 		echo "Diff found for $number"
 		python3 sent-segment.py -m model_punkt.pickle ../raw ../sents/temp -i $number.raw
-		sed -i s/$/' '/ ../sents/temp/$number-nk.offset
+		gsed -i s/$/' '/ ../sents/temp/$number-nk.offset
 		./sent-convert ../sents/temp/$number-nk.offset ../sents/temp/$number.sent ../raw/$number.raw
 		rm ../sents/temp/$number-nk.offset
 	else
