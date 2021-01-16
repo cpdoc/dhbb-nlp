@@ -1,9 +1,14 @@
 #!/bin/bash
 
-tmp=$(wc -l path../sents/*.offset | sort -n | head | awk '{print $2}')
+path="`dirname \"$0\"`"
+if [ ${#path} -gt 1 ]; then
+	cd ${path:2}
+fi
+
+tmp=$(wc -l ../sents/*.offset | sort -n | head | awk '{print $2}')
 
 for file in $tmp; do
-	number=$(echo "$file" | cut -d "/" -f 3 | cut -d "." -f 1)
+	number=$(echo "$file" | tr -dc '0-9' )
 	if [ -f "../sents/$number.diff" ]
 	then
 		echo "Diff found for $number"
@@ -13,7 +18,7 @@ for file in $tmp; do
 		elif [[ "$OSTYPE" == "darwin"* ]]; then
 			gsed -i s/$/' '/ ../sents/temp/$number-nk.offset
 		else
-			echo "Erro: Sistema não suportado"
+			echo "Erro: Sistema não suportado."
 		fi
 		./sent-convert ../sents/temp/$number-nk.offset ../sents/temp/$number.sent ../raw/$number.raw
 		rm ../sents/temp/$number-nk.offset
