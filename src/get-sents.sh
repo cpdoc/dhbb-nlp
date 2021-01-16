@@ -5,6 +5,8 @@ if [ ${#path} -gt 1 ]; then
 	cd ${path:2}
 fi
 
+mkdir -p "../sents/temp"
+
 tmp=$(wc -l ../sents/*.offset | sort -n | head | awk '{print $2}')
 
 for file in $tmp; do
