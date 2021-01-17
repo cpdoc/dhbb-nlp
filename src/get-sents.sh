@@ -22,10 +22,10 @@ for file in $tmp; do
 		else
 			echo "Erro: Sistema não suportado."
 		fi
-		./sent-convert ../sents/temp/$number-nk.offset ../sents/temp/$number.sent ../raw/$number.raw
+		./sent-convert ../sents/temp/$number-nk.offset ../raw/$number.raw > ../sents/temp/$number.sent
 		rm ../sents/temp/$number-nk.offset
 	else
-		./sent-convert ../sents/$number.offset ../sents/temp/$number.sent ../raw/$number.raw
+		./sent-convert ../sents/$number.offset ../raw/$number.raw > ../sents/temp/$number.sent
 	fi
 
 done

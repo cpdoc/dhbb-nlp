@@ -5,7 +5,7 @@ import Text.ParserCombinators.ReadP ( char, many, munch, readP_to_S, string, Rea
 import Data.Char ( isDigit, isSpace )
 import System.FilePath ( takeExtension )
 
-usage = putStrLn "Usage:\n./sent-convert path-in path-out raw-file => descompact offset into sent\n./sent-convert -c path-in path-out => compact sent into offset/goffset"
+usage = putStrLn "Usage:\n./sent-convert path-in raw-file => descompact offset into sent on stdout\n./sent-convert -c path-in path-out => compact sent into offset/goffset"
 exit = exitWith ExitSuccess
 
 parse ["-h"] = usage   >> exit
@@ -49,12 +49,12 @@ descompact :: [FilePath] -> IO ()
 descompact ls = do
     content <- readFile $ ls !! 0
     let lst = fst(last(readP_to_S  (many $ digits) content))
-    raw <- readFile $ ls !! 2
+    raw <- readFile $ ls !! 1
     let s = [f raw x | x <- lst] where
         convertOffset str (b,e,_) = take (e-b) $ drop (b) str
         convertDiff str (b,e,t) = t++": "++(take (e-b) $ drop (b) str)
         f = if (takeExtension $ ls !! 0)==".diff" then convertDiff else convertOffset
-    writeFile (ls !! 1) $ intercalate "\n" s ++ "\n"
+    putStrLn $ intercalate "\n" s
 
 
 main = getArgs >>= parse
