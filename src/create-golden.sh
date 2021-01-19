@@ -2,7 +2,7 @@
 
 path="`dirname \"$0\"`"
 if [ ${#path} -gt 1 ]; then
-	cd ${path:2}
+    cd ${path:2}
 fi
 
 for file in ../sents/temp/*.sent; do
