@@ -1,73 +1,72 @@
-{-# LANGUAGE OverloadedStrings #-}
+{-# LANGUAGE DeriveGeneric, OverloadedStrings, DuplicateRecordFields #-}
+
 import Data.Aeson
 import Data.Text
 import qualified Data.ByteString.Lazy as B
+import GHC.Generics
+
+
+data Paragraph = Paragraph {
+  text :: String,
+  order :: Int
+} deriving (Show, Generic)
+
+instance FromJSON Paragraph
+
+data Entity = Entity
+  { etype :: String
+  , text :: String
+  , mentions :: [Mention]
+  , disambiguation :: Disambiguation
+  , count :: Int
+  } deriving (Show,Generic)
 
 data Mention = Mention
   { text :: String
   , location :: [Int]
-  } deriving Show
+  } deriving (Show, Generic)
 
-newtype Disambiguation = Disambiguation
-  { subtypes :: [String]
-  } deriving Show
 
-data Entity = Entity
-  { entType :: String
-  , entText :: String
-  , mentions :: [Mention]
-  , disambiguation :: Disambiguation
-  , count :: Int
-  } deriving Show
+data Disambiguation = Disambiguation
+  { subtype :: [String]
+  } deriving (Show, Generic)
 
--- data Person =
---   Person { firstName  :: !Text
---          , lastName   :: !Text
---          , age        :: Int
---          , likesPizza :: Bool
---            } deriving Show
-
--- instance FromJSON Person where
---  parseJSON (Object v) =
---     Person <$> v .: "firstName"
---            <*> v .: "lastName"
---            <*> v .: "age"
---            <*> v .: "likesPizza"
---  parseJSON _ = mzero
+instance FromJSON Disambiguation
+instance FromJSON Mention
 
 instance FromJSON Entity where
-  parseJSON (Object v) =
-    Entity <$> v .: "type"
-           <*> v .: "text"
-           <*> v .: "mentions"
-           <*> v .: "disambiguation"
-           <*> v .: "count"
+  parseJSON = genericParseJSON  $ defaultOptions {fieldLabelModifier = \x -> if x == "etype" then "type" else x}
 
--- instance ToJSON Person where
---  toJSON (Person firstName lastName age likesPizza) =
---     object [ "firstName"  .= firstName
---            , "lastName"   .= lastName
---            , "age"        .= age
---            , "likesPizza" .= likesPizza
---              ]
+data Cargos = Cargos
+  { title :: String
+  , start :: Int
+  , end :: Int
+  } deriving (Show, Generic)
 
-instance ToJSON Entity where
-  toJSON (Entity entType entText mentions disambiguation count) =
-    object [ "type"           .= entType
-           , "text"           .= entText
-           , "mentions"       .= mentions
-           , "disambiguation" .= disambiguation
-           , "count"          .= count
-           ]
+instance FromJSON Cargos
+
+data Document = Document
+ { title :: String,
+   natureza :: String,
+   sexo :: String,
+   cargos :: [String],
+   cargos_p :: [Cargos],
+   filename :: String,
+   text :: String,
+   paragraphs :: [Paragraph],
+   entities :: [Entity]
+}  deriving (Show, Generic)
 
 
--- jsonFile :: FilePath
--- jsonFile = "trash.json"
-
--- getJSON :: IO B.ByteString
--- getJSON = B.readFile jsonFile
+instance FromJSON Document where
+  parseJSON =
+    genericParseJSON $ defaultOptions {fieldLabelModifier = \x -> if x == "cargos_p" then "cargos-p" else x}
 
 
--- main = do
---   content <- getJSON
---   print $ decode content
+input :: FilePath
+input = "/Users/ar/work/cpdoc/dhbb-json/JSON/1.json"
+
+main = do
+  d <- (eitherDecode <$> B.readFile input) :: IO (Either String Document)
+  return d
+  
