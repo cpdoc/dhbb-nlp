@@ -10,7 +10,6 @@ execute udpipe for each raw that has an json in ner folder:
 for f in ner/*.json; do echo raw/$(basename $f .json).raw; done | xargs ~/work/udpipe-1.2.0/bin-osx/udpipe --outfile=udp/{}.conllu --tokenizer="normalized_spaces;ranges" --tag --parse ~/work/udpipe-1.2.0/models/portuguese-bosque-ud-2.5-191206.udpipe
 #+end_src
 
-
 ** run NLU
 
 for a sample of files in RAW:
@@ -26,3 +25,10 @@ for each document in wks:
 #+begin_src 
  for f in `cat wks/documents.json| jq -r '.[] | .name'` ; do IN=$(basename $f .txt); echo Processing $IN; curl -G --header "Content-Type: application/json" -u SECRET --data-urlencode "text@../raw/$IN.raw" "https://api.us-south.natural-language-understanding.watson.cloud.ibm.com/instances/a9eda6db-309d-4e9f-8454-0464bbbf7575/v1/analyze?version=2020-08-01&features=entities,relations&entities.model=073dab23-dd1e-4ded-badf-f502eb06372c&entities.mentions=true&&return_analyzed_text=true" > $IN.json; done
 #+end_src
+
+** limpando wks
+
+#+begin_src 
+cat wks/documents.json| jq -r '.[] | "echo Processing " + .name + "\ntest-ner -c " + .name + ".json wks/gt/" + .id + ".json"' > temp.sh
+#+end_src
+
