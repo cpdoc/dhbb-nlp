@@ -32,18 +32,15 @@ for each document in wks:
   done
 #+end_src
 
-** limpando wks
+** diretorio ner/wks
+
+Para comparar ner/*.json com respectivos ner/wks/gt/*.json:
 
 #+begin_src 
 cat wks/documents.json| jq -r '.[] | "echo Processing " + .name + "\ntest-ner -c " + .name + ".json wks/gt/" + .id + ".json"' > temp.sh
 #+end_src
 
-#+name: wks
-#+begin_src bash :results table
-for f in `cat ner/wks/documents.json| jq '.[] | .name' -r`; do wc -l raw/$(basename $f .txt).raw; done
-#+end_src
-
-To import new files:
+Para importar novos arquivos para o WKS:
 
 #+begin_src bash :results table
 jq '.[] | .name | "raw/" + rtrimstr(".txt") + ".raw" ' -r ner/wks/documents.json > a.list
