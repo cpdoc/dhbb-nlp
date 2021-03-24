@@ -38,3 +38,18 @@ for each document in wks:
 cat wks/documents.json| jq -r '.[] | "echo Processing " + .name + "\ntest-ner -c " + .name + ".json wks/gt/" + .id + ".json"' > temp.sh
 #+end_src
 
+#+name: wks
+#+begin_src bash :results table
+for f in `cat ner/wks/documents.json| jq '.[] | .name' -r`; do wc -l raw/$(basename $f .txt).raw; done
+#+end_src
+
+To import new files:
+
+#+begin_src bash :results table
+jq '.[] | .name | "raw/" + rtrimstr(".txt") + ".raw" ' -r ner/wks/documents.json > a.list
+wc -l raw/*.raw | awk '$1 < 7 && $1 > 2 {print $2}' > b.list
+diff --new-line-format="" --unchanged-line-format="" <(sort b.list) <(sort a.list) | shuf | head -50 > n.list
+for f in `cat n.list`; do cp $f tmp/`basename $f .raw`.txt; done
+rm a.list b.list n.list 
+#+end_src
+
