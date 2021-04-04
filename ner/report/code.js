@@ -13,7 +13,8 @@ function load(df){
   window.data = JSON.parse(json) ;
   var tab = data.table;
   var tipos = data.header;
-  saida = '<div><table id="tabela1"><tr><th>&nbsp;</th>';
+  saida = '<tr><th>' + "Linhas = NLU e Colunas = WKS" + '</th> </tr>'
+  saida += '<div><table id="tabela1"><tr><th>&nbsp;</th>';
   for (k = 0; k < tipos.length; k++){
       saida += '<th>' + tipos[k] + '</th>';
   }
