@@ -50,3 +50,10 @@ for f in `cat n.list`; do cp $f tmp/`basename $f .raw`.txt; done
 rm a.list b.list n.list 
 #+end_src
 
+
+
+** diretório udp-mini
+
+#+begin_src
+for f in sents/*.sent; do echo $f; done | xargs ~/work/udpipe-1.2.0/bin-osx/udpipe --outfile=udp-mini/{}.conllu --tokenizer="normalized_spaces;presegmented" --tag --parse ~/work/udpipe-1.2.0/models/portuguese-bosque-ud-2.5-191206.udpipe
+#+end_src
