@@ -7,13 +7,11 @@ let df;
 d3.json("test.json").then(data => df = JSON.stringify(data));
 
 function load(df){
-  //var json =  require("lixo.json");
-  //var d = '{"type": ["pessoa","instituicao","data"],"tab": [[12, 1, 0], [2, 10, 5], [0, 0, 15]],"cont": [[],[{"type": ["pessoa", "instituicao"], "mention": "Magalu", "context": "bla bla bla Magalu bla bla bla"}], [], [{"type": ["instituicao","pessoa"], "mention": "Bretas", "context": "bla bla Bretas bla bla bla"},{"type": ["instituicao","pessoa"], "mention": "Santander", "context": "bla bla bla Santander bla bla bla"}],[],[],[],[],[]]}' ;
   var json = df.replace(/\n/g, " ") ;
   window.data = JSON.parse(json) ;
   var tab = data.table;
   var tipos = data.header;
-  saida = '<tr><th>' + "Linhas = NLU e Colunas = WKS" + '</th> </tr>'
+  saida = '<tr><th>' + "Linhas: NLU e Colunas: WKS" + '</th> </tr>'
   saida += '<div><table id="tabela1"><tr><th>&nbsp;</th>';
   for (k = 0; k < tipos.length; k++){
       saida += '<th>' + tipos[k] + '</th>';
@@ -37,7 +35,11 @@ function my(id) {
   saida2 += '<table id="tabela2">'
   saida2 += '<tr><th>' + "NLU = " + ((menlist[0]).comp)[0] + " e " + "WKS = " + ((menlist[0]).comp)[1]+ '</th> </tr>'
   for (i = 0; i < menlist.length; i++){
-      saida2 += '<tr><th>' + (menlist[i]).mention +'</th> <td>'+ (menlist[i]).doc + '</td> <th style="color:blue">' + (menlist[i]).context + '</th></tr>'
+      saida2 += '<tr><th>' + (menlist[i]).mention +'</th> <td>' 
+                           + ((menlist[i]).doc).substring(0 ,((menlist[i]).doc).length - 4) + '</td> <td style="color:blue">' 
+                           + ((menlist[i]).context).substring(0, ((menlist[i]).rangeInSent)[0]) + '<b>' 
+                           + ((menlist[i]).context).substring(((menlist[i]).rangeInSent)[0], ((menlist[i]).rangeInSent)[1]) + '</b>' 
+                           + ((menlist[i]).context).substring(((menlist[i]).rangeInSent)[1]) + '</td></tr>'
   }
   saida2 += '<table>'
   document.getElementById('output').innerHTML = saida2;
