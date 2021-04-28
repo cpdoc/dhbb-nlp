@@ -5,6 +5,16 @@
 
 (defstruct entry form lemma pos lpat)
 
+(defmethod print-object ((obj entry) out)
+  (print-unreadable-object (obj out :type t)
+    (format out "~a:~a | ~a ~a" (entry-form obj) (entry-lemma obj) (entry-pos obj) (entry-lpat obj))))
+
+(defmethod print-object ((obj token) out)
+  (print-unreadable-object (obj out :type t)
+    (format out "~s ~a #~a-~a-~a"
+	    (slot-value obj 'form) (slot-value obj 'upostag)
+	    (slot-value obj 'id) (slot-value obj 'deprel) (slot-value obj 'head))))
+
 (defun line-to-entry (line)
   (destructuring-bind (form rest)
       (cl-ppcre:split "\\t" (string-trim '(#\Space #\Tab) line))
@@ -56,7 +66,7 @@
 
 
 (defun equal-pos (pdict pud)
-  (let ((map '(("NOUN" . "N") ("VERB" . "V") ("ADJ" . "A") ("ADV" . "ADV"))))
+  (let ((map '(("NOUN" . "N") ("VERB" . "V") ("AUX" . "V") ("ADJ" . "A") ("ADV" . "ADV"))))
     (equal pdict (cdr (assoc pud map :test #'equal)))))
 
 (defun compatible (tk entry)
