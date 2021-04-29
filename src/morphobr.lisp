@@ -7,12 +7,12 @@
 
 (defmethod print-object ((obj entry) out)
   (print-unreadable-object (obj out :type t)
-    (format out "~a:~a | ~a ~a" (entry-form obj) (entry-lemma obj) (entry-pos obj) (entry-lpat obj))))
+    (format out "~a:~a ~a/~a" (entry-form obj) (entry-lemma obj) (entry-pos obj) (entry-lpat obj))))
 
 (defmethod print-object ((obj token) out)
   (print-unreadable-object (obj out :type t)
-    (format out "~s ~a #~a-~a-~a"
-	    (slot-value obj 'form) (slot-value obj 'upostag)
+    (format out "~a:~a ~a/~a #~a-~a-~a"
+	    (slot-value obj 'form) (slot-value obj 'lemma) (slot-value obj 'upostag) (slot-value obj 'feats)
 	    (slot-value obj 'id) (slot-value obj 'deprel) (slot-value obj 'head))))
 
 (defun line-to-entry (line)
@@ -84,7 +84,7 @@
 	   ;; (format stream "~a ok~%" tk)
 	   )
 	  ((> (length entries1) 1)
-	   (format stream "~a ambiguos, found ~a~%" tk entries1))
+	   (format stream "~a ambiguos, found ~%~{ ~a~^~%~}~%~%" tk entries1))
 	  ((not entries1)
 	   (format stream "~a not found in dict~%" tk))))))
 
@@ -92,12 +92,11 @@
 (defparameter mapping (read-mapping "mapping.txt"))
 (defparameter dic (read-morphobr))
 
-(defun main (dict map)
+(defun main (dict map &key (path "../udp-mini/*.conllu") (out *standard-output*))
   (mapc (lambda (fn)
 	  (loop for s in (cl-conllu:read-conllu fn)
 		do (progn
-		     (format *standard-output* "Sentece: ~a~%" (sentence-id s))
+		     (format out "~%Sentence: ~a ~a ~%" (sentence-id s) (sentence-text s))
 		     (loop for tk in (sentence-tokens s)
-			   do (check tk dict map *standard-output*)))))
-	(directory "../udp-mini/*.conllu")))
-
+			   do (check tk dict map out)))))
+	(directory path)))
