@@ -23,6 +23,7 @@ echo "Treinando o modelo...\n"
 
 cp model_enhanced.bin model_enhanced.prev
 
+# https://github.com/ufal/udpipe/issues/128
 udpipe --train --tokenizer --tagger --parser="transition_system=swap;transition_oracle=static_lazy" model_enhanced.bin --heldout=data_dev.conllu data_train.conllu
 
 echo "Generating accuracy statistics...\n"

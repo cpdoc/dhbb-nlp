@@ -1,15 +1,15 @@
 ### Geração de frases para serem corrigidas
 
-Para gerar o modelo com 250 frases contendo o primeiro parágrafo de verbetes de biografia do DHBB, rode o script **gerar_frases.py**:
-
+Para gerar o modelo com 250 frases contendo o primeiro parágrafo de
+verbetes de biografia do DHBB, rode o script **gerar_frases.py**:
 
 
 ```
 python3 gerar_frases.py /path/to/raw
 ```
 
-
-Para fazer análises de frases sem necessitar criar um arquivo, rode o script udpipe.sh da seguinte forma:
+Para fazer análises de frases sem necessitar criar um arquivo, rode o
+script udpipe.sh da seguinte forma:
 
 ```
 ./udpipe.sh "Frase para análise" 

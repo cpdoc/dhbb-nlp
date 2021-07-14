@@ -39,7 +39,6 @@
     (reduce (lambda (tb file) (read-dict file tb)) dicts 
 	    :initial-value (make-hash-table :test #'equal))))
 
-
 (defun read-mapping (fn)
   (with-open-file (in fn)
     (loop for line = (read-line in nil nil)
@@ -74,10 +73,20 @@
        (equal-pos (entry-pos entry)   (token-upostag tk))
        (equal     (entry-form entry)  (string-downcase (token-form tk)))))
 
+(defun remove1 (alist)
+  (remove-if (lambda (e) (and (equal "A" (entry-pos e))
+			      (equal (entry-lemma e) (entry-form e))))
+	     alist))
+
+(defun remove2 (alist)
+  (remove-if (lambda (e) (and (member (entry-pos e) (list "N" "A") :test #'equal)
+			      (equal (entry-lemma e) (entry-form e))))
+	     alist))
+
 (defun check (tk dict mapping stream)
   (if (member (token-upostag tk) (list "VERB" "ADV" "NOUN" "ADJ" "AUX") :test #'equal)
       (let* ((lform   (string-downcase (token-form tk)))
-	     (entries0 (gethash lform dict))
+	     (entries0 (remove2 (remove1 (gethash lform dict))))
 	     (entries1 (remove-if-not (lambda (e) (compatible tk e)) entries0)))
 	(cond
 	  ((equal 1 (length entries1))

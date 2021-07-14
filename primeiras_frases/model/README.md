@@ -1,3 +1,4 @@
+
 Para extrair as frases revisadas do conjunto de frases em revisão, execute
 
 ```
@@ -39,6 +40,3 @@ Para analisar o conjunto de teste com os modelos, digite
 ```
 udpipe --tokenize --tokenizer="presegmented" --tag --parse nome_modelo.bin frases_target.sent
 ```
-
-
-

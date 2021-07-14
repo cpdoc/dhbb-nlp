@@ -2,9 +2,9 @@ import os
 from random import shuffle
 from sys import argv, exit
 
-"""
-Gera um arquivo com 250 entradas das primeiras frases dos arquivos de biografia do DHBB. A geração é aleatória. O resultado é redirecionado ao stdout. 
-"""
+""" Gera um arquivo com 250 entradas das primeiras frases dos arquivos
+de biografia do DHBB. A geração é aleatória. O resultado é
+redirecionado ao stdout.  """
 
 def words(s):
     '''
