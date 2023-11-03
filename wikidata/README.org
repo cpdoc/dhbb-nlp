@@ -1,0 +1,12 @@
+
+creating the auxiliar files
+
+#+begin_src bash
+  for f in ../../dhbb/text/*.text; do
+      awk -v OFS="|" '/^natureza:/ {n=substr($0,11);} /^title:/ {t=substr($0,8);} END {print FILENAME,n,t}' $f ;
+  done | grep "temático" > tematicos.txt
+#+end_src
+
+edição manual depois
+
+
