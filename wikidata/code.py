@@ -64,17 +64,18 @@ def main2():
     result = {}
 
     with open('tematicos.txt') as l:
-        titles = [s.split('|')[1].strip() for s in l.readlines()]
+        titles = [(int(s.split('|')[0]),
+                   s.split('|')[1].strip()) for s in l.readlines()]
 
     with open("title-entidades.csv", "w", newline='') as csvfile:
         writer = csv.writer(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_ALL)
 
-        for k in titles:
+        for i, k in titles:
             print('processing', k)
             res = get(k,3)
             result[k] = res
             for n,a in enumerate(res):
-                writer.writerow([k,n,a.get('id',''), a.get('url',''), a.get('description',''),a.get('label','')])
+                writer.writerow([k,i,n,a.get('id',''), a.get('url',''), a.get('description',''),a.get('label','')])
     
     with open("title-entidades.json", "w") as outfile:
         json.dump(result, outfile)
