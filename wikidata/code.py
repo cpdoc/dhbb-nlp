@@ -77,7 +77,8 @@ def main2():
             res = get(k,3)
             result[k] = res
             for n,a in enumerate(res):
-                writer.writerow([k,i,n,a.get('id',''), a.get('concepturi',''), a.get('description',''),a.get('label','')])
+                writer.writerow([k,f'https://github.com/cpdoc/dhbb/blob/master/text/{i}.text',n,
+                                 a.get('id',''), a.get('concepturi',''), a.get('description',''),a.get('label','')])
     
     with open("title-entidades.json", "w") as outfile:
         json.dump(result, outfile)
