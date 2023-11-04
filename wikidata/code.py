@@ -14,15 +14,15 @@ nlp = pt_core_news_sm.load()
 
 
 def def_value(): 
-    return 0
+    return []
 
-def procfile(fn, db):
+def procfile(fn, fid, db):
     with open(fn) as i:
         sents = i.readlines()
         for s in sents:
             doc = nlp(s)
             for entity in doc.ents:
-                db[(entity.text, entity.label_)] += 1
+                db[(entity.text, entity.label_)].append(fid)
     return db
 
 
@@ -44,17 +44,19 @@ def main1():
     with open('tematicos.txt') as l:
         files = [int(s.split('|')[0]) for s in l.readlines()]
         for fn in files:
-            procfile(f'../raw/{fn}.raw', entities)
+            print('processing', fn)
+            procfile(f'../raw/{fn}.raw', fn, entities)
     
     with open("entidades.csv", "w", newline='') as csvfile:
         writer = csv.writer(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_ALL)
 
         for k in entities.keys():
+            print('processing', k)
             res = get(k[0],3)
             result[k] = dict(freq = entities[k], wd = res)
             for n,a in enumerate(res):
-                writer.writerow([k[0],k[1],entities[k],
-                                 n,a.get('id',''), a.get('url',''), a.get('description',''),a.get('label','')])
+                writer.writerow([k[0],k[1],len(entities[k]), '|'.join([str(i) for i in entities[k]]),
+                                 n, a.get('id',''), a.get('concepturi',''), a.get('description',''),a.get('label','')])
 
     with open("entidades.json", "w") as outfile:
         json.dump(result, outfile)
@@ -75,10 +77,10 @@ def main2():
             res = get(k,3)
             result[k] = res
             for n,a in enumerate(res):
-                writer.writerow([k,i,n,a.get('id',''), a.get('url',''), a.get('description',''),a.get('label','')])
+                writer.writerow([k,i,n,a.get('id',''), a.get('concepturi',''), a.get('description',''),a.get('label','')])
     
     with open("title-entidades.json", "w") as outfile:
         json.dump(result, outfile)
-        
-main2()
 
+
+main2()
