@@ -1,38 +1,41 @@
-# text = Partido político acreano fundado provavelmente em 1933 para concorrer às eleições para a Assembléia Nacional Constituinte.
-# sent_id = 1
-# newpar
+# generator = UDPipe 2, https://lindat.mff.cuni.cz/services/udpipe
+# udpipe_model = portuguese-bosque-ud-2.12-230717
+# udpipe_model_licence = CC BY-NC-SA
 # newdoc
-1	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	9	nsubj	_	_
-2	político	político	PROPN	_	Number=Sing	1	flat:name	_	_
+# newpar
+# sent_id = 1
+# text = Partido político acreano fundado provavelmente em 1933 para concorrer às eleições para a Assembléia Nacional Constituinte.
+1	Partido	partido	NOUN	_	Gender=Masc|Number=Sing	0	root	_	_
+2	político	político	ADJ	_	Gender=Masc|Number=Sing	1	amod	_	_
 3	acreano	acreano	ADJ	_	Gender=Masc|Number=Sing	1	amod	_	_
-4	fundado	fundar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
-5	provavelmente	provavelmente	ADV	_	_	7	advmod	_	_
+4	fundado	fundar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	1	acl	_	_
+5	provavelmente	provavelmente	ADV	_	_	4	advmod	_	_
 6	em	em	ADP	_	_	7	case	_	_
-7	1933	1933	NUM	_	NumType=Card	9	obl	_	_
+7	1933	1933	NUM	_	NumType=Card	4	obl	_	_
 8	para	para	SCONJ	_	_	9	mark	_	_
-9	concorrer	concorrer	VERB	_	VerbForm=Inf	4	xcomp	_	_
+9	concorrer	concorrer	VERB	_	VerbForm=Inf	4	advcl	_	_
 10-11	às	_	_	_	_	_	_	_	_
 10	a	a	ADP	_	_	12	case	_	_
 11	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	12	det	_	_
-12	eleições	eleição	NOUN	_	Gender=Fem|Number=Plur	9	obl	_	_
+12	eleições	eleição	NOUN	_	Gender=Fem|Number=Plur	9	obj	_	_
 13	para	para	ADP	_	_	15	case	_	_
 14	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	15	det	_	_
-15	Assembléia	Assembléia	PROPN	_	Gender=Fem|Number=Sing	9	obl	_	_
+15	Assembléia	Assembléia	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	12	nmod	_	_
 16	Nacional	Nacional	PROPN	_	Number=Sing	15	flat:name	_	_
 17	Constituinte	Constituinte	PROPN	_	Number=Sing	15	flat:name	_	SpaceAfter=No
-18	.	.	PUNCT	_	_	9	punct	_	SpacesAfter=\n
+18	.	.	PUNCT	_	_	4	punct	_	_
 
-# text = Seu vice-presidente era Dornellas Câmara.
 # sent_id = 2
+# text = Seu vice-presidente era Dornellas Câmara.
 1	Seu	seu	DET	_	Gender=Masc|Number=Sing|PronType=Prs	2	det	_	_
 2	vice-presidente	vice-presidente	NOUN	_	Gender=Masc|Number=Sing	4	nsubj	_	_
 3	era	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	4	cop	_	_
-4	Dornellas	Dornellas	PROPN	_	Gender=Masc|Number=Sing	0	root	_	_
-5	Câmara	câmara	PROPN	_	Number=Sing	4	flat:name	_	SpaceAfter=No
+4	Dornellas	Dornellas	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	0	root	_	_
+5	Câmara	Câmara	PROPN	_	Number=Sing	4	flat:name	_	SpaceAfter=No
 6	.	.	PUNCT	_	_	4	punct	_	SpacesAfter=\n
 
-# text = O partido era contrário à autonomia política do Acre, pois não acreditava que o território possuísse independência agrícola, industrial e comercial suficiente para sustentar esta posição.
 # sent_id = 3
+# text = O partido era contrário à autonomia política do Acre, pois não acreditava que o território possuísse independência agrícola, industrial e comercial suficiente para sustentar esta posição.
 1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	_	_
 2	partido	partido	NOUN	_	Gender=Masc|Number=Sing	4	nsubj	_	_
 3	era	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	4	cop	_	_
@@ -55,20 +58,20 @@
 18	território	território	NOUN	_	Gender=Masc|Number=Sing	19	nsubj	_	_
 19	possuísse	possuir	VERB	_	Mood=Sub|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	15	ccomp	_	_
 20	independência	independência	NOUN	_	Gender=Fem|Number=Sing	19	obj	_	_
-21	agrícola	agrícola	ADJ	_	Gender=Masc|Number=Sing	20	amod	_	SpaceAfter=No
+21	agrícola	agrícola	ADJ	_	Gender=Fem|Number=Sing	20	amod	_	SpaceAfter=No
 22	,	,	PUNCT	_	_	23	punct	_	_
-23	industrial	industrial	ADJ	_	Gender=Masc|Number=Sing	21	conj	_	_
+23	industrial	industrial	ADJ	_	Gender=Fem|Number=Sing	21	conj	_	_
 24	e	e	CCONJ	_	_	25	cc	_	_
-25	comercial	comercial	ADJ	_	Gender=Masc|Number=Sing	21	conj	_	_
-26	suficiente	suficiente	NOUN	_	Gender=Masc|Number=Sing	20	appos	_	_
+25	comercial	comercial	ADJ	_	Gender=Fem|Number=Sing	21	conj	_	_
+26	suficiente	suficiente	ADJ	_	Gender=Fem|Number=Sing	20	amod	_	_
 27	para	para	SCONJ	_	_	28	mark	_	_
-28	sustentar	sustentar	VERB	_	VerbForm=Inf	26	acl	_	_
+28	sustentar	sustentar	VERB	_	VerbForm=Inf	26	advcl	_	_
 29	esta	este	DET	_	Gender=Fem|Number=Sing|PronType=Dem	30	det	_	_
 30	posição	posição	NOUN	_	Gender=Fem|Number=Sing	28	obj	_	SpaceAfter=No
-31	.	.	PUNCT	_	_	4	punct	_	SpacesAfter=\n
+31	.	.	PUNCT	_	_	4	punct	_	_
 
-# text = Neste sentido, opunha-se à Legião Autonomista Acreana.
 # sent_id = 4
+# text = Neste sentido, opunha-se à Legião Autonomista Acreana.
 1-2	Neste	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	3	case	_	_
 2	este	este	DET	_	Gender=Masc|Number=Sing|PronType=Dem	3	det	_	_
@@ -80,7 +83,7 @@
 7-8	à	_	_	_	_	_	_	_	_
 7	a	a	ADP	_	_	9	case	_	_
 8	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	9	det	_	_
-9	Legião	Legião	PROPN	_	Gender=Fem|Number=Sing	5	obl	_	_
+9	Legião	Legião	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	5	obj	_	_
 10	Autonomista	Autonomista	PROPN	_	Number=Sing	9	flat:name	_	_
 11	Acreana	Acreana	PROPN	_	Number=Sing	9	flat:name	_	SpaceAfter=No
 12	.	.	PUNCT	_	_	5	punct	_	SpacesAfter=\n

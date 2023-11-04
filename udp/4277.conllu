@@ -1,11 +1,12 @@
-# text = «Antônio Carlos Pereira Pinto» nasceu em Campos (RJ) no dia 30 de agosto de 1927, filho de Jorge Pereira Pinto e de Alcinda Pereira Pinto.
-# status = syntax
-# sent_id = 1
-# newpar
+# generator = UDPipe 2, https://lindat.mff.cuni.cz/services/udpipe
+# udpipe_model = portuguese-bosque-ud-2.12-230717
+# udpipe_model_licence = CC BY-NC-SA
 # newdoc
-# batch = 1
+# newpar
+# sent_id = 1
+# text = «Antônio Carlos Pereira Pinto» nasceu em Campos (RJ) no dia 30 de agosto de 1927, filho de Jorge Pereira Pinto e de Alcinda Pereira Pinto.
 1	«	«	PUNCT	_	_	2	punct	_	SpaceAfter=No
-2	Antônio	Antônio	PROPN	_	Gender=Masc|Number=Sing	7	nsubj	_	_
+2	Antônio	Antônio	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	7	nsubj	_	_
 3	Carlos	Carlos	PROPN	_	Number=Sing	2	flat:name	_	_
 4	Pereira	Pereira	PROPN	_	Number=Sing	2	flat:name	_	_
 5	Pinto	Pinto	PROPN	_	Number=Sing	2	flat:name	_	SpaceAfter=No
@@ -14,7 +15,7 @@
 8	em	em	ADP	_	_	9	case	_	_
 9	Campos	Campos	PROPN	_	Gender=Masc|Number=Sing	7	obl	_	_
 10	(	(	PUNCT	_	_	11	punct	_	SpaceAfter=No
-11	RJ	RJ	PROPN	_	Gender=Masc|Number=Sing	9	appos	_	SpaceAfter=No
+11	RJ	RJ	PROPN	_	Gender=Masc|Number=Sing	9	parataxis	_	SpaceAfter=No
 12	)	)	PUNCT	_	_	11	punct	_	_
 13-14	no	_	_	_	_	_	_	_	_
 13	em	em	ADP	_	_	15	case	_	_
@@ -26,21 +27,21 @@
 19	de	de	ADP	_	_	20	case	_	_
 20	1927	1927	NUM	_	NumType=Card	18	nmod	_	SpaceAfter=No
 21	,	,	PUNCT	_	_	22	punct	_	_
-22	filho	filho	NOUN	_	Gender=Masc|Number=Sing	2	appos	_	_
+22	filho	filho	NOUN	_	Gender=Masc|Number=Sing	7	appos	_	_
 23	de	de	ADP	_	_	24	case	_	_
-24	Jorge	Jorge	PROPN	_	Gender=Masc|Number=Sing	22	nmod	_	_
+24	Jorge	Jorge	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	22	nmod	_	_
 25	Pereira	Pereira	PROPN	_	Number=Sing	24	flat:name	_	_
 26	Pinto	Pinto	PROPN	_	Number=Sing	24	flat:name	_	_
 27	e	e	CCONJ	_	_	29	cc	_	_
 28	de	de	ADP	_	_	29	case	_	_
-29	Alcinda	Alcinda	PROPN	_	Gender=Fem|Number=Sing	24	conj	_	_
+29	Alcinda	Alcinda	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	24	conj	_	_
 30	Pereira	Pereira	PROPN	_	Number=Sing	29	flat:name	_	_
 31	Pinto	Pinto	PROPN	_	Number=Sing	29	flat:name	_	SpaceAfter=No
 32	.	.	PUNCT	_	_	7	punct	_	SpacesAfter=\n
 
-# text = Eletrotécnico, elegeu-se no pleito de outubro de 1962 deputado à Assembléia Legislativa do Rio de Janeiro na legenda do Partido Trabalhista Brasileiro (PTB), assumindo o mandato em fevereiro do ano seguinte.
 # sent_id = 2
-1	Eletrotécnico	Eletrotécnico	NOUN	_	Gender=Masc|Number=Sing	3	obl	_	SpaceAfter=No
+# text = Eletrotécnico, elegeu-se no pleito de outubro de 1962 deputado à Assembléia Legislativa do Rio de Janeiro na legenda do Partido Trabalhista Brasileiro (PTB), assumindo o mandato em fevereiro do ano seguinte.
+1	Eletrotécnico	eletrotécnico	NOUN	_	Gender=Masc|Number=Sing	3	obl	_	SpaceAfter=No
 2	,	,	PUNCT	_	_	1	punct	_	_
 3-4	elegeu-se	_	_	_	_	_	_	_	_
 3	elegeu	eleger	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
@@ -51,20 +52,20 @@
 7	pleito	pleito	NOUN	_	Gender=Masc|Number=Sing	3	obl	_	_
 8	de	de	ADP	_	_	9	case	_	_
 9	outubro	outubro	NOUN	_	Gender=Masc|Number=Sing	7	nmod	_	_
-10	de	de	ADP	_	_	12	case	_	_
-11	1962	1962	NUM	_	NumType=Card	12	nummod	_	_
-12	deputado	deputado	NOUN	_	Gender=Masc|Number=Sing	9	nmod	_	_
+10	de	de	ADP	_	_	11	case	_	_
+11	1962	1962	NUM	_	NumType=Card	9	nummod	_	_
+12	deputado	deputado	NOUN	_	Gender=Masc|Number=Sing	3	obj	_	_
 13-14	à	_	_	_	_	_	_	_	_
 13	a	a	ADP	_	_	15	case	_	_
 14	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	15	det	_	_
-15	Assembléia	Assembléia	PROPN	_	Gender=Fem|Number=Sing	9	nmod	_	_
-16	Legislativa	Legislativa	PROPN	_	Number=Sing	15	flat:name	_	_
+15	Assembléia	assembléia	NOUN	_	Gender=Fem|Number=Sing	12	nmod	_	_
+16	Legislativa	legislativo	ADJ	_	Gender=Fem|Number=Sing	15	amod	_	_
 17-18	do	_	_	_	_	_	_	_	_
 17	de	de	ADP	_	_	19	case	_	_
 18	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	19	det	_	_
 19	Rio	Rio	PROPN	_	Gender=Masc|Number=Sing	15	nmod	_	_
 20	de	de	ADP	_	_	21	case	_	_
-21	Janeiro	janeiro	PROPN	_	Number=Sing	19	nmod	_	_
+21	Janeiro	Janeiro	PROPN	_	Number=Sing	19	nmod	_	_
 22-23	na	_	_	_	_	_	_	_	_
 22	em	em	ADP	_	_	24	case	_	_
 23	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	24	det	_	_
@@ -72,9 +73,9 @@
 25-26	do	_	_	_	_	_	_	_	_
 25	de	de	ADP	_	_	27	case	_	_
 26	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	27	det	_	_
-27	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	24	nmod	_	_
-28	Trabalhista	trabalhista	PROPN	_	Number=Sing	27	flat:name	_	_
-29	Brasileiro	brasileiro	PROPN	_	Number=Sing	27	flat:name	_	_
+27	Partido	Partido	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	24	nmod	_	_
+28	Trabalhista	Trabalhista	PROPN	_	Number=Sing	27	flat:name	_	_
+29	Brasileiro	Brasileiro	PROPN	_	Number=Sing	27	flat:name	_	_
 30	(	(	PUNCT	_	_	31	punct	_	SpaceAfter=No
 31	PTB	PTB	PROPN	_	Gender=Masc|Number=Sing	27	appos	_	SpaceAfter=No
 32	)	)	PUNCT	_	_	31	punct	_	SpaceAfter=No
@@ -83,16 +84,16 @@
 35	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	36	det	_	_
 36	mandato	mandato	NOUN	_	Gender=Masc|Number=Sing	34	obj	_	_
 37	em	em	ADP	_	_	38	case	_	_
-38	fevereiro	fevereiro	NOUN	_	Gender=Masc|Number=Sing	36	nmod	_	_
+38	fevereiro	fevereiro	NOUN	_	Gender=Masc|Number=Sing	34	obl	_	_
 39-40	do	_	_	_	_	_	_	_	_
 39	de	de	ADP	_	_	41	case	_	_
 40	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	41	det	_	_
 41	ano	ano	NOUN	_	Gender=Masc|Number=Sing	38	nmod	_	_
 42	seguinte	seguinte	ADJ	_	Gender=Masc|Number=Sing	41	amod	_	SpaceAfter=No
-43	.	.	PUNCT	_	_	3	punct	_	SpacesAfter=\n
+43	.	.	PUNCT	_	_	3	punct	_	_
 
-# text = Com a extinção dos partidos políticos pelo Ato Institucional nº 2 (27/10/1965) e a posterior instauração do bipartidarismo, filiou-se ao Movimento Democrático Brasileiro (MDB), partido de oposição ao regime militar instaurado no país em abril de 1964, e pelo qual candidatou-se em novembro de 1966 a deputado federal por seu estado, não obtendo êxito.
 # sent_id = 3
+# text = Com a extinção dos partidos políticos pelo Ato Institucional nº 2 (27/10/1965) e a posterior instauração do bipartidarismo, filiou-se ao Movimento Democrático Brasileiro (MDB), partido de oposição ao regime militar instaurado no país em abril de 1964, e pelo qual candidatou-se em novembro de 1966 a deputado federal por seu estado, não obtendo êxito.
 1	Com	com	ADP	_	_	3	case	_	_
 2	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	3	det	_	_
 3	extinção	extinção	NOUN	_	Gender=Fem|Number=Sing	25	obl	_	_
@@ -104,17 +105,17 @@
 8-9	pelo	_	_	_	_	_	_	_	_
 8	por	por	ADP	_	_	10	case	_	_
 9	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	10	det	_	_
-10	Ato	ato	PROPN	_	Gender=Masc|Number=Sing	3	nmod	_	_
+10	Ato	Ato	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	3	nmod	_	_
 11	Institucional	Institucional	PROPN	_	Number=Sing	10	flat:name	_	_
-12	nº	nº	NOUN	_	Gender=Masc|Number=Sing	10	nmod	_	_
-13	2	2	NUM	_	NumType=Card	12	nummod	_	_
+12	nº	número	PROPN	_	Abbr=Yes|Gender=Masc|Number=Sing	10	flat:name	_	_
+13	2	2	PROPN	_	Number=Sing	10	flat:name	_	_
 14	(	(	PUNCT	_	_	15	punct	_	SpaceAfter=No
-15	27/10/1965	27/10/1965	NUM	_	NumType=Card	10	appos	_	SpaceAfter=No
+15	27/10/1965	27/10/1965	NUM	_	NumType=Card	10	parataxis	_	SpaceAfter=No
 16	)	)	PUNCT	_	_	15	punct	_	_
 17	e	e	CCONJ	_	_	20	cc	_	_
 18	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	20	det	_	_
 19	posterior	posterior	ADJ	_	Gender=Fem|Number=Sing	20	amod	_	_
-20	instauração	instauração	NOUN	_	Gender=Fem|Number=Sing	10	conj	_	_
+20	instauração	instauração	NOUN	_	Gender=Fem|Number=Sing	3	conj	_	_
 21-22	do	_	_	_	_	_	_	_	_
 21	de	de	ADP	_	_	23	case	_	_
 22	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	23	det	_	_
@@ -126,20 +127,20 @@
 27-28	ao	_	_	_	_	_	_	_	_
 27	a	a	ADP	_	_	29	case	_	_
 28	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	29	det	_	_
-29	Movimento	Movimento	PROPN	_	Gender=Masc|Number=Sing	25	obl	_	_
+29	Movimento	Movimento	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	25	obl	_	_
 30	Democrático	Democrático	PROPN	_	Number=Sing	29	flat:name	_	_
-31	Brasileiro	brasileiro	PROPN	_	Number=Sing	29	flat:name	_	_
+31	Brasileiro	Brasileiro	PROPN	_	Number=Sing	29	flat:name	_	_
 32	(	(	PUNCT	_	_	33	punct	_	SpaceAfter=No
 33	MDB	MDB	PROPN	_	Gender=Masc|Number=Sing	29	appos	_	SpaceAfter=No
 34	)	)	PUNCT	_	_	33	punct	_	SpaceAfter=No
 35	,	,	PUNCT	_	_	36	punct	_	_
-36	partido	partido	NOUN	_	Gender=Masc|Number=Sing	29	conj	_	_
+36	partido	partido	NOUN	_	Gender=Masc|Number=Sing	29	appos	_	_
 37	de	de	ADP	_	_	38	case	_	_
 38	oposição	oposição	NOUN	_	Gender=Fem|Number=Sing	36	nmod	_	_
 39-40	ao	_	_	_	_	_	_	_	_
 39	a	a	ADP	_	_	41	case	_	_
 40	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	41	det	_	_
-41	regime	regime	NOUN	_	Gender=Masc|Number=Sing	36	nmod	_	_
+41	regime	regime	NOUN	_	Gender=Masc|Number=Sing	38	nmod	_	_
 42	militar	militar	ADJ	_	Gender=Masc|Number=Sing	41	amod	_	_
 43	instaurado	instaurar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	41	acl	_	_
 44-45	no	_	_	_	_	_	_	_	_
@@ -154,10 +155,10 @@
 52	e	e	CCONJ	_	_	56	cc	_	_
 53-54	pelo	_	_	_	_	_	_	_	_
 53	por	por	ADP	_	_	55	case	_	_
-54	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	55	det	_	_
+54	o	o	DET	_	Gender=Masc|Number=Sing|PronType=Art	55	det	_	_
 55	qual	qual	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	56	obl	_	_
 56-57	candidatou-se	_	_	_	_	_	_	_	_
-56	candidatou	candidatar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	29	conj	_	_
+56	candidatou	candidatar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	41	acl:relcl	_	_
 57	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	56	expl	_	_
 58	em	em	ADP	_	_	59	case	_	_
 59	novembro	novembro	NOUN	_	Gender=Masc|Number=Sing	56	obl	_	_
@@ -169,19 +170,19 @@
 65	por	por	ADP	_	_	67	case	_	_
 66	seu	seu	DET	_	Gender=Masc|Number=Sing|PronType=Prs	67	det	_	_
 67	estado	estado	NOUN	_	Gender=Masc|Number=Sing	56	obl	_	SpaceAfter=No
-68	,	,	PUNCT	_	_	56	punct	_	_
+68	,	,	PUNCT	_	_	70	punct	_	_
 69	não	não	ADV	_	Polarity=Neg	70	advmod	_	_
-70	obtendo	obter	VERB	_	VerbForm=Ger	25	advcl	_	_
-71	êxito	êxito	ADV	_	_	70	advmod	_	SpaceAfter=No
+70	obtendo	obter	VERB	_	VerbForm=Ger	56	advcl	_	_
+71	êxito	êxito	NOUN	_	Gender=Masc|Number=Sing	70	obj	_	SpaceAfter=No
 72	.	.	PUNCT	_	_	25	punct	_	SpacesAfter=\n
 
-# text = Participou da Frente Ampla, movimento político lançado oficialmente em 28 de outubro de 1966, encabeçado por Carlos Lacerda, Juscelino Kubitschek e João Goulart, a quem Pereira Pinto era pessoalmente ligado, que tinha por objetivo a luta pela plena restauração democrática no Brasil, por não concordar com as medidas políticas e econômicas tomadas pelo regime militar instaurado no país em abril de 1964.
 # sent_id = 4
+# text = Participou da Frente Ampla, movimento político lançado oficialmente em 28 de outubro de 1966, encabeçado por Carlos Lacerda, Juscelino Kubitschek e João Goulart, a quem Pereira Pinto era pessoalmente ligado, que tinha por objetivo a luta pela plena restauração democrática no Brasil, por não concordar com as medidas políticas e econômicas tomadas pelo regime militar instaurado no país em abril de 1964.
 1	Participou	participar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2-3	da	_	_	_	_	_	_	_	_
 2	de	de	ADP	_	_	4	case	_	_
 3	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	4	det	_	_
-4	Frente	Frente	PROPN	_	Gender=Fem|Number=Sing	1	obl	_	_
+4	Frente	Frente	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	1	obl	_	_
 5	Ampla	Ampla	PROPN	_	Number=Sing	4	flat:name	_	SpaceAfter=No
 6	,	,	PUNCT	_	_	7	punct	_	_
 7	movimento	movimento	NOUN	_	Gender=Masc|Number=Sing	4	appos	_	_
@@ -197,25 +198,25 @@
 17	,	,	PUNCT	_	_	18	punct	_	_
 18	encabeçado	encabeçar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	7	acl	_	_
 19	por	por	ADP	_	_	20	case	_	_
-20	Carlos	Carlos	PROPN	_	Gender=Masc|Number=Sing	18	obl:agent	_	_
+20	Carlos	Carlos	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	18	obl:agent	_	_
 21	Lacerda	Lacerda	PROPN	_	Number=Sing	20	flat:name	_	SpaceAfter=No
 22	,	,	PUNCT	_	_	23	punct	_	_
-23	Juscelino	Juscelino	PROPN	_	Gender=Masc|Number=Sing	20	conj	_	_
+23	Juscelino	Juscelino	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	20	conj	_	_
 24	Kubitschek	Kubitschek	PROPN	_	Number=Sing	23	flat:name	_	_
 25	e	e	CCONJ	_	_	26	cc	_	_
-26	João	João	PROPN	_	Gender=Masc|Number=Sing	20	conj	_	_
+26	João	João	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	20	conj	_	_
 27	Goulart	Goulart	PROPN	_	Number=Sing	26	flat:name	_	SpaceAfter=No
-28	,	,	PUNCT	_	_	18	punct	_	_
-29	a	a	ADP	_	_	35	case	_	_
-30	quem	quem	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	35	mark	_	_
-31	Pereira	Pereira	PROPN	_	Gender=Masc|Number=Sing	35	nsubj	_	_
+28	,	,	PUNCT	_	_	35	punct	_	_
+29	a	a	ADP	_	_	30	case	_	_
+30	quem	quem	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	35	obl	_	_
+31	Pereira	Pereira	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	35	nsubj:pass	_	_
 32	Pinto	Pinto	PROPN	_	Number=Sing	31	flat:name	_	_
-33	era	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	35	cop	_	_
+33	era	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	35	aux:pass	_	_
 34	pessoalmente	pessoalmente	ADV	_	_	35	advmod	_	_
-35	ligado	ligado	ADJ	_	Gender=Masc|Number=Sing	7	nmod	_	SpaceAfter=No
+35	ligado	ligar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	20	acl:relcl	_	SpaceAfter=No
 36	,	,	PUNCT	_	_	35	punct	_	_
 37	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	38	nsubj	_	_
-38	tinha	ter	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	35	ccomp	_	_
+38	tinha	ter	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	35	conj	_	_
 39	por	por	ADP	_	_	40	case	_	_
 40	objetivo	objetivo	NOUN	_	Gender=Masc|Number=Sing	38	obl	_	_
 41	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	42	det	_	_
@@ -230,17 +231,17 @@
 48	em	em	ADP	_	_	50	case	_	_
 49	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	50	det	_	_
 50	Brasil	Brasil	PROPN	_	Gender=Masc|Number=Sing	46	nmod	_	SpaceAfter=No
-51	,	,	PUNCT	_	_	38	punct	_	_
+51	,	,	PUNCT	_	_	54	punct	_	_
 52	por	por	SCONJ	_	_	54	mark	_	_
 53	não	não	ADV	_	Polarity=Neg	54	advmod	_	_
-54	concordar	concordar	VERB	_	VerbForm=Inf	35	advcl	_	_
+54	concordar	concordar	VERB	_	VerbForm=Inf	38	advcl	_	_
 55	com	com	ADP	_	_	57	case	_	_
 56	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	57	det	_	_
-57	medidas	medida	NOUN	_	Gender=Fem|Number=Plur	54	obl	_	_
+57	medidas	medida	NOUN	_	Gender=Fem|Number=Plur	54	obj	_	_
 58	políticas	político	ADJ	_	Gender=Fem|Number=Plur	57	amod	_	_
 59	e	e	CCONJ	_	_	60	cc	_	_
-60	econômicas	econômica	ADJ	_	Gender=Fem|Number=Plur	35	conj	_	_
-61	tomadas	tomar	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part|Voice=Pass	35	acl	_	_
+60	econômicas	econômico	ADJ	_	Gender=Fem|Number=Plur	58	conj	_	_
+61	tomadas	tomar	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part|Voice=Pass	57	acl	_	_
 62-63	pelo	_	_	_	_	_	_	_	_
 62	por	por	ADP	_	_	64	case	_	_
 63	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	64	det	_	_
@@ -255,12 +256,12 @@
 71	abril	abril	NOUN	_	Gender=Masc|Number=Sing	66	obl	_	_
 72	de	de	ADP	_	_	73	case	_	_
 73	1964	1964	NUM	_	NumType=Card	71	nmod	_	SpaceAfter=No
-74	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
+74	.	.	PUNCT	_	_	1	punct	_	_
 
-# text = Porém, em 5 de abril de 1968, todas as atividades da Frente Ampla (manifestações, reuniões, comícios, passeatas) seriam proibidas pelo então ministro da Justiça, Luís Antônio da Gama e Silva, que ordenaria à Polícia Federal a detenção daqueles que violassem essa decisão.
 # sent_id = 5
-1	Porém	porém	CCONJ	_	_	27	advmod	_	SpaceAfter=No
-2	,	,	PUNCT	_	_	4	punct	_	_
+# text = Porém, em 5 de abril de 1968, todas as atividades da Frente Ampla (manifestações, reuniões, comícios, passeatas) seriam proibidas pelo então ministro da Justiça, Luís Antônio da Gama e Silva, que ordenaria à Polícia Federal a detenção daqueles que violassem essa decisão.
+1	Porém	porém	ADV	_	_	27	advmod	_	SpaceAfter=No
+2	,	,	PUNCT	_	_	1	punct	_	_
 3	em	em	ADP	_	_	4	case	_	_
 4	5	5	NUM	_	NumType=Card	27	obl	_	_
 5	de	de	ADP	_	_	6	case	_	_
@@ -274,10 +275,10 @@
 13-14	da	_	_	_	_	_	_	_	_
 13	de	de	ADP	_	_	15	case	_	_
 14	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	15	det	_	_
-15	Frente	Frente	PROPN	_	Gender=Fem|Number=Sing	12	nmod	_	_
+15	Frente	Frente	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	12	nmod	_	_
 16	Ampla	Ampla	PROPN	_	Number=Sing	15	flat:name	_	_
 17	(	(	PUNCT	_	_	18	punct	_	SpaceAfter=No
-18	manifestações	manifestação	NOUN	_	Gender=Fem|Number=Plur	15	parataxis	_	SpaceAfter=No
+18	manifestações	manifestação	NOUN	_	Gender=Fem|Number=Plur	15	appos	_	SpaceAfter=No
 19	,	,	PUNCT	_	_	20	punct	_	_
 20	reuniões	reunião	NOUN	_	Gender=Fem|Number=Plur	18	conj	_	SpaceAfter=No
 21	,	,	PUNCT	_	_	22	punct	_	_
@@ -295,26 +296,26 @@
 32-33	da	_	_	_	_	_	_	_	_
 32	de	de	ADP	_	_	34	case	_	_
 33	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	34	det	_	_
-34	Justiça	justiça	PROPN	_	Number=Sing	31	nmod	_	SpaceAfter=No
+34	Justiça	justiça	NOUN	_	Gender=Fem|Number=Sing	31	nmod	_	SpaceAfter=No
 35	,	,	PUNCT	_	_	36	punct	_	_
-36	Luís	Luís	PROPN	_	Gender=Masc|Number=Sing	31	appos	_	_
+36	Luís	Luís	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	31	appos	_	_
 37	Antônio	Antônio	PROPN	_	Number=Sing	36	flat:name	_	_
 38-39	da	_	_	_	_	_	_	_	_
 38	de	de	ADP	_	_	40	case	_	_
 39	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	40	det	_	_
-40	Gama	Gama	PROPN	_	Number=Sing	36	nmod	_	_
-41	e	e	CCONJ	_	_	42	cc	_	_
-42	Silva	Silva	PROPN	_	Number=Sing	40	conj	_	SpaceAfter=No
+40	Gama	Gama	PROPN	_	ExtPos=PROPN|Number=Sing	36	nmod	_	_
+41	e	e	CCONJ	_	_	40	flat:name	_	_
+42	Silva	Silva	PROPN	_	Number=Sing	40	flat:name	_	SpaceAfter=No
 43	,	,	PUNCT	_	_	36	punct	_	_
 44	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	45	nsubj	_	_
-45	ordenaria	ordenazer	VERB	_	Mood=Cnd|Number=Sing|Person=3|VerbForm=Fin	31	acl:relcl	_	_
+45	ordenaria	ordenar	VERB	_	Mood=Cnd|Number=Sing|Person=3|VerbForm=Fin	31	acl:relcl	_	_
 46-47	à	_	_	_	_	_	_	_	_
 46	a	a	ADP	_	_	48	case	_	_
 47	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	48	det	_	_
-48	Polícia	Polícia	PROPN	_	Gender=Fem|Number=Sing	45	obj	_	_
+48	Polícia	Polícia	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	45	iobj	_	_
 49	Federal	Federal	PROPN	_	Number=Sing	48	flat:name	_	_
 50	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	51	det	_	_
-51	detenção	detenção	NOUN	_	Gender=Fem|Number=Sing	48	appos	_	_
+51	detenção	detenção	NOUN	_	Gender=Fem|Number=Sing	45	obj	_	_
 52-53	daqueles	_	_	_	_	_	_	_	_
 52	de	de	ADP	_	_	53	case	_	_
 53	aqueles	aquele	PRON	_	Gender=Masc|Number=Plur|PronType=Dem	51	nmod	_	_
@@ -324,8 +325,8 @@
 57	decisão	decisão	NOUN	_	Gender=Fem|Number=Sing	55	obj	_	SpaceAfter=No
 58	.	.	PUNCT	_	_	27	punct	_	SpacesAfter=\n
 
-# text = Deixando o Legislativo fluminense em janeiro de 1967, Pereira Pinto, assumiu uma cadeira na Câmara dos Deputados nos períodos de junho desse ano a janeiro de 1968 e de março de 1968 a fevereiro de 1969, quando teve seu mandato cassado e seus direitos políticos suspensos pelo Ato Institucional nº 5, editado em 13 de dezembro do ano anterior.
 # sent_id = 6
+# text = Deixando o Legislativo fluminense em janeiro de 1967, Pereira Pinto, assumiu uma cadeira na Câmara dos Deputados nos períodos de junho desse ano a janeiro de 1968 e de março de 1968 a fevereiro de 1969, quando teve seu mandato cassado e seus direitos políticos suspensos pelo Ato Institucional nº 5, editado em 13 de dezembro do ano anterior.
 1	Deixando	deixar	VERB	_	VerbForm=Ger	13	advcl	_	_
 2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
 3	Legislativo	legislativo	NOUN	_	Gender=Masc|Number=Sing	1	obj	_	_
@@ -334,17 +335,17 @@
 6	janeiro	janeiro	NOUN	_	Gender=Masc|Number=Sing	1	obl	_	_
 7	de	de	ADP	_	_	8	case	_	_
 8	1967	1967	NUM	_	NumType=Card	6	nmod	_	SpaceAfter=No
-9	,	,	PUNCT	_	_	10	punct	_	_
-10	Pereira	Pereira	PROPN	_	Gender=Masc|Number=Sing	8	conj	_	_
+9	,	,	PUNCT	_	_	1	punct	_	_
+10	Pereira	Pereira	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	13	nsubj	_	_
 11	Pinto	Pinto	PROPN	_	Number=Sing	10	flat:name	_	SpaceAfter=No
-12	,	,	PUNCT	_	_	1	punct	_	_
+12	,	,	PUNCT	_	_	10	punct	_	_
 13	assumiu	assumir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 14	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	15	det	_	_
 15	cadeira	cadeira	NOUN	_	Gender=Fem|Number=Sing	13	obj	_	_
 16-17	na	_	_	_	_	_	_	_	_
 16	em	em	ADP	_	_	18	case	_	_
 17	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	18	det	_	_
-18	Câmara	câmara	NOUN	_	Gender=Fem|Number=Sing	15	nmod	_	_
+18	Câmara	Câmara	PROPN	_	Gender=Fem|Number=Sing	13	obl	_	_
 19-20	dos	_	_	_	_	_	_	_	_
 19	de	de	ADP	_	_	21	case	_	_
 20	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	21	det	_	_
@@ -360,20 +361,20 @@
 28	esse	esse	DET	_	Gender=Masc|Number=Sing|PronType=Dem	29	det	_	_
 29	ano	ano	NOUN	_	Gender=Masc|Number=Sing	26	nmod	_	_
 30	a	a	ADP	_	_	31	case	_	_
-31	janeiro	janeiro	NOUN	_	Gender=Masc|Number=Sing	24	nmod	_	_
+31	janeiro	janeiro	NOUN	_	Gender=Masc|Number=Sing	26	nmod	_	_
 32	de	de	ADP	_	_	33	case	_	_
 33	1968	1968	NUM	_	NumType=Card	31	nmod	_	_
 34	e	e	CCONJ	_	_	36	cc	_	_
 35	de	de	ADP	_	_	36	case	_	_
-36	março	março	NOUN	_	Gender=Masc|Number=Sing	33	conj	_	_
+36	março	março	NOUN	_	Gender=Masc|Number=Sing	26	conj	_	_
 37	de	de	ADP	_	_	38	case	_	_
 38	1968	1968	NUM	_	NumType=Card	36	nmod	_	_
 39	a	a	ADP	_	_	40	case	_	_
-40	fevereiro	fevereiro	NOUN	_	Gender=Masc|Number=Sing	38	nmod	_	_
+40	fevereiro	fevereiro	NOUN	_	Gender=Masc|Number=Sing	36	nmod	_	_
 41	de	de	ADP	_	_	42	case	_	_
 42	1969	1969	NUM	_	NumType=Card	40	nmod	_	SpaceAfter=No
-43	,	,	PUNCT	_	_	13	punct	_	_
-44	quando	quando	ADV	_	_	45	mark	_	_
+43	,	,	PUNCT	_	_	45	punct	_	_
+44	quando	quando	ADV	_	_	45	advmod	_	_
 45	teve	ter	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	13	advcl	_	_
 46	seu	seu	DET	_	Gender=Masc|Number=Sing|PronType=Prs	47	det	_	_
 47	mandato	mandato	NOUN	_	Gender=Masc|Number=Sing	45	obj	_	_
@@ -382,16 +383,16 @@
 50	seus	seu	DET	_	Gender=Masc|Number=Plur|PronType=Prs	51	det	_	_
 51	direitos	direito	NOUN	_	Gender=Masc|Number=Plur	47	conj	_	_
 52	políticos	político	ADJ	_	Gender=Masc|Number=Plur	51	amod	_	_
-53	suspensos	suspennder	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	47	acl	_	_
+53	suspensos	suspensder	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	51	acl	_	_
 54-55	pelo	_	_	_	_	_	_	_	_
 54	por	por	ADP	_	_	56	case	_	_
 55	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	56	det	_	_
-56	Ato	ato	PROPN	_	Gender=Masc|Number=Sing	53	obl:agent	_	_
-57	Institucional	Institucional	PROPN	_	Number=Sing	56	flat:name	_	_
-58	nº	nº	NOUN	_	Gender=Masc|Number=Sing	56	conj	_	_
-59	5	5	NUM	_	NumType=Card	58	nummod	_	SpaceAfter=No
+56	Ato	ato	NOUN	_	Gender=Masc|Number=Sing	53	obl:agent	_	_
+57	Institucional	institucional	ADJ	_	Number=Sing	56	amod	_	_
+58	nº	número	NOUN	_	Abbr=Yes|Gender=Masc|Number=Sing	56	nmod	_	_
+59	5	5	NUM	_	Number=Sing	56	nummod	_	SpaceAfter=No
 60	,	,	PUNCT	_	_	61	punct	_	_
-61	editado	editar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	56	conj	_	_
+61	editado	editar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	56	acl	_	_
 62	em	em	ADP	_	_	63	case	_	_
 63	13	13	NUM	_	NumType=Card	61	obl	_	_
 64	de	de	ADP	_	_	65	case	_	_
@@ -403,8 +404,8 @@
 69	anterior	anterior	ADJ	_	Gender=Masc|Number=Sing	68	amod	_	SpaceAfter=No
 70	.	.	PUNCT	_	_	13	punct	_	SpacesAfter=\n
 
-# text = Em 28 de agosto de 1979, com a decretação da Lei da Anistia, recuperou seus direitos políticos e, em 1981, foi um dos fundadores do Partido Democrático Trabalhista (PDT), agremiação liderada nacionalmente por Leonel Brizola, participando da sua organização no norte do estado do Rio de Janeiro.
 # sent_id = 7
+# text = Em 28 de agosto de 1979, com a decretação da Lei da Anistia, recuperou seus direitos políticos e, em 1981, foi um dos fundadores do Partido Democrático Trabalhista (PDT), agremiação liderada nacionalmente por Leonel Brizola, participando da sua organização no norte do estado do Rio de Janeiro.
 1	Em	em	ADP	_	_	2	case	_	_
 2	28	28	NUM	_	NumType=Card	18	obl	_	_
 3	de	de	ADP	_	_	4	case	_	_
@@ -422,11 +423,11 @@
 14-15	da	_	_	_	_	_	_	_	_
 14	de	de	ADP	_	_	16	case	_	_
 15	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	16	det	_	_
-16	Anistia	Anistia	PROPN	_	Gender=Fem|Number=Sing	13	nmod	_	SpaceAfter=No
+16	Anistia	Anistia	PROPN	_	Number=Sing	13	nmod	_	SpaceAfter=No
 17	,	,	PUNCT	_	_	10	punct	_	_
 18	recuperou	recuperar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 19	seus	seu	DET	_	Gender=Masc|Number=Plur|PronType=Prs	20	det	_	_
-20	direitos	direito	NOUN	_	Gender=Masc|Number=Plur	18	nsubj	_	_
+20	direitos	direito	NOUN	_	Gender=Masc|Number=Plur	18	obj	_	_
 21	políticos	político	ADJ	_	Gender=Masc|Number=Plur	20	amod	_	_
 22	e	e	CCONJ	_	_	28	cc	_	SpaceAfter=No
 23	,	,	PUNCT	_	_	25	punct	_	_
@@ -434,7 +435,7 @@
 25	1981	1981	NUM	_	NumType=Card	28	nmod	_	SpaceAfter=No
 26	,	,	PUNCT	_	_	25	punct	_	_
 27	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	28	cop	_	_
-28	um	um	NUM	_	NumType=Card	20	conj	_	_
+28	um	um	NUM	_	NumType=Card	18	conj	_	_
 29-30	dos	_	_	_	_	_	_	_	_
 29	de	de	ADP	_	_	31	case	_	_
 30	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	31	det	_	_
@@ -442,21 +443,21 @@
 32-33	do	_	_	_	_	_	_	_	_
 32	de	de	ADP	_	_	34	case	_	_
 33	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	34	det	_	_
-34	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	31	nmod	_	_
+34	Partido	Partido	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	31	nmod	_	_
 35	Democrático	Democrático	PROPN	_	Number=Sing	34	flat:name	_	_
-36	Trabalhista	trabalhista	PROPN	_	Number=Sing	34	flat:name	_	_
+36	Trabalhista	Trabalhista	PROPN	_	Number=Sing	34	flat:name	_	_
 37	(	(	PUNCT	_	_	38	punct	_	SpaceAfter=No
 38	PDT	PDT	PROPN	_	Gender=Masc|Number=Sing	34	appos	_	SpaceAfter=No
 39	)	)	PUNCT	_	_	38	punct	_	SpaceAfter=No
 40	,	,	PUNCT	_	_	41	punct	_	_
 41	agremiação	agremiação	NOUN	_	Gender=Fem|Number=Sing	34	appos	_	_
-42	liderada	liderar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	41	acl	_	_
-43	nacionalmente	nacionalmente	ADV	_	_	41	advmod	_	_
+42	liderada	liderar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	41	acl	_	_
+43	nacionalmente	nacionalmente	ADV	_	_	42	advmod	_	_
 44	por	por	ADP	_	_	45	case	_	_
-45	Leonel	Leonel	PROPN	_	Gender=Masc|Number=Sing	43	obl	_	_
+45	Leonel	Leonel	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	42	obl:agent	_	_
 46	Brizola	Brizola	PROPN	_	Number=Sing	45	flat:name	_	SpaceAfter=No
 47	,	,	PUNCT	_	_	48	punct	_	_
-48	participando	participar	VERB	_	VerbForm=Ger	43	advcl	_	_
+48	participando	participar	VERB	_	VerbForm=Ger	42	advcl	_	_
 49-50	da	_	_	_	_	_	_	_	_
 49	de	de	ADP	_	_	52	case	_	_
 50	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	52	det	_	_
@@ -476,10 +477,10 @@
 61	Rio	Rio	PROPN	_	Gender=Masc|Number=Sing	58	nmod	_	_
 62	de	de	ADP	_	_	63	case	_	_
 63	Janeiro	Janeiro	PROPN	_	Number=Sing	61	nmod	_	SpaceAfter=No
-64	.	.	PUNCT	_	_	18	punct	_	SpacesAfter=\n
+64	.	.	PUNCT	_	_	18	punct	_	_
 
-# text = No ano de 1983, ocupou a Secretaria de Agricultura do Rio de Janeiro no primeiro governo de Leonel Brizola (1983-1987), além de ter sido diretor-financeiro do Banco de Desenvolvimento do Estado do Rio de Janeiro.
 # sent_id = 8
+# text = No ano de 1983, ocupou a Secretaria de Agricultura do Rio de Janeiro no primeiro governo de Leonel Brizola (1983-1987), além de ter sido diretor-financeiro do Banco de Desenvolvimento do Estado do Rio de Janeiro.
 1-2	No	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	3	case	_	_
 2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
@@ -497,24 +498,24 @@
 13	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	14	det	_	_
 14	Rio	Rio	PROPN	_	Gender=Masc|Number=Sing	9	nmod	_	_
 15	de	de	ADP	_	_	16	case	_	_
-16	Janeiro	janeiro	PROPN	_	Number=Sing	14	nmod	_	_
+16	Janeiro	Janeiro	PROPN	_	Number=Sing	14	nmod	_	_
 17-18	no	_	_	_	_	_	_	_	_
 17	em	em	ADP	_	_	20	case	_	_
 18	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	20	det	_	_
 19	primeiro	primeiro	ADJ	_	Gender=Masc|Number=Sing|NumType=Ord	20	amod	_	_
 20	governo	governo	NOUN	_	Gender=Masc|Number=Sing	7	obl	_	_
 21	de	de	ADP	_	_	22	case	_	_
-22	Leonel	Leonel	PROPN	_	Gender=Masc|Number=Sing	20	nmod	_	_
+22	Leonel	Leonel	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	20	nmod	_	_
 23	Brizola	Brizola	PROPN	_	Number=Sing	22	flat:name	_	_
 24	(	(	PUNCT	_	_	25	punct	_	SpaceAfter=No
-25	1983-1987	1983-1987	NUM	_	NumType=Card	22	appos	_	SpaceAfter=No
+25	1983-1987	1983-1987	NUM	_	NumType=Card	22	parataxis	_	SpaceAfter=No
 26	)	)	PUNCT	_	_	25	punct	_	SpaceAfter=No
 27	,	,	PUNCT	_	_	32	punct	_	_
-28	além	além	ADV	_	_	32	cc	_	_
+28	além	além	ADV	_	ExtPos=SCONJ	32	cc	_	_
 29	de	de	ADP	_	_	28	fixed	_	_
 30	ter	ter	AUX	_	VerbForm=Inf	32	aux	_	_
 31	sido	ser	AUX	_	VerbForm=Part	32	cop	_	_
-32	diretor-financeiro	diretor-financeiro	NOUN	_	Gender=Masc|Number=Sing	7	conj	_	_
+32	diretor-financeiro	diretor-financeiro	ADJ	_	Gender=Masc|Number=Sing	7	conj	_	_
 33-34	do	_	_	_	_	_	_	_	_
 33	de	de	ADP	_	_	35	case	_	_
 34	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	35	det	_	_
@@ -533,8 +534,8 @@
 45	Janeiro	Janeiro	PROPN	_	Number=Sing	43	nmod	_	SpaceAfter=No
 46	.	.	PUNCT	_	_	7	punct	_	SpacesAfter=\n
 
-# text = No pleito de novembro de 1986, concorreu a uma vaga de deputado estadual constituinte pelo PDT, obtendo a primeira suplência.
 # sent_id = 9
+# text = No pleito de novembro de 1986, concorreu a uma vaga de deputado estadual constituinte pelo PDT, obtendo a primeira suplência.
 1-2	No	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	3	case	_	_
 2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
@@ -547,7 +548,7 @@
 9	concorreu	concorrer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 10	a	a	ADP	_	_	12	case	_	_
 11	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	12	det	_	_
-12	vaga	vaga	NOUN	_	Gender=Fem|Number=Sing	9	obl	_	_
+12	vaga	vaga	NOUN	_	Gender=Fem|Number=Sing	9	obj	_	_
 13	de	de	ADP	_	_	14	case	_	_
 14	deputado	deputado	NOUN	_	Gender=Masc|Number=Sing	12	nmod	_	_
 15	estadual	estadual	ADJ	_	Gender=Masc|Number=Sing	14	amod	_	_
@@ -561,10 +562,10 @@
 22	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	24	det	_	_
 23	primeira	primeiro	ADJ	_	Gender=Fem|Number=Sing|NumType=Ord	24	amod	_	_
 24	suplência	suplência	NOUN	_	Gender=Fem|Number=Sing	21	obj	_	SpaceAfter=No
-25	.	.	PUNCT	_	_	9	punct	_	SpacesAfter=\n
+25	.	.	PUNCT	_	_	9	punct	_	_
 
-# text = Em janeiro de 1989, assumiu no lugar de Anthony Garotinho na Assembléia Legislativa fluminense, empossado naquele mês na prefeitura de Campos.
 # sent_id = 10
+# text = Em janeiro de 1989, assumiu no lugar de Anthony Garotinho na Assembléia Legislativa fluminense, empossado naquele mês na prefeitura de Campos.
 1	Em	em	ADP	_	_	2	case	_	_
 2	janeiro	janeiro	NOUN	_	Gender=Masc|Number=Sing	6	obl	_	_
 3	de	de	ADP	_	_	4	case	_	_
@@ -576,37 +577,37 @@
 8	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	9	det	_	_
 9	lugar	lugar	NOUN	_	Gender=Masc|Number=Sing	6	obl	_	_
 10	de	de	ADP	_	_	11	case	_	_
-11	Anthony	Anthony	PROPN	_	Gender=Masc|Number=Sing	9	nmod	_	_
+11	Anthony	Anthony	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	9	nmod	_	_
 12	Garotinho	Garotinho	PROPN	_	Number=Sing	11	flat:name	_	_
 13-14	na	_	_	_	_	_	_	_	_
 13	em	em	ADP	_	_	15	case	_	_
 14	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	15	det	_	_
-15	Assembléia	Assembléia	PROPN	_	Gender=Fem|Number=Sing	6	obj	_	_
+15	Assembléia	assembléia	NOUN	_	ExtPos=NOUN|Gender=Fem|Number=Sing	6	obl	_	_
 16	Legislativa	Legislativa	PROPN	_	Number=Sing	15	flat:name	_	_
-17	fluminense	fluminense	ADJ	_	Gender=Masc|Number=Sing	15	flat:name	_	SpaceAfter=No
+17	fluminense	fluminense	ADJ	_	Gender=Fem|Number=Sing	15	amod	_	SpaceAfter=No
 18	,	,	PUNCT	_	_	19	punct	_	_
 19	empossado	empossar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	15	acl	_	_
 20-21	naquele	_	_	_	_	_	_	_	_
 20	em	em	ADP	_	_	22	case	_	_
 21	aquele	aquele	DET	_	Gender=Masc|Number=Sing|PronType=Dem	22	det	_	_
-22	mês	mês	NOUN	_	Gender=Masc|Number=Sing	6	obl	_	_
+22	mês	mês	NOUN	_	Gender=Masc|Number=Sing	19	obl	_	_
 23-24	na	_	_	_	_	_	_	_	_
 23	em	em	ADP	_	_	25	case	_	_
 24	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	25	det	_	_
-25	prefeitura	prefeitura	NOUN	_	Gender=Fem|Number=Sing	22	nmod	_	_
+25	prefeitura	prefeitura	NOUN	_	Gender=Fem|Number=Sing	19	obl	_	_
 26	de	de	ADP	_	_	27	case	_	_
 27	Campos	Campos	PROPN	_	Gender=Masc|Number=Sing	25	nmod	_	SpaceAfter=No
-28	.	.	PUNCT	_	_	6	punct	_	SpacesAfter=\n
+28	.	.	PUNCT	_	_	6	punct	_	_
 
-# text = Reeleito deputado estadual pelo PDT no pleito de outubro de 1990, iniciou o novo mandato em fevereiro de 1991.
 # sent_id = 11
+# text = Reeleito deputado estadual pelo PDT no pleito de outubro de 1990, iniciou o novo mandato em fevereiro de 1991.
 1	Reeleito	reeleger	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	15	advcl	_	_
 2	deputado	deputado	NOUN	_	Gender=Masc|Number=Sing	1	obj	_	_
 3	estadual	estadual	ADJ	_	Gender=Masc|Number=Sing	2	amod	_	_
 4-5	pelo	_	_	_	_	_	_	_	_
 4	por	por	ADP	_	_	6	case	_	_
 5	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	6	det	_	_
-6	PDT	PDT	PROPN	_	Gender=Masc|Number=Sing	3	obl	_	_
+6	PDT	PDT	PROPN	_	Gender=Masc|Number=Sing	1	obl	_	_
 7-8	no	_	_	_	_	_	_	_	_
 7	em	em	ADP	_	_	9	case	_	_
 8	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	9	det	_	_
@@ -624,20 +625,20 @@
 20	fevereiro	fevereiro	NOUN	_	Gender=Masc|Number=Sing	15	obl	_	_
 21	de	de	ADP	_	_	22	case	_	_
 22	1991	1991	NUM	_	NumType=Card	20	nmod	_	SpaceAfter=No
-23	.	.	PUNCT	_	_	15	punct	_	SpacesAfter=\n
+23	.	.	PUNCT	_	_	15	punct	_	_
 
-# text = Deixou a Assembléia Legislativa do Rio de Janeiro em 31 de janeiro de 1995 ao término da legislatura, não tendo concorrido à reeleição em outubro de 1994.
 # sent_id = 12
+# text = Deixou a Assembléia Legislativa do Rio de Janeiro em 31 de janeiro de 1995 ao término da legislatura, não tendo concorrido à reeleição em outubro de 1994.
 1	Deixou	deixar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	3	det	_	_
-3	Assembléia	Assembléia	PROPN	_	Gender=Fem|Number=Sing	1	obj	_	_
-4	Legislativa	Legislativa	PROPN	_	Number=Sing	3	flat:name	_	_
+3	Assembléia	assembléia	NOUN	_	Gender=Fem|Number=Sing	1	obj	_	_
+4	Legislativa	legislativo	ADJ	_	Gender=Fem|Number=Sing	3	amod	_	_
 5-6	do	_	_	_	_	_	_	_	_
 5	de	de	ADP	_	_	7	case	_	_
 6	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	7	det	_	_
 7	Rio	Rio	PROPN	_	Gender=Masc|Number=Sing	3	nmod	_	_
 8	de	de	ADP	_	_	9	case	_	_
-9	Janeiro	janeiro	PROPN	_	Number=Sing	7	nmod	_	_
+9	Janeiro	Janeiro	PROPN	_	Number=Sing	7	nmod	_	_
 10	em	em	ADP	_	_	11	case	_	_
 11	31	31	NUM	_	NumType=Card	1	obl	_	_
 12	de	de	ADP	_	_	13	case	_	_
@@ -655,7 +656,7 @@
 22	,	,	PUNCT	_	_	25	punct	_	_
 23	não	não	ADV	_	Polarity=Neg	25	advmod	_	_
 24	tendo	ter	AUX	_	VerbForm=Ger	25	aux	_	_
-25	concorrido	concorrer	VERB	_	VerbForm=Part	1	conj	_	_
+25	concorrido	concorrer	VERB	_	VerbForm=Part	1	advcl	_	_
 26-27	à	_	_	_	_	_	_	_	_
 26	a	a	ADP	_	_	28	case	_	_
 27	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	28	det	_	_
@@ -666,19 +667,19 @@
 32	1994	1994	NUM	_	NumType=Card	30	nmod	_	SpaceAfter=No
 33	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
 
-# text = Abandonando a carreira política, passou a exercer, a partir de 1999, o cargo de diretor-financeiro da Loterias do Estado do Rio de Janeiro (Loterj), na gestão do governador Anthony Garotinho (1999-2002).
 # sent_id = 13
-1	Abandonando	Abandonar	VERB	_	VerbForm=Ger	0	root	_	_
+# text = Abandonando a carreira política, passou a exercer, a partir de 1999, o cargo de diretor-financeiro da Loterias do Estado do Rio de Janeiro (Loterj), na gestão do governador Anthony Garotinho (1999-2002).
+1	Abandonando	abandonar	VERB	_	VerbForm=Ger	8	advcl	_	_
 2	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	3	det	_	_
 3	carreira	carreira	NOUN	_	Gender=Fem|Number=Sing	1	obj	_	_
 4	política	político	ADJ	_	Gender=Fem|Number=Sing	3	amod	_	SpaceAfter=No
-5	,	,	PUNCT	_	_	8	punct	_	_
-6	passou	passar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	1	conj	_	_
+5	,	,	PUNCT	_	_	1	punct	_	_
+6	passou	passar	VERB	_	ExtPos=AUX|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 7	a	a	SCONJ	_	_	8	mark	_	_
 8	exercer	exercer	VERB	_	VerbForm=Inf	6	xcomp	_	SpaceAfter=No
 9	,	,	PUNCT	_	_	8	punct	_	_
-10	a	a	ADP	_	_	13	case	_	_
-11	partir	partir	VERB	_	VerbForm=Inf	10	fixed	_	_
+10	a	a	ADP	_	ExtPos=ADP	13	case	_	_
+11	partir	partir	VERB	_	_	10	fixed	_	_
 12	de	de	ADP	_	_	10	fixed	_	_
 13	1999	1999	NUM	_	NumType=Card	8	obl	_	SpaceAfter=No
 14	,	,	PUNCT	_	_	8	punct	_	_
@@ -689,11 +690,11 @@
 19-20	da	_	_	_	_	_	_	_	_
 19	de	de	ADP	_	_	21	case	_	_
 20	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	21	det	_	_
-21	Loterias	Loterias	PROPN	_	Number=Sing	18	nmod	_	_
+21	Loterias	Loterias	PROPN	_	Gender=Fem|Number=Sing	18	nmod	_	_
 22-23	do	_	_	_	_	_	_	_	_
 22	de	de	ADP	_	_	24	case	_	_
 23	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	24	det	_	_
-24	Estado	estado	NOUN	_	Gender=Masc|Number=Sing	21	nmod	_	_
+24	Estado	estado	NOUN	_	Number=Sing	21	nmod	_	_
 25-26	do	_	_	_	_	_	_	_	_
 25	de	de	ADP	_	_	27	case	_	_
 26	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	27	det	_	_
@@ -701,7 +702,7 @@
 28	de	de	ADP	_	_	29	case	_	_
 29	Janeiro	Janeiro	PROPN	_	Number=Sing	27	nmod	_	_
 30	(	(	PUNCT	_	_	31	punct	_	SpaceAfter=No
-31	Loterj	Loterj	PROPN	_	Gender=Masc|Number=Sing	24	appos	_	SpaceAfter=No
+31	Loterj	Loterj	PROPN	_	Gender=Fem|Number=Sing	27	appos	_	SpaceAfter=No
 32	)	)	PUNCT	_	_	31	punct	_	SpaceAfter=No
 33	,	,	PUNCT	_	_	8	punct	_	_
 34-35	na	_	_	_	_	_	_	_	_
@@ -712,40 +713,40 @@
 37	de	de	ADP	_	_	39	case	_	_
 38	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	39	det	_	_
 39	governador	governador	NOUN	_	Gender=Masc|Number=Sing	36	nmod	_	_
-40	Anthony	Anthony	PROPN	_	Gender=Masc|Number=Sing	39	appos	_	_
+40	Anthony	Anthony	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	39	appos	_	_
 41	Garotinho	Garotinho	PROPN	_	Number=Sing	40	flat:name	_	_
 42	(	(	PUNCT	_	_	43	punct	_	SpaceAfter=No
 43	1999-2002	1999-2002	NUM	_	NumType=Card	39	parataxis	_	SpaceAfter=No
 44	)	)	PUNCT	_	_	43	punct	_	SpaceAfter=No
-45	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
+45	.	.	PUNCT	_	_	8	punct	_	SpacesAfter=\n
 
-# text = Foi casado com Sílvia Pimentel Pereira Pinto, com quem teve dois filhos.
 # sent_id = 14
-1	Foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	cop	_	_
+# text = Foi casado com Sílvia Pimentel Pereira Pinto, com quem teve dois filhos.
+1	Foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	aux:pass	_	_
 2	casado	casado	ADJ	_	Gender=Masc|Number=Sing	0	root	_	_
 3	com	com	ADP	_	_	4	case	_	_
-4	Sílvia	Sílvia	PROPN	_	Gender=Fem|Number=Sing	2	obl	_	_
+4	Sílvia	Sílvia	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	2	obl	_	_
 5	Pimentel	Pimentel	PROPN	_	Number=Sing	4	flat:name	_	_
 6	Pereira	Pereira	PROPN	_	Number=Sing	4	flat:name	_	_
 7	Pinto	Pinto	PROPN	_	Number=Sing	4	flat:name	_	SpaceAfter=No
 8	,	,	PUNCT	_	_	11	punct	_	_
 9	com	com	ADP	_	_	10	case	_	_
-10	quem	quem	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	11	obl	_	_
+10	quem	quem	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	11	obl	_	_
 11	teve	ter	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	acl:relcl	_	_
 12	dois	dois	NUM	_	NumType=Card	13	nummod	_	_
-13	filhos	filho	NOUN	_	Gender=Masc|Number=Plur	11	nsubj	_	SpaceAfter=No
-14	.	.	PUNCT	_	_	2	punct	_	SpacesAfter=\n
+13	filhos	filho	NOUN	_	Gender=Masc|Number=Plur	11	obj	_	SpaceAfter=No
+14	.	.	PUNCT	_	_	2	punct	_	_
 
-# text = Casou-se em segundas núpcias com Maria Cecília Lamy.
 # sent_id = 15
+# text = Casou-se em segundas núpcias com Maria Cecília Lamy.
 1-2	Casou-se	_	_	_	_	_	_	_	_
-1	Casou	Casar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+1	Casou	casar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	1	expl	_	_
 3	em	em	ADP	_	_	5	case	_	_
 4	segundas	segundo	ADJ	_	Gender=Fem|Number=Plur	5	amod	_	_
 5	núpcias	núpcia	NOUN	_	Gender=Fem|Number=Plur	1	obl	_	_
 6	com	com	ADP	_	_	7	case	_	_
-7	Maria	Maria	PROPN	_	Gender=Fem|Number=Sing	5	nmod	_	_
+7	Maria	Maria	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	1	obl	_	_
 8	Cecília	Cecília	PROPN	_	Number=Sing	7	flat:name	_	_
 9	Lamy	Lamy	PROPN	_	Number=Sing	7	flat:name	_	SpaceAfter=No
 10	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n

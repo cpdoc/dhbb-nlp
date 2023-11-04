@@ -1,11 +1,14 @@
-# text = Partido político paulista fundado em 7 de novembro de 1932 com o propósito de congregar todos os paulistas e elementos de outros estados que houvessem participado da Revolução Constitucionalista, ocorrida em julho daquele ano.
-# sent_id = 1
-# newpar
+# generator = UDPipe 2, https://lindat.mff.cuni.cz/services/udpipe
+# udpipe_model = portuguese-bosque-ud-2.12-230717
+# udpipe_model_licence = CC BY-NC-SA
 # newdoc
-1	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	4	nsubj	_	_
-2	político	político	PROPN	_	Number=Sing	1	flat:name	_	_
+# newpar
+# sent_id = 1
+# text = Partido político paulista fundado em 7 de novembro de 1932 com o propósito de congregar todos os paulistas e elementos de outros estados que houvessem participado da Revolução Constitucionalista, ocorrida em julho daquele ano.
+1	Partido	partido	NOUN	_	Gender=Masc|Number=Sing	0	root	_	_
+2	político	político	ADJ	_	Gender=Masc|Number=Sing	1	amod	_	_
 3	paulista	paulista	ADJ	_	Gender=Masc|Number=Sing	1	amod	_	_
-4	fundado	fundar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
+4	fundado	fundar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	1	acl	_	_
 5	em	em	ADP	_	_	6	case	_	_
 6	7	7	NUM	_	NumType=Card	4	obl	_	_
 7	de	de	ADP	_	_	8	case	_	_
@@ -24,14 +27,14 @@
 20	elementos	elemento	NOUN	_	Gender=Masc|Number=Plur	18	conj	_	_
 21	de	de	ADP	_	_	23	case	_	_
 22	outros	outro	DET	_	Gender=Masc|Number=Plur|PronType=Ind	23	det	_	_
-23	estados	estado	NOUN	_	Gender=Masc|Number=Plur	18	nmod	_	_
-24	que	que	PRON	_	Gender=Masc|Number=Plur|PronType=Rel	25	nsubj	_	_
-25	houvessem	houver	VERB	_	Mood=Sub|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	23	acl:relcl	_	_
-26	participado	participado	ADJ	_	Gender=Masc|Number=Sing	25	xcomp	_	_
+23	estados	estado	NOUN	_	Gender=Masc|Number=Plur	20	nmod	_	_
+24	que	que	PRON	_	Gender=Masc|Number=Plur|PronType=Rel	26	nsubj	_	_
+25	houvessem	havesr	AUX	_	Mood=Sub|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	26	aux	_	_
+26	participado	participar	VERB	_	VerbForm=Part	23	acl:relcl	_	_
 27-28	da	_	_	_	_	_	_	_	_
 27	de	de	ADP	_	_	29	case	_	_
 28	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	29	det	_	_
-29	Revolução	revolução	PROPN	_	Gender=Fem|Number=Sing	26	obl	_	_
+29	Revolução	Revolução	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	26	obj	_	_
 30	Constitucionalista	Constitucionalista	PROPN	_	Number=Sing	29	flat:name	_	SpaceAfter=No
 31	,	,	PUNCT	_	_	32	punct	_	_
 32	ocorrida	ocorrer	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	29	acl	_	_
@@ -41,16 +44,16 @@
 35	de	de	ADP	_	_	37	case	_	_
 36	aquele	aquele	DET	_	Gender=Masc|Number=Sing|PronType=Dem	37	det	_	_
 37	ano	ano	NOUN	_	Gender=Masc|Number=Sing	34	nmod	_	SpaceAfter=No
-38	.	.	PUNCT	_	_	4	punct	_	SpacesAfter=\n
+38	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
 
-# text = Essa condição era colocada em termos exclusivos, sendo exigidos para o ingresso nas fileiras do partido comprovantes de atuação no movimento revolucionário.
 # sent_id = 2
+# text = Essa condição era colocada em termos exclusivos, sendo exigidos para o ingresso nas fileiras do partido comprovantes de atuação no movimento revolucionário.
 1	Essa	esse	DET	_	Gender=Fem|Number=Sing|PronType=Dem	2	det	_	_
-2	condição	condição	NOUN	_	Gender=Fem|Number=Sing	4	nsubj	_	_
-3	era	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	4	cop	_	_
-4	colocada	colocar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	0	root	_	_
+2	condição	condição	NOUN	_	Gender=Fem|Number=Sing	4	nsubj:pass	_	_
+3	era	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	4	aux:pass	_	_
+4	colocada	colocar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
 5	em	em	ADP	_	_	6	case	_	_
-6	termos	termos	NOUN	_	Gender=Masc|Number=Plur	4	obl	_	_
+6	termos	termo	NOUN	_	Gender=Masc|Number=Plur	4	obl	_	_
 7	exclusivos	exclusivo	ADJ	_	Gender=Masc|Number=Plur	6	amod	_	SpaceAfter=No
 8	,	,	PUNCT	_	_	10	punct	_	_
 9	sendo	ser	AUX	_	VerbForm=Ger	10	aux:pass	_	_
@@ -61,39 +64,39 @@
 14-15	nas	_	_	_	_	_	_	_	_
 14	em	em	ADP	_	_	16	case	_	_
 15	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	16	det	_	_
-16	fileiras	fileira	NOUN	_	Gender=Fem|Number=Plur	10	obl	_	_
+16	fileiras	fileira	NOUN	_	Gender=Fem|Number=Plur	13	nmod	_	_
 17-18	do	_	_	_	_	_	_	_	_
 17	de	de	ADP	_	_	19	case	_	_
 18	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	19	det	_	_
 19	partido	partido	NOUN	_	Gender=Masc|Number=Sing	16	nmod	_	_
-20	comprovantes	comprovante	NOUN	_	Gender=Masc|Number=Plur	19	appos	_	_
+20	comprovantes	comprovante	ADJ	_	Gender=Masc|Number=Plur	16	amod	_	_
 21	de	de	ADP	_	_	22	case	_	_
-22	atuação	atuação	NOUN	_	Gender=Fem|Number=Sing	20	nmod	_	_
+22	atuação	atuação	NOUN	_	Gender=Fem|Number=Sing	20	obl	_	_
 23-24	no	_	_	_	_	_	_	_	_
 23	em	em	ADP	_	_	25	case	_	_
 24	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	25	det	_	_
-25	movimento	movimento	NOUN	_	Gender=Masc|Number=Sing	20	nmod	_	_
+25	movimento	movimento	NOUN	_	Gender=Masc|Number=Sing	22	nmod	_	_
 26	revolucionário	revolucionário	ADJ	_	Gender=Masc|Number=Sing	25	amod	_	SpaceAfter=No
-27	.	.	PUNCT	_	_	4	punct	_	SpacesAfter=\n
+27	.	.	PUNCT	_	_	4	punct	_	_
 
-# text = Por outro lado, era vedada a admissão de todos os “políticos que hajam ocupado cargos de mando ou direção nos partidos militantes, ainda que tenham servido na campanha revolucionária”, a não ser que estes se desligassem publicamente de suas agremiações.
 # sent_id = 3
-1	Por	por	ADP	_	_	6	cc	_	_
+# text = Por outro lado, era vedada a admissão de todos os “políticos que hajam ocupado cargos de mando ou direção nos partidos militantes, ainda que tenham servido na campanha revolucionária”, a não ser que estes se desligassem publicamente de suas agremiações.
+1	Por	por	ADP	_	ExtPos=CCONJ	6	cc	_	_
 2	outro	outro	DET	_	Gender=Masc|Number=Sing|PronType=Ind	1	fixed	_	_
 3	lado	lado	NOUN	_	Gender=Masc|Number=Sing	1	fixed	_	SpaceAfter=No
 4	,	,	PUNCT	_	_	3	punct	_	_
-5	era	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	6	cop	_	_
+5	era	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	6	aux:pass	_	_
 6	vedada	vedar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
 7	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	8	det	_	_
-8	admissão	admissão	NOUN	_	Gender=Fem|Number=Sing	6	nsubj	_	_
+8	admissão	admissão	NOUN	_	Gender=Fem|Number=Sing	6	nsubj:pass	_	_
 9	de	de	ADP	_	_	13	case	_	_
 10	todos	todo	DET	_	Gender=Masc|Number=Plur|PronType=Tot	13	det	_	_
 11	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	10	fixed	_	_
-12	“	“	PUNCT	_	_	13	punct	_	SpaceAfter=No
+12	“	"	PUNCT	_	_	13	punct	_	SpaceAfter=No
 13	políticos	político	NOUN	_	Gender=Masc|Number=Plur	8	nmod	_	_
-14	que	que	PRON	_	Gender=Masc|Number=Plur|PronType=Rel	16	nsubj:pass	_	_
-15	hajam	har	AUX	_	Mood=Sub|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	16	aux:pass	_	_
-16	ocupado	ocupar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	13	acl:relcl	_	_
+14	que	que	PRON	_	Gender=Masc|Number=Plur|PronType=Rel	16	nsubj	_	_
+15	hajam	hajver	AUX	_	Mood=Sub|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	16	aux	_	_
+16	ocupado	ocupar	VERB	_	VerbForm=Part	13	acl:relcl	_	_
 17	cargos	cargo	NOUN	_	Gender=Masc|Number=Plur	16	obj	_	_
 18	de	de	ADP	_	_	19	case	_	_
 19	mando	mando	NOUN	_	Gender=Masc|Number=Sing	17	nmod	_	_
@@ -105,32 +108,32 @@
 24	partidos	partido	NOUN	_	Gender=Masc|Number=Plur	16	obl	_	_
 25	militantes	militante	ADJ	_	Gender=Masc|Number=Plur	24	amod	_	SpaceAfter=No
 26	,	,	PUNCT	_	_	30	punct	_	_
-27	ainda	ainda	ADV	_	_	30	advmod	_	_
-28	que	que	SCONJ	_	_	30	mark	_	_
+27	ainda	ainda	ADV	_	ExtPos=SCONJ	30	mark	_	_
+28	que	que	SCONJ	_	_	27	fixed	_	_
 29	tenham	ter	AUX	_	Mood=Sub|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	30	aux	_	_
-30	servido	servir	VERB	_	VerbForm=Part	13	acl	_	_
+30	servido	servir	VERB	_	VerbForm=Part	16	advcl	_	_
 31-32	na	_	_	_	_	_	_	_	_
 31	em	em	ADP	_	_	33	case	_	_
 32	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	33	det	_	_
 33	campanha	campanha	NOUN	_	Gender=Fem|Number=Sing	30	obl	_	_
 34	revolucionária	revolucionário	ADJ	_	Gender=Fem|Number=Sing	33	amod	_	SpaceAfter=No
-35	”	”	PUNCT	_	_	30	punct	_	SpaceAfter=No
-36	,	,	PUNCT	_	_	30	punct	_	_
-37	a	a	SCONJ	_	_	39	mark	_	_
-38	não	não	ADV	_	Polarity=Neg	39	advmod	_	_
-39	ser	ser	VERB	_	VerbForm=Inf	30	xcomp	_	_
-40	que	que	SCONJ	_	_	43	mark	_	_
+35	”	"	PUNCT	_	_	30	punct	_	SpaceAfter=No
+36	,	,	PUNCT	_	_	43	punct	_	_
+37	a	a	ADP	_	ExtPos=SCONJ	43	mark	_	_
+38	não	não	ADV	_	_	37	fixed	_	_
+39	ser	ser	VERB	_	VerbForm=Inf	37	fixed	_	_
+40	que	que	SCONJ	_	_	37	fixed	_	_
 41	estes	este	PRON	_	Gender=Masc|Number=Plur|PronType=Dem	43	nsubj	_	_
-42	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	43	expl	_	_
-43	desligassem	desligar	VERB	_	Mood=Sub|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	39	ccomp	_	_
+42	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Plur|Person=3|PronType=Prs	43	expl	_	_
+43	desligassem	desligar	VERB	_	Mood=Sub|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	30	advcl	_	_
 44	publicamente	publicamente	ADV	_	_	43	advmod	_	_
 45	de	de	ADP	_	_	47	case	_	_
 46	suas	seu	DET	_	Gender=Fem|Number=Plur|PronType=Prs	47	det	_	_
-47	agremiações	agremiação	NOUN	_	Gender=Fem|Number=Plur	44	obl	_	SpaceAfter=No
-48	.	.	PUNCT	_	_	6	punct	_	SpacesAfter=\n
+47	agremiações	agremiação	NOUN	_	Gender=Fem|Number=Plur	43	obj	_	SpaceAfter=No
+48	.	.	PUNCT	_	_	6	punct	_	_
 
-# text = Mesmo nesse caso, não lhes seria permitido ocupar cargos de direção no partido ou cargos representativos por um período de dois anos.
 # sent_id = 4
+# text = Mesmo nesse caso, não lhes seria permitido ocupar cargos de direção no partido ou cargos representativos por um período de dois anos.
 1	Mesmo	mesmo	ADV	_	_	4	advmod	_	_
 2-3	nesse	_	_	_	_	_	_	_	_
 2	em	em	ADP	_	_	4	case	_	_
@@ -138,7 +141,7 @@
 4	caso	caso	NOUN	_	Gender=Masc|Number=Sing	9	obl	_	SpaceAfter=No
 5	,	,	PUNCT	_	_	4	punct	_	_
 6	não	não	ADV	_	Polarity=Neg	9	advmod	_	_
-7	lhes	eles	PRON	_	Case=Dat|Gender=Masc|Number=Plur|Person=3|PronType=Prs	9	nsubj:pass	_	_
+7	lhes	eles	PRON	_	Case=Dat|Gender=Masc|Number=Plur|Person=3|PronType=Prs	9	iobj	_	_
 8	seria	ser	AUX	_	Mood=Cnd|Number=Sing|Person=3|VerbForm=Fin	9	aux:pass	_	_
 9	permitido	permitir	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
 10	ocupar	ocupar	VERB	_	VerbForm=Inf	9	xcomp	_	_
@@ -148,20 +151,20 @@
 14-15	no	_	_	_	_	_	_	_	_
 14	em	em	ADP	_	_	16	case	_	_
 15	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	16	det	_	_
-16	partido	partido	NOUN	_	Gender=Masc|Number=Sing	10	obl	_	_
+16	partido	partido	NOUN	_	Gender=Masc|Number=Sing	11	nmod	_	_
 17	ou	ou	CCONJ	_	_	18	cc	_	_
-18	cargos	cargo	NOUN	_	Gender=Masc|Number=Plur	16	conj	_	_
+18	cargos	cargo	NOUN	_	Gender=Masc|Number=Plur	11	conj	_	_
 19	representativos	representativo	ADJ	_	Gender=Masc|Number=Plur	18	amod	_	_
 20	por	por	ADP	_	_	22	case	_	_
 21	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	22	det	_	_
-22	período	período	NOUN	_	Gender=Masc|Number=Sing	10	obl	_	_
+22	período	período	NOUN	_	Gender=Masc|Number=Sing	18	nmod	_	_
 23	de	de	ADP	_	_	25	case	_	_
 24	dois	dois	NUM	_	NumType=Card	25	nummod	_	_
 25	anos	ano	NOUN	_	Gender=Masc|Number=Plur	22	nmod	_	SpaceAfter=No
 26	.	.	PUNCT	_	_	9	punct	_	SpacesAfter=\n
 
-# text = Em sua primeira assembléia, o novo partido decidiu que iria lutar por ideais políticos e sociais na campanha pela Constituinte.
 # sent_id = 5
+# text = Em sua primeira assembléia, o novo partido decidiu que iria lutar por ideais políticos e sociais na campanha pela Constituinte.
 1	Em	em	ADP	_	_	4	case	_	_
 2	sua	seu	DET	_	Gender=Fem|Number=Sing|PronType=Prs	4	det	_	_
 3	primeira	primeiro	ADJ	_	Gender=Fem|Number=Sing|NumType=Ord	4	amod	_	_
@@ -170,10 +173,10 @@
 6	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	8	det	_	_
 7	novo	novo	ADJ	_	Gender=Masc|Number=Sing	8	amod	_	_
 8	partido	partido	NOUN	_	Gender=Masc|Number=Sing	9	nsubj	_	_
-9	decidiu	decider	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+9	decidiu	decidir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 10	que	que	SCONJ	_	_	12	mark	_	_
-11	iria	ir	VERB	_	Mood=Cnd|Number=Sing|Person=3|VerbForm=Fin	9	ccomp	_	_
-12	lutar	lutar	VERB	_	VerbForm=Inf	11	xcomp	_	_
+11	iria	ir	AUX	_	Mood=Cnd|Number=Sing|Person=3|VerbForm=Fin	12	aux	_	_
+12	lutar	lutar	VERB	_	VerbForm=Inf	9	ccomp	_	_
 13	por	por	ADP	_	_	14	case	_	_
 14	ideais	ideal	NOUN	_	Gender=Masc|Number=Plur	12	obl	_	_
 15	políticos	político	ADJ	_	Gender=Masc|Number=Plur	14	amod	_	_
@@ -186,13 +189,13 @@
 21-22	pela	_	_	_	_	_	_	_	_
 21	por	por	ADP	_	_	23	case	_	_
 22	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	23	det	_	_
-23	Constituinte	Constituinte	PROPN	_	Gender=Fem|Number=Sing	12	obl	_	SpaceAfter=No
-24	.	.	PUNCT	_	_	9	punct	_	SpacesAfter=\n
+23	Constituinte	Constituinte	PROPN	_	Gender=Fem|Number=Sing	20	nmod	_	SpaceAfter=No
+24	.	.	PUNCT	_	_	9	punct	_	_
 
-# text = Prometeu também prestar assistência moral e material a todos os seus associados, além das mães, viúvas e órfãos dos que morreram nos campos de luta.
 # sent_id = 6
+# text = Prometeu também prestar assistência moral e material a todos os seus associados, além das mães, viúvas e órfãos dos que morreram nos campos de luta.
 1	Prometeu	prometer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
-2	também	também	ADV	_	_	3	advmod	_	_
+2	também	também	ADV	_	_	1	advmod	_	_
 3	prestar	prestar	VERB	_	VerbForm=Inf	1	xcomp	_	_
 4	assistência	assistência	NOUN	_	Gender=Fem|Number=Sing	3	obj	_	_
 5	moral	moral	ADJ	_	Gender=Fem|Number=Sing	4	amod	_	_
@@ -208,21 +211,21 @@
 15-16	das	_	_	_	_	_	_	_	_
 15	de	de	ADP	_	_	17	case	_	_
 16	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	17	det	_	_
-17	mães	pai	NOUN	_	Gender=Fem|Number=Plur	12	conj	_	SpaceAfter=No
+17	mães	mãe	NOUN	_	Gender=Fem|Number=Plur	12	conj	_	SpaceAfter=No
 18	,	,	PUNCT	_	_	19	punct	_	_
-19	viúvas	viúva	NOUN	_	Gender=Fem|Number=Plur	12	conj	_	_
+19	viúvas	viúva	NOUN	_	Gender=Fem|Number=Plur	17	conj	_	_
 20	e	e	CCONJ	_	_	21	cc	_	_
-21	órfãos	órfão	NOUN	_	Gender=Masc|Number=Plur	12	conj	_	_
+21	órfãos	órfão	NOUN	_	Gender=Masc|Number=Plur	17	conj	_	_
 22-23	dos	_	_	_	_	_	_	_	_
 22	de	de	ADP	_	_	23	case	_	_
 23	os	o	PRON	_	Gender=Masc|Number=Plur|PronType=Dem	21	nmod	_	_
 24	que	que	PRON	_	Gender=Masc|Number=Plur|PronType=Rel	25	nsubj	_	_
-25	morreram	morrer	VERB	_	Mood=Ind|Number=Plur|Person=3|VerbForm=Fin	21	acl:relcl	_	_
+25	morreram	morrer	VERB	_	Mood=Ind|Number=Plur|Person=3|VerbForm=Fin	23	acl:relcl	_	_
 26-27	nos	_	_	_	_	_	_	_	_
 26	em	em	ADP	_	_	28	case	_	_
 27	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	28	det	_	_
 28	campos	campo	NOUN	_	Gender=Masc|Number=Plur	25	obl	_	_
 29	de	de	ADP	_	_	30	case	_	_
 30	luta	luta	NOUN	_	Gender=Fem|Number=Sing	28	nmod	_	SpaceAfter=No
-31	.	.	PUNCT	_	_	3	punct	_	SpacesAfter=\n
+31	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
 

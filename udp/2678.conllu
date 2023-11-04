@@ -1,14 +1,17 @@
-# text = «Édouard Émile Dufresne de la Chauvinière» nasceu em Yzeure, no departamento de Allier, na França, em 12 de novembro de 1898.
-# sent_id = 1
-# newpar
+# generator = UDPipe 2, https://lindat.mff.cuni.cz/services/udpipe
+# udpipe_model = portuguese-bosque-ud-2.12-230717
+# udpipe_model_licence = CC BY-NC-SA
 # newdoc
+# newpar
+# sent_id = 1
+# text = «Édouard Émile Dufresne de la Chauvinière» nasceu em Yzeure, no departamento de Allier, na França, em 12 de novembro de 1898.
 1	«	«	PUNCT	_	_	2	punct	_	SpaceAfter=No
-2	Édouard	Édouard	PROPN	_	Gender=Masc|Number=Sing	9	nsubj	_	_
+2	Édouard	Édouard	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	9	nsubj	_	_
 3	Émile	Émile	PROPN	_	Number=Sing	2	flat:name	_	_
 4	Dufresne	Dufresne	PROPN	_	Number=Sing	2	flat:name	_	_
 5	de	de	ADP	_	_	6	case	_	_
-6	la	la	PROPN	_	Number=Sing	2	flat:name	_	_
-7	Chauvinière	Chauvinière	PROPN	_	Number=Sing	2	flat:name	_	SpaceAfter=No
+6	la	la	PROPN	_	ExtPos=PROPN|Number=Sing	2	nmod	_	_
+7	Chauvinière	Chauvinière	PROPN	_	Number=Sing	6	flat:name	_	SpaceAfter=No
 8	»	»	PUNCT	_	_	2	punct	_	_
 9	nasceu	nascer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 10	em	em	ADP	_	_	11	case	_	_
@@ -19,8 +22,8 @@
 14	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	15	det	_	_
 15	departamento	departamento	NOUN	_	Gender=Masc|Number=Sing	9	obl	_	_
 16	de	de	ADP	_	_	17	case	_	_
-17	Allier	Allier	PROPN	_	Gender=Masc|Number=Sing	15	nmod	_	SpaceAfter=No
-18	,	,	PUNCT	_	_	9	punct	_	_
+17	Allier	Allier	PROPN	_	Number=Sing	15	nmod	_	SpaceAfter=No
+18	,	,	PUNCT	_	_	15	punct	_	_
 19-20	na	_	_	_	_	_	_	_	_
 19	em	em	ADP	_	_	21	case	_	_
 20	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	21	det	_	_
@@ -34,32 +37,32 @@
 28	1898	1898	NUM	_	NumType=Card	26	nmod	_	SpaceAfter=No
 29	.	.	PUNCT	_	_	9	punct	_	SpacesAfter=\n
 
-# text = Bacharel e licenciado em direito pela École Libre de Sciences Politiques, ingressou na carreira diplomática.
 # sent_id = 2
-1	Bacharel	Bacharel	PROPN	_	Gender=Masc|Number=Sing	14	nsubj	_	_
+# text = Bacharel e licenciado em direito pela École Libre de Sciences Politiques, ingressou na carreira diplomática.
+1	Bacharel	bacharel	NOUN	_	Gender=Masc|Number=Sing	14	obl	_	_
 2	e	e	CCONJ	_	_	3	cc	_	_
-3	licenciado	licenciado	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	1	conj	_	_
+3	licenciado	licenciado	NOUN	_	Gender=Masc|Number=Sing	1	conj	_	_
 4	em	em	ADP	_	_	5	case	_	_
-5	direito	direito	NOUN	_	Gender=Masc|Number=Sing	1	nmod	_	_
+5	direito	direito	NOUN	_	Gender=Masc|Number=Sing	3	nmod	_	_
 6-7	pela	_	_	_	_	_	_	_	_
 6	por	por	ADP	_	_	8	case	_	_
-7	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	8	det	_	_
-8	École	École	PROPN	_	Gender=Masc|Number=Sing	1	nmod	_	_
+7	a	o	DET	_	Definite=Def|PronType=Art	8	det	_	_
+8	École	École	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	3	obl:agent	_	_
 9	Libre	Libre	PROPN	_	Number=Sing	8	flat:name	_	_
 10	de	de	ADP	_	_	11	case	_	_
-11	Sciences	Sciences	PROPN	_	Number=Sing	8	nmod	_	_
+11	Sciences	Sciences	PROPN	_	ExtPos=PROPN|Number=Sing	8	nmod	_	_
 12	Politiques	Politiques	PROPN	_	Number=Sing	11	flat:name	_	SpaceAfter=No
 13	,	,	PUNCT	_	_	1	punct	_	_
 14	ingressou	ingressar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 15-16	na	_	_	_	_	_	_	_	_
 15	em	em	ADP	_	_	17	case	_	_
 16	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	17	det	_	_
-17	carreira	carreira	NOUN	_	Gender=Fem|Number=Sing	14	obl	_	_
+17	carreira	carreira	NOUN	_	Gender=Fem|Number=Sing	14	obj	_	_
 18	diplomática	diplomático	ADJ	_	Gender=Fem|Number=Sing	17	amod	_	SpaceAfter=No
-19	.	.	PUNCT	_	_	14	punct	_	SpacesAfter=\n
+19	.	.	PUNCT	_	_	14	punct	_	_
 
-# text = Foi secretário da embaixada francesa em Moscou em 1926, e depois voltou ao Quai d’Orsay (Ministério das Relações Exteriores francês), servindo em seu secretariado político.
 # sent_id = 3
+# text = Foi secretário da embaixada francesa em Moscou em 1926, e depois voltou ao Quai d’Orsay (Ministério das Relações Exteriores francês), servindo em seu secretariado político.
 1	Foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	cop	_	_
 2	secretário	secretário	NOUN	_	Gender=Masc|Number=Sing	0	root	_	_
 3-4	da	_	_	_	_	_	_	_	_
@@ -68,17 +71,17 @@
 5	embaixada	embaixada	NOUN	_	Gender=Fem|Number=Sing	2	nmod	_	_
 6	francesa	francês	ADJ	_	Gender=Fem|Number=Sing	5	amod	_	_
 7	em	em	ADP	_	_	8	case	_	_
-8	Moscou	Moscou	PROPN	_	Gender=Masc|Number=Sing	5	nmod	_	_
+8	Moscou	Moscou	PROPN	_	Gender=Masc|Number=Sing	2	nmod	_	_
 9	em	em	ADP	_	_	10	case	_	_
-10	1926	1926	NUM	_	NumType=Card	5	nmod	_	SpaceAfter=No
-11	,	,	PUNCT	_	_	2	punct	_	_
+10	1926	1926	NUM	_	NumType=Card	2	nmod	_	SpaceAfter=No
+11	,	,	PUNCT	_	_	14	punct	_	_
 12	e	e	CCONJ	_	_	14	cc	_	_
 13	depois	depois	ADV	_	_	14	advmod	_	_
 14	voltou	voltar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	conj	_	_
 15-16	ao	_	_	_	_	_	_	_	_
 15	a	a	ADP	_	_	17	case	_	_
 16	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	17	det	_	_
-17	Quai	Quai	PROPN	_	Gender=Masc|Number=Sing	14	obl	_	_
+17	Quai	Quai	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	14	obl	_	_
 18	d’	d’	PROPN	_	Number=Sing	17	flat:name	_	SpaceAfter=No
 19	Orsay	Orsay	PROPN	_	Number=Sing	17	flat:name	_	_
 20	(	(	PUNCT	_	_	21	punct	_	SpaceAfter=No
@@ -86,9 +89,9 @@
 22-23	das	_	_	_	_	_	_	_	_
 22	de	de	ADP	_	_	24	case	_	_
 23	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	24	det	_	_
-24	Relações	Relações	PROPN	_	Gender=Fem|Number=Plur	21	nmod	_	_
+24	Relações	Relações	PROPN	_	ExtPos=PROPN|Number=Sing	21	nmod	_	_
 25	Exteriores	Exteriores	PROPN	_	Number=Sing	24	flat:name	_	_
-26	francês	francês	ADJ	_	Gender=Masc|Number=Sing	24	flat:name	_	SpaceAfter=No
+26	francês	francês	ADJ	_	Number=Sing	24	flat:name	_	SpaceAfter=No
 27	)	)	PUNCT	_	_	21	punct	_	SpaceAfter=No
 28	,	,	PUNCT	_	_	29	punct	_	_
 29	servindo	servir	VERB	_	VerbForm=Ger	14	advcl	_	_
@@ -96,10 +99,10 @@
 31	seu	seu	DET	_	Gender=Masc|Number=Sing|PronType=Prs	32	det	_	_
 32	secretariado	secretariado	NOUN	_	Gender=Masc|Number=Sing	29	obl	_	_
 33	político	político	ADJ	_	Gender=Masc|Number=Sing	32	amod	_	SpaceAfter=No
-34	.	.	PUNCT	_	_	2	punct	_	SpacesAfter=\n
+34	.	.	PUNCT	_	_	2	punct	_	_
 
-# text = Em seguida, foi secretário em Bruxelas, na Bélgica, e em Berna, na Suíça, encarregado de negócios do consulado em Frankfurt, na Alemanha, e ministro delegado em Túnis, na Tunísia, em 1945.
 # sent_id = 4
+# text = Em seguida, foi secretário em Bruxelas, na Bélgica, e em Berna, na Suíça, encarregado de negócios do consulado em Frankfurt, na Alemanha, e ministro delegado em Túnis, na Tunísia, em 1945.
 1	Em	em	ADP	_	_	2	case	_	_
 2	seguida	seguida	NOUN	_	Gender=Fem|Number=Sing	5	nmod	_	SpaceAfter=No
 3	,	,	PUNCT	_	_	2	punct	_	_
@@ -111,49 +114,49 @@
 9-10	na	_	_	_	_	_	_	_	_
 9	em	em	ADP	_	_	11	case	_	_
 10	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	11	det	_	_
-11	Bélgica	Bélgica	PROPN	_	Gender=Fem|Number=Sing	5	nmod	_	SpaceAfter=No
+11	Bélgica	Bélgica	PROPN	_	Gender=Fem|Number=Sing	7	nmod	_	SpaceAfter=No
 12	,	,	PUNCT	_	_	15	punct	_	_
 13	e	e	CCONJ	_	_	15	cc	_	_
 14	em	em	ADP	_	_	15	case	_	_
-15	Berna	Berna	PROPN	_	Gender=Masc|Number=Sing	11	conj	_	SpaceAfter=No
-16	,	,	PUNCT	_	_	11	punct	_	_
+15	Berna	Berna	PROPN	_	Gender=Masc|Number=Sing	7	conj	_	SpaceAfter=No
+16	,	,	PUNCT	_	_	19	punct	_	_
 17-18	na	_	_	_	_	_	_	_	_
 17	em	em	ADP	_	_	19	case	_	_
 18	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	19	det	_	_
-19	Suíça	Suíça	PROPN	_	Gender=Fem|Number=Sing	5	nmod	_	SpaceAfter=No
+19	Suíça	Suíça	PROPN	_	Gender=Fem|Number=Sing	15	nmod	_	SpaceAfter=No
 20	,	,	PUNCT	_	_	21	punct	_	_
-21	encarregado	encarregar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	19	acl	_	_
+21	encarregado	encarregar	NOUN	_	Gender=Masc|Number=Sing	5	conj	_	_
 22	de	de	ADP	_	_	23	case	_	_
-23	negócios	negócio	NOUN	_	Gender=Masc|Number=Plur	19	nmod	_	_
+23	negócios	negócio	NOUN	_	Gender=Masc|Number=Plur	21	nmod	_	_
 24-25	do	_	_	_	_	_	_	_	_
 24	de	de	ADP	_	_	26	case	_	_
 25	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	26	det	_	_
 26	consulado	consulado	NOUN	_	Gender=Masc|Number=Sing	23	nmod	_	_
 27	em	em	ADP	_	_	28	case	_	_
-28	Frankfurt	Frankfurt	PROPN	_	Gender=Masc|Number=Sing	23	nmod	_	SpaceAfter=No
+28	Frankfurt	Frankfurt	PROPN	_	Gender=Masc|Number=Sing	26	nmod	_	SpaceAfter=No
 29	,	,	PUNCT	_	_	32	punct	_	_
 30-31	na	_	_	_	_	_	_	_	_
 30	em	em	ADP	_	_	32	case	_	_
 31	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	32	det	_	_
-32	Alemanha	Alemanha	PROPN	_	Gender=Fem|Number=Sing	23	nmod	_	SpaceAfter=No
-33	,	,	PUNCT	_	_	35	punct	_	_
+32	Alemanha	Alemanha	PROPN	_	Gender=Fem|Number=Sing	26	nmod	_	SpaceAfter=No
+33	,	,	PUNCT	_	_	32	punct	_	_
 34	e	e	CCONJ	_	_	35	cc	_	_
-35	ministro	ministro	NOUN	_	Gender=Masc|Number=Sing	32	conj	_	_
-36	delegado	delegado	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	32	acl	_	_
+35	ministro	ministro	NOUN	_	Gender=Masc|Number=Sing	7	conj	_	_
+36	delegado	delegado	ADJ	_	Gender=Masc|Number=Sing	35	amod	_	_
 37	em	em	ADP	_	_	38	case	_	_
-38	Túnis	Túnis	PROPN	_	Gender=Masc|Number=Sing	36	obl	_	SpaceAfter=No
-39	,	,	PUNCT	_	_	36	punct	_	_
+38	Túnis	Túnis	PROPN	_	Gender=Masc|Number=Sing	35	nmod	_	SpaceAfter=No
+39	,	,	PUNCT	_	_	42	punct	_	_
 40-41	na	_	_	_	_	_	_	_	_
 40	em	em	ADP	_	_	42	case	_	_
 41	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	42	det	_	_
-42	Tunísia	Tunísia	PROPN	_	Gender=Fem|Number=Sing	36	obl	_	SpaceAfter=No
-43	,	,	PUNCT	_	_	36	punct	_	_
+42	Tunísia	Tunísia	PROPN	_	Gender=Fem|Number=Sing	35	nmod	_	SpaceAfter=No
+43	,	,	PUNCT	_	_	42	punct	_	_
 44	em	em	ADP	_	_	45	case	_	_
-45	1945	1945	NUM	_	NumType=Card	36	obl	_	SpaceAfter=No
-46	.	.	PUNCT	_	_	5	punct	_	SpacesAfter=\n
+45	1945	1945	NUM	_	NumType=Card	35	nmod	_	SpaceAfter=No
+46	.	.	PUNCT	_	_	5	punct	_	_
 
-# text = De volta à França, chefiou o protocolo do Quai d’Orsay de 1951 a 1958, e em maio de 1958 foi nomeado embaixador extraordinário e plenipotenciário em Estocolmo, na Suécia.
 # sent_id = 5
+# text = De volta à França, chefiou o protocolo do Quai d’Orsay de 1951 a 1958, e em maio de 1958 foi nomeado embaixador extraordinário e plenipotenciário em Estocolmo, na Suécia.
 1	De	de	ADP	_	_	2	case	_	_
 2	volta	volta	NOUN	_	Gender=Fem|Number=Sing	7	obl	_	_
 3-4	à	_	_	_	_	_	_	_	_
@@ -167,11 +170,11 @@
 10-11	do	_	_	_	_	_	_	_	_
 10	de	de	ADP	_	_	12	case	_	_
 11	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	12	det	_	_
-12	Quai	Quai	PROPN	_	Gender=Masc|Number=Sing	9	nmod	_	_
+12	Quai	Quai	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	9	nmod	_	_
 13	d’	d’	PROPN	_	Number=Sing	12	flat:name	_	SpaceAfter=No
 14	Orsay	Orsay	PROPN	_	Number=Sing	12	flat:name	_	_
 15	de	de	ADP	_	_	16	case	_	_
-16	1951	1951	NUM	_	NumType=Card	12	nmod	_	_
+16	1951	1951	NUM	_	NumType=Card	7	obl	_	_
 17	a	a	ADP	_	_	18	case	_	_
 18	1958	1958	NUM	_	NumType=Card	16	nmod	_	SpaceAfter=No
 19	,	,	PUNCT	_	_	26	punct	_	_
@@ -182,21 +185,21 @@
 24	1958	1958	NUM	_	NumType=Card	22	nmod	_	_
 25	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	26	aux:pass	_	_
 26	nomeado	nomear	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	7	conj	_	_
-27	embaixador	embaixador	NOUN	_	Gender=Masc|Number=Sing	26	nsubj	_	_
+27	embaixador	embaixador	NOUN	_	Gender=Masc|Number=Sing	26	xcomp	_	_
 28	extraordinário	extraordinário	ADJ	_	Gender=Masc|Number=Sing	27	amod	_	_
 29	e	e	CCONJ	_	_	30	cc	_	_
 30	plenipotenciário	plenipotenciário	ADJ	_	Gender=Masc|Number=Sing	28	conj	_	_
 31	em	em	ADP	_	_	32	case	_	_
-32	Estocolmo	Estocolmo	PROPN	_	Gender=Masc|Number=Sing	27	nmod	_	SpaceAfter=No
+32	Estocolmo	Estocolmo	PROPN	_	Gender=Masc|Number=Sing	26	obl	_	SpaceAfter=No
 33	,	,	PUNCT	_	_	36	punct	_	_
 34-35	na	_	_	_	_	_	_	_	_
 34	em	em	ADP	_	_	36	case	_	_
 35	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	36	det	_	_
-36	Suécia	Suécia	PROPN	_	Gender=Fem|Number=Sing	27	nmod	_	SpaceAfter=No
+36	Suécia	Suécia	PROPN	_	Gender=Fem|Number=Sing	32	nmod	_	SpaceAfter=No
 37	.	.	PUNCT	_	_	7	punct	_	SpacesAfter=\n
 
-# text = Serviu como embaixador da França no Brasil a partir de 19 de setembro de 1964, sucedendo a Pierre Sebilleau.
 # sent_id = 6
+# text = Serviu como embaixador da França no Brasil a partir de 19 de setembro de 1964, sucedendo a Pierre Sebilleau.
 1	Serviu	servir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2	como	como	ADP	_	_	3	case	_	_
 3	embaixador	embaixador	NOUN	_	Gender=Masc|Number=Sing	1	xcomp	_	_
@@ -207,10 +210,10 @@
 7-8	no	_	_	_	_	_	_	_	_
 7	em	em	ADP	_	_	9	case	_	_
 8	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	9	det	_	_
-9	Brasil	Brasil	PROPN	_	Gender=Masc|Number=Sing	3	nmod	_	_
-10	a	a	ADP	_	_	13	case	_	_
-11	partir	partir	VERB	_	VerbForm=Inf	10	fixed	_	_
-12	de	de	ADP	_	_	10	fixed	_	_
+9	Brasil	Brasil	PROPN	_	Gender=Masc|Number=Sing	1	obl	_	_
+10	a	a	ADP	_	ExtPos=ADP	13	case	_	_
+11	partir	partir	NOUN	_	_	10	fixed	_	_
+12	de	de	ADP	_	_	13	case	_	_
 13	19	19	NUM	_	NumType=Card	1	obl	_	_
 14	de	de	ADP	_	_	15	case	_	_
 15	setembro	setembro	NOUN	_	Gender=Masc|Number=Sing	13	nmod	_	_
@@ -218,13 +221,13 @@
 17	1964	1964	NUM	_	NumType=Card	15	nmod	_	SpaceAfter=No
 18	,	,	PUNCT	_	_	19	punct	_	_
 19	sucedendo	suceder	VERB	_	VerbForm=Ger	1	advcl	_	_
-20	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	21	det	_	_
-21	Pierre	Pierre	PROPN	_	Gender=Fem|Number=Sing	19	obj	_	_
+20	a	a	ADP	_	_	21	case	_	_
+21	Pierre	Pierre	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	19	obj	_	_
 22	Sebilleau	Sebilleau	PROPN	_	Number=Sing	21	flat:name	_	SpaceAfter=No
-23	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
+23	.	.	PUNCT	_	_	1	punct	_	_
 
-# text = Durante sua permanência no país, ocorreu em outubro de 1964 a visita do presidente francês Charles de Gaulle, o que resultou em uma sensível melhora nas relações entre Brasil e França, que haviam sofrido alguns desgastes nos anos anteriores.
 # sent_id = 7
+# text = Durante sua permanência no país, ocorreu em outubro de 1964 a visita do presidente francês Charles de Gaulle, o que resultou em uma sensível melhora nas relações entre Brasil e França, que haviam sofrido alguns desgastes nos anos anteriores.
 1	Durante	durante	ADP	_	_	3	case	_	_
 2	sua	seu	DET	_	Gender=Fem|Number=Sing|PronType=Prs	3	det	_	_
 3	permanência	permanência	NOUN	_	Gender=Fem|Number=Sing	8	obl	_	_
@@ -239,7 +242,7 @@
 11	de	de	ADP	_	_	12	case	_	_
 12	1964	1964	NUM	_	NumType=Card	10	nmod	_	_
 13	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	14	det	_	_
-14	visita	visita	NOUN	_	Gender=Fem|Number=Sing	8	obj	_	_
+14	visita	visita	NOUN	_	Gender=Fem|Number=Sing	8	nsubj	_	_
 15-16	do	_	_	_	_	_	_	_	_
 15	de	de	ADP	_	_	17	case	_	_
 16	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	17	det	_	_
@@ -248,14 +251,14 @@
 19	Charles	Charles	PROPN	_	Gender=Masc|Number=Sing	17	appos	_	_
 20	de	de	ADP	_	_	21	case	_	_
 21	Gaulle	Gaulle	PROPN	_	Number=Sing	19	nmod	_	SpaceAfter=No
-22	,	,	PUNCT	_	_	8	punct	_	_
+22	,	,	PUNCT	_	_	23	punct	_	_
 23	o	o	PRON	_	Gender=Masc|Number=Sing|PronType=Dem	8	appos	_	_
-24	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	25	obj	_	_
+24	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	25	nsubj	_	_
 25	resultou	resultar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	23	acl:relcl	_	_
 26	em	em	ADP	_	_	29	case	_	_
 27	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	29	det	_	_
 28	sensível	sensível	ADJ	_	Gender=Fem|Number=Sing	29	amod	_	_
-29	melhora	melhora	NOUN	_	Gender=Fem|Number=Sing	25	obl	_	_
+29	melhora	melhora	NOUN	_	Gender=Fem|Number=Sing	25	obj	_	_
 30-31	nas	_	_	_	_	_	_	_	_
 30	em	em	ADP	_	_	32	case	_	_
 31	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	32	det	_	_
@@ -265,21 +268,21 @@
 35	e	e	CCONJ	_	_	36	cc	_	_
 36	França	França	PROPN	_	Gender=Fem|Number=Sing	34	conj	_	SpaceAfter=No
 37	,	,	PUNCT	_	_	40	punct	_	_
-38	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	40	nsubj	_	_
+38	que	que	PRON	_	Gender=Fem|Number=Plur|PronType=Rel	40	nsubj	_	_
 39	haviam	haver	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	40	aux	_	_
-40	sofrido	sofrer	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	29	acl:relcl	_	_
+40	sofrido	sofrer	VERB	_	VerbForm=Part	32	acl:relcl	_	_
 41	alguns	algum	DET	_	Gender=Masc|Number=Plur|PronType=Ind	42	det	_	_
 42	desgastes	desgaste	NOUN	_	Gender=Masc|Number=Plur	40	obj	_	_
 43-44	nos	_	_	_	_	_	_	_	_
 43	em	em	ADP	_	_	45	case	_	_
 44	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	45	det	_	_
-45	anos	ano	NOUN	_	Gender=Masc|Number=Plur	42	nmod	_	_
+45	anos	ano	NOUN	_	Gender=Masc|Number=Plur	40	obl	_	_
 46	anteriores	anterior	ADJ	_	Gender=Masc|Number=Plur	45	amod	_	SpaceAfter=No
-47	.	.	PUNCT	_	_	8	punct	_	SpacesAfter=\n
+47	.	.	PUNCT	_	_	8	punct	_	_
 
-# text = La Chauvinière permaneceu no posto até 1965, quando Sebilleau reassumiu a embaixada da França no Brasil.
 # sent_id = 8
-1	La	La	PROPN	_	Gender=Fem|Number=Sing	3	nsubj	_	_
+# text = La Chauvinière permaneceu no posto até 1965, quando Sebilleau reassumiu a embaixada da França no Brasil.
+1	La	La	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	3	nsubj	_	_
 2	Chauvinière	Chauvinière	PROPN	_	Number=Sing	1	flat:name	_	_
 3	permaneceu	permanecer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 4-5	no	_	_	_	_	_	_	_	_
@@ -304,18 +307,18 @@
 20	Brasil	Brasil	PROPN	_	Gender=Masc|Number=Sing	12	obl	_	SpaceAfter=No
 21	.	.	PUNCT	_	_	3	punct	_	SpacesAfter=\n
 
-# text = Casou-se com Marguerite de Tanlay, com quem teve cinco filhos.
 # sent_id = 9
+# text = Casou-se com Marguerite de Tanlay, com quem teve cinco filhos.
 1-2	Casou-se	_	_	_	_	_	_	_	_
-1	Casou	Casar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+1	Casou	casar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	1	expl	_	_
 3	com	com	ADP	_	_	4	case	_	_
-4	Marguerite	Marguerite	PROPN	_	Gender=Masc|Number=Sing	1	obl	_	_
+4	Marguerite	Marguerite	PROPN	_	Gender=Fem|Number=Sing	1	obj	_	_
 5	de	de	ADP	_	_	6	case	_	_
 6	Tanlay	Tanlay	PROPN	_	Number=Sing	4	nmod	_	SpaceAfter=No
 7	,	,	PUNCT	_	_	10	punct	_	_
 8	com	com	ADP	_	_	9	case	_	_
-9	quem	quem	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	10	obl	_	_
+9	quem	quem	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	10	obl	_	_
 10	teve	ter	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	acl:relcl	_	_
 11	cinco	cinco	NUM	_	NumType=Card	12	nummod	_	_
 12	filhos	filho	NOUN	_	Gender=Masc|Number=Plur	10	obj	_	SpaceAfter=No

@@ -1,19 +1,22 @@
-# text = «João Rodrigues de Miranda Júnior» nasceu em Goiana (PE) no dia 16 de março de 1878, filho de João Rodrigues de Miranda, funcionário dos Correios, e Ana Aranha de Miranda.
-# sent_id = 1
-# newpar
+# generator = UDPipe 2, https://lindat.mff.cuni.cz/services/udpipe
+# udpipe_model = portuguese-bosque-ud-2.12-230717
+# udpipe_model_licence = CC BY-NC-SA
 # newdoc
+# newpar
+# sent_id = 1
+# text = «João Rodrigues de Miranda Júnior» nasceu em Goiana (PE) no dia 16 de março de 1878, filho de João Rodrigues de Miranda, funcionário dos Correios, e Ana Aranha de Miranda.
 1	«	«	PUNCT	_	_	2	punct	_	SpaceAfter=No
-2	João	João	PROPN	_	Gender=Masc|Number=Sing	8	nsubj	_	_
+2	João	João	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	8	nsubj	_	_
 3	Rodrigues	Rodrigues	PROPN	_	Number=Sing	2	flat:name	_	_
 4	de	de	ADP	_	_	5	case	_	_
-5	Miranda	Miranda	PROPN	_	Number=Sing	2	flat:name	_	_
-6	Júnior	Júnior	PROPN	_	Number=Sing	2	flat:name	_	SpaceAfter=No
+5	Miranda	Miranda	PROPN	_	ExtPos=PROPN|Number=Sing	2	nmod	_	_
+6	Júnior	Júnior	PROPN	_	Number=Sing	5	flat:name	_	SpaceAfter=No
 7	»	»	PUNCT	_	_	2	punct	_	_
 8	nasceu	nascer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 9	em	em	ADP	_	_	10	case	_	_
 10	Goiana	Goiana	PROPN	_	Gender=Masc|Number=Sing	8	obl	_	_
 11	(	(	PUNCT	_	_	12	punct	_	SpaceAfter=No
-12	PE	PE	PROPN	_	Gender=Masc|Number=Sing	10	appos	_	SpaceAfter=No
+12	PE	PE	PROPN	_	Gender=Masc|Number=Sing	10	parataxis	_	SpaceAfter=No
 13	)	)	PUNCT	_	_	12	punct	_	_
 14-15	no	_	_	_	_	_	_	_	_
 14	em	em	ADP	_	_	16	case	_	_
@@ -25,29 +28,29 @@
 20	de	de	ADP	_	_	21	case	_	_
 21	1878	1878	NUM	_	NumType=Card	19	nmod	_	SpaceAfter=No
 22	,	,	PUNCT	_	_	23	punct	_	_
-23	filho	filho	NOUN	_	Gender=Masc|Number=Sing	2	appos	_	_
+23	filho	filho	NOUN	_	Gender=Masc|Number=Sing	8	appos	_	_
 24	de	de	ADP	_	_	25	case	_	_
-25	João	João	PROPN	_	Gender=Masc|Number=Sing	23	nmod	_	_
+25	João	João	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	23	nmod	_	_
 26	Rodrigues	Rodrigues	PROPN	_	Number=Sing	25	flat:name	_	_
 27	de	de	ADP	_	_	28	case	_	_
-28	Miranda	Miranda	PROPN	_	Number=Sing	25	flat:name	_	SpaceAfter=No
+28	Miranda	Miranda	PROPN	_	Number=Sing	25	nmod	_	SpaceAfter=No
 29	,	,	PUNCT	_	_	30	punct	_	_
-30	funcionário	funcionário	NOUN	_	Gender=Masc|Number=Sing	25	conj	_	_
+30	funcionário	funcionário	NOUN	_	Gender=Masc|Number=Sing	25	appos	_	_
 31-32	dos	_	_	_	_	_	_	_	_
 31	de	de	ADP	_	_	33	case	_	_
 32	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	33	det	_	_
-33	Correios	correio	NOUN	_	Gender=Masc|Number=Plur	30	nmod	_	SpaceAfter=No
+33	Correios	Correios	PROPN	_	Gender=Masc|Number=Plur	30	nmod	_	SpaceAfter=No
 34	,	,	PUNCT	_	_	30	punct	_	_
 35	e	e	CCONJ	_	_	36	cc	_	_
-36	Ana	Ana	PROPN	_	Gender=Fem|Number=Sing	25	conj	_	_
+36	Ana	Ana	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	25	conj	_	_
 37	Aranha	Aranha	PROPN	_	Number=Sing	36	flat:name	_	_
 38	de	de	ADP	_	_	39	case	_	_
-39	Miranda	Miranda	PROPN	_	Number=Sing	36	flat:name	_	SpaceAfter=No
+39	Miranda	Miranda	PROPN	_	Number=Sing	36	nmod	_	SpaceAfter=No
 40	.	.	PUNCT	_	_	8	punct	_	SpacesAfter=\n
 
-# text = Graduado pela Faculdade de Direito do Largo de São Francisco, em São Paulo, tornou-se promotor em Jaú (SP), município onde montou um escritório de advocacia.
 # sent_id = 2
-1	Graduado	Graduar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	18	advcl	_	_
+# text = Graduado pela Faculdade de Direito do Largo de São Francisco, em São Paulo, tornou-se promotor em Jaú (SP), município onde montou um escritório de advocacia.
+1	Graduado	graduar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	18	advcl	_	_
 2-3	pela	_	_	_	_	_	_	_	_
 2	por	por	ADP	_	_	4	case	_	_
 3	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	4	det	_	_
@@ -57,26 +60,26 @@
 7-8	do	_	_	_	_	_	_	_	_
 7	de	de	ADP	_	_	9	case	_	_
 8	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	9	det	_	_
-9	Largo	Largo	PROPN	_	Gender=Masc|Number=Sing	4	nmod	_	_
+9	Largo	Largo	PROPN	_	Number=Sing	6	nmod	_	_
 10	de	de	ADP	_	_	11	case	_	_
-11	São	São	PROPN	_	Number=Sing	9	nmod	_	_
+11	São	São	PROPN	_	ExtPos=PROPN|Number=Sing	9	nmod	_	_
 12	Francisco	Francisco	PROPN	_	Number=Sing	11	flat:name	_	SpaceAfter=No
-13	,	,	PUNCT	_	_	1	punct	_	_
+13	,	,	PUNCT	_	_	15	punct	_	_
 14	em	em	ADP	_	_	15	case	_	_
-15	São	São	PROPN	_	Gender=Masc|Number=Sing	1	obl	_	_
+15	São	São	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	9	nmod	_	_
 16	Paulo	Paulo	PROPN	_	Number=Sing	15	flat:name	_	SpaceAfter=No
-17	,	,	PUNCT	_	_	1	punct	_	_
+17	,	,	PUNCT	_	_	15	punct	_	_
 18-19	tornou-se	_	_	_	_	_	_	_	_
 18	tornou	tornar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 19	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	18	expl	_	_
 20	promotor	promotor	NOUN	_	Gender=Masc|Number=Sing	18	xcomp	_	_
 21	em	em	ADP	_	_	22	case	_	_
-22	Jaú	Jaú	PROPN	_	Gender=Fem|Number=Sing	20	nmod	_	_
+22	Jaú	Jaú	PROPN	_	Gender=Masc|Number=Sing	18	obl	_	_
 23	(	(	PUNCT	_	_	24	punct	_	SpaceAfter=No
-24	SP	SP	PROPN	_	Gender=Masc|Number=Sing	22	appos	_	SpaceAfter=No
+24	SP	SP	PROPN	_	Gender=Masc|Number=Sing	22	parataxis	_	SpaceAfter=No
 25	)	)	PUNCT	_	_	24	punct	_	SpaceAfter=No
 26	,	,	PUNCT	_	_	27	punct	_	_
-27	município	município	NOUN	_	Gender=Masc|Number=Sing	20	appos	_	_
+27	município	município	NOUN	_	Gender=Masc|Number=Sing	22	appos	_	_
 28	onde	onde	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	29	obl	_	_
 29	montou	montar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	27	acl:relcl	_	_
 30	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	31	det	_	_
@@ -85,16 +88,16 @@
 33	advocacia	advocacia	NOUN	_	Gender=Fem|Number=Sing	31	nmod	_	SpaceAfter=No
 34	.	.	PUNCT	_	_	18	punct	_	SpacesAfter=\n
 
-# text = Candidato a deputado federal pelo Partido Constitucionalista em 1934, foi eleito em outubro seguinte, tornando-se representante de São Paulo no Legislativo Federal.
 # sent_id = 3
-1	Candidato	candidato	NOUN	_	Gender=Masc|Number=Sing	13	nsubj:pass	_	_
+# text = Candidato a deputado federal pelo Partido Constitucionalista em 1934, foi eleito em outubro seguinte, tornando-se representante de São Paulo no Legislativo Federal.
+1	Candidato	candidato	NOUN	_	Gender=Masc|Number=Sing	13	obl	_	_
 2	a	a	ADP	_	_	3	case	_	_
 3	deputado	deputado	NOUN	_	Gender=Masc|Number=Sing	1	nmod	_	_
 4	federal	federal	ADJ	_	Gender=Masc|Number=Sing	3	amod	_	_
 5-6	pelo	_	_	_	_	_	_	_	_
 5	por	por	ADP	_	_	7	case	_	_
 6	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	7	det	_	_
-7	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	1	nmod	_	_
+7	Partido	Partido	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	3	nmod	_	_
 8	Constitucionalista	Constitucionalista	PROPN	_	Number=Sing	7	flat:name	_	_
 9	em	em	ADP	_	_	10	case	_	_
 10	1934	1934	NUM	_	NumType=Card	1	nmod	_	SpaceAfter=No
@@ -107,33 +110,33 @@
 17	,	,	PUNCT	_	_	18	punct	_	_
 18-19	tornando-se	_	_	_	_	_	_	_	_
 18	tornando	tornar	VERB	_	VerbForm=Ger	13	advcl	_	_
-19	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	18	nsubj	_	_
-20	representante	representante	NOUN	_	Gender=Masc|Number=Sing	18	obj	_	_
+19	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	18	expl	_	_
+20	representante	representante	NOUN	_	Gender=Masc|Number=Sing	18	xcomp	_	_
 21	de	de	ADP	_	_	22	case	_	_
-22	São	São	PROPN	_	Gender=Masc|Number=Sing	20	nmod	_	_
+22	São	São	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	20	nmod	_	_
 23	Paulo	Paulo	PROPN	_	Number=Sing	22	flat:name	_	_
 24-25	no	_	_	_	_	_	_	_	_
 24	em	em	ADP	_	_	26	case	_	_
 25	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	26	det	_	_
-26	Legislativo	Legislativo	PROPN	_	Gender=Masc|Number=Sing	18	obl	_	_
+26	Legislativo	Legislativo	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	18	obl	_	_
 27	Federal	Federal	PROPN	_	Number=Sing	26	flat:name	_	SpaceAfter=No
-28	.	.	PUNCT	_	_	13	punct	_	SpacesAfter=\n
+28	.	.	PUNCT	_	_	13	punct	_	_
 
-# text = Transferindo-se para o Rio de Janeiro, então Distrito Federal, exerceu o mandato de maio de 1935 a 10 de novembro de 1937, quando o advento do Estado Novo extinguiu os órgãos legislativos do país.
 # sent_id = 4
+# text = Transferindo-se para o Rio de Janeiro, então Distrito Federal, exerceu o mandato de maio de 1935 a 10 de novembro de 1937, quando o advento do Estado Novo extinguiu os órgãos legislativos do país.
 1-2	Transferindo-se	_	_	_	_	_	_	_	_
-1	Transferindo	Transferir	VERB	_	VerbForm=Ger	13	advcl	_	_
-2	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Plur|Person=3|PronType=Prs	1	expl	_	_
+1	Transferindo	transferir	VERB	_	VerbForm=Ger	13	advcl	_	_
+2	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	1	expl	_	_
 3	para	para	ADP	_	_	5	case	_	_
 4	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	5	det	_	_
 5	Rio	Rio	PROPN	_	Gender=Masc|Number=Sing	1	obl	_	_
 6	de	de	ADP	_	_	7	case	_	_
 7	Janeiro	Janeiro	PROPN	_	Number=Sing	5	nmod	_	SpaceAfter=No
-8	,	,	PUNCT	_	_	1	punct	_	_
-9	então	então	ADV	_	_	1	advmod	_	_
-10	Distrito	Distrito	PROPN	_	Gender=Masc|Number=Sing	1	obj	_	_
+8	,	,	PUNCT	_	_	10	punct	_	_
+9	então	então	ADV	_	_	10	advmod	_	_
+10	Distrito	Distrito	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	5	appos	_	_
 11	Federal	Federal	PROPN	_	Number=Sing	10	flat:name	_	SpaceAfter=No
-12	,	,	PUNCT	_	_	1	punct	_	_
+12	,	,	PUNCT	_	_	10	punct	_	_
 13	exerceu	exercer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 14	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	15	det	_	_
 15	mandato	mandato	NOUN	_	Gender=Masc|Number=Sing	13	obj	_	_
@@ -142,21 +145,21 @@
 18	de	de	ADP	_	_	19	case	_	_
 19	1935	1935	NUM	_	NumType=Card	17	nmod	_	_
 20	a	a	ADP	_	_	21	case	_	_
-21	10	10	NUM	_	NumType=Card	19	nmod	_	_
+21	10	10	NUM	_	NumType=Card	17	nmod	_	_
 22	de	de	ADP	_	_	23	case	_	_
 23	novembro	novembro	NOUN	_	Gender=Masc|Number=Sing	21	nmod	_	_
 24	de	de	ADP	_	_	25	case	_	_
 25	1937	1937	NUM	_	NumType=Card	23	nmod	_	SpaceAfter=No
-26	,	,	PUNCT	_	_	34	punct	_	_
+26	,	,	PUNCT	_	_	13	punct	_	_
 27	quando	quando	ADV	_	_	34	advmod	_	_
 28	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	29	det	_	_
 29	advento	advento	NOUN	_	Gender=Masc|Number=Sing	34	nsubj	_	_
 30-31	do	_	_	_	_	_	_	_	_
 30	de	de	ADP	_	_	32	case	_	_
 31	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	32	det	_	_
-32	Estado	Estado	PROPN	_	Gender=Masc|Number=Sing	29	nmod	_	_
+32	Estado	Estado	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	29	nmod	_	_
 33	Novo	Novo	PROPN	_	Number=Sing	32	flat:name	_	_
-34	extinguiu	extinguir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	15	acl:relcl	_	_
+34	extinguiu	extinguir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	13	advcl	_	_
 35	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	36	det	_	_
 36	órgãos	órgão	NOUN	_	Gender=Masc|Number=Plur	34	obj	_	_
 37	legislativos	legislativo	ADJ	_	Gender=Masc|Number=Plur	36	amod	_	_
@@ -166,41 +169,41 @@
 40	país	país	NOUN	_	Gender=Masc|Number=Sing	36	nmod	_	SpaceAfter=No
 41	.	.	PUNCT	_	_	13	punct	_	SpacesAfter=\n
 
-# text = Após retornar a Jaú, onde chegou a presidir a seção da Ordem dos Advogados do Brasil (OAB), transferiu-se para a capital paulista, tornando-se aí um dos primeiros juízes do trabalho de todo o território nacional.
 # sent_id = 5
+# text = Após retornar a Jaú, onde chegou a presidir a seção da Ordem dos Advogados do Brasil (OAB), transferiu-se para a capital paulista, tornando-se aí um dos primeiros juízes do trabalho de todo o território nacional.
 1	Após	após	SCONJ	_	_	2	mark	_	_
 2	retornar	retornar	VERB	_	VerbForm=Inf	25	advcl	_	_
-3	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	4	det	_	_
-4	Jaú	Jaú	PROPN	_	Gender=Fem|Number=Sing	2	obj	_	SpaceAfter=No
+3	a	a	ADP	_	_	4	case	_	_
+4	Jaú	Jaú	PROPN	_	Gender=Masc|Number=Sing	2	obl	_	SpaceAfter=No
 5	,	,	PUNCT	_	_	2	punct	_	_
-6	onde	onde	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	7	obl	_	_
-7	chegou	chegar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	acl:relcl	_	_
+6	onde	onde	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	7	obl	_	_
+7	chegou	chegar	VERB	_	ExtPos=AUX|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	acl:relcl	_	_
 8	a	a	SCONJ	_	_	9	mark	_	_
 9	presidir	presidir	VERB	_	VerbForm=Inf	7	xcomp	_	_
 10	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	11	det	_	_
 11	seção	seção	NOUN	_	Gender=Fem|Number=Sing	9	obj	_	_
 12-13	da	_	_	_	_	_	_	_	_
 12	de	de	ADP	_	_	14	case	_	_
-13	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	14	det	_	_
+13	a	o	DET	_	Definite=Def|PronType=Art	14	det	_	_
 14	Ordem	Ordem	PROPN	_	Gender=Fem|Number=Sing	11	nmod	_	_
 15-16	dos	_	_	_	_	_	_	_	_
 15	de	de	ADP	_	_	17	case	_	_
 16	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	17	det	_	_
-17	Advogados	advogado	NOUN	_	Gender=Masc|Number=Plur	14	nmod	_	_
+17	Advogados	Advogados	PROPN	_	Number=Sing	14	nmod	_	_
 18-19	do	_	_	_	_	_	_	_	_
 18	de	de	ADP	_	_	20	case	_	_
 19	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	20	det	_	_
-20	Brasil	Brasil	PROPN	_	Gender=Masc|Number=Sing	17	nmod	_	_
+20	Brasil	Brasil	PROPN	_	Number=Sing	17	nmod	_	_
 21	(	(	PUNCT	_	_	22	punct	_	SpaceAfter=No
-22	OAB	OAB	PROPN	_	Gender=Masc|Number=Sing	20	appos	_	SpaceAfter=No
+22	OAB	OAB	PROPN	_	Gender=Fem|Number=Sing	14	appos	_	SpaceAfter=No
 23	)	)	PUNCT	_	_	22	punct	_	SpaceAfter=No
-24	,	,	PUNCT	_	_	9	punct	_	_
+24	,	,	PUNCT	_	_	2	punct	_	_
 25-26	transferiu-se	_	_	_	_	_	_	_	_
 25	transferiu	transferir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 26	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	25	expl	_	_
 27	para	para	ADP	_	_	29	case	_	_
 28	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	29	det	_	_
-29	capital	capital	NOUN	_	Gender=Fem|Number=Sing	25	obj	_	_
+29	capital	capital	NOUN	_	Gender=Fem|Number=Sing	25	obl	_	_
 30	paulista	paulista	ADJ	_	Gender=Fem|Number=Sing	29	amod	_	SpaceAfter=No
 31	,	,	PUNCT	_	_	32	punct	_	_
 32-33	tornando-se	_	_	_	_	_	_	_	_
@@ -212,23 +215,23 @@
 36	de	de	ADP	_	_	39	case	_	_
 37	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	39	det	_	_
 38	primeiros	primeiro	ADJ	_	Gender=Masc|Number=Plur|NumType=Ord	39	amod	_	_
-39	juízes	juíz	NOUN	_	Gender=Masc|Number=Plur	35	nmod	_	_
+39	juízes	juiz	NOUN	_	Gender=Masc|Number=Plur	35	nmod	_	_
 40-41	do	_	_	_	_	_	_	_	_
 40	de	de	ADP	_	_	42	case	_	_
 41	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	42	det	_	_
 42	trabalho	trabalho	NOUN	_	Gender=Masc|Number=Sing	39	nmod	_	_
 43	de	de	ADP	_	_	46	case	_	_
 44	todo	todo	DET	_	Gender=Masc|Number=Sing|PronType=Tot	46	det	_	_
-45	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	44	fixed	_	_
+45	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	46	det	_	_
 46	território	território	NOUN	_	Gender=Masc|Number=Sing	42	nmod	_	_
 47	nacional	nacional	ADJ	_	Gender=Masc|Number=Sing	46	amod	_	SpaceAfter=No
-48	.	.	PUNCT	_	_	25	punct	_	SpacesAfter=\n
+48	.	.	PUNCT	_	_	25	punct	_	_
 
-# text = Representante de São Paulo junto ao conselho federal da OAB, presidiu ainda a 7ª Junta de Conciliação e Julgamento, pela qual se aposentou tempos depois.
 # sent_id = 6
-1	Representante	representante	NOUN	_	Gender=Masc|Number=Sing	14	nsubj	_	_
+# text = Representante de São Paulo junto ao conselho federal da OAB, presidiu ainda a 7ª Junta de Conciliação e Julgamento, pela qual se aposentou tempos depois.
+1	Representante	representante	NOUN	_	Gender=Masc|Number=Sing	14	obl	_	_
 2	de	de	ADP	_	_	3	case	_	_
-3	São	São	PROPN	_	Gender=Masc|Number=Sing	1	nmod	_	_
+3	São	São	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	1	nmod	_	_
 4	Paulo	Paulo	PROPN	_	Number=Sing	3	flat:name	_	_
 5	junto	junto	ADV	_	_	1	advmod	_	_
 6-7	ao	_	_	_	_	_	_	_	_
@@ -245,37 +248,37 @@
 15	ainda	ainda	ADV	_	_	14	advmod	_	_
 16	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	18	det	_	_
 17	7ª	7ª	ADJ	_	Gender=Fem|Number=Sing|NumType=Ord	18	amod	_	_
-18	Junta	Junta	NOUN	_	Gender=Fem|Number=Sing	14	obj	_	_
+18	Junta	Junta	PROPN	_	Gender=Fem|Number=Sing	14	obj	_	_
 19	de	de	ADP	_	_	20	case	_	_
-20	Conciliação	conciliação	NOUN	_	Gender=Fem|Number=Sing	18	nmod	_	_
-21	e	e	CCONJ	_	_	22	cc	_	_
-22	Julgamento	julgamento	NOUN	_	Gender=Masc|Number=Sing	20	conj	_	SpaceAfter=No
-23	,	,	PUNCT	_	_	14	punct	_	_
+20	Conciliação	Conciliação	PROPN	_	ExtPos=PROPN|Number=Sing	18	nmod	_	_
+21	e	e	CCONJ	_	_	20	flat:name	_	_
+22	Julgamento	Julgamento	PROPN	_	Number=Sing	20	flat:name	_	SpaceAfter=No
+23	,	,	PUNCT	_	_	28	punct	_	_
 24-25	pela	_	_	_	_	_	_	_	_
 24	por	por	ADP	_	_	26	case	_	_
 25	a	o	DET	_	Gender=Fem|Number=Sing|PronType=Art	26	det	_	_
 26	qual	qual	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	28	obl	_	_
-27	se	se	PRON	_	Case=Acc|Gender=Unsp|PronType=Prs	28	nsubj	_	_
-28	aposentou	aposentar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	14	advcl	_	_
-29	tempos	tempo	NOUN	_	Gender=Masc|Number=Plur	28	obj	_	_
+27	se	se	PRON	_	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	28	expl	_	_
+28	aposentou	aposentar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	18	acl:relcl	_	_
+29	tempos	tempo	NOUN	_	Gender=Masc|Number=Plur	28	obl	_	_
 30	depois	depois	ADV	_	_	28	advmod	_	SpaceAfter=No
 31	.	.	PUNCT	_	_	14	punct	_	SpacesAfter=\n
 
-# text = Ao longo de sua trajetória, foi também membro de um dos conselhos do jornal «O Estado de S. Paulo», e advogado dos Matarazzo, família de destacada atuação no desenvolvimento da indústria paulista.
 # sent_id = 7
+# text = Ao longo de sua trajetória, foi também membro de um dos conselhos do jornal «O Estado de S. Paulo», e advogado dos Matarazzo, família de destacada atuação no desenvolvimento da indústria paulista.
 1-2	Ao	_	_	_	_	_	_	_	_
-1	A	a	DET	_	Gender=Masc|Number=Sing	3	det	_	_
+1	A	a	ADP	_	_	3	case	_	_
 2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
-3	longo	longo	NOUN	_	Gender=Masc|Number=Sing	10	nsubj	_	_
+3	longo	longo	NOUN	_	Gender=Masc|Number=Sing	10	nmod	_	_
 4	de	de	ADP	_	_	6	case	_	_
 5	sua	seu	DET	_	Gender=Fem|Number=Sing|PronType=Prs	6	det	_	_
 6	trajetória	trajetória	NOUN	_	Gender=Fem|Number=Sing	3	nmod	_	SpaceAfter=No
-7	,	,	PUNCT	_	_	10	punct	_	_
+7	,	,	PUNCT	_	_	3	punct	_	_
 8	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	10	cop	_	_
 9	também	também	ADV	_	_	10	advmod	_	_
 10	membro	membro	NOUN	_	Gender=Masc|Number=Sing	0	root	_	_
 11	de	de	ADP	_	_	12	case	_	_
-12	um	um	NUM	_	NumType=Card	10	obl	_	_
+12	um	um	NUM	_	NumType=Card	10	nmod	_	_
 13-14	dos	_	_	_	_	_	_	_	_
 13	de	de	ADP	_	_	15	case	_	_
 14	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	15	det	_	_
@@ -285,28 +288,28 @@
 17	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	18	det	_	_
 18	jornal	jornal	NOUN	_	Gender=Masc|Number=Sing	15	nmod	_	_
 19	«	«	PUNCT	_	_	20	punct	_	SpaceAfter=No
-20	O	O	PROPN	_	Gender=Masc|Number=Sing|PronType=Art	18	appos	_	_
+20	O	O	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing|PronType=Art	18	appos	_	_
 21	Estado	Estado	PROPN	_	Number=Sing	20	flat:name	_	_
 22	de	de	ADP	_	_	23	case	_	_
-23	S.	S.	PROPN	_	Number=Sing	20	nmod	_	_
+23	S.	São	PROPN	_	ExtPos=PROPN|Number=Sing	20	nmod	_	_
 24	Paulo	Paulo	PROPN	_	Number=Sing	23	flat:name	_	SpaceAfter=No
 25	»	»	PUNCT	_	_	20	punct	_	SpaceAfter=No
 26	,	,	PUNCT	_	_	28	punct	_	_
 27	e	e	CCONJ	_	_	28	cc	_	_
-28	advogado	advogado	NOUN	_	Gender=Masc|Number=Sing	18	conj	_	_
+28	advogado	advogado	NOUN	_	Gender=Masc|Number=Sing	10	conj	_	_
 29-30	dos	_	_	_	_	_	_	_	_
 29	de	de	ADP	_	_	31	case	_	_
 30	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	31	det	_	_
-31	Matarazzo	Matarazzo	PROPN	_	Number=Sing	28	nmod	_	SpaceAfter=No
-32	,	,	PUNCT	_	_	35	punct	_	_
-33	família	família	NOUN	_	Gender=Fem|Number=Sing	28	appos	_	_
-34	de	de	ADP	_	_	35	mark	_	_
-35	destacada	destacar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	33	acl	_	_
-36	atuação	atuação	NOUN	_	Gender=Fem|Number=Sing	35	obj	_	_
+31	Matarazzo	Matarazzo	PROPN	_	Gender=Masc|Number=Plur	28	nmod	_	SpaceAfter=No
+32	,	,	PUNCT	_	_	33	punct	_	_
+33	família	família	NOUN	_	Gender=Fem|Number=Sing	31	appos	_	_
+34	de	de	ADP	_	_	36	case	_	_
+35	destacada	destacar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	36	acl	_	_
+36	atuação	atuação	NOUN	_	Gender=Fem|Number=Sing	33	nmod	_	_
 37-38	no	_	_	_	_	_	_	_	_
 37	em	em	ADP	_	_	39	case	_	_
 38	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	39	det	_	_
-39	desenvolvimento	desenvolvimento	NOUN	_	Gender=Masc|Number=Sing	35	obl	_	_
+39	desenvolvimento	desenvolvimento	NOUN	_	Gender=Masc|Number=Sing	36	nmod	_	_
 40-41	da	_	_	_	_	_	_	_	_
 40	de	de	ADP	_	_	42	case	_	_
 41	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	42	det	_	_
@@ -314,24 +317,24 @@
 43	paulista	paulista	ADJ	_	Gender=Fem|Number=Sing	42	amod	_	SpaceAfter=No
 44	.	.	PUNCT	_	_	10	punct	_	SpacesAfter=\n
 
-# text = Viúvo de Marieta Botelho de Miranda, com quem teve seis filhos, faleceu em São Paulo no dia 3 de junho de 1968.
 # sent_id = 8
-1	Viúvo	viúvo	PROPN	_	Gender=Masc|Number=Sing	14	nsubj	_	_
+# text = Viúvo de Marieta Botelho de Miranda, com quem teve seis filhos, faleceu em São Paulo no dia 3 de junho de 1968.
+1	Viúvo	viúvo	NOUN	_	Gender=Masc|Number=Sing	14	obl	_	_
 2	de	de	ADP	_	_	3	case	_	_
-3	Marieta	Marieta	PROPN	_	Number=Sing	1	nmod	_	_
-4	Botelho	botelho	PROPN	_	Number=Sing	3	flat:name	_	_
+3	Marieta	Marieta	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	1	nmod	_	_
+4	Botelho	Botelho	PROPN	_	Number=Sing	3	flat:name	_	_
 5	de	de	ADP	_	_	6	case	_	_
 6	Miranda	Miranda	PROPN	_	Number=Sing	3	nmod	_	SpaceAfter=No
 7	,	,	PUNCT	_	_	10	punct	_	_
-8	com	com	ADP	_	_	10	mark	_	_
-9	quem	quem	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	10	nsubj	_	_
-10	teve	ter	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	14	advcl	_	_
+8	com	com	ADP	_	_	9	case	_	_
+9	quem	quem	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	10	obl	_	_
+10	teve	ter	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	acl:relcl	_	_
 11	seis	seis	NUM	_	NumType=Card	12	nummod	_	_
 12	filhos	filho	NOUN	_	Gender=Masc|Number=Plur	10	obj	_	SpaceAfter=No
 13	,	,	PUNCT	_	_	10	punct	_	_
 14	faleceu	falecer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 15	em	em	ADP	_	_	16	case	_	_
-16	São	São	PROPN	_	Gender=Masc|Number=Sing	14	obl	_	_
+16	São	São	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	14	obl	_	_
 17	Paulo	Paulo	PROPN	_	Number=Sing	16	flat:name	_	_
 18-19	no	_	_	_	_	_	_	_	_
 18	em	em	ADP	_	_	20	case	_	_

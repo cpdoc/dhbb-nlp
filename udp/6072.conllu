@@ -1,19 +1,10 @@
-# text = «PARTIDO COMUNISTA REVOLUCIONÁRIO (PCR)»
+# generator = UDPipe 2, https://lindat.mff.cuni.cz/services/udpipe
+# udpipe_model = portuguese-bosque-ud-2.12-230717
+# udpipe_model_licence = CC BY-NC-SA
+# newdoc
+# newpar
 # sent_id = 1
-# newpar
-# newdoc id = ../raw/6072.raw
-1	«	«	PUNCT	_	_	2	punct	_	SpaceAfter=No|SpacesBefore=\n
-2	PARTIDO	Partido	PROPN	_	Gender=Masc|Number=Sing	0	root	_	_
-3	COMUNISTA	Comunista	PROPN	_	Number=Sing	2	flat:name	_	_
-4	REVOLUCIONÁRIO	Revolucionário	PROPN	_	Number=Sing	2	flat:name	_	_
-5	(	(	PUNCT	_	_	6	punct	_	SpaceAfter=No
-6	PCR	PCR	PROPN	_	Gender=Masc|Number=Sing	2	appos	_	SpaceAfter=No
-7	)	)	PUNCT	_	_	6	punct	_	SpaceAfter=No
-8	»	»	PUNCT	_	_	2	punct	_	_
-
 # text = Partido político formado por um grupo de ex-militantes do Partido Comunista do Brasil (PCdoB), do Nordeste, após uma cisão ocorrida em 1966.
-# sent_id = 2
-# newpar
 1	Partido	partido	NOUN	_	Gender=Masc|Number=Sing	0	root	_	_
 2	político	político	ADJ	_	Gender=Masc|Number=Sing	1	amod	_	_
 3	formado	formar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	1	acl	_	_
@@ -25,35 +16,34 @@
 9-10	do	_	_	_	_	_	_	_	_
 9	de	de	ADP	_	_	11	case	_	_
 10	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	_	_
-11	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	8	nmod	_	_
+11	Partido	Partido	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	8	nmod	_	_
 12	Comunista	Comunista	PROPN	_	Number=Sing	11	flat:name	_	_
 13-14	do	_	_	_	_	_	_	_	_
 13	de	de	ADP	_	_	15	case	_	_
 14	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	15	det	_	_
 15	Brasil	Brasil	PROPN	_	Number=Sing	11	nmod	_	_
 16	(	(	PUNCT	_	_	17	punct	_	SpaceAfter=No
-17	PCdoB	PCdoB	PROPN	_	Gender=Fem|Number=Sing	11	appos	_	SpaceAfter=No
+17	PCdoB	PCDOB	PROPN	_	Gender=Masc|Number=Sing	11	appos	_	SpaceAfter=No
 18	)	)	PUNCT	_	_	17	punct	_	SpaceAfter=No
 19	,	,	PUNCT	_	_	22	punct	_	_
 20-21	do	_	_	_	_	_	_	_	_
 20	de	de	ADP	_	_	22	case	_	_
 21	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	22	det	_	_
-22	Nordeste	nordeste	NOUN	_	Gender=Masc|Number=Sing	11	conj	_	SpaceAfter=No
-23	,	,	PUNCT	_	_	3	punct	_	_
+22	Nordeste	Nordeste	PROPN	_	Gender=Masc|Number=Sing	11	nmod	_	SpaceAfter=No
+23	,	,	PUNCT	_	_	22	punct	_	_
 24	após	após	ADP	_	_	26	case	_	_
 25	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	26	det	_	_
 26	cisão	cisão	NOUN	_	Gender=Fem|Number=Sing	3	obl	_	_
 27	ocorrida	ocorrer	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	26	acl	_	_
 28	em	em	ADP	_	_	29	case	_	_
 29	1966	1966	NUM	_	NumType=Card	27	obl	_	SpaceAfter=No
-30	.	.	PUNCT	_	_	1	punct	_	_
+30	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
 
+# sent_id = 2
 # text = Abrangia antigos militantes das ligas camponesas, como Amaro Luís de Carvalho (o Capivara), e ativistas do movimento estudantil, que estavam concentrados na faixa canavieira de Alagoas à Paraíba.
-# sent_id = 3
-# newpar
-1	Abrangia	Abrangia	NOUN	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	0	root	_	_
-2	antigos	antigo	ADJ	_	Gender=Masc|Number=Plur	1	amod	_	_
-3	militantes	militante	NOUN	_	Gender=Masc|Number=Plur	1	appos	_	_
+1	Abrangia	abranger	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	0	root	_	_
+2	antigos	antigo	ADJ	_	Gender=Masc|Number=Plur	3	amod	_	_
+3	militantes	militante	NOUN	_	Gender=Masc|Number=Plur	1	obj	_	_
 4-5	das	_	_	_	_	_	_	_	_
 4	de	de	ADP	_	_	6	case	_	_
 5	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	6	det	_	_
@@ -61,42 +51,41 @@
 7	camponesas	camponês	ADJ	_	Gender=Fem|Number=Plur	6	amod	_	SpaceAfter=No
 8	,	,	PUNCT	_	_	10	punct	_	_
 9	como	como	ADP	_	_	10	case	_	_
-10	Amaro	Amaro	PROPN	_	Number=Sing	6	nmod	_	_
+10	Amaro	Amaro	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	6	nmod	_	_
 11	Luís	Luís	PROPN	_	Number=Sing	10	flat:name	_	_
 12	de	de	ADP	_	_	13	case	_	_
 13	Carvalho	Carvalho	PROPN	_	Number=Sing	10	nmod	_	_
 14	(	(	PUNCT	_	_	16	punct	_	SpaceAfter=No
 15	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	16	det	_	_
-16	Capivara	Capivara	PROPN	_	Number=Sing	6	appos	_	SpaceAfter=No
+16	Capivara	Capivara	PROPN	_	Gender=Masc|Number=Sing	10	appos	_	SpaceAfter=No
 17	)	)	PUNCT	_	_	16	punct	_	SpaceAfter=No
 18	,	,	PUNCT	_	_	20	punct	_	_
 19	e	e	CCONJ	_	_	20	cc	_	_
-20	ativistas	ativista	NOUN	_	Gender=Unsp|Number=Plur	10	conj	_	_
+20	ativistas	ativista	NOUN	_	Gender=Masc|Number=Plur	3	conj	_	_
 21-22	do	_	_	_	_	_	_	_	_
 21	de	de	ADP	_	_	23	case	_	_
 22	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	23	det	_	_
 23	movimento	movimento	NOUN	_	Gender=Masc|Number=Sing	20	nmod	_	_
 24	estudantil	estudantil	ADJ	_	Gender=Masc|Number=Sing	23	amod	_	SpaceAfter=No
-25	,	,	PUNCT	_	_	10	punct	_	_
+25	,	,	PUNCT	_	_	28	punct	_	_
 26	que	que	PRON	_	Gender=Masc|Number=Plur|PronType=Rel	28	nsubj	_	_
 27	estavam	estar	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	28	cop	_	_
-28	concentrados	concentrado	ADJ	_	Gender=Masc|Number=Plur	6	acl:relcl	_	_
+28	concentrados	concentrado	ADJ	_	Gender=Masc|Number=Plur	23	acl:relcl	_	_
 29-30	na	_	_	_	_	_	_	_	_
 29	em	em	ADP	_	_	31	case	_	_
 30	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	31	det	_	_
 31	faixa	faixa	NOUN	_	Gender=Fem|Number=Sing	28	obl	_	_
 32	canavieira	canavieiro	ADJ	_	Gender=Fem|Number=Sing	31	amod	_	_
 33	de	de	ADP	_	_	34	case	_	_
-34	Alagoas	Alagoas	PROPN	_	Gender=Masc|Number=Sing	31	nmod	_	_
+34	Alagoas	Alagoas	PROPN	_	Number=Sing	31	nmod	_	_
 35-36	à	_	_	_	_	_	_	_	_
 35	a	a	ADP	_	_	37	case	_	_
 36	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	37	det	_	_
-37	Paraíba	Paraíba	PROPN	_	Number=Sing	34	nmod	_	SpaceAfter=No
-38	.	.	PUNCT	_	_	1	punct	_	_
+37	Paraíba	Paraíba	PROPN	_	Gender=Fem|Number=Sing	34	nmod	_	SpaceAfter=No
+38	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
 
+# sent_id = 3
 # text = O PCR lançou em maio de 1966 a Carta de 12 pontos aos comunistas revolucionários, na qual a direção do PCdoB era apontada pelos militantes do PCR como oportunista e mantenedora da mesma linha de ação seguida pelo Partido Comunista Brasileiro (PCB) na fase anterior a 1962.
-# sent_id = 4
-# newpar
 1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	_	_
 2	PCR	PCR	PROPN	_	Gender=Masc|Number=Sing	3	nsubj	_	_
 3	lançou	lançar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
@@ -104,70 +93,69 @@
 5	maio	maio	NOUN	_	Gender=Masc|Number=Sing	3	obl	_	_
 6	de	de	ADP	_	_	7	case	_	_
 7	1966	1966	NUM	_	NumType=Card	5	nmod	_	_
-8	a	a	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	9	det	_	_
-9	Carta	carta	PROPN	_	Gender=Fem|Number=Sing	3	obj	_	_
+8	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	9	det	_	_
+9	Carta	carta	NOUN	_	Gender=Fem|Number=Sing	3	obj	_	_
 10	de	de	ADP	_	_	12	case	_	_
 11	12	12	NUM	_	NumType=Card	12	nummod	_	_
 12	pontos	ponto	NOUN	_	Gender=Masc|Number=Plur	9	nmod	_	_
 13-14	aos	_	_	_	_	_	_	_	_
 13	a	a	ADP	_	_	15	case	_	_
 14	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	15	det	_	_
-15	comunistas	comunista	NOUN	_	Gender=Masc|Number=Plur	3	obl	_	_
+15	comunistas	comunista	NOUN	_	Gender=Masc|Number=Plur	3	iobj	_	_
 16	revolucionários	revolucionário	ADJ	_	Gender=Masc|Number=Plur	15	amod	_	SpaceAfter=No
-17	,	,	PUNCT	_	_	28	punct	_	_
+17	,	,	PUNCT	_	_	27	punct	_	_
 18-19	na	_	_	_	_	_	_	_	_
 18	em	em	ADP	_	_	20	case	_	_
-19	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	20	det	_	_
-20	qual	qual	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	28	obl	_	_
+19	a	o	DET	_	Gender=Fem|Number=Sing|PronType=Art	20	det	_	_
+20	qual	qual	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	27	obl	_	_
 21	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	22	det	_	_
-22	direção	direção	NOUN	_	Gender=Fem|Number=Sing	28	nsubj:pass	_	_
+22	direção	direção	NOUN	_	Gender=Fem|Number=Sing	27	nsubj:pass	_	_
 23-24	do	_	_	_	_	_	_	_	_
 23	de	de	ADP	_	_	25	case	_	_
 24	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	25	det	_	_
-25	PCdo	PCdo	PROPN	_	Number=Sing	22	nmod	_	SpaceAfter=No
-26	B	b	PROPN	_	Gender=Masc|Number=Sing	25	flat:name	_	_
-27	era	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	28	aux:pass	_	_
-28	apontada	apontar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	3	advcl	_	_
-29-30	pelos	_	_	_	_	_	_	_	_
-29	por	por	ADP	_	_	31	case	_	_
-30	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	31	det	_	_
-31	militantes	militante	NOUN	_	Gender=Masc|Number=Plur	28	obl:agent	_	_
-32-33	do	_	_	_	_	_	_	_	_
-32	de	de	ADP	_	_	34	case	_	_
-33	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	34	det	_	_
-34	PCR	PCR	PROPN	_	Gender=Masc|Number=Sing	31	nmod	_	_
-35	como	como	ADV	_	_	36	advmod	_	_
-36	oportunista	oportunisto	ADJ	_	Gender=Masc|Number=Sing	34	amod	_	_
-37	e	e	CCONJ	_	_	38	cc	_	_
-38	mantenedora	mantenedor	ADJ	_	Gender=Fem|Number=Sing	36	conj	_	_
-39-40	da	_	_	_	_	_	_	_	_
-39	de	de	ADP	_	_	42	case	_	_
-40	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	42	det	_	_
-41	mesma	mesmo	ADJ	_	Gender=Fem|Number=Sing	42	amod	_	_
-42	linha	linha	NOUN	_	Gender=Fem|Number=Sing	36	obl	_	_
-43	de	de	ADP	_	_	44	case	_	_
-44	ação	ação	NOUN	_	Gender=Fem|Number=Sing	42	nmod	_	_
-45	seguida	seguir	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	44	acl	_	_
-46-47	pelo	_	_	_	_	_	_	_	_
-46	por	por	ADP	_	_	48	case	_	_
-47	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	48	det	_	_
-48	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	45	obl:agent	_	_
-49	Comunista	Comunista	PROPN	_	Number=Sing	48	flat:name	_	_
-50	Brasileiro	Brasileiro	PROPN	_	Number=Sing	48	flat:name	_	_
-51	(	(	PUNCT	_	_	52	punct	_	SpaceAfter=No
-52	PCB	PCB	PROPN	_	Gender=Masc|Number=Sing	48	appos	_	SpaceAfter=No
-53	)	)	PUNCT	_	_	52	punct	_	_
-54-55	na	_	_	_	_	_	_	_	_
-54	em	em	ADP	_	_	56	case	_	_
-55	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	56	det	_	_
-56	fase	fase	NOUN	_	Gender=Fem|Number=Sing	45	obl	_	_
-57	anterior	anterior	ADJ	_	Gender=Fem|Number=Sing	56	amod	_	_
-58	a	a	ADP	_	_	59	case	_	_
-59	1962	1962	NUM	_	NumType=Card	56	nmod	_	SpaceAfter=No
-60	.	.	PUNCT	_	_	3	punct	_	_
+25	PCdoB	PCDOB	PROPN	_	Gender=Masc|Number=Sing	22	nmod	_	_
+26	era	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	27	aux:pass	_	_
+27	apontada	apontar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	15	acl:relcl	_	_
+28-29	pelos	_	_	_	_	_	_	_	_
+28	por	por	ADP	_	_	30	case	_	_
+29	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	30	det	_	_
+30	militantes	militante	NOUN	_	Gender=Masc|Number=Plur	27	obl:agent	_	_
+31-32	do	_	_	_	_	_	_	_	_
+31	de	de	ADP	_	_	33	case	_	_
+32	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	33	det	_	_
+33	PCR	PCR	PROPN	_	Gender=Masc|Number=Sing	30	nmod	_	_
+34	como	como	ADP	_	_	35	case	_	_
+35	oportunista	oportunista	ADJ	_	Gender=Masc|Number=Sing	27	xcomp	_	_
+36	e	e	CCONJ	_	_	37	cc	_	_
+37	mantenedora	mantenedor	ADJ	_	Gender=Fem|Number=Sing	35	conj	_	_
+38-39	da	_	_	_	_	_	_	_	_
+38	de	de	ADP	_	_	41	case	_	_
+39	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	41	det	_	_
+40	mesma	mesmo	ADJ	_	Gender=Fem|Number=Sing	41	amod	_	_
+41	linha	linha	NOUN	_	Gender=Fem|Number=Sing	35	obl	_	_
+42	de	de	ADP	_	_	43	case	_	_
+43	ação	ação	NOUN	_	Gender=Fem|Number=Sing	41	nmod	_	_
+44	seguida	seguir	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	41	acl	_	_
+45-46	pelo	_	_	_	_	_	_	_	_
+45	por	por	ADP	_	_	47	case	_	_
+46	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	47	det	_	_
+47	Partido	Partido	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	44	obl:agent	_	_
+48	Comunista	Comunista	PROPN	_	Number=Sing	47	flat:name	_	_
+49	Brasileiro	Brasileiro	PROPN	_	Number=Sing	47	flat:name	_	_
+50	(	(	PUNCT	_	_	51	punct	_	SpaceAfter=No
+51	PCB	PCB	PROPN	_	Gender=Masc|Number=Sing	47	appos	_	SpaceAfter=No
+52	)	)	PUNCT	_	_	51	punct	_	_
+53-54	na	_	_	_	_	_	_	_	_
+53	em	em	ADP	_	_	55	case	_	_
+54	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	55	det	_	_
+55	fase	fase	NOUN	_	Gender=Fem|Number=Sing	44	obl	_	_
+56	anterior	anterior	ADJ	_	Gender=Fem|Number=Sing	55	amod	_	_
+57	a	a	ADP	_	_	58	case	_	_
+58	1962	1962	NUM	_	NumType=Card	56	obl	_	SpaceAfter=No
+59	.	.	PUNCT	_	_	3	punct	_	_
 
+# sent_id = 4
 # text = Entre os pontos de divergência tinha posição de destaque a preparação da luta armada, tarefa diante da qual o PCdoB era acusado de omissão.
-# sent_id = 5
 1	Entre	entre	ADP	_	_	3	case	_	_
 2	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	3	det	_	_
 3	pontos	ponto	NOUN	_	Gender=Masc|Number=Plur	6	obl	_	_
@@ -176,7 +164,7 @@
 6	tinha	ter	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	0	root	_	_
 7	posição	posição	NOUN	_	Gender=Fem|Number=Sing	6	obj	_	_
 8	de	de	ADP	_	_	9	case	_	_
-9	destaque	destaque	NOUN	_	_	7	nmod	_	_
+9	destaque	destaque	NOUN	_	Gender=Masc|Number=Sing	7	nmod	_	_
 10	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	11	det	_	_
 11	preparação	preparação	NOUN	_	Gender=Fem|Number=Sing	6	nsubj	_	_
 12-13	da	_	_	_	_	_	_	_	_
@@ -185,24 +173,22 @@
 14	luta	luta	NOUN	_	Gender=Fem|Number=Sing	11	nmod	_	_
 15	armada	armar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	14	acl	_	SpaceAfter=No
 16	,	,	PUNCT	_	_	17	punct	_	_
-17	tarefa	tarefar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	advcl	_	_
-18	diante	diante	ADV	_	_	17	advmod	_	_
+17	tarefa	tarefa	NOUN	_	Gender=Fem|Number=Sing	11	appos	_	_
+18	diante	diante	ADV	_	ExtPos=ADP	21	case	_	_
 19-20	da	_	_	_	_	_	_	_	_
-19	de	de	ADP	_	_	21	case	_	_
-20	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	21	det	_	_
-21	qual	qual	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	18	obl	_	_
+19	de	de	ADP	_	_	18	fixed	_	_
+20	a	o	DET	_	Gender=Fem|Number=Sing|PronType=Art	21	det	_	_
+21	qual	qual	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	25	obl	_	_
 22	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	23	det	_	_
-23	PCdo	PCdo	PROPN	_	Number=Sing	26	nsubj:pass	_	SpaceAfter=No
-24	B	b	PROPN	_	Gender=Masc|Number=Sing	23	flat:name	_	_
-25	era	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	26	aux:pass	_	_
-26	acusado	acusar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	17	ccomp	_	_
-27	de	de	ADP	_	_	28	case	_	_
-28	omissão	omissão	NOUN	_	Gender=Fem|Number=Sing	26	obl	_	SpaceAfter=No
-29	.	.	PUNCT	_	_	6	punct	_	_
+23	PCdoB	PCDOB	PROPN	_	Gender=Masc|Number=Sing	25	nsubj:pass	_	_
+24	era	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	25	aux:pass	_	_
+25	acusado	acusar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	17	acl:relcl	_	_
+26	de	de	ADP	_	_	27	case	_	_
+27	omissão	omissão	NOUN	_	Gender=Fem|Number=Sing	25	obj	_	SpaceAfter=No
+28	.	.	PUNCT	_	_	6	punct	_	SpacesAfter=\n
 
+# sent_id = 5
 # text = Em fevereiro de 1968, já com estrutura própria, o PCR definiu um sintético programa político e os estatutos do partido, com uma simplificada organização interna de conselhos: nacional, regionais, de luta operária, de luta estudantil etc.
-# sent_id = 6
-# newpar
 1	Em	em	ADP	_	_	2	case	_	_
 2	fevereiro	fevereiro	NOUN	_	Gender=Masc|Number=Sing	13	obl	_	_
 3	de	de	ADP	_	_	4	case	_	_
@@ -210,7 +196,7 @@
 5	,	,	PUNCT	_	_	2	punct	_	_
 6	já	já	ADV	_	_	8	advmod	_	_
 7	com	com	ADP	_	_	8	case	_	_
-8	estrutura	estrutura	NOUN	_	Gender=Fem|Number=Sing	2	nmod	_	_
+8	estrutura	estrutura	NOUN	_	Gender=Fem|Number=Sing	13	obl	_	_
 9	própria	próprio	ADJ	_	Gender=Fem|Number=Sing	8	amod	_	SpaceAfter=No
 10	,	,	PUNCT	_	_	8	punct	_	_
 11	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	12	det	_	_
@@ -222,23 +208,23 @@
 17	político	político	ADJ	_	Gender=Masc|Number=Sing	16	amod	_	_
 18	e	e	CCONJ	_	_	20	cc	_	_
 19	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	20	det	_	_
-20	estatutos	estatutos	NOUN	_	Gender=Masc|Number=Plur	16	conj	_	_
+20	estatutos	estatuto	NOUN	_	Gender=Masc|Number=Plur	16	conj	_	_
 21-22	do	_	_	_	_	_	_	_	_
 21	de	de	ADP	_	_	23	case	_	_
 22	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	23	det	_	_
 23	partido	partido	NOUN	_	Gender=Masc|Number=Sing	20	nmod	_	SpaceAfter=No
-24	,	,	PUNCT	_	_	13	punct	_	_
+24	,	,	PUNCT	_	_	28	punct	_	_
 25	com	com	ADP	_	_	28	case	_	_
 26	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	28	det	_	_
-27	simplificada	simplificado	ADJ	_	Gender=Fem|Number=Sing|VerbForm=Part	28	amod	_	_
+27	simplificada	simplificar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	28	acl	_	_
 28	organização	organização	NOUN	_	Gender=Fem|Number=Sing	13	obl	_	_
 29	interna	interno	ADJ	_	Gender=Fem|Number=Sing	28	amod	_	_
 30	de	de	ADP	_	_	31	case	_	_
 31	conselhos	conselho	NOUN	_	Gender=Masc|Number=Plur	28	nmod	_	SpaceAfter=No
-32	:	:	PUNCT	_	_	13	punct	_	_
+32	:	:	PUNCT	_	_	33	punct	_	_
 33	nacional	nacional	ADJ	_	Gender=Masc|Number=Sing	31	appos	_	SpaceAfter=No
 34	,	,	PUNCT	_	_	35	punct	_	_
-35	regionais	regional	ADJ	_	Gender=Fem|Number=Plur	33	conj	_	SpaceAfter=No
+35	regionais	regional	ADJ	_	Gender=Masc|Number=Plur	33	conj	_	SpaceAfter=No
 36	,	,	PUNCT	_	_	38	punct	_	_
 37	de	de	ADP	_	_	38	case	_	_
 38	luta	luta	NOUN	_	Gender=Fem|Number=Sing	33	conj	_	_
@@ -247,12 +233,11 @@
 41	de	de	ADP	_	_	42	case	_	_
 42	luta	luta	NOUN	_	Gender=Fem|Number=Sing	33	conj	_	_
 43	estudantil	estudantil	ADJ	_	Gender=Fem|Number=Sing	42	amod	_	_
-44	etc	etc	ADV	_	_	42	advmod	_	SpaceAfter=No
-45	.	.	PUNCT	_	_	13	punct	_	_
+44	etc	etc	ADV	_	_	33	advmod	_	SpaceAfter=No
+45	.	.	PUNCT	_	_	13	punct	_	SpacesAfter=\n
 
+# sent_id = 6
 # text = O PCR, de caráter regional, tinha como estratégia a defesa da “guerra popular prolongada” com “cerco das cidades pelo campo” a partir de um “exército revolucionário” cuja área fundamental de estruturação seria o Nordeste brasileiro, por ser a região onde as contradições sociais seriam mais agudas.
-# sent_id = 7
-# newpar
 1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	_	_
 2	PCR	PCR	PROPN	_	Gender=Masc|Number=Sing	8	nsubj	_	SpaceAfter=No
 3	,	,	PUNCT	_	_	5	punct	_	_
@@ -262,19 +247,19 @@
 7	,	,	PUNCT	_	_	5	punct	_	_
 8	tinha	ter	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	0	root	_	_
 9	como	como	ADP	_	_	10	case	_	_
-10	estratégia	estratégia	NOUN	_	Gender=Fem|Number=Sing	8	obl	_	_
+10	estratégia	estratégia	NOUN	_	Gender=Fem|Number=Sing	8	xcomp	_	_
 11	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	12	det	_	_
 12	defesa	defesa	NOUN	_	Gender=Fem|Number=Sing	8	obj	_	_
 13-14	da	_	_	_	_	_	_	_	_
 13	de	de	ADP	_	_	16	case	_	_
 14	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	16	det	_	_
-15	“	“	PUNCT	_	_	16	punct	_	SpaceAfter=No
+15	“	"	PUNCT	_	_	16	punct	_	SpaceAfter=No
 16	guerra	guerra	NOUN	_	Gender=Fem|Number=Sing	12	nmod	_	_
 17	popular	popular	ADJ	_	Gender=Fem|Number=Sing	16	amod	_	_
 18	prolongada	prolongar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	16	acl	_	SpaceAfter=No
-19	”	”	PUNCT	_	_	22	punct	_	_
+19	”	"	PUNCT	_	_	22	punct	_	_
 20	com	com	ADP	_	_	22	case	_	_
-21	“	“	PUNCT	_	_	22	punct	_	SpaceAfter=No
+21	“	"	PUNCT	_	_	22	punct	_	SpaceAfter=No
 22	cerco	cerco	NOUN	_	Gender=Masc|Number=Sing	16	nmod	_	_
 23-24	das	_	_	_	_	_	_	_	_
 23	de	de	ADP	_	_	25	case	_	_
@@ -283,16 +268,16 @@
 26-27	pelo	_	_	_	_	_	_	_	_
 26	por	por	ADP	_	_	28	case	_	_
 27	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	28	det	_	_
-28	campo	campo	NOUN	_	Gender=Masc|Number=Sing	25	nmod	_	SpaceAfter=No
-29	”	”	PUNCT	_	_	22	punct	_	_
-30	a	a	ADP	_	_	31	case	_	_
-31	partir	partir	NOUN	_	_	28	nmod	_	_
-32	de	de	ADP	_	_	45	case	_	_
-33	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	45	det	_	_
-34	“	“	PUNCT	_	_	45	punct	_	SpaceAfter=No
-35	exército	exército	NOUN	_	Gender=Masc|Number=Sing	45	nmod	_	_
+28	campo	campo	NOUN	_	Gender=Masc|Number=Sing	22	nmod	_	SpaceAfter=No
+29	”	"	PUNCT	_	_	22	punct	_	_
+30	a	a	ADP	_	ExtPos=ADP	35	case	_	_
+31	partir	partir	VERB	_	VerbForm=Inf	30	fixed	_	_
+32	de	de	ADP	_	_	30	fixed	_	_
+33	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	35	det	_	_
+34	“	"	PUNCT	_	_	35	punct	_	SpaceAfter=No
+35	exército	exército	NOUN	_	Gender=Masc|Number=Sing	12	nmod	_	_
 36	revolucionário	revolucionário	ADJ	_	Gender=Masc|Number=Sing	35	amod	_	SpaceAfter=No
-37	”	”	PUNCT	_	_	35	punct	_	_
+37	”	"	PUNCT	_	_	45	punct	_	_
 38	cuja	cujo	DET	_	Gender=Fem|Number=Sing|PronType=Rel	39	det	_	_
 39	área	área	NOUN	_	Gender=Fem|Number=Sing	45	nsubj	_	_
 40	fundamental	fundamental	ADJ	_	Gender=Fem|Number=Sing	39	amod	_	_
@@ -300,60 +285,60 @@
 42	estruturação	estruturação	NOUN	_	Gender=Fem|Number=Sing	39	nmod	_	_
 43	seria	ser	AUX	_	Mood=Cnd|Number=Sing|Person=3|VerbForm=Fin	45	cop	_	_
 44	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	45	det	_	_
-45	Nordeste	nordeste	NOUN	_	Gender=Masc|Number=Sing	31	nmod	_	_
+45	Nordeste	nordeste	NOUN	_	Gender=Masc|Number=Sing	35	acl:relcl	_	_
 46	brasileiro	brasileiro	ADJ	_	Gender=Masc|Number=Sing	45	amod	_	SpaceAfter=No
 47	,	,	PUNCT	_	_	51	punct	_	_
-48	por	por	ADP	_	_	51	nmod	_	_
+48	por	por	SCONJ	_	_	51	mark	_	_
 49	ser	ser	AUX	_	VerbForm=Inf	51	cop	_	_
 50	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	51	det	_	_
-51	região	região	NOUN	_	Gender=Fem|Number=Sing	45	nmod	_	_
-52	onde	onde	ADV	_	_	58	advmod	_	_
+51	região	região	NOUN	_	Gender=Fem|Number=Sing	45	advcl	_	_
+52	onde	onde	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	58	obl	_	_
 53	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	54	det	_	_
 54	contradições	contradição	NOUN	_	Gender=Fem|Number=Plur	58	nsubj	_	_
 55	sociais	social	ADJ	_	Gender=Fem|Number=Plur	54	amod	_	_
 56	seriam	ser	AUX	_	Mood=Cnd|Number=Plur|Person=3|VerbForm=Fin	58	cop	_	_
 57	mais	mais	ADV	_	_	58	advmod	_	_
 58	agudas	agudo	ADJ	_	Gender=Fem|Number=Plur	51	acl:relcl	_	SpaceAfter=No
-59	.	.	PUNCT	_	_	22	punct	_	_
+59	.	.	PUNCT	_	_	8	punct	_	_
 
+# sent_id = 7
 # text = Para o partido, o Nordeste devia ser entendido como o “campo” onde se prepararia o cerco à “cidade”, representada pelo Centro-Sul industrializado.
-# sent_id = 8
 1	Para	para	ADP	_	_	3	case	_	_
 2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
-3	partido	partido	NOUN	_	Gender=Masc|Number=Sing	9	obl	_	SpaceAfter=No
+3	partido	partido	NOUN	_	Gender=Masc|Number=Sing	7	obl	_	SpaceAfter=No
 4	,	,	PUNCT	_	_	3	punct	_	_
 5	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	6	det	_	_
-6	Nordeste	Nordeste	NOUN	_	Gender=Masc|Number=Sing	9	nsubj:pass	_	_
-7	devia	dever	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	9	aux	_	_
+6	Nordeste	nordeste	NOUN	_	Gender=Masc|Number=Sing	7	nsubj:pass	_	_
+7	devia	dever	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	0	root	_	_
 8	ser	ser	AUX	_	VerbForm=Inf	9	aux:pass	_	_
-9	entendido	entender	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
+9	entendido	entender	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	7	xcomp	_	_
 10	como	como	ADP	_	_	13	case	_	_
 11	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	13	det	_	_
-12	“	“	PUNCT	_	_	13	punct	_	SpaceAfter=No
-13	campo	campo	NOUN	_	Gender=Masc|Number=Sing	9	obl	_	SpaceAfter=No
-14	”	”	PUNCT	_	_	13	punct	_	_
-15	onde	onde	ADV	_	_	17	advmod	_	_
-16	se	se	PRON	_	Case=Acc|Gender=Unsp|PronType=Prs	17	nsubj	_	_
+12	“	"	PUNCT	_	_	13	punct	_	SpaceAfter=No
+13	campo	campo	NOUN	_	Gender=Masc|Number=Sing	9	xcomp	_	SpaceAfter=No
+14	”	"	PUNCT	_	_	13	punct	_	_
+15	onde	onde	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	17	obl	_	_
+16	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	17	expl	_	_
 17	prepararia	preparar	VERB	_	Mood=Cnd|Number=Sing|Person=3|VerbForm=Fin	13	acl:relcl	_	_
 18	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	19	det	_	_
-19	cerco	cerco	NOUN	_	Gender=Masc|Number=Sing	17	obj	_	_
+19	cerco	cerco	NOUN	_	Gender=Masc|Number=Sing	17	nsubj	_	_
 20-21	à	_	_	_	_	_	_	_	_
-20	a	a	ADP	_	_	22	case	_	_
-21	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	22	det	_	_
-22	“	“	PUNCT	_	_	19	nmod	_	SpaceAfter=No
-23	cidade	cidade	NOUN	_	Gender=Fem|Number=Sing	21	conj	_	SpaceAfter=No
-24	”	”	PUNCT	_	_	23	punct	_	SpaceAfter=No
-25	,	,	PUNCT	_	_	23	punct	_	_
+20	a	a	ADP	_	_	23	case	_	_
+21	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	23	det	_	_
+22	“	"	PUNCT	_	_	23	punct	_	SpaceAfter=No
+23	cidade	cidade	NOUN	_	Gender=Fem|Number=Sing	19	nmod	_	SpaceAfter=No
+24	”	"	PUNCT	_	_	23	punct	_	SpaceAfter=No
+25	,	,	PUNCT	_	_	26	punct	_	_
 26	representada	representar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	23	acl	_	_
 27-28	pelo	_	_	_	_	_	_	_	_
 27	por	por	ADP	_	_	29	case	_	_
 28	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	29	det	_	_
-29	Centro-Sul	Centro-Sul	NOUN	_	Gender=Masc|Number=Sing	26	obl:agent	_	_
+29	Centro-Sul	centro-sul	NOUN	_	Gender=Masc|Number=Sing	26	obl:agent	_	_
 30	industrializado	industrializar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	29	acl	_	SpaceAfter=No
-31	.	.	PUNCT	_	_	13	punct	_	_
+31	.	.	PUNCT	_	_	7	punct	_	_
 
+# sent_id = 8
 # text = Nesse sentido, a sua teorização sobre a guerra revolucionária no Brasil encontraria todas as características observadas no processo chinês: longa duração, cerco das cidades pelo campo, avaliação do campo como elo mais fraco de dominação de classe, e a afirmação de um exército popular de base rural.
-# sent_id = 9
 1-2	Nesse	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	3	case	_	_
 2	esse	esse	DET	_	Gender=Masc|Number=Sing|PronType=Dem	3	det	_	_
@@ -364,15 +349,15 @@
 7	teorização	teorização	NOUN	_	Gender=Fem|Number=Sing	15	nsubj	_	_
 8	sobre	sobre	ADP	_	_	10	case	_	_
 9	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	10	det	_	_
-10	guerra	guerra	NOUN	_	Gender=Fem|Number=Sing	15	obl	_	_
+10	guerra	guerra	NOUN	_	Gender=Fem|Number=Sing	7	nmod	_	_
 11	revolucionária	revolucionário	ADJ	_	Gender=Fem|Number=Sing	10	amod	_	_
 12-13	no	_	_	_	_	_	_	_	_
 12	em	em	ADP	_	_	14	case	_	_
 13	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	14	det	_	_
-14	Brasil	Brasil	PROPN	_	Gender=Masc|Number=Sing	15	obl	_	_
-15	encontraria	encontrar	VERB	_	Mood=Cnd|Number=Sing|Person=1|VerbForm=Fin	0	root	_	_
+14	Brasil	Brasil	PROPN	_	Gender=Masc|Number=Sing	10	nmod	_	_
+15	encontraria	encontrar	VERB	_	Mood=Cnd|Number=Sing|Person=3|VerbForm=Fin	0	root	_	_
 16	todas	todo	DET	_	Gender=Fem|Number=Plur|PronType=Tot	18	det	_	_
-17	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	18	det	_	_
+17	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	16	fixed	_	_
 18	características	característica	NOUN	_	Gender=Fem|Number=Plur	15	obj	_	_
 19	observadas	observar	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part	18	acl	_	_
 20-21	no	_	_	_	_	_	_	_	_
@@ -380,21 +365,21 @@
 21	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	22	det	_	_
 22	processo	processo	NOUN	_	Gender=Masc|Number=Sing	19	obl	_	_
 23	chinês	chinês	ADJ	_	Gender=Masc|Number=Sing	22	amod	_	SpaceAfter=No
-24	:	:	PUNCT	_	_	15	punct	_	_
+24	:	:	PUNCT	_	_	26	punct	_	_
 25	longa	longo	ADJ	_	Gender=Fem|Number=Sing	26	amod	_	_
-26	duração	duração	NOUN	_	Gender=Fem|Number=Sing	22	appos	_	SpaceAfter=No
+26	duração	duração	NOUN	_	Gender=Fem|Number=Sing	18	appos	_	SpaceAfter=No
 27	,	,	PUNCT	_	_	28	punct	_	_
-28	cerco	cerco	ADV	_	Gender=Masc|Number=Sing	26	advmod	_	_
+28	cerco	cerco	NOUN	_	Gender=Masc|Number=Sing	26	conj	_	_
 29-30	das	_	_	_	_	_	_	_	_
 29	de	de	ADP	_	_	31	case	_	_
 30	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	31	det	_	_
-31	cidades	cidade	NOUN	_	Gender=Fem|Number=Plur	28	obl	_	_
+31	cidades	cidade	NOUN	_	Gender=Fem|Number=Plur	28	nmod	_	_
 32-33	pelo	_	_	_	_	_	_	_	_
 32	por	por	ADP	_	_	34	case	_	_
 33	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	34	det	_	_
 34	campo	campo	NOUN	_	Gender=Masc|Number=Sing	31	nmod	_	SpaceAfter=No
 35	,	,	PUNCT	_	_	36	punct	_	_
-36	avaliação	avaliação	NOUN	_	Gender=Fem|Number=Sing	34	appos	_	_
+36	avaliação	avaliação	NOUN	_	Gender=Fem|Number=Sing	26	conj	_	_
 37-38	do	_	_	_	_	_	_	_	_
 37	de	de	ADP	_	_	39	case	_	_
 38	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	39	det	_	_
@@ -402,15 +387,15 @@
 40	como	como	ADP	_	_	41	case	_	_
 41	elo	elo	NOUN	_	Gender=Masc|Number=Sing	36	nmod	_	_
 42	mais	mais	ADV	_	_	43	advmod	_	_
-43	fraco	fraco	ADJ	_	Gender=Masc|Number=Sing	41	acl	_	_
+43	fraco	fraco	ADJ	_	Gender=Masc|Number=Sing	41	amod	_	_
 44	de	de	ADP	_	_	45	case	_	_
-45	dominação	dominação	NOUN	_	Gender=Fem|Number=Sing	43	obl	_	_
+45	dominação	dominação	NOUN	_	Gender=Fem|Number=Sing	41	nmod	_	_
 46	de	de	ADP	_	_	47	case	_	_
 47	classe	classe	NOUN	_	Gender=Fem|Number=Sing	45	nmod	_	SpaceAfter=No
 48	,	,	PUNCT	_	_	51	punct	_	_
 49	e	e	CCONJ	_	_	51	cc	_	_
 50	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	51	det	_	_
-51	afirmação	afirmação	NOUN	_	Gender=Fem|Number=Sing	41	conj	_	_
+51	afirmação	afirmação	NOUN	_	Gender=Fem|Number=Sing	26	conj	_	_
 52	de	de	ADP	_	_	54	case	_	_
 53	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	54	det	_	_
 54	exército	exército	NOUN	_	Gender=Masc|Number=Sing	51	nmod	_	_
@@ -418,15 +403,14 @@
 56	de	de	ADP	_	_	57	case	_	_
 57	base	base	NOUN	_	Gender=Fem|Number=Sing	54	nmod	_	_
 58	rural	rural	ADJ	_	Gender=Fem|Number=Sing	57	amod	_	SpaceAfter=No
-59	.	.	PUNCT	_	_	15	punct	_	_
+59	.	.	PUNCT	_	_	15	punct	_	SpacesAfter=\n
 
+# sent_id = 9
 # text = No entanto, o programa político do PCR seguia as premissas básicas do PCdoB, isto é, necessidade de aliança com a “burguesia nacional” para a luta contra o inimigo fundamental: o imperialismo e o latifúndio.
-# sent_id = 10
-# newpar
 1-2	No	_	_	_	_	_	_	_	_
-1	Em	em	ADP	_	_	3	case	_	_
-2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
-3	entanto	entanto	NOUN	_	Gender=Masc|Number=Sing	11	obl	_	SpaceAfter=No
+1	Em	em	ADP	_	ExtPos=CCONJ	11	cc	_	_
+2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	1	fixed	_	_
+3	entanto	entanto	NOUN	_	Gender=Masc|Number=Sing	1	fixed	_	SpaceAfter=No
 4	,	,	PUNCT	_	_	3	punct	_	_
 5	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	6	det	_	_
 6	programa	programa	NOUN	_	Gender=Masc|Number=Sing	11	nsubj	_	_
@@ -437,43 +421,42 @@
 10	PCR	PCR	PROPN	_	Gender=Masc|Number=Sing	6	nmod	_	_
 11	seguia	seguir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	0	root	_	_
 12	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	13	det	_	_
-13	premissas	premissa	NOUN	_	Gender=Fem|Number=Plur|PronType=Prs	11	obj	_	_
+13	premissas	premissa	NOUN	_	Gender=Fem|Number=Plur	11	obj	_	_
 14	básicas	básico	ADJ	_	Gender=Fem|Number=Plur	13	amod	_	_
 15-16	do	_	_	_	_	_	_	_	_
 15	de	de	ADP	_	_	17	case	_	_
 16	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	17	det	_	_
-17	PCdoB	PCdoB	PROPN	_	Gender=Masc|Number=Sing	13	nmod	_	SpaceAfter=No
-18	,	,	PUNCT	_	_	11	punct	_	_
-19	isto	isto	PRON	_	Gender=Masc|Number=Sing|PronType=Dem	20	nsubj	_	_
-20	é	ser	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	parataxis	_	SpaceAfter=No
-21	,	,	PUNCT	_	_	20	punct	_	_
-22	necessidade	necessidade	NOUN	_	Gender=Fem|Number=Sing	20	obj	_	_
+17	PCdoB	PCDOB	PROPN	_	Gender=Masc|Number=Sing	13	nmod	_	SpaceAfter=No
+18	,	,	PUNCT	_	_	19	punct	_	_
+19	isto	isto	PRON	_	Gender=Masc|Number=Sing|PronType=Dem	22	cc	_	_
+20	é	ser	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	19	fixed	_	SpaceAfter=No
+21	,	,	PUNCT	_	_	19	punct	_	_
+22	necessidade	necessidade	NOUN	_	Gender=Fem|Number=Sing	13	appos	_	_
 23	de	de	ADP	_	_	24	case	_	_
 24	aliança	aliança	NOUN	_	Gender=Fem|Number=Sing	22	nmod	_	_
 25	com	com	ADP	_	_	28	case	_	_
 26	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	28	det	_	_
-27	“	“	PUNCT	_	_	28	punct	_	SpaceAfter=No
+27	“	"	PUNCT	_	_	28	punct	_	SpaceAfter=No
 28	burguesia	burguesia	NOUN	_	Gender=Fem|Number=Sing	24	nmod	_	_
 29	nacional	nacional	ADJ	_	Gender=Fem|Number=Sing	28	amod	_	SpaceAfter=No
-30	”	”	PUNCT	_	_	28	punct	_	_
+30	”	"	PUNCT	_	_	28	punct	_	_
 31	para	para	ADP	_	_	33	case	_	_
 32	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	33	det	_	_
-33	luta	luta	NOUN	_	Gender=Fem|Number=Sing	28	nmod	_	_
+33	luta	luta	NOUN	_	Gender=Fem|Number=Sing	24	nmod	_	_
 34	contra	contra	ADP	_	_	36	case	_	_
 35	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	36	det	_	_
 36	inimigo	inimigo	NOUN	_	Gender=Masc|Number=Sing	33	nmod	_	_
 37	fundamental	fundamental	ADJ	_	Gender=Masc|Number=Sing	36	amod	_	SpaceAfter=No
-38	:	:	PUNCT	_	_	28	punct	_	_
+38	:	:	PUNCT	_	_	40	punct	_	_
 39	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	40	det	_	_
 40	imperialismo	imperialismo	NOUN	_	Gender=Masc|Number=Sing	36	appos	_	_
 41	e	e	CCONJ	_	_	43	cc	_	_
 42	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	43	det	_	_
 43	latifúndio	latifúndio	NOUN	_	Gender=Masc|Number=Sing	40	conj	_	SpaceAfter=No
-44	.	.	PUNCT	_	_	28	punct	_	_
+44	.	.	PUNCT	_	_	11	punct	_	SpacesAfter=\n
 
+# sent_id = 10
 # text = O PCR defendia a necessidade da existência de um partido em moldes leninistas para conduzir a guerra revolucionária no Brasil e rejeitava a linha defendida pela Organização Latino-Americana de Solidariedade (OLAS), classificada como aventureira, recusando em 1968 uma proposta de ligação com a Vanguarda Popular Revolucionária (VPR), tentada por Ricardo Zaratini, engenheiro paulista que mantinha vínculos com ambos os grupos.
-# sent_id = 11
-# newpar
 1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	_	_
 2	PCR	PCR	PROPN	_	Gender=Masc|Number=Sing	3	nsubj	_	_
 3	defendia	defender	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	0	root	_	_
@@ -487,56 +470,56 @@
 10	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	11	det	_	_
 11	partido	partido	NOUN	_	Gender=Masc|Number=Sing	8	nmod	_	_
 12	em	em	ADP	_	_	13	case	_	_
-13	moldes	molde	NOUN	_	Gender=Fem|Number=Plur	11	nmod	_	_
-14	leninistas	leninista	ADJ	_	Gender=Fem|Number=Plur|VerbForm=Part	13	amod	_	_
-15	para	para	ADP	_	_	16	mark	_	_
-16	conduzir	conduzir	VERB	_	VerbForm=Inf	11	acl	_	_
+13	moldes	molde	NOUN	_	Gender=Masc|Number=Plur	11	nmod	_	_
+14	leninistas	leninista	ADJ	_	Gender=Masc|Number=Plur	13	amod	_	_
+15	para	para	SCONJ	_	_	16	mark	_	_
+16	conduzir	conduzir	VERB	_	VerbForm=Inf	8	acl	_	_
 17	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	18	det	_	_
-18	guerra	guerra	NOUN	_	_	16	obj	_	_
-19	revolucionária	revolucionária	ADJ	_	Gender=Fem|Number=Sing	18	amod	_	_
+18	guerra	guerra	NOUN	_	Gender=Fem|Number=Sing	16	obj	_	_
+19	revolucionária	revolucionário	ADJ	_	Gender=Fem|Number=Sing	18	amod	_	_
 20-21	no	_	_	_	_	_	_	_	_
 20	em	em	ADP	_	_	22	case	_	_
 21	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	22	det	_	_
-22	Brasil	Brasil	PROPN	_	Gender=Masc|Number=Sing	18	nmod	_	_
+22	Brasil	Brasil	PROPN	_	Gender=Masc|Number=Sing	16	obl	_	_
 23	e	e	CCONJ	_	_	24	cc	_	_
-24	rejeitava	rejeitar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	16	conj	_	_
+24	rejeitava	rejeitar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	3	conj	_	_
 25	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	26	det	_	_
 26	linha	linha	NOUN	_	Gender=Fem|Number=Sing	24	obj	_	_
 27	defendida	defender	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	26	acl	_	_
 28-29	pela	_	_	_	_	_	_	_	_
 28	por	por	ADP	_	_	30	case	_	_
 29	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	30	det	_	_
-30	Organização	Organização	PROPN	_	Gender=Fem|Number=Sing	27	obl:agent	_	_
+30	Organização	Organização	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	27	obl:agent	_	_
 31	Latino-Americana	Latino-americana	PROPN	_	Number=Sing	30	flat:name	_	_
 32	de	de	ADP	_	_	33	case	_	_
-33	Solidariedade	Solidariedade	PROPN	_	Gender=Fem|Number=Sing	30	nmod	_	_
+33	Solidariedade	Solidariedade	PROPN	_	Number=Sing	30	nmod	_	_
 34	(	(	PUNCT	_	_	35	punct	_	SpaceAfter=No
 35	OLAS	OLAS	PROPN	_	Gender=Fem|Number=Sing	30	appos	_	SpaceAfter=No
 36	)	)	PUNCT	_	_	35	punct	_	SpaceAfter=No
 37	,	,	PUNCT	_	_	38	punct	_	_
-38	classificada	classificar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	26	acl	_	_
+38	classificada	classificar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	30	acl	_	_
 39	como	como	ADP	_	_	40	case	_	_
-40	aventureira	aventureira	NOUN	_	Gender=Fem|Number=Sing	38	obl	_	SpaceAfter=No
-41	,	,	PUNCT	_	_	38	punct	_	_
-42	recusando	recusar	VERB	_	VerbForm=Ger	38	advcl	_	_
+40	aventureira	aventureiro	ADJ	_	Gender=Fem|Number=Sing	38	xcomp	_	SpaceAfter=No
+41	,	,	PUNCT	_	_	42	punct	_	_
+42	recusando	recusar	VERB	_	VerbForm=Ger	24	advcl	_	_
 43	em	em	ADP	_	_	44	case	_	_
 44	1968	1968	NUM	_	NumType=Card	42	obl	_	_
-45	uma	um	NUM	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	46	det	_	_
+45	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	46	det	_	_
 46	proposta	proposta	NOUN	_	Gender=Fem|Number=Sing	42	obj	_	_
 47	de	de	ADP	_	_	48	case	_	_
 48	ligação	ligação	NOUN	_	Gender=Fem|Number=Sing	46	nmod	_	_
 49	com	com	ADP	_	_	51	case	_	_
 50	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	51	det	_	_
-51	Vanguarda	vanguarda	PROPN	_	Gender=Fem|Number=Sing	46	nmod	_	_
+51	Vanguarda	Vanguarda	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	48	nmod	_	_
 52	Popular	Popular	PROPN	_	Number=Sing	51	flat:name	_	_
-53	Revolucionária	revolucionária	PROPN	_	Number=Sing	51	flat:name	_	_
+53	Revolucionária	Revolucionária	PROPN	_	Number=Sing	51	flat:name	_	_
 54	(	(	PUNCT	_	_	55	punct	_	SpaceAfter=No
-55	VPR	VPR	PROPN	_	Gender=Masc|Number=Sing	51	appos	_	SpaceAfter=No
+55	VPR	VPR	PROPN	_	Gender=Fem|Number=Sing	51	appos	_	SpaceAfter=No
 56	)	)	PUNCT	_	_	55	punct	_	SpaceAfter=No
 57	,	,	PUNCT	_	_	58	punct	_	_
 58	tentada	tentar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	46	acl	_	_
 59	por	por	ADP	_	_	60	case	_	_
-60	Ricardo	Ricardo	PROPN	_	Gender=Masc|Number=Sing	58	obl:agent	_	_
+60	Ricardo	Ricardo	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	58	obl:agent	_	_
 61	Zaratini	Zaratini	PROPN	_	Number=Sing	60	flat:name	_	SpaceAfter=No
 62	,	,	PUNCT	_	_	63	punct	_	_
 63	engenheiro	engenheiro	NOUN	_	Gender=Masc|Number=Sing	60	appos	_	_
@@ -547,11 +530,11 @@
 68	com	com	ADP	_	_	71	case	_	_
 69	ambos	ambos	DET	_	Gender=Masc|Number=Plur|PronType=Tot	71	det	_	_
 70	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	71	det	_	_
-71	grupos	grupo	NOUN	_	Gender=Masc|Number=Plur	66	obl	_	SpaceAfter=No
+71	grupos	grupo	NOUN	_	Gender=Masc|Number=Plur	67	nmod	_	SpaceAfter=No
 72	.	.	PUNCT	_	_	3	punct	_	_
 
+# sent_id = 11
 # text = Embora defendesse a luta armada, a sua linha revolucionária tinha como referência revolucionários e teóricos como Ernesto Che Guevara e Régis Debray.
-# sent_id = 12
 1	Embora	embora	SCONJ	_	_	2	mark	_	_
 2	defendesse	defender	VERB	_	Mood=Sub|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	11	advcl	_	_
 3	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	4	det	_	_
@@ -561,70 +544,68 @@
 7	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	9	det	_	_
 8	sua	seu	DET	_	Gender=Fem|Number=Sing|PronType=Prs	9	det	_	_
 9	linha	linha	NOUN	_	Gender=Fem|Number=Sing	11	nsubj	_	_
-10	revolucionária	revolucionária	ADJ	_	Gender=Fem|Number=Sing	9	amod	_	_
+10	revolucionária	revolucionário	ADJ	_	Gender=Fem|Number=Sing	9	amod	_	_
 11	tinha	ter	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	0	root	_	_
 12	como	como	ADP	_	_	13	case	_	_
-13	referência	referência	NOUN	_	Gender=Fem|Number=Sing	11	obl	_	_
-14	revolucionários	revolucionário	ADJ	_	Gender=Masc|Number=Plur	13	amod	_	_
+13	referência	referência	NOUN	_	Gender=Fem|Number=Sing	11	xcomp	_	_
+14	revolucionários	revolucionário	ADJ	_	Gender=Masc|Number=Plur	11	obj	_	_
 15	e	e	CCONJ	_	_	16	cc	_	_
 16	teóricos	teórico	ADJ	_	Gender=Masc|Number=Plur	14	conj	_	_
 17	como	como	ADP	_	_	18	case	_	_
-18	Ernesto	Ernesto	PROPN	_	Gender=Masc|Number=Sing	11	xcomp	_	_
+18	Ernesto	Ernesto	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	11	obl	_	_
 19	Che	Che	PROPN	_	Number=Sing	18	flat:name	_	_
 20	Guevara	Guevara	PROPN	_	Number=Sing	18	flat:name	_	_
-21	e	e	CCONJ	_	_	18	cc	_	_
-22	Régis	Régis	PROPN	_	Gender=Masc|Number=Sing	18	nmod	_	_
+21	e	e	CCONJ	_	_	22	cc	_	_
+22	Régis	Régis	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	18	conj	_	_
 23	Debray	Debray	PROPN	_	Number=Sing	22	flat:name	_	SpaceAfter=No
-24	.	.	PUNCT	_	_	11	punct	_	_
+24	.	.	PUNCT	_	_	11	punct	_	SpacesAfter=\n
 
+# sent_id = 12
 # text = O partido publicou «A Luta», como órgão oficial para veiculação de suas concepções políticas, e a «Luta Operária», voltado para o trabalho no meio operário de Recife e outras capitais regionais.
-# sent_id = 13
-# newpar
 1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	_	_
 2	partido	partido	NOUN	_	Gender=Masc|Number=Sing	3	nsubj	_	_
 3	publicou	publicar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 4	«	«	PUNCT	_	_	5	punct	_	SpaceAfter=No
-5	A	A	PROPN	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	3	obj	_	_
+5	A	A	PROPN	_	Gender=Masc|Number=Sing	3	obj	_	_
 6	Luta	Luta	PROPN	_	Number=Sing	5	flat:name	_	SpaceAfter=No
 7	»	»	PUNCT	_	_	5	punct	_	SpaceAfter=No
-8	,	,	PUNCT	_	_	3	punct	_	_
+8	,	,	PUNCT	_	_	10	punct	_	_
 9	como	como	ADP	_	_	10	case	_	_
-10	órgão	órgão	NOUN	_	Gender=Masc|Number=Sing	3	obl	_	_
+10	órgão	órgão	NOUN	_	Gender=Masc|Number=Sing	5	nmod	_	_
 11	oficial	oficial	ADJ	_	Gender=Masc|Number=Sing	10	amod	_	_
 12	para	para	ADP	_	_	13	case	_	_
 13	veiculação	veiculação	NOUN	_	Gender=Fem|Number=Sing	10	nmod	_	_
 14	de	de	ADP	_	_	16	case	_	_
 15	suas	seu	DET	_	Gender=Fem|Number=Plur|PronType=Prs	16	det	_	_
-16	concepções	concepções	NOUN	_	Gender=Fem|Number=Plur	13	nmod	_	_
+16	concepções	concepção	NOUN	_	Gender=Fem|Number=Plur	13	nmod	_	_
 17	políticas	político	ADJ	_	Gender=Fem|Number=Plur	16	amod	_	SpaceAfter=No
 18	,	,	PUNCT	_	_	22	punct	_	_
 19	e	e	CCONJ	_	_	22	cc	_	_
 20	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	22	det	_	_
 21	«	«	PUNCT	_	_	22	punct	_	SpaceAfter=No
-22	Luta	luta	PROPN	_	Number=Sing	3	conj	_	_
+22	Luta	Luta	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	5	conj	_	_
 23	Operária	Operária	PROPN	_	Number=Sing	22	flat:name	_	SpaceAfter=No
 24	»	»	PUNCT	_	_	22	punct	_	SpaceAfter=No
 25	,	,	PUNCT	_	_	26	punct	_	_
 26	voltado	voltar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	22	acl	_	_
 27	para	para	ADP	_	_	29	case	_	_
 28	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	29	det	_	_
-29	trabalho	trabalho	NOUN	_	Gender=Masc|Number=Sing	26	obl	_	_
+29	trabalho	trabalho	NOUN	_	Gender=Masc|Number=Sing	26	obj	_	_
 30-31	no	_	_	_	_	_	_	_	_
-30	em	em	ADP	_	_	33	case	_	_
-31	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	33	det	_	_
-32	meio	meio	ADJ	_	Gender=Masc|Number=Sing	33	amod	_	_
-33	operário	operário	NOUN	_	Gender=Masc|Number=Sing	29	nmod	_	_
+30	em	em	ADP	_	_	32	case	_	_
+31	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	32	det	_	_
+32	meio	meio	NOUN	_	Gender=Masc|Number=Sing	29	nmod	_	_
+33	operário	operário	ADJ	_	Gender=Masc|Number=Sing	32	amod	_	_
 34	de	de	ADP	_	_	35	case	_	_
-35	Recife	Recife	PROPN	_	Gender=Unsp|Number=Sing	33	nmod	_	_
+35	Recife	Recife	PROPN	_	Number=Sing	32	nmod	_	_
 36	e	e	CCONJ	_	_	38	cc	_	_
 37	outras	outro	DET	_	Gender=Fem|Number=Plur|PronType=Ind	38	det	_	_
-38	capitais	capital	NOUN	_	Gender=Masc|Number=Plur	33	conj	_	_
-39	regionais	regional	ADJ	_	Gender=Masc|Number=Plur	38	amod	_	SpaceAfter=No
-40	.	.	PUNCT	_	_	3	punct	_	_
+38	capitais	capital	NOUN	_	Gender=Fem|Number=Plur	32	conj	_	_
+39	regionais	regional	ADJ	_	Gender=Fem|Number=Plur	38	amod	_	SpaceAfter=No
+40	.	.	PUNCT	_	_	3	punct	_	SpacesAfter=\n
 
+# sent_id = 13
 # text = Em novembro de 1969, o PCR sofreu um golpe por parte da repressão, que atingiu um dos mais importantes quadros do partido:
-# sent_id = 14
-# newpar
 1	Em	em	ADP	_	_	2	case	_	_
 2	novembro	novembro	NOUN	_	Gender=Masc|Number=Sing	8	obl	_	_
 3	de	de	ADP	_	_	4	case	_	_
@@ -636,14 +617,14 @@
 9	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	10	det	_	_
 10	golpe	golpe	NOUN	_	Gender=Masc|Number=Sing	8	obj	_	_
 11	por	por	ADP	_	_	12	case	_	_
-12	parte	parte	NOUN	_	_	10	nmod	_	_
+12	parte	parte	NOUN	_	Gender=Fem|Number=Sing	10	nmod	_	_
 13-14	da	_	_	_	_	_	_	_	_
 13	de	de	ADP	_	_	15	case	_	_
 14	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	15	det	_	_
 15	repressão	repressão	NOUN	_	Gender=Fem|Number=Sing	12	nmod	_	SpaceAfter=No
-16	,	,	PUNCT	_	_	8	punct	_	_
+16	,	,	PUNCT	_	_	18	punct	_	_
 17	que	que	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	18	nsubj	_	_
-18	atingiu	atingir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	10	acl:relcl	_	_
+18	atingiu	atingir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	15	acl:relcl	_	_
 19	um	um	NUM	_	NumType=Card	18	obj	_	_
 20-21	dos	_	_	_	_	_	_	_	_
 20	de	de	ADP	_	_	24	case	_	_
@@ -657,15 +638,15 @@
 27	partido	partido	NOUN	_	Gender=Masc|Number=Sing	24	nmod	_	SpaceAfter=No
 28	:	:	PUNCT	_	_	8	punct	_	_
 
+# sent_id = 14
 # text = Amaro Luís de Carvalho, o Capivara, que foi apontado pela imprensa como responsável por inúmeros incêndios de canaviais ocorridos na época.
-# sent_id = 15
-1	Amaro	Amaro	PROPN	_	Gender=Masc|Number=Sing	0	root	_	_
-2	Luís	Luís	PROPN	_	Gender=Masc|Number=Sing	1	conj	_	_
+1	Amaro	Amaro	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	0	root	_	_
+2	Luís	Luís	PROPN	_	Number=Sing	1	flat:name	_	_
 3	de	de	ADP	_	_	4	case	_	_
-4	Carvalho	Carvalho	PROPN	_	Number=Sing	2	nmod	_	SpaceAfter=No
+4	Carvalho	Carvalho	PROPN	_	Number=Sing	1	nmod	_	SpaceAfter=No
 5	,	,	PUNCT	_	_	7	punct	_	_
 6	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	7	det	_	_
-7	Capivara	Capivara	PROPN	_	Number=Sing	1	flat:name	_	SpaceAfter=No
+7	Capivara	Capivara	PROPN	_	Gender=Masc|Number=Sing	1	appos	_	SpaceAfter=No
 8	,	,	PUNCT	_	_	7	punct	_	_
 9	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	11	nsubj:pass	_	_
 10	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	11	aux:pass	_	_
@@ -681,15 +662,15 @@
 19	incêndios	incêndio	NOUN	_	Gender=Masc|Number=Plur	16	obl	_	_
 20	de	de	ADP	_	_	21	case	_	_
 21	canaviais	canavial	NOUN	_	Gender=Masc|Number=Plur	19	nmod	_	_
-22	ocorridos	ocorrer	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part	21	acl	_	_
+22	ocorridos	ocorrer	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part	19	acl	_	_
 23-24	na	_	_	_	_	_	_	_	_
 23	em	em	ADP	_	_	25	case	_	_
 24	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	25	det	_	_
 25	época	época	NOUN	_	Gender=Fem|Number=Sing	22	obl	_	SpaceAfter=No
 26	.	.	PUNCT	_	_	1	punct	_	_
 
+# sent_id = 15
 # text = Sua morte ocorreu na Casa de Detenção de Recife, sendo anunciada em agosto de 1971 por meio de uma nota oficial eivada de contradições, que tentava atribuir aos demais presos políticos a autoria do crime.
-# sent_id = 16
 1	Sua	seu	DET	_	Gender=Fem|Number=Sing|PronType=Prs	2	det	_	_
 2	morte	morte	NOUN	_	Gender=Fem|Number=Sing	3	nsubj	_	_
 3	ocorreu	ocorrer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
@@ -708,24 +689,24 @@
 15	agosto	agosto	NOUN	_	Gender=Masc|Number=Sing	13	obl	_	_
 16	de	de	ADP	_	_	17	case	_	_
 17	1971	1971	NUM	_	NumType=Card	15	nmod	_	_
-18	por	por	ADP	_	_	19	case	_	_
-19	meio	meio	NOUN	_	_	15	nmod	_	_
+18	por	por	ADP	_	_	22	case	_	_
+19	meio	meio	NOUN	_	Gender=Masc|Number=Sing	18	fixed	_	_
 20	de	de	ADP	_	_	22	case	_	_
 21	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	22	det	_	_
-22	nota	nota	NOUN	_	Gender=Fem|Number=Sing	19	nmod	_	_
+22	nota	nota	NOUN	_	Gender=Fem|Number=Sing	13	obl	_	_
 23	oficial	oficial	ADJ	_	Gender=Fem|Number=Sing	22	amod	_	_
 24	eivada	eivar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	22	acl	_	_
 25	de	de	ADP	_	_	26	case	_	_
-26	contradições	contradição	NOUN	_	Gender=Fem|Number=Plur	24	obl	_	SpaceAfter=No
-27	,	,	PUNCT	_	_	24	punct	_	_
-28	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	29	nsubj	_	_
+26	contradições	contradição	NOUN	_	Gender=Fem|Number=Plur	22	nmod	_	SpaceAfter=No
+27	,	,	PUNCT	_	_	29	punct	_	_
+28	que	que	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	29	nsubj	_	_
 29	tentava	tentar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	22	acl:relcl	_	_
 30	atribuir	atribuir	VERB	_	VerbForm=Inf	29	xcomp	_	_
 31-32	aos	_	_	_	_	_	_	_	_
 31	a	a	ADP	_	_	34	case	_	_
 32	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	34	det	_	_
 33	demais	demais	DET	_	Gender=Masc|Number=Plur|PronType=Ind	34	det	_	_
-34	presos	preso	NOUN	_	Gender=Masc|Number=Plur	30	obl	_	_
+34	presos	preso	NOUN	_	Gender=Masc|Number=Plur	30	iobj	_	_
 35	políticos	político	ADJ	_	Gender=Masc|Number=Plur	34	amod	_	_
 36	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	37	det	_	_
 37	autoria	autoria	NOUN	_	Gender=Fem|Number=Sing	30	obj	_	_
@@ -733,11 +714,10 @@
 38	de	de	ADP	_	_	40	case	_	_
 39	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	40	det	_	_
 40	crime	crime	NOUN	_	Gender=Masc|Number=Sing	37	nmod	_	SpaceAfter=No
-41	.	.	PUNCT	_	_	3	punct	_	_
+41	.	.	PUNCT	_	_	3	punct	_	SpacesAfter=\n
 
+# sent_id = 16
 # text = Nos anos seguintes, o PCR se voltou para a sua implantação nos estados de Alagoas e Rio Grande do Norte.
-# sent_id = 17
-# newpar
 1-2	Nos	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	3	case	_	_
 2	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	3	det	_	_
@@ -759,7 +739,7 @@
 17	de	de	ADP	_	_	18	case	_	_
 18	Alagoas	Alagoas	PROPN	_	Gender=Masc|Number=Sing	16	nmod	_	_
 19	e	e	CCONJ	_	_	20	cc	_	_
-20	Rio	Rio	PROPN	_	Gender=Masc|Number=Sing	18	conj	_	_
+20	Rio	Rio	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	18	conj	_	_
 21	Grande	Grande	PROPN	_	Number=Sing	20	flat:name	_	_
 22-23	do	_	_	_	_	_	_	_	_
 22	de	de	ADP	_	_	24	case	_	_
@@ -767,8 +747,8 @@
 24	Norte	Norte	PROPN	_	Number=Sing	20	nmod	_	SpaceAfter=No
 25	.	.	PUNCT	_	_	9	punct	_	_
 
+# sent_id = 17
 # text = Nesse período, o partido desenvolveu o trabalho de propaganda armada através de panfletagem em portas de fábricas, esporádicas ações para apropriação de armas de militares, obtenção de recursos financeiros, incêndio de canaviais e outras ações com vistas à desorganização da produção açucareira na Zona da Mata.
-# sent_id = 18
 1-2	Nesse	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	3	case	_	_
 2	esse	esse	DET	_	Gender=Masc|Number=Sing|PronType=Dem	3	det	_	_
@@ -782,7 +762,7 @@
 10	de	de	ADP	_	_	11	case	_	_
 11	propaganda	propaganda	NOUN	_	Gender=Fem|Number=Sing	9	nmod	_	_
 12	armada	armar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	11	acl	_	_
-13	através	através	ADV	_	_	12	advmod	_	_
+13	através	através	ADV	_	_	7	advmod	_	_
 14	de	de	ADP	_	_	15	case	_	_
 15	panfletagem	panfletagem	NOUN	_	Gender=Fem|Number=Sing	13	obl	_	_
 16	em	em	ADP	_	_	17	case	_	_
@@ -791,7 +771,7 @@
 19	fábricas	fábrica	NOUN	_	Gender=Fem|Number=Plur	17	nmod	_	SpaceAfter=No
 20	,	,	PUNCT	_	_	22	punct	_	_
 21	esporádicas	esporádico	ADJ	_	Gender=Fem|Number=Plur	22	amod	_	_
-22	ações	ação	NOUN	_	Gender=Fem|Number=Plur	9	conj	_	_
+22	ações	ação	NOUN	_	Gender=Fem|Number=Plur	15	conj	_	_
 23	para	para	ADP	_	_	24	case	_	_
 24	apropriação	apropriação	NOUN	_	Gender=Fem|Number=Sing	22	nmod	_	_
 25	de	de	ADP	_	_	26	case	_	_
@@ -799,19 +779,19 @@
 27	de	de	ADP	_	_	28	case	_	_
 28	militares	militar	NOUN	_	Gender=Masc|Number=Plur	26	nmod	_	SpaceAfter=No
 29	,	,	PUNCT	_	_	30	punct	_	_
-30	obtenção	obtenção	NOUN	_	Gender=Fem|Number=Sing	28	conj	_	_
+30	obtenção	obtenção	NOUN	_	Gender=Fem|Number=Sing	15	conj	_	_
 31	de	de	ADP	_	_	32	case	_	_
 32	recursos	recurso	NOUN	_	Gender=Masc|Number=Plur	30	nmod	_	_
 33	financeiros	financeiro	ADJ	_	Gender=Masc|Number=Plur	32	amod	_	SpaceAfter=No
 34	,	,	PUNCT	_	_	35	punct	_	_
-35	incêndio	incêndio	NOUN	_	Gender=Masc|Number=Sing	30	conj	_	_
+35	incêndio	incêndio	NOUN	_	Gender=Masc|Number=Sing	15	conj	_	_
 36	de	de	ADP	_	_	37	case	_	_
-37	canaviais	canavial	NOUN	_	Gender=Fem|Number=Plur	35	nmod	_	_
+37	canaviais	canavial	NOUN	_	Gender=Masc|Number=Plur	35	nmod	_	_
 38	e	e	CCONJ	_	_	40	cc	_	_
 39	outras	outro	DET	_	Gender=Fem|Number=Plur|PronType=Ind	40	det	_	_
 40	ações	ação	NOUN	_	Gender=Fem|Number=Plur	9	conj	_	_
 41	com	com	ADP	_	_	42	case	_	_
-42	vistas	vista	NOUN	_	Gender=Masc|Number=Plur	40	nmod	_	_
+42	vistas	vista	NOUN	_	Gender=Fem|Number=Plur	40	nmod	_	_
 43-44	à	_	_	_	_	_	_	_	_
 43	a	a	ADP	_	_	45	case	_	_
 44	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	45	det	_	_
@@ -824,16 +804,15 @@
 50-51	na	_	_	_	_	_	_	_	_
 50	em	em	ADP	_	_	52	case	_	_
 51	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	52	det	_	_
-52	Zona	Zona	PROPN	_	Gender=Fem|Number=Sing	48	nmod	_	_
+52	Zona	Zona	PROPN	_	Gender=Fem|Number=Sing	45	nmod	_	_
 53-54	da	_	_	_	_	_	_	_	_
 53	de	de	ADP	_	_	55	case	_	_
 54	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	55	det	_	_
 55	Mata	Mata	PROPN	_	Number=Sing	52	nmod	_	SpaceAfter=No
-56	.	.	PUNCT	_	_	7	punct	_	_
+56	.	.	PUNCT	_	_	7	punct	_	SpacesAfter=\n
 
+# sent_id = 18
 # text = Em setembro de 1973, a organização sofreu um novo golpe dos órgãos de repressão, em conseqüência do assassinato de alguns de seus principais dirigentes e da prisão de uma parte expressiva de seus efetivos.
-# sent_id = 19
-# newpar
 1	Em	em	ADP	_	_	2	case	_	_
 2	setembro	setembro	NOUN	_	Gender=Masc|Number=Sing	8	obl	_	_
 3	de	de	ADP	_	_	4	case	_	_
@@ -859,7 +838,7 @@
 21	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	22	det	_	_
 22	assassinato	assassinato	NOUN	_	Gender=Masc|Number=Sing	19	nmod	_	_
 23	de	de	ADP	_	_	24	case	_	_
-24	alguns	algum	PRON	_	Gender=Masc|Number=Plur|PronType=Ind	22	det	_	_
+24	alguns	algum	PRON	_	Gender=Masc|Number=Plur|PronType=Ind	22	nmod	_	_
 25	de	de	ADP	_	_	28	case	_	_
 26	seus	seu	DET	_	Gender=Masc|Number=Plur|PronType=Prs	28	det	_	_
 27	principais	principal	ADJ	_	Gender=Masc|Number=Plur	28	amod	_	_
@@ -868,18 +847,18 @@
 30-31	da	_	_	_	_	_	_	_	_
 30	de	de	ADP	_	_	32	case	_	_
 31	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	32	det	_	_
-32	prisão	prisão	NOUN	_	Gender=Fem|Number=Sing	28	conj	_	_
+32	prisão	prisão	NOUN	_	Gender=Fem|Number=Sing	22	conj	_	_
 33	de	de	ADP	_	_	35	case	_	_
 34	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	35	det	_	_
 35	parte	parte	NOUN	_	Gender=Fem|Number=Sing	32	nmod	_	_
 36	expressiva	expressivo	ADJ	_	Gender=Fem|Number=Sing	35	amod	_	_
 37	de	de	ADP	_	_	39	case	_	_
 38	seus	seu	DET	_	Gender=Masc|Number=Plur|PronType=Prs	39	det	_	_
-39	efetivos	efetivos	NOUN	_	Gender=Masc|Number=Plur	35	nmod	_	SpaceAfter=No
+39	efetivos	efetivo	NOUN	_	Gender=Masc|Number=Plur	35	nmod	_	SpaceAfter=No
 40	.	.	PUNCT	_	_	8	punct	_	_
 
+# sent_id = 19
 # text = De acordo com os jornais da época, o PCR estava iniciando um processo de fusão com a tendência leninista da Ação Libertadora Nacional (ALN), um pequeno e efêmero grupo dissidente formado a partir de 1971.
-# sent_id = 20
 1	De	de	ADP	_	_	2	case	_	_
 2	acordo	acordo	NOUN	_	Gender=Masc|Number=Sing	13	obl	_	_
 3	com	com	ADP	_	_	5	case	_	_
@@ -900,40 +879,39 @@
 17	fusão	fusão	NOUN	_	Gender=Fem|Number=Sing	15	nmod	_	_
 18	com	com	ADP	_	_	20	case	_	_
 19	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	20	det	_	_
-20	tendência	tendência	NOUN	_	Gender=Fem|Number=Sing	13	obl	_	_
+20	tendência	tendência	NOUN	_	Gender=Fem|Number=Sing	17	nmod	_	_
 21	leninista	leninista	ADJ	_	Gender=Fem|Number=Sing	20	amod	_	_
 22-23	da	_	_	_	_	_	_	_	_
 22	de	de	ADP	_	_	24	case	_	_
 23	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	24	det	_	_
-24	Ação	ação	PROPN	_	Number=Sing	20	nmod	_	_
+24	Ação	Ação	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	20	nmod	_	_
 25	Libertadora	Libertadora	PROPN	_	Number=Sing	24	flat:name	_	_
 26	Nacional	Nacional	PROPN	_	Number=Sing	24	flat:name	_	_
 27	(	(	PUNCT	_	_	28	punct	_	SpaceAfter=No
 28	ALN	ALN	PROPN	_	Gender=Fem|Number=Sing	24	appos	_	SpaceAfter=No
 29	)	)	PUNCT	_	_	28	punct	_	SpaceAfter=No
-30	,	,	PUNCT	_	_	13	punct	_	_
+30	,	,	PUNCT	_	_	35	punct	_	_
 31	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	35	det	_	_
 32	pequeno	pequeno	ADJ	_	Gender=Masc|Number=Sing	35	amod	_	_
 33	e	e	CCONJ	_	_	34	cc	_	_
 34	efêmero	efêmero	ADJ	_	Gender=Masc|Number=Sing	32	conj	_	_
-35	grupo	grupo	NOUN	_	Gender=Masc|Number=Sing	13	obj	_	_
+35	grupo	grupo	NOUN	_	Gender=Masc|Number=Sing	20	appos	_	_
 36	dissidente	dissidente	ADJ	_	Gender=Masc|Number=Sing	35	amod	_	_
 37	formado	formar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	35	acl	_	_
-38	a	a	ADP	_	_	39	case	_	_
-39	partir	partir	NOUN	_	_	37	obl	_	_
-40	de	de	ADP	_	_	41	case	_	_
-41	1971	1971	NUM	_	NumType=Card	39	nmod	_	SpaceAfter=No
-42	.	.	PUNCT	_	_	13	punct	_	_
+38	a	a	ADP	_	ExtPos=ADP	41	case	_	_
+39	partir	partir	NOUN	_	_	38	fixed	_	_
+40	de	de	ADP	_	_	38	fixed	_	_
+41	1971	1971	NUM	_	NumType=Card	37	obl	_	SpaceAfter=No
+42	.	.	PUNCT	_	_	13	punct	_	SpacesAfter=\n
 
+# sent_id = 20
 # text = Em 1978, foi preso Edval Nunes da Silva, o Cajá, militante do partido vinculado à Pastoral da Juventude da Arquidiocese de Recife.
-# sent_id = 21
-# newpar
 1	Em	em	ADP	_	_	2	case	_	_
 2	1978	1978	NUM	_	NumType=Card	5	obl	_	SpaceAfter=No
 3	,	,	PUNCT	_	_	2	punct	_	_
 4	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	aux:pass	_	_
 5	preso	prender	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
-6	Edval	Edval	PROPN	_	Gender=Masc|Number=Sing	5	nsubj:pass	_	_
+6	Edval	Edval	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	5	nsubj:pass	_	_
 7	Nunes	Nunes	PROPN	_	Number=Sing	6	flat:name	_	_
 8-9	da	_	_	_	_	_	_	_	_
 8	de	de	ADP	_	_	10	case	_	_
@@ -941,9 +919,9 @@
 10	Silva	Silva	PROPN	_	Number=Sing	6	nmod	_	SpaceAfter=No
 11	,	,	PUNCT	_	_	13	punct	_	_
 12	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	13	det	_	_
-13	Cajá	Cajá	PROPN	_	Number=Sing	6	appos	_	SpaceAfter=No
+13	Cajá	Cajá	PROPN	_	Gender=Masc|Number=Sing	6	appos	_	SpaceAfter=No
 14	,	,	PUNCT	_	_	13	punct	_	_
-15	militante	militante	NOUN	_	Gender=Fem|Number=Sing	6	appos	_	_
+15	militante	militante	NOUN	_	Gender=Masc|Number=Sing	6	appos	_	_
 16-17	do	_	_	_	_	_	_	_	_
 16	de	de	ADP	_	_	18	case	_	_
 17	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	18	det	_	_
@@ -952,7 +930,7 @@
 20-21	à	_	_	_	_	_	_	_	_
 20	a	a	ADP	_	_	22	case	_	_
 21	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	22	det	_	_
-22	Pastoral	Pastoral	PROPN	_	Gender=Masc|Number=Sing	19	obl	_	_
+22	Pastoral	Pastoral	PROPN	_	Gender=Fem|Number=Sing	19	obj	_	_
 23-24	da	_	_	_	_	_	_	_	_
 23	de	de	ADP	_	_	25	case	_	_
 24	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	25	det	_	_
@@ -960,14 +938,13 @@
 26-27	da	_	_	_	_	_	_	_	_
 26	de	de	ADP	_	_	28	case	_	_
 27	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	28	det	_	_
-28	Arquidiocese	Arquidiocese	PROPN	_	Number=Sing	25	nmod	_	_
+28	Arquidiocese	Arquidiocese	PROPN	_	Gender=Fem|Number=Sing	22	nmod	_	_
 29	de	de	ADP	_	_	30	case	_	_
 30	Recife	Recife	PROPN	_	Number=Sing	28	nmod	_	SpaceAfter=No
-31	.	.	PUNCT	_	_	5	punct	_	_
+31	.	.	PUNCT	_	_	5	punct	_	SpacesAfter=\n
 
+# sent_id = 21
 # text = O PCR teve o mesmo destino da maioria das organizações revolucionárias de esquerda que se formaram nesse período: foi dizimado pela repressão.
-# sent_id = 22
-# newpar
 1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	_	_
 2	PCR	PCR	PROPN	_	Gender=Masc|Number=Sing	3	nsubj	_	_
 3	teve	ter	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
@@ -985,19 +962,19 @@
 13	revolucionárias	revolucionário	ADJ	_	Gender=Fem|Number=Plur	12	amod	_	_
 14	de	de	ADP	_	_	15	case	_	_
 15	esquerda	esquerda	NOUN	_	Gender=Fem|Number=Sing	12	nmod	_	_
-16	que	que	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	18	nsubj	_	_
-17	se	se	PRON	_	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	18	expl	_	_
+16	que	que	PRON	_	Gender=Fem|Number=Plur|PronType=Rel	18	nsubj	_	_
+17	se	se	PRON	_	Case=Acc|Gender=Fem|Number=Plur|Person=3|PronType=Prs	18	expl	_	_
 18	formaram	formar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	12	acl:relcl	_	_
 19-20	nesse	_	_	_	_	_	_	_	_
 19	em	em	ADP	_	_	21	case	_	_
 20	esse	esse	DET	_	Gender=Masc|Number=Sing|PronType=Dem	21	det	_	_
 21	período	período	NOUN	_	Gender=Masc|Number=Sing	18	obl	_	SpaceAfter=No
-22	:	:	PUNCT	_	_	24	punct	_	_
+22	:	:	PUNCT	_	_	3	punct	_	_
 23	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	24	aux:pass	_	_
-24	dizimado	dizimar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	3	advcl	_	_
+24	dizimado	dizimar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	3	parataxis	_	_
 25-26	pela	_	_	_	_	_	_	_	_
 25	por	por	ADP	_	_	27	case	_	_
 26	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	27	det	_	_
 27	repressão	repressão	NOUN	_	Gender=Fem|Number=Sing	24	obl:agent	_	SpaceAfter=No
-28	.	.	PUNCT	_	_	3	punct	_	_
+28	.	.	PUNCT	_	_	3	punct	_	SpacesAfter=\n
 

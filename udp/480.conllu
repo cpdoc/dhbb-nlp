@@ -1,9 +1,12 @@
-# text = «Demócrito Barbosa» nasceu no Rio de Janeiro, então capital do Império, em 1880, fi-lho de Francisco Pereira da Silva Barbosa.
-# sent_id = 1
-# newpar
+# generator = UDPipe 2, https://lindat.mff.cuni.cz/services/udpipe
+# udpipe_model = portuguese-bosque-ud-2.12-230717
+# udpipe_model_licence = CC BY-NC-SA
 # newdoc
+# newpar
+# sent_id = 1
+# text = «Demócrito Barbosa» nasceu no Rio de Janeiro, então capital do Império, em 1880, filho de Francisco Pereira da Silva Barbosa.
 1	«	«	PUNCT	_	_	2	punct	_	SpaceAfter=No
-2	Demócrito	Demócrito	PROPN	_	Gender=Masc|Number=Sing	5	nsubj	_	_
+2	Demócrito	Demócrito	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	5	nsubj	_	_
 3	Barbosa	Barbosa	PROPN	_	Number=Sing	2	flat:name	_	SpaceAfter=No
 4	»	»	PUNCT	_	_	2	punct	_	_
 5	nasceu	nascer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
@@ -12,7 +15,7 @@
 7	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	8	det	_	_
 8	Rio	Rio	PROPN	_	Gender=Masc|Number=Sing	5	obl	_	_
 9	de	de	ADP	_	_	10	case	_	_
-10	Janeiro	Janeiro	PROPN	_	Number=Sing	8	flat:name	_	SpaceAfter=No
+10	Janeiro	Janeiro	PROPN	_	Number=Sing	8	nmod	_	SpaceAfter=No
 11	,	,	PUNCT	_	_	13	punct	_	_
 12	então	então	ADV	_	_	13	advmod	_	_
 13	capital	capital	NOUN	_	Gender=Masc|Number=Sing	8	appos	_	_
@@ -22,28 +25,28 @@
 16	Império	império	NOUN	_	Gender=Masc|Number=Sing	13	nmod	_	SpaceAfter=No
 17	,	,	PUNCT	_	_	13	punct	_	_
 18	em	em	ADP	_	_	19	case	_	_
-19	1880	1880	NUM	_	NumType=Card	13	nmod	_	SpaceAfter=No
-20	,	,	PUNCT	_	_	13	punct	_	_
-21	fi-lho	fi-lho	NOUN	_	Gender=Masc|Number=Sing	13	appos	_	_
+19	1880	1880	NUM	_	NumType=Card	5	obl	_	SpaceAfter=No
+20	,	,	PUNCT	_	_	21	punct	_	_
+21	filho	filho	NOUN	_	Gender=Masc|Number=Sing	5	appos	_	_
 22	de	de	ADP	_	_	23	case	_	_
-23	Francisco	Francisco	PROPN	_	Gender=Masc|Number=Sing	21	nmod	_	_
+23	Francisco	Francisco	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	21	nmod	_	_
 24	Pereira	Pereira	PROPN	_	Number=Sing	23	flat:name	_	_
 25-26	da	_	_	_	_	_	_	_	_
 25	de	de	ADP	_	_	27	case	_	_
 26	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	27	det	_	_
-27	Silva	Silva	PROPN	_	Number=Sing	23	flat:name	_	_
-28	Barbosa	Barbosa	PROPN	_	Number=Sing	23	flat:name	_	SpaceAfter=No
+27	Silva	Silva	PROPN	_	ExtPos=PROPN|Number=Sing	23	nmod	_	_
+28	Barbosa	Barbosa	PROPN	_	Number=Sing	27	flat:name	_	SpaceAfter=No
 29	.	.	PUNCT	_	_	5	punct	_	SpacesAfter=\n
 
-# text = Matriculou-se na Escola Militar em 1889, alcançando o posto de segundo-tenente em 1907.
 # sent_id = 2
+# text = Matriculou-se na Escola Militar em 1889, alcançando o posto de segundo-tenente em 1907.
 1-2	Matriculou-se	_	_	_	_	_	_	_	_
-1	Matriculou	Matricular	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+1	Matriculou	matricular	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	1	expl	_	_
 3-4	na	_	_	_	_	_	_	_	_
 3	em	em	ADP	_	_	5	case	_	_
 4	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	5	det	_	_
-5	Escola	Escola	PROPN	_	Gender=Fem|Number=Sing	1	obl	_	_
+5	Escola	Escola	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	1	obl	_	_
 6	Militar	Militar	PROPN	_	Number=Sing	5	flat:name	_	_
 7	em	em	ADP	_	_	8	case	_	_
 8	1889	1889	NUM	_	NumType=Card	1	obl	_	SpaceAfter=No
@@ -55,13 +58,13 @@
 14	segundo-tenente	segundo-tenente	NOUN	_	Gender=Masc|Number=Sing	12	nmod	_	_
 15	em	em	ADP	_	_	16	case	_	_
 16	1907	1907	NUM	_	NumType=Card	10	obl	_	SpaceAfter=No
-17	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
+17	.	.	PUNCT	_	_	1	punct	_	_
 
-# text = Cursou a Escola Militar de Artilharia em Fontainebleau, na França, durante a Primeira Guerra Mundial (1914-1918).
 # sent_id = 3
-1	Cursou	Cursar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+# text = Cursou a Escola Militar de Artilharia em Fontainebleau, na França, durante a Primeira Guerra Mundial (1914-1918).
+1	Cursou	cursar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	3	det	_	_
-3	Escola	Escola	PROPN	_	Gender=Fem|Number=Sing	1	obj	_	_
+3	Escola	Escola	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	1	obj	_	_
 4	Militar	Militar	PROPN	_	Number=Sing	3	flat:name	_	_
 5	de	de	ADP	_	_	6	case	_	_
 6	Artilharia	Artilharia	PROPN	_	Number=Sing	3	nmod	_	_
@@ -72,22 +75,22 @@
 10	em	em	ADP	_	_	12	case	_	_
 11	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	12	det	_	_
 12	França	França	PROPN	_	Gender=Fem|Number=Sing	1	obl	_	SpaceAfter=No
-13	,	,	PUNCT	_	_	1	punct	_	_
+13	,	,	PUNCT	_	_	12	punct	_	_
 14	durante	durante	ADP	_	_	16	case	_	_
 15	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	16	det	_	_
-16	Primeira	Primeira	PROPN	_	Gender=Fem|Number=Sing	1	obl	_	_
+16	Primeira	Primeira	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	1	obl	_	_
 17	Guerra	Guerra	PROPN	_	Number=Sing	16	flat:name	_	_
 18	Mundial	Mundial	PROPN	_	Number=Sing	16	flat:name	_	_
 19	(	(	PUNCT	_	_	20	punct	_	SpaceAfter=No
-20	1914-1918	1914-1918	NUM	_	NumType=Card	16	appos	_	SpaceAfter=No
+20	1914-1918	1914-1918	NUM	_	NumType=Card	16	nmod	_	SpaceAfter=No
 21	)	)	PUNCT	_	_	20	punct	_	SpaceAfter=No
 22	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
 
-# text = Promovido a tenente-coronel em 1930, foi nomeado interventor no Rio de Janeiro pela junta governativa provisória formada com a deposição de Washington Luís em 24 de outubro desse ano.
 # sent_id = 4
+# text = Promovido a tenente-coronel em 1930, foi nomeado interventor no Rio de Janeiro pela junta governativa provisória formada com a deposição de Washington Luís em 24 de outubro desse ano.
 1	Promovido	promover	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	8	advcl	_	_
 2	a	a	ADP	_	_	3	case	_	_
-3	tenente-coronel	tenente-coronel	NOUN	_	Gender=Masc|Number=Sing	1	obl	_	_
+3	tenente-coronel	tenente-coronel	NOUN	_	Gender=Masc|Number=Sing	1	obj	_	_
 4	em	em	ADP	_	_	5	case	_	_
 5	1930	1930	NUM	_	NumType=Card	1	obl	_	SpaceAfter=No
 6	,	,	PUNCT	_	_	1	punct	_	_
@@ -97,21 +100,21 @@
 10-11	no	_	_	_	_	_	_	_	_
 10	em	em	ADP	_	_	12	case	_	_
 11	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	12	det	_	_
-12	Rio	Rio	PROPN	_	Gender=Masc|Number=Sing	9	nmod	_	_
+12	Rio	Rio	PROPN	_	Gender=Masc|Number=Sing	8	obl	_	_
 13	de	de	ADP	_	_	14	case	_	_
-14	Janeiro	janeiro	PROPN	_	Number=Sing	12	nmod	_	_
+14	Janeiro	Janeiro	PROPN	_	Number=Sing	12	nmod	_	_
 15-16	pela	_	_	_	_	_	_	_	_
-15	por	por	ADP	_	_	18	case	_	_
-16	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	18	det	_	_
-17	junta	junta	ADJ	_	Gender=Fem|Number=Sing	18	amod	_	_
-18	governativa	governativa	NOUN	_	Gender=Fem|Number=Sing	9	nmod	_	_
-19	provisória	provisório	ADJ	_	Gender=Fem|Number=Sing	18	amod	_	_
-20	formada	formar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	18	acl	_	_
+15	por	por	ADP	_	_	17	case	_	_
+16	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	17	det	_	_
+17	junta	junta	NOUN	_	Gender=Fem|Number=Sing	8	obl:agent	_	_
+18	governativa	governativo	ADJ	_	Gender=Fem|Number=Sing	17	amod	_	_
+19	provisória	provisório	ADJ	_	Gender=Fem|Number=Sing	17	amod	_	_
+20	formada	formar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	17	acl	_	_
 21	com	com	ADP	_	_	23	case	_	_
 22	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	23	det	_	_
 23	deposição	deposição	NOUN	_	Gender=Fem|Number=Sing	20	obl	_	_
 24	de	de	ADP	_	_	25	case	_	_
-25	Washington	Washington	PROPN	_	Gender=Masc|Number=Sing	23	nmod	_	_
+25	Washington	Washington	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	23	nmod	_	_
 26	Luís	Luís	PROPN	_	Number=Sing	25	flat:name	_	_
 27	em	em	ADP	_	_	28	case	_	_
 28	24	24	NUM	_	NumType=Card	20	obl	_	_
@@ -121,40 +124,40 @@
 31	de	de	ADP	_	_	33	case	_	_
 32	esse	esse	DET	_	Gender=Masc|Number=Sing|PronType=Dem	33	det	_	_
 33	ano	ano	NOUN	_	Gender=Masc|Number=Sing	30	nmod	_	SpaceAfter=No
-34	.	.	PUNCT	_	_	8	punct	_	SpacesAfter=\n
+34	.	.	PUNCT	_	_	8	punct	_	_
 
-# text = Empossado nessa mesma data permaneceu no cargo por cinco dias, sendo substituído por Plínio de Castro Casado em 29 de outubro.
 # sent_id = 5
-1	Empossado	empossar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	0	root	_	_
+# text = Empossado nessa mesma data permaneceu no cargo por cinco dias, sendo substituído por Plínio de Castro Casado em 29 de outubro.
+1	Empossado	empossar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	6	advcl	_	_
 2-3	nessa	_	_	_	_	_	_	_	_
 2	em	em	ADP	_	_	5	case	_	_
 3	essa	esse	DET	_	Gender=Fem|Number=Sing|PronType=Dem	5	det	_	_
 4	mesma	mesmo	ADJ	_	Gender=Fem|Number=Sing	5	amod	_	_
 5	data	data	NOUN	_	Gender=Fem|Number=Sing	1	obl	_	_
-6	permaneceu	permanecer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	1	advcl	_	_
+6	permaneceu	permanecer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 7-8	no	_	_	_	_	_	_	_	_
 7	em	em	ADP	_	_	9	case	_	_
 8	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	9	det	_	_
 9	cargo	cargo	NOUN	_	Gender=Masc|Number=Sing	6	obl	_	_
 10	por	por	ADP	_	_	12	case	_	_
 11	cinco	cinco	NUM	_	NumType=Card	12	nummod	_	_
-12	dias	dia	NOUN	_	Gender=Masc|Number=Plur	6	obj	_	SpaceAfter=No
+12	dias	dia	NOUN	_	Gender=Masc|Number=Plur	6	obl	_	SpaceAfter=No
 13	,	,	PUNCT	_	_	15	punct	_	_
 14	sendo	ser	AUX	_	VerbForm=Ger	15	aux:pass	_	_
 15	substituído	substituir	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	6	advcl	_	_
 16	por	por	ADP	_	_	17	case	_	_
-17	Plínio	Plínio	NOUN	_	Gender=Masc|Number=Sing	15	obl	_	_
+17	Plínio	Plínio	PROPN	_	Gender=Masc|Number=Sing	15	obl:agent	_	_
 18	de	de	ADP	_	_	19	case	_	_
-19	Castro	Castro	PROPN	_	Gender=Masc|Number=Sing	17	nmod	_	_
-20	Casado	casado	PROPN	_	Number=Sing	19	flat:name	_	_
+19	Castro	Castro	PROPN	_	ExtPos=PROPN|Number=Sing	17	nmod	_	_
+20	Casado	Casado	PROPN	_	Number=Sing	19	flat:name	_	_
 21	em	em	ADP	_	_	22	case	_	_
 22	29	29	NUM	_	NumType=Card	15	obl	_	_
 23	de	de	ADP	_	_	24	case	_	_
 24	outubro	outubro	NOUN	_	Gender=Masc|Number=Sing	22	nmod	_	SpaceAfter=No
-25	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
+25	.	.	PUNCT	_	_	6	punct	_	SpacesAfter=\n
 
-# text = Atingiu o posto de coronel em 1931, passando ao comando do Setor Leste.
 # sent_id = 6
+# text = Atingiu o posto de coronel em 1931, passando ao comando do Setor Leste.
 1	Atingiu	atingir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
 3	posto	posto	NOUN	_	Gender=Masc|Number=Sing	1	obj	_	_
@@ -171,12 +174,12 @@
 13-14	do	_	_	_	_	_	_	_	_
 13	de	de	ADP	_	_	15	case	_	_
 14	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	15	det	_	_
-15	Setor	setor	NOUN	_	Gender=Masc|Number=Sing	12	nmod	_	_
-16	Leste	leste	NOUN	_	Gender=Masc|Number=Sing	15	amod	_	SpaceAfter=No
-17	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
+15	Setor	Setor	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	12	nmod	_	_
+16	Leste	Leste	PROPN	_	Number=Sing	15	flat:name	_	SpaceAfter=No
+17	.	.	PUNCT	_	_	1	punct	_	_
 
-# text = No ano seguinte, foi chefe de gabinete do ministro da Guerra.
 # sent_id = 7
+# text = No ano seguinte, foi chefe de gabinete do ministro da Guerra.
 1-2	No	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	3	case	_	_
 2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
@@ -190,27 +193,27 @@
 10-11	do	_	_	_	_	_	_	_	_
 10	de	de	ADP	_	_	12	case	_	_
 11	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	12	det	_	_
-12	ministro	ministro	NOUN	_	Gender=Masc|Number=Sing	9	nmod	_	_
+12	ministro	ministro	NOUN	_	Gender=Masc|Number=Sing	7	nmod	_	_
 13-14	da	_	_	_	_	_	_	_	_
 13	de	de	ADP	_	_	15	case	_	_
 14	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	15	det	_	_
-15	Guerra	Guerra	PROPN	_	Number=Sing	12	nmod	_	SpaceAfter=No
+15	Guerra	guerra	NOUN	_	Gender=Fem|Number=Sing	12	nmod	_	SpaceAfter=No
 16	.	.	PUNCT	_	_	7	punct	_	SpacesAfter=\n
 
-# text = Fez os cursos de estado-maior e de engenharia.
 # sent_id = 8
+# text = Fez os cursos de estado-maior e de engenharia.
 1	Fez	fazer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	3	det	_	_
-3	cursos	curso	NOUN	_	Gender=Masc|Number=Plur	1	nsubj	_	_
+3	cursos	curso	NOUN	_	Gender=Masc|Number=Plur	1	obj	_	_
 4	de	de	ADP	_	_	5	case	_	_
-5	estado-maior	estado-maior	PROPN	_	Gender=Masc|Number=Sing	3	nmod	_	_
+5	estado-maior	estado-maior	NOUN	_	Gender=Masc|Number=Sing	3	nmod	_	_
 6	e	e	CCONJ	_	_	8	cc	_	_
 7	de	de	ADP	_	_	8	case	_	_
 8	engenharia	engenharia	NOUN	_	Gender=Fem|Number=Sing	5	conj	_	SpaceAfter=No
 9	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
 
-# text = Faleceu em 1961.
 # sent_id = 9
+# text = Faleceu em 1961.
 1	Faleceu	falecer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2	em	em	ADP	_	_	3	case	_	_
 3	1961	1961	NUM	_	NumType=Card	1	obl	_	SpaceAfter=No

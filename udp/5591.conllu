@@ -1,19 +1,22 @@
-# text = «João Jorge de Pontes Vieira» nasceu em Maranguape (CE) no dia 14 de junho de 1894, filho do professor Manuel Jorge Vieira e de Cândida de Pontes Vieira.
-# sent_id = 1
-# newpar
+# generator = UDPipe 2, https://lindat.mff.cuni.cz/services/udpipe
+# udpipe_model = portuguese-bosque-ud-2.12-230717
+# udpipe_model_licence = CC BY-NC-SA
 # newdoc
+# newpar
+# sent_id = 1
+# text = «João Jorge de Pontes Vieira» nasceu em Maranguape (CE) no dia 14 de junho de 1894, filho do professor Manuel Jorge Vieira e de Cândida de Pontes Vieira.
 1	«	«	PUNCT	_	_	2	punct	_	SpaceAfter=No
-2	João	João	PROPN	_	Gender=Masc|Number=Sing	8	nsubj	_	_
+2	João	João	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	8	nsubj	_	_
 3	Jorge	Jorge	PROPN	_	Number=Sing	2	flat:name	_	_
 4	de	de	ADP	_	_	5	case	_	_
-5	Pontes	pontes	PROPN	_	Number=Sing	2	flat:name	_	_
-6	Vieira	Vieira	PROPN	_	Number=Sing	2	flat:name	_	SpaceAfter=No
+5	Pontes	Pontes	PROPN	_	ExtPos=PROPN|Number=Sing	2	nmod	_	_
+6	Vieira	Vieira	PROPN	_	Number=Sing	5	flat:name	_	SpaceAfter=No
 7	»	»	PUNCT	_	_	2	punct	_	_
 8	nasceu	nascer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 9	em	em	ADP	_	_	10	case	_	_
 10	Maranguape	Maranguape	PROPN	_	Gender=Masc|Number=Sing	8	obl	_	_
 11	(	(	PUNCT	_	_	12	punct	_	SpaceAfter=No
-12	CE	CE	PROPN	_	Gender=Masc|Number=Sing	10	appos	_	SpaceAfter=No
+12	CE	CE	PROPN	_	Gender=Masc|Number=Sing	10	parataxis	_	SpaceAfter=No
 13	)	)	PUNCT	_	_	12	punct	_	_
 14-15	no	_	_	_	_	_	_	_	_
 14	em	em	ADP	_	_	16	case	_	_
@@ -25,24 +28,24 @@
 20	de	de	ADP	_	_	21	case	_	_
 21	1894	1894	NUM	_	NumType=Card	19	nmod	_	SpaceAfter=No
 22	,	,	PUNCT	_	_	23	punct	_	_
-23	filho	filho	NOUN	_	Gender=Masc|Number=Sing	2	appos	_	_
+23	filho	filho	NOUN	_	Gender=Masc|Number=Sing	8	obl	_	_
 24-25	do	_	_	_	_	_	_	_	_
 24	de	de	ADP	_	_	26	case	_	_
 25	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	26	det	_	_
 26	professor	professor	NOUN	_	Gender=Masc|Number=Sing	23	nmod	_	_
-27	Manuel	Manuel	PROPN	_	Gender=Masc|Number=Sing	26	appos	_	_
+27	Manuel	Manuel	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	26	appos	_	_
 28	Jorge	Jorge	PROPN	_	Number=Sing	27	flat:name	_	_
 29	Vieira	Vieira	PROPN	_	Number=Sing	27	flat:name	_	_
 30	e	e	CCONJ	_	_	32	cc	_	_
 31	de	de	ADP	_	_	32	case	_	_
-32	Cândida	Cândida	NOUN	_	Gender=Fem|Number=Sing	26	conj	_	_
+32	Cândida	Cândida	PROPN	_	Gender=Fem|Number=Sing	26	conj	_	_
 33	de	de	ADP	_	_	34	case	_	_
-34	Pontes	pontes	PROPN	_	Gender=Masc|Number=Sing	32	nmod	_	_
+34	Pontes	Pontes	PROPN	_	ExtPos=PROPN|Number=Sing	32	nmod	_	_
 35	Vieira	Vieira	PROPN	_	Number=Sing	34	flat:name	_	SpaceAfter=No
 36	.	.	PUNCT	_	_	8	punct	_	SpacesAfter=\n
 
-# text = Estudou no Liceu do Ceará durante os anos de 1907 e 1911 e bacharelou-se em ciências jurídicas e sociais pela Faculdade de Direito do Ceará em 1916.
 # sent_id = 2
+# text = Estudou no Liceu do Ceará durante os anos de 1907 e 1911 e bacharelou-se em ciências jurídicas e sociais pela Faculdade de Direito do Ceará em 1916.
 1	Estudou	estudar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2-3	no	_	_	_	_	_	_	_	_
 2	em	em	ADP	_	_	4	case	_	_
@@ -51,7 +54,7 @@
 5-6	do	_	_	_	_	_	_	_	_
 5	de	de	ADP	_	_	7	case	_	_
 6	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	7	det	_	_
-7	Ceará	Ceará	PROPN	_	Gender=Masc|Number=Sing	4	nmod	_	_
+7	Ceará	Ceará	PROPN	_	Number=Sing	4	nmod	_	_
 8	durante	durante	ADP	_	_	10	case	_	_
 9	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	10	det	_	_
 10	anos	ano	NOUN	_	Gender=Masc|Number=Plur	1	obl	_	_
@@ -62,7 +65,7 @@
 15	e	e	CCONJ	_	_	16	cc	_	_
 16-17	bacharelou-se	_	_	_	_	_	_	_	_
 16	bacharelou	bacharelar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	1	conj	_	_
-17	se	se	PRON	_	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	16	expl	_	_
+17	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	16	expl	_	_
 18	em	em	ADP	_	_	19	case	_	_
 19	ciências	ciência	NOUN	_	Gender=Fem|Number=Plur	16	obl	_	_
 20	jurídicas	jurídico	ADJ	_	Gender=Fem|Number=Plur	19	amod	_	_
@@ -71,22 +74,22 @@
 23-24	pela	_	_	_	_	_	_	_	_
 23	por	por	ADP	_	_	25	case	_	_
 24	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	25	det	_	_
-25	Faculdade	Faculdade	PROPN	_	Gender=Fem|Number=Sing	16	obj	_	_
+25	Faculdade	Faculdade	PROPN	_	Gender=Fem|Number=Sing	16	obl	_	_
 26	de	de	ADP	_	_	27	case	_	_
 27	Direito	Direito	PROPN	_	Number=Sing	25	nmod	_	_
 28-29	do	_	_	_	_	_	_	_	_
 28	de	de	ADP	_	_	30	case	_	_
 29	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	30	det	_	_
-30	Ceará	Ceará	PROPN	_	Gender=Masc|Number=Sing	25	nmod	_	_
+30	Ceará	Ceará	PROPN	_	Number=Sing	27	nmod	_	_
 31	em	em	ADP	_	_	32	case	_	_
 32	1916	1916	NUM	_	NumType=Card	16	obl	_	SpaceAfter=No
-33	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
+33	.	.	PUNCT	_	_	1	punct	_	_
 
-# text = Enquanto acadêmico, foi promotor público de Crateús (CE) entre 1915 e 1916.
 # sent_id = 3
-1	Enquanto	enquanto	NOUN	_	Gender=Masc|Number=Sing	5	nsubj	_	_
-2	acadêmico	acadêmico	ADJ	_	Gender=Masc|Number=Sing	1	amod	_	SpaceAfter=No
-3	,	,	PUNCT	_	_	1	punct	_	_
+# text = Enquanto acadêmico, foi promotor público de Crateús (CE) entre 1915 e 1916.
+1	Enquanto	enquanto	ADP	_	_	2	case	_	_
+2	acadêmico	acadêmico	ADJ	_	Gender=Masc|Number=Sing	5	nmod	_	SpaceAfter=No
+3	,	,	PUNCT	_	_	2	punct	_	_
 4	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	cop	_	_
 5	promotor	promotor	NOUN	_	Gender=Masc|Number=Sing	0	root	_	_
 6	público	público	ADJ	_	Gender=Masc|Number=Sing	5	amod	_	_
@@ -99,13 +102,13 @@
 13	1915	1915	NUM	_	NumType=Card	5	nmod	_	_
 14	e	e	CCONJ	_	_	15	cc	_	_
 15	1916	1916	NUM	_	NumType=Card	13	conj	_	SpaceAfter=No
-16	.	.	PUNCT	_	_	5	punct	_	SpacesAfter=\n
+16	.	.	PUNCT	_	_	5	punct	_	_
 
-# text = Depois de formado exerceu a mesma função em Aracati (CE) em 1917 e foi juiz substituto em Limoeiro (CE), atual Limoeiro do Norte, de 1918 a 1920.
 # sent_id = 4
-1	Depois	depois	ADV	_	_	3	advmod	_	_
-2	de	de	ADP	_	_	3	case	_	_
-3	formado	formado	NOUN	_	Gender=Masc|Number=Sing	4	obl	_	_
+# text = Depois de formado exerceu a mesma função em Aracati (CE) em 1917 e foi juiz substituto em Limoeiro (CE), atual Limoeiro do Norte, de 1918 a 1920.
+1	Depois	depois	ADV	_	ExtPos=SCONJ	3	mark	_	_
+2	de	de	ADP	_	_	1	fixed	_	_
+3	formado	formar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	4	advcl	_	_
 4	exerceu	exercer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 5	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	7	det	_	_
 6	mesma	mesmo	ADJ	_	Gender=Fem|Number=Sing	7	amod	_	_
@@ -113,36 +116,36 @@
 8	em	em	ADP	_	_	9	case	_	_
 9	Aracati	Aracati	PROPN	_	Gender=Masc|Number=Sing	4	obl	_	_
 10	(	(	PUNCT	_	_	11	punct	_	SpaceAfter=No
-11	CE	CE	PROPN	_	Gender=Masc|Number=Sing	9	appos	_	SpaceAfter=No
+11	CE	CE	PROPN	_	Gender=Masc|Number=Sing	9	parataxis	_	SpaceAfter=No
 12	)	)	PUNCT	_	_	11	punct	_	_
 13	em	em	ADP	_	_	14	case	_	_
 14	1917	1917	NUM	_	NumType=Card	4	obl	_	_
 15	e	e	CCONJ	_	_	17	cc	_	_
 16	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	17	cop	_	_
 17	juiz	juiz	NOUN	_	Gender=Masc|Number=Sing	4	conj	_	_
-18	substituto	substitugar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	17	acl	_	_
+18	substituto	substituto	ADJ	_	Gender=Masc|Number=Sing	17	amod	_	_
 19	em	em	ADP	_	_	20	case	_	_
-20	Limoeiro	Limoeiro	PROPN	_	Gender=Masc|Number=Sing	18	obl	_	_
+20	Limoeiro	Limoeiro	PROPN	_	Gender=Masc|Number=Sing	17	nmod	_	_
 21	(	(	PUNCT	_	_	22	punct	_	SpaceAfter=No
-22	CE	CE	PROPN	_	Gender=Masc|Number=Sing	20	appos	_	SpaceAfter=No
+22	CE	CE	PROPN	_	Gender=Masc|Number=Sing	20	parataxis	_	SpaceAfter=No
 23	)	)	PUNCT	_	_	22	punct	_	SpaceAfter=No
-24	,	,	PUNCT	_	_	18	punct	_	_
+24	,	,	PUNCT	_	_	26	punct	_	_
 25	atual	atual	ADJ	_	Gender=Masc|Number=Sing	26	amod	_	_
-26	Limoeiro	Limoeiro	NOUN	_	Gender=Masc|Number=Sing	17	appos	_	_
+26	Limoeiro	Limoeiro	PROPN	_	Gender=Masc|Number=Sing	20	appos	_	_
 27-28	do	_	_	_	_	_	_	_	_
 27	de	de	ADP	_	_	29	case	_	_
 28	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	29	det	_	_
 29	Norte	Norte	PROPN	_	Number=Sing	26	nmod	_	SpaceAfter=No
-30	,	,	PUNCT	_	_	32	punct	_	_
+30	,	,	PUNCT	_	_	26	punct	_	_
 31	de	de	ADP	_	_	32	case	_	_
-32	1918	1918	NUM	_	NumType=Card	26	nmod	_	_
+32	1918	1918	NUM	_	NumType=Card	17	nmod	_	_
 33	a	a	ADP	_	_	34	case	_	_
 34	1920	1920	NUM	_	NumType=Card	32	nmod	_	SpaceAfter=No
 35	.	.	PUNCT	_	_	4	punct	_	SpacesAfter=\n
 
-# text = Professor interino do Liceu do Ceará entre 1921 e 1923, de 1926 a 1930 foi novamente promotor público, dessa vez em Fortaleza.
 # sent_id = 5
-1	Professor	Professor	NOUN	_	Gender=Masc|Number=Sing	20	nsubj	_	_
+# text = Professor interino do Liceu do Ceará entre 1921 e 1923, de 1926 a 1930 foi novamente promotor público, dessa vez em Fortaleza.
+1	Professor	professor	NOUN	_	Gender=Masc|Number=Sing	20	nmod	_	_
 2	interino	interino	ADJ	_	Gender=Masc|Number=Sing	1	amod	_	_
 3-4	do	_	_	_	_	_	_	_	_
 3	de	de	ADP	_	_	5	case	_	_
@@ -151,45 +154,45 @@
 6-7	do	_	_	_	_	_	_	_	_
 6	de	de	ADP	_	_	8	case	_	_
 7	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	8	det	_	_
-8	Ceará	Ceará	PROPN	_	Gender=Masc|Number=Sing	5	nmod	_	_
+8	Ceará	Ceará	PROPN	_	Number=Sing	5	nmod	_	_
 9	entre	entre	ADP	_	_	10	case	_	_
 10	1921	1921	NUM	_	NumType=Card	1	nmod	_	_
 11	e	e	CCONJ	_	_	12	cc	_	_
 12	1923	1923	NUM	_	NumType=Card	10	conj	_	SpaceAfter=No
-13	,	,	PUNCT	_	_	10	punct	_	_
+13	,	,	PUNCT	_	_	1	punct	_	_
 14	de	de	ADP	_	_	15	case	_	_
-15	1926	1926	NUM	_	NumType=Card	10	nmod	_	_
+15	1926	1926	NUM	_	NumType=Card	20	nmod	_	_
 16	a	a	ADP	_	_	17	case	_	_
-17	1930	1930	NUM	_	NumType=Card	10	nmod	_	_
+17	1930	1930	NUM	_	NumType=Card	15	nmod	_	_
 18	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	20	cop	_	_
 19	novamente	novamente	ADV	_	_	20	advmod	_	_
 20	promotor	promotor	NOUN	_	Gender=Masc|Number=Sing	0	root	_	_
 21	público	público	ADJ	_	Gender=Masc|Number=Sing	20	amod	_	SpaceAfter=No
-22	,	,	PUNCT	_	_	20	punct	_	_
+22	,	,	PUNCT	_	_	25	punct	_	_
 23-24	dessa	_	_	_	_	_	_	_	_
 23	de	de	ADP	_	_	25	case	_	_
-24	essa	esse	DET	_	Gender=Fem|Number=Sing|PronType=Dem	25	det	_	_
+24	essa	esse	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	25	det	_	_
 25	vez	vez	NOUN	_	Gender=Fem|Number=Sing	20	nmod	_	_
 26	em	em	ADP	_	_	27	case	_	_
-27	Fortaleza	fortaleza	PROPN	_	Gender=Masc|Number=Sing	25	nmod	_	SpaceAfter=No
-28	.	.	PUNCT	_	_	20	punct	_	SpacesAfter=\n
+27	Fortaleza	fortaleza	PROPN	_	Gender=Fem|Number=Sing	20	nmod	_	SpaceAfter=No
+28	.	.	PUNCT	_	_	20	punct	_	_
 
-# text = Com a vitória da Revolução de 1930, tornou-se delegado de polícia da revolução na capital cearense e foi membro da Comissão de Sindicâncias (Tribunal Revolucionário) no estado do Ceará de 1931 a 1933.
 # sent_id = 6
+# text = Com a vitória da Revolução de 1930, tornou-se delegado de polícia da revolução na capital cearense e foi membro da Comissão de Sindicâncias (Tribunal Revolucionário) no estado do Ceará de 1931 a 1933.
 1	Com	com	ADP	_	_	3	case	_	_
 2	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	3	det	_	_
 3	vitória	vitória	NOUN	_	Gender=Fem|Number=Sing	10	obl	_	_
 4-5	da	_	_	_	_	_	_	_	_
 4	de	de	ADP	_	_	6	case	_	_
 5	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	6	det	_	_
-6	Revolução	Revolução	NOUN	_	Gender=Fem|Number=Sing	3	nmod	_	_
+6	Revolução	revolução	NOUN	_	Gender=Fem|Number=Sing	3	nmod	_	_
 7	de	de	ADP	_	_	8	case	_	_
 8	1930	1930	NUM	_	NumType=Card	6	nmod	_	SpaceAfter=No
 9	,	,	PUNCT	_	_	3	punct	_	_
 10-11	tornou-se	_	_	_	_	_	_	_	_
 10	tornou	tornar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
-11	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	10	nsubj	_	_
-12	delegado	delegado	NOUN	_	Gender=Masc|Number=Sing	10	obj	_	_
+11	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	10	expl	_	_
+12	delegado	delegado	NOUN	_	Gender=Masc|Number=Sing	10	xcomp	_	_
 13	de	de	ADP	_	_	14	case	_	_
 14	polícia	polícia	NOUN	_	Gender=Fem|Number=Sing	12	nmod	_	_
 15-16	da	_	_	_	_	_	_	_	_
@@ -211,7 +214,7 @@
 28	de	de	ADP	_	_	29	case	_	_
 29	Sindicâncias	Sindicâncias	PROPN	_	Number=Sing	27	nmod	_	_
 30	(	(	PUNCT	_	_	31	punct	_	SpaceAfter=No
-31	Tribunal	Tribunal	PROPN	_	Gender=Masc|Number=Sing	27	appos	_	_
+31	Tribunal	Tribunal	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	27	appos	_	_
 32	Revolucionário	Revolucionário	PROPN	_	Number=Sing	31	flat:name	_	SpaceAfter=No
 33	)	)	PUNCT	_	_	31	punct	_	_
 34-35	no	_	_	_	_	_	_	_	_
@@ -223,13 +226,13 @@
 38	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	39	det	_	_
 39	Ceará	Ceará	PROPN	_	Gender=Masc|Number=Sing	36	nmod	_	_
 40	de	de	ADP	_	_	41	case	_	_
-41	1931	1931	NUM	_	NumType=Card	39	nmod	_	_
+41	1931	1931	NUM	_	NumType=Card	36	nmod	_	_
 42	a	a	ADP	_	_	43	case	_	_
-43	1933	1933	NUM	_	NumType=Card	24	nmod	_	SpaceAfter=No
-44	.	.	PUNCT	_	_	10	punct	_	SpacesAfter=\n
+43	1933	1933	NUM	_	NumType=Card	41	nmod	_	SpaceAfter=No
+44	.	.	PUNCT	_	_	10	punct	_	_
 
-# text = Em 1931 foi nomeado procurador fiscal do estado do Ceará.
 # sent_id = 7
+# text = Em 1931 foi nomeado procurador fiscal do estado do Ceará.
 1	Em	em	ADP	_	_	2	case	_	_
 2	1931	1931	NUM	_	NumType=Card	4	obl	_	_
 3	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	aux:pass	_	_
@@ -244,10 +247,10 @@
 10	de	de	ADP	_	_	12	case	_	_
 11	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	12	det	_	_
 12	Ceará	Ceará	PROPN	_	Gender=Masc|Number=Sing	9	nmod	_	SpaceAfter=No
-13	.	.	PUNCT	_	_	4	punct	_	SpacesAfter=\n
+13	.	.	PUNCT	_	_	4	punct	_	_
 
-# text = Foi também um dos fundadores do Partido Social Democrático (PSD) em seu estado, pertencendo inclusive à sua comissão executiva.
 # sent_id = 8
+# text = Foi também um dos fundadores do Partido Social Democrático (PSD) em seu estado, pertencendo inclusive à sua comissão executiva.
 1	Foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	cop	_	_
 2	também	também	ADV	_	_	3	advmod	_	_
 3	um	um	NUM	_	NumType=Card	0	root	_	_
@@ -258,15 +261,15 @@
 7-8	do	_	_	_	_	_	_	_	_
 7	de	de	ADP	_	_	9	case	_	_
 8	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	9	det	_	_
-9	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	6	nmod	_	_
+9	Partido	Partido	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	6	nmod	_	_
 10	Social	Social	PROPN	_	Number=Sing	9	flat:name	_	_
-11	Democrático	democrático	PROPN	_	Number=Sing	9	flat:name	_	_
+11	Democrático	Democrático	PROPN	_	Number=Sing	9	flat:name	_	_
 12	(	(	PUNCT	_	_	13	punct	_	SpaceAfter=No
 13	PSD	PSD	PROPN	_	Gender=Masc|Number=Sing	9	appos	_	SpaceAfter=No
 14	)	)	PUNCT	_	_	13	punct	_	_
 15	em	em	ADP	_	_	17	case	_	_
 16	seu	seu	DET	_	Gender=Masc|Number=Sing|PronType=Prs	17	det	_	_
-17	estado	estado	NOUN	_	Gender=Masc|Number=Sing	6	nmod	_	SpaceAfter=No
+17	estado	estado	NOUN	_	Gender=Masc|Number=Sing	3	nmod	_	SpaceAfter=No
 18	,	,	PUNCT	_	_	19	punct	_	_
 19	pertencendo	pertencer	VERB	_	VerbForm=Ger	3	advcl	_	_
 20	inclusive	inclusive	ADV	_	_	19	advmod	_	_
@@ -274,43 +277,43 @@
 21	a	a	ADP	_	_	24	case	_	_
 22	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	24	det	_	_
 23	sua	seu	DET	_	Gender=Fem|Number=Sing|PronType=Prs	24	det	_	_
-24	comissão	comissão	NOUN	_	Gender=Fem|Number=Sing	20	obl	_	_
+24	comissão	comissão	NOUN	_	Gender=Fem|Number=Sing	19	obj	_	_
 25	executiva	executivo	ADJ	_	Gender=Fem|Number=Sing	24	amod	_	SpaceAfter=No
 26	.	.	PUNCT	_	_	3	punct	_	SpacesAfter=\n
 
-# text = Foi eleito deputado à Assembléia Nacional Constituinte pelo Ceará em maio de 1933 na legenda do PSD.
 # sent_id = 9
+# text = Foi eleito deputado à Assembléia Nacional Constituinte pelo Ceará em maio de 1933 na legenda do PSD.
 1	Foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	aux:pass	_	_
 2	eleito	eleger	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
-3	deputado	deputar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	2	xcomp	_	_
+3	deputado	deputado	NOUN	_	Gender=Masc|Number=Sing	2	nsubj:pass	_	_
 4-5	à	_	_	_	_	_	_	_	_
 4	a	a	ADP	_	_	6	case	_	_
 5	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	6	det	_	_
-6	Assembléia	Assembléia	PROPN	_	Gender=Fem|Number=Sing	2	obl	_	_
+6	Assembléia	Assembléia	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	3	nmod	_	_
 7	Nacional	Nacional	PROPN	_	Number=Sing	6	flat:name	_	_
 8	Constituinte	Constituinte	PROPN	_	Number=Sing	6	flat:name	_	_
 9-10	pelo	_	_	_	_	_	_	_	_
 9	por	por	ADP	_	_	11	case	_	_
 10	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	_	_
-11	Ceará	Ceará	PROPN	_	Gender=Masc|Number=Sing	6	nmod	_	_
+11	Ceará	Ceará	PROPN	_	Gender=Masc|Number=Sing	2	obl	_	_
 12	em	em	ADP	_	_	13	case	_	_
-13	maio	maio	NOUN	_	Gender=Masc|Number=Sing	6	nmod	_	_
+13	maio	maio	NOUN	_	Gender=Masc|Number=Sing	2	obl	_	_
 14	de	de	ADP	_	_	15	case	_	_
 15	1933	1933	NUM	_	NumType=Card	13	nmod	_	_
 16-17	na	_	_	_	_	_	_	_	_
 16	em	em	ADP	_	_	18	case	_	_
 17	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	18	det	_	_
-18	legenda	legenda	NOUN	_	Gender=Fem|Number=Sing	13	nmod	_	_
+18	legenda	legenda	NOUN	_	Gender=Fem|Number=Sing	2	obl	_	_
 19-20	do	_	_	_	_	_	_	_	_
 19	de	de	ADP	_	_	21	case	_	_
 20	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	21	det	_	_
 21	PSD	PSD	PROPN	_	Gender=Masc|Number=Sing	18	nmod	_	SpaceAfter=No
-22	.	.	PUNCT	_	_	2	punct	_	SpacesAfter=\n
+22	.	.	PUNCT	_	_	2	punct	_	_
 
-# text = Como constituinte pleiteou a vigência provisória de uma constituição sintética e uma forma eclética de governo, entre o parlamentarismo e o presidencialismo.
 # sent_id = 10
+# text = Como constituinte pleiteou a vigência provisória de uma constituição sintética e uma forma eclética de governo, entre o parlamentarismo e o presidencialismo.
 1	Como	como	ADP	_	_	2	case	_	_
-2	constituinte	constituinte	NUM	_	NumType=Card	3	obl	_	_
+2	constituinte	constituinte	NOUN	_	Gender=Masc|Number=Sing	3	obl	_	_
 3	pleiteou	pleitear	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 4	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	5	det	_	_
 5	vigência	vigência	NOUN	_	Gender=Fem|Number=Sing	3	obj	_	_
@@ -328,15 +331,15 @@
 17	,	,	PUNCT	_	_	20	punct	_	_
 18	entre	entre	ADP	_	_	20	case	_	_
 19	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	20	det	_	_
-20	parlamentarismo	parlamentarismo	NOUN	_	Gender=Masc|Number=Sing	9	conj	_	_
+20	parlamentarismo	parlamentarismo	NOUN	_	Gender=Masc|Number=Sing	5	nmod	_	_
 21	e	e	CCONJ	_	_	23	cc	_	_
 22	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	23	det	_	_
-23	presidencialismo	presidencialismo	NOUN	_	Gender=Masc|Number=Sing	5	conj	_	SpaceAfter=No
-24	.	.	PUNCT	_	_	3	punct	_	SpacesAfter=\n
+23	presidencialismo	presidencialismo	NOUN	_	Gender=Masc|Number=Sing	20	conj	_	SpaceAfter=No
+24	.	.	PUNCT	_	_	3	punct	_	_
 
-# text = Favorável à unificação da magistratura, idealizou outras emendas a respeito da organização dos estados, principalmente no capítulo sobre os direitos sociais, e desenvolveu um estudo sobre o estado de sítio.
 # sent_id = 11
-1	Favorável	favorável	ADJ	_	Gender=Unsp|Number=Sing	9	amod	_	_
+# text = Favorável à unificação da magistratura, idealizou outras emendas a respeito da organização dos estados, principalmente no capítulo sobre os direitos sociais, e desenvolveu um estudo sobre o estado de sítio.
+1	Favorável	favorável	ADJ	_	Gender=Masc|Number=Sing	9	amod	_	_
 2-3	à	_	_	_	_	_	_	_	_
 2	a	a	ADP	_	_	4	case	_	_
 3	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	4	det	_	_
@@ -349,12 +352,12 @@
 9	idealizou	idealizar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 10	outras	outro	DET	_	Gender=Fem|Number=Plur|PronType=Ind	11	det	_	_
 11	emendas	emenda	NOUN	_	Gender=Fem|Number=Plur	9	obj	_	_
-12	a	a	ADP	_	_	13	case	_	_
-13	respeito	respeito	NOUN	_	Gender=Masc|Number=Sing	11	nmod	_	_
+12	a	a	ADP	_	_	16	case	_	_
+13	respeito	respeito	NOUN	_	Gender=Masc|Number=Sing	12	fixed	_	_
 14-15	da	_	_	_	_	_	_	_	_
 14	de	de	ADP	_	_	16	case	_	_
 15	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	16	det	_	_
-16	organização	organização	NOUN	_	Gender=Fem|Number=Sing	13	nmod	_	_
+16	organização	organização	NOUN	_	Gender=Fem|Number=Sing	11	nmod	_	_
 17-18	dos	_	_	_	_	_	_	_	_
 17	de	de	ADP	_	_	19	case	_	_
 18	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	19	det	_	_
@@ -364,116 +367,119 @@
 22-23	no	_	_	_	_	_	_	_	_
 22	em	em	ADP	_	_	24	case	_	_
 23	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	24	det	_	_
-24	capítulo	capítulo	NOUN	_	Gender=Masc|Number=Sing	11	conj	_	_
+24	capítulo	capítulo	NOUN	_	Gender=Masc|Number=Sing	9	obl	_	_
 25	sobre	sobre	ADP	_	_	27	case	_	_
 26	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	27	det	_	_
 27	direitos	direito	NOUN	_	Gender=Masc|Number=Plur	24	nmod	_	_
 28	sociais	social	ADJ	_	Gender=Masc|Number=Plur	27	amod	_	SpaceAfter=No
-29	,	,	PUNCT	_	_	24	punct	_	_
+29	,	,	PUNCT	_	_	31	punct	_	_
 30	e	e	CCONJ	_	_	31	cc	_	_
 31	desenvolveu	desenvolver	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	9	conj	_	_
 32	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	33	det	_	_
 33	estudo	estudo	NOUN	_	Gender=Masc|Number=Sing	31	obj	_	_
 34	sobre	sobre	ADP	_	_	36	case	_	_
 35	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	36	det	_	_
-36	estado	estado	NOUN	_	Gender=Masc|Number=Sing	33	nmod	_	_
-37	de	de	ADP	_	_	38	case	_	_
+36	estado	estado	NOUN	_	ExtPos=NOUN|Gender=Masc|Number=Sing	33	nmod	_	_
+37	de	de	ADP	_	_	36	compound	_	_
 38	sítio	sítio	NOUN	_	Gender=Masc|Number=Sing	36	nmod	_	SpaceAfter=No
-39	.	.	PUNCT	_	_	9	punct	_	SpacesAfter=\n
+39	.	.	PUNCT	_	_	9	punct	_	_
 
-# text = Em abril de 1934 «O Estado de S. Paulo» revelou que o PSD do Ceará decidira telegrafar a Pontes Vieira e aos deputados Fernandes Távora, João Leal, José de Borda e Leão Sampaio, delegando-lhes poderes para assinarem o manifesto em que seria lançada a candidatura de Getúlio Vargas à presidência da República.
 # sent_id = 12
+# text = Em abril de 1934
 1	Em	em	ADP	_	_	2	case	_	_
-2	abril	abril	NOUN	_	Gender=Masc|Number=Sing	12	obl	_	_
-3	de	de	ADP	_	_	6	case	_	_
-4	1934	1934	NUM	_	NumType=Card	6	nummod	_	_
-5	«	«	PUNCT	_	_	6	punct	_	SpaceAfter=No
-6	O	O	PROPN	_	Gender=Masc|Number=Sing|PronType=Art	2	nmod	_	_
-7	Estado	Estado	PROPN	_	Number=Sing	6	flat:name	_	_
-8	de	de	ADP	_	_	9	case	_	_
-9	S.	S.	PROPN	_	Number=Sing	6	nmod	_	_
-10	Paulo	Paulo	PROPN	_	Number=Sing	9	flat:name	_	SpaceAfter=No
-11	»	»	PUNCT	_	_	2	punct	_	_
-12	revelou	revelar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
-13	que	que	SCONJ	_	_	20	mark	_	_
-14	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	15	det	_	_
-15	PSD	PSD	PROPN	_	Gender=Masc|Number=Sing	20	nsubj	_	_
-16-17	do	_	_	_	_	_	_	_	_
-16	de	de	ADP	_	_	18	case	_	_
-17	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	18	det	_	_
-18	Ceará	Ceará	PROPN	_	Gender=Masc|Number=Sing	15	nmod	_	_
-19	decidira	decidirar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	12	ccomp	_	_
-20	telegrafar	telegrafar	VERB	_	VerbForm=Inf	19	xcomp	_	_
-21	a	a	ADP	_	_	22	case	_	_
-22	Pontes	pontes	PROPN	_	Gender=Masc|Number=Sing	20	obl	_	_
-23	Vieira	Vieira	PROPN	_	Number=Sing	22	flat:name	_	_
-24	e	e	CCONJ	_	_	27	cc	_	_
-25-26	aos	_	_	_	_	_	_	_	_
-25	a	a	ADP	_	_	27	case	_	_
-26	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	27	det	_	_
-27	deputados	deputado	NOUN	_	Gender=Masc|Number=Plur	22	conj	_	_
-28	Fernandes	Fernandes	PROPN	_	Gender=Masc|Number=Sing	27	appos	_	_
-29	Távora	Távora	PROPN	_	Number=Sing	28	flat:name	_	SpaceAfter=No
-30	,	,	PUNCT	_	_	31	punct	_	_
-31	João	João	PROPN	_	Gender=Masc|Number=Sing	28	conj	_	_
-32	Leal	Leal	PROPN	_	Number=Sing	31	flat:name	_	SpaceAfter=No
-33	,	,	PUNCT	_	_	34	punct	_	_
-34	José	José	PROPN	_	Gender=Masc|Number=Sing	28	conj	_	_
-35	de	de	ADP	_	_	36	case	_	_
-36	Borda	Borda	PROPN	_	Number=Sing	34	nmod	_	_
-37	e	e	CCONJ	_	_	38	cc	_	_
-38	Leão	Leão	PROPN	_	Gender=Masc|Number=Sing	28	conj	_	_
-39	Sampaio	Sampaio	PROPN	_	Number=Sing	38	flat:name	_	SpaceAfter=No
-40	,	,	PUNCT	_	_	41	punct	_	_
-41-42	delegando-lhes	_	_	_	_	_	_	_	_
-41	delegando	delegar	VERB	_	VerbForm=Ger	20	advcl	_	_
-42	lhes	eles	PRON	_	Case=Dat|Gender=Masc|Number=Plur|Person=3|PronType=Prs	43	advmod	_	_
-43	poderes	poder	NOUN	_	Gender=Masc|Number=Plur	41	obj	_	_
-44	para	para	SCONJ	_	_	45	mark	_	_
-45	assinarem	assinar	VERB	_	Number=Plur|Person=3|VerbForm=Inf	41	advcl	_	_
-46	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	47	det	_	_
-47	manifesto	manifesto	NOUN	_	Gender=Masc|Number=Sing	45	obj	_	_
-48	em	em	ADP	_	_	49	case	_	_
-49	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	51	obl	_	_
-50	seria	ser	AUX	_	Mood=Cnd|Number=Sing|Person=3|VerbForm=Fin	51	aux:pass	_	_
-51	lançada	lançar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	47	acl:relcl	_	_
-52	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	53	det	_	_
-53	candidatura	candidatura	NOUN	_	Gender=Fem|Number=Sing	51	nsubj:pass	_	_
-54	de	de	ADP	_	_	55	case	_	_
-55	Getúlio	Getúlio	PROPN	_	Gender=Masc|Number=Sing	53	nmod	_	_
-56	Vargas	Vargas	PROPN	_	Number=Sing	55	flat:name	_	_
-57-58	à	_	_	_	_	_	_	_	_
-57	a	a	ADP	_	_	59	case	_	_
-58	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	59	det	_	_
-59	presidência	presidência	NOUN	_	Gender=Fem|Number=Sing	55	nmod	_	_
-60-61	da	_	_	_	_	_	_	_	_
-60	de	de	ADP	_	_	62	case	_	_
-61	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	62	det	_	_
-62	República	República	PROPN	_	Number=Sing	59	nmod	_	SpaceAfter=No
-63	.	.	PUNCT	_	_	12	punct	_	SpacesAfter=\n
+2	abril	abril	NOUN	_	Gender=Masc|Number=Sing	0	root	_	_
+3	de	de	ADP	_	_	4	case	_	_
+4	1934	1934	NUM	_	NumType=Card	2	nmod	_	_
 
-# text = Com a promulgação da nova Carta (16/7/1934) e a eleição de Vargas para a presidência, teve seu mandato estendido até maio de 1935.
 # sent_id = 13
+# text = «O Estado de S. Paulo» revelou que o PSD do Ceará decidira telegrafar a Pontes Vieira e aos deputados Fernandes Távora, João Leal, José de Borda e Leão Sampaio, delegando-lhes poderes para assinarem o manifesto em que seria lançada a candidatura de Getúlio Vargas à presidência da República.
+1	«	«	PUNCT	_	_	2	punct	_	SpaceAfter=No
+2	O	O	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing|PronType=Art	8	nsubj	_	_
+3	Estado	Estado	PROPN	_	Number=Sing	2	flat:name	_	_
+4	de	de	ADP	_	_	5	case	_	_
+5	S.	São	PROPN	_	ExtPos=PROPN|Number=Sing	2	nmod	_	_
+6	Paulo	Paulo	PROPN	_	Number=Sing	5	flat:name	_	SpaceAfter=No
+7	»	»	PUNCT	_	_	2	punct	_	_
+8	revelou	revelar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+9	que	que	SCONJ	_	_	15	mark	_	_
+10	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	_	_
+11	PSD	PSD	PROPN	_	Gender=Masc|Number=Sing	15	nsubj	_	_
+12-13	do	_	_	_	_	_	_	_	_
+12	de	de	ADP	_	_	14	case	_	_
+13	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	14	det	_	_
+14	Ceará	Ceará	PROPN	_	Gender=Masc|Number=Sing	11	nmod	_	_
+15	decidira	decidir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pqp|VerbForm=Fin	8	ccomp	_	_
+16	telegrafar	telegrafar	VERB	_	VerbForm=Inf	15	xcomp	_	_
+17	a	a	ADP	_	_	18	case	_	_
+18	Pontes	Pontes	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	16	obl	_	_
+19	Vieira	Vieira	PROPN	_	Number=Sing	18	flat:name	_	_
+20	e	e	CCONJ	_	_	23	cc	_	_
+21-22	aos	_	_	_	_	_	_	_	_
+21	a	a	ADP	_	_	23	case	_	_
+22	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	23	det	_	_
+23	deputados	deputado	NOUN	_	Gender=Masc|Number=Plur	18	conj	_	_
+24	Fernandes	Fernandes	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	23	appos	_	_
+25	Távora	Távora	PROPN	_	Number=Sing	24	flat:name	_	SpaceAfter=No
+26	,	,	PUNCT	_	_	27	punct	_	_
+27	João	João	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	24	conj	_	_
+28	Leal	Leal	PROPN	_	Number=Sing	27	flat:name	_	SpaceAfter=No
+29	,	,	PUNCT	_	_	30	punct	_	_
+30	José	José	PROPN	_	Gender=Masc|Number=Sing	24	conj	_	_
+31	de	de	ADP	_	_	32	case	_	_
+32	Borda	Borda	PROPN	_	Number=Sing	30	nmod	_	_
+33	e	e	CCONJ	_	_	34	cc	_	_
+34	Leão	Leão	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	24	conj	_	_
+35	Sampaio	Sampaio	PROPN	_	Number=Sing	34	flat:name	_	SpaceAfter=No
+36	,	,	PUNCT	_	_	37	punct	_	_
+37-38	delegando-lhes	_	_	_	_	_	_	_	_
+37	delegando	delegar	VERB	_	VerbForm=Ger	16	advcl	_	_
+38	lhes	eles	PRON	_	Case=Dat|Gender=Masc|Number=Plur|Person=3|PronType=Prs	37	iobj	_	_
+39	poderes	poder	NOUN	_	Gender=Masc|Number=Plur	37	obj	_	_
+40	para	para	SCONJ	_	_	41	mark	_	_
+41	assinarem	assinar	VERB	_	Number=Plur|Person=3|VerbForm=Inf	39	acl	_	_
+42	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	43	det	_	_
+43	manifesto	manifesto	NOUN	_	Gender=Masc|Number=Sing	41	obj	_	_
+44	em	em	ADP	_	_	45	case	_	_
+45	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	47	obl	_	_
+46	seria	ser	AUX	_	Mood=Cnd|Number=Sing|Person=3|VerbForm=Fin	47	aux:pass	_	_
+47	lançada	lançar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	43	acl:relcl	_	_
+48	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	49	det	_	_
+49	candidatura	candidatura	NOUN	_	Gender=Fem|Number=Sing	47	nsubj:pass	_	_
+50	de	de	ADP	_	_	51	case	_	_
+51	Getúlio	Getúlio	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	49	nmod	_	_
+52	Vargas	Vargas	PROPN	_	Number=Sing	51	flat:name	_	_
+53-54	à	_	_	_	_	_	_	_	_
+53	a	a	ADP	_	_	55	case	_	_
+54	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	55	det	_	_
+55	presidência	presidência	NOUN	_	Gender=Fem|Number=Sing	49	nmod	_	_
+56-57	da	_	_	_	_	_	_	_	_
+56	de	de	ADP	_	_	58	case	_	_
+57	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	58	det	_	_
+58	República	república	PROPN	_	Gender=Fem|Number=Sing	55	nmod	_	SpaceAfter=No
+59	.	.	PUNCT	_	_	8	punct	_	SpacesAfter=\n
+
+# sent_id = 14
+# text = Com a promulgação da nova Carta (16/7/1934) e a eleição de Vargas para a presidência, teve seu mandato estendido até maio de 1935.
 1	Com	com	ADP	_	_	3	case	_	_
 2	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	3	det	_	_
 3	promulgação	promulgação	NOUN	_	Gender=Fem|Number=Sing	20	obl	_	_
 4-5	da	_	_	_	_	_	_	_	_
-4	de	de	ADP	_	_	6	case	_	_
-5	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	6	det	_	_
-6	nova	nova	PROPN	_	Gender=Fem|Number=Sing	3	nmod	_	_
-7	Carta	carta	PROPN	_	Number=Sing	6	flat:name	_	_
+4	de	de	ADP	_	_	7	case	_	_
+5	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	7	det	_	_
+6	nova	novo	ADJ	_	Gender=Fem|Number=Sing	7	amod	_	_
+7	Carta	Carta	PROPN	_	Gender=Fem|Number=Sing	3	nmod	_	_
 8	(	(	PUNCT	_	_	9	punct	_	SpaceAfter=No
-9	16/7/1934	16/7/1934	NUM	_	NumType=Card	6	appos	_	SpaceAfter=No
+9	16/7/1934	16/7/1934	NUM	_	NumType=Card	7	parataxis	_	SpaceAfter=No
 10	)	)	PUNCT	_	_	9	punct	_	_
 11	e	e	CCONJ	_	_	13	cc	_	_
 12	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	13	det	_	_
 13	eleição	eleição	NOUN	_	Gender=Fem|Number=Sing	3	conj	_	_
 14	de	de	ADP	_	_	15	case	_	_
-15	Vargas	Varga	NOUN	_	Gender=Fem|Number=Plur	13	nmod	_	_
+15	Vargas	Vargas	PROPN	_	Gender=Masc|Number=Sing	13	nmod	_	_
 16	para	para	ADP	_	_	18	case	_	_
 17	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	18	det	_	_
-18	presidência	presidência	NOUN	_	Gender=Fem|Number=Sing	15	nmod	_	SpaceAfter=No
-19	,	,	PUNCT	_	_	3	punct	_	_
+18	presidência	presidência	NOUN	_	Gender=Fem|Number=Sing	13	nmod	_	SpaceAfter=No
+19	,	,	PUNCT	_	_	13	punct	_	_
 20	teve	ter	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 21	seu	seu	DET	_	Gender=Masc|Number=Sing|PronType=Prs	22	det	_	_
 22	mandato	mandato	NOUN	_	Gender=Masc|Number=Sing	20	obj	_	_
@@ -482,17 +488,17 @@
 25	maio	maio	NOUN	_	Gender=Masc|Number=Sing	23	obl	_	_
 26	de	de	ADP	_	_	27	case	_	_
 27	1935	1935	NUM	_	NumType=Card	25	nmod	_	SpaceAfter=No
-28	.	.	PUNCT	_	_	20	punct	_	SpacesAfter=\n
+28	.	.	PUNCT	_	_	20	punct	_	_
 
+# sent_id = 15
 # text = Eleito deputado federal pelo Ceará em outubro de 1934, ainda na legenda do PSD, permaneceu na Câmara até o dia 10 de novembro de 1937, quando o advento do Estado Novo suprimiu os órgãos legislativos do país.
-# sent_id = 14
 1	Eleito	eleger	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	20	advcl	_	_
 2	deputado	deputado	NOUN	_	Gender=Masc|Number=Sing	1	obj	_	_
 3	federal	federal	ADJ	_	Gender=Masc|Number=Sing	2	amod	_	_
 4-5	pelo	_	_	_	_	_	_	_	_
 4	por	por	ADP	_	_	6	case	_	_
 5	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	6	det	_	_
-6	Ceará	Ceará	PROPN	_	Gender=Masc|Number=Sing	2	nmod	_	_
+6	Ceará	Ceará	PROPN	_	Gender=Masc|Number=Sing	1	obl	_	_
 7	em	em	ADP	_	_	8	case	_	_
 8	outubro	outubro	NOUN	_	Gender=Masc|Number=Sing	1	obl	_	_
 9	de	de	ADP	_	_	10	case	_	_
@@ -502,12 +508,12 @@
 13-14	na	_	_	_	_	_	_	_	_
 13	em	em	ADP	_	_	15	case	_	_
 14	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	15	det	_	_
-15	legenda	legenda	NOUN	_	Gender=Fem|Number=Sing	1	obl	_	_
+15	legenda	legenda	NOUN	_	Gender=Fem|Number=Sing	20	obl	_	_
 16-17	do	_	_	_	_	_	_	_	_
 16	de	de	ADP	_	_	18	case	_	_
 17	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	18	det	_	_
 18	PSD	PSD	PROPN	_	Gender=Masc|Number=Sing	15	nmod	_	SpaceAfter=No
-19	,	,	PUNCT	_	_	1	punct	_	_
+19	,	,	PUNCT	_	_	15	punct	_	_
 20	permaneceu	permanecer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 21-22	na	_	_	_	_	_	_	_	_
 21	em	em	ADP	_	_	23	case	_	_
@@ -528,8 +534,8 @@
 36-37	do	_	_	_	_	_	_	_	_
 36	de	de	ADP	_	_	38	case	_	_
 37	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	38	det	_	_
-38	Estado	Estado	PROPN	_	Gender=Masc|Number=Sing	35	nmod	_	_
-39	Novo	Novo	PROPN	_	Number=Sing	38	flat:name	_	_
+38	Estado	Estado	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	35	nmod	_	_
+39	Novo	novo	ADJ	_	Gender=Masc|Number=Sing	38	amod	_	_
 40	suprimiu	suprimir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	20	advcl	_	_
 41	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	42	det	_	_
 42	órgãos	órgão	NOUN	_	Gender=Masc|Number=Plur	40	obj	_	_
@@ -540,15 +546,15 @@
 46	país	país	NOUN	_	Gender=Masc|Number=Sing	42	nmod	_	SpaceAfter=No
 47	.	.	PUNCT	_	_	20	punct	_	SpacesAfter=\n
 
+# sent_id = 16
 # text = Desembargador e procurador da Fazenda, foi ainda membro do Instituto dos Advogados do Ceará e da Academia Cearense de Letras.
-# sent_id = 15
-1	Desembargador	desembargador	NOUN	_	Gender=Masc|Number=Sing	10	nsubj	_	_
+1	Desembargador	desembargador	NOUN	_	Gender=Masc|Number=Sing	10	nmod	_	_
 2	e	e	CCONJ	_	_	3	cc	_	_
 3	procurador	procurador	NOUN	_	Gender=Masc|Number=Sing	1	conj	_	_
 4-5	da	_	_	_	_	_	_	_	_
 4	de	de	ADP	_	_	6	case	_	_
 5	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	6	det	_	_
-6	Fazenda	fazenda	PROPN	_	Gender=Fem|Number=Sing	1	nmod	_	SpaceAfter=No
+6	Fazenda	fazenda	NOUN	_	Gender=Fem|Number=Sing	3	nmod	_	SpaceAfter=No
 7	,	,	PUNCT	_	_	1	punct	_	_
 8	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	10	cop	_	_
 9	ainda	ainda	ADV	_	_	10	advmod	_	_
@@ -560,45 +566,45 @@
 14-15	dos	_	_	_	_	_	_	_	_
 14	de	de	ADP	_	_	16	case	_	_
 15	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	16	det	_	_
-16	Advogados	advogado	NOUN	_	Gender=Masc|Number=Plur	13	nmod	_	_
+16	Advogados	Advogados	PROPN	_	Number=Sing	13	nmod	_	_
 17-18	do	_	_	_	_	_	_	_	_
 17	de	de	ADP	_	_	19	case	_	_
 18	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	19	det	_	_
-19	Ceará	Ceará	PROPN	_	Gender=Masc|Number=Sing	16	nmod	_	_
+19	Ceará	Ceará	PROPN	_	Number=Sing	16	nmod	_	_
 20	e	e	CCONJ	_	_	23	cc	_	_
 21-22	da	_	_	_	_	_	_	_	_
 21	de	de	ADP	_	_	23	case	_	_
 22	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	23	det	_	_
-23	Academia	Academia	PROPN	_	Gender=Fem|Number=Sing	19	conj	_	_
-24	Cearense	cearense	PROPN	_	Number=Sing	23	flat:name	_	_
+23	Academia	Academia	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	13	conj	_	_
+24	Cearense	Cearense	PROPN	_	Number=Sing	23	flat:name	_	_
 25	de	de	ADP	_	_	26	case	_	_
-26	Letras	Letras	PROPN	_	Number=Sing	23	flat:name	_	SpaceAfter=No
+26	Letras	Letras	PROPN	_	Number=Sing	23	nmod	_	SpaceAfter=No
 27	.	.	PUNCT	_	_	10	punct	_	SpacesAfter=\n
 
+# sent_id = 17
 # text = Casou-se com Guiomar da Costa Lima Vieira.
-# sent_id = 16
 1-2	Casou-se	_	_	_	_	_	_	_	_
-1	Casou	Casar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+1	Casou	casar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	1	expl	_	_
 3	com	com	ADP	_	_	4	case	_	_
-4	Guiomar	Guiomar	PROPN	_	Gender=Masc|Number=Sing	1	obl	_	_
+4	Guiomar	Guiomar	PROPN	_	Gender=Masc|Number=Sing	1	obj	_	_
 5-6	da	_	_	_	_	_	_	_	_
 5	de	de	ADP	_	_	7	case	_	_
 6	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	7	det	_	_
-7	Costa	Costa	PROPN	_	Number=Sing	4	nmod	_	_
-8	Lima	lima	PROPN	_	Number=Sing	7	flat:name	_	_
+7	Costa	Costa	PROPN	_	ExtPos=PROPN|Number=Sing	4	nmod	_	_
+8	Lima	Lima	PROPN	_	Number=Sing	7	flat:name	_	_
 9	Vieira	Vieira	PROPN	_	Number=Sing	7	flat:name	_	SpaceAfter=No
 10	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
 
+# sent_id = 18
 # text = Publicou Institutos jurídicos (monografias, 1925).
-# sent_id = 17
 1	Publicou	publicar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2	Institutos	instituto	NOUN	_	Gender=Masc|Number=Plur	1	obj	_	_
 3	jurídicos	jurídico	ADJ	_	Gender=Masc|Number=Plur	2	amod	_	_
 4	(	(	PUNCT	_	_	5	punct	_	SpaceAfter=No
 5	monografias	monografia	NOUN	_	Gender=Fem|Number=Plur	2	appos	_	SpaceAfter=No
 6	,	,	PUNCT	_	_	7	punct	_	_
-7	1925	1925	NUM	_	NumType=Card	5	appos	_	SpaceAfter=No
+7	1925	1925	NUM	_	NumType=Card	5	nmod	_	SpaceAfter=No
 8	)	)	PUNCT	_	_	5	punct	_	SpaceAfter=No
 9	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
 

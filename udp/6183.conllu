@@ -1,16 +1,19 @@
-# text = Partido político alagoano.
-# sent_id = 1
-# newpar
+# generator = UDPipe 2, https://lindat.mff.cuni.cz/services/udpipe
+# udpipe_model = portuguese-bosque-ud-2.12-230717
+# udpipe_model_licence = CC BY-NC-SA
 # newdoc
-1	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	0	root	_	_
-2	político	político	PROPN	_	Number=Sing	1	flat:name	_	_
-3	alagoano	alagoano	PROPN	_	Number=Sing	1	flat:name	_	SpaceAfter=No
-4	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
+# newpar
+# sent_id = 1
+# text = Partido político alagoano.
+1	Partido	partido	NOUN	_	Gender=Masc|Number=Sing	0	root	_	_
+2	político	político	ADJ	_	Gender=Masc|Number=Sing	1	amod	_	_
+3	alagoano	alagoano	ADJ	_	Gender=Masc|Number=Sing	1	amod	_	SpaceAfter=No
+4	.	.	PUNCT	_	_	1	punct	_	_
 
-# text = Esteve representado na convenção de lançamento da candidatura oficial de José Américo de Almeida à presidência da República, em 25 de maio de 1937, pelo senador Costa Rego, que discursou na solenidade.
 # sent_id = 2
+# text = Esteve representado na convenção de lançamento da candidatura oficial de José Américo de Almeida à presidência da República, em 25 de maio de 1937, pelo senador Costa Rego, que discursou na solenidade.
 1	Esteve	estar	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	cop	_	_
-2	representado	representar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	0	root	_	_
+2	representado	representado	ADJ	_	Gender=Masc|Number=Sing	0	root	_	_
 3-4	na	_	_	_	_	_	_	_	_
 3	em	em	ADP	_	_	5	case	_	_
 4	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	5	det	_	_
@@ -23,32 +26,32 @@
 10	candidatura	candidatura	NOUN	_	Gender=Fem|Number=Sing	7	nmod	_	_
 11	oficial	oficial	ADJ	_	Gender=Fem|Number=Sing	10	amod	_	_
 12	de	de	ADP	_	_	13	case	_	_
-13	José	José	PROPN	_	Gender=Masc|Number=Sing	10	nmod	_	_
+13	José	José	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	10	nmod	_	_
 14	Américo	Américo	PROPN	_	Number=Sing	13	flat:name	_	_
 15	de	de	ADP	_	_	16	case	_	_
 16	Almeida	Almeida	PROPN	_	Number=Sing	13	nmod	_	_
 17-18	à	_	_	_	_	_	_	_	_
 17	a	a	ADP	_	_	19	case	_	_
 18	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	19	det	_	_
-19	presidência	presidência	NOUN	_	Gender=Fem|Number=Sing	10	nmod	_	_
+19	presidência	presidência	PROPN	_	Gender=Fem|Number=Sing	10	nmod	_	_
 20-21	da	_	_	_	_	_	_	_	_
 20	de	de	ADP	_	_	22	case	_	_
 21	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	22	det	_	_
 22	República	República	PROPN	_	Number=Sing	19	nmod	_	SpaceAfter=No
-23	,	,	PUNCT	_	_	2	punct	_	_
+23	,	,	PUNCT	_	_	25	punct	_	_
 24	em	em	ADP	_	_	25	case	_	_
-25	25	25	NUM	_	NumType=Card	2	obl	_	_
+25	25	25	NUM	_	NumType=Card	10	nmod	_	_
 26	de	de	ADP	_	_	27	case	_	_
 27	maio	maio	NOUN	_	Gender=Masc|Number=Sing	25	nmod	_	_
 28	de	de	ADP	_	_	29	case	_	_
 29	1937	1937	NUM	_	NumType=Card	27	nmod	_	SpaceAfter=No
-30	,	,	PUNCT	_	_	2	punct	_	_
+30	,	,	PUNCT	_	_	25	punct	_	_
 31-32	pelo	_	_	_	_	_	_	_	_
 31	por	por	ADP	_	_	33	case	_	_
 32	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	33	det	_	_
-33	senador	senador	PROPN	_	Gender=Masc|Number=Sing	2	obl	_	_
-34	Costa	Costa	PROPN	_	Number=Sing	33	flat:name	_	_
-35	Rego	Rego	PROPN	_	Number=Sing	33	flat:name	_	SpaceAfter=No
+33	senador	senador	NOUN	_	Gender=Masc|Number=Sing	2	obl	_	_
+34	Costa	Costa	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	33	appos	_	_
+35	Rego	Rego	PROPN	_	Number=Sing	34	flat:name	_	SpaceAfter=No
 36	,	,	PUNCT	_	_	38	punct	_	_
 37	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	38	nsubj	_	_
 38	discursou	discursar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	33	acl:relcl	_	_

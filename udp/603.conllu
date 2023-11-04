@@ -1,17 +1,20 @@
-# text = «João Becker» nasceu em Sankt Wendel, Alemanha, no dia 24 de fevereiro de 1870, filho do professor Karl Becker e de Katharina Weyand Becker.
-# sent_id = 1
+# generator = UDPipe 2, https://lindat.mff.cuni.cz/services/udpipe
+# udpipe_model = portuguese-bosque-ud-2.12-230717
+# udpipe_model_licence = CC BY-NC-SA
+# newdoc
 # newpar
-# newdoc id = ../raw/603.raw
-1	«	«	PUNCT	_	_	2	punct	_	SpaceAfter=No|SpacesBefore=\n
-2	João	João	PROPN	_	Gender=Masc|Number=Sing	5	nsubj	_	_
+# sent_id = 1
+# text = «João Becker» nasceu em Sankt Wendel, Alemanha, no dia 24 de fevereiro de 1870, filho do professor Karl Becker e de Katharina Weyand Becker.
+1	«	«	PUNCT	_	_	2	punct	_	SpaceAfter=No
+2	João	João	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	5	nsubj	_	_
 3	Becker	Becker	PROPN	_	Number=Sing	2	flat:name	_	SpaceAfter=No
 4	»	»	PUNCT	_	_	2	punct	_	_
 5	nasceu	nascer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 6	em	em	ADP	_	_	7	case	_	_
-7	Sankt	Sankt	PROPN	_	Gender=Masc|Number=Sing	5	obl	_	_
+7	Sankt	Sankt	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	5	obl	_	_
 8	Wendel	Wendel	PROPN	_	Number=Sing	7	flat:name	_	SpaceAfter=No
 9	,	,	PUNCT	_	_	10	punct	_	_
-10	Alemanha	Alemanha	PROPN	_	Gender=Fem|Number=Sing	7	appos	_	SpaceAfter=No
+10	Alemanha	Alemanha	PROPN	_	Gender=Fem|Number=Sing	7	parataxis	_	SpaceAfter=No
 11	,	,	PUNCT	_	_	10	punct	_	_
 12-13	no	_	_	_	_	_	_	_	_
 12	em	em	ADP	_	_	14	case	_	_
@@ -19,27 +22,26 @@
 14	dia	dia	NOUN	_	Gender=Masc|Number=Sing	5	obl	_	_
 15	24	24	NUM	_	NumType=Card	14	nummod	_	_
 16	de	de	ADP	_	_	17	case	_	_
-17	fevereiro	fevereiro	NOUN	_	Gender=Masc|Number=Sing	14	nmod:tmod	_	_
+17	fevereiro	fevereiro	NOUN	_	Gender=Masc|Number=Sing	14	nmod	_	_
 18	de	de	ADP	_	_	19	case	_	_
 19	1870	1870	NUM	_	NumType=Card	17	nmod	_	SpaceAfter=No
 20	,	,	PUNCT	_	_	21	punct	_	_
-21	filho	filho	NOUN	_	Gender=Masc|Number=Sing	19	conj	_	_
+21	filho	filho	NOUN	_	Gender=Masc|Number=Sing	5	obl	_	_
 22-23	do	_	_	_	_	_	_	_	_
 22	de	de	ADP	_	_	24	case	_	_
 23	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	24	det	_	_
 24	professor	professor	NOUN	_	Gender=Masc|Number=Sing	21	nmod	_	_
-25	Karl	Karl	PROPN	_	Gender=Masc|Number=Sing	24	appos	_	_
+25	Karl	Karl	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	24	appos	_	_
 26	Becker	Becker	PROPN	_	Number=Sing	25	flat:name	_	_
 27	e	e	CCONJ	_	_	29	cc	_	_
 28	de	de	ADP	_	_	29	case	_	_
-29	Katharina	Katharina	PROPN	_	Gender=Masc|Number=Sing	24	conj	_	_
+29	Katharina	Katharina	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	24	conj	_	_
 30	Weyand	Weyand	PROPN	_	Number=Sing	29	flat:name	_	_
 31	Becker	Becker	PROPN	_	Number=Sing	29	flat:name	_	SpaceAfter=No
-32	.	.	PUNCT	_	_	5	punct	_	_
+32	.	.	PUNCT	_	_	5	punct	_	SpacesAfter=\n
 
-# text = Aos oito anos transferiu-se para o Brasil com os pais e quatro irmãos, fixando-se em São João do Montenegro (atual Montenegro, RS), onde nasceram seus dois irmãos menores.
 # sent_id = 2
-# newpar
+# text = Aos oito anos transferiu-se para o Brasil com os pais e quatro irmãos, fixando-se em São João do Montenegro (atual Montenegro, RS), onde nasceram seus dois irmãos menores.
 1-2	Aos	_	_	_	_	_	_	_	_
 1	A	a	ADP	_	_	4	case	_	_
 2	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	4	det	_	_
@@ -47,7 +49,7 @@
 4	anos	ano	NOUN	_	Gender=Masc|Number=Plur	5	obl	_	_
 5-6	transferiu-se	_	_	_	_	_	_	_	_
 5	transferiu	transferir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
-6	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Plur|Person=3|PronType=Prs	5	expl	_	_
+6	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	5	expl	_	_
 7	para	para	ADP	_	_	9	case	_	_
 8	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	9	det	_	_
 9	Brasil	Brasil	PROPN	_	Gender=Masc|Number=Sing	5	obl	_	_
@@ -62,29 +64,29 @@
 17	fixando	fixar	VERB	_	VerbForm=Ger	5	advcl	_	_
 18	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	17	expl	_	_
 19	em	em	ADP	_	_	20	case	_	_
-20	São	São	PROPN	_	Gender=Masc|Number=Sing	17	obl	_	_
+20	São	São	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	17	obl	_	_
 21	João	João	PROPN	_	Number=Sing	20	flat:name	_	_
 22-23	do	_	_	_	_	_	_	_	_
 22	de	de	ADP	_	_	24	case	_	_
 23	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	24	det	_	_
 24	Montenegro	Montenegro	PROPN	_	Number=Sing	20	nmod	_	_
-25	(	(	PUNCT	_	_	26	punct	_	SpaceAfter=No
-26	atual	atual	DET	_	_	17	advmod	_	_
-27	Montenegro	Montenegro	PROPN	_	Number=Sing	26	flat:name	_	SpaceAfter=No
+25	(	(	PUNCT	_	_	27	punct	_	SpaceAfter=No
+26	atual	atual	ADJ	_	Gender=Masc|Number=Sing	27	amod	_	_
+27	Montenegro	Montenegro	PROPN	_	Gender=Masc|Number=Sing	20	appos	_	SpaceAfter=No
 28	,	,	PUNCT	_	_	29	punct	_	_
-29	RS	RS	PROPN	_	Gender=Masc|Number=Sing	20	conj	_	SpaceAfter=No
-30	)	)	PUNCT	_	_	26	punct	_	SpaceAfter=No
-31	,	,	PUNCT	_	_	17	punct	_	_
-32	onde	onde	ADV	_	_	33	advmod	_	_
-33	nasceram	nascer	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	26	acl:relcl	_	_
+29	RS	RS	PROPN	_	Gender=Masc|Number=Sing	27	appos	_	SpaceAfter=No
+30	)	)	PUNCT	_	_	27	punct	_	SpaceAfter=No
+31	,	,	PUNCT	_	_	33	punct	_	_
+32	onde	onde	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	33	obl	_	_
+33	nasceram	nascer	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	20	acl:relcl	_	_
 34	seus	seu	DET	_	Gender=Masc|Number=Plur|PronType=Prs	36	det	_	_
 35	dois	dois	NUM	_	NumType=Card	36	nummod	_	_
 36	irmãos	irmão	NOUN	_	Gender=Masc|Number=Plur	33	nsubj	_	_
-37	menores	pequeno	ADJ	_	Gender=Masc|Number=Plur	36	amod	_	SpaceAfter=No
+37	menores	menor	ADJ	_	Gender=Masc|Number=Plur	36	amod	_	SpaceAfter=No
 38	.	.	PUNCT	_	_	5	punct	_	_
 
-# text = Adquiriu a nacionalidade brasileira por força da Constituição de 1891, através da chamada “Grande Naturalização”.
 # sent_id = 3
+# text = Adquiriu a nacionalidade brasileira por força da Constituição de 1891, através da chamada “Grande Naturalização”.
 1	Adquiriu	adquirir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	3	det	_	_
 3	nacionalidade	nacionalidade	NOUN	_	Gender=Fem|Number=Sing	1	obj	_	_
@@ -94,24 +96,23 @@
 7-8	da	_	_	_	_	_	_	_	_
 7	de	de	ADP	_	_	9	case	_	_
 8	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	9	det	_	_
-9	Constituição	Constituição	NOUN	_	Gender=Fem|Number=Sing	6	nmod	_	_
+9	Constituição	constituição	NOUN	_	Gender=Fem|Number=Sing	6	nmod	_	_
 10	de	de	ADP	_	_	11	case	_	_
 11	1891	1891	NUM	_	NumType=Card	9	nmod	_	SpaceAfter=No
 12	,	,	PUNCT	_	_	1	punct	_	_
 13	através	através	ADV	_	_	1	advmod	_	_
 14-15	da	_	_	_	_	_	_	_	_
-14	de	de	ADP	_	_	16	case	_	_
-15	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	16	det	_	_
-16	chamada	chamado	NOUN	_	Gender=Fem|Number=Sing	13	obl	_	_
-17	“	“	PUNCT	_	_	18	punct	_	SpaceAfter=No
-18	Grande	Grande	PROPN	_	Gender=Fem|Number=Sing	16	appos	_	_
+14	de	de	ADP	_	_	18	case	_	_
+15	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	18	det	_	_
+16	chamada	chamado	ADJ	_	Gender=Fem|Number=Sing	18	amod	_	_
+17	“	"	PUNCT	_	_	18	punct	_	SpaceAfter=No
+18	Grande	Grande	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	13	obl	_	_
 19	Naturalização	Naturalização	PROPN	_	Number=Sing	18	flat:name	_	SpaceAfter=No
-20	”	”	PUNCT	_	_	18	punct	_	SpaceAfter=No
-21	.	.	PUNCT	_	_	18	punct	_	_
+20	”	"	PUNCT	_	_	18	punct	_	SpaceAfter=No
+21	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
 
-# text = Estudou as primeiras letras com o pai, inicialmente em sua aldeia natal e depois no Brasil, onde Karl Becker continuou a dedicar-se ao ensino.
 # sent_id = 4
-# newpar
+# text = Estudou as primeiras letras com o pai, inicialmente em sua aldeia natal e depois no Brasil, onde Karl Becker continuou a dedicar-se ao ensino.
 1	Estudou	estudar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	4	det	_	_
 3	primeiras	primeiro	ADJ	_	Gender=Fem|Number=Plur|NumType=Ord	4	amod	_	_
@@ -120,37 +121,37 @@
 6	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	7	det	_	_
 7	pai	pai	NOUN	_	Gender=Masc|Number=Sing	1	obl	_	SpaceAfter=No
 8	,	,	PUNCT	_	_	1	punct	_	_
-9	inicialmente	inicialmente	ADV	_	_	1	advmod	_	_
+9	inicialmente	inicialmente	ADV	_	_	12	advmod	_	_
 10	em	em	ADP	_	_	12	case	_	_
 11	sua	seu	DET	_	Gender=Fem|Number=Sing|PronType=Prs	12	det	_	_
 12	aldeia	aldeia	NOUN	_	Gender=Fem|Number=Sing	1	obl	_	_
 13	natal	natal	ADJ	_	Gender=Fem|Number=Sing	12	amod	_	_
-14	e	e	CCONJ	_	_	25	cc	_	_
-15	depois	depois	ADV	_	_	25	advmod	_	_
+14	e	e	CCONJ	_	_	18	cc	_	_
+15	depois	depois	ADV	_	_	18	advmod	_	_
 16-17	no	_	_	_	_	_	_	_	_
 16	em	em	ADP	_	_	18	case	_	_
 17	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	18	det	_	_
-18	Brasil	Brasil	PROPN	_	Gender=Masc|Number=Sing	25	obl	_	SpaceAfter=No
-19	,	,	PUNCT	_	_	18	punct	_	_
-20	onde	onde	ADV	_	_	25	advmod	_	_
-21	Karl	Karl	PROPN	_	Gender=Masc|Number=Sing	25	nsubj	_	_
+18	Brasil	Brasil	PROPN	_	Gender=Masc|Number=Sing	12	conj	_	SpaceAfter=No
+19	,	,	PUNCT	_	_	23	punct	_	_
+20	onde	onde	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	23	obl	_	_
+21	Karl	Karl	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	23	nsubj	_	_
 22	Becker	Becker	PROPN	_	Number=Sing	21	flat:name	_	_
-23	continuou	continuar	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	25	aux	_	_
-24	a	a	ADP	_	_	25	obl	_	_
+23	continuou	continuar	VERB	_	ExtPos=AUX|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	18	acl:relcl	_	_
+24	a	a	SCONJ	_	_	25	mark	_	_
 25-26	dedicar-se	_	_	_	_	_	_	_	_
-25	dedicar	dedicar	VERB	_	VerbForm=Inf	1	conj	_	_
+25	dedicar	dedicar	VERB	_	VerbForm=Inf	23	xcomp	_	_
 26	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	25	expl	_	_
 27-28	ao	_	_	_	_	_	_	_	_
 27	a	a	ADP	_	_	29	case	_	_
 28	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	29	det	_	_
-29	ensino	ensino	NOUN	_	Gender=Masc|Number=Sing	25	obl	_	SpaceAfter=No
+29	ensino	ensino	NOUN	_	Gender=Masc|Number=Sing	25	obj	_	SpaceAfter=No
 30	.	.	PUNCT	_	_	1	punct	_	_
 
-# text = Matriculou-se depois no Colégio dos Padres Jesuítas de São Leopoldo (RS), mais tarde Ginásio Nossa Senhora da Conceição.
 # sent_id = 5
+# text = Matriculou-se depois no Colégio dos Padres Jesuítas de São Leopoldo (RS), mais tarde Ginásio Nossa Senhora da Conceição.
 1-2	Matriculou-se	_	_	_	_	_	_	_	_
-1	Matriculou	Matricular	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
-2	se	se	PRON	_	Case=Acc|Gender=Unsp|PronType=Prs	1	nsubj	_	_
+1	Matriculou	matricular	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+2	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	1	expl	_	_
 3	depois	depois	ADV	_	_	1	advmod	_	_
 4-5	no	_	_	_	_	_	_	_	_
 4	em	em	ADP	_	_	6	case	_	_
@@ -159,55 +160,54 @@
 7-8	dos	_	_	_	_	_	_	_	_
 7	de	de	ADP	_	_	9	case	_	_
 8	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	9	det	_	_
-9	Padres	padres	PROPN	_	Number=Sing	6	nmod	_	_
+9	Padres	Padres	PROPN	_	ExtPos=PROPN|Number=Sing	6	nmod	_	_
 10	Jesuítas	Jesuítas	PROPN	_	Number=Sing	9	flat:name	_	_
 11	de	de	ADP	_	_	12	case	_	_
-12	São	São	PROPN	_	Number=Sing	9	nmod	_	_
+12	São	São	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	6	nmod	_	_
 13	Leopoldo	Leopoldo	PROPN	_	Number=Sing	12	flat:name	_	_
 14	(	(	PUNCT	_	_	15	punct	_	SpaceAfter=No
-15	RS	RS	PROPN	_	Gender=Masc|Number=Sing	9	appos	_	SpaceAfter=No
+15	RS	RS	PROPN	_	Gender=Masc|Number=Sing	12	parataxis	_	SpaceAfter=No
 16	)	)	PUNCT	_	_	15	punct	_	SpaceAfter=No
-17	,	,	PUNCT	_	_	1	punct	_	_
+17	,	,	PUNCT	_	_	20	punct	_	_
 18	mais	mais	ADV	_	_	19	advmod	_	_
 19	tarde	tarde	ADV	_	_	20	advmod	_	_
-20	Ginásio	Ginásio	PROPN	_	Gender=Masc|Number=Sing	1	obl	_	_
-21	Nossa	Nossa	PROPN	_	Gender=Fem|Number=Sing	20	appos	_	_
-22	Senhora	Senhora	PROPN	_	Number=Sing	21	flat:name	_	_
+20	Ginásio	Ginásio	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	6	appos	_	_
+21	Nossa	Nossa	PROPN	_	Number=Sing	20	flat:name	_	_
+22	Senhora	Senhora	PROPN	_	Number=Sing	20	flat:name	_	_
 23-24	da	_	_	_	_	_	_	_	_
 23	de	de	ADP	_	_	25	case	_	_
 24	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	25	det	_	_
-25	Conceição	Conceição	NOUN	_	Number=Sing	21	nmod	_	SpaceAfter=No
-26	.	.	PUNCT	_	_	1	punct	_	_
+25	Conceição	Conceição	PROPN	_	Number=Sing	20	nmod	_	SpaceAfter=No
+26	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
 
-# text = Em 1891, ingressou no Seminário de Porto Alegre, dirigido por padres da Companhia de Jesus, demonstrando já como seminarista os primeiros pendores literários e filosóficos, tendo inclusive publicado alguns trabalhos.
 # sent_id = 6
-# newpar
+# text = Em 1891, ingressou no Seminário de Porto Alegre, dirigido por padres da Companhia de Jesus, demonstrando já como seminarista os primeiros pendores literários e filosóficos, tendo inclusive publicado alguns trabalhos.
 1	Em	em	ADP	_	_	2	case	_	_
 2	1891	1891	NUM	_	NumType=Card	4	obl	_	SpaceAfter=No
 3	,	,	PUNCT	_	_	2	punct	_	_
-4	ingressou	ingresser	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+4	ingressou	ingressar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 5-6	no	_	_	_	_	_	_	_	_
 5	em	em	ADP	_	_	7	case	_	_
 6	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	7	det	_	_
-7	Seminário	seminário	PROPN	_	Gender=Masc|Number=Sing	4	obl	_	_
+7	Seminário	Seminário	PROPN	_	Gender=Masc|Number=Sing	4	obl	_	_
 8	de	de	ADP	_	_	9	case	_	_
-9	Porto	Porto	PROPN	_	Number=Sing	7	nmod	_	_
+9	Porto	Porto	PROPN	_	ExtPos=PROPN|Number=Sing	7	nmod	_	_
 10	Alegre	Alegre	PROPN	_	Number=Sing	9	flat:name	_	SpaceAfter=No
 11	,	,	PUNCT	_	_	12	punct	_	_
 12	dirigido	dirigir	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	7	acl	_	_
 13	por	por	ADP	_	_	14	case	_	_
-14	padres	padres	NOUN	_	Gender=Masc|Number=Plur	12	obl:agent	_	_
+14	padres	padre	NOUN	_	Gender=Masc|Number=Plur	12	obl:agent	_	_
 15-16	da	_	_	_	_	_	_	_	_
 15	de	de	ADP	_	_	17	case	_	_
-16	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	17	det	_	_
+16	a	o	DET	_	Definite=Def|PronType=Art	17	det	_	_
 17	Companhia	Companhia	PROPN	_	Gender=Fem|Number=Sing	14	nmod	_	_
 18	de	de	ADP	_	_	19	case	_	_
-19	Jesus	Jesus	PROPN	_	Gender=Masc|Number=Sing	17	nmod	_	SpaceAfter=No
-20	,	,	PUNCT	_	_	12	punct	_	_
+19	Jesus	Jesus	PROPN	_	Number=Sing	17	nmod	_	SpaceAfter=No
+20	,	,	PUNCT	_	_	21	punct	_	_
 21	demonstrando	demonstrar	VERB	_	VerbForm=Ger	4	advcl	_	_
 22	já	já	ADV	_	_	21	advmod	_	_
 23	como	como	ADP	_	_	24	case	_	_
-24	seminarista	seminarista	NOUN	_	Gender=Masc|Number=Sing	21	obl	_	_
+24	seminarista	seminarista	NOUN	_	Gender=Masc|Number=Sing	21	xcomp	_	_
 25	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	27	det	_	_
 26	primeiros	primeiro	ADJ	_	Gender=Masc|Number=Plur|NumType=Ord	27	amod	_	_
 27	pendores	pendor	NOUN	_	Gender=Masc|Number=Plur	21	obj	_	_
@@ -217,14 +217,14 @@
 31	,	,	PUNCT	_	_	34	punct	_	_
 32	tendo	ter	AUX	_	VerbForm=Ger	34	aux	_	_
 33	inclusive	inclusive	ADV	_	_	34	advmod	_	_
-34	publicado	publicar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	21	conj	_	_
+34	publicado	publicar	VERB	_	VerbForm=Part	21	advcl	_	_
 35	alguns	algum	DET	_	Gender=Masc|Number=Plur|PronType=Ind	36	det	_	_
-36	trabalhos	trabalho	NOUN	_	Gender=Masc|Number=Plur	34	nsubj	_	SpaceAfter=No
+36	trabalhos	trabalho	NOUN	_	Gender=Masc|Number=Plur	34	obj	_	SpaceAfter=No
 37	.	.	PUNCT	_	_	4	punct	_	_
 
-# text = João Becker estudou teologia e filosofia, concluindo o curso seminarístico em 1892.
 # sent_id = 7
-1	João	João	PROPN	_	Gender=Masc|Number=Sing	3	nsubj	_	_
+# text = João Becker estudou teologia e filosofia, concluindo o curso seminarístico em 1892.
+1	João	João	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	3	nsubj	_	_
 2	Becker	Becker	PROPN	_	Number=Sing	1	flat:name	_	_
 3	estudou	estudar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 4	teologia	teologia	NOUN	_	Gender=Fem|Number=Sing	3	obj	_	_
@@ -236,21 +236,21 @@
 10	curso	curso	NOUN	_	Gender=Masc|Number=Sing	8	obj	_	_
 11	seminarístico	seminarístico	ADJ	_	Gender=Masc|Number=Sing	10	amod	_	_
 12	em	em	ADP	_	_	13	case	_	_
-13	1892	1892	NUM	_	NumType=Card	10	nmod	_	SpaceAfter=No
+13	1892	1892	NUM	_	NumType=Card	8	obl	_	SpaceAfter=No
 14	.	.	PUNCT	_	_	3	punct	_	_
 
-# text = Promovido a subdiácono em 1894, tornou-se diácono no ano seguinte.
 # sent_id = 8
-1	Promovido	promover	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	7	dep	_	_
-2	a	o	DET	_	_	3	case	_	_
-3	subdiácono	subdiácono	NOUN	_	Gender=Masc|Number=Sing	1	obl	_	_
+# text = Promovido a subdiácono em 1894, tornou-se diácono no ano seguinte.
+1	Promovido	promover	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	7	advcl	_	_
+2	a	a	ADP	_	_	3	case	_	_
+3	subdiácono	subdiácono	NOUN	_	Gender=Masc|Number=Sing	1	obj	_	_
 4	em	em	ADP	_	_	5	case	_	_
 5	1894	1894	NUM	_	NumType=Card	1	obl	_	SpaceAfter=No
 6	,	,	PUNCT	_	_	1	punct	_	_
 7-8	tornou-se	_	_	_	_	_	_	_	_
 7	tornou	tornar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 8	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	7	expl	_	_
-9	diácono	diácono	ADJ	_	Gender=Masc|Number=Sing	7	xcomp	_	_
+9	diácono	diácono	NOUN	_	Gender=Masc|Number=Sing	7	xcomp	_	_
 10-11	no	_	_	_	_	_	_	_	_
 10	em	em	ADP	_	_	12	case	_	_
 11	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	12	det	_	_
@@ -258,14 +258,14 @@
 13	seguinte	seguinte	ADJ	_	Gender=Masc|Number=Sing	12	amod	_	SpaceAfter=No
 14	.	.	PUNCT	_	_	7	punct	_	_
 
-# text = Em 1896, concluiu com distinção o curso de teologia, sendo ordenado sacerdote em agosto do mesmo ano.
 # sent_id = 9
+# text = Em 1896, concluiu com distinção o curso de teologia, sendo ordenado sacerdote em agosto do mesmo ano.
 1	Em	em	ADP	_	_	2	case	_	_
 2	1896	1896	NUM	_	NumType=Card	4	obl	_	SpaceAfter=No
 3	,	,	PUNCT	_	_	2	punct	_	_
 4	concluiu	concluir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 5	com	com	ADP	_	_	6	case	_	_
-6	distinção	distinção	NOUN	_	Gender=Masc|Number=Sing	4	obl	_	_
+6	distinção	distinção	NOUN	_	Gender=Fem|Number=Sing	4	obl	_	_
 7	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	8	det	_	_
 8	curso	curso	NOUN	_	Gender=Masc|Number=Sing	4	obj	_	_
 9	de	de	ADP	_	_	10	case	_	_
@@ -275,35 +275,34 @@
 13	ordenado	ordenar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	4	advcl	_	_
 14	sacerdote	sacerdote	NOUN	_	Gender=Masc|Number=Sing	13	nsubj:pass	_	_
 15	em	em	ADP	_	_	16	case	_	_
-16	agosto	agosto	NOUN	_	Gender=Masc|Number=Sing	14	nmod	_	_
+16	agosto	agosto	NOUN	_	Gender=Masc|Number=Sing	13	obl	_	_
 17-18	do	_	_	_	_	_	_	_	_
 17	de	de	ADP	_	_	20	case	_	_
 18	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	20	det	_	_
 19	mesmo	mesmo	ADJ	_	Gender=Masc|Number=Sing	20	amod	_	_
 20	ano	ano	NOUN	_	Gender=Masc|Number=Sing	16	nmod	_	SpaceAfter=No
-21	.	.	PUNCT	_	_	4	punct	_	_
+21	.	.	PUNCT	_	_	4	punct	_	SpacesAfter=\n
 
-# text = Nomeado em seguida vigário da Paróquia do Menino Deus, em Porto Alegre, ali permaneceu por 12 anos, de 1896 a 1908.
 # sent_id = 10
-# newpar
-1	Nomeado	nomear	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	18	dep	_	_
+# text = Nomeado em seguida vigário da Paróquia do Menino Deus, em Porto Alegre, ali permaneceu por 12 anos, de 1896 a 1908.
+1	Nomeado	nomear	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	18	advcl	_	_
 2	em	em	ADP	_	_	3	case	_	_
 3	seguida	seguida	NOUN	_	Gender=Fem|Number=Sing	1	obl	_	_
-4	vigário	vigário	ADJ	_	Gender=Masc|Number=Sing	3	amod	_	_
+4	vigário	vigário	NOUN	_	Gender=Masc|Number=Sing	1	obj	_	_
 5-6	da	_	_	_	_	_	_	_	_
 5	de	de	ADP	_	_	7	case	_	_
-6	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	7	det	_	_
-7	Paróquia	Paróquia	PROPN	_	Gender=Fem|Number=Sing	3	nmod	_	_
+6	a	o	DET	_	Definite=Def|PronType=Art	7	det	_	_
+7	Paróquia	Paróquia	PROPN	_	Gender=Fem|Number=Sing	4	nmod	_	_
 8-9	do	_	_	_	_	_	_	_	_
 8	de	de	ADP	_	_	10	case	_	_
 9	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	10	det	_	_
-10	Menino	Menino	PROPN	_	Gender=Masc|Number=Sing	7	nmod	_	_
-11	Deus	deus	PROPN	_	Number=Sing	10	flat:name	_	SpaceAfter=No
-12	,	,	PUNCT	_	_	1	punct	_	_
+10	Menino	Menino	PROPN	_	ExtPos=PROPN|Number=Sing	7	nmod	_	_
+11	Deus	Deus	PROPN	_	Number=Sing	10	flat:name	_	SpaceAfter=No
+12	,	,	PUNCT	_	_	14	punct	_	_
 13	em	em	ADP	_	_	14	case	_	_
-14	Porto	Porto	PROPN	_	Gender=Masc|Number=Sing	1	obl	_	_
+14	Porto	Porto	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	7	nmod	_	_
 15	Alegre	Alegre	PROPN	_	Number=Sing	14	flat:name	_	SpaceAfter=No
-16	,	,	PUNCT	_	_	1	punct	_	_
+16	,	,	PUNCT	_	_	14	punct	_	_
 17	ali	ali	ADV	_	_	18	advmod	_	_
 18	permaneceu	permanecer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 19	por	por	ADP	_	_	21	case	_	_
@@ -316,8 +315,8 @@
 26	1908	1908	NUM	_	NumType=Card	24	nmod	_	SpaceAfter=No
 27	.	.	PUNCT	_	_	18	punct	_	_
 
-# text = Nesse período, remodelou a antiga capela do Menino Deus, ampliando-a e dotando-a de uma torre.
 # sent_id = 11
+# text = Nesse período, remodelou a antiga capela do Menino Deus, ampliando-a e dotando-a de uma torre.
 1-2	Nesse	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	3	case	_	_
 2	esse	esse	DET	_	Gender=Masc|Number=Sing|PronType=Dem	3	det	_	_
@@ -326,27 +325,27 @@
 5	remodelou	remodelar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 6	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	8	det	_	_
 7	antiga	antigo	ADJ	_	Gender=Fem|Number=Sing	8	amod	_	_
-8	capela	capela	NOUN	_	Gender=Fem|Number=Sing	5	nsubj	_	_
+8	capela	capela	NOUN	_	Gender=Fem|Number=Sing	5	obj	_	_
 9-10	do	_	_	_	_	_	_	_	_
 9	de	de	ADP	_	_	11	case	_	_
 10	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	_	_
-11	Menino	Menino	PROPN	_	Gender=Masc|Number=Sing	8	nmod	_	_
-12	Deus	deus	PROPN	_	Number=Sing	11	flat:name	_	SpaceAfter=No
+11	Menino	Menino	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	8	nmod	_	_
+12	Deus	Deus	PROPN	_	Number=Sing	11	flat:name	_	SpaceAfter=No
 13	,	,	PUNCT	_	_	14	punct	_	_
 14-15	ampliando-a	_	_	_	_	_	_	_	_
 14	ampliando	ampliar	VERB	_	VerbForm=Ger	5	advcl	_	_
-15	a	ela	PRON	_	_	14	obj	_	_
+15	a	ela	PRON	_	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	14	obj	_	_
 16	e	e	CCONJ	_	_	17	cc	_	_
 17-18	dotando-a	_	_	_	_	_	_	_	_
 17	dotando	dotar	VERB	_	VerbForm=Ger	14	conj	_	_
-18	a	a	PRON	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	17	obj	_	_
-19	de	de	ADP	_	Gender=Fem|Number=Sing	21	case	_	_
+18	a	ela	PRON	_	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	17	obj	_	_
+19	de	de	ADP	_	_	21	case	_	_
 20	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	21	det	_	_
-21	torre	torre	NOUN	_	Gender=Fem|Number=Sing	18	nmod	_	SpaceAfter=No
+21	torre	torre	NOUN	_	Gender=Fem|Number=Sing	17	iobj	_	SpaceAfter=No
 22	.	.	PUNCT	_	_	5	punct	_	_
 
-# text = No dia da inauguração da nova capela, foi nomeado cônego honorário em comemoração do décimo aniversário de seu vicariato e pelos serviços prestados à Igreja.
 # sent_id = 12
+# text = No dia da inauguração da nova capela, foi nomeado cônego honorário em comemoração do décimo aniversário de seu vicariato e pelos serviços prestados à Igreja.
 1-2	No	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	3	case	_	_
 2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
@@ -366,7 +365,7 @@
 14	cônego	cônego	NOUN	_	Gender=Masc|Number=Sing	13	nsubj:pass	_	_
 15	honorário	honorário	ADJ	_	Gender=Masc|Number=Sing	14	amod	_	_
 16	em	em	ADP	_	_	17	case	_	_
-17	comemoração	comemoração	NOUN	_	Gender=Fem|Number=Sing	14	nmod	_	_
+17	comemoração	comemoração	NOUN	_	Gender=Fem|Number=Sing	13	obl	_	_
 18-19	do	_	_	_	_	_	_	_	_
 18	de	de	ADP	_	_	21	case	_	_
 19	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	21	det	_	_
@@ -379,17 +378,16 @@
 26-27	pelos	_	_	_	_	_	_	_	_
 26	por	por	ADP	_	_	28	case	_	_
 27	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	28	det	_	_
-28	serviços	serviço	NOUN	_	Gender=Masc|Number=Plur	14	conj	_	_
+28	serviços	serviço	NOUN	_	Gender=Masc|Number=Plur	21	conj	_	_
 29	prestados	prestar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part	28	acl	_	_
 30-31	à	_	_	_	_	_	_	_	_
 30	a	a	ADP	_	_	32	case	_	_
 31	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	32	det	_	_
-32	Igreja	Igreja	PROPN	_	Gender=Fem|Number=Sing	29	obl	_	SpaceAfter=No
-33	.	.	PUNCT	_	_	13	punct	_	_
+32	Igreja	igreja	NOUN	_	Gender=Fem|Number=Sing	29	obj	_	SpaceAfter=No
+33	.	.	PUNCT	_	_	13	punct	_	SpacesAfter=\n
 
-# text = Ainda em 1906, juntamente com o padre Luís Mariano da Rocha, fundou a «Revista Eclesiástica», órgão da liga sacerdotal dos padres da arquidiocese.
 # sent_id = 13
-# newpar
+# text = Ainda em 1906, juntamente com o padre Luís Mariano da Rocha, fundou a «Revista Eclesiástica», órgão da liga sacerdotal dos padres da arquidiocese.
 1	Ainda	ainda	ADV	_	_	3	advmod	_	_
 2	em	em	ADP	_	_	3	case	_	_
 3	1906	1906	NUM	_	NumType=Card	15	obl	_	SpaceAfter=No
@@ -398,20 +396,20 @@
 6	com	com	ADP	_	_	8	case	_	_
 7	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	8	det	_	_
 8	padre	padre	NOUN	_	Gender=Masc|Number=Sing	5	obl	_	_
-9	Luís	Luís	PROPN	_	Gender=Masc|Number=Sing	8	appos	_	_
+9	Luís	Luís	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	8	appos	_	_
 10	Mariano	Mariano	PROPN	_	Number=Sing	9	flat:name	_	_
 11-12	da	_	_	_	_	_	_	_	_
 11	de	de	ADP	_	_	13	case	_	_
 12	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	13	det	_	_
-13	Rocha	Rocha	PROPN	_	Number=Sing	9	nmod	_	SpaceAfter=No
-14	,	,	PUNCT	_	_	9	punct	_	_
+13	Rocha	Rocha	PROPN	_	Number=Sing	8	nmod	_	SpaceAfter=No
+14	,	,	PUNCT	_	_	5	punct	_	_
 15	fundou	fundar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 16	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	18	det	_	_
 17	«	«	PUNCT	_	_	18	punct	_	SpaceAfter=No
-18	Revista	revista	PROPN	_	Number=Sing	15	parataxis	_	_
+18	Revista	Revista	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	15	obj	_	_
 19	Eclesiástica	Eclesiástica	PROPN	_	Number=Sing	18	flat:name	_	SpaceAfter=No
 20	»	»	PUNCT	_	_	18	punct	_	SpaceAfter=No
-21	,	,	PUNCT	_	_	15	punct	_	_
+21	,	,	PUNCT	_	_	22	punct	_	_
 22	órgão	órgão	NOUN	_	Gender=Masc|Number=Sing	18	appos	_	_
 23-24	da	_	_	_	_	_	_	_	_
 23	de	de	ADP	_	_	25	case	_	_
@@ -421,35 +419,35 @@
 27-28	dos	_	_	_	_	_	_	_	_
 27	de	de	ADP	_	_	29	case	_	_
 28	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	29	det	_	_
-29	padres	padres	NOUN	_	Gender=Masc|Number=Plur	25	nmod	_	_
+29	padres	padre	NOUN	_	Gender=Masc|Number=Plur	25	nmod	_	_
 30-31	da	_	_	_	_	_	_	_	_
 30	de	de	ADP	_	_	32	case	_	_
 31	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	32	det	_	_
 32	arquidiocese	arquidiocese	NOUN	_	Gender=Fem|Number=Sing	29	nmod	_	SpaceAfter=No
 33	.	.	PUNCT	_	_	15	punct	_	_
 
-# text = Criada a diocese de Santa Catarina (mais tarde denominada diocese de Florianópolis) em março de 1908, João Becker foi designado pelo papa
 # sent_id = 14
-1	Criada	criar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	23	dep	_	_
+# text = Criada a diocese de Santa Catarina (mais tarde denominada diocese de Florianópolis) em março de 1908, João Becker foi designado pelo papa Pio X para ser seu primeiro bispo em maio do mesmo ano.
+1	Criada	criar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	23	advcl	_	_
 2	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	3	det	_	_
 3	diocese	diocese	NOUN	_	Gender=Fem|Number=Sing	1	nsubj	_	_
 4	de	de	ADP	_	_	5	case	_	_
-5	Santa	Santa	PROPN	_	Gender=Fem|Number=Sing	3	nmod	_	_
+5	Santa	Santa	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	3	nmod	_	_
 6	Catarina	Catarina	PROPN	_	Number=Sing	5	flat:name	_	_
 7	(	(	PUNCT	_	_	10	punct	_	SpaceAfter=No
 8	mais	mais	ADV	_	_	9	advmod	_	_
 9	tarde	tarde	ADV	_	_	10	advmod	_	_
-10	denominada	denominar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	5	acl	_	_
+10	denominada	denominar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	3	acl	_	_
 11	diocese	diocese	NOUN	_	Gender=Fem|Number=Sing	10	obj	_	_
 12	de	de	ADP	_	_	13	case	_	_
-13	Florianópolis	Florianópolis	PROPN	_	Gender=Masc|Number=Sing	11	nmod	_	SpaceAfter=No
+13	Florianópolis	Florianópolis	PROPN	_	Number=Sing	11	nmod	_	SpaceAfter=No
 14	)	)	PUNCT	_	_	10	punct	_	_
 15	em	em	ADP	_	_	16	case	_	_
-16	março	março	NOUN	_	Gender=Masc|Number=Sing	1	obl	_	_
+16	março	março	NOUN	_	Gender=Masc|Number=Sing	10	obl	_	_
 17	de	de	ADP	_	_	18	case	_	_
 18	1908	1908	NUM	_	NumType=Card	16	nmod	_	SpaceAfter=No
 19	,	,	PUNCT	_	_	1	punct	_	_
-20	João	João	PROPN	_	Gender=Masc|Number=Sing	23	nsubj:pass	_	_
+20	João	João	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	23	nsubj:pass	_	_
 21	Becker	Becker	PROPN	_	Number=Sing	20	flat:name	_	_
 22	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	23	aux:pass	_	_
 23	designado	designar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
@@ -457,52 +455,48 @@
 24	por	por	ADP	_	_	26	case	_	_
 25	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	26	det	_	_
 26	papa	papa	NOUN	_	Gender=Masc|Number=Sing	23	obl:agent	_	_
+27	Pio	Pio	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	26	appos	_	_
+28	X	X	PROPN	_	Number=Sing	27	flat:name	_	_
+29	para	para	SCONJ	_	_	33	mark	_	_
+30	ser	ser	AUX	_	VerbForm=Inf	33	cop	_	_
+31	seu	seu	DET	_	Gender=Masc|Number=Sing|PronType=Prs	33	det	_	_
+32	primeiro	primeiro	ADJ	_	Gender=Masc|Number=Sing|NumType=Ord	33	amod	_	_
+33	bispo	bispo	NOUN	_	Gender=Masc|Number=Sing	23	advcl	_	_
+34	em	em	ADP	_	_	35	case	_	_
+35	maio	maio	NOUN	_	Gender=Masc|Number=Sing	33	nmod	_	_
+36-37	do	_	_	_	_	_	_	_	_
+36	de	de	ADP	_	_	39	case	_	_
+37	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	39	det	_	_
+38	mesmo	mesmo	ADJ	_	Gender=Masc|Number=Sing	39	amod	_	_
+39	ano	ano	NOUN	_	Gender=Masc|Number=Sing	35	nmod	_	SpaceAfter=No
+40	.	.	PUNCT	_	_	23	punct	_	_
 
-# text = Pio X para ser seu primeiro bispo em maio do mesmo ano.
 # sent_id = 15
-1	Pio	Pio	PROPN	_	Gender=Masc|Number=Sing	0	root	_	_
-2	X	x	PROPN	_	Number=Sing	1	flat:name	_	_
-3	para	para	ADP	_	_	7	mark	_	_
-4	ser	ser	AUX	_	VerbForm=Inf	7	cop	_	_
-5	seu	seu	DET	_	Gender=Masc|Number=Sing|PronType=Prs	7	det	_	_
-6	primeiro	primeiro	ADJ	_	Gender=Masc|Number=Sing|NumType=Ord	7	amod	_	_
-7	bispo	bispo	NOUN	_	Gender=Masc|Number=Sing	1	nmod	_	_
-8	em	em	ADP	_	_	9	case	_	_
-9	maio	maio	NOUN	_	Gender=Masc|Number=Sing	7	nmod	_	_
-10-11	do	_	_	_	_	_	_	_	_
-10	de	de	ADP	_	_	13	case	_	_
-11	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	13	det	_	_
-12	mesmo	mesmo	ADJ	_	Gender=Masc|Number=Sing	13	amod	_	_
-13	ano	ano	NOUN	_	Gender=Masc|Number=Sing	9	nmod	_	SpaceAfter=No
-14	.	.	PUNCT	_	_	1	punct	_	_
-
 # text = A sagração episcopal realizou-se no dia 13 de setembro.
-# sent_id = 16
 1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
 2	sagração	sagração	NOUN	_	Gender=Fem|Number=Sing	4	nsubj	_	_
 3	episcopal	episcopal	ADJ	_	Gender=Fem|Number=Sing	2	amod	_	_
 4-5	realizou-se	_	_	_	_	_	_	_	_
 4	realizou	realizar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
-5	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	4	expl	_	_
+5	se	se	PRON	_	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	4	expl	_	_
 6-7	no	_	_	_	_	_	_	_	_
 6	em	em	ADP	_	_	8	case	_	_
 7	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	8	det	_	_
 8	dia	dia	NOUN	_	Gender=Masc|Number=Sing	4	obl	_	_
 9	13	13	NUM	_	NumType=Card	8	nummod	_	_
 10	de	de	ADP	_	_	11	case	_	_
-11	setembro	setembro	NOUN	_	Gender=Masc|Number=Sing	8	nmod:tmod	_	SpaceAfter=No
-12	.	.	PUNCT	_	_	4	punct	_	_
+11	setembro	setembro	NOUN	_	Gender=Masc|Number=Sing	8	nmod	_	SpaceAfter=No
+12	.	.	PUNCT	_	_	4	punct	_	SpacesAfter=\n
 
+# sent_id = 16
 # text = Em apenas quatro anos, dom Becker realizou grandes trabalhos em sua vasta diocese, percorrendo freqüentemente a cavalo o interior de Santa Catarina.
-# sent_id = 17
-# newpar
 1	Em	em	ADP	_	_	4	case	_	_
 2	apenas	apenas	ADV	_	_	3	advmod	_	_
 3	quatro	quatro	NUM	_	NumType=Card	4	nummod	_	_
 4	anos	ano	NOUN	_	Gender=Masc|Number=Plur	8	obl	_	SpaceAfter=No
 5	,	,	PUNCT	_	_	4	punct	_	_
-6	dom	dom	ADP	_	Gender=Masc|Number=Sing	8	nsubj	_	_
-7	Becker	Becker	PROPN	_	Number=Sing	6	flat:name	_	_
+6	dom	dom	PROPN	_	Gender=Masc|Number=Sing	8	nsubj	_	_
+7	Becker	Becker	PROPN	_	Gender=Masc|Number=Sing	6	flat:name	_	_
 8	realizou	realizar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 9	grandes	grande	ADJ	_	Gender=Masc|Number=Plur	10	amod	_	_
 10	trabalhos	trabalho	NOUN	_	Gender=Masc|Number=Plur	8	obj	_	_
@@ -513,17 +507,17 @@
 15	,	,	PUNCT	_	_	16	punct	_	_
 16	percorrendo	percorrer	VERB	_	VerbForm=Ger	8	advcl	_	_
 17	freqüentemente	freqüentemente	ADV	_	_	16	advmod	_	_
-18	a	o	DET	_	_	19	det	_	_
-19	cavalo	cavalo	NOUN	_	Gender=Masc|Number=Sing	16	obj	_	_
+18	a	a	ADP	_	_	19	case	_	_
+19	cavalo	cavalo	NOUN	_	Gender=Masc|Number=Sing	16	obl	_	_
 20	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	21	det	_	_
-21	interior	interior	NOUN	_	Gender=Masc|Number=Sing	19	nmod	_	_
+21	interior	interior	NOUN	_	Gender=Masc|Number=Sing	16	obj	_	_
 22	de	de	ADP	_	_	23	case	_	_
-23	Santa	Santa	PROPN	_	Gender=Fem|Number=Sing	21	nmod	_	_
+23	Santa	Santa	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	21	nmod	_	_
 24	Catarina	Catarina	PROPN	_	Number=Sing	23	flat:name	_	SpaceAfter=No
 25	.	.	PUNCT	_	_	8	punct	_	_
 
+# sent_id = 17
 # text = Nesse período, publicou cinco cartas pastorais e convocou o I Sínodo Diocesano.
-# sent_id = 18
 1-2	Nesse	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	3	case	_	_
 2	esse	esse	DET	_	Gender=Masc|Number=Sing|PronType=Dem	3	det	_	_
@@ -531,22 +525,22 @@
 4	,	,	PUNCT	_	_	3	punct	_	_
 5	publicou	publicar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 6	cinco	cinco	NUM	_	NumType=Card	7	nummod	_	_
-7	cartas	carta	NOUN	_	Gender=Fem|Number=Plur	5	nsubj	_	_
+7	cartas	carta	NOUN	_	Gender=Fem|Number=Plur	5	obj	_	_
 8	pastorais	pastoral	ADJ	_	Gender=Fem|Number=Plur	7	amod	_	_
 9	e	e	CCONJ	_	_	10	cc	_	_
 10	convocou	convocar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	conj	_	_
 11	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	12	det	_	_
-12	I	I	PROPN	_	Gender=Masc|Number=Sing	10	nsubj	_	_
-13	Sínodo	Sínodo	PROPN	_	Gender=Masc|Number=Sing	12	appos	_	_
-14	Diocesano	Diocesano	PROPN	_	Number=Sing	13	flat:name	_	SpaceAfter=No
+12	I	I	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	10	obj	_	_
+13	Sínodo	Sínodo	PROPN	_	Number=Sing	12	flat:name	_	_
+14	Diocesano	Diocesano	PROPN	_	Number=Sing	12	flat:name	_	SpaceAfter=No
 15	.	.	PUNCT	_	_	5	punct	_	_
 
+# sent_id = 18
 # text = Como bispo de Florianópolis, tentou dar outro padroeiro à cidade, mandando vir da Europa uma imagem de são Floriano, que pretendia colocar na catedral em lugar da existente.
-# sent_id = 19
 1	Como	como	ADP	_	_	2	case	_	_
 2	bispo	bispo	NOUN	_	Gender=Masc|Number=Sing	6	obl	_	_
 3	de	de	ADP	_	_	4	case	_	_
-4	Florianópolis	Florianópolis	PROPN	_	Gender=Masc|Number=Sing	2	nmod	_	SpaceAfter=No
+4	Florianópolis	Florianópolis	PROPN	_	Number=Sing	2	nmod	_	SpaceAfter=No
 5	,	,	PUNCT	_	_	2	punct	_	_
 6	tentou	tentar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 7	dar	dar	VERB	_	VerbForm=Inf	6	xcomp	_	_
@@ -555,7 +549,7 @@
 10-11	à	_	_	_	_	_	_	_	_
 10	a	a	ADP	_	_	12	case	_	_
 11	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	12	det	_	_
-12	cidade	cidade	NOUN	_	Gender=Fem|Number=Sing	7	obl	_	SpaceAfter=No
+12	cidade	cidade	NOUN	_	Gender=Fem|Number=Sing	7	iobj	_	SpaceAfter=No
 13	,	,	PUNCT	_	_	14	punct	_	_
 14	mandando	mandar	VERB	_	VerbForm=Ger	7	advcl	_	_
 15	vir	vir	VERB	_	VerbForm=Inf	14	xcomp	_	_
@@ -565,12 +559,12 @@
 18	Europa	Europa	PROPN	_	Gender=Fem|Number=Sing	15	obl	_	_
 19	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	20	det	_	_
 20	imagem	imagem	NOUN	_	Gender=Fem|Number=Sing	15	obj	_	_
-21	de	de	ADP	_	_	23	mark	_	_
-22	são	ser	AUX	_	Gender=Fem|Number=Sing	23	cop	_	_
-23	Floriano	Floriano	PROPN	_	Gender=Masc|Number=Sing	20	nmod	_	SpaceAfter=No
-24	,	,	PUNCT	_	_	23	punct	_	_
-25	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	26	nsubj	_	_
-26	pretendia	pretender	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	23	acl:relcl	_	_
+21	de	de	ADP	_	_	22	case	_	_
+22	são	são	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	20	nmod	_	_
+23	Floriano	Floriano	PROPN	_	Gender=Masc|Number=Sing	22	appos	_	SpaceAfter=No
+24	,	,	PUNCT	_	_	26	punct	_	_
+25	que	que	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	26	nsubj	_	_
+26	pretendia	pretender	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	20	acl:relcl	_	_
 27	colocar	colocar	VERB	_	VerbForm=Inf	26	xcomp	_	_
 28-29	na	_	_	_	_	_	_	_	_
 28	em	em	ADP	_	_	30	case	_	_
@@ -584,8 +578,8 @@
 35	existente	existente	NOUN	_	Gender=Fem|Number=Sing	32	nmod	_	SpaceAfter=No
 36	.	.	PUNCT	_	_	6	punct	_	_
 
+# sent_id = 19
 # text = Entretanto, sua iniciativa foi malsucedida em decorrência da reação popular, ainda hostil à memória de Floriano Peixoto, que reprimira duramente a Revolução Federalista no estado.
-# sent_id = 20
 1	Entretanto	entretanto	ADV	_	_	6	advmod	_	SpaceAfter=No
 2	,	,	PUNCT	_	_	1	punct	_	_
 3	sua	seu	DET	_	Gender=Fem|Number=Sing|PronType=Prs	4	det	_	_
@@ -599,33 +593,32 @@
 10	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	11	det	_	_
 11	reação	reação	NOUN	_	Gender=Fem|Number=Sing	8	nmod	_	_
 12	popular	popular	ADJ	_	Gender=Fem|Number=Sing	11	amod	_	SpaceAfter=No
-13	,	,	PUNCT	_	_	6	punct	_	_
+13	,	,	PUNCT	_	_	15	punct	_	_
 14	ainda	ainda	ADV	_	_	15	advmod	_	_
-15	hostil	hostil	ADJ	_	Gender=Fem|Number=Sing	8	amod	_	_
+15	hostil	hostil	ADJ	_	Gender=Fem|Number=Sing	11	amod	_	_
 16-17	à	_	_	_	_	_	_	_	_
 16	a	a	ADP	_	_	18	case	_	_
 17	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	18	det	_	_
 18	memória	memória	NOUN	_	Gender=Fem|Number=Sing	15	obl	_	_
 19	de	de	ADP	_	_	20	case	_	_
-20	Floriano	Floriano	PROPN	_	Gender=Masc|Number=Sing	18	nmod	_	_
+20	Floriano	Floriano	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	18	nmod	_	_
 21	Peixoto	Peixoto	PROPN	_	Number=Sing	20	flat:name	_	SpaceAfter=No
-22	,	,	PUNCT	_	_	6	punct	_	_
-23	que	que	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	24	nsubj	_	_
-24	reprimira	reprimirar	VERB	_	Gender=Fem|Number=Sing	20	acl:relcl	_	_
+22	,	,	PUNCT	_	_	24	punct	_	_
+23	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	24	nsubj	_	_
+24	reprimira	reprimirar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pqp|VerbForm=Fin	20	acl:relcl	_	_
 25	duramente	duramente	ADV	_	_	24	advmod	_	_
 26	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	27	det	_	_
-27	Revolução	Revolução	PROPN	_	Gender=Fem|Number=Sing	24	obj	_	_
-28	Federalista	federalista	PROPN	_	Number=Sing	27	flat:name	_	_
+27	Revolução	revolução	NOUN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	24	obj	_	_
+28	Federalista	Federalista	PROPN	_	Number=Sing	27	amod	_	_
 29-30	no	_	_	_	_	_	_	_	_
 29	em	em	ADP	_	_	31	case	_	_
 30	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	31	det	_	_
 31	estado	estado	NOUN	_	Gender=Masc|Number=Sing	24	obl	_	SpaceAfter=No
-32	.	.	PUNCT	_	_	6	punct	_	_
+32	.	.	PUNCT	_	_	6	punct	_	SpacesAfter=\n
 
+# sent_id = 20
 # text = Dom João Becker foi também um pioneiro da campanha de nacionalização do ensino.
-# sent_id = 21
-# newpar
-1	Dom	Dom	PROPN	_	Gender=Masc|Number=Sing	7	nsubj	_	_
+1	Dom	Dom	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	7	nsubj	_	_
 2	João	João	PROPN	_	Number=Sing	1	flat:name	_	_
 3	Becker	Becker	PROPN	_	Number=Sing	1	flat:name	_	_
 4	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	7	cop	_	_
@@ -644,9 +637,9 @@
 15	ensino	ensino	NOUN	_	Gender=Masc|Number=Sing	12	nmod	_	SpaceAfter=No
 16	.	.	PUNCT	_	_	7	punct	_	_
 
+# sent_id = 21
 # text = Enquanto percorria o estado, introduziu nas escolas o ensino de história e geografia do Brasil, ao lado do ensino religioso.
-# sent_id = 22
-1	Enquanto	enquanto	ADV	_	_	2	advmod	_	_
+1	Enquanto	enquanto	SCONJ	_	_	2	mark	_	_
 2	percorria	percorrer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	6	advcl	_	_
 3	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	4	det	_	_
 4	estado	estado	NOUN	_	Gender=Masc|Number=Sing	2	obj	_	SpaceAfter=No
@@ -657,11 +650,11 @@
 8	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	9	det	_	_
 9	escolas	escola	NOUN	_	Gender=Fem|Number=Plur	6	obl	_	_
 10	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	_	_
-11	ensino	ensino	NOUN	_	Gender=Masc|Number=Sing	6	nsubj	_	_
+11	ensino	ensino	NOUN	_	Gender=Masc|Number=Sing	6	obj	_	_
 12	de	de	ADP	_	_	13	case	_	_
 13	história	história	NOUN	_	Gender=Fem|Number=Sing	11	nmod	_	_
 14	e	e	CCONJ	_	_	15	cc	_	_
-15	geografia	geografia	NOUN	_	Gender=Fem|Number=Sing	11	conj	_	_
+15	geografia	geografia	NOUN	_	Gender=Fem|Number=Sing	13	conj	_	_
 16-17	do	_	_	_	_	_	_	_	_
 16	de	de	ADP	_	_	18	case	_	_
 17	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	18	det	_	_
@@ -670,71 +663,70 @@
 20-21	ao	_	_	_	_	_	_	_	_
 20	a	a	ADP	_	_	22	case	_	_
 21	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	22	det	_	_
-22	lado	lado	NOUN	_	_	6	obl	_	_
+22	lado	lado	NOUN	_	Gender=Masc|Number=Sing	6	obl	_	_
 23-24	do	_	_	_	_	_	_	_	_
 23	de	de	ADP	_	_	25	case	_	_
 24	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	25	det	_	_
 25	ensino	ensino	NOUN	_	Gender=Masc|Number=Sing	22	nmod	_	_
 26	religioso	religioso	ADJ	_	Gender=Masc|Number=Sing	25	amod	_	SpaceAfter=No
-27	.	.	PUNCT	_	_	6	punct	_	_
+27	.	.	PUNCT	_	_	6	punct	_	SpacesAfter=\n
 
+# sent_id = 22
 # text = Em 1912, o arcebispo de Porto Alegre, dom Cláudio José Ponce de Leão, renunciou a seu cargo por motivo de doença.
-# sent_id = 23
-# newpar
 1	Em	em	ADP	_	_	2	case	_	_
 2	1912	1912	NUM	_	NumType=Card	17	obl	_	SpaceAfter=No
 3	,	,	PUNCT	_	_	2	punct	_	_
 4	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	5	det	_	_
 5	arcebispo	arcebispo	NOUN	_	Gender=Masc|Number=Sing	17	nsubj	_	_
 6	de	de	ADP	_	_	7	case	_	_
-7	Porto	Porto	PROPN	_	Gender=Masc|Number=Sing	5	nmod	_	_
+7	Porto	Porto	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	5	nmod	_	_
 8	Alegre	Alegre	PROPN	_	Number=Sing	7	flat:name	_	SpaceAfter=No
 9	,	,	PUNCT	_	_	10	punct	_	_
-10	dom	dom	ADP	_	Gender=Masc|Number=Sing	5	appos	_	_
-11	Cláudio	Cláudio	PROPN	_	Number=Sing	10	flat:name	_	_
-12	José	José	PROPN	_	Number=Sing	10	flat:name	_	_
-13	Ponce	Ponce	PROPN	_	Number=Sing	10	flat:name	_	_
+10	dom	dom	NOUN	_	Gender=Masc|Number=Sing	5	appos	_	_
+11	Cláudio	Cláudio	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	10	appos	_	_
+12	José	José	PROPN	_	Number=Sing	11	flat:name	_	_
+13	Ponce	Ponce	PROPN	_	Number=Sing	11	flat:name	_	_
 14	de	de	ADP	_	_	15	case	_	_
-15	Leão	leão	PROPN	_	Number=Sing	10	nmod	_	SpaceAfter=No
+15	Leão	Leão	PROPN	_	Number=Sing	11	nmod	_	SpaceAfter=No
 16	,	,	PUNCT	_	_	10	punct	_	_
 17	renunciou	renunciar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 18	a	a	ADP	_	_	20	case	_	_
 19	seu	seu	DET	_	Gender=Masc|Number=Sing|PronType=Prs	20	det	_	_
-20	cargo	cargo	NOUN	_	Gender=Masc|Number=Sing	17	obl	_	_
+20	cargo	cargo	NOUN	_	Gender=Masc|Number=Sing	17	obj	_	_
 21	por	por	ADP	_	_	22	case	_	_
 22	motivo	motivo	NOUN	_	Gender=Masc|Number=Sing	17	obl	_	_
 23	de	de	ADP	_	_	24	case	_	_
 24	doença	doença	NOUN	_	Gender=Fem|Number=Sing	22	nmod	_	SpaceAfter=No
 25	.	.	PUNCT	_	_	17	punct	_	_
 
+# sent_id = 23
 # text = Seu sucessor de direito, o bispo dom João Antônio Pimenta, coadjutor da arquidiocese, também se encontrava enfermo.
-# sent_id = 24
 1	Seu	seu	DET	_	Gender=Masc|Number=Sing|PronType=Prs	2	det	_	_
 2	sucessor	sucessor	NOUN	_	Gender=Masc|Number=Sing	20	nsubj	_	_
 3	de	de	ADP	_	_	4	case	_	_
 4	direito	direito	NOUN	_	Gender=Masc|Number=Sing	2	nmod	_	SpaceAfter=No
 5	,	,	PUNCT	_	_	7	punct	_	_
 6	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	7	det	_	_
-7	bispo	bispo	NOUN	_	Gender=Masc|Number=Sing	2	conj	_	_
-8	dom	dom	ADP	_	Gender=Masc|Number=Sing	9	case	_	_
-9	João	João	PROPN	_	Gender=Masc|Number=Sing	7	nmod	_	_
+7	bispo	bispo	NOUN	_	Gender=Masc|Number=Sing	2	appos	_	_
+8	dom	dom	NOUN	_	Gender=Masc|Number=Sing	7	nmod	_	_
+9	João	João	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	7	appos	_	_
 10	Antônio	Antônio	PROPN	_	Number=Sing	9	flat:name	_	_
 11	Pimenta	Pimenta	PROPN	_	Number=Sing	9	flat:name	_	SpaceAfter=No
 12	,	,	PUNCT	_	_	13	punct	_	_
-13	coadjutor	coadjutor	NOUN	_	Gender=Masc|Number=Sing	2	conj	_	_
+13	coadjutor	coadjutor	NOUN	_	Gender=Masc|Number=Sing	7	appos	_	_
 14-15	da	_	_	_	_	_	_	_	_
 14	de	de	ADP	_	_	16	case	_	_
 15	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	16	det	_	_
 16	arquidiocese	arquidiocese	NOUN	_	Gender=Fem|Number=Sing	13	nmod	_	SpaceAfter=No
-17	,	,	PUNCT	_	_	2	punct	_	_
+17	,	,	PUNCT	_	_	13	punct	_	_
 18	também	também	ADV	_	_	20	advmod	_	_
 19	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	20	expl	_	_
 20	encontrava	encontrar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	0	root	_	_
-21	enfermo	enfermo	ADV	_	Gender=Masc|Number=Sing	20	advmod	_	SpaceAfter=No
+21	enfermo	enfermo	ADJ	_	Gender=Masc|Number=Sing	20	xcomp	_	SpaceAfter=No
 22	.	.	PUNCT	_	_	20	punct	_	_
 
+# sent_id = 24
 # text = Por sugestão do cardeal-arcebispo do Rio de Janeiro, dom Joaquim Arcoverde de Albuquerque Cavalcanti, a Santa
-# sent_id = 25
 1	Por	por	ADP	_	_	2	case	_	_
 2	sugestão	sugestão	NOUN	_	Gender=Fem|Number=Sing	20	nmod	_	_
 3-4	do	_	_	_	_	_	_	_	_
@@ -747,25 +739,25 @@
 8	Rio	Rio	PROPN	_	Gender=Masc|Number=Sing	5	nmod	_	_
 9	de	de	ADP	_	_	10	case	_	_
 10	Janeiro	Janeiro	PROPN	_	Number=Sing	8	nmod	_	SpaceAfter=No
-11	,	,	PUNCT	_	_	13	punct	_	_
-12	dom	dom	ADP	_	Gender=Masc|Number=Sing	13	case	_	_
-13	Joaquim	Joaquim	PROPN	_	Gender=Masc|Number=Sing	5	nmod	_	_
+11	,	,	PUNCT	_	_	12	punct	_	_
+12	dom	dom	NOUN	_	Gender=Masc|Number=Sing	5	appos	_	_
+13	Joaquim	Joaquim	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	12	appos	_	_
 14	Arcoverde	Arcoverde	PROPN	_	Number=Sing	13	flat:name	_	_
 15	de	de	ADP	_	_	16	case	_	_
-16	Albuquerque	Albuquerque	PROPN	_	Gender=Masc|Number=Sing	13	nmod	_	_
+16	Albuquerque	Albuquerque	PROPN	_	ExtPos=PROPN|Number=Sing	13	nmod	_	_
 17	Cavalcanti	Cavalcanti	PROPN	_	Number=Sing	16	flat:name	_	SpaceAfter=No
-18	,	,	PUNCT	_	_	13	punct	_	_
+18	,	,	PUNCT	_	_	12	punct	_	_
 19	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	20	det	_	_
 20	Santa	Santa	PROPN	_	Gender=Fem|Number=Sing	0	root	_	_
 
+# sent_id = 25
 # text = Sé escolheu dom João Becker para substituir o arcebispo que se retirava.
-# sent_id = 26
-1	Sé	Sé	PROPN	_	Gender=Masc|Number=Sing	2	nsubj	_	_
+1	Sé	sé	PRON	_	Gender=Masc|Number=Sing	2	nsubj	_	_
 2	escolheu	escolher	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
-3	dom	dom	ADP	_	Gender=Masc|Number=Sing	4	case	_	_
-4	João	João	PROPN	_	Gender=Masc|Number=Sing	2	obl	_	_
+3	dom	dom	NOUN	_	Gender=Masc|Number=Sing	2	obj	_	_
+4	João	João	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	3	appos	_	_
 5	Becker	Becker	PROPN	_	Number=Sing	4	flat:name	_	_
-6	para	para	ADP	_	_	7	mark	_	_
+6	para	para	SCONJ	_	_	7	mark	_	_
 7	substituir	substituir	VERB	_	VerbForm=Inf	2	advcl	_	_
 8	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	9	det	_	_
 9	arcebispo	arcebispo	NOUN	_	Gender=Masc|Number=Sing	7	obj	_	_
@@ -774,8 +766,8 @@
 12	retirava	retirar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	9	acl:relcl	_	SpaceAfter=No
 13	.	.	PUNCT	_	_	2	punct	_	_
 
+# sent_id = 26
 # text = Assim, no dia 1º de agosto de 1912, foi promovido a arcebispo de Porto Alegre, tomando posse no dia 8 de dezembro.
-# sent_id = 27
 1	Assim	assim	ADV	_	_	13	advmod	_	SpaceAfter=No
 2	,	,	PUNCT	_	_	1	punct	_	_
 3-4	no	_	_	_	_	_	_	_	_
@@ -790,10 +782,10 @@
 11	,	,	PUNCT	_	_	5	punct	_	_
 12	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	13	aux:pass	_	_
 13	promovido	promover	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
-14	a	o	DET	_	_	15	case	_	_
-15	arcebispo	arcebispo	NOUN	_	Gender=Masc|Number=Sing	13	obl	_	_
+14	a	a	ADP	_	_	15	case	_	_
+15	arcebispo	arcebispo	NOUN	_	Gender=Masc|Number=Sing	13	obj	_	_
 16	de	de	ADP	_	_	17	case	_	_
-17	Porto	Porto	PROPN	_	Gender=Masc|Number=Sing	15	nmod	_	_
+17	Porto	Porto	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	15	nmod	_	_
 18	Alegre	Alegre	PROPN	_	Number=Sing	17	flat:name	_	SpaceAfter=No
 19	,	,	PUNCT	_	_	20	punct	_	_
 20	tomando	tomar	VERB	_	VerbForm=Ger	13	advcl	_	_
@@ -804,50 +796,49 @@
 24	dia	dia	NOUN	_	Gender=Masc|Number=Sing	20	obl	_	_
 25	8	8	NUM	_	NumType=Card	24	nummod	_	_
 26	de	de	ADP	_	_	27	case	_	_
-27	dezembro	dezembro	NOUN	_	Gender=Masc|Number=Sing	24	nmod:tmod	_	SpaceAfter=No
-28	.	.	PUNCT	_	_	13	punct	_	_
+27	dezembro	dezembro	NOUN	_	Gender=Masc|Number=Sing	24	nmod	_	SpaceAfter=No
+28	.	.	PUNCT	_	_	13	punct	_	SpacesAfter=\n
 
+# sent_id = 27
 # text = Durante seus 33 anos de arcebispado, dom João Becker foi responsável por uma série de empreendimentos: criou 15 paróquias em Porto Alegre e 50 no interior, a prelazia de Vacaria, a diocese de Caxias do Sul e as comarcas eclesiásticas.
-# sent_id = 28
-# newpar
 1	Durante	durante	ADP	_	_	4	case	_	_
 2	seus	seu	DET	_	Gender=Masc|Number=Plur|PronType=Prs	4	det	_	_
 3	33	33	NUM	_	NumType=Card	4	nummod	_	_
 4	anos	ano	NOUN	_	Gender=Masc|Number=Plur	12	obl	_	_
-5	de	de	ADP	_	_	6	mark	_	_
-6	arcebispado	arcebispar	VERB	_	Gender=Masc|Number=Sing	4	acl	_	SpaceAfter=No
-7	,	,	PUNCT	_	_	6	punct	_	_
-8	dom	dom	ADP	_	Gender=Masc|Number=Sing	9	case	_	_
-9	João	João	PROPN	_	Gender=Masc|Number=Sing	6	obl	_	_
-10	Becker	Becker	PROPN	_	Number=Sing	9	flat:name	_	_
+5	de	de	ADP	_	_	6	case	_	_
+6	arcebispado	arcebispado	NOUN	_	Gender=Masc|Number=Sing	4	nmod	_	SpaceAfter=No
+7	,	,	PUNCT	_	_	4	punct	_	_
+8	dom	dom	NOUN	_	Gender=Masc|Number=Sing	12	nsubj	_	_
+9	João	João	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	8	flat:name	_	_
+10	Becker	Becker	PROPN	_	Number=Sing	8	flat:name	_	_
 11	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	12	cop	_	_
-12	responsável	responsável	ADJ	_	Gender=Fem|Number=Sing	0	root	_	_
+12	responsável	responsável	ADJ	_	Gender=Masc|Number=Sing	0	root	_	_
 13	por	por	ADP	_	_	15	case	_	_
 14	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	15	det	_	_
 15	série	série	NOUN	_	Gender=Fem|Number=Sing	12	obl	_	_
 16	de	de	ADP	_	_	17	case	_	_
 17	empreendimentos	empreendimento	NOUN	_	Gender=Masc|Number=Plur	15	nmod	_	SpaceAfter=No
-18	:	:	PUNCT	_	_	12	punct	_	_
-19	criou	criar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	12	parataxis	_	_
+18	:	:	PUNCT	_	_	19	punct	_	_
+19	criou	criar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	15	acl:relcl	_	_
 20	15	15	NUM	_	NumType=Card	21	nummod	_	_
 21	paróquias	paróquia	NOUN	_	Gender=Fem|Number=Plur	19	obj	_	_
 22	em	em	ADP	_	_	23	case	_	_
-23	Porto	Porto	PROPN	_	Gender=Masc|Number=Sing	19	obl	_	_
+23	Porto	Porto	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	21	nmod	_	_
 24	Alegre	Alegre	PROPN	_	Number=Sing	23	flat:name	_	_
 25	e	e	CCONJ	_	_	26	cc	_	_
 26	50	50	NUM	_	NumType=Card	23	conj	_	_
 27-28	no	_	_	_	_	_	_	_	_
 27	em	em	ADP	_	_	29	case	_	_
 28	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	29	det	_	_
-29	interior	interior	NOUN	_	Gender=Masc|Number=Sing	19	obl	_	SpaceAfter=No
-30	,	,	PUNCT	_	_	19	punct	_	_
+29	interior	interior	NOUN	_	Gender=Masc|Number=Sing	26	nmod	_	SpaceAfter=No
+30	,	,	PUNCT	_	_	32	punct	_	_
 31	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	32	det	_	_
-32	prelazia	prelazia	NOUN	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	19	obj	_	_
+32	prelazia	prelazia	NOUN	_	Gender=Fem|Number=Sing	21	conj	_	_
 33	de	de	ADP	_	_	34	case	_	_
 34	Vacaria	Vacaria	PROPN	_	Gender=Fem|Number=Sing	32	nmod	_	SpaceAfter=No
 35	,	,	PUNCT	_	_	37	punct	_	_
 36	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	37	det	_	_
-37	diocese	diocese	NOUN	_	Gender=Fem|Number=Sing	34	conj	_	_
+37	diocese	diocese	NOUN	_	Gender=Fem|Number=Sing	21	conj	_	_
 38	de	de	ADP	_	_	39	case	_	_
 39	Caxias	Caxias	PROPN	_	Number=Sing	37	nmod	_	_
 40-41	do	_	_	_	_	_	_	_	_
@@ -856,42 +847,42 @@
 42	Sul	Sul	PROPN	_	Number=Sing	39	nmod	_	_
 43	e	e	CCONJ	_	_	45	cc	_	_
 44	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	45	det	_	_
-45	comarcas	comarca	NOUN	_	Gender=Fem|Number=Plur	34	conj	_	_
+45	comarcas	comarca	NOUN	_	Gender=Fem|Number=Plur	21	conj	_	_
 46	eclesiásticas	eclesiástico	ADJ	_	Gender=Fem|Number=Plur	45	amod	_	SpaceAfter=No
 47	.	.	PUNCT	_	_	12	punct	_	_
 
+# sent_id = 28
 # text = Iniciou a construção da Catedral Metropolitana de Porto Alegre.
-# sent_id = 29
 1	Iniciou	iniciar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	3	det	_	_
 3	construção	construção	NOUN	_	Gender=Fem|Number=Sing	1	obj	_	_
 4-5	da	_	_	_	_	_	_	_	_
 4	de	de	ADP	_	_	6	case	_	_
 5	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	6	det	_	_
-6	Catedral	Catedral	PROPN	_	Gender=Fem|Number=Sing	3	nmod	_	_
+6	Catedral	Catedral	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	3	nmod	_	_
 7	Metropolitana	Metropolitana	PROPN	_	Number=Sing	6	flat:name	_	_
 8	de	de	ADP	_	_	9	case	_	_
-9	Porto	Porto	PROPN	_	Number=Sing	6	nmod	_	_
+9	Porto	Porto	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	6	nmod	_	_
 10	Alegre	Alegre	PROPN	_	Number=Sing	9	flat:name	_	SpaceAfter=No
 11	.	.	PUNCT	_	_	1	punct	_	_
 
+# sent_id = 29
 # text = Fundou a Pia
-# sent_id = 30
 1	Fundou	fundar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	3	det	_	_
 3	Pia	Pia	PROPN	_	Gender=Fem|Number=Sing	1	obj	_	_
 
+# sent_id = 30
 # text = Obra das Vocações Sacerdotais e o Retiro Araceli para o clero idoso e inválido.
-# sent_id = 31
-1	Obra	obra	NOUN	_	Gender=Fem|Number=Sing	0	root	_	_
+1	Obra	Obra	PROPN	_	Gender=Fem|Number=Sing	0	root	_	_
 2-3	das	_	_	_	_	_	_	_	_
 2	de	de	ADP	_	_	4	case	_	_
 3	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	4	det	_	_
-4	Vocações	Vocações	PROPN	_	Number=Sing	1	nmod	_	_
+4	Vocações	Vocações	PROPN	_	ExtPos=PROPN|Number=Sing	1	nmod	_	_
 5	Sacerdotais	Sacerdotais	PROPN	_	Number=Sing	4	flat:name	_	_
 6	e	e	CCONJ	_	_	8	cc	_	_
 7	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	8	det	_	_
-8	Retiro	Retiro	PROPN	_	Gender=Masc|Number=Sing	1	conj	_	_
+8	Retiro	Retiro	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	1	conj	_	_
 9	Araceli	Araceli	PROPN	_	Number=Sing	8	flat:name	_	_
 10	para	para	ADP	_	_	12	case	_	_
 11	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	12	det	_	_
@@ -901,9 +892,9 @@
 15	inválido	inválido	ADJ	_	Gender=Masc|Number=Sing	13	conj	_	SpaceAfter=No
 16	.	.	PUNCT	_	_	1	punct	_	_
 
+# sent_id = 31
 # text = Promoveu a formação de núcleos da Ação Católica em diversas paróquias, devendo-se também à sua iniciativa a criação de círculos operários no estado, no que contou com a colaboração do padre Brentano.
-# sent_id = 32
-1	Promoveu	Promover	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+1	Promoveu	promover	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	3	det	_	_
 3	formação	formação	NOUN	_	Gender=Fem|Number=Sing	1	obj	_	_
 4	de	de	ADP	_	_	5	case	_	_
@@ -911,87 +902,86 @@
 6-7	da	_	_	_	_	_	_	_	_
 6	de	de	ADP	_	_	8	case	_	_
 7	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	8	det	_	_
-8	Ação	ação	PROPN	_	Number=Sing	5	nmod	_	_
+8	Ação	ação	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	5	nmod	_	_
 9	Católica	Católica	PROPN	_	Number=Sing	8	flat:name	_	_
 10	em	em	ADP	_	_	12	case	_	_
-11	diversas	diversos	DET	_	Gender=Fem|Number=Plur|PronType=Ind	12	det	_	_
+11	diversas	diverso	DET	_	Gender=Fem|Number=Plur|PronType=Ind	12	det	_	_
 12	paróquias	paróquia	NOUN	_	Gender=Fem|Number=Plur	1	obl	_	SpaceAfter=No
-13	,	,	PUNCT	_	_	20	punct	_	_
+13	,	,	PUNCT	_	_	14	punct	_	_
 14-15	devendo-se	_	_	_	_	_	_	_	_
-14	devendo	dever	AUX	_	VerbForm=Ger	20	cop	_	_
-15	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	20	nsubj	_	_
-16	também	também	ADV	_	_	20	advmod	_	_
+14	devendo	dever	VERB	_	VerbForm=Ger	1	advcl	_	_
+15	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	14	expl	_	_
+16	também	também	ADV	_	_	14	advmod	_	_
 17-18	à	_	_	_	_	_	_	_	_
 17	a	a	ADP	_	_	20	case	_	_
 18	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	20	det	_	_
 19	sua	seu	DET	_	Gender=Fem|Number=Sing|PronType=Prs	20	det	_	_
-20	iniciativa	iniciativa	NOUN	_	Gender=Fem|Number=Sing	1	advcl	_	_
-21	a	a	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	22	det	_	_
-22	criação	criação	NOUN	_	Gender=Fem|Number=Sing	20	nsubj	_	_
+20	iniciativa	iniciativa	NOUN	_	Gender=Fem|Number=Sing	14	obj	_	_
+21	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	22	det	_	_
+22	criação	criação	NOUN	_	Gender=Fem|Number=Sing	14	obj	_	_
 23	de	de	ADP	_	_	24	case	_	_
 24	círculos	círculo	NOUN	_	Gender=Masc|Number=Plur	22	nmod	_	_
 25	operários	operário	ADJ	_	Gender=Masc|Number=Plur	24	amod	_	_
 26-27	no	_	_	_	_	_	_	_	_
 26	em	em	ADP	_	_	28	case	_	_
 27	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	28	det	_	_
-28	estado	estado	NOUN	_	Gender=Masc|Number=Sing	22	nmod	_	SpaceAfter=No
+28	estado	estado	NOUN	_	Gender=Masc|Number=Sing	24	nmod	_	SpaceAfter=No
 29	,	,	PUNCT	_	_	31	punct	_	_
 30-31	no	_	_	_	_	_	_	_	_
 30	em	em	ADP	_	_	31	case	_	_
-31	o	o	PRON	_	Gender=Masc|Number=Sing|PronType=Dem	28	nmod	_	_
+31	o	o	PRON	_	Gender=Masc|Number=Sing|PronType=Dem	22	nmod	_	_
 32	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	33	nsubj	_	_
 33	contou	contar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	31	acl:relcl	_	_
 34	com	com	ADP	_	_	36	case	_	_
 35	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	36	det	_	_
-36	colaboração	colaboração	NOUN	_	Gender=Fem|Number=Sing	33	obl	_	_
+36	colaboração	colaboração	NOUN	_	Gender=Fem|Number=Sing	33	obj	_	_
 37-38	do	_	_	_	_	_	_	_	_
 37	de	de	ADP	_	_	39	case	_	_
 38	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	39	det	_	_
 39	padre	padre	NOUN	_	Gender=Masc|Number=Sing	36	nmod	_	_
 40	Brentano	Brentano	PROPN	_	Gender=Masc|Number=Sing	39	appos	_	SpaceAfter=No
-41	.	.	PUNCT	_	_	1	punct	_	_
+41	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
 
+# sent_id = 32
 # text = Promoveu a transferência do Seminário Episcopal de Porto Alegre para São Leopoldo, transformando-o em seminário provincial a cargo dos padres da Companhia de Jesus.
-# sent_id = 33
-# newpar
-1	Promoveu	Promover	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+1	Promoveu	promover	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	3	det	_	_
 3	transferência	transferência	NOUN	_	Gender=Fem|Number=Sing	1	obj	_	_
 4-5	do	_	_	_	_	_	_	_	_
 4	de	de	ADP	_	_	6	case	_	_
 5	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	6	det	_	_
-6	Seminário	seminário	PROPN	_	Gender=Masc|Number=Sing	3	nmod	_	_
+6	Seminário	Seminário	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	3	nmod	_	_
 7	Episcopal	Episcopal	PROPN	_	Number=Sing	6	flat:name	_	_
 8	de	de	ADP	_	_	9	case	_	_
-9	Porto	Porto	PROPN	_	Gender=Masc|Number=Sing	6	nmod	_	_
+9	Porto	Porto	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	6	nmod	_	_
 10	Alegre	Alegre	PROPN	_	Number=Sing	9	flat:name	_	_
 11	para	para	ADP	_	_	12	case	_	_
-12	São	São	PROPN	_	Number=Sing	9	nmod	_	_
+12	São	São	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	6	nmod	_	_
 13	Leopoldo	Leopoldo	PROPN	_	Number=Sing	12	flat:name	_	SpaceAfter=No
 14	,	,	PUNCT	_	_	15	punct	_	_
 15-16	transformando-o	_	_	_	_	_	_	_	_
 15	transformando	transformar	VERB	_	VerbForm=Ger	1	advcl	_	_
-16	o	ele	PRON	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	15	obj	_	_
+16	o	ele	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	15	obj	_	_
 17	em	em	ADP	_	_	18	case	_	_
 18	seminário	seminário	NOUN	_	Gender=Masc|Number=Sing	15	obl	_	_
 19	provincial	provincial	ADJ	_	Gender=Masc|Number=Sing	18	amod	_	_
-20	a	a	DET	_	_	21	case	_	_
-21	cargo	cargo	NOUN	_	_	18	nmod	_	_
+20	a	a	ADP	_	_	21	case	_	_
+21	cargo	cargo	NOUN	_	Gender=Masc|Number=Sing	15	obl	_	_
 22-23	dos	_	_	_	_	_	_	_	_
 22	de	de	ADP	_	_	24	case	_	_
 23	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	24	det	_	_
-24	padres	padres	NOUN	_	Number=Sing	21	nmod	_	_
+24	padres	padre	NOUN	_	Gender=Masc|Number=Plur	21	nmod	_	_
 25-26	da	_	_	_	_	_	_	_	_
 25	de	de	ADP	_	_	27	case	_	_
 26	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	27	det	_	_
 27	Companhia	Companhia	PROPN	_	Gender=Fem|Number=Sing	24	nmod	_	_
 28	de	de	ADP	_	_	29	case	_	_
-29	Jesus	Jesus	PROPN	_	Gender=Masc|Number=Sing	27	nmod	_	SpaceAfter=No
+29	Jesus	Jesus	PROPN	_	Number=Sing	27	nmod	_	SpaceAfter=No
 30	.	.	PUNCT	_	_	1	punct	_	_
 
+# sent_id = 33
 # text = Introduziu o ensino de português nas escolas paroquiais ainda antes do início da Primeira Guerra Mundial e construiu o Seminário Menor de Gravataí.
-# sent_id = 34
-1	Introduziu	Introduzir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+1	Introduziu	introduzir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
 3	ensino	ensino	NOUN	_	Gender=Masc|Number=Sing	1	obj	_	_
 4	de	de	ADP	_	_	5	case	_	_
@@ -1002,28 +992,28 @@
 8	escolas	escola	NOUN	_	Gender=Fem|Number=Plur	1	obl	_	_
 9	paroquiais	paroquial	ADJ	_	Gender=Fem|Number=Plur	8	amod	_	_
 10	ainda	ainda	ADV	_	_	11	advmod	_	_
-11	antes	antes	ADV	_	_	8	advmod	_	_
+11	antes	antes	ADV	_	_	1	advmod	_	_
 12-13	do	_	_	_	_	_	_	_	_
 12	de	de	ADP	_	_	14	case	_	_
 13	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	14	det	_	_
 14	início	início	NOUN	_	Gender=Masc|Number=Sing	11	obl	_	_
 15-16	da	_	_	_	_	_	_	_	_
 15	de	de	ADP	_	_	17	case	_	_
-16	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	17	det	_	_
-17	Primeira	Primeira	PROPN	_	Gender=Fem|Number=Sing	14	nmod	_	_
+16	a	o	DET	_	Definite=Def|PronType=Art	17	det	_	_
+17	Primeira	Primeira	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	14	nmod	_	_
 18	Guerra	Guerra	PROPN	_	Number=Sing	17	flat:name	_	_
 19	Mundial	Mundial	PROPN	_	Number=Sing	17	flat:name	_	_
 20	e	e	CCONJ	_	_	21	cc	_	_
 21	construiu	construir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	1	conj	_	_
 22	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	23	det	_	_
-23	Seminário	seminário	PROPN	_	Gender=Masc|Number=Sing	21	obj	_	_
-24	Menor	menor	PROPN	_	Number=Sing	23	flat:name	_	_
+23	Seminário	Seminário	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	21	obj	_	_
+24	Menor	Menor	PROPN	_	Number=Sing	23	flat:name	_	_
 25	de	de	ADP	_	_	26	case	_	_
-26	Gravataí	Gravataí	PROPN	_	Gender=Masc|Number=Sing	23	nmod	_	SpaceAfter=No
+26	Gravataí	Gravataí	PROPN	_	Number=Sing	23	nmod	_	SpaceAfter=No
 27	.	.	PUNCT	_	_	1	punct	_	_
 
+# sent_id = 34
 # text = Instituiu a primeira unidade da futura Pontifícia Universidade Católica do Rio Grande do Sul.
-# sent_id = 35
 1	Instituiu	instituir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	4	det	_	_
 3	primeira	primeiro	ADJ	_	Gender=Fem|Number=Sing|NumType=Ord	4	amod	_	_
@@ -1032,13 +1022,13 @@
 5	de	de	ADP	_	_	8	case	_	_
 6	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	8	det	_	_
 7	futura	futuro	ADJ	_	Gender=Fem|Number=Sing	8	amod	_	_
-8	Pontifícia	Pontifícia	PROPN	_	Gender=Fem|Number=Sing	4	nmod	_	_
-9	Universidade	Universidade	PROPN	_	Gender=Fem|Number=Sing	8	appos	_	_
-10	Católica	Católica	PROPN	_	Number=Sing	9	flat:name	_	_
+8	Pontifícia	Pontifícia	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	4	nmod	_	_
+9	Universidade	Universidade	PROPN	_	Number=Sing	8	flat:name	_	_
+10	Católica	Católica	PROPN	_	Number=Sing	8	flat:name	_	_
 11-12	do	_	_	_	_	_	_	_	_
 11	de	de	ADP	_	_	13	case	_	_
 12	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	13	det	_	_
-13	Rio	Rio	PROPN	_	Gender=Masc|Number=Sing	9	nmod	_	_
+13	Rio	Rio	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	8	nmod	_	_
 14	Grande	Grande	PROPN	_	Number=Sing	13	flat:name	_	_
 15-16	do	_	_	_	_	_	_	_	_
 15	de	de	ADP	_	_	17	case	_	_
@@ -1046,8 +1036,8 @@
 17	Sul	Sul	PROPN	_	Number=Sing	13	nmod	_	SpaceAfter=No
 18	.	.	PUNCT	_	_	1	punct	_	_
 
+# sent_id = 35
 # text = Em 1921, recebeu do papa Benedito XV o título de conde romano.
-# sent_id = 36
 1	Em	em	ADP	_	_	2	case	_	_
 2	1921	1921	NUM	_	NumType=Card	4	obl	_	SpaceAfter=No
 3	,	,	PUNCT	_	_	2	punct	_	_
@@ -1055,19 +1045,18 @@
 5-6	do	_	_	_	_	_	_	_	_
 5	de	de	ADP	_	_	7	case	_	_
 6	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	7	det	_	_
-7	papa	papa	NOUN	_	Gender=Masc|Number=Sing	4	obl	_	_
-8	Benedito	Benedito	PROPN	_	Gender=Masc|Number=Sing	7	appos	_	_
+7	papa	papa	NOUN	_	Gender=Masc|Number=Sing	4	obj	_	_
+8	Benedito	Benedito	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	7	appos	_	_
 9	XV	XV	PROPN	_	Number=Sing	8	flat:name	_	_
 10	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	_	_
 11	título	título	NOUN	_	Gender=Masc|Number=Sing	4	obj	_	_
 12	de	de	ADP	_	_	13	case	_	_
-13	conde	conde	NOUN	_	_	11	nmod	_	_
+13	conde	conde	NOUN	_	Gender=Masc|Number=Sing	11	nmod	_	_
 14	romano	romano	ADJ	_	Gender=Masc|Number=Sing	13	amod	_	SpaceAfter=No
-15	.	.	PUNCT	_	_	4	punct	_	_
+15	.	.	PUNCT	_	_	4	punct	_	SpacesAfter=\n
 
+# sent_id = 36
 # text = Em 1923, na pacificação do Rio Grande do Sul, João Batista Luzardo lembrou o nome de dom João Becker ao general Fernando Setembrino de Carvalho para o cargo de vice-presidente do estado, caso Protásio Antônio Alves renunciasse, o que acabou não ocorrendo.
-# sent_id = 37
-# newpar
 1	Em	em	ADP	_	_	2	case	_	_
 2	1923	1923	NUM	_	NumType=Card	18	obl	_	SpaceAfter=No
 3	,	,	PUNCT	_	_	2	punct	_	_
@@ -1078,14 +1067,14 @@
 7-8	do	_	_	_	_	_	_	_	_
 7	de	de	ADP	_	_	9	case	_	_
 8	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	9	det	_	_
-9	Rio	Rio	PROPN	_	Gender=Masc|Number=Sing	6	nmod	_	_
+9	Rio	Rio	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	6	nmod	_	_
 10	Grande	Grande	PROPN	_	Number=Sing	9	flat:name	_	_
 11-12	do	_	_	_	_	_	_	_	_
 11	de	de	ADP	_	_	13	case	_	_
 12	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	13	det	_	_
 13	Sul	Sul	PROPN	_	Number=Sing	9	nmod	_	SpaceAfter=No
 14	,	,	PUNCT	_	_	6	punct	_	_
-15	João	João	PROPN	_	Gender=Masc|Number=Sing	18	nsubj	_	_
+15	João	João	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	18	nsubj	_	_
 16	Batista	Batista	PROPN	_	Number=Sing	15	flat:name	_	_
 17	Luzardo	Luzardo	PROPN	_	Number=Sing	15	flat:name	_	_
 18	lembrou	lembrar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
@@ -1093,13 +1082,13 @@
 20	nome	nome	NOUN	_	Gender=Masc|Number=Sing	18	obj	_	_
 21	de	de	ADP	_	_	22	case	_	_
 22	dom	dom	NOUN	_	Gender=Masc|Number=Sing	20	nmod	_	_
-23	João	João	PROPN	_	Gender=Masc|Number=Sing	22	appos	_	_
-24	Becker	Becker	PROPN	_	Number=Sing	23	flat:name	_	_
+23	João	João	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	22	flat:name	_	_
+24	Becker	Becker	PROPN	_	Number=Sing	22	flat:name	_	_
 25-26	ao	_	_	_	_	_	_	_	_
 25	a	a	ADP	_	_	27	case	_	_
 26	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	27	det	_	_
-27	general	general	NOUN	_	Gender=Masc|Number=Sing	18	obl	_	_
-28	Fernando	Fernando	PROPN	_	Gender=Masc|Number=Sing	27	appos	_	_
+27	general	general	NOUN	_	Gender=Masc|Number=Sing	18	iobj	_	_
+28	Fernando	Fernando	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	27	appos	_	_
 29	Setembrino	Setembrino	PROPN	_	Number=Sing	28	flat:name	_	_
 30	de	de	ADP	_	_	31	case	_	_
 31	Carvalho	Carvalho	PROPN	_	Number=Sing	28	nmod	_	_
@@ -1114,26 +1103,25 @@
 39	estado	estado	NOUN	_	Gender=Masc|Number=Sing	36	nmod	_	SpaceAfter=No
 40	,	,	PUNCT	_	_	18	punct	_	_
 41	caso	caso	SCONJ	_	_	45	mark	_	_
-42	Protásio	Protásio	PROPN	_	Gender=Masc|Number=Sing	45	nsubj	_	_
+42	Protásio	Protásio	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	45	nsubj	_	_
 43	Antônio	Antônio	PROPN	_	Number=Sing	42	flat:name	_	_
 44	Alves	Alves	PROPN	_	Number=Sing	42	flat:name	_	_
-45	renunciasse	renunciassar	VERB	_	Mood=Sub|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	18	advcl	_	SpaceAfter=No
+45	renunciasse	renunciar	VERB	_	Mood=Sub|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	18	advcl	_	SpaceAfter=No
 46	,	,	PUNCT	_	_	45	punct	_	_
-47	o	o	PRON	_	Gender=Masc|Number=Sing|PronType=Dem	48	det	_	_
+47	o	o	PRON	_	Gender=Masc|Number=Sing|PronType=Dem	18	appos	_	_
 48	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	49	nsubj	_	_
-49	acabou	acabar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	45	xcomp	_	_
+49	acabou	acabar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	47	acl:relcl	_	_
 50	não	não	ADV	_	Polarity=Neg	51	advmod	_	_
-51	ocorrendo	ocorrer	VERB	_	VerbForm=Ger	49	advcl	_	SpaceAfter=No
-52	.	.	PUNCT	_	_	18	punct	_	_
+51	ocorrendo	ocorrer	VERB	_	VerbForm=Ger	49	xcomp	_	SpaceAfter=No
+52	.	.	PUNCT	_	_	18	punct	_	SpacesAfter=\n
 
+# sent_id = 37
 # text = Em 1925, dom João Becker realizou sua primeira viagem à Europa, lá permanecendo quase um ano.
-# sent_id = 38
-# newpar
 1	Em	em	ADP	_	_	2	case	_	_
 2	1925	1925	NUM	_	NumType=Card	7	obl	_	SpaceAfter=No
 3	,	,	PUNCT	_	_	2	punct	_	_
-4	dom	dom	ADP	_	Gender=Masc|Number=Sing	5	case	_	_
-5	João	João	PROPN	_	Gender=Masc|Number=Sing	7	obl	_	_
+4	dom	dom	NOUN	_	Gender=Masc|Number=Sing	7	nsubj	_	_
+5	João	João	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	4	appos	_	_
 6	Becker	Becker	PROPN	_	Number=Sing	5	flat:name	_	_
 7	realizou	realizar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 8	sua	seu	DET	_	Gender=Fem|Number=Sing|PronType=Prs	10	det	_	_
@@ -1141,7 +1129,7 @@
 10	viagem	viagem	NOUN	_	Gender=Fem|Number=Sing	7	obj	_	_
 11-12	à	_	_	_	_	_	_	_	_
 11	a	a	ADP	_	_	13	case	_	_
-12	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	13	det	_	_
+12	a	o	DET	_	Definite=Def|PronType=Art	13	det	_	_
 13	Europa	Europa	PROPN	_	Gender=Fem|Number=Sing	10	nmod	_	SpaceAfter=No
 14	,	,	PUNCT	_	_	16	punct	_	_
 15	lá	lá	ADV	_	_	16	advmod	_	_
@@ -1151,8 +1139,8 @@
 19	ano	ano	NOUN	_	Gender=Masc|Number=Sing	16	obj	_	SpaceAfter=No
 20	.	.	PUNCT	_	_	7	punct	_	_
 
+# sent_id = 38
 # text = Como resultado dessa viagem, escreveu «Viagens e estudos», obra editada em 1928.
-# sent_id = 39
 1	Como	como	ADP	_	_	2	case	_	_
 2	resultado	resultado	NOUN	_	Gender=Masc|Number=Sing	7	obl	_	_
 3-4	dessa	_	_	_	_	_	_	_	_
@@ -1162,58 +1150,57 @@
 6	,	,	PUNCT	_	_	2	punct	_	_
 7	escreveu	escrever	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 8	«	«	PUNCT	_	_	9	punct	_	SpaceAfter=No
-9	Viagens	viagem	NOUN	_	Gender=Fem|Number=Plur	7	nsubj	_	_
-10	e	e	CCONJ	_	_	11	cc	_	_
-11	estudos	estudo	NOUN	_	Gender=Masc|Number=Plur	9	conj	_	SpaceAfter=No
+9	Viagens	Viagens	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	7	obj	_	_
+10	e	e	CCONJ	_	_	9	flat:name	_	_
+11	estudos	estudo	PROPN	_	Number=Sing	9	flat:name	_	SpaceAfter=No
 12	»	»	PUNCT	_	_	9	punct	_	SpaceAfter=No
-13	,	,	PUNCT	_	_	7	punct	_	_
-14	obra	obra	NOUN	_	Gender=Fem|Number=Sing	7	obj	_	_
+13	,	,	PUNCT	_	_	14	punct	_	_
+14	obra	obra	NOUN	_	Gender=Fem|Number=Sing	9	appos	_	_
 15	editada	editar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	14	acl	_	_
 16	em	em	ADP	_	_	17	case	_	_
-17	1928	1928	NUM	_	NumType=Card	7	obl	_	SpaceAfter=No
+17	1928	1928	NUM	_	NumType=Card	15	obl	_	SpaceAfter=No
 18	.	.	PUNCT	_	_	7	punct	_	_
 
+# sent_id = 39
 # text = Mais tarde, em 1938, voltaria ao continente europeu para participar do Congresso Eucarístico Internacional realizado em Budapeste.
-# sent_id = 40
-1	Mais	mais	ADV	_	Gender=Unsp|Number=Unsp|PronType=Ind	2	advmod	_	_
+1	Mais	mais	ADV	_	_	2	advmod	_	_
 2	tarde	tarde	ADV	_	_	7	advmod	_	SpaceAfter=No
 3	,	,	PUNCT	_	_	2	punct	_	_
 4	em	em	ADP	_	_	5	case	_	_
 5	1938	1938	NUM	_	NumType=Card	7	obl	_	SpaceAfter=No
 6	,	,	PUNCT	_	_	5	punct	_	_
-7	voltaria	voltar	VERB	_	Gender=Fem|Number=Sing	0	root	_	_
+7	voltaria	voltar	VERB	_	Mood=Cnd|Number=Sing|Person=3|VerbForm=Fin	0	root	_	_
 8-9	ao	_	_	_	_	_	_	_	_
 8	a	a	ADP	_	_	10	case	_	_
 9	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	10	det	_	_
 10	continente	continente	NOUN	_	Gender=Masc|Number=Sing	7	obl	_	_
 11	europeu	europeu	ADJ	_	Gender=Masc|Number=Sing	10	amod	_	_
-12	para	para	ADP	_	_	13	mark	_	_
+12	para	para	SCONJ	_	_	13	mark	_	_
 13	participar	participar	VERB	_	VerbForm=Inf	7	advcl	_	_
 14-15	do	_	_	_	_	_	_	_	_
 14	de	de	ADP	_	_	16	case	_	_
 15	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	16	det	_	_
-16	Congresso	congresso	PROPN	_	Gender=Masc|Number=Sing	13	obl	_	_
+16	Congresso	Congresso	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	13	obj	_	_
 17	Eucarístico	Eucarístico	PROPN	_	Number=Sing	16	flat:name	_	_
 18	Internacional	Internacional	PROPN	_	Number=Sing	16	flat:name	_	_
 19	realizado	realizar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	16	acl	_	_
 20	em	em	ADP	_	_	21	case	_	_
 21	Budapeste	Budapeste	PROPN	_	Gender=Masc|Number=Sing	19	obl	_	SpaceAfter=No
-22	.	.	PUNCT	_	_	7	punct	_	_
+22	.	.	PUNCT	_	_	7	punct	_	SpacesAfter=\n
 
+# sent_id = 40
 # text = Em julho de 1930, dom João Becker condenou em termos categóricos a revolução que se preparava, num discurso proferido em Passo Fundo (RS).
-# sent_id = 41
-# newpar
 1	Em	em	ADP	_	_	2	case	_	_
 2	julho	julho	NOUN	_	Gender=Masc|Number=Sing	9	obl	_	_
 3	de	de	ADP	_	_	4	case	_	_
 4	1930	1930	NUM	_	NumType=Card	2	nmod	_	SpaceAfter=No
 5	,	,	PUNCT	_	_	2	punct	_	_
-6	dom	dom	ADP	_	Gender=Masc|Number=Sing	7	case	_	_
-7	João	João	PROPN	_	Gender=Masc|Number=Sing	9	nsubj	_	_
+6	dom	dom	NOUN	_	Gender=Masc|Number=Sing	9	nsubj	_	_
+7	João	João	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	9	nsubj	_	_
 8	Becker	Becker	PROPN	_	Number=Sing	7	flat:name	_	_
 9	condenou	condenar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 10	em	em	ADP	_	_	11	case	_	_
-11	termos	termo	NOUN	_	Gender=Masc|Number=Sing	9	obl	_	_
+11	termos	termos	NOUN	_	Gender=Masc|Number=Plur	9	obl	_	_
 12	categóricos	categórico	ADJ	_	Gender=Masc|Number=Plur	11	amod	_	_
 13	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	14	det	_	_
 14	revolução	revolução	NOUN	_	Gender=Fem|Number=Sing	9	obj	_	_
@@ -1224,90 +1211,89 @@
 19-20	num	_	_	_	_	_	_	_	_
 19	em	em	ADP	_	_	21	case	_	_
 20	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	21	det	_	_
-21	discurso	discurso	NOUN	_	Gender=Masc|Number=Sing	17	obl	_	_
+21	discurso	discurso	NOUN	_	Gender=Masc|Number=Sing	9	obl	_	_
 22	proferido	proferir	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	21	acl	_	_
 23	em	em	ADP	_	_	24	case	_	_
-24	Passo	Passo	PROPN	_	Gender=Masc|Number=Sing	22	obl	_	_
+24	Passo	Passo	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	22	obl	_	_
 25	Fundo	Fundo	PROPN	_	Number=Sing	24	flat:name	_	_
 26	(	(	PUNCT	_	_	27	punct	_	SpaceAfter=No
-27	RS	RS	PROPN	_	Gender=Masc|Number=Sing	24	appos	_	SpaceAfter=No
+27	RS	RS	PROPN	_	Gender=Masc|Number=Sing	24	parataxis	_	SpaceAfter=No
 28	)	)	PUNCT	_	_	27	punct	_	SpaceAfter=No
 29	.	.	PUNCT	_	_	9	punct	_	_
 
+# sent_id = 41
 # text = Pouco depois, preocupado com a “avalanche comunista”, procurou o comandante da 3ª Região Militar, o general Gil de Almeida, solicitando-lhe que conseguisse de Washington Luís uma declaração de que jamais tentara abater o Rio Grande do Sul, na esperança de enfraquecer o credo do “bolcheviquismo” entre o povo.
-# sent_id = 42
 1	Pouco	pouco	ADV	_	_	2	advmod	_	_
-2	depois	depois	ADV	_	_	4	advmod	_	SpaceAfter=No
+2	depois	depois	ADV	_	_	12	advmod	_	SpaceAfter=No
 3	,	,	PUNCT	_	_	2	punct	_	_
-4	preocupado	preocupado	ADJ	_	Gender=Masc|Number=Sing	0	root	_	_
+4	preocupado	preocupar	ADJ	_	Gender=Masc|Number=Sing	12	advcl	_	_
 5	com	com	ADP	_	_	8	case	_	_
 6	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	8	det	_	_
-7	“	“	PUNCT	_	_	12	punct	_	SpaceAfter=No
-8	avalanche	avalanche	NOUN	_	Gender=Masc|Number=Sing	4	obl	_	_
-9	comunista	comunista	ADJ	_	Gender=Masc|Number=Sing	8	amod	_	SpaceAfter=No
-10	”	”	PUNCT	_	_	12	punct	_	SpaceAfter=No
-11	,	,	PUNCT	_	_	12	punct	_	_
-12	procurou	procurar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	8	conj	_	_
+7	“	"	PUNCT	_	_	8	punct	_	SpaceAfter=No
+8	avalanche	avalanche	NOUN	_	Gender=Fem|Number=Sing	4	obl	_	_
+9	comunista	comunista	ADJ	_	Gender=Fem|Number=Sing	8	amod	_	SpaceAfter=No
+10	”	"	PUNCT	_	_	8	punct	_	SpaceAfter=No
+11	,	,	PUNCT	_	_	4	punct	_	_
+12	procurou	procurar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 13	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	14	det	_	_
-14	comandante	comandante	NOUN	_	Gender=Masc|Number=Sing	12	nsubj	_	_
+14	comandante	comandante	NOUN	_	Gender=Masc|Number=Sing	12	obj	_	_
 15-16	da	_	_	_	_	_	_	_	_
-15	de	de	ADP	_	_	17	case	_	_
-16	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	17	det	_	_
-17	3ª	3ª	NOUN	_	Gender=Fem|Number=Sing	14	nmod	_	_
-18	Região	Região	PROPN	_	Number=Sing	17	flat:name	_	_
-19	Militar	Militar	PROPN	_	Number=Sing	17	flat:name	_	SpaceAfter=No
-20	,	,	PUNCT	_	_	12	punct	_	_
+15	de	de	ADP	_	_	18	case	_	_
+16	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	18	det	_	_
+17	3ª	3ª	ADJ	_	Gender=Fem|Number=Sing|NumType=Ord	18	amod	_	_
+18	Região	Região	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	14	nmod	_	_
+19	Militar	Militar	PROPN	_	Number=Sing	18	flat:name	_	SpaceAfter=No
+20	,	,	PUNCT	_	_	22	punct	_	_
 21	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	22	det	_	_
-22	general	general	NOUN	_	Gender=Masc|Number=Sing	12	obj	_	_
+22	general	general	NOUN	_	Gender=Masc|Number=Sing	14	appos	_	_
 23	Gil	Gil	PROPN	_	Gender=Masc|Number=Sing	22	appos	_	_
 24	de	de	ADP	_	_	25	case	_	_
 25	Almeida	Almeida	PROPN	_	Number=Sing	23	nmod	_	SpaceAfter=No
-26	,	,	PUNCT	_	_	27	punct	_	_
+26	,	,	PUNCT	_	_	22	punct	_	_
 27-28	solicitando-lhe	_	_	_	_	_	_	_	_
 27	solicitando	solicitar	VERB	_	VerbForm=Ger	12	advcl	_	_
 28	lhe	ele	PRON	_	Case=Dat|Gender=Masc|Number=Sing|Person=3|PronType=Prs	27	iobj	_	_
 29	que	que	SCONJ	_	_	30	mark	_	_
 30	conseguisse	conseguir	VERB	_	Mood=Sub|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	27	ccomp	_	_
 31	de	de	ADP	_	_	32	case	_	_
-32	Washington	Washington	PROPN	_	Gender=Masc|Number=Sing	30	obl	_	_
+32	Washington	Washington	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	30	obl	_	_
 33	Luís	Luís	PROPN	_	Number=Sing	32	flat:name	_	_
 34	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	35	det	_	_
 35	declaração	declaração	NOUN	_	Gender=Fem|Number=Sing	30	obj	_	_
-36	de	de	ADP	_	_	39	mark	_	_
+36	de	de	SCONJ	_	_	39	mark	_	_
 37	que	que	SCONJ	_	_	39	mark	_	_
 38	jamais	jamais	ADV	_	_	39	advmod	_	_
 39	tentara	tentar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pqp|VerbForm=Fin	35	acl	_	_
 40	abater	abater	VERB	_	VerbForm=Inf	39	xcomp	_	_
 41	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	42	det	_	_
-42	Rio	Rio	PROPN	_	Gender=Masc|Number=Sing	40	obj	_	_
+42	Rio	Rio	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	40	obj	_	_
 43	Grande	Grande	PROPN	_	Number=Sing	42	flat:name	_	_
 44-45	do	_	_	_	_	_	_	_	_
 44	de	de	ADP	_	_	46	case	_	_
 45	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	46	det	_	_
 46	Sul	Sul	PROPN	_	Number=Sing	42	nmod	_	SpaceAfter=No
-47	,	,	PUNCT	_	_	52	punct	_	_
+47	,	,	PUNCT	_	_	50	punct	_	_
 48-49	na	_	_	_	_	_	_	_	_
 48	em	em	ADP	_	_	50	case	_	_
 49	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	50	det	_	_
-50	esperança	esperança	NOUN	_	Gender=Fem|Number=Sing	42	nmod	_	_
-51	de	de	ADP	_	_	52	mark	_	_
+50	esperança	esperança	NOUN	_	Gender=Fem|Number=Sing	40	obl	_	_
+51	de	de	SCONJ	_	_	52	mark	_	_
 52	enfraquecer	enfraquecer	VERB	_	VerbForm=Inf	50	acl	_	_
 53	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	54	det	_	_
 54	credo	credo	NOUN	_	Gender=Masc|Number=Sing	52	obj	_	_
 55-56	do	_	_	_	_	_	_	_	_
 55	de	de	ADP	_	_	58	case	_	_
 56	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	58	det	_	_
-57	“	“	PUNCT	_	_	58	punct	_	SpaceAfter=No
+57	“	"	PUNCT	_	_	58	punct	_	SpaceAfter=No
 58	bolcheviquismo	bolcheviquismo	NOUN	_	Gender=Masc|Number=Sing	54	nmod	_	SpaceAfter=No
-59	”	”	PUNCT	_	_	62	punct	_	_
+59	”	"	PUNCT	_	_	58	punct	_	_
 60	entre	entre	ADP	_	_	62	case	_	_
 61	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	62	det	_	_
-62	povo	povo	NOUN	_	Gender=Masc|Number=Sing	58	nmod	_	SpaceAfter=No
-63	.	.	PUNCT	_	_	58	punct	_	_
+62	povo	povo	NOUN	_	Gender=Masc|Number=Sing	52	obl	_	SpaceAfter=No
+63	.	.	PUNCT	_	_	12	punct	_	SpacesAfter=\n
 
+# sent_id = 42
 # text = Após a eclosão do movimento de 1930, porém, dom João Becker irradiou para o episcopado nacional mensagem em que afirmava que a revolução estava “completamente alheia ao comunismo”, que “as instituições sociais e religiosas” nada haviam sofrido, e que o governo do estado mantinha “inalterável a ordem pública”.
-# sent_id = 43
-# newpar
 1	Após	após	ADP	_	_	3	case	_	_
 2	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	3	det	_	_
 3	eclosão	eclosão	NOUN	_	Gender=Fem|Number=Sing	15	obl	_	_
@@ -1318,45 +1304,45 @@
 7	de	de	ADP	_	_	8	case	_	_
 8	1930	1930	NUM	_	NumType=Card	6	nmod	_	SpaceAfter=No
 9	,	,	PUNCT	_	_	3	punct	_	_
-10	porém	porém	ADV	_	_	15	advmod	_	SpaceAfter=No
+10	porém	porém	CCONJ	_	_	15	cc	_	SpaceAfter=No
 11	,	,	PUNCT	_	_	10	punct	_	_
-12	dom	dom	ADP	_	Gender=Masc|Number=Sing	13	case	_	_
-13	João	João	PROPN	_	Gender=Masc|Number=Sing	15	nsubj	_	_
+12	dom	dom	NOUN	_	Gender=Masc|Number=Sing	15	nsubj	_	_
+13	João	João	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	15	nsubj	_	_
 14	Becker	Becker	PROPN	_	Number=Sing	13	flat:name	_	_
 15	irradiou	irradiar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 16	para	para	ADP	_	_	18	case	_	_
 17	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	18	det	_	_
-18	episcopado	episcopado	NOUN	_	Gender=Masc|Number=Sing|VerbForm=Part	15	obl	_	_
+18	episcopado	episcopado	NOUN	_	Gender=Masc|Number=Sing	15	obl	_	_
 19	nacional	nacional	ADJ	_	Gender=Masc|Number=Sing	18	amod	_	_
-20	mensagem	mensagem	NOUN	_	Gender=Fem|Number=Sing	18	appos	_	_
+20	mensagem	mensagem	NOUN	_	Gender=Fem|Number=Sing	15	obj	_	_
 21	em	em	ADP	_	_	22	case	_	_
-22	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	23	obl	_	_
+22	que	que	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	23	obl	_	_
 23	afirmava	afirmar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	20	acl:relcl	_	_
 24	que	que	SCONJ	_	_	30	mark	_	_
 25	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	26	det	_	_
 26	revolução	revolução	NOUN	_	Gender=Fem|Number=Sing	30	nsubj	_	_
 27	estava	estar	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	30	cop	_	_
-28	“	“	PUNCT	_	_	30	punct	_	SpaceAfter=No
+28	“	"	PUNCT	_	_	30	punct	_	SpaceAfter=No
 29	completamente	completamente	ADV	_	_	30	advmod	_	_
-30	alheia	alhear	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	23	ccomp	_	_
+30	alheia	alheio	ADJ	_	Gender=Fem|Number=Sing	23	ccomp	_	_
 31-32	ao	_	_	_	_	_	_	_	_
 31	a	a	ADP	_	_	33	case	_	_
 32	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	33	det	_	_
 33	comunismo	comunismo	NOUN	_	Gender=Masc|Number=Sing	30	obl	_	SpaceAfter=No
-34	”	”	PUNCT	_	_	39	punct	_	SpaceAfter=No
-35	,	,	PUNCT	_	_	39	punct	_	_
-36	que	que	PRON	_	_	39	nmod	_	_
-37	“	“	PUNCT	_	_	39	punct	_	SpaceAfter=No
+34	”	"	PUNCT	_	_	30	punct	_	SpaceAfter=No
+35	,	,	PUNCT	_	_	46	punct	_	_
+36	que	que	SCONJ	_	_	46	mark	_	_
+37	“	"	PUNCT	_	_	39	punct	_	SpaceAfter=No
 38	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	39	det	_	_
-39	instituições	instituição	NOUN	_	Gender=Fem|Number=Plur	30	obj	_	_
+39	instituições	instituição	NOUN	_	Gender=Fem|Number=Plur	46	nsubj	_	_
 40	sociais	social	ADJ	_	Gender=Fem|Number=Plur	39	amod	_	_
 41	e	e	CCONJ	_	_	42	cc	_	_
 42	religiosas	religioso	ADJ	_	Gender=Fem|Number=Plur	40	conj	_	SpaceAfter=No
-43	”	”	PUNCT	_	_	39	punct	_	_
-44	nada	nada	PRON	_	Gender=Masc|Number=Sing|PronType=Ind	46	nsubj	_	_
+43	”	"	PUNCT	_	_	39	punct	_	_
+44	nada	nada	PRON	_	Gender=Masc|Number=Sing|PronType=Ind	46	obj	_	_
 45	haviam	haver	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	46	aux	_	_
-46	sofrido	sofrer	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	39	acl:relcl	_	SpaceAfter=No
-47	,	,	PUNCT	_	_	46	punct	_	_
+46	sofrido	sofrer	VERB	_	VerbForm=Part	30	conj	_	SpaceAfter=No
+47	,	,	PUNCT	_	_	55	punct	_	_
 48	e	e	CCONJ	_	_	55	cc	_	_
 49	que	que	SCONJ	_	_	55	mark	_	_
 50	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	51	det	_	_
@@ -1365,48 +1351,48 @@
 52	de	de	ADP	_	_	54	case	_	_
 53	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	54	det	_	_
 54	estado	estado	NOUN	_	Gender=Masc|Number=Sing	51	nmod	_	_
-55	mantinha	manter	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	39	conj	_	_
-56	“	“	PUNCT	_	_	57	punct	_	SpaceAfter=No
-57	inalterável	inalterável	ADJ	_	Gender=Fem|Number=Sing	55	dep	_	_
+55	mantinha	manter	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	46	conj	_	_
+56	“	"	PUNCT	_	_	57	punct	_	SpaceAfter=No
+57	inalterável	inalterável	ADJ	_	Gender=Fem|Number=Sing	55	xcomp	_	_
 58	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	59	det	_	_
-59	ordem	ordem	NOUN	_	Gender=Fem|Number=Sing	57	obl	_	_
+59	ordem	ordem	NOUN	_	Gender=Fem|Number=Sing	55	obj	_	_
 60	pública	público	ADJ	_	Gender=Fem|Number=Sing	59	amod	_	SpaceAfter=No
-61	”	”	PUNCT	_	_	57	punct	_	SpaceAfter=No
-62	.	.	PUNCT	_	_	39	punct	_	_
+61	”	"	PUNCT	_	_	55	punct	_	SpaceAfter=No
+62	.	.	PUNCT	_	_	15	punct	_	_
 
+# sent_id = 43
 # text = Dizia ainda que a revolução, “conseqüência lógica de fatos lamentáveis”, seguia, “irresistivelmente, sua marcha triunfal”, e que sua vitória faria surgir “uma nova era de prosperidade para a nação”.
-# sent_id = 44
 1	Dizia	dizer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	0	root	_	_
 2	ainda	ainda	ADV	_	_	1	advmod	_	_
-3	que	que	SCONJ	_	_	1	obj	_	_
+3	que	que	SCONJ	_	_	15	mark	_	_
 4	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	5	det	_	_
-5	revolução	revolução	NOUN	_	Gender=Fem|Number=Sing	3	conj	_	SpaceAfter=No
+5	revolução	revolução	NOUN	_	Gender=Fem|Number=Sing	15	nsubj	_	SpaceAfter=No
 6	,	,	PUNCT	_	_	8	punct	_	_
-7	“	“	PUNCT	_	_	8	punct	_	SpaceAfter=No
+7	“	"	PUNCT	_	_	8	punct	_	SpaceAfter=No
 8	conseqüência	conseqüência	NOUN	_	Gender=Fem|Number=Sing	5	appos	_	_
-9	lógica	lógica	ADJ	_	Gender=Fem|Number=Sing	8	amod	_	_
+9	lógica	lógico	ADJ	_	Gender=Fem|Number=Sing	8	amod	_	_
 10	de	de	ADP	_	_	11	case	_	_
 11	fatos	fato	NOUN	_	Gender=Masc|Number=Plur	8	nmod	_	_
-12	lamentáveis	lamentáveis	ADJ	_	Gender=Masc|Number=Plur	11	amod	_	SpaceAfter=No
-13	”	”	PUNCT	_	_	29	punct	_	SpaceAfter=No
-14	,	,	PUNCT	_	_	15	punct	_	_
-15	seguia	seguia	NOUN	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	8	conj	_	SpaceAfter=No
-16	,	,	PUNCT	_	_	15	punct	_	_
-17	“	“	PUNCT	_	_	15	punct	_	SpaceAfter=No
+12	lamentáveis	lamentável	ADJ	_	Gender=Masc|Number=Plur	11	amod	_	SpaceAfter=No
+13	”	"	PUNCT	_	_	8	punct	_	SpaceAfter=No
+14	,	,	PUNCT	_	_	8	punct	_	_
+15	seguia	seguir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	1	ccomp	_	SpaceAfter=No
+16	,	,	PUNCT	_	_	18	punct	_	_
+17	“	"	PUNCT	_	_	18	punct	_	SpaceAfter=No
 18	irresistivelmente	irresistivelmente	ADV	_	_	15	advmod	_	SpaceAfter=No
-19	,	,	PUNCT	_	_	21	punct	_	_
+19	,	,	PUNCT	_	_	18	punct	_	_
 20	sua	seu	DET	_	Gender=Fem|Number=Sing|PronType=Prs	21	det	_	_
-21	marcha	marcha	NOUN	_	Gender=Fem|Number=Sing	15	appos	_	_
+21	marcha	marcha	NOUN	_	Gender=Fem|Number=Sing	15	obj	_	_
 22	triunfal	triunfal	ADJ	_	Gender=Fem|Number=Sing	21	amod	_	SpaceAfter=No
-23	”	”	PUNCT	_	_	21	punct	_	SpaceAfter=No
-24	,	,	PUNCT	_	_	21	punct	_	_
+23	”	"	PUNCT	_	_	21	punct	_	SpaceAfter=No
+24	,	,	PUNCT	_	_	29	punct	_	_
 25	e	e	CCONJ	_	_	29	cc	_	_
 26	que	que	SCONJ	_	_	29	mark	_	_
 27	sua	seu	DET	_	Gender=Fem|Number=Sing|PronType=Prs	28	det	_	_
 28	vitória	vitória	NOUN	_	Gender=Fem|Number=Sing	29	nsubj	_	_
-29	faria	fazer	VERB	_	Mood=Cnd|Number=Sing|Person=3|VerbForm=Fin	8	conj	_	_
+29	faria	fazer	VERB	_	Mood=Cnd|Number=Sing|Person=3|VerbForm=Fin	15	conj	_	_
 30	surgir	surgir	VERB	_	VerbForm=Inf	29	xcomp	_	_
-31	“	“	PUNCT	_	_	34	punct	_	SpaceAfter=No
+31	“	"	PUNCT	_	_	34	punct	_	SpaceAfter=No
 32	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	34	det	_	_
 33	nova	novo	ADJ	_	Gender=Fem|Number=Sing	34	amod	_	_
 34	era	era	NOUN	_	Gender=Fem|Number=Sing	30	obj	_	_
@@ -1415,24 +1401,23 @@
 37	para	para	ADP	_	_	39	case	_	_
 38	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	39	det	_	_
 39	nação	nação	NOUN	_	Gender=Fem|Number=Sing	34	nmod	_	SpaceAfter=No
-40	”	”	PUNCT	_	_	34	punct	_	SpaceAfter=No
-41	.	.	PUNCT	_	_	34	punct	_	_
+40	”	"	PUNCT	_	_	34	punct	_	SpaceAfter=No
+41	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
 
+# sent_id = 44
 # text = A posição de dom João Becker em relação à Revolução de 1930 seria ainda confirmada quando o cardeal-secretário do Vaticano, Eugênio Pacelli (mais tarde papa Pio XII), informado de que o movimento teria tendências comunistas, indagou do arcebispo se a acusação era verdadeira.
-# sent_id = 45
-# newpar
 1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
 2	posição	posição	NOUN	_	Gender=Fem|Number=Sing	16	nsubj:pass	_	_
 3	de	de	ADP	_	_	4	case	_	_
 4	dom	dom	NOUN	_	Gender=Masc|Number=Sing	2	nmod	_	_
-5	João	João	PROPN	_	Gender=Masc|Number=Sing	2	appos	_	_
+5	João	João	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	4	appos	_	_
 6	Becker	Becker	PROPN	_	Number=Sing	5	flat:name	_	_
 7	em	em	ADP	_	_	8	case	_	_
-8	relação	relação	NOUN	_	_	2	nmod	_	_
+8	relação	relação	NOUN	_	Gender=Fem|Number=Sing	2	nmod	_	_
 9-10	à	_	_	_	_	_	_	_	_
 9	a	a	ADP	_	_	11	case	_	_
 10	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	11	det	_	_
-11	Revolução	Revolução	PROPN	_	Gender=Fem|Number=Sing	8	nmod	_	_
+11	Revolução	revolução	NOUN	_	Gender=Fem|Number=Sing	8	nmod	_	_
 12	de	de	ADP	_	_	13	case	_	_
 13	1930	1930	NUM	_	NumType=Card	11	nmod	_	_
 14	seria	ser	AUX	_	Mood=Cnd|Number=Sing|Person=3|VerbForm=Fin	16	aux:pass	_	_
@@ -1445,59 +1430,59 @@
 20	de	de	ADP	_	_	22	case	_	_
 21	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	22	det	_	_
 22	Vaticano	Vaticano	PROPN	_	Gender=Masc|Number=Sing	19	nmod	_	SpaceAfter=No
-23	,	,	PUNCT	_	_	17	punct	_	_
-24	Eugênio	Eugênio	PROPN	_	Gender=Masc|Number=Sing	19	appos	_	_
+23	,	,	PUNCT	_	_	24	punct	_	_
+24	Eugênio	Eugênio	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	19	appos	_	_
 25	Pacelli	Pacelli	PROPN	_	Number=Sing	24	flat:name	_	_
 26	(	(	PUNCT	_	_	29	punct	_	SpaceAfter=No
-27	mais	muito	DET	_	_	28	advmod	_	_
+27	mais	mais	ADV	_	_	28	advmod	_	_
 28	tarde	tarde	ADV	_	_	29	advmod	_	_
 29	papa	papa	NOUN	_	Gender=Masc|Number=Sing	24	appos	_	_
-30	Pio	Pio	PROPN	_	Gender=Masc|Number=Sing	29	appos	_	_
+30	Pio	Pio	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	29	appos	_	_
 31	XII	XII	PROPN	_	Number=Sing	30	flat:name	_	SpaceAfter=No
 32	)	)	PUNCT	_	_	29	punct	_	SpaceAfter=No
 33	,	,	PUNCT	_	_	34	punct	_	_
-34	informado	informar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	24	acl	_	_
-35	de	de	ADP	_	_	39	mark	_	_
+34	informado	informar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	19	acl	_	_
+35	de	de	SCONJ	_	_	39	mark	_	_
 36	que	que	SCONJ	_	_	39	mark	_	_
 37	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	38	det	_	_
 38	movimento	movimento	NOUN	_	Gender=Masc|Number=Sing	39	nsubj	_	_
-39	teria	ter	VERB	_	Mood=Cnd|Number=Sing|Person=3|VerbForm=Fin	34	xcomp	_	_
+39	teria	ter	VERB	_	Mood=Cnd|Number=Sing|Person=3|VerbForm=Fin	34	ccomp	_	_
 40	tendências	tendência	NOUN	_	Gender=Fem|Number=Plur	39	obj	_	_
-41	comunistas	comunista	ADJ	_	Gender=Masc|Number=Plur	40	amod	_	SpaceAfter=No
-42	,	,	PUNCT	_	_	39	punct	_	_
-43	indagou	indagar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	51	advcl	_	_
+41	comunistas	comunista	ADJ	_	Gender=Fem|Number=Plur	40	amod	_	SpaceAfter=No
+42	,	,	PUNCT	_	_	43	punct	_	_
+43	indagou	indagar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	16	conj	_	_
 44-45	do	_	_	_	_	_	_	_	_
 44	de	de	ADP	_	_	46	case	_	_
 45	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	46	det	_	_
-46	arcebispo	arcebispo	NOUN	_	Gender=Masc|Number=Sing	43	obl	_	_
-47	se	se	PRON	_	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	43	expl	_	_
+46	arcebispo	arcebispo	NOUN	_	Gender=Masc|Number=Sing	43	obj	_	_
+47	se	se	SCONJ	_	_	51	mark	_	_
 48	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	49	det	_	_
 49	acusação	acusação	NOUN	_	Gender=Fem|Number=Sing	51	nsubj	_	_
 50	era	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	51	cop	_	_
-51	verdadeira	verdadeiro	ADJ	_	Gender=Fem|Number=Sing	16	dep	_	SpaceAfter=No
+51	verdadeira	verdadeiro	ADJ	_	Gender=Fem|Number=Sing	43	ccomp	_	SpaceAfter=No
 52	.	.	PUNCT	_	_	16	punct	_	_
 
+# sent_id = 45
 # text = A resposta de dom João Becker, da qual Vargas mostraria uma cópia a seu secretário Roberto Alves, foi categórica, negando a “origem comunista” da revolução.
-# sent_id = 46
 1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
 2	resposta	resposta	NOUN	_	Gender=Fem|Number=Sing	22	nsubj	_	_
 3	de	de	ADP	_	_	4	case	_	_
 4	dom	dom	NOUN	_	Gender=Masc|Number=Sing	2	nmod	_	_
-5	João	João	PROPN	_	Gender=Masc|Number=Sing	4	appos	_	_
+5	João	João	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	4	appos	_	_
 6	Becker	Becker	PROPN	_	Number=Sing	5	flat:name	_	SpaceAfter=No
 7	,	,	PUNCT	_	_	12	punct	_	_
 8-9	da	_	_	_	_	_	_	_	_
 8	de	de	ADP	_	_	10	case	_	_
-9	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	10	det	_	_
+9	a	o	DET	_	Gender=Fem|Number=Sing|PronType=Art	10	det	_	_
 10	qual	qual	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	12	obl	_	_
 11	Vargas	Vargas	PROPN	_	Gender=Masc|Number=Sing	12	nsubj	_	_
-12	mostraria	mostrar	VERB	_	Mood=Cnd|Number=Sing|Person=1|VerbForm=Fin	4	acl:relcl	_	_
+12	mostraria	mostrar	VERB	_	Mood=Cnd|Number=Sing|Person=3|VerbForm=Fin	2	acl:relcl	_	_
 13	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	14	det	_	_
 14	cópia	cópia	NOUN	_	Gender=Fem|Number=Sing	12	obj	_	_
 15	a	a	ADP	_	_	17	case	_	_
 16	seu	seu	DET	_	Gender=Masc|Number=Sing|PronType=Prs	17	det	_	_
-17	secretário	secretário	NOUN	_	Gender=Masc|Number=Sing	14	nmod	_	_
-18	Roberto	Roberto	PROPN	_	Gender=Masc|Number=Sing	17	appos	_	_
+17	secretário	secretário	NOUN	_	Gender=Masc|Number=Sing	12	iobj	_	_
+18	Roberto	Roberto	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	17	appos	_	_
 19	Alves	Alves	PROPN	_	Number=Sing	18	flat:name	_	SpaceAfter=No
 20	,	,	PUNCT	_	_	12	punct	_	_
 21	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	22	cop	_	_
@@ -1505,20 +1490,20 @@
 23	,	,	PUNCT	_	_	24	punct	_	_
 24	negando	negar	VERB	_	VerbForm=Ger	22	advcl	_	_
 25	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	27	det	_	_
-26	“	“	PUNCT	_	_	27	punct	_	SpaceAfter=No
+26	“	"	PUNCT	_	_	27	punct	_	SpaceAfter=No
 27	origem	origem	NOUN	_	Gender=Fem|Number=Sing	24	obj	_	_
 28	comunista	comunista	ADJ	_	Gender=Fem|Number=Sing	27	amod	_	SpaceAfter=No
-29	”	”	PUNCT	_	_	27	punct	_	_
+29	”	"	PUNCT	_	_	27	punct	_	_
 30-31	da	_	_	_	_	_	_	_	_
 30	de	de	ADP	_	_	32	case	_	_
 31	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	32	det	_	_
 32	revolução	revolução	NOUN	_	Gender=Fem|Number=Sing	27	nmod	_	SpaceAfter=No
-33	.	.	PUNCT	_	_	27	punct	_	_
+33	.	.	PUNCT	_	_	22	punct	_	_
 
+# sent_id = 46
 # text = Segundo Hélio Silva, esta resposta teria influído na conduta do cardeal Sebastião Leme, arcebispo do Rio de Janeiro, que convenceu Washington Luís a recolher-se ao forte de Copacabana e o acompanhou em sua retirada do país.
-# sent_id = 47
 1	Segundo	segundo	ADP	_	_	2	case	_	_
-2	Hélio	Hélio	PROPN	_	Gender=Masc|Number=Sing	8	obl	_	_
+2	Hélio	Hélio	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	8	obl	_	_
 3	Silva	Silva	PROPN	_	Number=Sing	2	flat:name	_	SpaceAfter=No
 4	,	,	PUNCT	_	_	2	punct	_	_
 5	esta	este	DET	_	Gender=Fem|Number=Sing|PronType=Dem	6	det	_	_
@@ -1528,12 +1513,12 @@
 9-10	na	_	_	_	_	_	_	_	_
 9	em	em	ADP	_	_	11	case	_	_
 10	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	11	det	_	_
-11	conduta	conduta	NOUN	_	Gender=Fem|Number=Sing	8	obl	_	_
+11	conduta	conduta	NOUN	_	Gender=Fem|Number=Sing	8	obj	_	_
 12-13	do	_	_	_	_	_	_	_	_
 12	de	de	ADP	_	_	14	case	_	_
 13	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	14	det	_	_
 14	cardeal	cardeal	NOUN	_	Gender=Masc|Number=Sing	11	nmod	_	_
-15	Sebastião	Sebastião	PROPN	_	Gender=Masc|Number=Sing	14	appos	_	_
+15	Sebastião	Sebastião	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	14	appos	_	_
 16	Leme	Leme	PROPN	_	Number=Sing	15	flat:name	_	SpaceAfter=No
 17	,	,	PUNCT	_	_	18	punct	_	_
 18	arcebispo	arcebispo	NOUN	_	Gender=Masc|Number=Sing	14	appos	_	_
@@ -1545,19 +1530,19 @@
 23	Janeiro	Janeiro	PROPN	_	Number=Sing	21	nmod	_	SpaceAfter=No
 24	,	,	PUNCT	_	_	18	punct	_	_
 25	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	26	nsubj	_	_
-26	convenceu	convencer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	11	acl:relcl	_	_
-27	Washington	Washington	PROPN	_	Gender=Masc|Number=Sing	26	obj	_	_
+26	convenceu	convencer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	14	acl:relcl	_	_
+27	Washington	Washington	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	26	obj	_	_
 28	Luís	Luís	PROPN	_	Number=Sing	27	flat:name	_	_
-29	a	a	ADP	_	_	30	mark	_	_
+29	a	a	SCONJ	_	_	30	mark	_	_
 30-31	recolher-se	_	_	_	_	_	_	_	_
 30	recolher	recolher	VERB	_	VerbForm=Inf	26	xcomp	_	_
-31	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Plur|Person=3|PronType=Prs	30	expl	_	_
+31	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	30	expl	_	_
 32-33	ao	_	_	_	_	_	_	_	_
 32	a	a	ADP	_	_	34	case	_	_
 33	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	34	det	_	_
 34	forte	forte	NOUN	_	Gender=Masc|Number=Sing	30	obl	_	_
 35	de	de	ADP	_	_	36	case	_	_
-36	Copacabana	Copacabana	PROPN	_	Gender=Fem|Number=Sing	34	nmod	_	_
+36	Copacabana	Copacabana	PROPN	_	Number=Sing	34	nmod	_	_
 37	e	e	CCONJ	_	_	39	cc	_	_
 38	o	ele	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	39	obj	_	_
 39	acompanhou	acompanhar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	30	conj	_	_
@@ -1570,8 +1555,8 @@
 45	país	país	NOUN	_	Gender=Masc|Number=Sing	42	nmod	_	SpaceAfter=No
 46	.	.	PUNCT	_	_	8	punct	_	_
 
+# sent_id = 47
 # text = Após o final do movimento revolucionário, dom João Becker celebrou «Te Deum» em que louvou a vitória dos políticos gaúchos.
-# sent_id = 48
 1	Após	após	ADP	_	_	3	case	_	_
 2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
 3	final	final	NOUN	_	Gender=Masc|Number=Sing	12	obl	_	_
@@ -1581,17 +1566,17 @@
 6	movimento	movimento	NOUN	_	Gender=Masc|Number=Sing	3	nmod	_	_
 7	revolucionário	revolucionário	ADJ	_	Gender=Masc|Number=Sing	6	amod	_	SpaceAfter=No
 8	,	,	PUNCT	_	_	3	punct	_	_
-9	dom	dom	ADP	_	Gender=Masc|Number=Sing	10	case	_	_
-10	João	João	PROPN	_	Gender=Masc|Number=Sing	12	nsubj	_	_
+9	dom	dom	NOUN	_	Gender=Masc|Number=Sing	12	nsubj	_	_
+10	João	João	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	9	appos	_	_
 11	Becker	Becker	PROPN	_	Number=Sing	10	flat:name	_	_
 12	celebrou	celebrar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
-13	«	«	PUNCT	_	_	15	punct	_	SpaceAfter=No
-14	Te	te	PROPN	_	_	12	obj	_	_
-15	Deum	Deum	PROPN	_	Gender=Masc|Number=Sing	14	appos	_	SpaceAfter=No
-16	»	»	PUNCT	_	_	15	punct	_	_
+13	«	«	PUNCT	_	_	14	punct	_	SpaceAfter=No
+14	Te	Te	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	12	obj	_	_
+15	Deum	Deum	PROPN	_	Number=Sing	14	flat:name	_	SpaceAfter=No
+16	»	»	PUNCT	_	_	14	punct	_	_
 17	em	em	ADP	_	_	18	case	_	_
 18	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	19	obl	_	_
-19	louvou	louvar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	15	acl:relcl	_	_
+19	louvou	louvar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	14	acl:relcl	_	_
 20	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	21	det	_	_
 21	vitória	vitória	NOUN	_	Gender=Fem|Number=Sing	19	obj	_	_
 22-23	dos	_	_	_	_	_	_	_	_
@@ -1599,11 +1584,10 @@
 23	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	24	det	_	_
 24	políticos	político	NOUN	_	Gender=Masc|Number=Plur	21	nmod	_	_
 25	gaúchos	gaúcho	ADJ	_	Gender=Masc|Number=Plur	24	amod	_	SpaceAfter=No
-26	.	.	PUNCT	_	_	12	punct	_	_
+26	.	.	PUNCT	_	_	12	punct	_	SpacesAfter=\n
 
+# sent_id = 48
 # text = Em outubro de 1931, foi escolhido para falar na cerimônia de inauguração do monumento ao Cristo Redentor, no antigo Distrito Federal.
-# sent_id = 49
-# newpar
 1	Em	em	ADP	_	_	2	case	_	_
 2	outubro	outubro	NOUN	_	Gender=Masc|Number=Sing	7	obl	_	_
 3	de	de	ADP	_	_	4	case	_	_
@@ -1611,7 +1595,7 @@
 5	,	,	PUNCT	_	_	2	punct	_	_
 6	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	7	aux:pass	_	_
 7	escolhido	escolher	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
-8	para	para	ADP	_	_	9	mark	_	_
+8	para	para	SCONJ	_	_	9	mark	_	_
 9	falar	falar	VERB	_	VerbForm=Inf	7	advcl	_	_
 10-11	na	_	_	_	_	_	_	_	_
 10	em	em	ADP	_	_	12	case	_	_
@@ -1626,35 +1610,34 @@
 18-19	ao	_	_	_	_	_	_	_	_
 18	a	a	ADP	_	_	20	case	_	_
 19	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	20	det	_	_
-20	Cristo	Cristo	PROPN	_	Gender=Masc|Number=Sing	9	obl	_	_
+20	Cristo	Cristo	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	17	nmod	_	_
 21	Redentor	Redentor	PROPN	_	Number=Sing	20	flat:name	_	SpaceAfter=No
 22	,	,	PUNCT	_	_	9	punct	_	_
 23-24	no	_	_	_	_	_	_	_	_
 23	em	em	ADP	_	_	26	case	_	_
 24	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	26	det	_	_
 25	antigo	antigo	ADJ	_	Gender=Masc|Number=Sing	26	amod	_	_
-26	Distrito	Distrito	PROPN	_	Gender=Masc|Number=Sing	7	obl	_	_
+26	Distrito	Distrito	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	9	obl	_	_
 27	Federal	Federal	PROPN	_	Number=Sing	26	flat:name	_	SpaceAfter=No
-28	.	.	PUNCT	_	_	7	punct	_	_
+28	.	.	PUNCT	_	_	7	punct	_	SpacesAfter=\n
 
+# sent_id = 49
 # text = Foi secretário-geral da Liga Eleitoral Católica (LEC) no Rio Grande do Sul.
-# sent_id = 50
-# newpar
 1	Foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	cop	_	_
 2	secretário-geral	secretário-geral	NOUN	_	Gender=Masc|Number=Sing	0	root	_	_
 3-4	da	_	_	_	_	_	_	_	_
 3	de	de	ADP	_	_	5	case	_	_
 4	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	5	det	_	_
-5	Liga	Liga	PROPN	_	Gender=Fem|Number=Sing	2	nmod	_	_
-6	Eleitoral	Eleitoral	PROPN	_	Number=Sing	5	flat:name	_	_
-7	Católica	católica	PROPN	_	Number=Sing	5	flat:name	_	_
+5	Liga	Liga	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	2	nmod	_	_
+6	Eleitoral	eleitoral	ADJ	_	Number=Sing	5	amod	_	_
+7	Católica	católico	ADJ	_	Gender=Fem|Number=Sing	5	amod	_	_
 8	(	(	PUNCT	_	_	9	punct	_	SpaceAfter=No
 9	LEC	LEC	PROPN	_	Gender=Fem|Number=Sing	5	appos	_	SpaceAfter=No
 10	)	)	PUNCT	_	_	9	punct	_	_
 11-12	no	_	_	_	_	_	_	_	_
 11	em	em	ADP	_	_	13	case	_	_
 12	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	13	det	_	_
-13	Rio	Rio	PROPN	_	Gender=Masc|Number=Sing	2	nmod	_	_
+13	Rio	Rio	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	2	nmod	_	_
 14	Grande	Grande	PROPN	_	Number=Sing	13	flat:name	_	_
 15-16	do	_	_	_	_	_	_	_	_
 15	de	de	ADP	_	_	17	case	_	_
@@ -1662,8 +1645,8 @@
 17	Sul	Sul	PROPN	_	Number=Sing	13	nmod	_	SpaceAfter=No
 18	.	.	PUNCT	_	_	2	punct	_	_
 
+# sent_id = 50
 # text = Nas eleições à Constituinte, realizadas em 1933, a LEC gaúcha recomendou que os católicos votassem apenas nos candidatos do Partido Republicano Liberal (PRL), de José Antônio Flores da Cunha, rejeitando os postulantes da Frente Única Gaúcha (FUG), embora o Partido Republicano Rio-Grandense (PRR), componente da FUG, incluísse em seu programa os principais pontos defendidos pela LEC.
-# sent_id = 51
 1-2	Nas	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	3	case	_	_
 2	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	3	det	_	_
@@ -1672,72 +1655,72 @@
 4	a	a	ADP	_	_	6	case	_	_
 5	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	6	det	_	_
 6	Constituinte	Constituinte	PROPN	_	Gender=Fem|Number=Sing	3	nmod	_	SpaceAfter=No
-7	,	,	PUNCT	_	_	3	punct	_	_
+7	,	,	PUNCT	_	_	8	punct	_	_
 8	realizadas	realizar	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part	3	acl	_	_
 9	em	em	ADP	_	_	10	case	_	_
 10	1933	1933	NUM	_	NumType=Card	8	obl	_	SpaceAfter=No
 11	,	,	PUNCT	_	_	8	punct	_	_
 12	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	13	det	_	_
 13	LEC	LEC	PROPN	_	Gender=Fem|Number=Sing	15	nsubj	_	_
-14	gaúcha	gaúcho	ADJ	_	Number=Sing	13	flat:name	_	_
+14	gaúcha	gaúcho	ADJ	_	Gender=Fem|Number=Sing	13	amod	_	_
 15	recomendou	recomendar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 16	que	que	SCONJ	_	_	19	mark	_	_
 17	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	18	det	_	_
 18	católicos	católico	NOUN	_	Gender=Masc|Number=Plur	19	nsubj	_	_
 19	votassem	votar	VERB	_	Mood=Sub|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	15	ccomp	_	_
-20	apenas	apenas	ADV	_	_	19	advmod	_	_
+20	apenas	apenas	ADV	_	_	23	advmod	_	_
 21-22	nos	_	_	_	_	_	_	_	_
 21	em	em	ADP	_	_	23	case	_	_
 22	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	23	det	_	_
-23	candidatos	candidato	NOUN	_	Gender=Masc|Number=Plur	19	obl	_	_
+23	candidatos	candidato	NOUN	_	Gender=Masc|Number=Plur	19	obj	_	_
 24-25	do	_	_	_	_	_	_	_	_
 24	de	de	ADP	_	_	26	case	_	_
 25	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	26	det	_	_
-26	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	23	nmod	_	_
+26	Partido	Partido	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	23	nmod	_	_
 27	Republicano	Republicano	PROPN	_	Number=Sing	26	flat:name	_	_
-28	Liberal	liberal	PROPN	_	Number=Sing	26	flat:name	_	_
+28	Liberal	Liberal	PROPN	_	Number=Sing	26	flat:name	_	_
 29	(	(	PUNCT	_	_	30	punct	_	SpaceAfter=No
 30	PRL	PRL	PROPN	_	Gender=Masc|Number=Sing	26	appos	_	SpaceAfter=No
 31	)	)	PUNCT	_	_	30	punct	_	SpaceAfter=No
 32	,	,	PUNCT	_	_	34	punct	_	_
 33	de	de	ADP	_	_	34	case	_	_
-34	José	José	PROPN	_	Gender=Masc|Number=Sing	26	nmod	_	_
+34	José	José	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	26	nmod	_	_
 35	Antônio	Antônio	PROPN	_	Number=Sing	34	flat:name	_	_
 36	Flores	Flores	PROPN	_	Number=Sing	34	flat:name	_	_
 37-38	da	_	_	_	_	_	_	_	_
 37	de	de	ADP	_	_	39	case	_	_
 38	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	39	det	_	_
 39	Cunha	Cunha	PROPN	_	Number=Sing	34	nmod	_	SpaceAfter=No
-40	,	,	PUNCT	_	_	34	punct	_	_
+40	,	,	PUNCT	_	_	41	punct	_	_
 41	rejeitando	rejeitar	VERB	_	VerbForm=Ger	19	advcl	_	_
 42	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	43	det	_	_
 43	postulantes	postulante	NOUN	_	Gender=Masc|Number=Plur	41	obj	_	_
 44-45	da	_	_	_	_	_	_	_	_
 44	de	de	ADP	_	_	46	case	_	_
 45	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	46	det	_	_
-46	Frente	Frente	PROPN	_	Gender=Fem|Number=Sing	43	nmod	_	_
-47	Única	única	PROPN	_	Gender=Fem|Number=Sing	46	appos	_	_
-48	Gaúcha	Gaúcha	PROPN	_	Number=Sing	47	flat:name	_	_
+46	Frente	Frente	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	43	nmod	_	_
+47	Única	Única	PROPN	_	Number=Sing	46	flat:name	_	_
+48	Gaúcha	Gaúcha	PROPN	_	Number=Sing	46	flat:name	_	_
 49	(	(	PUNCT	_	_	50	punct	_	SpaceAfter=No
-50	FUG	FUG	PROPN	_	Gender=Masc|Number=Sing	46	appos	_	SpaceAfter=No
+50	FUG	FUG	PROPN	_	Gender=Fem|Number=Sing	46	appos	_	SpaceAfter=No
 51	)	)	PUNCT	_	_	50	punct	_	SpaceAfter=No
 52	,	,	PUNCT	_	_	41	punct	_	_
 53	embora	embora	SCONJ	_	_	67	mark	_	_
 54	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	55	det	_	_
-55	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	67	nsubj	_	_
+55	Partido	Partido	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	67	nsubj	_	_
 56	Republicano	Republicano	PROPN	_	Number=Sing	55	flat:name	_	_
 57	Rio-Grandense	Rio-Grandense	PROPN	_	Number=Sing	55	flat:name	_	_
 58	(	(	PUNCT	_	_	59	punct	_	SpaceAfter=No
 59	PRR	PRR	PROPN	_	Gender=Masc|Number=Sing	55	appos	_	SpaceAfter=No
 60	)	)	PUNCT	_	_	59	punct	_	SpaceAfter=No
 61	,	,	PUNCT	_	_	62	punct	_	_
-62	componente	componente	ADJ	_	Gender=Masc|Number=Sing	55	amod	_	_
+62	componente	componente	NOUN	_	Gender=Masc|Number=Sing	55	appos	_	_
 63-64	da	_	_	_	_	_	_	_	_
 63	de	de	ADP	_	_	65	case	_	_
 64	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	65	det	_	_
-65	FUG	FUG	PROPN	_	Gender=Fem|Number=Sing	62	obl	_	SpaceAfter=No
+65	FUG	FUG	PROPN	_	Gender=Fem|Number=Sing	62	nmod	_	SpaceAfter=No
 66	,	,	PUNCT	_	_	62	punct	_	_
-67	incluísse	incluir	VERB	_	Mood=Sub|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	19	advcl	_	_
+67	incluísse	incluir	VERB	_	Mood=Sub|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	41	advcl	_	_
 68	em	em	ADP	_	_	70	case	_	_
 69	seu	seu	DET	_	Gender=Masc|Number=Sing|PronType=Prs	70	det	_	_
 70	programa	programa	NOUN	_	Gender=Masc|Number=Sing	67	obl	_	_
@@ -1747,29 +1730,29 @@
 74	defendidos	defender	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	73	acl	_	_
 75-76	pela	_	_	_	_	_	_	_	_
 75	por	por	ADP	_	_	77	case	_	_
-76	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	77	det	_	_
+76	a	o	DET	_	Definite=Def|PronType=Art	77	det	_	_
 77	LEC	LEC	PROPN	_	Gender=Fem|Number=Sing	74	obl:agent	_	SpaceAfter=No
 78	.	.	PUNCT	_	_	15	punct	_	_
 
+# sent_id = 51
 # text = Essa atitude foi criticada por Alceu Amoroso Lima, secretário-geral da LEC, porque contradizia os princípios de apartidarismo da organização.
-# sent_id = 52
 1	Essa	esse	DET	_	Gender=Fem|Number=Sing|PronType=Dem	2	det	_	_
 2	atitude	atitude	NOUN	_	Gender=Fem|Number=Sing	4	nsubj:pass	_	_
 3	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	aux:pass	_	_
 4	criticada	criticar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
 5	por	por	ADP	_	_	6	case	_	_
-6	Alceu	Alceu	PROPN	_	Number=Sing	4	obl:agent	_	_
+6	Alceu	Alceu	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	4	obl:agent	_	_
 7	Amoroso	Amoroso	PROPN	_	Number=Sing	6	flat:name	_	_
 8	Lima	Lima	PROPN	_	Number=Sing	6	flat:name	_	SpaceAfter=No
-9	,	,	PUNCT	_	_	4	punct	_	_
+9	,	,	PUNCT	_	_	10	punct	_	_
 10	secretário-geral	secretário-geral	NOUN	_	Gender=Masc|Number=Sing	6	appos	_	_
 11-12	da	_	_	_	_	_	_	_	_
 11	de	de	ADP	_	_	13	case	_	_
 12	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	13	det	_	_
 13	LEC	LEC	PROPN	_	Gender=Fem|Number=Sing	10	nmod	_	SpaceAfter=No
-14	,	,	PUNCT	_	_	4	punct	_	_
+14	,	,	PUNCT	_	_	10	punct	_	_
 15	porque	porque	SCONJ	_	_	16	mark	_	_
-16	contradizia	contradizer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	4	advcl	_	_
+16	contradizia	contradizir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	4	advcl	_	_
 17	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	18	det	_	_
 18	princípios	princípio	NOUN	_	Gender=Masc|Number=Plur	16	obj	_	_
 19	de	de	ADP	_	_	20	case	_	_
@@ -1778,72 +1761,71 @@
 21	de	de	ADP	_	_	23	case	_	_
 22	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	23	det	_	_
 23	organização	organização	NOUN	_	Gender=Fem|Number=Sing	20	nmod	_	SpaceAfter=No
-24	.	.	PUNCT	_	_	4	punct	_	_
+24	.	.	PUNCT	_	_	4	punct	_	SpacesAfter=\n
 
+# sent_id = 52
 # text = Em julho de 1935, dom João Becker fundou no Rio Grande do Sul a Ação Social Brasileira, movimento considerado de caráter fascista.
-# sent_id = 53
-# newpar
 1	Em	em	ADP	_	_	2	case	_	_
 2	julho	julho	NOUN	_	Gender=Masc|Number=Sing	9	obl	_	_
 3	de	de	ADP	_	_	4	case	_	_
 4	1935	1935	NUM	_	NumType=Card	2	nmod	_	SpaceAfter=No
 5	,	,	PUNCT	_	_	2	punct	_	_
-6	dom	dom	ADP	_	Gender=Masc|Number=Sing	7	case	_	_
-7	João	João	PROPN	_	Gender=Masc|Number=Sing	9	nsubj	_	_
+6	dom	dom	NOUN	_	Gender=Masc|Number=Sing	9	nsubj	_	_
+7	João	João	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	9	nsubj	_	_
 8	Becker	Becker	PROPN	_	Number=Sing	7	flat:name	_	_
 9	fundou	fundar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 10-11	no	_	_	_	_	_	_	_	_
 10	em	em	ADP	_	_	12	case	_	_
 11	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	12	det	_	_
-12	Rio	Rio	PROPN	_	Gender=Masc|Number=Sing	9	obl	_	_
+12	Rio	Rio	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	9	obl	_	_
 13	Grande	Grande	PROPN	_	Number=Sing	12	flat:name	_	_
 14-15	do	_	_	_	_	_	_	_	_
 14	de	de	ADP	_	_	16	case	_	_
 15	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	16	det	_	_
 16	Sul	Sul	PROPN	_	Number=Sing	12	nmod	_	_
-17	a	o	ADP	_	_	18	case	_	_
-18	Ação	ação	PROPN	_	Number=Sing	9	obl	_	_
+17	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	18	det	_	_
+18	Ação	Ação	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	9	obj	_	_
 19	Social	Social	PROPN	_	Number=Sing	18	flat:name	_	_
-20	Brasileira	brasileira	PROPN	_	Number=Sing	18	flat:name	_	SpaceAfter=No
-21	,	,	PUNCT	_	_	23	punct	_	_
-22	movimento	movimento	NOUN	_	Gender=Masc|Number=Sing	9	obj	_	_
+20	Brasileira	Brasileira	PROPN	_	Number=Sing	18	flat:name	_	SpaceAfter=No
+21	,	,	PUNCT	_	_	22	punct	_	_
+22	movimento	movimento	NOUN	_	Gender=Masc|Number=Sing	18	appos	_	_
 23	considerado	considerar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	22	acl	_	_
 24	de	de	ADP	_	_	25	case	_	_
-25	caráter	caráter	NOUN	_	Gender=Masc|Number=Sing	23	obl	_	_
-26	fascista	fascista	ADJ	_	Number=Sing	25	amod	_	SpaceAfter=No
+25	caráter	caráter	NOUN	_	Gender=Masc|Number=Sing	23	obj	_	_
+26	fascista	fascista	ADJ	_	Gender=Masc|Number=Sing	25	amod	_	SpaceAfter=No
 27	.	.	PUNCT	_	_	9	punct	_	_
 
+# sent_id = 53
 # text = O programa da Ação Social Brasileira defendia a luta contra a ação, “direta ou velada”, do comunismo, propondo o “combate pela civilização e pela pátria, ameaçadas pela barbárie comunista” e a defesa da Constituição Federal então vigente, enquanto esta defendesse os princípios cristãos.
-# sent_id = 54
 1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	_	_
 2	programa	programa	NOUN	_	Gender=Masc|Number=Sing	8	nsubj	_	_
 3-4	da	_	_	_	_	_	_	_	_
 3	de	de	ADP	_	_	5	case	_	_
 4	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	5	det	_	_
-5	Ação	ação	PROPN	_	Number=Sing	2	nmod	_	_
+5	Ação	Ação	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	2	nmod	_	_
 6	Social	Social	PROPN	_	Number=Sing	5	flat:name	_	_
-7	Brasileira	brasileira	PROPN	_	Number=Sing	5	flat:name	_	_
+7	Brasileira	Brasileira	PROPN	_	Number=Sing	5	flat:name	_	_
 8	defendia	defender	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	0	root	_	_
 9	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	10	det	_	_
 10	luta	luta	NOUN	_	Gender=Fem|Number=Sing	8	obj	_	_
 11	contra	contra	ADP	_	_	13	case	_	_
 12	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	13	det	_	_
 13	ação	ação	NOUN	_	Gender=Fem|Number=Sing	10	nmod	_	SpaceAfter=No
-14	,	,	PUNCT	_	_	55	punct	_	_
-15	“	“	PUNCT	_	_	55	punct	_	SpaceAfter=No
-16	direta	direta	NOUN	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	55	nsubj	_	_
+14	,	,	PUNCT	_	_	16	punct	_	_
+15	“	"	PUNCT	_	_	16	punct	_	SpaceAfter=No
+16	direta	direto	ADJ	_	Gender=Fem|Number=Sing	13	amod	_	_
 17	ou	ou	CCONJ	_	_	18	cc	_	_
-18	velada	velar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	16	conj	_	SpaceAfter=No
-19	”	”	PUNCT	_	_	55	punct	_	SpaceAfter=No
+18	velada	velar	ADJ	_	Gender=Fem|Number=Sing	16	conj	_	SpaceAfter=No
+19	”	"	PUNCT	_	_	16	punct	_	SpaceAfter=No
 20	,	,	PUNCT	_	_	23	punct	_	_
 21-22	do	_	_	_	_	_	_	_	_
 21	de	de	ADP	_	_	23	case	_	_
 22	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	23	det	_	_
-23	comunismo	comunismo	NOUN	_	Gender=Masc|Number=Sing	16	nmod	_	SpaceAfter=No
-24	,	,	PUNCT	_	_	23	punct	_	_
-25	propondo	propor	VERB	_	VerbForm=Ger	55	advcl	_	_
+23	comunismo	comunismo	NOUN	_	Gender=Masc|Number=Sing	13	nmod	_	SpaceAfter=No
+24	,	,	PUNCT	_	_	25	punct	_	_
+25	propondo	propor	VERB	_	VerbForm=Ger	8	advcl	_	_
 26	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	28	det	_	_
-27	“	“	PUNCT	_	_	28	punct	_	SpaceAfter=No
+27	“	"	PUNCT	_	_	28	punct	_	SpaceAfter=No
 28	combate	combate	NOUN	_	Gender=Masc|Number=Sing	25	obj	_	_
 29-30	pela	_	_	_	_	_	_	_	_
 29	por	por	ADP	_	_	31	case	_	_
@@ -1855,35 +1837,35 @@
 34	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	35	det	_	_
 35	pátria	pátria	NOUN	_	Gender=Fem|Number=Sing	31	conj	_	SpaceAfter=No
 36	,	,	PUNCT	_	_	37	punct	_	_
-37	ameaçadas	ameaçar	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part|Voice=Pass	31	acl	_	_
+37	ameaçadas	ameaçar	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part|Voice=Pass	28	acl	_	_
 38-39	pela	_	_	_	_	_	_	_	_
 38	por	por	ADP	_	_	40	case	_	_
 39	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	40	det	_	_
 40	barbárie	barbárie	NOUN	_	Gender=Fem|Number=Sing	37	obl:agent	_	_
 41	comunista	comunista	ADJ	_	Gender=Fem|Number=Sing	40	amod	_	SpaceAfter=No
-42	”	”	PUNCT	_	_	45	punct	_	_
+42	”	"	PUNCT	_	_	37	punct	_	_
 43	e	e	CCONJ	_	_	45	cc	_	_
 44	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	45	det	_	_
-45	defesa	defesa	NOUN	_	Gender=Fem|Number=Sing	37	conj	_	_
+45	defesa	defesa	NOUN	_	Gender=Fem|Number=Sing	28	conj	_	_
 46-47	da	_	_	_	_	_	_	_	_
 46	de	de	ADP	_	_	48	case	_	_
 47	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	48	det	_	_
-48	Constituição	Constituição	PROPN	_	Gender=Fem|Number=Sing	45	nmod	_	_
+48	Constituição	Constituição	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	45	nmod	_	_
 49	Federal	Federal	PROPN	_	Number=Sing	48	flat:name	_	_
 50	então	então	ADV	_	_	51	advmod	_	_
-51	vigente	vigente	ADJ	_	Gender=Masc|Number=Sing	45	amod	_	SpaceAfter=No
+51	vigente	vigente	ADJ	_	Gender=Fem|Number=Sing	48	amod	_	SpaceAfter=No
 52	,	,	PUNCT	_	_	37	punct	_	_
 53	enquanto	enquanto	ADV	_	_	55	advmod	_	_
 54	esta	este	PRON	_	Gender=Fem|Number=Sing|PronType=Dem	55	nsubj	_	_
-55	defendesse	defender	VERB	_	Mood=Sub|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	8	conj	_	_
+55	defendesse	defender	VERB	_	Mood=Sub|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	45	advcl	_	_
 56	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	57	det	_	_
 57	princípios	princípio	NOUN	_	Gender=Masc|Number=Plur	55	obj	_	_
 58	cristãos	cristão	ADJ	_	Gender=Masc|Number=Plur	57	amod	_	SpaceAfter=No
 59	.	.	PUNCT	_	_	8	punct	_	_
 
+# sent_id = 54
 # text = Surgida durante o apogeu do integralismo, segundo Edgar Carone a intenção da Ação Social Brasileira era “iniciar ação mais violenta contra o comunismo e a democracia”.
-# sent_id = 55
-1	Surgida	surgir	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	21	dep	_	_
+1	Surgida	surgir	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	21	advcl	_	_
 2	durante	durante	ADP	_	_	4	case	_	_
 3	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	4	det	_	_
 4	apogeu	apogeu	NOUN	_	Gender=Masc|Number=Sing	1	obl	_	_
@@ -1893,19 +1875,19 @@
 7	integralismo	integralismo	NOUN	_	Gender=Masc|Number=Sing	4	nmod	_	SpaceAfter=No
 8	,	,	PUNCT	_	_	1	punct	_	_
 9	segundo	segundo	ADP	_	_	10	case	_	_
-10	Edgar	Edgar	PROPN	_	Gender=Masc|Number=Sing	21	obl	_	_
+10	Edgar	Edgar	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	21	obl	_	_
 11	Carone	Carone	PROPN	_	Number=Sing	10	flat:name	_	_
 12	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	13	det	_	_
 13	intenção	intenção	NOUN	_	Gender=Fem|Number=Sing	21	nsubj	_	_
 14-15	da	_	_	_	_	_	_	_	_
 14	de	de	ADP	_	_	16	case	_	_
 15	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	16	det	_	_
-16	Ação	ação	PROPN	_	Number=Sing	13	nmod	_	_
+16	Ação	Ação	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	13	nmod	_	_
 17	Social	Social	PROPN	_	Number=Sing	16	flat:name	_	_
-18	Brasileira	brasileira	PROPN	_	Number=Sing	16	flat:name	_	_
+18	Brasileira	Brasileira	PROPN	_	Number=Sing	16	flat:name	_	_
 19	era	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	21	cop	_	_
-20	“	“	PUNCT	_	_	21	punct	_	SpaceAfter=No
-21	iniciar	iniciar	VERB	_	Number=Sing|Person=3|VerbForm=Inf	0	root	_	_
+20	“	"	PUNCT	_	_	21	punct	_	SpaceAfter=No
+21	iniciar	iniciar	VERB	_	VerbForm=Inf	0	root	_	_
 22	ação	ação	NOUN	_	Gender=Fem|Number=Sing	21	obj	_	_
 23	mais	mais	ADV	_	_	24	advmod	_	_
 24	violenta	violento	ADJ	_	Gender=Fem|Number=Sing	22	amod	_	_
@@ -1915,11 +1897,11 @@
 28	e	e	CCONJ	_	_	30	cc	_	_
 29	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	30	det	_	_
 30	democracia	democracia	NOUN	_	Gender=Fem|Number=Sing	27	conj	_	SpaceAfter=No
-31	”	”	PUNCT	_	_	21	punct	_	SpaceAfter=No
+31	”	"	PUNCT	_	_	21	punct	_	SpaceAfter=No
 32	.	.	PUNCT	_	_	21	punct	_	_
 
+# sent_id = 55
 # text = Ainda nessa época, segundo Hélgio Trindade, dom João Becker pronunciou-se claramente em favor do integralismo.
-# sent_id = 56
 1	Ainda	ainda	ADV	_	_	4	advmod	_	_
 2-3	nessa	_	_	_	_	_	_	_	_
 2	em	em	ADP	_	_	4	case	_	_
@@ -1927,27 +1909,26 @@
 4	época	época	NOUN	_	Gender=Fem|Number=Sing	13	obl	_	SpaceAfter=No
 5	,	,	PUNCT	_	_	4	punct	_	_
 6	segundo	segundo	ADP	_	_	7	case	_	_
-7	Hélgio	Hélgio	PROPN	_	Gender=Masc|Number=Sing	4	nmod	_	_
+7	Hélgio	Hélgio	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	13	obl	_	_
 8	Trindade	Trindade	PROPN	_	Number=Sing	7	flat:name	_	SpaceAfter=No
-9	,	,	PUNCT	_	_	4	punct	_	_
-10	dom	dom	ADP	_	Gender=Masc|Number=Sing	11	case	_	_
-11	João	João	PROPN	_	Gender=Masc|Number=Sing	13	nsubj	_	_
+9	,	,	PUNCT	_	_	7	punct	_	_
+10	dom	dom	NOUN	_	Gender=Masc|Number=Sing	13	nsubj	_	_
+11	João	João	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	10	appos	_	_
 12	Becker	Becker	PROPN	_	Number=Sing	11	flat:name	_	_
 13-14	pronunciou-se	_	_	_	_	_	_	_	_
 13	pronunciou	pronunciar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 14	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	13	expl	_	_
 15	claramente	claramente	ADV	_	_	13	advmod	_	_
-16	em	em	ADP	_	_	17	case	_	_
-17	favor	favor	NOUN	_	_	13	obl	_	_
+16	em	em	ADP	_	_	13	obl	_	_
+17	favor	favor	NOUN	_	Gender=Masc|Number=Sing	16	fixed	_	_
 18-19	do	_	_	_	_	_	_	_	_
-18	de	de	ADP	_	_	20	case	_	_
+18	de	de	ADP	_	_	16	fixed	_	_
 19	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	20	det	_	_
-20	integralismo	integralismo	NOUN	_	Gender=Masc|Number=Sing	17	nmod	_	SpaceAfter=No
-21	.	.	PUNCT	_	_	13	punct	_	_
+20	integralismo	integralismo	NOUN	_	Gender=Masc|Number=Sing	13	obl	_	SpaceAfter=No
+21	.	.	PUNCT	_	_	13	punct	_	SpacesAfter=\n
 
+# sent_id = 56
 # text = Em outubro de 1937, o arcebispo procurou o interventor federal no Rio Grande do Sul, Flores da Cunha, que se preparava para reagir às forças federais.
-# sent_id = 57
-# newpar
 1	Em	em	ADP	_	_	2	case	_	_
 2	outubro	outubro	NOUN	_	Gender=Masc|Number=Sing	8	obl	_	_
 3	de	de	ADP	_	_	4	case	_	_
@@ -1962,72 +1943,72 @@
 12-13	no	_	_	_	_	_	_	_	_
 12	em	em	ADP	_	_	14	case	_	_
 13	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	14	det	_	_
-14	Rio	Rio	PROPN	_	Gender=Masc|Number=Sing	8	obl	_	_
+14	Rio	Rio	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	10	nmod	_	_
 15	Grande	Grande	PROPN	_	Number=Sing	14	flat:name	_	_
 16-17	do	_	_	_	_	_	_	_	_
 16	de	de	ADP	_	_	18	case	_	_
 17	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	18	det	_	_
 18	Sul	Sul	PROPN	_	Number=Sing	14	nmod	_	SpaceAfter=No
-19	,	,	PUNCT	_	_	14	punct	_	_
-20	Flores	Flores	PROPN	_	Number=Sing	14	flat:name	_	_
+19	,	,	PUNCT	_	_	20	punct	_	_
+20	Flores	Flores	PROPN	_	Gender=Masc|Number=Sing	14	appos	_	_
 21-22	da	_	_	_	_	_	_	_	_
 21	de	de	ADP	_	_	23	case	_	_
 22	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	23	det	_	_
-23	Cunha	Cunha	PROPN	_	Number=Sing	14	nmod	_	SpaceAfter=No
-24	,	,	PUNCT	_	_	8	punct	_	_
-25	que	que	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	27	nsubj	_	_
-26	se	se	PRON	_	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	27	expl	_	_
-27	preparava	preparar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	14	acl:relcl	_	_
-28	para	para	ADP	_	_	29	mark	_	_
+23	Cunha	Cunha	PROPN	_	Number=Sing	20	nmod	_	SpaceAfter=No
+24	,	,	PUNCT	_	_	20	punct	_	_
+25	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	27	nsubj	_	_
+26	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	27	expl	_	_
+27	preparava	preparar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	10	acl:relcl	_	_
+28	para	para	SCONJ	_	_	29	mark	_	_
 29	reagir	reagir	VERB	_	VerbForm=Inf	27	advcl	_	_
 30-31	às	_	_	_	_	_	_	_	_
 30	a	a	ADP	_	_	32	case	_	_
 31	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	32	det	_	_
-32	forças	força	NOUN	_	Gender=Fem|Number=Plur	29	obl	_	_
+32	forças	força	NOUN	_	Gender=Fem|Number=Plur	29	obj	_	_
 33	federais	federal	ADJ	_	Gender=Fem|Number=Plur	32	amod	_	SpaceAfter=No
 34	.	.	PUNCT	_	_	8	punct	_	_
 
+# sent_id = 57
 # text = Dom Becker avisou-o da gravidade da situação, depois que o comandante da Brigada Militar do estado passara o comando ao Exército.
-# sent_id = 58
-1	Dom	Dom	PROPN	_	Gender=Masc|Number=Sing	3	nsubj	_	_
+1	Dom	Dom	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	3	nsubj	_	_
 2	Becker	Becker	PROPN	_	Number=Sing	1	flat:name	_	_
 3-4	avisou-o	_	_	_	_	_	_	_	_
 3	avisou	avisar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
-4	o	o	PRON	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	obj	_	_
+4	o	ele	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	3	obj	_	_
 5-6	da	_	_	_	_	_	_	_	_
 5	de	de	ADP	_	_	7	case	_	_
 6	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	7	det	_	_
-7	gravidade	gravidade	NOUN	_	Gender=Fem|Number=Sing	4	nmod	_	_
+7	gravidade	gravidade	NOUN	_	Gender=Fem|Number=Sing	3	obl	_	_
 8-9	da	_	_	_	_	_	_	_	_
 8	de	de	ADP	_	_	10	case	_	_
 9	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	10	det	_	_
 10	situação	situação	NOUN	_	Gender=Fem|Number=Sing	7	nmod	_	SpaceAfter=No
 11	,	,	PUNCT	_	_	3	punct	_	_
-12	depois	depois	ADV	_	_	3	advmod	_	_
-13	que	que	SCONJ	_	_	23	mark	_	_
+12	depois	depois	ADV	_	_	23	mark	_	_
+13	que	que	SCONJ	_	_	12	fixed	_	_
 14	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	15	det	_	_
 15	comandante	comandante	NOUN	_	Gender=Masc|Number=Sing	23	nsubj	_	_
 16-17	da	_	_	_	_	_	_	_	_
 16	de	de	ADP	_	_	18	case	_	_
 17	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	18	det	_	_
-18	Brigada	Brigada	PROPN	_	Gender=Fem|Number=Sing	15	nmod	_	_
-19	Militar	Militar	PROPN	_	Number=Sing	18	flat:name	_	_
+18	Brigada	Brigada	NOUN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	15	nmod	_	_
+19	Militar	militar	ADJ	_	Gender=Fem|Number=Sing	18	amod	_	_
 20-21	do	_	_	_	_	_	_	_	_
 20	de	de	ADP	_	_	22	case	_	_
 21	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	22	det	_	_
 22	estado	estado	NOUN	_	Gender=Masc|Number=Sing	18	nmod	_	_
-23	passara	passarar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pqp|VerbForm=Fin	3	ccomp	_	_
+23	passara	passar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pqp|VerbForm=Fin	3	advcl	_	_
 24	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	25	det	_	_
 25	comando	comando	NOUN	_	Gender=Masc|Number=Sing	23	obj	_	_
 26-27	ao	_	_	_	_	_	_	_	_
 26	a	a	ADP	_	_	28	case	_	_
 27	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	28	det	_	_
-28	Exército	exército	NOUN	_	Gender=Masc|Number=Sing	25	nmod	_	SpaceAfter=No
+28	Exército	exército	NOUN	_	Gender=Masc|Number=Sing	23	iobj	_	SpaceAfter=No
 29	.	.	PUNCT	_	_	3	punct	_	_
 
+# sent_id = 58
 # text = Flores da Cunha acatou as considerações de dom Becker, levando em conta o fato de já estar militarmente cercado no estado, e renunciou a seu posto, fugindo para o Uruguai.
-# sent_id = 59
-1	Flores	flor	NOUN	_	Gender=Masc|Number=Plur	5	nsubj	_	_
+1	Flores	Flores	PROPN	_	Gender=Masc|Number=Sing	5	nsubj	_	_
 2-3	da	_	_	_	_	_	_	_	_
 2	de	de	ADP	_	_	4	case	_	_
 3	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	4	det	_	_
@@ -2036,27 +2017,27 @@
 6	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	7	det	_	_
 7	considerações	consideração	NOUN	_	Gender=Fem|Number=Plur	5	obj	_	_
 8	de	de	ADP	_	_	9	case	_	_
-9	dom	dom	NOUN	_	Gender=Masc|Number=Sing	7	nmod	_	_
-10	Becker	Becker	PROPN	_	Gender=Masc|Number=Sing	9	appos	_	SpaceAfter=No
+9	dom	dom	PROPN	_	Gender=Masc|Number=Sing	7	nmod	_	_
+10	Becker	Becker	PROPN	_	Gender=Masc|Number=Sing	9	nmod	_	SpaceAfter=No
 11	,	,	PUNCT	_	_	12	punct	_	_
 12	levando	levar	VERB	_	VerbForm=Ger	5	advcl	_	_
 13	em	em	ADP	_	_	14	case	_	_
 14	conta	conta	NOUN	_	Gender=Fem|Number=Sing	12	obl	_	_
 15	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	16	det	_	_
 16	fato	fato	NOUN	_	Gender=Masc|Number=Sing	12	obj	_	_
-17	de	de	ADP	_	_	21	mark	_	_
+17	de	de	SCONJ	_	_	21	mark	_	_
 18	já	já	ADV	_	_	21	advmod	_	_
 19	estar	estar	AUX	_	VerbForm=Inf	21	cop	_	_
 20	militarmente	militarmente	ADV	_	_	21	advmod	_	_
-21	cercado	cercar	VERB	_	Gender=Masc|Number=Sing	16	acl	_	_
+21	cercado	cercado	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	16	acl	_	_
 22-23	no	_	_	_	_	_	_	_	_
 22	em	em	ADP	_	_	24	case	_	_
 23	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	24	det	_	_
 24	estado	estado	NOUN	_	Gender=Masc|Number=Sing	21	obl	_	SpaceAfter=No
 25	,	,	PUNCT	_	_	27	punct	_	_
 26	e	e	CCONJ	_	_	27	cc	_	_
-27	renunciou	renunciar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	21	conj	_	_
-28	a	a	DET	_	_	30	det	_	_
+27	renunciou	renunciar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	conj	_	_
+28	a	a	ADP	_	_	30	case	_	_
 29	seu	seu	DET	_	Gender=Masc|Number=Sing|PronType=Prs	30	det	_	_
 30	posto	posto	NOUN	_	Gender=Masc|Number=Sing	27	obj	_	SpaceAfter=No
 31	,	,	PUNCT	_	_	32	punct	_	_
@@ -2064,27 +2045,26 @@
 33	para	para	ADP	_	_	35	case	_	_
 34	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	35	det	_	_
 35	Uruguai	Uruguai	PROPN	_	Gender=Masc|Number=Sing	32	obl	_	SpaceAfter=No
-36	.	.	PUNCT	_	_	5	punct	_	_
+36	.	.	PUNCT	_	_	5	punct	_	SpacesAfter=\n
 
+# sent_id = 59
 # text = Combatido em diversos momentos por sua origem germânica, dom João Becker fez a oração fúnebre nas exéquias dos marujos brasileiros mortos em março de 1942 nos torpedeamentos de navios mercantes por belonaves alemãs.
-# sent_id = 60
-# newpar
-1	Combatido	Combatir	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	13	dep	_	_
+1	Combatido	combater	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	10	acl	_	_
 2	em	em	ADP	_	_	4	case	_	_
-3	diversos	diversos	DET	_	Gender=Masc|Number=Plur|PronType=Ind	4	det	_	_
+3	diversos	diverso	DET	_	Gender=Masc|Number=Plur|PronType=Ind	4	det	_	_
 4	momentos	momento	NOUN	_	Gender=Masc|Number=Plur	1	obl	_	_
 5	por	por	ADP	_	_	7	case	_	_
 6	sua	seu	DET	_	Gender=Fem|Number=Sing|PronType=Prs	7	det	_	_
 7	origem	origem	NOUN	_	Gender=Fem|Number=Sing	1	obl	_	_
 8	germânica	germânico	ADJ	_	Gender=Fem|Number=Sing	7	amod	_	SpaceAfter=No
 9	,	,	PUNCT	_	_	1	punct	_	_
-10	dom	dom	ADP	_	Gender=Masc|Number=Sing	11	case	_	_
-11	João	João	PROPN	_	Gender=Masc|Number=Sing	13	obl	_	_
+10	dom	dom	NOUN	_	Gender=Masc|Number=Sing	13	nsubj	_	_
+11	João	João	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	10	appos	_	_
 12	Becker	Becker	PROPN	_	Number=Sing	11	flat:name	_	_
 13	fez	fazer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 14	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	15	det	_	_
 15	oração	oração	NOUN	_	Gender=Fem|Number=Sing	13	obj	_	_
-16	fúnebre	fúnebre	ADJ	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	15	amod	_	_
+16	fúnebre	fúnebre	ADJ	_	Gender=Fem|Number=Sing	15	amod	_	_
 17-18	nas	_	_	_	_	_	_	_	_
 17	em	em	ADP	_	_	19	case	_	_
 18	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	19	det	_	_
@@ -2094,7 +2074,7 @@
 21	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	22	det	_	_
 22	marujos	marujo	NOUN	_	Gender=Masc|Number=Plur	19	nmod	_	_
 23	brasileiros	brasileiro	ADJ	_	Gender=Masc|Number=Plur	22	amod	_	_
-24	mortos	morrer	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part	22	acl	_	_
+24	mortos	matar,morto	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part	22	acl	_	_
 25	em	em	ADP	_	_	26	case	_	_
 26	março	março	NOUN	_	Gender=Masc|Number=Sing	24	obl	_	_
 27	de	de	ADP	_	_	28	case	_	_
@@ -2105,14 +2085,14 @@
 31	torpedeamentos	torpedeamento	NOUN	_	Gender=Masc|Number=Plur	24	obl	_	_
 32	de	de	ADP	_	_	33	case	_	_
 33	navios	navio	NOUN	_	Gender=Masc|Number=Plur	31	nmod	_	_
-34	mercantes	mercante	NOUN	_	Gender=Unsp|Number=Plur	33	appos	_	_
+34	mercantes	mercante	ADJ	_	Gender=Masc|Number=Plur	33	amod	_	_
 35	por	por	ADP	_	_	36	case	_	_
-36	belonaves	belonave	NOUN	_	Gender=Fem|Number=Plur	34	nmod	_	_
-37	alemãs	alemã	ADJ	_	Gender=Fem|Number=Plur	36	amod	_	SpaceAfter=No
+36	belonaves	belonave	NOUN	_	Gender=Fem|Number=Plur	24	obl	_	_
+37	alemãs	alemão	ADJ	_	Gender=Fem|Number=Plur	36	amod	_	SpaceAfter=No
 38	.	.	PUNCT	_	_	13	punct	_	_
 
+# sent_id = 60
 # text = Nesta oração, o arcebispo condenou os extremismos de esquerda e de direita.
-# sent_id = 61
 1-2	Nesta	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	3	case	_	_
 2	esta	este	DET	_	Gender=Fem|Number=Sing|PronType=Dem	3	det	_	_
@@ -2128,20 +2108,19 @@
 12	e	e	CCONJ	_	_	14	cc	_	_
 13	de	de	ADP	_	_	14	case	_	_
 14	direita	direita	NOUN	_	Gender=Fem|Number=Sing	11	conj	_	SpaceAfter=No
-15	.	.	PUNCT	_	_	7	punct	_	_
+15	.	.	PUNCT	_	_	7	punct	_	SpacesAfter=\n
 
+# sent_id = 61
 # text = Adoecendo gravemente em setembro de 1942, dom João Becker oficiou pela última vez em novembro de 1945, amparado, devido a seu estado precário de saúde, por seus assistentes, os cônegos Alfredo Vicente Scherer e Germano Wagner.
-# sent_id = 62
-# newpar
-1	Adoecendo	Adoecer	VERB	_	VerbForm=Ger	11	advcl	_	_
+1	Adoecendo	adoecer	VERB	_	VerbForm=Ger	11	advcl	_	_
 2	gravemente	gravemente	ADV	_	_	1	advmod	_	_
 3	em	em	ADP	_	_	4	case	_	_
 4	setembro	setembro	NOUN	_	Gender=Masc|Number=Sing	1	obl	_	_
 5	de	de	ADP	_	_	6	case	_	_
 6	1942	1942	NUM	_	NumType=Card	4	nmod	_	SpaceAfter=No
 7	,	,	PUNCT	_	_	1	punct	_	_
-8	dom	dom	ADP	_	Gender=Masc|Number=Sing	9	case	_	_
-9	João	João	PROPN	_	Gender=Masc|Number=Sing	1	obl	_	_
+8	dom	dom	PROPN	_	Gender=Masc|Number=Sing	11	nsubj	_	_
+9	João	João	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	8	flat:name	_	_
 10	Becker	Becker	PROPN	_	Number=Sing	9	flat:name	_	_
 11	oficiou	oficiar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 12-13	pela	_	_	_	_	_	_	_	_
@@ -2154,9 +2133,9 @@
 18	de	de	ADP	_	_	19	case	_	_
 19	1945	1945	NUM	_	NumType=Card	17	nmod	_	SpaceAfter=No
 20	,	,	PUNCT	_	_	21	punct	_	_
-21	amparado	amparar	VERB	_	Gender=Masc|Number=Sing	17	conj	_	SpaceAfter=No
+21	amparado	amparar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	11	advcl	_	SpaceAfter=No
 22	,	,	PUNCT	_	_	21	punct	_	_
-23	devido	devido	ADV	_	Gender=Masc|Number=Sing|VerbForm=Part	21	advmod	_	_
+23	devido	devido	ADV	_	_	21	advmod	_	_
 24	a	a	ADP	_	_	26	case	_	_
 25	seu	seu	DET	_	Gender=Masc|Number=Sing|PronType=Prs	26	det	_	_
 26	estado	estado	NOUN	_	Gender=Masc|Number=Sing	23	obl	_	_
@@ -2167,26 +2146,26 @@
 31	por	por	ADP	_	_	33	case	_	_
 32	seus	seu	DET	_	Gender=Masc|Number=Plur|PronType=Prs	33	det	_	_
 33	assistentes	assistente	NOUN	_	Gender=Masc|Number=Plur	21	obl	_	SpaceAfter=No
-34	,	,	PUNCT	_	_	21	punct	_	_
+34	,	,	PUNCT	_	_	36	punct	_	_
 35	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	36	det	_	_
-36	cônegos	cônego	NOUN	_	Gender=Masc|Number=Plur	11	obj	_	_
-37	Alfredo	Alfredo	PROPN	_	Gender=Masc|Number=Sing	36	appos	_	_
+36	cônegos	cônego	NOUN	_	Gender=Masc|Number=Plur	33	appos	_	_
+37	Alfredo	Alfredo	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	36	appos	_	_
 38	Vicente	Vicente	PROPN	_	Number=Sing	37	flat:name	_	_
 39	Scherer	Scherer	PROPN	_	Number=Sing	37	flat:name	_	_
 40	e	e	CCONJ	_	_	41	cc	_	_
-41	Germano	Germano	PROPN	_	Gender=Masc|Number=Sing	37	conj	_	_
+41	Germano	Germano	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	37	conj	_	_
 42	Wagner	Wagner	PROPN	_	Number=Sing	41	flat:name	_	SpaceAfter=No
 43	.	.	PUNCT	_	_	11	punct	_	_
 
+# sent_id = 62
 # text = No dia 15 de junho de 1946, faleceu no palácio arquiepiscopal de Porto Alegre.
-# sent_id = 63
 1-2	No	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	3	case	_	_
 2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
 3	dia	dia	NOUN	_	Gender=Masc|Number=Sing	10	obl	_	_
 4	15	15	NUM	_	NumType=Card	3	nummod	_	_
 5	de	de	ADP	_	_	6	case	_	_
-6	junho	junho	NOUN	_	Gender=Masc|Number=Sing	3	nmod:tmod	_	_
+6	junho	junho	NOUN	_	Gender=Masc|Number=Sing	3	nmod	_	_
 7	de	de	ADP	_	_	8	case	_	_
 8	1946	1946	NUM	_	NumType=Card	6	nmod	_	SpaceAfter=No
 9	,	,	PUNCT	_	_	3	punct	_	_
@@ -2197,13 +2176,12 @@
 13	palácio	palácio	NOUN	_	Gender=Masc|Number=Sing	10	obl	_	_
 14	arquiepiscopal	arquiepiscopal	ADJ	_	Gender=Masc|Number=Sing	13	amod	_	_
 15	de	de	ADP	_	_	16	case	_	_
-16	Porto	Porto	PROPN	_	Gender=Masc|Number=Sing	13	nmod	_	_
+16	Porto	Porto	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	13	nmod	_	_
 17	Alegre	Alegre	PROPN	_	Number=Sing	16	flat:name	_	SpaceAfter=No
-18	.	.	PUNCT	_	_	10	punct	_	_
+18	.	.	PUNCT	_	_	10	punct	_	SpacesAfter=\n
 
+# sent_id = 63
 # text = Além das 39 cartas pastorais de sua autoria, cinco como bispo de Santa Catarina e 34 como arcebispo de Porto Alegre, publicou quatro obras em latim como seminarista e o já citado «Viagens e estudos» (1928).
-# sent_id = 64
-# newpar
 1	Além	além	ADV	_	_	25	advmod	_	_
 2-3	das	_	_	_	_	_	_	_	_
 2	de	de	ADP	_	_	5	case	_	_
@@ -2214,72 +2192,72 @@
 7	de	de	ADP	_	_	9	case	_	_
 8	sua	seu	DET	_	Gender=Fem|Number=Sing|PronType=Prs	9	det	_	_
 9	autoria	autoria	NOUN	_	Gender=Fem|Number=Sing	5	nmod	_	SpaceAfter=No
-10	,	,	PUNCT	_	_	1	punct	_	_
-11	cinco	cinco	NUM	_	NumType=Card	25	nsubj	_	_
+10	,	,	PUNCT	_	_	11	punct	_	_
+11	cinco	cinco	NUM	_	NumType=Card	5	appos	_	_
 12	como	como	ADP	_	_	13	case	_	_
 13	bispo	bispo	NOUN	_	Gender=Masc|Number=Sing	11	nmod	_	_
 14	de	de	ADP	_	_	15	case	_	_
-15	Santa	Santa	PROPN	_	Gender=Fem|Number=Sing	13	nmod	_	_
+15	Santa	Santa	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	13	nmod	_	_
 16	Catarina	Catarina	PROPN	_	Number=Sing	15	flat:name	_	_
 17	e	e	CCONJ	_	_	18	cc	_	_
-18	34	34	NUM	_	NumType=Card	15	conj	_	_
+18	34	34	NUM	_	NumType=Card	11	conj	_	_
 19	como	como	ADP	_	_	20	case	_	_
 20	arcebispo	arcebispo	NOUN	_	Gender=Masc|Number=Sing	18	nmod	_	_
 21	de	de	ADP	_	_	22	case	_	_
-22	Porto	Porto	PROPN	_	Gender=Masc|Number=Sing	20	nmod	_	_
+22	Porto	Porto	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	20	nmod	_	_
 23	Alegre	Alegre	PROPN	_	Number=Sing	22	flat:name	_	SpaceAfter=No
-24	,	,	PUNCT	_	_	20	punct	_	_
+24	,	,	PUNCT	_	_	1	punct	_	_
 25	publicou	publicar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 26	quatro	quatro	NUM	_	NumType=Card	27	nummod	_	_
-27	obras	obra	NOUN	_	Gender=Fem|Number=Plur	25	obl	_	_
+27	obras	obra	NOUN	_	Gender=Fem|Number=Plur	25	obj	_	_
 28	em	em	ADP	_	_	29	case	_	_
-29	latim	latim	NOUN	_	_	27	nmod	_	_
-30	como	como	ADV	_	_	31	advmod	_	_
-31	seminarista	seminarista	ADJ	_	Gender=Masc|Number=Sing	27	amod	_	_
+29	latim	latim	NOUN	_	Gender=Masc|Number=Sing	27	nmod	_	_
+30	como	como	ADP	_	_	31	case	_	_
+31	seminarista	seminarista	NOUN	_	Gender=Masc|Number=Sing	27	nmod	_	_
 32	e	e	CCONJ	_	_	37	cc	_	_
 33	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	37	det	_	_
 34	já	já	ADV	_	_	35	advmod	_	_
 35	citado	citar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	37	acl	_	_
 36	«	«	PUNCT	_	_	37	punct	_	SpaceAfter=No
-37	Viagens	viagem	NOUN	_	Gender=Fem|Number=Plur	31	conj	_	_
-38	e	e	CCONJ	_	_	39	cc	_	_
-39	estudos	estudo	NOUN	_	Gender=Masc|Number=Plur	37	conj	_	SpaceAfter=No
-40	»	»	PUNCT	_	_	25	punct	_	_
+37	Viagens	Viagens	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	27	conj	_	_
+38	e	e	CCONJ	_	_	37	flat:name	_	_
+39	estudos	estudo	PROPN	_	Number=Sing	37	flat:name	_	SpaceAfter=No
+40	»	»	PUNCT	_	_	37	punct	_	_
 41	(	(	PUNCT	_	_	42	punct	_	SpaceAfter=No
-42	1928	1928	NUM	_	NumType=Card	37	appos	_	SpaceAfter=No
+42	1928	1928	NUM	_	NumType=Card	37	nmod	_	SpaceAfter=No
 43	)	)	PUNCT	_	_	42	punct	_	SpaceAfter=No
 44	.	.	PUNCT	_	_	25	punct	_	_
 
+# sent_id = 64
 # text = Dentre suas cartas pastorais, destacam-se:
-# sent_id = 65
-1	Dentre	Dentre	ADP	_	_	3	case	_	_
+1	Dentre	dentre	ADP	_	_	3	case	_	_
 2	suas	seu	DET	_	Gender=Fem|Number=Plur|PronType=Prs	3	det	_	_
 3	cartas	carta	NOUN	_	Gender=Fem|Number=Plur	6	obl	_	_
 4	pastorais	pastoral	ADJ	_	Gender=Fem|Number=Plur	3	amod	_	SpaceAfter=No
 5	,	,	PUNCT	_	_	3	punct	_	_
 6-7	destacam-se	_	_	_	_	_	_	_	SpaceAfter=No
 6	destacam	destacar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
-7	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Plur|Person=3|PronType=Prs	6	expl	_	_
+7	se	se	PRON	_	Case=Acc|Gender=Fem|Number=Plur|Person=3|PronType=Prs	6	expl	_	_
 8	:	:	PUNCT	_	_	6	punct	_	_
 
+# sent_id = 65
 # text = «A questão operária» (1914), «A paz no Rio Grande do Sul» (1924), «O comunismo russo e a sociedade cristã» (2ª ed. 1930), «Os católicos e a futura Constituição» (1932), «A religião e a pátria em face das ideologias modernas» (1939) e «A decadência da civilização: causas, conseqüências e remédios» (1940).
-# sent_id = 66
 1	«	«	PUNCT	_	_	3	punct	_	SpaceAfter=No
 2	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	3	det	_	_
 3	questão	questão	NOUN	_	Gender=Fem|Number=Sing	0	root	_	_
 4	operária	operário	ADJ	_	Gender=Fem|Number=Sing	3	amod	_	SpaceAfter=No
 5	»	»	PUNCT	_	_	3	punct	_	_
 6	(	(	PUNCT	_	_	7	punct	_	SpaceAfter=No
-7	1914	1914	NUM	_	NumType=Card	3	appos	_	SpaceAfter=No
+7	1914	1914	NUM	_	NumType=Card	3	parataxis	_	SpaceAfter=No
 8	)	)	PUNCT	_	_	7	punct	_	SpaceAfter=No
-9	,	,	PUNCT	_	_	3	punct	_	_
+9	,	,	PUNCT	_	_	12	punct	_	_
 10	«	«	PUNCT	_	_	12	punct	_	SpaceAfter=No
 11	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	12	det	_	_
-12	paz	paz	NOUN	_	Gender=Fem|Number=Sing	3	nmod	_	_
+12	paz	paz	PROPN	_	Number=Sing	3	conj	_	_
 13-14	no	_	_	_	_	_	_	_	_
 13	em	em	ADP	_	_	15	case	_	_
 14	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	15	det	_	_
-15	Rio	Rio	PROPN	_	Gender=Masc|Number=Sing	12	nmod	_	_
+15	Rio	Rio	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	12	nmod	_	_
 16	Grande	Grande	PROPN	_	Number=Sing	15	flat:name	_	_
 17-18	do	_	_	_	_	_	_	_	_
 17	de	de	ADP	_	_	19	case	_	_
@@ -2287,12 +2265,12 @@
 19	Sul	Sul	PROPN	_	Number=Sing	15	nmod	_	SpaceAfter=No
 20	»	»	PUNCT	_	_	12	punct	_	_
 21	(	(	PUNCT	_	_	22	punct	_	SpaceAfter=No
-22	1924	1924	NUM	_	NumType=Card	15	appos	_	SpaceAfter=No
+22	1924	1924	NUM	_	NumType=Card	15	nmod	_	SpaceAfter=No
 23	)	)	PUNCT	_	_	22	punct	_	SpaceAfter=No
 24	,	,	PUNCT	_	_	27	punct	_	_
 25	«	«	PUNCT	_	_	27	punct	_	SpaceAfter=No
-26	O	O	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	27	det	_	_
-27	comunismo	comunismo	NOUN	_	Gender=Masc|Number=Sing	12	appos	_	_
+26	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	27	det	_	_
+27	comunismo	comunismo	NOUN	_	Gender=Masc|Number=Sing	3	conj	_	_
 28	russo	russo	ADJ	_	Gender=Masc|Number=Sing	27	amod	_	_
 29	e	e	CCONJ	_	_	31	cc	_	_
 30	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	31	det	_	_
@@ -2301,56 +2279,56 @@
 33	»	»	PUNCT	_	_	27	punct	_	_
 34	(	(	PUNCT	_	_	36	punct	_	SpaceAfter=No
 35	2ª	2ª	ADJ	_	Gender=Fem|Number=Sing|NumType=Ord	36	amod	_	_
-36	ed.	ed.	NOUN	_	Gender=Fem|Number=Plur	27	appos	_	_
+36	ed.	editora	NOUN	_	Abbr=Yes|Gender=Fem|Number=Sing	27	parataxis	_	_
 37	1930	1930	NUM	_	NumType=Card	36	nummod	_	SpaceAfter=No
 38	)	)	PUNCT	_	_	36	punct	_	SpaceAfter=No
-39	,	,	PUNCT	_	_	27	punct	_	_
+39	,	,	PUNCT	_	_	42	punct	_	_
 40	«	«	PUNCT	_	_	42	punct	_	SpaceAfter=No
 41	Os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	42	det	_	_
-42	católicos	católico	NOUN	_	Gender=Masc|Number=Plur	27	appos	_	_
+42	católicos	católico	NOUN	_	Gender=Masc|Number=Plur	3	conj	_	_
 43	e	e	CCONJ	_	_	46	cc	_	_
 44	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	46	det	_	_
 45	futura	futuro	ADJ	_	Gender=Fem|Number=Sing	46	amod	_	_
-46	Constituição	constituição	PROPN	_	Gender=Fem|Number=Sing	42	conj	_	SpaceAfter=No
+46	Constituição	Constituição	PROPN	_	Gender=Fem|Number=Sing	42	conj	_	SpaceAfter=No
 47	»	»	PUNCT	_	_	42	punct	_	_
 48	(	(	PUNCT	_	_	49	punct	_	SpaceAfter=No
-49	1932	1932	NUM	_	NumType=Card	42	appos	_	SpaceAfter=No
+49	1932	1932	NUM	_	NumType=Card	42	nmod	_	SpaceAfter=No
 50	)	)	PUNCT	_	_	49	punct	_	SpaceAfter=No
-51	,	,	PUNCT	_	_	27	punct	_	_
+51	,	,	PUNCT	_	_	54	punct	_	_
 52	«	«	PUNCT	_	_	54	punct	_	SpaceAfter=No
 53	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	54	det	_	_
-54	religião	religião	NOUN	_	Gender=Fem|Number=Sing	27	appos	_	_
+54	religião	religião	NOUN	_	Gender=Fem|Number=Sing	3	conj	_	_
 55	e	e	CCONJ	_	_	57	cc	_	_
 56	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	57	det	_	_
 57	pátria	pátria	NOUN	_	Gender=Fem|Number=Sing	54	conj	_	_
 58	em	em	ADP	_	_	59	case	_	_
-59	face	face	NOUN	_	_	54	nmod	_	_
+59	face	face	NOUN	_	Gender=Fem|Number=Sing	54	nmod	_	_
 60-61	das	_	_	_	_	_	_	_	_
 60	de	de	ADP	_	_	62	case	_	_
 61	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	62	det	_	_
 62	ideologias	ideologia	NOUN	_	Gender=Fem|Number=Plur	59	nmod	_	_
 63	modernas	moderno	ADJ	_	Gender=Fem|Number=Plur	62	amod	_	SpaceAfter=No
-64	»	»	PUNCT	_	_	71	punct	_	_
+64	»	»	PUNCT	_	_	54	punct	_	_
 65	(	(	PUNCT	_	_	66	punct	_	SpaceAfter=No
-66	1939	1939	NUM	_	NumType=Card	62	appos	_	SpaceAfter=No
+66	1939	1939	NUM	_	NumType=Card	54	parataxis	_	SpaceAfter=No
 67	)	)	PUNCT	_	_	66	punct	_	_
 68	e	e	CCONJ	_	_	71	cc	_	_
 69	«	«	PUNCT	_	_	71	punct	_	SpaceAfter=No
-70	A	A	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	71	det	_	_
-71	decadência	decadência	NOUN	_	Gender=Fem|Number=Sing	54	conj	_	_
+70	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	71	det	_	_
+71	decadência	decadência	NOUN	_	Gender=Fem|Number=Sing	3	conj	_	_
 72-73	da	_	_	_	_	_	_	_	_
 72	de	de	ADP	_	_	74	case	_	_
 73	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	74	det	_	_
 74	civilização	civilização	NOUN	_	Gender=Fem|Number=Sing	71	nmod	_	SpaceAfter=No
-75	:	:	PUNCT	_	_	27	punct	_	_
-76	causas	causa	NOUN	_	Gender=Fem|Number=Plur	74	appos	_	SpaceAfter=No
+75	:	:	PUNCT	_	_	76	punct	_	_
+76	causas	causa	NOUN	_	Gender=Fem|Number=Plur	71	appos	_	SpaceAfter=No
 77	,	,	PUNCT	_	_	78	punct	_	_
 78	conseqüências	conseqüência	NOUN	_	Gender=Fem|Number=Plur	76	conj	_	_
 79	e	e	CCONJ	_	_	80	cc	_	_
 80	remédios	remédio	NOUN	_	Gender=Masc|Number=Plur	76	conj	_	SpaceAfter=No
-81	»	»	PUNCT	_	_	27	punct	_	_
+81	»	»	PUNCT	_	_	76	punct	_	_
 82	(	(	PUNCT	_	_	83	punct	_	SpaceAfter=No
-83	1940	1940	NUM	_	NumType=Card	76	appos	_	SpaceAfter=No
+83	1940	1940	NUM	_	NumType=Card	71	nmod	_	SpaceAfter=No
 84	)	)	PUNCT	_	_	83	punct	_	SpaceAfter=No
-85	.	.	PUNCT	_	_	3	punct	_	_
+85	.	.	PUNCT	_	_	3	punct	_	SpacesAfter=\n
 

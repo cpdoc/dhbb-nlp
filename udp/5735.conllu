@@ -1,9 +1,12 @@
-# text = Partido político de âmbito nacional, de apoio ao governo, fundado em 4 de abril de 1966 dentro do sistema de bipartidarismo instaurado no país após a edição do Ato Institucional nº 2 (27/10/1965), que extinguiu os partidos existentes, e do Ato Complementar nº 4, que estabeleceu as condições para a formação de novos partidos.
-# sent_id = 1
-# newpar
+# generator = UDPipe 2, https://lindat.mff.cuni.cz/services/udpipe
+# udpipe_model = portuguese-bosque-ud-2.12-230717
+# udpipe_model_licence = CC BY-NC-SA
 # newdoc
-1	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	0	root	_	_
-2	político	político	PROPN	_	Number=Sing	1	flat:name	_	_
+# newpar
+# sent_id = 1
+# text = Partido político de âmbito nacional, de apoio ao governo, fundado em 4 de abril de 1966 dentro do sistema de bipartidarismo instaurado no país após a edição do Ato Institucional nº 2 (27/10/1965), que extinguiu os partidos existentes, e do Ato Complementar nº 4, que estabeleceu as condições para a formação de novos partidos.
+1	Partido	partido	NOUN	_	Gender=Masc|Number=Sing	0	root	_	_
+2	político	político	ADJ	_	Gender=Masc|Number=Sing	1	amod	_	_
 3	de	de	ADP	_	_	4	case	_	_
 4	âmbito	âmbito	NOUN	_	Gender=Masc|Number=Sing	1	nmod	_	_
 5	nacional	nacional	ADJ	_	Gender=Masc|Number=Sing	4	amod	_	SpaceAfter=No
@@ -15,7 +18,7 @@
 10	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	_	_
 11	governo	governo	NOUN	_	Gender=Masc|Number=Sing	8	nmod	_	SpaceAfter=No
 12	,	,	PUNCT	_	_	8	punct	_	_
-13	fundado	fundar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	8	acl	_	_
+13	fundado	fundar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	1	acl	_	_
 14	em	em	ADP	_	_	15	case	_	_
 15	4	4	NUM	_	NumType=Card	13	obl	_	_
 16	de	de	ADP	_	_	17	case	_	_
@@ -40,10 +43,10 @@
 33-34	do	_	_	_	_	_	_	_	_
 33	de	de	ADP	_	_	35	case	_	_
 34	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	35	det	_	_
-35	Ato	ato	PROPN	_	Gender=Masc|Number=Sing	32	nmod	_	_
+35	Ato	Ato	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	32	nmod	_	_
 36	Institucional	Institucional	PROPN	_	Number=Sing	35	flat:name	_	_
-37	nº	nº	NOUN	_	Gender=Masc|Number=Sing	35	nmod	_	_
-38	2	2	NUM	_	NumType=Card	37	nummod	_	_
+37	nº	número	NOUN	_	Abbr=Yes|Gender=Masc|Number=Sing	35	nmod	_	_
+38	2	2	NUM	_	NumType=Card	35	flat:name	_	_
 39	(	(	PUNCT	_	_	40	punct	_	SpaceAfter=No
 40	27/10/1965	27/10/1965	NUM	_	NumType=Card	35	appos	_	SpaceAfter=No
 41	)	)	PUNCT	_	_	40	punct	_	SpaceAfter=No
@@ -58,12 +61,12 @@
 50-51	do	_	_	_	_	_	_	_	_
 50	de	de	ADP	_	_	52	case	_	_
 51	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	52	det	_	_
-52	Ato	ato	PROPN	_	Gender=Masc|Number=Sing	44	conj	_	_
-53	Complementar	complementar	PROPN	_	Number=Sing	52	flat:name	_	_
-54	nº	nº	NOUN	_	Gender=Masc|Number=Sing	52	appos	_	_
-55	4	4	NUM	_	NumType=Card	54	nummod	_	SpaceAfter=No
-56	,	,	PUNCT	_	_	52	punct	_	_
-57	que	que	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	58	nsubj	_	_
+52	Ato	Ato	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	35	conj	_	_
+53	Complementar	Complementar	PROPN	_	Number=Sing	52	flat:name	_	_
+54	nº	número	PROPN	_	Abbr=Yes|Gender=Masc|Number=Sing	52	flat:name	_	_
+55	4	4	NUM	_	NumType=Card	52	flat:name	_	SpaceAfter=No
+56	,	,	PUNCT	_	_	58	punct	_	_
+57	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	58	nsubj	_	_
 58	estabeleceu	estabelecer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	52	acl:relcl	_	_
 59	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	60	det	_	_
 60	condições	condição	NOUN	_	Gender=Fem|Number=Plur	58	obj	_	_
@@ -73,10 +76,10 @@
 64	de	de	ADP	_	_	66	case	_	_
 65	novos	novo	ADJ	_	Gender=Masc|Number=Plur	66	amod	_	_
 66	partidos	partido	NOUN	_	Gender=Masc|Number=Plur	63	nmod	_	SpaceAfter=No
-67	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
+67	.	.	PUNCT	_	_	1	punct	_	_
 
-# text = Desapareceu em 29 de novembro de 1979, quando o Congresso decretou o fim do bipartidarismo e abriu espaço para a reorganização de um novo sistema multipartidário.
 # sent_id = 2
+# text = Desapareceu em 29 de novembro de 1979, quando o Congresso decretou o fim do bipartidarismo e abriu espaço para a reorganização de um novo sistema multipartidário.
 1	Desapareceu	desaparecer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2	em	em	ADP	_	_	3	case	_	_
 3	29	29	NUM	_	NumType=Card	1	obl	_	_
@@ -87,7 +90,7 @@
 8	,	,	PUNCT	_	_	1	punct	_	_
 9	quando	quando	ADV	_	_	12	advmod	_	_
 10	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	_	_
-11	Congresso	congresso	PROPN	_	Gender=Masc|Number=Sing	12	nsubj	_	_
+11	Congresso	congresso	NOUN	_	Gender=Masc|Number=Sing	12	nsubj	_	_
 12	decretou	decretar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	1	advcl	_	_
 13	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	14	det	_	_
 14	fim	fim	NOUN	_	Gender=Masc|Number=Sing	12	obj	_	_
@@ -108,8 +111,8 @@
 28	multipartidário	multipartidário	ADJ	_	Gender=Masc|Number=Sing	27	amod	_	SpaceAfter=No
 29	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
 
-# text = O bipartidarismo no Brasil no pós-1964, que se constituiu da Arena e do Movimento Democrático Brasileiro (MDB), foi implantado como instrumento político da dominação autoritário-militar, visando sobretudo concentrar prerrogativas de controle político no Executivo sobre o qual as forças armadas possuíam completo poder.
 # sent_id = 3
+# text = O bipartidarismo no Brasil no pós-1964, que se constituiu da Arena e do Movimento Democrático Brasileiro (MDB), foi implantado como instrumento político da dominação autoritário-militar, visando sobretudo concentrar prerrogativas de controle político no Executivo sobre o qual as forças armadas possuíam completo poder.
 1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	_	_
 2	bipartidarismo	bipartidarismo	NOUN	_	Gender=Masc|Number=Sing	27	nsubj:pass	_	_
 3-4	no	_	_	_	_	_	_	_	_
@@ -120,21 +123,21 @@
 6	em	em	ADP	_	_	8	case	_	_
 7	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	8	det	_	_
 8	pós-1964	pós-1964	NOUN	_	Gender=Masc|Number=Sing	2	nmod	_	SpaceAfter=No
-9	,	,	PUNCT	_	_	2	punct	_	_
+9	,	,	PUNCT	_	_	12	punct	_	_
 10	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	12	nsubj	_	_
 11	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	12	expl	_	_
-12	constituiu	constituir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	acl:relcl	_	_
+12	constituiu	constituir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	8	acl:relcl	_	_
 13-14	da	_	_	_	_	_	_	_	_
 13	de	de	ADP	_	_	15	case	_	_
 14	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	15	det	_	_
-15	Arena	Arena	PROPN	_	Gender=Fem|Number=Sing	12	obj	_	_
+15	Arena	Arena	PROPN	_	Gender=Fem|Number=Sing	12	obl	_	_
 16	e	e	CCONJ	_	_	19	cc	_	_
 17-18	do	_	_	_	_	_	_	_	_
 17	de	de	ADP	_	_	19	case	_	_
 18	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	19	det	_	_
-19	Movimento	Movimento	PROPN	_	Gender=Masc|Number=Sing	15	conj	_	_
+19	Movimento	Movimento	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	15	conj	_	_
 20	Democrático	Democrático	PROPN	_	Number=Sing	19	flat:name	_	_
-21	Brasileiro	brasileiro	PROPN	_	Number=Sing	19	flat:name	_	_
+21	Brasileiro	Brasileiro	PROPN	_	Number=Sing	19	flat:name	_	_
 22	(	(	PUNCT	_	_	23	punct	_	SpaceAfter=No
 23	MDB	MDB	PROPN	_	Gender=Masc|Number=Sing	19	appos	_	SpaceAfter=No
 24	)	)	PUNCT	_	_	23	punct	_	SpaceAfter=No
@@ -148,10 +151,10 @@
 31	de	de	ADP	_	_	33	case	_	_
 32	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	33	det	_	_
 33	dominação	dominação	NOUN	_	Gender=Fem|Number=Sing	29	nmod	_	_
-34	autoritário-militar	autoritário-militar	NOUN	_	Gender=Masc|Number=Sing	33	amod	_	SpaceAfter=No
+34	autoritário-militar	autoritário-militar	ADJ	_	Gender=Fem|Number=Sing	33	amod	_	SpaceAfter=No
 35	,	,	PUNCT	_	_	36	punct	_	_
 36	visando	visar	VERB	_	VerbForm=Ger	27	advcl	_	_
-37	sobretudo	sobretudo	ADV	_	_	38	advmod	_	_
+37	sobretudo	sobretudo	ADV	_	_	36	advmod	_	_
 38	concentrar	concentrar	VERB	_	VerbForm=Inf	36	xcomp	_	_
 39	prerrogativas	prerrogativa	NOUN	_	Gender=Fem|Number=Plur	38	obj	_	_
 40	de	de	ADP	_	_	41	case	_	_
@@ -167,27 +170,27 @@
 49	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	50	det	_	_
 50	forças	força	NOUN	_	Gender=Fem|Number=Plur	52	nsubj	_	_
 51	armadas	armar	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part	50	acl	_	_
-52	possuíam	possuíar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	45	acl:relcl	_	_
+52	possuíam	possuir	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	45	acl:relcl	_	_
 53	completo	completo	ADJ	_	Gender=Masc|Number=Sing	54	amod	_	_
 54	poder	poder	NOUN	_	Gender=Masc|Number=Sing	52	obj	_	SpaceAfter=No
 55	.	.	PUNCT	_	_	27	punct	_	SpacesAfter=\n
 
-# text = Assim, os Atos Institucionais nºs 2 e 5 trataram de suprimir toda forma de oposição política dos demais setores governamentais e de impedir manifestação oposicionista por parte dos cidadãos, com ou sem mandato de representação.
 # sent_id = 4
-1	Assim	assim	ADV	_	_	12	advmod	_	SpaceAfter=No
+# text = Assim, os Atos Institucionais nºs 2 e 5 trataram de suprimir toda forma de oposição política dos demais setores governamentais e de impedir manifestação oposicionista por parte dos cidadãos, com ou sem mandato de representação.
+1	Assim	assim	ADV	_	_	10	advmod	_	SpaceAfter=No
 2	,	,	PUNCT	_	_	1	punct	_	_
 3	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	4	det	_	_
-4	Atos	ato	NOUN	_	Gender=Masc|Number=Plur	12	nsubj	_	_
-5	Institucionais	institucional	ADJ	_	Gender=Masc|Number=Plur	4	amod	_	_
-6	nºs	nº	ADJ	_	Gender=Masc|Number=Plur	4	amod	_	_
-7	2	2	NUM	_	NumType=Card	4	nummod	_	_
+4	Atos	Atos	PROPN	_	Gender=Masc|Number=Plur	10	nsubj	_	_
+5	Institucionais	Institucionais	PROPN	_	Number=Sing	4	flat:name	_	_
+6	nºs	nº	PROPN	_	Abbr=Yes|Gender=Masc|Number=Sing	4	flat:name	_	_
+7	2	2	NUM	_	NumType=Card	4	flat:name	_	_
 8	e	e	CCONJ	_	_	9	cc	_	_
-9	5	5	NUM	_	NumType=Card	7	conj	_	_
-10	trataram	tratar	VERB	_	Mood=Ind|Number=Plur|Person=3|VerbForm=Fin	0	root	_	_
+9	5	5	NUM	_	NumType=Card	4	conj	_	_
+10	trataram	tratar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 11	de	de	SCONJ	_	_	12	mark	_	_
 12	suprimir	suprimir	VERB	_	VerbForm=Inf	10	xcomp	_	_
 13	toda	todo	DET	_	Gender=Fem|Number=Sing|PronType=Tot	14	det	_	_
-14	forma	formo	NOUN	_	Gender=Fem|Number=Sing	12	obj	_	_
+14	forma	forma	NOUN	_	Gender=Fem|Number=Sing	12	obj	_	_
 15	de	de	ADP	_	_	16	case	_	_
 16	oposição	oposição	NOUN	_	Gender=Fem|Number=Sing	14	nmod	_	_
 17	política	político	ADJ	_	Gender=Fem|Number=Sing	16	amod	_	_
@@ -203,7 +206,7 @@
 26	manifestação	manifestação	NOUN	_	Gender=Fem|Number=Sing	25	obj	_	_
 27	oposicionista	oposicionista	ADJ	_	Gender=Fem|Number=Sing	26	amod	_	_
 28	por	por	ADP	_	_	29	case	_	_
-29	parte	parte	NOUN	_	Gender=Fem|Number=Sing	25	obl	_	_
+29	parte	parte	NOUN	_	Gender=Fem|Number=Sing	26	nmod	_	_
 30-31	dos	_	_	_	_	_	_	_	_
 30	de	de	ADP	_	_	32	case	_	_
 31	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	32	det	_	_
@@ -215,16 +218,16 @@
 37	mandato	mandato	NOUN	_	Gender=Masc|Number=Sing	29	nmod	_	_
 38	de	de	ADP	_	_	39	case	_	_
 39	representação	representação	NOUN	_	Gender=Fem|Number=Sing	37	nmod	_	SpaceAfter=No
-40	.	.	PUNCT	_	_	12	punct	_	SpacesAfter=\n
+40	.	.	PUNCT	_	_	10	punct	_	_
 
-# text = Tais medidas foram adotadas como decisão executiva entre 1965 e 1968 e tiveram profundas conseqüências sobre a representação política no país.
 # sent_id = 5
-1	Tais	tal	DET	_	Gender=Fem|Number=Plur|PronType=Dem	2	det	_	_
+# text = Tais medidas foram adotadas como decisão executiva entre 1965 e 1968 e tiveram profundas conseqüências sobre a representação política no país.
+1	Tais	tais	DET	_	Gender=Fem|Number=Plur|PronType=Dem	2	det	_	_
 2	medidas	medida	NOUN	_	Gender=Fem|Number=Plur	4	nsubj:pass	_	_
 3	foram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|VerbForm=Fin	4	aux:pass	_	_
 4	adotadas	adotar	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part|Voice=Pass	0	root	_	_
 5	como	como	ADP	_	_	6	case	_	_
-6	decisão	decisão	NOUN	_	Gender=Fem|Number=Sing	4	obl	_	_
+6	decisão	decisão	NOUN	_	Gender=Fem|Number=Sing	4	xcomp	_	_
 7	executiva	executivo	ADJ	_	Gender=Fem|Number=Sing	6	amod	_	_
 8	entre	entre	ADP	_	_	9	case	_	_
 9	1965	1965	NUM	_	NumType=Card	4	obl	_	_
@@ -242,17 +245,17 @@
 20	em	em	ADP	_	_	22	case	_	_
 21	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	22	det	_	_
 22	país	país	NOUN	_	Gender=Masc|Number=Sing	18	nmod	_	SpaceAfter=No
-23	.	.	PUNCT	_	_	4	punct	_	SpacesAfter=\n
+23	.	.	PUNCT	_	_	4	punct	_	_
 
-# text = Várias delas seriam posteriormente modificadas, às vésperas de eleições, visando principalmente atender interesses governamentais conjunturais.
 # sent_id = 6
-1	Várias	várias	PRON	_	Gender=Fem|Number=Plur|PronType=Ind	0	root	_	_
+# text = Várias delas seriam posteriormente modificadas, às vésperas de eleições, visando principalmente atender interesses governamentais conjunturais.
+1	Várias	várias	PRON	_	Gender=Fem|Number=Plur|PronType=Ind	6	nsubj:pass	_	_
 2-3	delas	_	_	_	_	_	_	_	_
 2	de	de	ADP	_	_	3	case	_	_
 3	elas	ele	PRON	_	Gender=Fem|Number=Plur|Person=3|PronType=Prs	1	nmod	_	_
-4	seriam	ser	AUX	_	Mood=Cnd|Number=Plur|Person=3|VerbForm=Fin	6	aux	_	_
+4	seriam	ser	AUX	_	Mood=Cnd|Number=Plur|Person=3|VerbForm=Fin	6	aux:pass	_	_
 5	posteriormente	posteriormente	ADV	_	_	6	advmod	_	_
-6	modificadas	modificar	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part	3	acl	_	SpaceAfter=No
+6	modificadas	modificar	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part|Voice=Pass	0	root	_	SpaceAfter=No
 7	,	,	PUNCT	_	_	6	punct	_	_
 8-9	às	_	_	_	_	_	_	_	_
 8	a	a	ADP	_	_	10	case	_	_
@@ -264,20 +267,20 @@
 14	visando	visar	VERB	_	VerbForm=Ger	6	advcl	_	_
 15	principalmente	principalmente	ADV	_	_	14	advmod	_	_
 16	atender	atender	VERB	_	VerbForm=Inf	14	xcomp	_	_
-17	interesses	interesse	NOUN	_	Gender=Masc|Number=Plur	16	obj	_	_
+17	interesses	interess	NOUN	_	Gender=Masc|Number=Plur	16	obj	_	_
 18	governamentais	governamental	ADJ	_	Gender=Masc|Number=Plur	17	amod	_	_
 19	conjunturais	conjuntural	ADJ	_	Gender=Masc|Number=Plur	17	amod	_	SpaceAfter=No
-20	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
+20	.	.	PUNCT	_	_	6	punct	_	SpacesAfter=\n
 
-# text = As primeiras medidas adotadas transformaram em indiretas as eleições para os executivos federal, estaduais e das capitais de estado, além de relacionar municípios de segurança nacional onde os prefeitos seriam nomeados.
 # sent_id = 7
+# text = As primeiras medidas adotadas transformaram em indiretas as eleições para os executivos federal, estaduais e das capitais de estado, além de relacionar municípios de segurança nacional onde os prefeitos seriam nomeados.
 1	As	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	3	det	_	_
 2	primeiras	primeiro	ADJ	_	Gender=Fem|Number=Plur|NumType=Ord	3	amod	_	_
 3	medidas	medida	NOUN	_	Gender=Fem|Number=Plur	5	nsubj	_	_
 4	adotadas	adotar	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part	3	acl	_	_
 5	transformaram	transformar	VERB	_	Mood=Ind|Number=Plur|Person=3|VerbForm=Fin	0	root	_	_
 6	em	em	ADP	_	_	7	case	_	_
-7	indiretas	indireta	NOUN	_	Gender=Fem|Number=Plur	5	obl	_	_
+7	indiretas	indireto	ADJ	_	Gender=Fem|Number=Plur	5	xcomp	_	_
 8	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	9	det	_	_
 9	eleições	eleição	NOUN	_	Gender=Fem|Number=Plur	5	obj	_	_
 10	para	para	ADP	_	_	12	case	_	_
@@ -285,78 +288,78 @@
 12	executivos	executivo	NOUN	_	Gender=Masc|Number=Plur	9	nmod	_	_
 13	federal	federal	ADJ	_	Gender=Masc|Number=Sing	12	amod	_	SpaceAfter=No
 14	,	,	PUNCT	_	_	15	punct	_	_
-15	estaduais	estadual	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	9	appos	_	_
+15	estaduais	estadual	ADJ	_	Gender=Masc|Number=Plur	13	conj	_	_
 16	e	e	CCONJ	_	_	19	cc	_	_
 17-18	das	_	_	_	_	_	_	_	_
 17	de	de	ADP	_	_	19	case	_	_
 18	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	19	det	_	_
-19	capitais	capital	NOUN	_	Gender=Fem|Number=Plur	15	conj	_	_
+19	capitais	capital	NOUN	_	Gender=Fem|Number=Plur	12	conj	_	_
 20	de	de	ADP	_	_	21	case	_	_
 21	estado	estado	NOUN	_	Gender=Masc|Number=Sing	19	nmod	_	SpaceAfter=No
 22	,	,	PUNCT	_	_	25	punct	_	_
-23	além	além	ADV	_	_	25	mark	_	_
+23	além	além	ADV	_	_	25	cc	_	_
 24	de	de	ADP	_	_	23	fixed	_	_
-25	relacionar	relacionar	VERB	_	VerbForm=Inf	19	acl	_	_
+25	relacionar	relacionar	VERB	_	VerbForm=Inf	5	conj	_	_
 26	municípios	município	NOUN	_	Gender=Masc|Number=Plur	25	obj	_	_
 27	de	de	ADP	_	_	28	case	_	_
 28	segurança	segurança	NOUN	_	Gender=Fem|Number=Sing	26	nmod	_	_
 29	nacional	nacional	ADJ	_	Gender=Fem|Number=Sing	28	amod	_	_
-30	onde	onde	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	34	obl	_	_
+30	onde	onde	PRON	_	Gender=Masc|Number=Plur|PronType=Rel	34	obl	_	_
 31	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	32	det	_	_
 32	prefeitos	prefeito	NOUN	_	Gender=Masc|Number=Plur	34	nsubj:pass	_	_
 33	seriam	ser	AUX	_	Mood=Cnd|Number=Plur|Person=3|VerbForm=Fin	34	aux:pass	_	_
 34	nomeados	nomear	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	26	acl:relcl	_	SpaceAfter=No
-35	.	.	PUNCT	_	_	5	punct	_	SpacesAfter=\n
+35	.	.	PUNCT	_	_	5	punct	_	_
 
-# text = Proibiram-se, ainda, as alianças eleitorais.
 # sent_id = 8
+# text = Proibiram-se, ainda, as alianças eleitorais.
 1-2	Proibiram-se	_	_	_	_	_	_	_	SpaceAfter=No
-1	Proibiram	Proibir	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+1	Proibiram	proibir	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Plur|Person=3|PronType=Prs	1	expl	_	_
 3	,	,	PUNCT	_	_	1	punct	_	_
 4	ainda	ainda	ADV	_	_	1	advmod	_	SpaceAfter=No
 5	,	,	PUNCT	_	_	1	punct	_	_
 6	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	7	det	_	_
-7	alianças	aliança	NOUN	_	Gender=Fem|Number=Plur	1	obj	_	_
+7	alianças	aliança	NOUN	_	Gender=Fem|Number=Plur	1	nsubj	_	_
 8	eleitorais	eleitoral	ADJ	_	Gender=Fem|Number=Plur	7	amod	_	SpaceAfter=No
-9	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
+9	.	.	PUNCT	_	_	1	punct	_	_
 
-# text = O registro eleitoral foi ampliado, dado que pelo Código Eleitoral de 1965 mulheres em atividades não remuneradas passaram obrigatoriamente a registrar-se para votar.
 # sent_id = 9
+# text = O registro eleitoral foi ampliado, dado que pelo Código Eleitoral de 1965 mulheres em atividades não remuneradas passaram obrigatoriamente a registrar-se para votar.
 1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	_	_
 2	registro	registro	NOUN	_	Gender=Masc|Number=Sing	5	nsubj:pass	_	_
 3	eleitoral	eleitoral	ADJ	_	Gender=Masc|Number=Sing	2	amod	_	_
 4	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	aux:pass	_	_
 5	ampliado	ampliar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	SpaceAfter=No
 6	,	,	PUNCT	_	_	5	punct	_	_
-7	dado	dar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	5	xcomp	_	_
-8	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	23	nsubj	_	_
+7	dado	dar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	20	mark	_	_
+8	que	que	SCONJ	_	_	7	fixed	_	_
 9-10	pelo	_	_	_	_	_	_	_	_
 9	por	por	ADP	_	_	11	case	_	_
 10	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	_	_
-11	Código	Código	PROPN	_	Gender=Masc|Number=Sing	23	obl	_	_
+11	Código	Código	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	20	obl	_	_
 12	Eleitoral	Eleitoral	PROPN	_	Number=Sing	11	flat:name	_	_
-13	de	de	ADP	_	_	15	case	_	_
-14	1965	1965	NUM	_	NumType=Card	15	nummod	_	_
-15	mulheres	mulher	NOUN	_	Gender=Fem|Number=Plur	11	nmod	_	_
+13	de	de	ADP	_	_	14	case	_	_
+14	1965	1965	NUM	_	NumType=Card	11	nmod	_	_
+15	mulheres	mulher	NOUN	_	Gender=Fem|Number=Plur	20	nsubj	_	_
 16	em	em	ADP	_	_	17	case	_	_
-17	atividades	atividade	NOUN	_	Gender=Fem|Number=Plur	11	nmod	_	_
+17	atividades	atividade	NOUN	_	Gender=Fem|Number=Plur	15	nmod	_	_
 18	não	não	ADV	_	Polarity=Neg	19	advmod	_	_
 19	remuneradas	remunerar	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part	17	acl	_	_
-20	passaram	passar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	7	acl:relcl	_	_
-21	obrigatoriamente	obrigatoriamente	ADV	_	_	11	advmod	_	_
+20	passaram	passar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	5	advcl	_	_
+21	obrigatoriamente	obrigatoriamente	ADV	_	_	23	advmod	_	_
 22	a	a	SCONJ	_	_	23	mark	_	_
 23-24	registrar-se	_	_	_	_	_	_	_	_
 23	registrar	registrar	VERB	_	VerbForm=Inf	20	xcomp	_	_
-24	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Plur|Person=3|PronType=Prs	23	obj	_	_
+24	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Plur|Person=3|PronType=Prs	23	expl	_	_
 25	para	para	SCONJ	_	_	26	mark	_	_
 26	votar	votar	VERB	_	VerbForm=Inf	23	advcl	_	SpaceAfter=No
 27	.	.	PUNCT	_	_	5	punct	_	SpacesAfter=\n
 
-# text = A Constituição de 1969 alterou o sistema de representação na Câmara Federal, que passou a ter como base o tamanho do eleitorado.
 # sent_id = 10
+# text = A Constituição de 1969 alterou o sistema de representação na Câmara Federal, que passou a ter como base o tamanho do eleitorado.
 1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
-2	Constituição	Constituição	NOUN	_	Gender=Fem|Number=Sing	5	nsubj	_	_
+2	Constituição	constituição	NOUN	_	Gender=Fem|Number=Sing	5	nsubj	_	_
 3	de	de	ADP	_	_	4	case	_	_
 4	1969	1969	NUM	_	NumType=Card	2	nmod	_	_
 5	alterou	alterar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
@@ -367,25 +370,25 @@
 10-11	na	_	_	_	_	_	_	_	_
 10	em	em	ADP	_	_	12	case	_	_
 11	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	12	det	_	_
-12	Câmara	Câmara	PROPN	_	Gender=Fem|Number=Sing	5	obl	_	_
-13	Federal	Federal	PROPN	_	Number=Sing	12	flat:name	_	SpaceAfter=No
+12	Câmara	Câmara	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	5	obl	_	_
+13	Federal	Federal	ADJ	_	Number=Sing	12	amod	_	SpaceAfter=No
 14	,	,	PUNCT	_	_	16	punct	_	_
 15	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	16	nsubj	_	_
-16	passou	passar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	12	acl:relcl	_	_
+16	passou	passar	VERB	_	ExtPos=AUX|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	12	acl:relcl	_	_
 17	a	a	SCONJ	_	_	18	mark	_	_
 18	ter	ter	VERB	_	VerbForm=Inf	16	xcomp	_	_
 19	como	como	ADP	_	_	20	case	_	_
-20	base	base	ADV	_	_	18	advmod	_	_
+20	base	base	NOUN	_	Gender=Fem|Number=Sing	18	xcomp	_	_
 21	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	22	det	_	_
 22	tamanho	tamanho	NOUN	_	Gender=Masc|Number=Sing	18	obj	_	_
 23-24	do	_	_	_	_	_	_	_	_
 23	de	de	ADP	_	_	25	case	_	_
 24	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	25	det	_	_
 25	eleitorado	eleitorado	NOUN	_	Gender=Masc|Number=Sing	22	nmod	_	SpaceAfter=No
-26	.	.	PUNCT	_	_	5	punct	_	SpacesAfter=\n
+26	.	.	PUNCT	_	_	5	punct	_	_
 
-# text = Essa medida provocou uma redução do número de cadeiras, buscando ampliar a maioria governamental.
 # sent_id = 11
+# text = Essa medida provocou uma redução do número de cadeiras, buscando ampliar a maioria governamental.
 1	Essa	esse	DET	_	Gender=Fem|Number=Sing|PronType=Dem	2	det	_	_
 2	medida	medida	NOUN	_	Gender=Fem|Number=Sing	3	nsubj	_	_
 3	provocou	provocar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
@@ -403,10 +406,10 @@
 14	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	15	det	_	_
 15	maioria	maioria	NOUN	_	Gender=Fem|Number=Sing	13	obj	_	_
 16	governamental	governamental	ADJ	_	Gender=Fem|Number=Sing	15	amod	_	SpaceAfter=No
-17	.	.	PUNCT	_	_	3	punct	_	SpacesAfter=\n
+17	.	.	PUNCT	_	_	3	punct	_	_
 
-# text = Politicamente, esse critério adotado para as eleições de 1974 e de 1978 levou à sub-representação dos estados mais industrializados, com taxas menores de analfabetismo e tradicionalmente oposicionistas.
 # sent_id = 12
+# text = Politicamente, esse critério adotado para as eleições de 1974 e de 1978 levou à sub-representação dos estados mais industrializados, com taxas menores de analfabetismo e tradicionalmente oposicionistas.
 1	Politicamente	politicamente	ADV	_	_	14	advmod	_	SpaceAfter=No
 2	,	,	PUNCT	_	_	1	punct	_	_
 3	esse	esse	DET	_	Gender=Masc|Number=Sing|PronType=Dem	4	det	_	_
@@ -430,38 +433,38 @@
 19	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	20	det	_	_
 20	estados	estado	NOUN	_	Gender=Masc|Number=Plur	17	nmod	_	_
 21	mais	mais	ADV	_	_	22	advmod	_	_
-22	industrializados	industrializado	ADJ	_	Gender=Masc|Number=Plur	20	amod	_	SpaceAfter=No
+22	industrializados	industrializar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part	20	acl	_	SpaceAfter=No
 23	,	,	PUNCT	_	_	25	punct	_	_
 24	com	com	ADP	_	_	25	case	_	_
-25	taxas	taxa	NOUN	_	Gender=Fem|Number=Plur	17	nmod	_	_
-26	menores	pequeno	ADJ	_	Gender=Fem|Number=Plur	25	amod	_	_
+25	taxas	taxa	NOUN	_	Gender=Fem|Number=Plur	20	nmod	_	_
+26	menores	menor	ADJ	_	Gender=Fem|Number=Plur	25	amod	_	_
 27	de	de	ADP	_	_	28	case	_	_
 28	analfabetismo	analfabetismo	NOUN	_	Gender=Masc|Number=Sing	25	nmod	_	_
 29	e	e	CCONJ	_	_	31	cc	_	_
 30	tradicionalmente	tradicionalmente	ADV	_	_	31	advmod	_	_
-31	oposicionistas	oposicionista	ADJ	_	Gender=Fem|Number=Plur	25	conj	_	SpaceAfter=No
+31	oposicionistas	oposicionista	ADJ	_	Gender=Masc|Number=Plur	25	conj	_	SpaceAfter=No
 32	.	.	PUNCT	_	_	14	punct	_	SpacesAfter=\n
 
-# text = Em 1977, a Emenda Constitucional nº 8, de 14 de abril, restabeleceu o critério população como base para o cálculo das bancadas estaduais na Câmara Federal.
 # sent_id = 13
+# text = Em 1977, a Emenda Constitucional nº 8, de 14 de abril, restabeleceu o critério população como base para o cálculo das bancadas estaduais na Câmara Federal.
 1	Em	em	ADP	_	_	2	case	_	_
 2	1977	1977	NUM	_	NumType=Card	15	obl	_	SpaceAfter=No
 3	,	,	PUNCT	_	_	2	punct	_	_
 4	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	5	det	_	_
-5	Emenda	emenda	PROPN	_	Gender=Fem|Number=Sing	15	nsubj	_	_
+5	Emenda	Emenda	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	15	nsubj	_	_
 6	Constitucional	Constitucional	PROPN	_	Number=Sing	5	flat:name	_	_
-7	nº	nº	NOUN	_	Gender=Masc|Number=Sing	5	appos	_	_
-8	8	8	NUM	_	NumType=Card	7	nummod	_	SpaceAfter=No
+7	nº	número	PROPN	_	Abbr=Yes|Gender=Masc|Number=Sing	5	nmod	_	_
+8	8	8	PROPN	_	Number=Sing	5	flat:name	_	SpaceAfter=No
 9	,	,	PUNCT	_	_	11	punct	_	_
 10	de	de	ADP	_	_	11	case	_	_
-11	14	14	NUM	_	NumType=Card	7	nmod	_	_
+11	14	14	NUM	_	NumType=Card	5	nmod	_	_
 12	de	de	ADP	_	_	13	case	_	_
 13	abril	abril	NOUN	_	Gender=Masc|Number=Sing	11	nmod	_	SpaceAfter=No
-14	,	,	PUNCT	_	_	15	punct	_	_
+14	,	,	PUNCT	_	_	11	punct	_	_
 15	restabeleceu	restabelecer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 16	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	17	det	_	_
 17	critério	critério	NOUN	_	Gender=Masc|Number=Sing	15	obj	_	_
-18	população	população	NOUN	_	Gender=Fem|Number=Sing	17	appos	_	_
+18	população	população	NOUN	_	Gender=Fem|Number=Sing	17	nmod	_	_
 19	como	como	ADP	_	_	20	case	_	_
 20	base	base	NOUN	_	Gender=Fem|Number=Sing	15	xcomp	_	_
 21	para	para	ADP	_	_	23	case	_	_
@@ -475,46 +478,46 @@
 28-29	na	_	_	_	_	_	_	_	_
 28	em	em	ADP	_	_	30	case	_	_
 29	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	30	det	_	_
-30	Câmara	Câmara	PROPN	_	Gender=Fem|Number=Sing	26	nmod	_	_
+30	Câmara	Câmara	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	23	nmod	_	_
 31	Federal	Federal	PROPN	_	Number=Sing	30	flat:name	_	SpaceAfter=No
-32	.	.	PUNCT	_	_	15	punct	_	SpacesAfter=\n
+32	.	.	PUNCT	_	_	15	punct	_	_
 
-# text = Apesar disso, os dois maiores estados, São Paulo e Minas Gerais, continuaram sub-representados.
 # sent_id = 14
-1	Apesar	apesar	ADV	_	_	16	advmod	_	_
+# text = Apesar disso, os dois maiores estados, São Paulo e Minas Gerais, continuaram sub-representados.
+1	Apesar	apesar	ADV	_	ExtPos=ADP	3	case	_	_
 2-3	disso	_	_	_	_	_	_	_	SpaceAfter=No
 2	de	de	ADP	_	_	1	fixed	_	_
-3	isso	isso	PRON	_	Gender=Masc|Number=Sing|PronType=Dem	1	fixed	_	_
-4	,	,	PUNCT	_	_	1	punct	_	_
-5	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	7	det	_	_
-6	dois	dois	NUM	_	NumType=Card	7	nummod	_	_
-7	maiores	grande	NOUN	_	Gender=Masc|Number=Plur	16	nsubj	_	_
-8	estados	estar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part	7	acl	_	SpaceAfter=No
+3	isso	isso	PRON	_	Gender=Masc|Number=Sing|PronType=Dem	16	obl	_	_
+4	,	,	PUNCT	_	_	3	punct	_	_
+5	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	8	det	_	_
+6	dois	dois	NUM	_	NumType=Card	8	nummod	_	_
+7	maiores	grande	ADJ	_	Gender=Masc|Number=Plur	8	amod	_	_
+8	estados	estado	NOUN	_	Gender=Masc|Number=Plur	16	nsubj	_	SpaceAfter=No
 9	,	,	PUNCT	_	_	10	punct	_	_
-10	São	São	PROPN	_	Gender=Masc|Number=Sing	7	appos	_	_
+10	São	São	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	8	appos	_	_
 11	Paulo	Paulo	PROPN	_	Number=Sing	10	flat:name	_	_
 12	e	e	CCONJ	_	_	13	cc	_	_
-13	Minas	Minas	PROPN	_	Gender=Masc|Number=Sing	10	conj	_	_
+13	Minas	Minas	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	10	conj	_	_
 14	Gerais	Gerais	PROPN	_	Number=Sing	13	flat:name	_	SpaceAfter=No
 15	,	,	PUNCT	_	_	10	punct	_	_
 16	continuaram	continuar	VERB	_	Mood=Ind|Number=Plur|Person=3|VerbForm=Fin	0	root	_	_
-17	sub-representados	sub-representado	NOUN	_	Gender=Masc|Number=Plur	16	obj	_	SpaceAfter=No
+17	sub-representados	sub-representado	ADJ	_	Gender=Masc|Number=Plur	16	xcomp	_	SpaceAfter=No
 18	.	.	PUNCT	_	_	16	punct	_	SpacesAfter=\n
 
-# text = A Lei Falcão (Lei nº 6.339, de 1º de julho de 1976) proibiu a propaganda eleitoral pelo rádio e a televisão, permitindo apenas a divulgação do «curriculum vitae» sumário dos candidatos.
 # sent_id = 15
+# text = A Lei Falcão (Lei nº 6.339, de 1º de julho de 1976) proibiu a propaganda eleitoral pelo rádio e a televisão, permitindo apenas a divulgação do «curriculum vitae» sumário dos candidatos.
 1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
-2	Lei	Lei	PROPN	_	Gender=Fem|Number=Sing	16	nsubj	_	_
+2	Lei	Lei	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	16	nsubj	_	_
 3	Falcão	Falcão	PROPN	_	Number=Sing	2	flat:name	_	_
 4	(	(	PUNCT	_	_	5	punct	_	SpaceAfter=No
-5	Lei	lei	PROPN	_	Gender=Masc|Number=Sing	2	appos	_	_
-6	nº	nº	NOUN	_	Gender=Masc|Number=Sing	5	parataxis	_	_
+5	Lei	lei	NOUN	_	Gender=Fem|Number=Sing	2	appos	_	_
+6	nº	número	NOUN	_	Abbr=Yes|Gender=Masc|Number=Sing	5	nmod	_	_
 7	6.339	6.339	NUM	_	NumType=Card	6	nummod	_	SpaceAfter=No
 8	,	,	PUNCT	_	_	10	punct	_	_
 9	de	de	ADP	_	_	10	case	_	_
-10	1º	1º	ADJ	_	Gender=Masc|Number=Sing|NumType=Ord	5	nmod	_	_
+10	1º	1º	ADJ	_	Gender=Masc|Number=Sing|NumType=Ord	5	amod	_	_
 11	de	de	ADP	_	_	12	case	_	_
-12	julho	julho	NOUN	_	Gender=Masc|Number=Sing	10	nmod	_	_
+12	julho	julho	NOUN	_	Gender=Masc|Number=Sing	10	obl	_	_
 13	de	de	ADP	_	_	14	case	_	_
 14	1976	1976	NUM	_	NumType=Card	12	nmod	_	SpaceAfter=No
 15	)	)	PUNCT	_	_	5	punct	_	_
@@ -525,10 +528,10 @@
 20-21	pelo	_	_	_	_	_	_	_	_
 20	por	por	ADP	_	_	22	case	_	_
 21	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	22	det	_	_
-22	rádio	rádio	NOUN	_	Gender=Masc|Number=Sing	18	nmod	_	_
+22	rádio	rádio	NOUN	_	Gender=Masc|Number=Sing	16	obl	_	_
 23	e	e	CCONJ	_	_	25	cc	_	_
 24	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	25	det	_	_
-25	televisão	televisão	NOUN	_	Gender=Fem|Number=Sing	18	conj	_	SpaceAfter=No
+25	televisão	televisão	NOUN	_	Gender=Fem|Number=Sing	22	conj	_	SpaceAfter=No
 26	,	,	PUNCT	_	_	27	punct	_	_
 27	permitindo	permitir	VERB	_	VerbForm=Ger	16	advcl	_	_
 28	apenas	apenas	ADV	_	_	30	advmod	_	_
@@ -538,18 +541,18 @@
 31	de	de	ADP	_	_	34	case	_	_
 32	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	34	det	_	_
 33	«	«	PUNCT	_	_	34	punct	_	SpaceAfter=No
-34	curriculum	curriculum	NOUN	_	Gender=Masc|Number=Sing	30	nmod	_	_
-35	vitae	vitae	ADJ	_	Gender=Masc|Number=Sing	34	amod	_	SpaceAfter=No
+34	curriculum	curriculum	NOUN	_	ExtPos=NOUN	30	nmod	_	_
+35	vitae	vitae	X	_	_	34	flat:foreign	_	SpaceAfter=No
 36	»	»	PUNCT	_	_	34	punct	_	_
-37	sumário	sumário	NOUN	_	Gender=Masc|Number=Sing	34	appos	_	_
+37	sumário	sumário	ADJ	_	Gender=Masc|Number=Sing	34	amod	_	_
 38-39	dos	_	_	_	_	_	_	_	_
 38	de	de	ADP	_	_	40	case	_	_
 39	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	40	det	_	_
-40	candidatos	candidato	NOUN	_	Gender=Masc|Number=Plur	37	nmod	_	SpaceAfter=No
-41	.	.	PUNCT	_	_	16	punct	_	SpacesAfter=\n
+40	candidatos	candidato	NOUN	_	Gender=Masc|Number=Plur	34	nmod	_	SpaceAfter=No
+41	.	.	PUNCT	_	_	16	punct	_	_
 
-# text = Essa lei surgiu como resposta direta do governo ao considerável avanço do partido oposicionista, o MDB, nas eleições de 1974, e refletia a preocupação do governo em enfrentar as eleições municipais de 1976, que poderiam, sob condições inteiramente livres de propaganda eleitoral, transformar-se em uma eleição plebiscitária.
 # sent_id = 16
+# text = Essa lei surgiu como resposta direta do governo ao considerável avanço do partido oposicionista, o MDB, nas eleições de 1974, e refletia a preocupação do governo em enfrentar as eleições municipais de 1976, que poderiam, sob condições inteiramente livres de propaganda eleitoral, transformar-se em uma eleição plebiscitária.
 1	Essa	esse	DET	_	Gender=Fem|Number=Sing|PronType=Dem	2	det	_	_
 2	lei	lei	NOUN	_	Gender=Fem|Number=Sing	3	nsubj	_	_
 3	surgiu	surgir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
@@ -564,23 +567,23 @@
 10	a	a	ADP	_	_	13	case	_	_
 11	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	13	det	_	_
 12	considerável	considerável	ADJ	_	Gender=Masc|Number=Sing	13	amod	_	_
-13	avanço	avanço	NOUN	_	Gender=Masc|Number=Sing	9	nmod	_	_
+13	avanço	avanço	NOUN	_	Gender=Masc|Number=Sing	3	obl	_	_
 14-15	do	_	_	_	_	_	_	_	_
 14	de	de	ADP	_	_	16	case	_	_
 15	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	16	det	_	_
 16	partido	partido	NOUN	_	Gender=Masc|Number=Sing	13	nmod	_	_
 17	oposicionista	oposicionista	ADJ	_	Gender=Masc|Number=Sing	16	amod	_	SpaceAfter=No
-18	,	,	PUNCT	_	_	3	punct	_	_
+18	,	,	PUNCT	_	_	20	punct	_	_
 19	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	20	det	_	_
-20	MDB	MDB	PROPN	_	Gender=Masc|Number=Sing	3	obj	_	SpaceAfter=No
-21	,	,	PUNCT	_	_	24	punct	_	_
+20	MDB	MDB	PROPN	_	Gender=Masc|Number=Sing	16	appos	_	SpaceAfter=No
+21	,	,	PUNCT	_	_	20	punct	_	_
 22-23	nas	_	_	_	_	_	_	_	_
 22	em	em	ADP	_	_	24	case	_	_
 23	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	24	det	_	_
-24	eleições	eleição	NOUN	_	Gender=Fem|Number=Plur	20	conj	_	_
+24	eleições	eleição	NOUN	_	Gender=Fem|Number=Plur	13	nmod	_	_
 25	de	de	ADP	_	_	26	case	_	_
 26	1974	1974	NUM	_	NumType=Card	24	nmod	_	SpaceAfter=No
-27	,	,	PUNCT	_	_	24	punct	_	_
+27	,	,	PUNCT	_	_	29	punct	_	_
 28	e	e	CCONJ	_	_	29	cc	_	_
 29	refletia	refletir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	3	conj	_	_
 30	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	31	det	_	_
@@ -590,16 +593,16 @@
 33	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	34	det	_	_
 34	governo	governo	NOUN	_	Gender=Masc|Number=Sing	31	nmod	_	_
 35	em	em	SCONJ	_	_	36	mark	_	_
-36	enfrentar	enfrentar	VERB	_	VerbForm=Inf	29	advcl	_	_
+36	enfrentar	enfrentar	VERB	_	VerbForm=Inf	31	acl	_	_
 37	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	38	det	_	_
 38	eleições	eleição	NOUN	_	Gender=Fem|Number=Plur	36	obj	_	_
 39	municipais	municipal	ADJ	_	Gender=Fem|Number=Plur	38	amod	_	_
 40	de	de	ADP	_	_	41	case	_	_
 41	1976	1976	NUM	_	NumType=Card	38	nmod	_	SpaceAfter=No
 42	,	,	PUNCT	_	_	44	punct	_	_
-43	que	que	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	44	nsubj	_	_
-44	poderiam	poderer	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	41	acl:relcl	_	SpaceAfter=No
-45	,	,	PUNCT	_	_	44	punct	_	_
+43	que	que	PRON	_	Gender=Fem|Number=Plur|PronType=Rel	44	nsubj	_	_
+44	poderiam	poder	VERB	_	Mood=Cnd|Number=Plur|Person=3|VerbForm=Fin	38	acl:relcl	_	SpaceAfter=No
+45	,	,	PUNCT	_	_	47	punct	_	_
 46	sob	sob	ADP	_	_	47	case	_	_
 47	condições	condição	NOUN	_	Gender=Fem|Number=Plur	44	obl	_	_
 48	inteiramente	inteiramente	ADV	_	_	49	advmod	_	_
@@ -607,18 +610,18 @@
 50	de	de	ADP	_	_	51	case	_	_
 51	propaganda	propaganda	NOUN	_	Gender=Fem|Number=Sing	47	nmod	_	_
 52	eleitoral	eleitoral	ADJ	_	Gender=Fem|Number=Sing	51	amod	_	SpaceAfter=No
-53	,	,	PUNCT	_	_	44	punct	_	_
+53	,	,	PUNCT	_	_	54	punct	_	_
 54-55	transformar-se	_	_	_	_	_	_	_	_
-54	transformar	transformar	VERB	_	VerbForm=Inf	29	advcl	_	_
-55	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	54	expl	_	_
+54	transformar	transformar	VERB	_	VerbForm=Inf	44	xcomp	_	_
+55	se	se	PRON	_	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	54	expl	_	_
 56	em	em	ADP	_	_	58	case	_	_
 57	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	58	det	_	_
-58	eleição	eleição	NOUN	_	Gender=Fem|Number=Sing	54	obl	_	_
+58	eleição	eleição	NOUN	_	Gender=Fem|Number=Sing	54	obj	_	_
 59	plebiscitária	plebiscitário	ADJ	_	Gender=Fem|Number=Sing	58	amod	_	SpaceAfter=No
 60	.	.	PUNCT	_	_	3	punct	_	SpacesAfter=\n
 
-# text = A Arena e o MDB organizaram-se no final de 1965 após a extinção do sistema multipartidário (Ato Institucional nº 2, de 27 de outubro de 1965) e como conseqüência do Ato Complementar nº 4, que estabeleceu as condições de funcionamento para novas organizações políticas.
 # sent_id = 17
+# text = A Arena e o MDB organizaram-se no final de 1965 após a extinção do sistema multipartidário (Ato Institucional nº 2, de 27 de outubro de 1965) e como conseqüência do Ato Complementar nº 4, que estabeleceu as condições de funcionamento para novas organizações políticas.
 1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
 2	Arena	Arena	PROPN	_	Gender=Fem|Number=Sing	6	nsubj	_	_
 3	e	e	CCONJ	_	_	5	cc	_	_
@@ -642,10 +645,10 @@
 18	sistema	sistema	NOUN	_	Gender=Masc|Number=Sing	15	nmod	_	_
 19	multipartidário	multipartidário	ADJ	_	Gender=Masc|Number=Sing	18	amod	_	_
 20	(	(	PUNCT	_	_	21	punct	_	SpaceAfter=No
-21	Ato	ato	PROPN	_	Gender=Masc|Number=Sing	18	appos	_	_
+21	Ato	Ato	PROPN	_	Gender=Masc|Number=Sing	18	appos	_	_
 22	Institucional	Institucional	PROPN	_	Number=Sing	21	flat:name	_	_
-23	nº	nº	NOUN	_	Gender=Masc|Number=Sing	21	appos	_	_
-24	2	2	NUM	_	NumType=Card	23	nummod	_	SpaceAfter=No
+23	nº	número	NOUN	_	Abbr=Yes|Gender=Masc|Number=Sing	21	nmod	_	_
+24	2	2	NUM	_	NumType=Card	21	flat:name	_	SpaceAfter=No
 25	,	,	PUNCT	_	_	27	punct	_	_
 26	de	de	ADP	_	_	27	case	_	_
 27	27	27	NUM	_	NumType=Card	21	nmod	_	_
@@ -656,17 +659,17 @@
 32	)	)	PUNCT	_	_	21	punct	_	_
 33	e	e	CCONJ	_	_	35	cc	_	_
 34	como	como	ADP	_	_	35	case	_	_
-35	conseqüência	conseqüência	NOUN	_	Gender=Fem|Number=Sing	18	conj	_	_
+35	conseqüência	conseqüência	NOUN	_	Gender=Fem|Number=Sing	15	conj	_	_
 36-37	do	_	_	_	_	_	_	_	_
 36	de	de	ADP	_	_	38	case	_	_
 37	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	38	det	_	_
-38	Ato	ato	PROPN	_	Gender=Masc|Number=Sing	35	nmod	_	_
-39	Complementar	complementar	PROPN	_	Number=Sing	38	flat:name	_	_
-40	nº	nº	NOUN	_	Gender=Masc|Number=Sing	38	nmod	_	_
-41	4	4	NUM	_	NumType=Card	40	nummod	_	SpaceAfter=No
-42	,	,	PUNCT	_	_	6	punct	_	_
-43	que	que	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	44	nsubj	_	_
-44	estabeleceu	estabelecer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	35	acl:relcl	_	_
+38	Ato	Ato	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	35	nmod	_	_
+39	Complementar	Complementar	PROPN	_	Number=Sing	38	flat:name	_	_
+40	nº	número	PROPN	_	Abbr=Yes|Gender=Masc|Number=Sing	38	flat:name	_	_
+41	4	4	NUM	_	NumType=Card	38	flat:name	_	SpaceAfter=No
+42	,	,	PUNCT	_	_	44	punct	_	_
+43	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	44	nsubj	_	_
+44	estabeleceu	estabelecer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	38	acl:relcl	_	_
 45	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	46	det	_	_
 46	condições	condição	NOUN	_	Gender=Fem|Number=Plur	44	obj	_	_
 47	de	de	ADP	_	_	48	case	_	_
@@ -675,26 +678,26 @@
 50	novas	novo	ADJ	_	Gender=Fem|Number=Plur	51	amod	_	_
 51	organizações	organização	NOUN	_	Gender=Fem|Number=Plur	48	nmod	_	_
 52	políticas	político	ADJ	_	Gender=Fem|Number=Plur	51	amod	_	SpaceAfter=No
-53	.	.	PUNCT	_	_	6	punct	_	SpacesAfter=\n
+53	.	.	PUNCT	_	_	6	punct	_	_
 
-# text = O sistema criado foi bipartidário sobretudo porque, para existir, cada movimento político deveria contar com quase 1/3 dos congressistas existentes, afora o fato de que os representantes do povo tiveram, por lei, 45 dias para organizar os novos partidos.
 # sent_id = 18
+# text = O sistema criado foi bipartidário sobretudo porque, para existir, cada movimento político deveria contar com quase 1/3 dos congressistas existentes, afora o fato de que os representantes do povo tiveram, por lei, 45 dias para organizar os novos partidos.
 1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	_	_
 2	sistema	sistema	NOUN	_	Gender=Masc|Number=Sing	5	nsubj	_	_
 3	criado	criar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	2	acl	_	_
 4	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	cop	_	_
 5	bipartidário	bipartidário	ADJ	_	Gender=Masc|Number=Sing	0	root	_	_
-6	sobretudo	sobretudo	ADV	_	_	10	advmod	_	_
-7	porque	porque	SCONJ	_	_	10	mark	_	SpaceAfter=No
+6	sobretudo	sobretudo	ADV	_	_	5	advmod	_	_
+7	porque	porque	SCONJ	_	_	15	mark	_	SpaceAfter=No
 8	,	,	PUNCT	_	_	10	punct	_	_
 9	para	para	SCONJ	_	_	10	mark	_	_
-10	existir	existir	VERB	_	VerbForm=Inf	15	xcomp	_	SpaceAfter=No
+10	existir	existir	VERB	_	VerbForm=Inf	15	advcl	_	SpaceAfter=No
 11	,	,	PUNCT	_	_	10	punct	_	_
 12	cada	cada	DET	_	Gender=Masc|Number=Sing|PronType=Tot	13	det	_	_
-13	movimento	movimento	NOUN	_	Gender=Masc|Number=Sing	10	obj	_	_
+13	movimento	movimento	NOUN	_	Gender=Masc|Number=Sing	15	nsubj	_	_
 14	político	político	ADJ	_	Gender=Masc|Number=Sing	13	amod	_	_
 15	deveria	dever	VERB	_	Mood=Cnd|Number=Sing|Person=3|VerbForm=Fin	5	advcl	_	_
-16	contar	contar	VERB	_	VerbForm=Inf	10	xcomp	_	_
+16	contar	contar	VERB	_	VerbForm=Inf	15	xcomp	_	_
 17	com	com	ADP	_	_	19	case	_	_
 18	quase	quase	ADV	_	_	19	advmod	_	_
 19	1/3	1/3	NUM	_	NumType=Card	16	obl	_	_
@@ -704,7 +707,7 @@
 22	congressistas	congressista	NOUN	_	Gender=Masc|Number=Plur	19	nmod	_	_
 23	existentes	existente	ADJ	_	Gender=Masc|Number=Plur	22	amod	_	SpaceAfter=No
 24	,	,	PUNCT	_	_	16	punct	_	_
-25	afora	afora	ADP	_	_	27	case	_	_
+25	afora	afora	ADV	_	_	27	advmod	_	_
 26	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	27	det	_	_
 27	fato	fato	NOUN	_	Gender=Masc|Number=Sing	16	obj	_	_
 28	de	de	SCONJ	_	_	35	mark	_	_
@@ -719,26 +722,26 @@
 36	,	,	PUNCT	_	_	35	punct	_	_
 37	por	por	ADP	_	_	38	case	_	_
 38	lei	lei	NOUN	_	Gender=Fem|Number=Sing	35	obl	_	SpaceAfter=No
-39	,	,	PUNCT	_	_	41	punct	_	_
+39	,	,	PUNCT	_	_	35	punct	_	_
 40	45	45	NUM	_	NumType=Card	41	nummod	_	_
-41	dias	dia	NOUN	_	Gender=Masc|Number=Plur	35	advcl	_	_
+41	dias	dia	NOUN	_	Gender=Masc|Number=Plur	35	obj	_	_
 42	para	para	SCONJ	_	_	43	mark	_	_
-43	organizar	organizar	VERB	_	VerbForm=Inf	41	advcl	_	_
+43	organizar	organizar	VERB	_	VerbForm=Inf	35	advcl	_	_
 44	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	46	det	_	_
 45	novos	novo	ADJ	_	Gender=Masc|Number=Plur	46	amod	_	_
 46	partidos	partido	NOUN	_	Gender=Masc|Number=Plur	43	obj	_	SpaceAfter=No
-47	.	.	PUNCT	_	_	10	punct	_	SpacesAfter=\n
+47	.	.	PUNCT	_	_	5	punct	_	SpacesAfter=\n
 
-# text = O bipartidarismo foi, assim, artificialmente implantado em virtude de um duplo processo de determinação.
 # sent_id = 19
+# text = O bipartidarismo foi, assim, artificialmente implantado em virtude de um duplo processo de determinação.
 1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	_	_
-2	bipartidarismo	bipartidarismo	NOUN	_	Gender=Masc|Number=Sing	8	nsubj	_	_
-3	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	8	cop	_	SpaceAfter=No
+2	bipartidarismo	bipartidarismo	NOUN	_	Gender=Masc|Number=Sing	8	nsubj:pass	_	_
+3	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	8	aux:pass	_	SpaceAfter=No
 4	,	,	PUNCT	_	_	5	punct	_	_
 5	assim	assim	ADV	_	_	8	advmod	_	SpaceAfter=No
 6	,	,	PUNCT	_	_	5	punct	_	_
 7	artificialmente	artificialmente	ADV	_	_	8	advmod	_	_
-8	implantado	implantar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	0	root	_	_
+8	implantado	implantar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
 9	em	em	ADP	_	_	10	case	_	_
 10	virtude	virtude	NOUN	_	Gender=Fem|Number=Sing	8	obl	_	_
 11	de	de	ADP	_	_	14	case	_	_
@@ -747,26 +750,26 @@
 14	processo	processo	NOUN	_	Gender=Masc|Number=Sing	10	nmod	_	_
 15	de	de	ADP	_	_	16	case	_	_
 16	determinação	determinação	NOUN	_	Gender=Fem|Number=Sing	14	nmod	_	SpaceAfter=No
-17	.	.	PUNCT	_	_	8	punct	_	SpacesAfter=\n
+17	.	.	PUNCT	_	_	8	punct	_	_
 
-# text = Por um lado, a intenção governamental de criar um partido suficientemente forte para lhe assegurar respaldo parlamentar e, por outro, a acomodação dentro de cada partido de políticos de posições diversificadas.
 # sent_id = 20
+# text = Por um lado, a intenção governamental de criar um partido suficientemente forte para lhe assegurar respaldo parlamentar e, por outro, a acomodação dentro de cada partido de políticos de posições diversificadas.
 1	Por	por	ADP	_	_	3	case	_	_
 2	um	um	DET	_	Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
-3	lado	lado	NOUN	_	Gender=Masc|Number=Sing	9	obl	_	SpaceAfter=No
+3	lado	lado	NOUN	_	Gender=Masc|Number=Sing	6	nmod	_	SpaceAfter=No
 4	,	,	PUNCT	_	_	3	punct	_	_
 5	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	6	det	_	_
-6	intenção	intenção	NOUN	_	Gender=Fem|Number=Sing	9	nsubj	_	_
+6	intenção	intenção	NOUN	_	Gender=Fem|Number=Sing	0	root	_	_
 7	governamental	governamental	ADJ	_	Gender=Fem|Number=Sing	6	amod	_	_
 8	de	de	SCONJ	_	_	9	mark	_	_
-9	criar	criar	VERB	_	VerbForm=Inf	0	root	_	_
+9	criar	criar	VERB	_	VerbForm=Inf	6	acl	_	_
 10	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	11	det	_	_
 11	partido	partido	NOUN	_	Gender=Masc|Number=Sing	9	obj	_	_
 12	suficientemente	suficientemente	ADV	_	_	13	advmod	_	_
 13	forte	forte	ADJ	_	Gender=Masc|Number=Sing	11	amod	_	_
 14	para	para	SCONJ	_	_	16	mark	_	_
 15	lhe	ele	PRON	_	Case=Dat|Gender=Masc|Number=Sing|Person=3|PronType=Prs	16	iobj	_	_
-16	assegurar	assegurar	VERB	_	VerbForm=Inf	11	acl	_	_
+16	assegurar	assegurar	VERB	_	VerbForm=Inf	9	advcl	_	_
 17	respaldo	respaldo	NOUN	_	Gender=Masc|Number=Sing	16	obj	_	_
 18	parlamentar	parlamentar	ADJ	_	Gender=Masc|Number=Sing	17	amod	_	_
 19	e	e	CCONJ	_	_	25	cc	_	SpaceAfter=No
@@ -775,7 +778,7 @@
 22	outro	outro	PRON	_	Gender=Masc|Number=Sing|PronType=Ind	25	nmod	_	SpaceAfter=No
 23	,	,	PUNCT	_	_	22	punct	_	_
 24	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	25	det	_	_
-25	acomodação	acomodação	NOUN	_	Gender=Fem|Number=Sing	16	conj	_	_
+25	acomodação	acomodação	NOUN	_	Gender=Fem|Number=Sing	6	conj	_	_
 26	dentro	dentro	ADV	_	_	25	advmod	_	_
 27	de	de	ADP	_	_	29	case	_	_
 28	cada	cada	DET	_	Gender=Masc|Number=Sing|PronType=Tot	29	det	_	_
@@ -785,10 +788,10 @@
 32	de	de	ADP	_	_	33	case	_	_
 33	posições	posição	NOUN	_	Gender=Fem|Number=Plur	31	nmod	_	_
 34	diversificadas	diversificar	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part	33	acl	_	SpaceAfter=No
-35	.	.	PUNCT	_	_	9	punct	_	SpacesAfter=\n
+35	.	.	PUNCT	_	_	6	punct	_	SpacesAfter=\n
 
-# text = O período do bipartidarismo assistiu a quatro eleições proporcionais - de 1966, 1970, 1974 e 1978 - para a Câmara Federal e assembléias estaduais, a quatro eleições majoritárias para o Senado - também em 1966, 1970, 1974 e 1978 - e às eleições indiretas para os executivos federal e estaduais.
 # sent_id = 21
+# text = O período do bipartidarismo assistiu a quatro eleições proporcionais - de 1966, 1970, 1974 e 1978 - para a Câmara Federal e assembléias estaduais, a quatro eleições majoritárias para o Senado - também em 1966, 1970, 1974 e 1978 - e às eleições indiretas para os executivos federal e estaduais.
 1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	_	_
 2	período	período	NOUN	_	Gender=Masc|Number=Sing	6	nsubj	_	_
 3-4	do	_	_	_	_	_	_	_	_
@@ -798,49 +801,49 @@
 6	assistiu	assistir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 7	a	a	ADP	_	_	9	case	_	_
 8	quatro	quatro	NUM	_	NumType=Card	9	nummod	_	_
-9	eleições	eleição	NOUN	_	Gender=Fem|Number=Plur	6	obl	_	_
+9	eleições	eleição	NOUN	_	Gender=Fem|Number=Plur	6	obj	_	_
 10	proporcionais	proporcional	ADJ	_	Gender=Fem|Number=Plur	9	amod	_	_
 11	-	-	PUNCT	_	_	13	punct	_	_
 12	de	de	ADP	_	_	13	case	_	_
-13	1966	1966	NUM	_	NumType=Card	9	conj	_	SpaceAfter=No
+13	1966	1966	NUM	_	NumType=Card	9	nmod	_	SpaceAfter=No
 14	,	,	PUNCT	_	_	15	punct	_	_
-15	1970	1970	NUM	_	NumType=Card	9	conj	_	SpaceAfter=No
+15	1970	1970	NUM	_	NumType=Card	13	conj	_	SpaceAfter=No
 16	,	,	PUNCT	_	_	17	punct	_	_
-17	1974	1974	NUM	_	NumType=Card	9	conj	_	_
-18	e	e	CCONJ	_	_	20	cc	_	_
-19	1978	1978	NUM	_	NumType=Card	20	nummod	_	_
-20	-	-	SYM	_	_	9	conj	_	_
+17	1974	1974	NUM	_	NumType=Card	13	conj	_	_
+18	e	e	CCONJ	_	_	19	cc	_	_
+19	1978	1978	NUM	_	NumType=Card	13	conj	_	_
+20	-	-	PUNCT	_	_	13	punct	_	_
 21	para	para	ADP	_	_	23	case	_	_
 22	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	23	det	_	_
-23	Câmara	Câmara	PROPN	_	Gender=Fem|Number=Sing	20	nmod	_	_
+23	Câmara	Câmara	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	9	nmod	_	_
 24	Federal	Federal	PROPN	_	Number=Sing	23	flat:name	_	_
 25	e	e	CCONJ	_	_	26	cc	_	_
-26	assembléias	assembléia	NOUN	_	Gender=Fem|Number=Plur	23	conj	_	_
+26	assembléias	assembléia	NOUN	_	Gender=Fem|Number=Plur	13	conj	_	_
 27	estaduais	estadual	ADJ	_	Gender=Fem|Number=Plur	26	amod	_	SpaceAfter=No
 28	,	,	PUNCT	_	_	31	punct	_	_
 29	a	a	ADP	_	_	31	case	_	_
 30	quatro	quatro	NUM	_	NumType=Card	31	nummod	_	_
-31	eleições	eleição	NOUN	_	Gender=Fem|Number=Plur	23	conj	_	_
+31	eleições	eleição	NOUN	_	Gender=Fem|Number=Plur	9	conj	_	_
 32	majoritárias	majoritário	ADJ	_	Gender=Fem|Number=Plur	31	amod	_	_
 33	para	para	ADP	_	_	35	case	_	_
 34	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	35	det	_	_
 35	Senado	senado	NOUN	_	Gender=Masc|Number=Sing	31	nmod	_	_
-36	-	-	PUNCT	_	_	6	punct	_	_
+36	-	-	PUNCT	_	_	39	punct	_	_
 37	também	também	ADV	_	_	39	advmod	_	_
 38	em	em	ADP	_	_	39	case	_	_
-39	1966	1966	NUM	_	NumType=Card	6	obl	_	SpaceAfter=No
+39	1966	1966	NUM	_	NumType=Card	31	nmod	_	SpaceAfter=No
 40	,	,	PUNCT	_	_	41	punct	_	_
 41	1970	1970	NUM	_	NumType=Card	39	conj	_	SpaceAfter=No
 42	,	,	PUNCT	_	_	43	punct	_	_
 43	1974	1974	NUM	_	NumType=Card	39	conj	_	_
-44	e	e	CCONJ	_	_	46	cc	_	_
-45	1978	1978	NUM	_	NumType=Card	46	nummod	_	_
-46	-	-	SYM	_	_	39	conj	_	_
+44	e	e	CCONJ	_	_	45	cc	_	_
+45	1978	1978	NUM	_	NumType=Card	39	conj	_	_
+46	-	-	PUNCT	_	_	39	punct	_	_
 47	e	e	CCONJ	_	_	50	cc	_	_
 48-49	às	_	_	_	_	_	_	_	_
 48	a	a	ADP	_	_	50	case	_	_
 49	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	50	det	_	_
-50	eleições	eleição	NOUN	_	Gender=Fem|Number=Plur	46	conj	_	_
+50	eleições	eleição	NOUN	_	Gender=Fem|Number=Plur	9	conj	_	_
 51	indiretas	indireto	ADJ	_	Gender=Fem|Number=Plur	50	amod	_	_
 52	para	para	ADP	_	_	54	case	_	_
 53	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	54	det	_	_
@@ -850,19 +853,19 @@
 57	estaduais	estadual	ADJ	_	Gender=Masc|Number=Plur	55	conj	_	SpaceAfter=No
 58	.	.	PUNCT	_	_	6	punct	_	SpacesAfter=\n
 
-# text = A participação eleitoral nesse período pode ser interpretada a partir dos dados apresentados na tabela 1.
 # sent_id = 22
+# text = A participação eleitoral nesse período pode ser interpretada a partir dos dados apresentados na tabela 1.
 1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
-2	participação	participação	NOUN	_	Gender=Fem|Number=Sing	9	nsubj:pass	_	_
+2	participação	participação	NOUN	_	Gender=Fem|Number=Sing	7	nsubj:pass	_	_
 3	eleitoral	eleitoral	ADJ	_	Gender=Fem|Number=Sing	2	amod	_	_
 4-5	nesse	_	_	_	_	_	_	_	_
 4	em	em	ADP	_	_	6	case	_	_
 5	esse	esse	DET	_	Gender=Masc|Number=Sing|PronType=Dem	6	det	_	_
-6	período	período	NOUN	_	Gender=Masc|Number=Sing	9	obl	_	_
+6	período	período	NOUN	_	Gender=Masc|Number=Sing	2	nmod	_	_
 7	pode	poder	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
 8	ser	ser	AUX	_	VerbForm=Inf	9	aux:pass	_	_
 9	interpretada	interpretar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	7	xcomp	_	_
-10	a	a	ADP	_	_	11	case	_	_
+10	a	a	ADP	_	ExtPos=ADP	11	case	_	_
 11	partir	partir	VERB	_	VerbForm=Inf	9	obl	_	_
 12-13	dos	_	_	_	_	_	_	_	_
 12	de	de	ADP	_	_	14	case	_	_
@@ -874,45 +877,45 @@
 17	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	18	det	_	_
 18	tabela	tabela	NOUN	_	Gender=Fem|Number=Sing	15	obl	_	_
 19	1	1	NUM	_	NumType=Card	18	nummod	_	SpaceAfter=No
-20	.	.	PUNCT	_	_	9	punct	_	SpacesAfter=\n
+20	.	.	PUNCT	_	_	9	punct	_	_
 
-# text = Em primeiro lugar, observa-se que entre 1966 e 1978 o eleitorado mais do que dobrou e o comparecimento eleitoral passou de 77% aproximadamente nas duas primeiras eleições para 80% em 1974 e 1978, enquanto, naturalmente, declinou de forma correspondente a abstenção eleitoral.
 # sent_id = 23
+# text = Em primeiro lugar, observa-se que entre 1966 e 1978 o eleitorado mais do que dobrou e o comparecimento eleitoral passou de 77% aproximadamente nas duas primeiras eleições para 80% em 1974 e 1978, enquanto, naturalmente, declinou de forma correspondente a abstenção eleitoral.
 1	Em	em	ADP	_	_	3	case	_	_
 2	primeiro	primeiro	ADJ	_	Gender=Masc|Number=Sing|NumType=Ord	3	amod	_	_
 3	lugar	lugar	NOUN	_	Gender=Masc|Number=Sing	5	obl	_	SpaceAfter=No
 4	,	,	PUNCT	_	_	3	punct	_	_
 5-6	observa-se	_	_	_	_	_	_	_	_
 5	observa	observar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
-6	se	se	PRON	_	Case=Acc|Gender=Unsp|PronType=Prs	5	nsubj	_	_
+6	se	se	PRON	_	Case=Acc|PronType=Prs	5	nsubj	_	_
 7	que	que	SCONJ	_	_	18	mark	_	_
 8	entre	entre	ADP	_	_	9	case	_	_
-9	1966	1966	NUM	_	NumType=Card	18	obl	_	_
+9	1966	1966	NUM	_	NumType=Card	13	nmod	_	_
 10	e	e	CCONJ	_	_	11	cc	_	_
 11	1978	1978	NUM	_	NumType=Card	9	conj	_	_
 12	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	13	det	_	_
-13	eleitorado	eleitorado	NOUN	_	Gender=Masc|Number=Sing	18	nsubj	_	_
-14	mais	mais	ADV	_	_	18	advmod	_	_
+13	eleitorado	eleitorado	NOUN	_	Gender=Masc|Number=Sing	5	obj	_	_
+14	mais	mais	ADV	_	_	13	advmod	_	_
 15-16	do	_	_	_	_	_	_	_	_
 15	de	de	ADP	_	_	18	mark	_	_
 16	o	o	PRON	_	Gender=Masc|Number=Sing|PronType=Dem	15	fixed	_	_
 17	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	15	fixed	_	_
-18	dobrou	dobrar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	ccomp	_	_
+18	dobrou	dobrar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	14	advcl	_	_
 19	e	e	CCONJ	_	_	23	cc	_	_
 20	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	21	det	_	_
 21	comparecimento	comparecimento	NOUN	_	Gender=Masc|Number=Sing	23	nsubj	_	_
 22	eleitoral	eleitoral	ADJ	_	Gender=Masc|Number=Sing	21	amod	_	_
-23	passou	passar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	18	conj	_	_
+23	passou	passar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	conj	_	_
 24	de	de	ADP	_	_	26	case	_	_
 25	77	77	NUM	_	NumType=Card	26	nummod	_	SpaceAfter=No
-26	%	%	SYM	_	_	23	obj	_	_
-27	aproximadamente	aproximadamente	ADV	_	_	26	advmod	_	_
+26	%	%	SYM	_	_	23	obl	_	_
+27	aproximadamente	aproximadamente	ADV	_	_	23	advmod	_	_
 28-29	nas	_	_	_	_	_	_	_	_
 28	em	em	ADP	_	_	32	case	_	_
 29	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	32	det	_	_
 30	duas	dois	NUM	_	NumType=Card	32	nummod	_	_
 31	primeiras	primeiro	ADJ	_	Gender=Fem|Number=Plur|NumType=Ord	32	amod	_	_
-32	eleições	eleição	NOUN	_	Gender=Fem|Number=Plur	27	obl	_	_
+32	eleições	eleição	NOUN	_	Gender=Fem|Number=Plur	23	obl	_	_
 33	para	para	ADP	_	_	35	case	_	_
 34	80	80	NUM	_	NumType=Card	35	nummod	_	SpaceAfter=No
 35	%	%	SYM	_	_	32	nmod	_	_
@@ -920,23 +923,23 @@
 37	1974	1974	NUM	_	NumType=Card	35	nmod	_	_
 38	e	e	CCONJ	_	_	39	cc	_	_
 39	1978	1978	NUM	_	NumType=Card	37	conj	_	SpaceAfter=No
-40	,	,	PUNCT	_	_	41	punct	_	_
+40	,	,	PUNCT	_	_	23	punct	_	_
 41	enquanto	enquanto	ADV	_	_	45	advmod	_	SpaceAfter=No
-42	,	,	PUNCT	_	_	41	punct	_	_
-43	naturalmente	naturalmente	ADV	_	_	41	advmod	_	SpaceAfter=No
-44	,	,	PUNCT	_	_	41	punct	_	_
-45	declinou	declinar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	35	acl:relcl	_	_
+42	,	,	PUNCT	_	_	43	punct	_	_
+43	naturalmente	naturalmente	ADV	_	_	45	advmod	_	SpaceAfter=No
+44	,	,	PUNCT	_	_	43	punct	_	_
+45	declinou	declinar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	23	advcl	_	_
 46	de	de	ADP	_	_	47	case	_	_
 47	forma	forma	NOUN	_	Gender=Fem|Number=Sing	45	obl	_	_
 48	correspondente	correspondente	ADJ	_	Gender=Fem|Number=Sing	47	amod	_	_
 49	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	50	det	_	_
 50	abstenção	abstenção	NOUN	_	Gender=Fem|Number=Sing	45	obj	_	_
 51	eleitoral	eleitoral	ADJ	_	Gender=Fem|Number=Sing	50	amod	_	SpaceAfter=No
-52	.	.	PUNCT	_	_	5	punct	_	SpacesAfter=\n
+52	.	.	PUNCT	_	_	5	punct	_	_
 
-# text = Já a porcentagem de votos brancos e nulos teve um comportamento estável, excetuando-se as eleições de 1970.
 # sent_id = 24
-1	Já	já	ADP	_	_	9	cc	_	_
+# text = Já a porcentagem de votos brancos e nulos teve um comportamento estável, excetuando-se as eleições de 1970.
+1	Já	já	ADV	_	_	9	advmod	_	_
 2	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	3	det	_	_
 3	porcentagem	porcentagem	NOUN	_	Gender=Fem|Number=Sing	9	nsubj	_	_
 4	de	de	ADP	_	_	5	case	_	_
@@ -951,15 +954,15 @@
 13	,	,	PUNCT	_	_	14	punct	_	_
 14-15	excetuando-se	_	_	_	_	_	_	_	_
 14	excetuando	excetuar	VERB	_	VerbForm=Ger	9	advcl	_	_
-15	se	se	PRON	_	Case=Acc|Gender=Fem|Number=Plur|Person=3|PronType=Prs	14	nsubj	_	_
+15	se	se	PRON	_	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	14	expl	_	_
 16	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	17	det	_	_
-17	eleições	eleição	NOUN	_	Gender=Fem|Number=Plur	14	obj	_	_
+17	eleições	eleição	NOUN	_	Gender=Fem|Number=Plur	14	nsubj	_	_
 18	de	de	ADP	_	_	19	case	_	_
 19	1970	1970	NUM	_	NumType=Card	17	nmod	_	SpaceAfter=No
 20	.	.	PUNCT	_	_	9	punct	_	SpacesAfter=\n
 
-# text = A abstenção eleitoral possui dois componentes principais: o primeiro revela, quando a abstenção é pequena, falta de interesse político, enquanto o segundo indica insatisfação política, quer com a situação política predominante, quer com o sistema partidário e seu significado.
 # sent_id = 25
+# text = A abstenção eleitoral possui dois componentes principais: o primeiro revela, quando a abstenção é pequena, falta de interesse político, enquanto o segundo indica insatisfação política, quer com a situação política predominante, quer com o sistema partidário e seu significado.
 1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
 2	abstenção	abstenção	NOUN	_	Gender=Fem|Number=Sing	4	nsubj	_	_
 3	eleitoral	eleitoral	ADJ	_	Gender=Fem|Number=Sing	2	amod	_	_
@@ -967,26 +970,26 @@
 5	dois	dois	NUM	_	NumType=Card	6	nummod	_	_
 6	componentes	componente	NOUN	_	Gender=Masc|Number=Plur	4	obj	_	_
 7	principais	principal	ADJ	_	Gender=Masc|Number=Plur	6	amod	_	SpaceAfter=No
-8	:	:	PUNCT	_	_	17	punct	_	_
+8	:	:	PUNCT	_	_	11	punct	_	_
 9	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	10	det	_	_
-10	primeiro	primeiro	ADJ	_	Gender=Masc|Number=Sing|NumType=Ord	6	amod	_	_
-11	revela	revelar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	advcl	_	SpaceAfter=No
-12	,	,	PUNCT	_	_	17	punct	_	_
+10	primeiro	primeiro	ADJ	_	Gender=Masc|Number=Sing|NumType=Ord	11	nsubj	_	_
+11	revela	revelar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	parataxis	_	SpaceAfter=No
+12	,	,	PUNCT	_	_	11	punct	_	_
 13	quando	quando	ADV	_	_	17	advmod	_	_
 14	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	15	det	_	_
 15	abstenção	abstenção	NOUN	_	Gender=Fem|Number=Sing	17	nsubj	_	_
 16	é	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	17	cop	_	_
-17	pequena	pequeno	ADJ	_	Gender=Fem|Number=Sing	11	xcomp	_	SpaceAfter=No
-18	,	,	PUNCT	_	_	19	punct	_	_
-19	falta	falta	NOUN	_	Gender=Fem|Number=Sing	17	conj	_	_
+17	pequena	pequeno	ADJ	_	Gender=Fem|Number=Sing	11	advcl	_	SpaceAfter=No
+18	,	,	PUNCT	_	_	17	punct	_	_
+19	falta	falta	NOUN	_	Gender=Fem|Number=Sing	11	obj	_	_
 20	de	de	ADP	_	_	21	case	_	_
 21	interesse	interesse	NOUN	_	Gender=Masc|Number=Sing	19	nmod	_	_
 22	político	político	ADJ	_	Gender=Masc|Number=Sing	21	amod	_	SpaceAfter=No
-23	,	,	PUNCT	_	_	19	punct	_	_
+23	,	,	PUNCT	_	_	27	punct	_	_
 24	enquanto	enquanto	ADV	_	_	27	advmod	_	_
 25	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	26	det	_	_
-26	segundo	segundo	NOUN	_	Gender=Masc|Number=Sing	27	nsubj	_	_
-27	indica	indicar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	17	acl:relcl	_	_
+26	segundo	segundo	ADJ	_	Gender=Masc|Number=Sing|NumType=Ord	27	nsubj	_	_
+27	indica	indicar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	advcl	_	_
 28	insatisfação	insatisfação	NOUN	_	Gender=Fem|Number=Sing	27	obj	_	_
 29	política	político	ADJ	_	Gender=Fem|Number=Sing	28	amod	_	SpaceAfter=No
 30	,	,	PUNCT	_	_	34	punct	_	_
@@ -994,22 +997,22 @@
 32	com	com	ADP	_	_	34	case	_	_
 33	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	34	det	_	_
 34	situação	situação	NOUN	_	Gender=Fem|Number=Sing	28	conj	_	_
-35	política	política	ADJ	_	Gender=Fem|Number=Sing	34	amod	_	_
+35	política	político	ADJ	_	Gender=Fem|Number=Sing	34	amod	_	_
 36	predominante	predominante	ADJ	_	Gender=Fem|Number=Sing	34	amod	_	SpaceAfter=No
-37	,	,	PUNCT	_	_	38	punct	_	_
-38	quer	quer	CCONJ	_	_	28	conj	_	_
+37	,	,	PUNCT	_	_	41	punct	_	_
+38	quer	quer	CCONJ	_	_	41	cc	_	_
 39	com	com	ADP	_	_	41	case	_	_
 40	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	41	det	_	_
-41	sistema	sistema	NOUN	_	Gender=Masc|Number=Sing	38	obl	_	_
+41	sistema	sistema	NOUN	_	Gender=Masc|Number=Sing	34	conj	_	_
 42	partidário	partidário	ADJ	_	Gender=Masc|Number=Sing	41	amod	_	_
 43	e	e	CCONJ	_	_	45	cc	_	_
 44	seu	seu	DET	_	Gender=Masc|Number=Sing|PronType=Prs	45	det	_	_
 45	significado	significado	NOUN	_	Gender=Masc|Number=Sing	41	conj	_	SpaceAfter=No
-46	.	.	PUNCT	_	_	4	punct	_	SpacesAfter=\n
+46	.	.	PUNCT	_	_	4	punct	_	_
 
-# text = Considerando as taxas de abstenção e de votos brancos e nulos, pode-se consistentemente argumentar que as taxas de participação foram baixas durante o período, se comparadas, por exemplo, com aquelas do período 1945-1962.
 # sent_id = 26
-1	Considerando	considerar	VERB	_	VerbForm=Ger	0	root	_	_
+# text = Considerando as taxas de abstenção e de votos brancos e nulos, pode-se consistentemente argumentar que as taxas de participação foram baixas durante o período, se comparadas, por exemplo, com aquelas do período 1945-1962.
+1	Considerando	considerar	VERB	_	VerbForm=Ger	13	advcl	_	_
 2	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	3	det	_	_
 3	taxas	taxa	NOUN	_	Gender=Fem|Number=Plur	1	obj	_	_
 4	de	de	ADP	_	_	5	case	_	_
@@ -1020,10 +1023,10 @@
 9	brancos	branco	ADJ	_	Gender=Masc|Number=Plur	8	amod	_	_
 10	e	e	CCONJ	_	_	11	cc	_	_
 11	nulos	nulo	ADJ	_	Gender=Masc|Number=Plur	9	conj	_	SpaceAfter=No
-12	,	,	PUNCT	_	_	16	punct	_	_
+12	,	,	PUNCT	_	_	1	punct	_	_
 13-14	pode-se	_	_	_	_	_	_	_	_
-13	pode	poder	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	1	conj	_	_
-14	se	se	PRON	_	Case=Acc|Gender=Unsp|PronType=Prs	16	nsubj	_	_
+13	pode	poder	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+14	se	se	PRON	_	Case=Acc|PronType=Prs	13	nsubj	_	_
 15	consistentemente	consistentemente	ADV	_	_	16	advmod	_	_
 16	argumentar	argumentar	VERB	_	VerbForm=Inf	13	xcomp	_	_
 17	que	que	SCONJ	_	_	23	mark	_	_
@@ -1036,24 +1039,24 @@
 24	durante	durante	ADP	_	_	26	case	_	_
 25	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	26	det	_	_
 26	período	período	NOUN	_	Gender=Masc|Number=Sing	23	obl	_	SpaceAfter=No
-27	,	,	PUNCT	_	_	23	punct	_	_
-28	se	se	PRON	_	Case=Dat|Gender=Fem|Number=Sing|Person=3|PronType=Prs	29	expl	_	_
-29	comparadas	comparar	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part	23	acl	_	SpaceAfter=No
+27	,	,	PUNCT	_	_	29	punct	_	_
+28	se	se	SCONJ	_	_	29	mark	_	_
+29	comparadas	comparar	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part	23	advcl	_	SpaceAfter=No
 30	,	,	PUNCT	_	_	29	punct	_	_
-31	por	por	ADP	_	_	29	mark	_	_
+31	por	por	ADP	_	ExtPos=ADV	29	advmod	_	_
 32	exemplo	exemplo	NOUN	_	Gender=Masc|Number=Sing	31	fixed	_	SpaceAfter=No
 33	,	,	PUNCT	_	_	29	punct	_	_
 34	com	com	ADP	_	_	35	case	_	_
-35	aquelas	aquele	PRON	_	Gender=Fem|Number=Plur|PronType=Dem	29	obl	_	_
+35	aquelas	aquele	PRON	_	Gender=Fem|Number=Plur|PronType=Dem	29	obj	_	_
 36-37	do	_	_	_	_	_	_	_	_
 36	de	de	ADP	_	_	38	case	_	_
 37	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	38	det	_	_
 38	período	período	NOUN	_	Gender=Masc|Number=Sing	35	nmod	_	_
 39	1945-1962	1945-1962	NUM	_	NumType=Card	38	nummod	_	SpaceAfter=No
-40	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
+40	.	.	PUNCT	_	_	13	punct	_	_
 
-# text = Esses números revelam, assim, insatisfação com o regime político e seu instrumento partidário, o bipartidarismo, sobretudo se se observar as taxas relativas às eleições de 1970, fase mais negra do exercício do autoritarismo no período sob análise.
 # sent_id = 27
+# text = Esses números revelam, assim, insatisfação com o regime político e seu instrumento partidário, o bipartidarismo, sobretudo se se observar as taxas relativas às eleições de 1970, fase mais negra do exercício do autoritarismo no período sob análise.
 1	Esses	esse	DET	_	Gender=Masc|Number=Plur|PronType=Dem	2	det	_	_
 2	números	número	NOUN	_	Gender=Masc|Number=Plur	3	nsubj	_	_
 3	revelam	revelar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	SpaceAfter=No
@@ -1067,7 +1070,7 @@
 11	político	político	ADJ	_	Gender=Masc|Number=Sing	10	amod	_	_
 12	e	e	CCONJ	_	_	14	cc	_	_
 13	seu	seu	DET	_	Gender=Masc|Number=Sing|PronType=Prs	14	det	_	_
-14	instrumento	instrumento	NOUN	_	Gender=Masc|Number=Sing	3	conj	_	_
+14	instrumento	instrumento	NOUN	_	Gender=Masc|Number=Sing	10	conj	_	_
 15	partidário	partidário	ADJ	_	Gender=Masc|Number=Sing	14	amod	_	SpaceAfter=No
 16	,	,	PUNCT	_	_	18	punct	_	_
 17	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	18	det	_	_
@@ -1075,25 +1078,25 @@
 19	,	,	PUNCT	_	_	18	punct	_	_
 20	sobretudo	sobretudo	ADV	_	_	23	advmod	_	_
 21	se	se	SCONJ	_	_	23	mark	_	_
-22	se	se	PRON	_	Case=Acc|Gender=Fem|Number=Plur|Person=3|PronType=Prs	23	expl	_	_
-23	observar	observar	VERB	_	VerbForm=Inf	18	acl	_	_
+22	se	se	PRON	_	Case=Acc|PronType=Prs	23	nsubj	_	_
+23	observar	observar	VERB	_	Mood=Sub|Number=Sing|Person=3|Tense=Fut|VerbForm=Fin	3	advcl	_	_
 24	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	25	det	_	_
-25	taxas	taxa	NOUN	_	Gender=Fem|Number=Plur	23	nsubj	_	_
+25	taxas	taxa	NOUN	_	Gender=Fem|Number=Plur	23	obj	_	_
 26	relativas	relativo	ADJ	_	Gender=Fem|Number=Plur	25	amod	_	_
 27-28	às	_	_	_	_	_	_	_	_
 27	a	a	ADP	_	_	29	case	_	_
 28	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	29	det	_	_
-29	eleições	eleição	NOUN	_	Gender=Fem|Number=Plur	25	nmod	_	_
+29	eleições	eleição	NOUN	_	Gender=Fem|Number=Plur	26	obl	_	_
 30	de	de	ADP	_	_	31	case	_	_
 31	1970	1970	NUM	_	NumType=Card	29	nmod	_	SpaceAfter=No
 32	,	,	PUNCT	_	_	33	punct	_	_
-33	fase	fase	NOUN	_	Gender=Fem|Number=Sing	25	appos	_	_
+33	fase	fase	NOUN	_	Gender=Fem|Number=Sing	29	appos	_	_
 34	mais	mais	ADV	_	_	35	advmod	_	_
 35	negra	negro	ADJ	_	Gender=Fem|Number=Sing	33	amod	_	_
 36-37	do	_	_	_	_	_	_	_	_
 36	de	de	ADP	_	_	38	case	_	_
 37	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	38	det	_	_
-38	exercício	exercício	NOUN	_	Gender=Masc|Number=Sing	35	obl	_	_
+38	exercício	exercício	NOUN	_	Gender=Masc|Number=Sing	33	nmod	_	_
 39-40	do	_	_	_	_	_	_	_	_
 39	de	de	ADP	_	_	41	case	_	_
 40	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	41	det	_	_
@@ -1101,57 +1104,57 @@
 42-43	no	_	_	_	_	_	_	_	_
 42	em	em	ADP	_	_	44	case	_	_
 43	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	44	det	_	_
-44	período	período	NOUN	_	Gender=Masc|Number=Sing	33	nmod	_	_
+44	período	período	NOUN	_	Gender=Masc|Number=Sing	38	nmod	_	_
 45	sob	sob	ADP	_	_	46	case	_	_
 46	análise	análise	NOUN	_	Gender=Fem|Number=Sing	44	nmod	_	SpaceAfter=No
 47	.	.	PUNCT	_	_	3	punct	_	SpacesAfter=\n
 
-# text = As eleições, como se sabe, possuem uma dupla função, por um lado de prática de legitimação e, por outro, de renovação.
 # sent_id = 28
+# text = As eleições, como se sabe, possuem uma dupla função, por um lado de prática de legitimação e, por outro, de renovação.
 1	As	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	2	det	_	_
 2	eleições	eleição	NOUN	_	Gender=Fem|Number=Plur	8	nsubj	_	SpaceAfter=No
 3	,	,	PUNCT	_	_	6	punct	_	_
-4	como	como	ADV	_	_	6	advmod	_	_
-5	se	se	PRON	_	Case=Acc|Gender=Unsp|PronType=Prs	6	nsubj	_	_
-6	sabe	saber	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	2	acl:relcl	_	SpaceAfter=No
+4	como	como	SCONJ	_	_	6	mark	_	_
+5	se	se	PRON	_	Case=Acc|PronType=Prs	6	nsubj	_	_
+6	sabe	saber	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	advcl	_	SpaceAfter=No
 7	,	,	PUNCT	_	_	6	punct	_	_
 8	possuem	possuir	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
 9	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	11	det	_	_
 10	dupla	duplo	ADJ	_	Gender=Fem|Number=Sing	11	amod	_	_
 11	função	função	NOUN	_	Gender=Fem|Number=Sing	8	obj	_	SpaceAfter=No
-12	,	,	PUNCT	_	_	8	punct	_	_
+12	,	,	PUNCT	_	_	15	punct	_	_
 13	por	por	ADP	_	_	15	case	_	_
-14	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	15	det	_	_
-15	lado	lado	NOUN	_	Gender=Masc|Number=Sing	8	obl	_	_
+14	um	um	DET	_	Gender=Masc|Number=Sing|PronType=Art	15	det	_	_
+15	lado	lado	NOUN	_	Gender=Masc|Number=Sing	11	nmod	_	_
 16	de	de	ADP	_	_	17	case	_	_
 17	prática	prática	NOUN	_	Gender=Fem|Number=Sing	15	nmod	_	_
 18	de	de	ADP	_	_	19	case	_	_
 19	legitimação	legitimação	NOUN	_	Gender=Fem|Number=Sing	17	nmod	_	_
-20	e	e	CCONJ	_	_	23	cc	_	SpaceAfter=No
+20	e	e	CCONJ	_	_	26	cc	_	SpaceAfter=No
 21	,	,	PUNCT	_	_	23	punct	_	_
 22	por	por	ADP	_	_	23	case	_	_
-23	outro	outro	PRON	_	Gender=Masc|Number=Sing|PronType=Ind	17	conj	_	SpaceAfter=No
+23	outro	outro	PRON	_	Gender=Masc|Number=Sing|PronType=Ind	26	nmod	_	SpaceAfter=No
 24	,	,	PUNCT	_	_	23	punct	_	_
 25	de	de	ADP	_	_	26	case	_	_
-26	renovação	renovação	NOUN	_	Gender=Fem|Number=Sing	23	nmod	_	SpaceAfter=No
-27	.	.	PUNCT	_	_	8	punct	_	SpacesAfter=\n
+26	renovação	renovação	NOUN	_	Gender=Fem|Number=Sing	17	conj	_	SpaceAfter=No
+27	.	.	PUNCT	_	_	8	punct	_	_
 
-# text = A participação eleitoral é resultado desses dois componentes.
 # sent_id = 29
+# text = A participação eleitoral é resultado desses dois componentes.
 1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
-2	participação	participação	NOUN	_	Gender=Fem|Number=Sing	5	nsubj:pass	_	_
+2	participação	participação	NOUN	_	Gender=Fem|Number=Sing	5	nsubj	_	_
 3	eleitoral	eleitoral	ADJ	_	Gender=Fem|Number=Sing	2	amod	_	_
-4	é	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	aux:pass	_	_
-5	resultado	resultar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
+4	é	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	_	_
+5	resultado	resultado	NOUN	_	Gender=Masc|Number=Sing	0	root	_	_
 6-7	desses	_	_	_	_	_	_	_	_
 6	de	de	ADP	_	_	9	case	_	_
 7	esses	esse	DET	_	Gender=Masc|Number=Plur|PronType=Dem	9	det	_	_
 8	dois	dois	NUM	_	NumType=Card	9	nummod	_	_
-9	componentes	componente	NOUN	_	Gender=Masc|Number=Plur	5	obl	_	SpaceAfter=No
-10	.	.	PUNCT	_	_	5	punct	_	SpacesAfter=\n
+9	componentes	componente	NOUN	_	Gender=Masc|Number=Plur	5	nmod	_	SpaceAfter=No
+10	.	.	PUNCT	_	_	5	punct	_	_
 
-# text = A insatisfação com instituições e práticas políticas vigentes, associada à ausência percebida de necessidade de mudanças, leva a altas taxas de abstenção e baixa proporção de votos nulos e brancos.
 # sent_id = 30
+# text = A insatisfação com instituições e práticas políticas vigentes, associada à ausência percebida de necessidade de mudanças, leva a altas taxas de abstenção e baixa proporção de votos nulos e brancos.
 1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
 2	insatisfação	insatisfação	NOUN	_	Gender=Fem|Number=Sing	20	nsubj	_	_
 3	com	com	ADP	_	_	4	case	_	_
@@ -1165,12 +1168,12 @@
 11-12	à	_	_	_	_	_	_	_	_
 11	a	a	ADP	_	_	13	case	_	_
 12	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	13	det	_	_
-13	ausência	ausência	NOUN	_	Gender=Fem|Number=Sing	10	obl	_	_
-14	percebida	percebir	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	13	acl	_	_
+13	ausência	ausência	NOUN	_	Gender=Fem|Number=Sing	10	obj	_	_
+14	percebida	perceber	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	13	acl	_	_
 15	de	de	ADP	_	_	16	case	_	_
 16	necessidade	necessidade	NOUN	_	Gender=Fem|Number=Sing	13	nmod	_	_
 17	de	de	ADP	_	_	18	case	_	_
-18	mudanças	mudanças	NOUN	_	Gender=Fem|Number=Plur	16	nmod	_	SpaceAfter=No
+18	mudanças	mudança	NOUN	_	Gender=Fem|Number=Plur	16	nmod	_	SpaceAfter=No
 19	,	,	PUNCT	_	_	10	punct	_	_
 20	leva	levar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
 21	a	a	ADP	_	_	23	case	_	_
@@ -1179,22 +1182,22 @@
 24	de	de	ADP	_	_	25	case	_	_
 25	abstenção	abstenção	NOUN	_	Gender=Fem|Number=Sing	23	nmod	_	_
 26	e	e	CCONJ	_	_	28	cc	_	_
-27	baixa	baixa	ADJ	_	Gender=Fem|Number=Sing	28	amod	_	_
-28	proporção	proporção	NOUN	_	Gender=Fem|Number=Sing	25	conj	_	_
+27	baixa	baixo	ADJ	_	Gender=Fem|Number=Sing	28	amod	_	_
+28	proporção	proporção	NOUN	_	Gender=Fem|Number=Sing	23	conj	_	_
 29	de	de	ADP	_	_	30	case	_	_
-30	votos	voto	NOUN	_	Gender=Masc|Number=Plur	25	nmod	_	_
+30	votos	voto	NOUN	_	Gender=Masc|Number=Plur	28	nmod	_	_
 31	nulos	nulo	ADJ	_	Gender=Masc|Number=Plur	30	amod	_	_
 32	e	e	CCONJ	_	_	33	cc	_	_
 33	brancos	branco	ADJ	_	Gender=Masc|Number=Plur	31	conj	_	SpaceAfter=No
-34	.	.	PUNCT	_	_	20	punct	_	SpacesAfter=\n
+34	.	.	PUNCT	_	_	20	punct	_	_
 
-# text = Tal não foi a situação política vivenciada pelo eleitorado no período 1966-1978.
 # sent_id = 31
-1	Tal	tal	PRON	_	Gender=Masc|Number=Sing|PronType=Ind	5	nsubj	_	_
-2	não	não	ADV	_	Polarity=Neg	5	advmod	_	_
-3	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	cop	_	_
+# text = Tal não foi a situação política vivenciada pelo eleitorado no período 1966-1978.
+1	Tal	tal	PRON	_	Gender=Fem|Number=Sing|PronType=Ind	0	root	_	_
+2	não	não	ADV	_	Polarity=Neg	1	advmod	_	_
+3	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	1	cop	_	_
 4	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	5	det	_	_
-5	situação	situação	NOUN	_	Gender=Fem|Number=Sing	0	root	_	_
+5	situação	situação	NOUN	_	Gender=Fem|Number=Sing	1	nsubj	_	_
 6	política	político	ADJ	_	Gender=Fem|Number=Sing	5	amod	_	_
 7	vivenciada	vivenciar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	5	acl	_	_
 8-9	pelo	_	_	_	_	_	_	_	_
@@ -1206,11 +1209,11 @@
 12	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	13	det	_	_
 13	período	período	NOUN	_	Gender=Masc|Number=Sing	7	obl	_	_
 14	1966-1978	1966-1978	NUM	_	NumType=Card	13	nummod	_	SpaceAfter=No
-15	.	.	PUNCT	_	_	5	punct	_	SpacesAfter=\n
+15	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
 
-# text = Por outro lado, a insatisfação com as instituições e práticas políticas vigentes e a percepção da necessidade de mudança, associadas à descrença de que o ato eleitoral seja neste sentido significativo, levam a altas taxas de abstenção e de votos brancos e nulos.
 # sent_id = 32
-1	Por	por	ADP	_	_	38	cc	_	_
+# text = Por outro lado, a insatisfação com as instituições e práticas políticas vigentes e a percepção da necessidade de mudança, associadas à descrença de que o ato eleitoral seja neste sentido significativo, levam a altas taxas de abstenção e de votos brancos e nulos.
+1	Por	por	ADP	_	ExtPos=CCONJ	38	cc	_	_
 2	outro	outro	DET	_	Gender=Masc|Number=Sing|PronType=Ind	1	fixed	_	_
 3	lado	lado	NOUN	_	Gender=Masc|Number=Sing	1	fixed	_	SpaceAfter=No
 4	,	,	PUNCT	_	_	3	punct	_	_
@@ -1220,7 +1223,7 @@
 8	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	9	det	_	_
 9	instituições	instituição	NOUN	_	Gender=Fem|Number=Plur	6	nmod	_	_
 10	e	e	CCONJ	_	_	11	cc	_	_
-11	práticas	prática	NOUN	_	Gender=Fem|Number=Plur	6	conj	_	_
+11	práticas	prática	NOUN	_	Gender=Fem|Number=Plur	9	conj	_	_
 12	políticas	político	ADJ	_	Gender=Fem|Number=Plur	11	amod	_	_
 13	vigentes	vigente	ADJ	_	Gender=Fem|Number=Plur	11	amod	_	_
 14	e	e	CCONJ	_	_	16	cc	_	_
@@ -1233,7 +1236,7 @@
 20	de	de	ADP	_	_	21	case	_	_
 21	mudança	mudança	NOUN	_	Gender=Fem|Number=Sing	19	nmod	_	SpaceAfter=No
 22	,	,	PUNCT	_	_	23	punct	_	_
-23	associadas	associar	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part	19	acl	_	_
+23	associadas	associar	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part	6	acl	_	_
 24-25	à	_	_	_	_	_	_	_	_
 24	a	a	ADP	_	_	26	case	_	_
 25	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	26	det	_	_
@@ -1247,11 +1250,11 @@
 33-34	neste	_	_	_	_	_	_	_	_
 33	em	em	ADP	_	_	35	case	_	_
 34	este	este	DET	_	Gender=Masc|Number=Sing|PronType=Dem	35	det	_	_
-35	sentido	sentido	NOUN	_	Gender=Masc|Number=Sing	26	acl	_	_
+35	sentido	sentido	NOUN	_	Gender=Masc|Number=Sing	26	nmod	_	_
 36	significativo	significativo	ADJ	_	Gender=Masc|Number=Sing	35	amod	_	SpaceAfter=No
-37	,	,	PUNCT	_	_	35	punct	_	_
+37	,	,	PUNCT	_	_	23	punct	_	_
 38	levam	levar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
-39	a	o	ADP	_	_	41	det	_	_
+39	a	a	ADP	_	_	41	case	_	_
 40	altas	alto	ADJ	_	Gender=Fem|Number=Plur	41	amod	_	_
 41	taxas	taxa	NOUN	_	Gender=Fem|Number=Plur	38	obj	_	_
 42	de	de	ADP	_	_	43	case	_	_
@@ -1262,10 +1265,10 @@
 47	brancos	branco	ADJ	_	Gender=Masc|Number=Plur	46	amod	_	_
 48	e	e	CCONJ	_	_	49	cc	_	_
 49	nulos	nulo	ADJ	_	Gender=Masc|Number=Plur	47	conj	_	SpaceAfter=No
-50	.	.	PUNCT	_	_	38	punct	_	SpacesAfter=\n
+50	.	.	PUNCT	_	_	38	punct	_	_
 
-# text = As eleições de 1970, de resto, precedidas por intensa campanha de defesa do voto nulo, bem exemplificam a situação descrita.
 # sent_id = 33
+# text = As eleições de 1970, de resto, precedidas por intensa campanha de defesa do voto nulo, bem exemplificam a situação descrita.
 1	As	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	2	det	_	_
 2	eleições	eleição	NOUN	_	Gender=Fem|Number=Plur	21	nsubj	_	_
 3	de	de	ADP	_	_	4	case	_	_
@@ -1293,29 +1296,29 @@
 24	descrita	descrever	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	23	acl	_	SpaceAfter=No
 25	.	.	PUNCT	_	_	21	punct	_	SpacesAfter=\n
 
-# text = Finalmente, a insatisfação popular associada à visão de que as eleições podem mudar a política para melhor leva a baixas taxas de abstenção e de votos brancos e nulos.
 # sent_id = 34
-1	Finalmente	finalmente	ADV	_	_	14	advmod	_	SpaceAfter=No
+# text = Finalmente, a insatisfação popular associada à visão de que as eleições podem mudar a política para melhor leva a baixas taxas de abstenção e de votos brancos e nulos.
+1	Finalmente	finalmente	ADV	_	_	20	advmod	_	SpaceAfter=No
 2	,	,	PUNCT	_	_	1	punct	_	_
 3	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	4	det	_	_
-4	insatisfação	insatisfação	NOUN	_	Gender=Fem|Number=Sing	14	obj	_	_
+4	insatisfação	insatisfação	NOUN	_	Gender=Fem|Number=Sing	20	nsubj	_	_
 5	popular	popular	ADJ	_	Gender=Fem|Number=Sing	4	amod	_	_
 6	associada	associar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	4	acl	_	_
 7-8	à	_	_	_	_	_	_	_	_
 7	a	a	ADP	_	_	9	case	_	_
 8	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	9	det	_	_
 9	visão	visão	NOUN	_	Gender=Fem|Number=Sing	6	obj	_	_
-10	de	de	SCONJ	_	_	15	mark	_	_
-11	que	que	SCONJ	_	_	15	mark	_	_
+10	de	de	SCONJ	_	_	14	mark	_	_
+11	que	que	SCONJ	_	_	14	mark	_	_
 12	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	13	det	_	_
-13	eleições	eleição	NOUN	_	Gender=Fem|Number=Plur	15	nsubj	_	_
-14	podem	poder	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
-15	mudar	mudar	VERB	_	VerbForm=Inf	9	acl	_	_
+13	eleições	eleição	NOUN	_	Gender=Fem|Number=Plur	14	nsubj	_	_
+14	podem	poder	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	9	acl	_	_
+15	mudar	mudar	VERB	_	VerbForm=Inf	14	xcomp	_	_
 16	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	17	det	_	_
 17	política	política	NOUN	_	Gender=Fem|Number=Sing	15	obj	_	_
 18	para	para	ADP	_	_	19	case	_	_
-19	melhor	bom	ADV	_	_	20	advmod	_	_
-20	leva	levar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	17	acl	_	_
+19	melhor	melhor	ADV	_	_	15	advmod	_	_
+20	leva	levar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
 21	a	a	ADP	_	_	23	case	_	_
 22	baixas	baixo	ADJ	_	Gender=Fem|Number=Plur	23	amod	_	_
 23	taxas	taxa	NOUN	_	Gender=Fem|Number=Plur	20	obj	_	_
@@ -1327,10 +1330,10 @@
 29	brancos	branco	ADJ	_	Gender=Masc|Number=Plur	28	amod	_	_
 30	e	e	CCONJ	_	_	31	cc	_	_
 31	nulos	nulo	ADJ	_	Gender=Masc|Number=Plur	29	conj	_	SpaceAfter=No
-32	.	.	PUNCT	_	_	14	punct	_	SpacesAfter=\n
+32	.	.	PUNCT	_	_	20	punct	_	_
 
-# text = As eleições proporcionais de 1974 e 1978 bem exemplificam o sentimento do eleitorado à sua época.
 # sent_id = 35
+# text = As eleições proporcionais de 1974 e 1978 bem exemplificam o sentimento do eleitorado à sua época.
 1	As	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	2	det	_	_
 2	eleições	eleição	NOUN	_	Gender=Fem|Number=Plur	9	nsubj	_	_
 3	proporcionais	proporcional	ADJ	_	Gender=Fem|Number=Plur	2	amod	_	_
@@ -1350,11 +1353,11 @@
 15	a	a	ADP	_	_	18	case	_	_
 16	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	18	det	_	_
 17	sua	seu	DET	_	Gender=Fem|Number=Sing|PronType=Prs	18	det	_	_
-18	época	época	NOUN	_	Gender=Fem|Number=Sing	14	nmod	_	SpaceAfter=No
+18	época	época	NOUN	_	Gender=Fem|Number=Sing	9	obl	_	SpaceAfter=No
 19	.	.	PUNCT	_	_	9	punct	_	SpacesAfter=\n
 
-# text = A Arena, partido de sustentação político-parlamentar dos governos militares pós-1964, absorveu (ano base de 1979) a maior parte dos deputados federais que, durante o período do multipartidarismo, pertenceram aos quadros parlamentares da União Democrática Nacional (UDN - 70), do Partido Social Democrático (PSD - 60), do Partido Democrata Cristão (PDC - 14) ou do Partido Republicano (PR - dez), de um total de 231 deputados, diferentemente do MDB, que contou com grande contingente oriundo do antigo Partido Trabalhista Brasileiro (PTB - 36).
 # sent_id = 36
+# text = A Arena, partido de sustentação político-parlamentar dos governos militares pós-1964, absorveu (ano base de 1979) a maior parte dos deputados federais que, durante o período do multipartidarismo, pertenceram aos quadros parlamentares da União Democrática Nacional (UDN - 70), do Partido Social Democrático (PSD - 60), do Partido Democrata Cristão (PDC - 14) ou do Partido Republicano (PR - dez), de um total de 231 deputados, diferentemente do MDB, que contou com grande contingente oriundo do antigo Partido Trabalhista Brasileiro (PTB - 36).
 1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
 2	Arena	Arena	PROPN	_	Gender=Fem|Number=Sing	14	nsubj	_	SpaceAfter=No
 3	,	,	PUNCT	_	_	4	punct	_	_
@@ -1367,17 +1370,17 @@
 9	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	10	det	_	_
 10	governos	governo	NOUN	_	Gender=Masc|Number=Plur	6	nmod	_	_
 11	militares	militar	ADJ	_	Gender=Masc|Number=Plur	10	amod	_	_
-12	pós-1964	pós-1964	NUM	_	NumType=Card	10	nummod	_	SpaceAfter=No
+12	pós-1964	pós-1964	ADJ	_	Gender=Masc|Number=Plur	10	amod	_	SpaceAfter=No
 13	,	,	PUNCT	_	_	4	punct	_	_
 14	absorveu	absorver	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 15	(	(	PUNCT	_	_	16	punct	_	SpaceAfter=No
 16	ano	ano	NOUN	_	Gender=Masc|Number=Sing	14	obl	_	_
-17	base	base	ADJ	_	Gender=Masc|Number=Sing	16	amod	_	_
+17	base	base	NOUN	_	Gender=Fem|Number=Sing	16	nmod	_	_
 18	de	de	ADP	_	_	19	case	_	_
 19	1979	1979	NUM	_	NumType=Card	16	nmod	_	SpaceAfter=No
 20	)	)	PUNCT	_	_	16	punct	_	_
 21	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	23	det	_	_
-22	maior	grande	ADJ	_	Gender=Fem|Number=Sing	23	amod	_	_
+22	maior	maior	ADJ	_	Gender=Fem|Number=Sing	23	amod	_	_
 23	parte	parte	NOUN	_	Gender=Fem|Number=Sing	14	obj	_	_
 24-25	dos	_	_	_	_	_	_	_	_
 24	de	de	ADP	_	_	26	case	_	_
@@ -1394,7 +1397,7 @@
 34	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	35	det	_	_
 35	multipartidarismo	multipartidarismo	NOUN	_	Gender=Masc|Number=Sing	32	nmod	_	SpaceAfter=No
 36	,	,	PUNCT	_	_	32	punct	_	_
-37	pertenceram	pertencer	VERB	_	Mood=Ind|Number=Plur|Person=3|VerbForm=Fin	26	acl:relcl	_	_
+37	pertenceram	pertencer	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	26	acl:relcl	_	_
 38-39	aos	_	_	_	_	_	_	_	_
 38	a	a	ADP	_	_	40	case	_	_
 39	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	40	det	_	_
@@ -1403,11 +1406,11 @@
 42-43	da	_	_	_	_	_	_	_	_
 42	de	de	ADP	_	_	44	case	_	_
 43	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	44	det	_	_
-44	União	União	PROPN	_	Gender=Fem|Number=Sing	40	nmod	_	_
+44	União	União	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	40	nmod	_	_
 45	Democrática	Democrática	PROPN	_	Number=Sing	44	flat:name	_	_
 46	Nacional	Nacional	PROPN	_	Number=Sing	44	flat:name	_	_
 47	(	(	PUNCT	_	_	48	punct	_	SpaceAfter=No
-48	UDN	UDN	PROPN	_	Gender=Fem|Number=Sing	44	appos	_	_
+48	UDN	UDN	PROPN	_	Gender=Fem|Number=Sing	44	parataxis	_	_
 49	-	-	PUNCT	_	_	50	punct	_	_
 50	70	70	NUM	_	NumType=Card	48	conj	_	SpaceAfter=No
 51	)	)	PUNCT	_	_	48	punct	_	SpaceAfter=No
@@ -1415,51 +1418,51 @@
 53-54	do	_	_	_	_	_	_	_	_
 53	de	de	ADP	_	_	55	case	_	_
 54	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	55	det	_	_
-55	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	44	conj	_	_
+55	Partido	Partido	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	44	conj	_	_
 56	Social	Social	PROPN	_	Number=Sing	55	flat:name	_	_
-57	Democrático	democrático	PROPN	_	Number=Sing	55	flat:name	_	_
+57	Democrático	Democrático	PROPN	_	Number=Sing	55	flat:name	_	_
 58	(	(	PUNCT	_	_	59	punct	_	SpaceAfter=No
-59	PSD	PSD	PROPN	_	Gender=Masc|Number=Sing	55	appos	_	_
-60	-	-	PUNCT	_	_	14	punct	_	_
-61	60	60	NUM	_	NumType=Card	59	flat:name	_	SpaceAfter=No
+59	PSD	PSD	PROPN	_	Gender=Masc|Number=Sing	55	parataxis	_	_
+60	-	-	PUNCT	_	_	61	punct	_	_
+61	60	60	NUM	_	NumType=Card	59	conj	_	SpaceAfter=No
 62	)	)	PUNCT	_	_	59	punct	_	SpaceAfter=No
-63	,	,	PUNCT	_	_	14	punct	_	_
+63	,	,	PUNCT	_	_	66	punct	_	_
 64-65	do	_	_	_	_	_	_	_	_
 64	de	de	ADP	_	_	66	case	_	_
 65	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	66	det	_	_
-66	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	14	obl	_	_
+66	Partido	Partido	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	44	conj	_	_
 67	Democrata	Democrata	PROPN	_	Number=Sing	66	flat:name	_	_
 68	Cristão	Cristão	PROPN	_	Number=Sing	66	flat:name	_	_
 69	(	(	PUNCT	_	_	70	punct	_	SpaceAfter=No
-70	PDC	PDC	PROPN	_	Gender=Fem|Number=Sing	66	appos	_	_
+70	PDC	PDC	PROPN	_	Gender=Masc|Number=Sing	66	parataxis	_	_
 71	-	-	PUNCT	_	_	72	punct	_	_
-72	14	14	NUM	_	NumType=Card	70	conj	_	SpaceAfter=No
+72	14	14	NUM	_	NumType=Card	70	nmod	_	SpaceAfter=No
 73	)	)	PUNCT	_	_	70	punct	_	_
 74	ou	ou	CCONJ	_	_	77	cc	_	_
 75-76	do	_	_	_	_	_	_	_	_
 75	de	de	ADP	_	_	77	case	_	_
 76	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	77	det	_	_
-77	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	66	conj	_	_
+77	Partido	Partido	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	44	conj	_	_
 78	Republicano	Republicano	PROPN	_	Number=Sing	77	flat:name	_	_
 79	(	(	PUNCT	_	_	80	punct	_	SpaceAfter=No
-80	PR	PR	PROPN	_	Gender=Fem|Number=Sing	77	appos	_	_
+80	PR	PR	PROPN	_	Gender=Masc|Number=Sing	77	parataxis	_	_
 81	-	-	PUNCT	_	_	82	punct	_	_
-82	dez	dez	NUM	_	NumType=Card	80	conj	_	SpaceAfter=No
+82	dez	dez	NUM	_	NumType=Card	80	nmod	_	SpaceAfter=No
 83	)	)	PUNCT	_	_	80	punct	_	SpaceAfter=No
 84	,	,	PUNCT	_	_	87	punct	_	_
 85	de	de	ADP	_	_	87	case	_	_
 86	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	87	det	_	_
-87	total	total	NOUN	_	Gender=Masc|Number=Sing	66	conj	_	_
+87	total	total	NOUN	_	Gender=Masc|Number=Sing	23	nmod	_	_
 88	de	de	ADP	_	_	90	case	_	_
 89	231	231	NUM	_	NumType=Card	90	nummod	_	_
 90	deputados	deputado	NOUN	_	Gender=Masc|Number=Plur	87	nmod	_	SpaceAfter=No
-91	,	,	PUNCT	_	_	87	punct	_	_
+91	,	,	PUNCT	_	_	92	punct	_	_
 92	diferentemente	diferentemente	ADV	_	_	87	advmod	_	_
 93-94	do	_	_	_	_	_	_	_	_
 93	de	de	ADP	_	_	95	case	_	_
 94	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	95	det	_	_
 95	MDB	MDB	PROPN	_	Gender=Masc|Number=Sing	92	obl	_	SpaceAfter=No
-96	,	,	PUNCT	_	_	14	punct	_	_
+96	,	,	PUNCT	_	_	98	punct	_	_
 97	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	98	nsubj	_	_
 98	contou	contar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	95	acl:relcl	_	_
 99	com	com	ADP	_	_	101	case	_	_
@@ -1470,18 +1473,18 @@
 103	de	de	ADP	_	_	106	case	_	_
 104	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	106	det	_	_
 105	antigo	antigo	ADJ	_	Gender=Masc|Number=Sing	106	amod	_	_
-106	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	101	nmod	_	_
-107	Trabalhista	trabalhista	PROPN	_	Number=Sing	106	flat:name	_	_
-108	Brasileiro	brasileiro	PROPN	_	Number=Sing	106	flat:name	_	_
+106	Partido	Partido	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	102	obl	_	_
+107	Trabalhista	Trabalhista	PROPN	_	Number=Sing	106	flat:name	_	_
+108	Brasileiro	Brasileiro	PROPN	_	Number=Sing	106	flat:name	_	_
 109	(	(	PUNCT	_	_	110	punct	_	SpaceAfter=No
-110	PTB	PTB	PROPN	_	Gender=Fem|Number=Sing	106	appos	_	_
+110	PTB	PTB	PROPN	_	Gender=Masc|Number=Sing	106	appos	_	_
 111	-	-	PUNCT	_	_	112	punct	_	_
 112	36	36	NUM	_	NumType=Card	110	conj	_	SpaceAfter=No
 113	)	)	PUNCT	_	_	110	punct	_	SpaceAfter=No
-114	.	.	PUNCT	_	_	14	punct	_	SpacesAfter=\n
+114	.	.	PUNCT	_	_	14	punct	_	_
 
-# text = Recrutamento semelhante fez a Arena nos quadros do PSD e UND (19 e 15) no que se refere ao Senado Federal (total de 42 senadores).
 # sent_id = 37
+# text = Recrutamento semelhante fez a Arena nos quadros do PSD e UND (19 e 15) no que se refere ao Senado Federal (total de 42 senadores).
 1	Recrutamento	recrutamento	NOUN	_	Gender=Masc|Number=Sing	3	nsubj	_	_
 2	semelhante	semelhante	ADJ	_	Gender=Masc|Number=Sing	1	amod	_	_
 3	fez	fazer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
@@ -1498,7 +1501,7 @@
 12	e	e	CCONJ	_	_	13	cc	_	_
 13	UND	UND	PROPN	_	Gender=Masc|Number=Sing	11	conj	_	_
 14	(	(	PUNCT	_	_	15	punct	_	SpaceAfter=No
-15	19	19	NUM	_	NumType=Card	11	parataxis	_	_
+15	19	19	NUM	_	NumType=Card	11	appos	_	_
 16	e	e	CCONJ	_	_	17	cc	_	_
 17	15	15	NUM	_	NumType=Card	15	conj	_	SpaceAfter=No
 18	)	)	PUNCT	_	_	15	punct	_	_
@@ -1506,12 +1509,12 @@
 19	em	em	ADP	_	_	20	case	_	_
 20	o	o	PRON	_	Gender=Masc|Number=Sing|PronType=Dem	3	obl	_	_
 21	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	23	nsubj	_	_
-22	se	se	PRON	_	Case=Acc|Gender=Unsp|PronType=Prs	23	expl	_	_
+22	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	23	expl	_	_
 23	refere	referir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	20	acl:relcl	_	_
 24-25	ao	_	_	_	_	_	_	_	_
 24	a	a	ADP	_	_	26	case	_	_
 25	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	26	det	_	_
-26	Senado	Senado	PROPN	_	Number=Sing	23	obj	_	_
+26	Senado	Senado	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	23	obl	_	_
 27	Federal	Federal	PROPN	_	Number=Sing	26	flat:name	_	_
 28	(	(	PUNCT	_	_	29	punct	_	SpaceAfter=No
 29	total	total	NOUN	_	Gender=Masc|Number=Sing	26	appos	_	_
@@ -1521,10 +1524,10 @@
 33	)	)	PUNCT	_	_	29	punct	_	SpaceAfter=No
 34	.	.	PUNCT	_	_	3	punct	_	SpacesAfter=\n
 
-# text = A atuação parlamentar da Arena, em um quadro institucional em que o Executivo era hegemônico e as prerrogativas tradicionais do Congresso Nacional foram extremamente reduzidas, foi ainda marcada por grande compromisso em relação a instrumentos de disciplina partidária no Congresso, a saber, o voto de liderança e a fidelidade partidária.
 # sent_id = 38
+# text = A atuação parlamentar da Arena, em um quadro institucional em que o Executivo era hegemônico e as prerrogativas tradicionais do Congresso Nacional foram extremamente reduzidas, foi ainda marcada por grande compromisso em relação a instrumentos de disciplina partidária no Congresso, a saber, o voto de liderança e a fidelidade partidária.
 1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
-2	atuação	atuação	NOUN	_	Gender=Fem|Number=Sing	28	nsubj:pass	_	_
+2	atuação	atuação	NOUN	_	Gender=Fem|Number=Sing	32	nsubj:pass	_	_
 3	parlamentar	parlamentar	ADJ	_	Gender=Fem|Number=Sing	2	amod	_	_
 4-5	da	_	_	_	_	_	_	_	_
 4	de	de	ADP	_	_	6	case	_	_
@@ -1538,31 +1541,31 @@
 12	em	em	ADP	_	_	13	case	_	_
 13	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	17	obl	_	_
 14	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	15	det	_	_
-15	Executivo	Executivo	PROPN	_	Gender=Masc|Number=Sing	17	nsubj	_	_
+15	Executivo	executivo	NOUN	_	Gender=Masc|Number=Sing	17	nsubj	_	_
 16	era	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	17	cop	_	_
 17	hegemônico	hegemônico	ADJ	_	Gender=Masc|Number=Sing	10	acl:relcl	_	_
-18	e	e	CCONJ	_	_	20	cc	_	_
+18	e	e	CCONJ	_	_	28	cc	_	_
 19	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	20	det	_	_
-20	prerrogativas	prerrogativa	NOUN	_	Gender=Fem|Number=Plur	17	conj	_	_
+20	prerrogativas	prerrogativa	NOUN	_	Gender=Fem|Number=Plur	17	nsubj	_	_
 21	tradicionais	tradicional	ADJ	_	Gender=Fem|Number=Plur	20	amod	_	_
 22-23	do	_	_	_	_	_	_	_	_
 22	de	de	ADP	_	_	24	case	_	_
 23	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	24	det	_	_
-24	Congresso	Congresso	PROPN	_	Gender=Masc|Number=Sing	20	nmod	_	_
+24	Congresso	Congresso	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	20	nmod	_	_
 25	Nacional	Nacional	PROPN	_	Number=Sing	24	flat:name	_	_
 26	foram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	28	aux:pass	_	_
 27	extremamente	extremamente	ADV	_	_	28	advmod	_	_
-28	reduzidas	reduzer	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part	0	root	_	SpaceAfter=No
+28	reduzidas	reduzir	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part|Voice=Pass	32	conj	_	SpaceAfter=No
 29	,	,	PUNCT	_	_	28	punct	_	_
 30	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	32	aux:pass	_	_
 31	ainda	ainda	ADV	_	_	32	advmod	_	_
-32	marcada	marcar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	28	advcl	_	_
+32	marcada	marcar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
 33	por	por	ADP	_	_	35	case	_	_
 34	grande	grande	ADJ	_	Gender=Masc|Number=Sing	35	amod	_	_
 35	compromisso	compromisso	NOUN	_	Gender=Masc|Number=Sing	32	obl:agent	_	_
-36	em	em	ADP	_	_	37	case	_	_
-37	relação	relação	NOUN	_	Gender=Fem|Number=Sing	35	nmod	_	_
-38	a	a	ADP	_	_	39	case	_	_
+36	em	em	ADP	_	ExtPos=ADP	39	case	_	_
+37	relação	relação	NOUN	_	Gender=Fem|Number=Sing	36	fixed	_	_
+38	a	a	ADP	_	_	36	fixed	_	_
 39	instrumentos	instrumento	NOUN	_	Gender=Masc|Number=Plur	35	nmod	_	_
 40	de	de	ADP	_	_	41	case	_	_
 41	disciplina	disciplina	NOUN	_	Gender=Fem|Number=Sing	39	nmod	_	_
@@ -1570,25 +1573,25 @@
 43-44	no	_	_	_	_	_	_	_	_
 43	em	em	ADP	_	_	45	case	_	_
 44	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	45	det	_	_
-45	Congresso	congresso	PROPN	_	Gender=Masc|Number=Sing	39	nmod	_	SpaceAfter=No
+45	Congresso	congresso	NOUN	_	Gender=Masc|Number=Sing	39	nmod	_	SpaceAfter=No
 46	,	,	PUNCT	_	_	48	punct	_	_
 47	a	a	SCONJ	_	_	48	mark	_	_
 48	saber	saber	VERB	_	VerbForm=Inf	39	acl	_	SpaceAfter=No
 49	,	,	PUNCT	_	_	48	punct	_	_
 50	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	51	det	_	_
-51	voto	voto	NOUN	_	Gender=Masc|Number=Sing	48	obj	_	_
+51	voto	voto	NOUN	_	Gender=Masc|Number=Sing	39	appos	_	_
 52	de	de	ADP	_	_	53	case	_	_
 53	liderança	liderança	NOUN	_	Gender=Fem|Number=Sing	51	nmod	_	_
 54	e	e	CCONJ	_	_	56	cc	_	_
 55	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	56	det	_	_
-56	fidelidade	fidelidade	NOUN	_	Gender=Fem|Number=Sing	53	conj	_	_
+56	fidelidade	fidelidade	NOUN	_	Gender=Fem|Number=Sing	51	conj	_	_
 57	partidária	partidário	ADJ	_	Gender=Fem|Number=Sing	56	amod	_	SpaceAfter=No
-58	.	.	PUNCT	_	_	28	punct	_	SpacesAfter=\n
+58	.	.	PUNCT	_	_	32	punct	_	_
 
-# text = Assim sendo, e considerando ainda a prevalência de eleições indiretas para os executivos federal e estadual, a atuação parlamentar da Arena foi de reduzida importância.
 # sent_id = 39
-1	Assim	assim	ADV	_	_	0	root	_	_
-2	sendo	ser	VERB	_	VerbForm=Ger	1	fixed	_	SpaceAfter=No
+# text = Assim sendo, e considerando ainda a prevalência de eleições indiretas para os executivos federal e estadual, a atuação parlamentar da Arena foi de reduzida importância.
+1	Assim	assim	ADV	_	ExtPos=CCONJ	28	cc	_	_
+2	sendo	ser	AUX	_	VerbForm=Ger	1	fixed	_	SpaceAfter=No
 3	,	,	PUNCT	_	_	1	punct	_	_
 4	e	e	CCONJ	_	_	5	cc	_	_
 5	considerando	considerar	VERB	_	VerbForm=Ger	28	advcl	_	_
@@ -1600,7 +1603,7 @@
 11	indiretas	indireto	ADJ	_	Gender=Fem|Number=Plur	10	amod	_	_
 12	para	para	ADP	_	_	14	case	_	_
 13	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	14	det	_	_
-14	executivos	executivo	NOUN	_	Gender=Masc|Number=Plur	8	nmod	_	_
+14	executivos	executivo	NOUN	_	Gender=Masc|Number=Plur	10	nmod	_	_
 15	federal	federal	ADJ	_	Gender=Masc|Number=Sing	14	amod	_	_
 16	e	e	CCONJ	_	_	17	cc	_	_
 17	estadual	estadual	ADJ	_	Gender=Masc|Number=Sing	15	conj	_	SpaceAfter=No
@@ -1612,44 +1615,44 @@
 22	de	de	ADP	_	_	24	case	_	_
 23	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	24	det	_	_
 24	Arena	Arena	PROPN	_	Gender=Fem|Number=Sing	20	nmod	_	_
-25	foi	ir	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	28	cop	_	_
+25	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	28	cop	_	_
 26	de	de	ADP	_	_	28	case	_	_
-27	reduzida	reduzido	ADJ	_	Gender=Fem|Number=Sing	28	amod	_	_
-28	importância	importância	NOUN	_	Gender=Fem|Number=Sing	1	parataxis	_	SpaceAfter=No
-29	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
+27	reduzida	reduzir	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	28	acl	_	_
+28	importância	importância	NOUN	_	Gender=Fem|Number=Sing	0	root	_	SpaceAfter=No
+29	.	.	PUNCT	_	_	28	punct	_	SpacesAfter=\n
 
-# text = Seu desempenho eleitoral, no entanto, como partido de sustentação política de um executivo autoritário, merece reflexão maior, dado que os resultados eleitorais obtidos refletiram, por um lado, o casuísmo governamental que visava assegurar a maioria parlamentar e, por outro, a satisfação popular diante do desempenho governamental.
 # sent_id = 40
+# text = Seu desempenho eleitoral, no entanto, como partido de sustentação política de um executivo autoritário, merece reflexão maior, dado que os resultados eleitorais obtidos refletiram, por um lado, o casuísmo governamental que visava assegurar a maioria parlamentar e, por outro, a satisfação popular diante do desempenho governamental.
 1	Seu	seu	DET	_	Gender=Masc|Number=Sing|PronType=Prs	2	det	_	_
 2	desempenho	desempenho	NOUN	_	Gender=Masc|Number=Sing	19	nsubj	_	_
 3	eleitoral	eleitoral	ADJ	_	Gender=Masc|Number=Sing	2	amod	_	SpaceAfter=No
-4	,	,	PUNCT	_	_	19	punct	_	_
+4	,	,	PUNCT	_	_	5	punct	_	_
 5-6	no	_	_	_	_	_	_	_	_
-5	em	em	ADP	_	_	19	cc	_	_
+5	em	em	ADP	_	ExtPos=CCONJ	19	cc	_	_
 6	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	5	fixed	_	_
 7	entanto	entanto	NOUN	_	Gender=Masc|Number=Sing	5	fixed	_	SpaceAfter=No
-8	,	,	PUNCT	_	_	10	punct	_	_
+8	,	,	PUNCT	_	_	5	punct	_	_
 9	como	como	ADP	_	_	10	case	_	_
-10	partido	partido	NOUN	_	Gender=Masc|Number=Sing	5	nmod	_	_
+10	partido	partido	NOUN	_	Gender=Masc|Number=Sing	2	nmod	_	_
 11	de	de	ADP	_	_	12	case	_	_
 12	sustentação	sustentação	NOUN	_	Gender=Fem|Number=Sing	10	nmod	_	_
 13	política	político	ADJ	_	Gender=Fem|Number=Sing	12	amod	_	_
-14	de	de	ADP	_	_	17	case	_	_
-15	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	17	det	_	_
-16	executivo	executivo	ADJ	_	Gender=Masc|Number=Sing	17	amod	_	_
-17	autoritário	autoritário	NOUN	_	Gender=Masc|Number=Sing	12	nmod	_	SpaceAfter=No
+14	de	de	ADP	_	_	16	case	_	_
+15	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	16	det	_	_
+16	executivo	executivo	NOUN	_	Gender=Masc|Number=Sing	12	nmod	_	_
+17	autoritário	autoritário	ADJ	_	Gender=Masc|Number=Sing	16	amod	_	SpaceAfter=No
 18	,	,	PUNCT	_	_	10	punct	_	_
 19	merece	merecer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
 20	reflexão	reflexão	NOUN	_	Gender=Fem|Number=Sing	19	obj	_	_
-21	maior	grande	ADJ	_	Gender=Fem|Number=Sing	20	amod	_	SpaceAfter=No
+21	maior	maior	ADJ	_	Gender=Fem|Number=Sing	20	amod	_	SpaceAfter=No
 22	,	,	PUNCT	_	_	19	punct	_	_
-23	dado	dar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	19	advcl	_	_
-24	que	que	SCONJ	_	_	29	mark	_	_
+23	dado	dar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	29	mark	_	_
+24	que	que	SCONJ	_	_	23	fixed	_	_
 25	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	26	det	_	_
 26	resultados	resultado	NOUN	_	Gender=Masc|Number=Plur	29	nsubj	_	_
 27	eleitorais	eleitoral	ADJ	_	Gender=Masc|Number=Plur	26	amod	_	_
 28	obtidos	obter	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part	26	acl	_	_
-29	refletiram	refleterir	VERB	_	Mood=Sub|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	23	ccomp	_	SpaceAfter=No
+29	refletiram	refletirar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	19	advcl	_	SpaceAfter=No
 30	,	,	PUNCT	_	_	29	punct	_	_
 31	por	por	ADP	_	_	33	case	_	_
 32	um	um	DET	_	Gender=Masc|Number=Sing|PronType=Art	33	det	_	_
@@ -1664,15 +1667,15 @@
 41	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	42	det	_	_
 42	maioria	maioria	NOUN	_	Gender=Fem|Number=Sing	40	obj	_	_
 43	parlamentar	parlamentar	ADJ	_	Gender=Fem|Number=Sing	42	amod	_	_
-44	e	e	CCONJ	_	_	47	cc	_	SpaceAfter=No
+44	e	e	CCONJ	_	_	50	cc	_	SpaceAfter=No
 45	,	,	PUNCT	_	_	47	punct	_	_
 46	por	por	ADP	_	_	47	case	_	_
-47	outro	outro	PRON	_	Gender=Masc|Number=Sing|PronType=Ind	40	conj	_	SpaceAfter=No
+47	outro	outro	PRON	_	Gender=Masc|Number=Sing|PronType=Ind	50	nmod	_	SpaceAfter=No
 48	,	,	PUNCT	_	_	47	punct	_	_
 49	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	50	det	_	_
-50	satisfação	satisfação	NOUN	_	Gender=Fem|Number=Sing	47	nsubj	_	_
+50	satisfação	satisfação	NOUN	_	Gender=Fem|Number=Sing	36	conj	_	_
 51	popular	popular	ADJ	_	Gender=Fem|Number=Sing	50	amod	_	_
-52	diante	diante	ADV	_	_	55	case	_	_
+52	diante	diante	ADV	_	ExtPos=ADP	55	case	_	_
 53-54	do	_	_	_	_	_	_	_	_
 53	de	de	ADP	_	_	52	fixed	_	_
 54	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	55	det	_	_
@@ -1680,27 +1683,27 @@
 56	governamental	governamental	ADJ	_	Gender=Masc|Number=Sing	55	amod	_	SpaceAfter=No
 57	.	.	PUNCT	_	_	19	punct	_	SpacesAfter=\n
 
-# text = As eleições majoritárias para o Senado Federal (tabela 2) deram à Arena resultados bastante favoráveis, sobretudo nas eleições de 1966 e 1970.
 # sent_id = 41
+# text = As eleições majoritárias para o Senado Federal (tabela 2) deram à Arena resultados bastante favoráveis, sobretudo nas eleições de 1966 e 1970.
 1	As	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	2	det	_	_
 2	eleições	eleição	NOUN	_	Gender=Fem|Number=Plur	12	nsubj	_	_
 3	majoritárias	majoritário	ADJ	_	Gender=Fem|Number=Plur	2	amod	_	_
 4	para	para	ADP	_	_	6	case	_	_
 5	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	6	det	_	_
-6	Senado	Senado	PROPN	_	Number=Sing	2	nmod	_	_
+6	Senado	Senado	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	2	nmod	_	_
 7	Federal	Federal	PROPN	_	Number=Sing	6	flat:name	_	_
 8	(	(	PUNCT	_	_	9	punct	_	SpaceAfter=No
-9	tabela	tabela	NOUN	_	Gender=Fem|Number=Sing	2	appos	_	_
+9	tabela	tabela	NOUN	_	Gender=Fem|Number=Sing	12	parataxis	_	_
 10	2	2	NUM	_	NumType=Card	9	nummod	_	SpaceAfter=No
 11	)	)	PUNCT	_	_	9	punct	_	_
-12	deram	dar	VERB	_	Mood=Ind|Number=Plur|Person=3|VerbForm=Fin	0	root	_	_
+12	deram	dar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 13-14	à	_	_	_	_	_	_	_	_
 13	a	a	ADP	_	_	15	case	_	_
 14	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	15	det	_	_
-15	Arena	Arena	PROPN	_	Gender=Fem|Number=Sing	12	obl	_	_
-16	resultados	resultados	PROPN	_	Number=Sing	15	flat:name	_	_
+15	Arena	Arena	PROPN	_	Gender=Fem|Number=Sing	12	iobj	_	_
+16	resultados	resultado	NOUN	_	Gender=Masc|Number=Plur	12	obj	_	_
 17	bastante	bastante	ADV	_	_	18	advmod	_	_
-18	favoráveis	favorável	ADJ	_	Gender=Fem|Number=Plur	15	amod	_	SpaceAfter=No
+18	favoráveis	favorável	ADJ	_	Gender=Masc|Number=Plur	16	amod	_	SpaceAfter=No
 19	,	,	PUNCT	_	_	12	punct	_	_
 20	sobretudo	sobretudo	ADV	_	_	23	advmod	_	_
 21-22	nas	_	_	_	_	_	_	_	_
@@ -1711,22 +1714,22 @@
 25	1966	1966	NUM	_	NumType=Card	23	nmod	_	_
 26	e	e	CCONJ	_	_	27	cc	_	_
 27	1970	1970	NUM	_	NumType=Card	25	conj	_	SpaceAfter=No
-28	.	.	PUNCT	_	_	12	punct	_	SpacesAfter=\n
+28	.	.	PUNCT	_	_	12	punct	_	_
 
-# text = Já nas eleições de 1974 e 1978, como conseqüência do incipiente processo de liberalização que teve início com a liberdade de imprensa, seus resultados foram bem menos favoráveis, principalmente em 1974, quando só conseguiu eleger 1/3 das cadeiras senatoriais em disputa.
 # sent_id = 42
-1	Já	já	SCONJ	_	_	4	advmod	_	_
+# text = Já nas eleições de 1974 e 1978, como conseqüência do incipiente processo de liberalização que teve início com a liberdade de imprensa, seus resultados foram bem menos favoráveis, principalmente em 1974, quando só conseguiu eleger 1/3 das cadeiras senatoriais em disputa.
+1	Já	já	ADV	_	_	32	advmod	_	_
 2-3	nas	_	_	_	_	_	_	_	_
 2	em	em	ADP	_	_	4	case	_	_
 3	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	4	det	_	_
-4	eleições	eleição	NOUN	_	Gender=Fem|Number=Plur	0	root	_	_
+4	eleições	eleição	NOUN	_	Gender=Fem|Number=Plur	32	obl	_	_
 5	de	de	ADP	_	_	6	case	_	_
 6	1974	1974	NUM	_	NumType=Card	4	nmod	_	_
 7	e	e	CCONJ	_	_	8	cc	_	_
 8	1978	1978	NUM	_	NumType=Card	6	conj	_	SpaceAfter=No
-9	,	,	PUNCT	_	_	11	punct	_	_
+9	,	,	PUNCT	_	_	4	punct	_	_
 10	como	como	ADP	_	_	11	case	_	_
-11	conseqüência	conseqüência	NOUN	_	Gender=Fem|Number=Sing	4	nmod	_	_
+11	conseqüência	conseqüência	NOUN	_	Gender=Fem|Number=Sing	32	obl	_	_
 12-13	do	_	_	_	_	_	_	_	_
 12	de	de	ADP	_	_	15	case	_	_
 13	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	15	det	_	_
@@ -1735,28 +1738,28 @@
 16	de	de	ADP	_	_	17	case	_	_
 17	liberalização	liberalização	NOUN	_	Gender=Fem|Number=Sing	15	nmod	_	_
 18	que	que	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	19	nsubj	_	_
-19	teve	ter	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	17	acl:relcl	_	_
+19	teve	ter	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	15	acl:relcl	_	_
 20	início	início	NOUN	_	Gender=Masc|Number=Sing	19	obj	_	_
 21	com	com	ADP	_	_	23	case	_	_
 22	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	23	det	_	_
 23	liberdade	liberdade	NOUN	_	Gender=Fem|Number=Sing	19	obl	_	_
 24	de	de	ADP	_	_	25	case	_	_
 25	imprensa	imprensa	NOUN	_	Gender=Fem|Number=Sing	23	nmod	_	SpaceAfter=No
-26	,	,	PUNCT	_	_	32	punct	_	_
+26	,	,	PUNCT	_	_	19	punct	_	_
 27	seus	seu	DET	_	Gender=Masc|Number=Plur|PronType=Prs	28	det	_	_
 28	resultados	resultado	NOUN	_	Gender=Masc|Number=Plur	32	nsubj	_	_
 29	foram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	32	cop	_	_
 30	bem	bem	ADV	_	_	31	advmod	_	_
 31	menos	menos	ADV	_	_	32	advmod	_	_
-32	favoráveis	favorável	ADJ	_	Gender=Fem|Number=Plur	23	conj	_	SpaceAfter=No
-33	,	,	PUNCT	_	_	36	punct	_	_
+32	favoráveis	favorável	ADJ	_	Gender=Masc|Number=Plur	0	root	_	SpaceAfter=No
+33	,	,	PUNCT	_	_	32	punct	_	_
 34	principalmente	principalmente	ADV	_	_	36	advmod	_	_
 35	em	em	ADP	_	_	36	case	_	_
-36	1974	1974	NUM	_	NumType=Card	23	nmod	_	SpaceAfter=No
-37	,	,	PUNCT	_	_	36	punct	_	_
+36	1974	1974	NUM	_	NumType=Card	32	obl	_	SpaceAfter=No
+37	,	,	PUNCT	_	_	32	punct	_	_
 38	quando	quando	ADV	_	_	40	advmod	_	_
 39	só	só	ADV	_	_	40	advmod	_	_
-40	conseguiu	conseguir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	advcl	_	_
+40	conseguiu	conseguir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	32	advcl	_	_
 41	eleger	eleger	VERB	_	VerbForm=Inf	40	xcomp	_	_
 42	1/3	1/3	NUM	_	NumType=Card	41	obj	_	_
 43-44	das	_	_	_	_	_	_	_	_
@@ -1766,10 +1769,10 @@
 46	senatoriais	senatorial	ADJ	_	Gender=Fem|Number=Plur	45	amod	_	_
 47	em	em	ADP	_	_	48	case	_	_
 48	disputa	disputa	NOUN	_	Gender=Fem|Number=Sing	45	nmod	_	SpaceAfter=No
-49	.	.	PUNCT	_	_	4	punct	_	SpacesAfter=\n
+49	.	.	PUNCT	_	_	32	punct	_	SpacesAfter=\n
 
-# text = Seu bom desempenho reflete sobretudo o apoio obtido nas regiões Nordeste, em primeiro lugar, e Norte e Centro-Oeste, em segundo.
 # sent_id = 43
+# text = Seu bom desempenho reflete sobretudo o apoio obtido nas regiões Nordeste, em primeiro lugar, e Norte e Centro-Oeste, em segundo.
 1	Seu	seu	DET	_	Gender=Masc|Number=Sing|PronType=Prs	3	det	_	_
 2	bom	bom	ADJ	_	Gender=Masc|Number=Sing	3	amod	_	_
 3	desempenho	desempenho	NOUN	_	Gender=Masc|Number=Sing	4	nsubj	_	_
@@ -1782,49 +1785,49 @@
 9	em	em	ADP	_	_	11	case	_	_
 10	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	11	det	_	_
 11	regiões	região	NOUN	_	Gender=Fem|Number=Plur	8	obl	_	_
-12	Nordeste	nordeste	ADJ	_	Gender=Fem|Number=Sing	11	amod	_	SpaceAfter=No
-13	,	,	PUNCT	_	_	8	punct	_	_
+12	Nordeste	nordeste	NOUN	_	Gender=Fem|Number=Sing	11	nmod	_	SpaceAfter=No
+13	,	,	PUNCT	_	_	16	punct	_	_
 14	em	em	ADP	_	_	16	case	_	_
 15	primeiro	primeiro	ADJ	_	Gender=Masc|Number=Sing|NumType=Ord	16	amod	_	_
-16	lugar	lugar	NOUN	_	Gender=Masc|Number=Sing	4	obl	_	SpaceAfter=No
-17	,	,	PUNCT	_	_	19	punct	_	_
+16	lugar	lugar	NOUN	_	Gender=Masc|Number=Sing	8	obl	_	SpaceAfter=No
+17	,	,	PUNCT	_	_	16	punct	_	_
 18	e	e	CCONJ	_	_	19	cc	_	_
-19	Norte	norte	PROPN	_	Gender=Masc|Number=Sing	4	conj	_	_
+19	Norte	Norte	PROPN	_	Gender=Masc|Number=Sing	12	conj	_	_
 20	e	e	CCONJ	_	_	21	cc	_	_
-21	Centro-Oeste	Centro-Oeste	PROPN	_	Gender=Masc|Number=Sing	19	conj	_	SpaceAfter=No
+21	Centro-Oeste	centro-oeste	PROPN	_	Gender=Masc|Number=Sing	19	conj	_	SpaceAfter=No
 22	,	,	PUNCT	_	_	24	punct	_	_
 23	em	em	ADP	_	_	24	case	_	_
 24	segundo	segundo	ADJ	_	Gender=Masc|Number=Sing|NumType=Ord	19	nmod	_	SpaceAfter=No
-25	.	.	PUNCT	_	_	4	punct	_	SpacesAfter=\n
+25	.	.	PUNCT	_	_	4	punct	_	_
 
-# text = Também na região Sul, nas duas primeiras eleições do período, sua penetração foi enorme.
 # sent_id = 44
+# text = Também na região Sul, nas duas primeiras eleições do período, sua penetração foi enorme.
 1	Também	também	ADV	_	_	4	advmod	_	_
 2-3	na	_	_	_	_	_	_	_	_
 2	em	em	ADP	_	_	4	case	_	_
 3	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	4	det	_	_
 4	região	região	NOUN	_	Gender=Fem|Number=Sing	19	obl	_	_
-5	Sul	sul	ADJ	_	Gender=Fem|Number=Sing	4	amod	_	SpaceAfter=No
+5	Sul	Sul	PROPN	_	Gender=Fem|Number=Sing	4	appos	_	SpaceAfter=No
 6	,	,	PUNCT	_	_	4	punct	_	_
 7-8	nas	_	_	_	_	_	_	_	_
 7	em	em	ADP	_	_	11	case	_	_
 8	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	11	det	_	_
 9	duas	dois	NUM	_	NumType=Card	11	nummod	_	_
 10	primeiras	primeiro	ADJ	_	Gender=Fem|Number=Plur|NumType=Ord	11	amod	_	_
-11	eleições	eleição	NOUN	_	Gender=Fem|Number=Plur	4	nmod	_	_
+11	eleições	eleição	NOUN	_	Gender=Fem|Number=Plur	19	obl	_	_
 12-13	do	_	_	_	_	_	_	_	_
 12	de	de	ADP	_	_	14	case	_	_
 13	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	14	det	_	_
 14	período	período	NOUN	_	Gender=Masc|Number=Sing	11	nmod	_	SpaceAfter=No
-15	,	,	PUNCT	_	_	4	punct	_	_
+15	,	,	PUNCT	_	_	11	punct	_	_
 16	sua	seu	DET	_	Gender=Fem|Number=Sing|PronType=Prs	17	det	_	_
 17	penetração	penetração	NOUN	_	Gender=Fem|Number=Sing	19	nsubj	_	_
 18	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	19	cop	_	_
-19	enorme	enorme	ADJ	_	Gender=Masc|Number=Sing	0	root	_	SpaceAfter=No
-20	.	.	PUNCT	_	_	19	punct	_	SpacesAfter=\n
+19	enorme	enorme	ADJ	_	Gender=Fem|Number=Sing	0	root	_	SpaceAfter=No
+20	.	.	PUNCT	_	_	19	punct	_	_
 
-# text = Suas perdas concentraram-se na região Sudeste, em todas as eleições, e no Sul, a partir de 1974 inclusive.
 # sent_id = 45
+# text = Suas perdas concentraram-se na região Sudeste, em todas as eleições, e no Sul, a partir de 1974 inclusive.
 1	Suas	seu	DET	_	Gender=Fem|Number=Plur|PronType=Prs	2	det	_	_
 2	perdas	perda	NOUN	_	Gender=Fem|Number=Plur	3	nsubj	_	_
 3-4	concentraram-se	_	_	_	_	_	_	_	_
@@ -1834,28 +1837,28 @@
 5	em	em	ADP	_	_	7	case	_	_
 6	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	7	det	_	_
 7	região	região	NOUN	_	Gender=Fem|Number=Sing	3	obl	_	_
-8	Sudeste	Sudeste	ADJ	_	Gender=Fem|Number=Sing	7	amod	_	SpaceAfter=No
-9	,	,	PUNCT	_	_	3	punct	_	_
+8	Sudeste	Sudeste	PROPN	_	Gender=Fem|Number=Sing	7	appos	_	SpaceAfter=No
+9	,	,	PUNCT	_	_	13	punct	_	_
 10	em	em	ADP	_	_	13	case	_	_
 11	todas	todo	DET	_	Gender=Fem|Number=Plur|PronType=Tot	13	det	_	_
-12	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	13	det	_	_
+12	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	11	fixed	_	_
 13	eleições	eleição	NOUN	_	Gender=Fem|Number=Plur	3	obl	_	SpaceAfter=No
-14	,	,	PUNCT	_	_	18	punct	_	_
+14	,	,	PUNCT	_	_	13	punct	_	_
 15	e	e	CCONJ	_	_	18	cc	_	_
 16-17	no	_	_	_	_	_	_	_	_
 16	em	em	ADP	_	_	18	case	_	_
 17	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	18	det	_	_
-18	Sul	Sul	PROPN	_	Number=Sing	3	conj	_	SpaceAfter=No
-19	,	,	PUNCT	_	_	21	punct	_	_
-20	a	a	ADP	_	_	21	case	_	_
-21	partir	partir	VERB	_	VerbForm=Inf	18	nmod	_	_
-22	de	de	ADP	_	_	24	case	_	_
-23	1974	1974	NUM	_	NumType=Card	24	nummod	_	_
-24	inclusive	inclusive	ADV	_	_	21	nmod	_	SpaceAfter=No
+18	Sul	sul	NOUN	_	Gender=Masc|Number=Sing	7	conj	_	SpaceAfter=No
+19	,	,	PUNCT	_	_	3	punct	_	_
+20	a	a	ADP	_	ExtPos=ADP	23	case	_	_
+21	partir	partir	VERB	_	_	20	fixed	_	_
+22	de	de	ADP	_	_	20	fixed	_	_
+23	1974	1974	NUM	_	NumType=Card	3	obl	_	_
+24	inclusive	inclusive	ADV	_	_	23	advmod	_	SpaceAfter=No
 25	.	.	PUNCT	_	_	3	punct	_	SpacesAfter=\n
 
-# text = O total de votos obtidos para o Senado representa 34,5%, 71,1%, 28,2% e 28,0% do total do eleitorado brasileiro nas eleições de 1966, 1970, 1974 e 1978, respectivamente.
 # sent_id = 46
+# text = O total de votos obtidos para o Senado representa 34,5%, 71,1%, 28,2% e 28,0% do total do eleitorado brasileiro nas eleições de 1966, 1970, 1974 e 1978, respectivamente.
 1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	_	_
 2	total	total	NOUN	_	Gender=Masc|Number=Sing	9	nsubj	_	_
 3	de	de	ADP	_	_	4	case	_	_
@@ -1869,10 +1872,10 @@
 11	%	%	SYM	_	_	9	obj	_	SpaceAfter=No
 12	,	,	PUNCT	_	_	14	punct	_	_
 13	71,1	71,1	NUM	_	NumType=Card	14	nummod	_	SpaceAfter=No
-14	%	%	SYM	_	_	11	appos	_	SpaceAfter=No
+14	%	%	SYM	_	_	11	conj	_	SpaceAfter=No
 15	,	,	PUNCT	_	_	17	punct	_	_
 16	28,2	28,2	NUM	_	NumType=Card	17	nummod	_	SpaceAfter=No
-17	%	%	SYM	_	_	11	appos	_	_
+17	%	%	SYM	_	_	11	conj	_	_
 18	e	e	CCONJ	_	_	20	cc	_	_
 19	28,0	28,0	NUM	_	NumType=Card	20	nummod	_	SpaceAfter=No
 20	%	%	SYM	_	_	11	conj	_	_
@@ -1888,7 +1891,7 @@
 28-29	nas	_	_	_	_	_	_	_	_
 28	em	em	ADP	_	_	30	case	_	_
 29	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	30	det	_	_
-30	eleições	eleição	NOUN	_	Gender=Fem|Number=Plur	20	nmod	_	_
+30	eleições	eleição	NOUN	_	Gender=Fem|Number=Plur	9	obl	_	_
 31	de	de	ADP	_	_	32	case	_	_
 32	1966	1966	NUM	_	NumType=Card	30	nmod	_	SpaceAfter=No
 33	,	,	PUNCT	_	_	34	punct	_	_
@@ -1897,25 +1900,25 @@
 36	1974	1974	NUM	_	NumType=Card	32	conj	_	_
 37	e	e	CCONJ	_	_	38	cc	_	_
 38	1978	1978	NUM	_	NumType=Card	32	conj	_	SpaceAfter=No
-39	,	,	PUNCT	_	_	9	punct	_	_
+39	,	,	PUNCT	_	_	40	punct	_	_
 40	respectivamente	respectivamente	ADV	_	_	9	advmod	_	SpaceAfter=No
 41	.	.	PUNCT	_	_	9	punct	_	SpacesAfter=\n
 
-# text = As eleições proporcionais para a Câmara Federal sempre garantiram à Arena a maioria de cadeiras parlamentares, a saber: 67,7%; 72,0%; 54,7% e 55,0% (tabela 3).
 # sent_id = 47
+# text = As eleições proporcionais para a Câmara Federal sempre garantiram à Arena a maioria de cadeiras parlamentares, a saber: 67,7%; 72,0%; 54,7% e 55,0% (tabela 3).
 1	As	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	2	det	_	_
 2	eleições	eleição	NOUN	_	Gender=Fem|Number=Plur	9	nsubj	_	_
 3	proporcionais	proporcional	ADJ	_	Gender=Fem|Number=Plur	2	amod	_	_
 4	para	para	ADP	_	_	6	case	_	_
 5	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	6	det	_	_
-6	Câmara	Câmara	PROPN	_	Gender=Fem|Number=Sing	2	nmod	_	_
+6	Câmara	Câmara	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	2	nmod	_	_
 7	Federal	Federal	PROPN	_	Number=Sing	6	flat:name	_	_
 8	sempre	sempre	ADV	_	_	9	advmod	_	_
-9	garantiram	garantir	VERB	_	Mood=Ind|Number=Plur|Person=3|VerbForm=Fin	0	root	_	_
+9	garantiram	garantir	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 10-11	à	_	_	_	_	_	_	_	_
 10	a	a	ADP	_	_	12	case	_	_
 11	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	12	det	_	_
-12	Arena	Arena	PROPN	_	Gender=Fem|Number=Sing	9	obl	_	_
+12	Arena	Arena	PROPN	_	Gender=Fem|Number=Sing	9	iobj	_	_
 13	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	14	det	_	_
 14	maioria	maioria	NOUN	_	Gender=Fem|Number=Sing	9	obj	_	_
 15	de	de	ADP	_	_	16	case	_	_
@@ -1924,26 +1927,26 @@
 18	,	,	PUNCT	_	_	20	punct	_	_
 19	a	a	SCONJ	_	_	20	mark	_	_
 20	saber	saber	VERB	_	VerbForm=Inf	14	acl	_	SpaceAfter=No
-21	:	:	PUNCT	_	_	20	punct	_	_
+21	:	:	PUNCT	_	_	23	punct	_	_
 22	67,7	67,7	NUM	_	NumType=Card	23	nummod	_	SpaceAfter=No
-23	%	%	SYM	_	_	20	obj	_	SpaceAfter=No
+23	%	%	SYM	_	_	16	appos	_	SpaceAfter=No
 24	;	;	PUNCT	_	_	26	punct	_	_
 25	72,0	72,0	NUM	_	NumType=Card	26	nummod	_	SpaceAfter=No
 26	%	%	SYM	_	_	23	conj	_	SpaceAfter=No
 27	;	;	PUNCT	_	_	29	punct	_	_
 28	54,7	54,7	NUM	_	NumType=Card	29	nummod	_	SpaceAfter=No
-29	%	%	SYM	_	_	26	appos	_	_
+29	%	%	SYM	_	_	23	conj	_	_
 30	e	e	CCONJ	_	_	32	cc	_	_
 31	55,0	55,0	NUM	_	NumType=Card	32	nummod	_	SpaceAfter=No
-32	%	%	SYM	_	_	29	conj	_	_
+32	%	%	SYM	_	_	23	conj	_	_
 33	(	(	PUNCT	_	_	34	punct	_	SpaceAfter=No
-34	tabela	tabela	NOUN	_	Gender=Fem|Number=Sing	32	appos	_	_
+34	tabela	tabela	NOUN	_	Gender=Fem|Number=Sing	9	parataxis	_	_
 35	3	3	NUM	_	NumType=Card	34	nummod	_	SpaceAfter=No
 36	)	)	PUNCT	_	_	34	punct	_	SpaceAfter=No
-37	.	.	PUNCT	_	_	9	punct	_	SpacesAfter=\n
+37	.	.	PUNCT	_	_	9	punct	_	_
 
-# text = A comparação do total de votos obtidos pelo partido, como porcentagem do eleitorado nacionalmente inscrito, permite estabelecer as seguintes porcentagens: 38,8%; 37,7%; 33,1% e 32,1%.
 # sent_id = 48
+# text = A comparação do total de votos obtidos pelo partido, como porcentagem do eleitorado nacionalmente inscrito, permite estabelecer as seguintes porcentagens: 38,8%; 37,7%; 33,1% e 32,1%.
 1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
 2	comparação	comparação	NOUN	_	Gender=Fem|Number=Sing	21	nsubj	_	_
 3-4	do	_	_	_	_	_	_	_	_
@@ -1965,7 +1968,7 @@
 16	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	17	det	_	_
 17	eleitorado	eleitorado	NOUN	_	Gender=Masc|Number=Sing	14	nmod	_	_
 18	nacionalmente	nacionalmente	ADV	_	_	19	advmod	_	_
-19	inscrito	inscrito	ADJ	_	Gender=Masc|Number=Sing	17	amod	_	SpaceAfter=No
+19	inscrito	inscrever	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	17	acl	_	SpaceAfter=No
 20	,	,	PUNCT	_	_	14	punct	_	_
 21	permite	permitir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
 22	estabelecer	estabelecer	VERB	_	VerbForm=Inf	21	xcomp	_	_
@@ -1977,17 +1980,17 @@
 28	%	%	SYM	_	_	25	appos	_	SpaceAfter=No
 29	;	;	PUNCT	_	_	31	punct	_	_
 30	37,7	37,7	NUM	_	NumType=Card	31	nummod	_	SpaceAfter=No
-31	%	%	SYM	_	_	28	appos	_	SpaceAfter=No
+31	%	%	SYM	_	_	28	conj	_	SpaceAfter=No
 32	;	;	PUNCT	_	_	34	punct	_	_
 33	33,1	33,1	NUM	_	NumType=Card	34	nummod	_	SpaceAfter=No
-34	%	%	SYM	_	_	31	nmod	_	_
+34	%	%	SYM	_	_	28	conj	_	_
 35	e	e	CCONJ	_	_	37	cc	_	_
 36	32,1	32,1	NUM	_	NumType=Card	37	nummod	_	SpaceAfter=No
-37	%	%	SYM	_	_	34	conj	_	SpaceAfter=No
-38	.	.	PUNCT	_	_	21	punct	_	SpacesAfter=\n
+37	%	%	SYM	_	_	28	conj	_	SpaceAfter=No
+38	.	.	PUNCT	_	_	21	punct	_	_
 
-# text = A comparação destes resultados com os obtidos para o Senado indica maior sucesso eleitoral da Arena em eleições proporcionais do que em eleições majoritárias, excetuando-se a eleição de 1970, que foi precedida de intensa campanha da oposição, preconizando o voto nulo.
 # sent_id = 49
+# text = A comparação destes resultados com os obtidos para o Senado indica maior sucesso eleitoral da Arena em eleições proporcionais do que em eleições majoritárias, excetuando-se a eleição de 1970, que foi precedida de intensa campanha da oposição, preconizando o voto nulo.
 1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
 2	comparação	comparação	NOUN	_	Gender=Fem|Number=Sing	12	nsubj	_	_
 3-4	destes	_	_	_	_	_	_	_	_
@@ -1996,43 +1999,43 @@
 5	resultados	resultado	NOUN	_	Gender=Masc|Number=Plur	2	nmod	_	_
 6	com	com	ADP	_	_	8	case	_	_
 7	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	8	det	_	_
-8	obtidos	obtido	NOUN	_	Gender=Masc|Number=Plur	2	nmod	_	_
+8	obtidos	obter	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part	5	acl	_	_
 9	para	para	ADP	_	_	11	case	_	_
 10	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	_	_
-11	Senado	senado	NOUN	_	Gender=Masc|Number=Sing	8	nmod	_	_
+11	Senado	senado	NOUN	_	Gender=Masc|Number=Sing	8	obl	_	_
 12	indica	indicar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
-13	maior	grande	ADJ	_	Gender=Masc|Number=Sing	14	amod	_	_
+13	maior	maior	ADJ	_	Gender=Masc|Number=Sing	14	amod	_	_
 14	sucesso	sucesso	NOUN	_	Gender=Masc|Number=Sing	12	obj	_	_
 15	eleitoral	eleitoral	ADJ	_	Gender=Masc|Number=Sing	14	amod	_	_
 16-17	da	_	_	_	_	_	_	_	_
 16	de	de	ADP	_	_	18	case	_	_
 17	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	18	det	_	_
-18	Arena	Arena	NOUN	_	Gender=Fem|Number=Sing	14	nmod	_	_
+18	Arena	Arena	PROPN	_	Gender=Fem|Number=Sing	14	nmod	_	_
 19	em	em	ADP	_	_	20	case	_	_
-20	eleições	eleição	NOUN	_	Gender=Fem|Number=Plur	12	obl	_	_
+20	eleições	eleição	NOUN	_	Gender=Fem|Number=Plur	14	nmod	_	_
 21	proporcionais	proporcional	ADJ	_	Gender=Fem|Number=Plur	20	amod	_	_
 22-23	do	_	_	_	_	_	_	_	_
 22	de	de	ADP	_	_	26	case	_	_
 23	o	o	PRON	_	Gender=Masc|Number=Sing|PronType=Dem	22	fixed	_	_
 24	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	22	fixed	_	_
 25	em	em	ADP	_	_	26	case	_	_
-26	eleições	eleição	NOUN	_	Gender=Fem|Number=Plur	20	nmod	_	_
+26	eleições	eleição	NOUN	_	Gender=Fem|Number=Plur	14	nmod	_	_
 27	majoritárias	majoritário	ADJ	_	Gender=Fem|Number=Plur	26	amod	_	SpaceAfter=No
 28	,	,	PUNCT	_	_	29	punct	_	_
 29-30	excetuando-se	_	_	_	_	_	_	_	_
 29	excetuando	excetuar	VERB	_	VerbForm=Ger	12	advcl	_	_
-30	se	se	PRON	_	Case=Acc|Gender=Unsp|Number=Sing|Person=3|PronType=Prs	29	nsubj	_	_
+30	se	se	PRON	_	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	29	expl	_	_
 31	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	32	det	_	_
 32	eleição	eleição	NOUN	_	Gender=Fem|Number=Sing	29	obj	_	_
 33	de	de	ADP	_	_	34	case	_	_
 34	1970	1970	NUM	_	NumType=Card	32	nmod	_	SpaceAfter=No
-35	,	,	PUNCT	_	_	29	punct	_	_
-36	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	38	nsubj:pass	_	_
+35	,	,	PUNCT	_	_	38	punct	_	_
+36	que	que	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	38	nsubj:pass	_	_
 37	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	38	aux:pass	_	_
-38	precedida	preceder	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	29	xcomp	_	_
+38	precedida	preceder	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	32	acl:relcl	_	_
 39	de	de	ADP	_	_	41	case	_	_
 40	intensa	intenso	ADJ	_	Gender=Fem|Number=Sing	41	amod	_	_
-41	campanha	campanha	NOUN	_	Gender=Fem|Number=Sing	38	obl	_	_
+41	campanha	campanha	NOUN	_	Gender=Fem|Number=Sing	38	obj	_	_
 42-43	da	_	_	_	_	_	_	_	_
 42	de	de	ADP	_	_	44	case	_	_
 43	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	44	det	_	_
@@ -2044,34 +2047,34 @@
 49	nulo	nulo	ADJ	_	Gender=Masc|Number=Sing	48	amod	_	SpaceAfter=No
 50	.	.	PUNCT	_	_	12	punct	_	SpacesAfter=\n
 
-# text = A Arena, nas eleições para as assembléias estaduais, onde, na esmagadora maioria dos estados, sempre teve maioria, atingiu 40,2%, 40,3%, 40,0% e 33,0% dos votos do eleitorado nacional (tabela 4).
 # sent_id = 50
+# text = A Arena, nas eleições para as assembléias estaduais, onde, na esmagadora maioria dos estados, sempre teve maioria, atingiu 40,2%, 40,3%, 40,0% e 33,0% dos votos do eleitorado nacional (tabela 4).
 1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
 2	Arena	Arena	PROPN	_	Gender=Fem|Number=Sing	26	nsubj	_	SpaceAfter=No
 3	,	,	PUNCT	_	_	6	punct	_	_
 4-5	nas	_	_	_	_	_	_	_	_
 4	em	em	ADP	_	_	6	case	_	_
 5	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	6	det	_	_
-6	eleições	eleição	NOUN	_	Gender=Fem|Number=Plur	2	nmod	_	_
+6	eleições	eleição	NOUN	_	Gender=Fem|Number=Plur	26	obl	_	_
 7	para	para	ADP	_	_	9	case	_	_
 8	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	9	det	_	_
 9	assembléias	assembléia	NOUN	_	Gender=Fem|Number=Plur	6	nmod	_	_
 10	estaduais	estadual	ADJ	_	Gender=Fem|Number=Plur	9	amod	_	SpaceAfter=No
-11	,	,	PUNCT	_	_	6	punct	_	_
-12	onde	onde	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	23	obl	_	SpaceAfter=No
-13	,	,	PUNCT	_	_	16	punct	_	_
+11	,	,	PUNCT	_	_	23	punct	_	_
+12	onde	onde	PRON	_	Gender=Fem|Number=Plur|PronType=Rel	23	obl	_	SpaceAfter=No
+13	,	,	PUNCT	_	_	17	punct	_	_
 14-15	na	_	_	_	_	_	_	_	_
-14	em	em	ADP	_	_	16	case	_	_
-15	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	16	det	_	_
-16	esmagadora	esmagador	NOUN	_	Gender=Fem|Number=Sing	23	obl	_	_
-17	maioria	maiorio	ADJ	_	Gender=Fem|Number=Sing	16	amod	_	_
+14	em	em	ADP	_	_	17	case	_	_
+15	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	17	det	_	_
+16	esmagadora	esmagador	ADJ	_	Gender=Fem|Number=Sing	17	amod	_	_
+17	maioria	maioria	NOUN	_	Gender=Fem|Number=Sing	23	obl	_	_
 18-19	dos	_	_	_	_	_	_	_	_
 18	de	de	ADP	_	_	20	case	_	_
 19	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	20	det	_	_
-20	estados	estado	NOUN	_	Gender=Masc|Number=Plur	16	nmod	_	SpaceAfter=No
-21	,	,	PUNCT	_	_	16	punct	_	_
+20	estados	estado	NOUN	_	Gender=Masc|Number=Plur	17	nmod	_	SpaceAfter=No
+21	,	,	PUNCT	_	_	17	punct	_	_
 22	sempre	sempre	ADV	_	_	23	advmod	_	_
-23	teve	ter	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	acl:relcl	_	_
+23	teve	ter	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	9	acl:relcl	_	_
 24	maioria	maioria	NOUN	_	Gender=Fem|Number=Sing	23	obj	_	SpaceAfter=No
 25	,	,	PUNCT	_	_	23	punct	_	_
 26	atingiu	atingir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
@@ -2079,13 +2082,13 @@
 28	%	%	SYM	_	_	26	obj	_	SpaceAfter=No
 29	,	,	PUNCT	_	_	31	punct	_	_
 30	40,3	40,3	NUM	_	NumType=Card	31	nummod	_	SpaceAfter=No
-31	%	%	SYM	_	_	28	appos	_	SpaceAfter=No
-32	,	,	PUNCT	_	_	31	punct	_	_
+31	%	%	SYM	_	_	28	conj	_	SpaceAfter=No
+32	,	,	PUNCT	_	_	34	punct	_	_
 33	40,0	40,0	NUM	_	NumType=Card	34	nummod	_	SpaceAfter=No
-34	%	%	SYM	_	_	28	appos	_	_
+34	%	%	SYM	_	_	28	conj	_	_
 35	e	e	CCONJ	_	_	37	cc	_	_
 36	33,0	33,0	NUM	_	NumType=Card	37	nummod	_	SpaceAfter=No
-37	%	%	SYM	_	_	34	conj	_	_
+37	%	%	SYM	_	_	28	conj	_	_
 38-39	dos	_	_	_	_	_	_	_	_
 38	de	de	ADP	_	_	40	case	_	_
 39	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	40	det	_	_
@@ -2096,27 +2099,27 @@
 43	eleitorado	eleitorado	NOUN	_	Gender=Masc|Number=Sing	40	nmod	_	_
 44	nacional	nacional	ADJ	_	Gender=Masc|Number=Sing	43	amod	_	_
 45	(	(	PUNCT	_	_	46	punct	_	SpaceAfter=No
-46	tabela	tabela	NOUN	_	Gender=Fem|Number=Sing	43	appos	_	_
+46	tabela	tabela	NOUN	_	Gender=Fem|Number=Sing	26	parataxis	_	_
 47	4	4	NUM	_	NumType=Card	46	nummod	_	SpaceAfter=No
 48	)	)	PUNCT	_	_	46	punct	_	SpaceAfter=No
-49	.	.	PUNCT	_	_	26	punct	_	SpacesAfter=\n
+49	.	.	PUNCT	_	_	26	punct	_	_
 
-# text = Tais resultados afiguram-se como bastante estáveis, exceto em 1978 quando, no plano estadual, o partido perdeu substância eleitoralmente, embora tais resultados sejam ainda melhores que aqueles apontados para o Senado (exceto a eleição de 1970) e para a Câmara Federal (em todas as eleições).
 # sent_id = 51
-1	Tais	tal	DET	_	Gender=Masc|Number=Plur|PronType=Dem	2	det	_	_
+# text = Tais resultados afiguram-se como bastante estáveis, exceto em 1978 quando, no plano estadual, o partido perdeu substância eleitoralmente, embora tais resultados sejam ainda melhores que aqueles apontados para o Senado (exceto a eleição de 1970) e para a Câmara Federal (em todas as eleições).
+1	Tais	tais	DET	_	Gender=Masc|Number=Plur|PronType=Dem	2	det	_	_
 2	resultados	resultado	NOUN	_	Gender=Masc|Number=Plur	3	nsubj	_	_
 3-4	afiguram-se	_	_	_	_	_	_	_	_
 3	afiguram	afigurar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
 4	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Plur|Person=3|PronType=Prs	3	expl	_	_
 5	como	como	ADP	_	_	7	case	_	_
 6	bastante	bastante	ADV	_	_	7	advmod	_	_
-7	estáveis	estável	ADJ	_	Gender=Fem|Number=Plur	3	xcomp	_	SpaceAfter=No
-8	,	,	PUNCT	_	_	3	punct	_	_
-9	exceto	exceto	ADP	_	_	22	case	_	_
+7	estáveis	estável	ADJ	_	Gender=Masc|Number=Plur	3	xcomp	_	SpaceAfter=No
+8	,	,	PUNCT	_	_	11	punct	_	_
+9	exceto	exceto	ADP	_	_	11	case	_	_
 10	em	em	ADP	_	_	11	case	_	_
-11	1978	1978	NUM	_	NumType=Card	12	obl	_	_
+11	1978	1978	NUM	_	NumType=Card	3	obl	_	_
 12	quando	quando	ADV	_	_	21	advmod	_	SpaceAfter=No
-13	,	,	PUNCT	_	_	12	punct	_	_
+13	,	,	PUNCT	_	_	16	punct	_	_
 14-15	no	_	_	_	_	_	_	_	_
 14	em	em	ADP	_	_	16	case	_	_
 15	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	16	det	_	_
@@ -2126,32 +2129,32 @@
 19	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	20	det	_	_
 20	partido	partido	NOUN	_	Gender=Masc|Number=Sing	21	nsubj	_	_
 21	perdeu	perder	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	advcl	_	_
-22	substância	substância	NOUN	_	Gender=Fem|Number=Sing	3	obl	_	_
+22	substância	substância	NOUN	_	Gender=Fem|Number=Sing	21	obj	_	_
 23	eleitoralmente	eleitoralmente	ADV	_	_	21	advmod	_	SpaceAfter=No
 24	,	,	PUNCT	_	_	21	punct	_	_
 25	embora	embora	SCONJ	_	_	30	mark	_	_
-26	tais	tal	DET	_	Gender=Fem|Number=Plur|PronType=Dem	27	det	_	_
+26	tais	tal	DET	_	Gender=Masc|Number=Plur|PronType=Dem	27	det	_	_
 27	resultados	resultado	NOUN	_	Gender=Masc|Number=Plur	30	nsubj	_	_
 28	sejam	ser	AUX	_	Mood=Sub|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	30	cop	_	_
 29	ainda	ainda	ADV	_	_	30	advmod	_	_
-30	melhores	bom	ADJ	_	Gender=Masc|Number=Plur	21	xcomp	_	_
-31	que	que	SCONJ	_	_	55	mark	_	_
-32	aqueles	aquele	PRON	_	Gender=Masc|Number=Plur|PronType=Dem	55	nsubj	_	_
-33	apontados	apontar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	32	acl	_	_
+30	melhores	bom	ADJ	_	Gender=Masc|Number=Plur	21	advcl	_	_
+31	que	que	SCONJ	_	_	32	mark	_	_
+32	aqueles	aquele	PRON	_	Gender=Masc|Number=Plur|PronType=Dem	30	obl	_	_
+33	apontados	apontar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part	32	acl	_	_
 34	para	para	ADP	_	_	36	case	_	_
 35	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	36	det	_	_
 36	Senado	senado	NOUN	_	Gender=Masc|Number=Sing	33	obl	_	_
 37	(	(	PUNCT	_	_	40	punct	_	SpaceAfter=No
 38	exceto	exceto	ADP	_	_	40	case	_	_
 39	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	40	det	_	_
-40	eleição	eleição	NOUN	_	Gender=Fem|Number=Sing	36	parataxis	_	_
+40	eleição	eleição	NOUN	_	Gender=Fem|Number=Sing	36	nmod	_	_
 41	de	de	ADP	_	_	42	case	_	_
 42	1970	1970	NUM	_	NumType=Card	40	nmod	_	SpaceAfter=No
 43	)	)	PUNCT	_	_	40	punct	_	_
 44	e	e	CCONJ	_	_	47	cc	_	_
 45	para	para	ADP	_	_	47	case	_	_
 46	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	47	det	_	_
-47	Câmara	Câmara	PROPN	_	Gender=Fem|Number=Sing	32	conj	_	_
+47	Câmara	Câmara	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	36	conj	_	_
 48	Federal	Federal	PROPN	_	Number=Sing	47	flat:name	_	_
 49	(	(	PUNCT	_	_	53	punct	_	SpaceAfter=No
 50	em	em	ADP	_	_	53	case	_	_
@@ -2159,12 +2162,12 @@
 52	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	53	det	_	_
 53	eleições	eleição	NOUN	_	Gender=Fem|Number=Plur	47	nmod	_	SpaceAfter=No
 54	)	)	PUNCT	_	_	53	punct	_	SpaceAfter=No
-55	.	.	PUNCT	_	_	30	punct	_	SpacesAfter=\n
+55	.	.	PUNCT	_	_	3	punct	_	SpacesAfter=\n
 
-# text = As funções classicamente desempenhadas por um partido político em um contexto de pluralidade política e social dificilmente poderiam ter sido desempenhadas pela Arena, não só em virtude das leis de exceção então em vigor, como também, e sobretudo, porque a Arena representou o papel de braço partidário parlamentar do autoritarismo vigente dentro de um Congresso despido igualmente de suas prerrogativas clássicas.
 # sent_id = 52
+# text = As funções classicamente desempenhadas por um partido político em um contexto de pluralidade política e social dificilmente poderiam ter sido desempenhadas pela Arena, não só em virtude das leis de exceção então em vigor, como também, e sobretudo, porque a Arena representou o papel de braço partidário parlamentar do autoritarismo vigente dentro de um Congresso despido igualmente de suas prerrogativas clássicas.
 1	As	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	2	det	_	_
-2	funções	função	NOUN	_	Gender=Fem|Number=Plur	21	nsubj:pass	_	_
+2	funções	função	NOUN	_	Gender=Fem|Number=Plur	18	nsubj:pass	_	_
 3	classicamente	classicamente	ADV	_	_	4	advmod	_	_
 4	desempenhadas	desempenhar	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part|Voice=Pass	2	acl	_	_
 5	por	por	ADP	_	_	7	case	_	_
@@ -2179,7 +2182,7 @@
 14	política	político	ADJ	_	Gender=Fem|Number=Sing	13	amod	_	_
 15	e	e	CCONJ	_	_	16	cc	_	_
 16	social	social	ADJ	_	Gender=Fem|Number=Sing	14	conj	_	_
-17	dificilmente	dificilmente	ADV	_	_	21	advmod	_	_
+17	dificilmente	dificilmente	ADV	_	_	18	advmod	_	_
 18	poderiam	poder	VERB	_	Mood=Cnd|Number=Plur|Person=3|VerbForm=Fin	0	root	_	_
 19	ter	ter	AUX	_	VerbForm=Inf	21	aux	_	_
 20	sido	ser	AUX	_	VerbForm=Part	21	aux:pass	_	_
@@ -2188,31 +2191,31 @@
 22	por	por	ADP	_	_	24	case	_	_
 23	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	24	det	_	_
 24	Arena	Arena	PROPN	_	Gender=Fem|Number=Sing	21	obl:agent	_	SpaceAfter=No
-25	,	,	PUNCT	_	_	21	punct	_	_
+25	,	,	PUNCT	_	_	29	punct	_	_
 26	não	não	ADV	_	Polarity=Neg	29	advmod	_	_
-27	só	só	ADV	_	_	29	advmod	_	_
+27	só	só	ADV	_	_	26	fixed	_	_
 28	em	em	ADP	_	_	29	case	_	_
-29	virtude	virtude	NOUN	_	Gender=Fem|Number=Sing	21	xcomp	_	_
+29	virtude	virtude	NOUN	_	Gender=Fem|Number=Sing	21	obl	_	_
 30-31	das	_	_	_	_	_	_	_	_
 30	de	de	ADP	_	_	32	case	_	_
 31	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	32	det	_	_
-32	leis	lel	NOUN	_	Gender=Fem|Number=Plur	29	nmod	_	_
+32	leis	lei	NOUN	_	Gender=Fem|Number=Plur	29	nmod	_	_
 33	de	de	ADP	_	_	34	case	_	_
 34	exceção	exceção	NOUN	_	Gender=Fem|Number=Sing	32	nmod	_	_
 35	então	então	ADV	_	_	37	advmod	_	_
 36	em	em	ADP	_	_	37	case	_	_
 37	vigor	vigor	NOUN	_	Gender=Masc|Number=Sing	32	nmod	_	SpaceAfter=No
 38	,	,	PUNCT	_	_	39	punct	_	_
-39	como	como	ADV	_	_	48	advmod	_	_
-40	também	também	ADV	_	_	39	advmod	_	SpaceAfter=No
+39	como	como	ADV	_	_	48	cc	_	_
+40	também	também	ADV	_	_	39	fixed	_	SpaceAfter=No
 41	,	,	PUNCT	_	_	39	punct	_	_
 42	e	e	CCONJ	_	_	43	cc	_	_
-43	sobretudo	sobretudo	ADV	_	_	40	conj	_	SpaceAfter=No
+43	sobretudo	sobretudo	ADV	_	_	48	advmod	_	SpaceAfter=No
 44	,	,	PUNCT	_	_	39	punct	_	_
 45	porque	porque	SCONJ	_	_	48	mark	_	_
 46	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	47	det	_	_
 47	Arena	Arena	PROPN	_	Gender=Fem|Number=Sing	48	nsubj	_	_
-48	representou	representar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	37	conj	_	_
+48	representou	representar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	21	conj	_	_
 49	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	50	det	_	_
 50	papel	papel	NOUN	_	Gender=Masc|Number=Sing	48	obj	_	_
 51	de	de	ADP	_	_	52	case	_	_
@@ -2228,16 +2231,16 @@
 60	de	de	ADP	_	_	62	case	_	_
 61	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	62	det	_	_
 62	Congresso	congresso	NOUN	_	Gender=Masc|Number=Sing	59	obl	_	_
-63	despido	desper	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	62	acl	_	_
-64	igualmente	igualmente	ADV	_	_	67	advmod	_	_
+63	despido	despir	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	62	acl	_	_
+64	igualmente	igualmente	ADV	_	_	63	advmod	_	_
 65	de	de	ADP	_	_	67	case	_	_
 66	suas	seu	DET	_	Gender=Fem|Number=Plur|PronType=Prs	67	det	_	_
-67	prerrogativas	prerrogativa	NOUN	_	Gender=Fem|Number=Plur	62	nmod	_	_
+67	prerrogativas	prerrogativa	NOUN	_	Gender=Fem|Number=Plur	63	obl	_	_
 68	clássicas	clássico	ADJ	_	Gender=Fem|Number=Plur	67	amod	_	SpaceAfter=No
-69	.	.	PUNCT	_	_	21	punct	_	SpacesAfter=\n
+69	.	.	PUNCT	_	_	18	punct	_	_
 
-# text = Como partido governista, a Arena submeteu-se docilmente às iniciativas legislativas do Executivo, defendendo-o sistematicamente das críticas da oposição sem, no entanto, ter logrado ser um partido do governo.
 # sent_id = 53
+# text = Como partido governista, a Arena submeteu-se docilmente às iniciativas legislativas do Executivo, defendendo-o sistematicamente das críticas da oposição sem, no entanto, ter logrado ser um partido do governo.
 1	Como	como	ADP	_	_	2	case	_	_
 2	partido	partido	NOUN	_	Gender=Masc|Number=Sing	7	obl	_	_
 3	governista	governista	ADJ	_	Gender=Masc|Number=Sing	2	amod	_	SpaceAfter=No
@@ -2246,50 +2249,50 @@
 6	Arena	Arena	PROPN	_	Gender=Fem|Number=Sing	7	nsubj	_	_
 7-8	submeteu-se	_	_	_	_	_	_	_	_
 7	submeteu	submeter	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
-8	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	7	expl	_	_
+8	se	se	PRON	_	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	7	expl	_	_
 9	docilmente	docilmente	ADV	_	_	7	advmod	_	_
 10-11	às	_	_	_	_	_	_	_	_
-10	a	a	ADP	_	_	13	case	_	_
-11	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	13	det	_	_
-12	iniciativas	iniciativo	ADJ	_	Gender=Fem|Number=Plur	13	amod	_	_
-13	legislativas	legislativo	NOUN	_	Gender=Fem|Number=Plur	7	obl	_	_
+10	a	a	ADP	_	_	12	case	_	_
+11	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	12	det	_	_
+12	iniciativas	iniciativa	NOUN	_	Gender=Fem|Number=Plur	7	obj	_	_
+13	legislativas	legislativo	ADJ	_	Gender=Fem|Number=Plur	12	amod	_	_
 14-15	do	_	_	_	_	_	_	_	_
 14	de	de	ADP	_	_	16	case	_	_
 15	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	16	det	_	_
-16	Executivo	executivo	NOUN	_	Gender=Masc|Number=Sing	13	nmod	_	SpaceAfter=No
+16	Executivo	executivo	NOUN	_	Gender=Masc|Number=Sing	12	nmod	_	SpaceAfter=No
 17	,	,	PUNCT	_	_	18	punct	_	_
 18-19	defendendo-o	_	_	_	_	_	_	_	_
 18	defendendo	defender	VERB	_	VerbForm=Ger	7	advcl	_	_
-19	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	20	det	_	_
-20	sistematicamente	sistematicamente	NOUN	_	Gender=Masc|Number=Sing	18	obj	_	_
+19	o	ele	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	18	obj	_	_
+20	sistematicamente	sistematicamente	ADV	_	_	18	advmod	_	_
 21-22	das	_	_	_	_	_	_	_	_
 21	de	de	ADP	_	_	23	case	_	_
 22	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	23	det	_	_
-23	críticas	crítica	NOUN	_	Gender=Fem|Number=Plur	20	nmod	_	_
+23	críticas	crítica	NOUN	_	Gender=Fem|Number=Plur	18	obj	_	_
 24-25	da	_	_	_	_	_	_	_	_
 24	de	de	ADP	_	_	26	case	_	_
 25	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	26	det	_	_
 26	oposição	oposição	NOUN	_	Gender=Fem|Number=Sing	23	nmod	_	_
 27	sem	sem	SCONJ	_	_	34	mark	_	SpaceAfter=No
-28	,	,	PUNCT	_	_	31	punct	_	_
+28	,	,	PUNCT	_	_	29	punct	_	_
 29-30	no	_	_	_	_	_	_	_	_
-29	em	em	ADP	_	_	37	cc	_	_
+29	em	em	ADP	_	ExtPos=CCONJ	34	cc	_	_
 30	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	29	fixed	_	_
 31	entanto	entanto	NOUN	_	Gender=Masc|Number=Sing	29	fixed	_	SpaceAfter=No
-32	,	,	PUNCT	_	_	31	punct	_	_
+32	,	,	PUNCT	_	_	29	punct	_	_
 33	ter	ter	AUX	_	VerbForm=Inf	34	aux	_	_
 34	logrado	lograr	VERB	_	VerbForm=Part	18	advcl	_	_
 35	ser	ser	AUX	_	VerbForm=Inf	37	cop	_	_
 36	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	37	det	_	_
-37	partido	partido	NOUN	_	Gender=Masc|Number=Sing	34	obl	_	_
+37	partido	partido	NOUN	_	Gender=Masc|Number=Sing	34	xcomp	_	_
 38-39	do	_	_	_	_	_	_	_	_
 38	de	de	ADP	_	_	40	case	_	_
 39	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	40	det	_	_
 40	governo	governo	NOUN	_	Gender=Masc|Number=Sing	37	nmod	_	SpaceAfter=No
 41	.	.	PUNCT	_	_	7	punct	_	SpacesAfter=\n
 
-# text = O arquivo da Arena encontra-se depositado no Centro de Pesquisa e Documentação de História Contemporânea do Brasil (Cpdoc) da Fundação Getulio Vargas.
 # sent_id = 54
+# text = O arquivo da Arena encontra-se depositado no Centro de Pesquisa e Documentação de História Contemporânea do Brasil (Cpdoc) da Fundação Getulio Vargas.
 1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	_	_
 2	arquivo	arquivo	NOUN	_	Gender=Masc|Number=Sing	6	nsubj	_	_
 3-4	da	_	_	_	_	_	_	_	_
@@ -2298,30 +2301,30 @@
 5	Arena	Arena	PROPN	_	Gender=Fem|Number=Sing	2	nmod	_	_
 6-7	encontra-se	_	_	_	_	_	_	_	_
 6	encontra	encontrar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
-7	se	se	PRON	_	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	6	expl	_	_
+7	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	6	expl	_	_
 8	depositado	depositar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	6	xcomp	_	_
 9-10	no	_	_	_	_	_	_	_	_
 9	em	em	ADP	_	_	11	case	_	_
 10	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	_	_
 11	Centro	Centro	PROPN	_	Gender=Masc|Number=Sing	8	obl	_	_
 12	de	de	ADP	_	_	13	case	_	_
-13	Pesquisa	pesquisa	PROPN	_	Number=Sing	11	nmod	_	_
+13	Pesquisa	Pesquisa	PROPN	_	Number=Sing	11	nmod	_	_
 14	e	e	CCONJ	_	_	13	flat:name	_	_
-15	Documentação	documentação	PROPN	_	Gender=Fem|Number=Sing	13	flat:name	_	_
+15	Documentação	Documentação	PROPN	_	Number=Sing	13	flat:name	_	_
 16	de	de	ADP	_	_	17	case	_	_
-17	História	História	PROPN	_	Number=Sing	13	flat:name	_	_
-18	Contemporânea	Contemporânea	PROPN	_	Number=Sing	13	flat:name	_	_
+17	História	História	PROPN	_	ExtPos=PROPN|Number=Sing	13	nmod	_	_
+18	Contemporânea	Contemporânea	PROPN	_	Number=Sing	17	flat:name	_	_
 19-20	do	_	_	_	_	_	_	_	_
 19	de	de	ADP	_	_	21	case	_	_
 20	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	21	det	_	_
-21	Brasil	Brasil	PROPN	_	Gender=Masc|Number=Sing	13	nmod	_	_
+21	Brasil	Brasil	PROPN	_	Gender=Masc|Number=Sing	17	nmod	_	_
 22	(	(	PUNCT	_	_	23	punct	_	SpaceAfter=No
-23	Cpdoc	Cpdoc	PROPN	_	Gender=Masc|Number=Sing	13	appos	_	SpaceAfter=No
+23	Cpdoc	Cpdoc	PROPN	_	Gender=Masc|Number=Sing	11	appos	_	SpaceAfter=No
 24	)	)	PUNCT	_	_	23	punct	_	_
 25-26	da	_	_	_	_	_	_	_	_
 25	de	de	ADP	_	_	27	case	_	_
 26	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	27	det	_	_
-27	Fundação	Fundação	PROPN	_	Gender=Fem|Number=Sing	11	nmod	_	_
+27	Fundação	Fundação	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	11	nmod	_	_
 28	Getulio	Getulio	PROPN	_	Number=Sing	27	flat:name	_	_
 29	Vargas	Vargas	PROPN	_	Number=Sing	27	flat:name	_	SpaceAfter=No
 30	.	.	PUNCT	_	_	6	punct	_	SpacesAfter=\n

@@ -1,12 +1,15 @@
-# text = «Álvaro Goulart de Oliveira» nasceu no Rio de Janeiro, então capital do Império, no dia 4 de setembro de 1882.
-# sent_id = 1
-# newpar
+# generator = UDPipe 2, https://lindat.mff.cuni.cz/services/udpipe
+# udpipe_model = portuguese-bosque-ud-2.12-230717
+# udpipe_model_licence = CC BY-NC-SA
 # newdoc
+# newpar
+# sent_id = 1
+# text = «Álvaro Goulart de Oliveira» nasceu no Rio de Janeiro, então capital do Império, no dia 4 de setembro de 1882.
 1	«	«	PUNCT	_	_	2	punct	_	SpaceAfter=No
-2	Álvaro	Álvaro	PROPN	_	Gender=Masc|Number=Sing	7	nsubj	_	_
+2	Álvaro	Álvaro	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	7	nsubj	_	_
 3	Goulart	Goulart	PROPN	_	Number=Sing	2	flat:name	_	_
 4	de	de	ADP	_	_	5	case	_	_
-5	Oliveira	Oliveira	PROPN	_	Number=Sing	2	flat:name	_	SpaceAfter=No
+5	Oliveira	Oliveira	PROPN	_	Number=Sing	2	nmod	_	SpaceAfter=No
 6	»	»	PUNCT	_	_	2	punct	_	_
 7	nasceu	nascer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 8-9	no	_	_	_	_	_	_	_	_
@@ -14,7 +17,7 @@
 9	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	10	det	_	_
 10	Rio	Rio	PROPN	_	Gender=Masc|Number=Sing	7	obl	_	_
 11	de	de	ADP	_	_	12	case	_	_
-12	Janeiro	Janeiro	PROPN	_	Number=Sing	10	flat:name	_	SpaceAfter=No
+12	Janeiro	Janeiro	PROPN	_	Number=Sing	10	nmod	_	SpaceAfter=No
 13	,	,	PUNCT	_	_	15	punct	_	_
 14	então	então	ADV	_	_	15	advmod	_	_
 15	capital	capital	NOUN	_	Gender=Masc|Number=Sing	10	appos	_	_
@@ -26,7 +29,7 @@
 20-21	no	_	_	_	_	_	_	_	_
 20	em	em	ADP	_	_	22	case	_	_
 21	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	22	det	_	_
-22	dia	dia	NOUN	_	Gender=Masc|Number=Sing	15	nmod	_	_
+22	dia	dia	NOUN	_	Gender=Masc|Number=Sing	7	obl	_	_
 23	4	4	NUM	_	NumType=Card	22	nummod	_	_
 24	de	de	ADP	_	_	25	case	_	_
 25	setembro	setembro	NOUN	_	Gender=Masc|Number=Sing	22	nmod	_	_
@@ -34,8 +37,8 @@
 27	1882	1882	NUM	_	NumType=Card	25	nmod	_	SpaceAfter=No
 28	.	.	PUNCT	_	_	7	punct	_	SpacesAfter=\n
 
-# text = Concluiu os estudos de humanidades no Ginásio Nacional, atual Colégio Pedro II, bacharelando-se depois pela Faculdade Livre de Ciências Jurídicas do Rio de Janeiro.
 # sent_id = 2
+# text = Concluiu os estudos de humanidades no Ginásio Nacional, atual Colégio Pedro II, bacharelando-se depois pela Faculdade Livre de Ciências Jurídicas do Rio de Janeiro.
 1	Concluiu	concluir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	3	det	_	_
 3	estudos	estudo	NOUN	_	Gender=Masc|Number=Plur	1	obj	_	_
@@ -44,14 +47,14 @@
 6-7	no	_	_	_	_	_	_	_	_
 6	em	em	ADP	_	_	8	case	_	_
 7	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	8	det	_	_
-8	Ginásio	Ginásio	PROPN	_	Gender=Masc|Number=Sing	1	obl	_	_
+8	Ginásio	Ginásio	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	1	obl	_	_
 9	Nacional	Nacional	PROPN	_	Number=Sing	8	flat:name	_	SpaceAfter=No
 10	,	,	PUNCT	_	_	12	punct	_	_
 11	atual	atual	ADJ	_	Gender=Masc|Number=Sing	12	amod	_	_
-12	Colégio	colégio	NOUN	_	Gender=Masc|Number=Sing	8	conj	_	_
-13	Pedro	Pedro	PROPN	_	Gender=Masc|Number=Sing	12	appos	_	_
-14	II	II	PROPN	_	Number=Sing	13	flat:name	_	SpaceAfter=No
-15	,	,	PUNCT	_	_	16	punct	_	_
+12	Colégio	Colégio	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	8	appos	_	_
+13	Pedro	Pedro	PROPN	_	Number=Sing	12	flat:name	_	_
+14	II	II	PROPN	_	Number=Sing	12	flat:name	_	SpaceAfter=No
+15	,	,	PUNCT	_	_	12	punct	_	_
 16-17	bacharelando-se	_	_	_	_	_	_	_	_
 16	bacharelando	bacharelar	VERB	_	VerbForm=Ger	1	advcl	_	_
 17	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	16	expl	_	_
@@ -59,10 +62,10 @@
 19-20	pela	_	_	_	_	_	_	_	_
 19	por	por	ADP	_	_	21	case	_	_
 20	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	21	det	_	_
-21	Faculdade	faculdade	PROPN	_	Gender=Fem|Number=Sing	16	obl:agent	_	_
+21	Faculdade	Faculdade	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	16	obl	_	_
 22	Livre	Livre	PROPN	_	Number=Sing	21	flat:name	_	_
 23	de	de	ADP	_	_	24	case	_	_
-24	Ciências	Ciências	PROPN	_	Number=Sing	21	nmod	_	_
+24	Ciências	Ciências	PROPN	_	ExtPos=PROPN|Number=Sing	21	nmod	_	_
 25	Jurídicas	Jurídicas	PROPN	_	Number=Sing	24	flat:name	_	_
 26-27	do	_	_	_	_	_	_	_	_
 26	de	de	ADP	_	_	28	case	_	_
@@ -72,10 +75,10 @@
 30	Janeiro	Janeiro	PROPN	_	Number=Sing	28	nmod	_	SpaceAfter=No
 31	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
 
-# text = Ainda jovem, trabalhou no jornal Correio da Manhã, onde foi crítico de arte e redator da crônica judiciária.
 # sent_id = 3
+# text = Ainda jovem, trabalhou no jornal Correio da Manhã, onde foi crítico de arte e redator da crônica judiciária.
 1	Ainda	ainda	ADV	_	_	2	advmod	_	_
-2	jovem	jovem	ADJ	_	Gender=Masc|Number=Sing	4	amod	_	SpaceAfter=No
+2	jovem	jovem	ADJ	_	Gender=Masc|Number=Sing	4	obl	_	SpaceAfter=No
 3	,	,	PUNCT	_	_	2	punct	_	_
 4	trabalhou	trabalhar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 5-6	no	_	_	_	_	_	_	_	_
@@ -86,31 +89,31 @@
 9-10	da	_	_	_	_	_	_	_	_
 9	de	de	ADP	_	_	11	case	_	_
 10	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	11	det	_	_
-11	Manhã	manhã	PROPN	_	Number=Sing	7	nmod	_	SpaceAfter=No
+11	Manhã	Manhã	PROPN	_	Number=Sing	8	nmod	_	SpaceAfter=No
 12	,	,	PUNCT	_	_	15	punct	_	_
 13	onde	onde	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	15	obl	_	_
 14	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	15	cop	_	_
-15	crítico	crítico	ADJ	_	Gender=Masc|Number=Sing	7	acl:relcl	_	_
+15	crítico	crítico	NOUN	_	Gender=Masc|Number=Sing	7	acl:relcl	_	_
 16	de	de	ADP	_	_	17	case	_	_
-17	arte	arte	NOUN	_	Gender=Fem|Number=Sing	15	obl	_	_
+17	arte	arte	NOUN	_	Gender=Fem|Number=Sing	15	nmod	_	_
 18	e	e	CCONJ	_	_	19	cc	_	_
-19	redator	redator	NOUN	_	Gender=Masc|Number=Sing	17	conj	_	_
+19	redator	redator	NOUN	_	Gender=Masc|Number=Sing	15	conj	_	_
 20-21	da	_	_	_	_	_	_	_	_
 20	de	de	ADP	_	_	22	case	_	_
 21	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	22	det	_	_
-22	crônica	crônica	NOUN	_	Gender=Fem|Number=Sing	17	nmod	_	_
+22	crônica	crônica	NOUN	_	Gender=Fem|Number=Sing	19	nmod	_	_
 23	judiciária	judiciário	ADJ	_	Gender=Fem|Number=Sing	22	amod	_	SpaceAfter=No
-24	.	.	PUNCT	_	_	4	punct	_	SpacesAfter=\n
+24	.	.	PUNCT	_	_	4	punct	_	_
 
-# text = Iniciou sua carreira no Judiciário como adjunto de promotor, tornando-se posteriormente promotor e curador.
 # sent_id = 4
+# text = Iniciou sua carreira no Judiciário como adjunto de promotor, tornando-se posteriormente promotor e curador.
 1	Iniciou	iniciar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2	sua	seu	DET	_	Gender=Fem|Number=Sing|PronType=Prs	3	det	_	_
 3	carreira	carreira	NOUN	_	Gender=Fem|Number=Sing	1	obj	_	_
 4-5	no	_	_	_	_	_	_	_	_
 4	em	em	ADP	_	_	6	case	_	_
 5	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	6	det	_	_
-6	Judiciário	judiciário	PROPN	_	Gender=Masc|Number=Sing	1	obl	_	_
+6	Judiciário	Judiciário	PROPN	_	Gender=Masc|Number=Sing	1	obl	_	_
 7	como	como	ADP	_	_	8	case	_	_
 8	adjunto	adjunto	NOUN	_	Gender=Masc|Number=Sing	1	xcomp	_	_
 9	de	de	ADP	_	_	10	case	_	_
@@ -119,14 +122,14 @@
 12-13	tornando-se	_	_	_	_	_	_	_	_
 12	tornando	tornar	VERB	_	VerbForm=Ger	1	advcl	_	_
 13	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	12	expl	_	_
-14	posteriormente	posteriormente	ADV	_	_	15	advmod	_	_
-15	promotor	promotor	ADJ	_	Gender=Masc|Number=Sing	12	xcomp	_	_
+14	posteriormente	posteriormente	ADV	_	_	12	advmod	_	_
+15	promotor	promotor	NOUN	_	Gender=Masc|Number=Sing	12	xcomp	_	_
 16	e	e	CCONJ	_	_	17	cc	_	_
-17	curador	curador	ADJ	_	Gender=Masc|Number=Sing	12	conj	_	SpaceAfter=No
-18	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
+17	curador	curador	NOUN	_	Gender=Masc|Number=Sing	15	conj	_	SpaceAfter=No
+18	.	.	PUNCT	_	_	1	punct	_	_
 
-# text = Foi um dos procuradores do Tribunal Especial, primeiro órgão da justiça revolucionária instaurado após a Revolução de 1930 com a finalidade de apurar e julgar os atos da administração de Washington Luís (1926-1930).
 # sent_id = 5
+# text = Foi um dos procuradores do Tribunal Especial, primeiro órgão da justiça revolucionária instaurado após a Revolução de 1930 com a finalidade de apurar e julgar os atos da administração de Washington Luís (1926-1930).
 1	Foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	cop	_	_
 2	um	um	NUM	_	NumType=Card	0	root	_	_
 3-4	dos	_	_	_	_	_	_	_	_
@@ -136,7 +139,7 @@
 6-7	do	_	_	_	_	_	_	_	_
 6	de	de	ADP	_	_	8	case	_	_
 7	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	8	det	_	_
-8	Tribunal	Tribunal	PROPN	_	Gender=Masc|Number=Sing	5	nmod	_	_
+8	Tribunal	Tribunal	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	5	nmod	_	_
 9	Especial	Especial	PROPN	_	Number=Sing	8	flat:name	_	SpaceAfter=No
 10	,	,	PUNCT	_	_	12	punct	_	_
 11	primeiro	primeiro	ADJ	_	Gender=Masc|Number=Sing|NumType=Ord	12	amod	_	_
@@ -146,15 +149,15 @@
 14	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	15	det	_	_
 15	justiça	justiça	NOUN	_	Gender=Fem|Number=Sing	12	nmod	_	_
 16	revolucionária	revolucionário	ADJ	_	Gender=Fem|Number=Sing	15	amod	_	_
-17	instaurado	instaurar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	15	acl	_	_
+17	instaurado	instaurar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	12	acl	_	_
 18	após	após	ADP	_	_	20	case	_	_
 19	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	20	det	_	_
-20	Revolução	Revolução	NOUN	_	Gender=Fem|Number=Sing	17	obl	_	_
+20	Revolução	revolução	NOUN	_	Gender=Fem|Number=Sing	17	obl	_	_
 21	de	de	ADP	_	_	22	case	_	_
 22	1930	1930	NUM	_	NumType=Card	20	nmod	_	_
 23	com	com	ADP	_	_	25	case	_	_
 24	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	25	det	_	_
-25	finalidade	finalidade	NOUN	_	Gender=Fem|Number=Sing	22	nmod	_	_
+25	finalidade	finalidade	NOUN	_	Gender=Fem|Number=Sing	17	obl	_	_
 26	de	de	SCONJ	_	_	27	mark	_	_
 27	apurar	apurar	VERB	_	VerbForm=Inf	25	acl	_	_
 28	e	e	CCONJ	_	_	29	cc	_	_
@@ -166,42 +169,42 @@
 33	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	34	det	_	_
 34	administração	administração	NOUN	_	Gender=Fem|Number=Sing	31	nmod	_	_
 35	de	de	ADP	_	_	36	case	_	_
-36	Washington	Washington	PROPN	_	Gender=Masc|Number=Sing	34	nmod	_	_
+36	Washington	Washington	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	34	nmod	_	_
 37	Luís	Luís	PROPN	_	Number=Sing	36	flat:name	_	_
 38	(	(	PUNCT	_	_	39	punct	_	SpaceAfter=No
-39	1926-1930	1926-1930	NUM	_	NumType=Card	31	appos	_	SpaceAfter=No
+39	1926-1930	1926-1930	NUM	_	NumType=Card	36	parataxis	_	SpaceAfter=No
 40	)	)	PUNCT	_	_	39	punct	_	SpaceAfter=No
-41	.	.	PUNCT	_	_	2	punct	_	SpacesAfter=\n
+41	.	.	PUNCT	_	_	2	punct	_	_
 
-# text = Ao julgarem a proibição de saída de Artur Bernardes do país, os juízes e procuradores do Tribunal Especial se desentenderam, o que determinou, em 6 de março de 1931, um pedido de demissão coletivo.
 # sent_id = 6
+# text = Ao julgarem a proibição de saída de Artur Bernardes do país, os juízes e procuradores do Tribunal Especial se desentenderam, o que determinou, em 6 de março de 1931, um pedido de demissão coletivo.
 1-2	Ao	_	_	_	_	_	_	_	_
 1	A	a	SCONJ	_	_	3	mark	_	_
 2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
-3	julgarem	julgar	VERB	_	Number=Plur|Person=3|VerbForm=Inf	0	root	_	_
+3	julgarem	julgar	VERB	_	Number=Plur|Person=3|VerbForm=Inf	24	advcl	_	_
 4	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	5	det	_	_
 5	proibição	proibição	NOUN	_	Gender=Fem|Number=Sing	3	obj	_	_
 6	de	de	ADP	_	_	7	case	_	_
 7	saída	saída	NOUN	_	Gender=Fem|Number=Sing	5	nmod	_	_
 8	de	de	ADP	_	_	9	case	_	_
-9	Artur	Artur	PROPN	_	Gender=Masc|Number=Sing	7	nmod	_	_
+9	Artur	Artur	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	7	nmod	_	_
 10	Bernardes	Bernardes	PROPN	_	Number=Sing	9	flat:name	_	_
 11-12	do	_	_	_	_	_	_	_	_
 11	de	de	ADP	_	_	13	case	_	_
 12	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	13	det	_	_
-13	país	país	NOUN	_	Gender=Masc|Number=Sing	9	nmod	_	SpaceAfter=No
-14	,	,	PUNCT	_	_	16	punct	_	_
+13	país	país	NOUN	_	Gender=Masc|Number=Sing	7	nmod	_	SpaceAfter=No
+14	,	,	PUNCT	_	_	3	punct	_	_
 15	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	16	det	_	_
-16	juízes	juíz	NOUN	_	Gender=Masc|Number=Plur	24	nsubj	_	_
+16	juízes	juiz	NOUN	_	Gender=Masc|Number=Plur	24	nsubj	_	_
 17	e	e	CCONJ	_	_	18	cc	_	_
 18	procuradores	procurador	NOUN	_	Gender=Masc|Number=Plur	16	conj	_	_
 19-20	do	_	_	_	_	_	_	_	_
 19	de	de	ADP	_	_	21	case	_	_
 20	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	21	det	_	_
-21	Tribunal	tribunal	NOUN	_	Gender=Masc|Number=Sing	18	nmod	_	_
-22	Especial	especial	ADV	_	_	24	advmod	_	_
+21	Tribunal	Tribunal	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	18	nmod	_	_
+22	Especial	Especial	PROPN	_	Number=Sing	21	flat:name	_	_
 23	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Plur|Person=3|PronType=Prs	24	expl	_	_
-24	desentenderam	desentender	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	9	acl:relcl	_	SpaceAfter=No
+24	desentenderam	desentender	VERB	_	Mood=Ind|Number=Plur|Person=3|VerbForm=Fin	0	root	_	SpaceAfter=No
 25	,	,	PUNCT	_	_	24	punct	_	_
 26	o	o	PRON	_	Gender=Masc|Number=Sing|PronType=Dem	24	appos	_	_
 27	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	28	nsubj	_	_
@@ -213,16 +216,16 @@
 33	março	março	NOUN	_	Gender=Masc|Number=Sing	31	nmod	_	_
 34	de	de	ADP	_	_	35	case	_	_
 35	1931	1931	NUM	_	NumType=Card	33	nmod	_	SpaceAfter=No
-36	,	,	PUNCT	_	_	38	punct	_	_
+36	,	,	PUNCT	_	_	28	punct	_	_
 37	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	38	det	_	_
-38	pedido	pedido	NOUN	_	Gender=Masc|Number=Sing	26	appos	_	_
+38	pedido	pedido	NOUN	_	Gender=Masc|Number=Sing	28	obj	_	_
 39	de	de	ADP	_	_	40	case	_	_
 40	demissão	demissão	NOUN	_	Gender=Fem|Number=Sing	38	nmod	_	_
 41	coletivo	coletivo	ADJ	_	Gender=Masc|Number=Sing	40	amod	_	SpaceAfter=No
-42	.	.	PUNCT	_	_	3	punct	_	SpacesAfter=\n
+42	.	.	PUNCT	_	_	24	punct	_	_
 
-# text = O episódio levou à dissolução do tribunal, cujas funções passaram à Junta das Sanções, criada em 28 de março seguinte.
 # sent_id = 7
+# text = O episódio levou à dissolução do tribunal, cujas funções passaram à Junta das Sanções, criada em 28 de março seguinte.
 1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	_	_
 2	episódio	episódio	NOUN	_	Gender=Masc|Number=Sing	3	nsubj	_	_
 3	levou	levar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
@@ -237,40 +240,40 @@
 10	,	,	PUNCT	_	_	13	punct	_	_
 11	cujas	cujo	DET	_	Gender=Fem|Number=Plur|PronType=Rel	12	det	_	_
 12	funções	função	NOUN	_	Gender=Fem|Number=Plur	13	nsubj	_	_
-13	passaram	passar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	6	acl:relcl	_	_
+13	passaram	passar	VERB	_	Mood=Ind|Number=Plur|Person=3|VerbForm=Fin	9	acl:relcl	_	_
 14-15	à	_	_	_	_	_	_	_	_
 14	a	a	ADP	_	_	16	case	_	_
 15	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	16	det	_	_
-16	Junta	Junta	NOUN	_	Gender=Fem|Number=Sing	13	obj	_	_
+16	Junta	Junta	PROPN	_	Gender=Fem|Number=Sing	13	obj	_	_
 17-18	das	_	_	_	_	_	_	_	_
 17	de	de	ADP	_	_	19	case	_	_
 18	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	19	det	_	_
-19	Sanções	sanção	NOUN	_	Gender=Fem|Number=Plur	16	nmod	_	SpaceAfter=No
+19	Sanções	Sanções	PROPN	_	Number=Sing	16	nmod	_	SpaceAfter=No
 20	,	,	PUNCT	_	_	21	punct	_	_
-21	criada	criar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	13	advcl	_	_
+21	criada	criar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	16	acl	_	_
 22	em	em	ADP	_	_	23	case	_	_
 23	28	28	NUM	_	NumType=Card	21	obl	_	_
 24	de	de	ADP	_	_	25	case	_	_
 25	março	março	NOUN	_	Gender=Masc|Number=Sing	23	nmod	_	_
 26	seguinte	seguinte	ADJ	_	Gender=Masc|Number=Sing	25	amod	_	SpaceAfter=No
-27	.	.	PUNCT	_	_	3	punct	_	SpacesAfter=\n
+27	.	.	PUNCT	_	_	3	punct	_	_
 
-# text = Ainda em 1931, Álvaro de Oliveira chegou a procurador-geral do Distrito Federal e, em 1933, assumiu o cargo de desembargador do Tribunal de Apelação do Distrito Federal, do qual foi vice-presidente e presidente no biênio de 1941-1942.
 # sent_id = 8
+# text = Ainda em 1931, Álvaro de Oliveira chegou a procurador-geral do Distrito Federal e, em 1933, assumiu o cargo de desembargador do Tribunal de Apelação do Distrito Federal, do qual foi vice-presidente e presidente no biênio de 1941-1942.
 1	Ainda	ainda	ADV	_	_	3	advmod	_	_
-2	em	em	ADP	_	_	1	fixed	_	_
-3	1931	1931	NUM	_	NumType=Card	5	acl	_	SpaceAfter=No
+2	em	em	ADP	_	_	3	case	_	_
+3	1931	1931	NUM	_	NumType=Card	8	obl	_	SpaceAfter=No
 4	,	,	PUNCT	_	_	3	punct	_	_
 5	Álvaro	Álvaro	PROPN	_	Gender=Masc|Number=Sing	8	nsubj	_	_
 6	de	de	ADP	_	_	7	case	_	_
 7	Oliveira	Oliveira	PROPN	_	Number=Sing	5	nmod	_	_
 8	chegou	chegar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 9	a	a	ADP	_	_	10	case	_	_
-10	procurador-geral	procurador-geral	NOUN	_	Gender=Masc|Number=Sing	8	obj	_	_
+10	procurador-geral	procurador-geral	NOUN	_	Gender=Masc|Number=Sing	8	obl	_	_
 11-12	do	_	_	_	_	_	_	_	_
 11	de	de	ADP	_	_	13	case	_	_
 12	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	13	det	_	_
-13	Distrito	Distrito	PROPN	_	Gender=Masc|Number=Sing	10	nmod	_	_
+13	Distrito	Distrito	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	10	nmod	_	_
 14	Federal	Federal	PROPN	_	Number=Sing	13	flat:name	_	_
 15	e	e	CCONJ	_	_	20	cc	_	SpaceAfter=No
 16	,	,	PUNCT	_	_	18	punct	_	_
@@ -291,39 +294,39 @@
 30-31	do	_	_	_	_	_	_	_	_
 30	de	de	ADP	_	_	32	case	_	_
 31	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	32	det	_	_
-32	Distrito	Distrito	PROPN	_	Gender=Masc|Number=Sing	22	nmod	_	_
+32	Distrito	Distrito	PROPN	_	Number=Sing	29	nmod	_	_
 33	Federal	Federal	PROPN	_	Number=Sing	32	flat:name	_	SpaceAfter=No
-34	,	,	PUNCT	_	_	37	punct	_	_
+34	,	,	PUNCT	_	_	39	punct	_	_
 35-36	do	_	_	_	_	_	_	_	_
 35	de	de	ADP	_	_	37	case	_	_
 36	o	o	DET	_	Gender=Masc|Number=Sing|PronType=Art	37	det	_	_
-37	qual	qual	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	39	nsubj	_	_
+37	qual	qual	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	39	nmod	_	_
 38	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	39	cop	_	_
-39	vice-presidente	vice-presidente	NOUN	_	Gender=Masc|Number=Sing	32	acl:relcl	_	_
+39	vice-presidente	vice-presidente	NOUN	_	Gender=Masc|Number=Sing	27	acl:relcl	_	_
 40	e	e	CCONJ	_	_	41	cc	_	_
 41	presidente	presidente	NOUN	_	Gender=Masc|Number=Sing	39	conj	_	_
 42-43	no	_	_	_	_	_	_	_	_
 42	em	em	ADP	_	_	44	case	_	_
 43	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	44	det	_	_
-44	biênio	biênio	NOUN	_	Gender=Masc|Number=Sing	41	nmod	_	_
+44	biênio	biênio	NOUN	_	Gender=Masc|Number=Sing	39	nmod	_	_
 45	de	de	ADP	_	_	46	case	_	_
 46	1941-1942	1941-1942	NUM	_	NumType=Card	44	nmod	_	SpaceAfter=No
 47	.	.	PUNCT	_	_	8	punct	_	SpacesAfter=\n
 
-# text = Nomeado ministro do Supremo Tribunal Federal (STF), tomou posse no cargo em 15 de abril de 1942.
 # sent_id = 9
-1	Nomeado	nomear	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	12	nsubj	_	_
-2	ministro	ministro	NOUN	_	Gender=Masc|Number=Sing	1	appos	_	_
+# text = Nomeado ministro do Supremo Tribunal Federal (STF), tomou posse no cargo em 15 de abril de 1942.
+1	Nomeado	nomear	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	12	advcl	_	_
+2	ministro	ministro	NOUN	_	Gender=Masc|Number=Sing	1	obj	_	_
 3-4	do	_	_	_	_	_	_	_	_
 3	de	de	ADP	_	_	5	case	_	_
 4	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	5	det	_	_
-5	Supremo	Supremo	PROPN	_	Gender=Masc|Number=Sing	2	nmod	_	_
+5	Supremo	Supremo	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	2	nmod	_	_
 6	Tribunal	Tribunal	PROPN	_	Number=Sing	5	flat:name	_	_
 7	Federal	Federal	PROPN	_	Number=Sing	5	flat:name	_	_
 8	(	(	PUNCT	_	_	9	punct	_	SpaceAfter=No
 9	STF	STF	PROPN	_	Gender=Masc|Number=Sing	5	appos	_	SpaceAfter=No
 10	)	)	PUNCT	_	_	9	punct	_	SpaceAfter=No
-11	,	,	PUNCT	_	_	2	punct	_	_
+11	,	,	PUNCT	_	_	1	punct	_	_
 12	tomou	tomar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 13	posse	posse	NOUN	_	Gender=Fem|Number=Sing	12	obj	_	_
 14-15	no	_	_	_	_	_	_	_	_
@@ -336,18 +339,18 @@
 20	abril	abril	NOUN	_	Gender=Masc|Number=Sing	18	nmod	_	_
 21	de	de	ADP	_	_	22	case	_	_
 22	1942	1942	NUM	_	NumType=Card	20	nmod	_	SpaceAfter=No
-23	.	.	PUNCT	_	_	12	punct	_	SpacesAfter=\n
+23	.	.	PUNCT	_	_	12	punct	_	_
 
-# text = No decorrer do ano de 1947, participou de julgamentos sobre as constituições dos estados do Ceará, Rio Grande do Sul, Pernambuco, São Paulo (do qual foi relator), Goiás e Alagoas.
 # sent_id = 10
+# text = No decorrer do ano de 1947, participou de julgamentos sobre as constituições dos estados do Ceará, Rio Grande do Sul, Pernambuco, São Paulo (do qual foi relator), Goiás e Alagoas.
 1-2	No	_	_	_	_	_	_	_	_
-1	Em	em	SCONJ	_	_	3	mark	_	_
+1	Em	em	ADP	_	_	3	case	_	_
 2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
-3	decorrer	decorrer	VERB	_	VerbForm=Inf	10	advcl	_	_
+3	decorrer	decorrer	NOUN	_	Gender=Masc|Number=Sing	10	obl	_	_
 4-5	do	_	_	_	_	_	_	_	_
 4	de	de	ADP	_	_	6	case	_	_
 5	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	6	det	_	_
-6	ano	ano	NOUN	_	Gender=Masc|Number=Sing	3	obl	_	_
+6	ano	ano	NOUN	_	Gender=Masc|Number=Sing	3	nmod	_	_
 7	de	de	ADP	_	_	8	case	_	_
 8	1947	1947	NUM	_	NumType=Card	6	nmod	_	SpaceAfter=No
 9	,	,	PUNCT	_	_	3	punct	_	_
@@ -356,7 +359,7 @@
 12	julgamentos	julgamento	NOUN	_	Gender=Masc|Number=Plur	10	obj	_	_
 13	sobre	sobre	ADP	_	_	15	case	_	_
 14	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	15	det	_	_
-15	constituições	constituições	NOUN	_	Gender=Fem|Number=Plur	12	nmod	_	_
+15	constituições	constituição	NOUN	_	Gender=Fem|Number=Plur	12	nmod	_	_
 16-17	dos	_	_	_	_	_	_	_	_
 16	de	de	ADP	_	_	18	case	_	_
 17	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	18	det	_	_
@@ -366,70 +369,70 @@
 20	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	21	det	_	_
 21	Ceará	Ceará	PROPN	_	Gender=Masc|Number=Sing	18	nmod	_	SpaceAfter=No
 22	,	,	PUNCT	_	_	23	punct	_	_
-23	Rio	Rio	PROPN	_	Gender=Masc|Number=Sing	15	conj	_	_
+23	Rio	Rio	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	21	conj	_	_
 24	Grande	Grande	PROPN	_	Number=Sing	23	flat:name	_	_
 25-26	do	_	_	_	_	_	_	_	_
 25	de	de	ADP	_	_	27	case	_	_
 26	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	27	det	_	_
 27	Sul	Sul	PROPN	_	Number=Sing	23	nmod	_	SpaceAfter=No
 28	,	,	PUNCT	_	_	29	punct	_	_
-29	Pernambuco	Pernambuco	PROPN	_	Gender=Masc|Number=Sing	15	conj	_	SpaceAfter=No
+29	Pernambuco	Pernambuco	PROPN	_	Gender=Masc|Number=Sing	21	conj	_	SpaceAfter=No
 30	,	,	PUNCT	_	_	31	punct	_	_
-31	São	São	PROPN	_	Gender=Masc|Number=Sing	38	conj	_	_
+31	São	São	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	21	conj	_	_
 32	Paulo	Paulo	PROPN	_	Number=Sing	31	flat:name	_	_
-33	(	(	PUNCT	_	_	36	punct	_	SpaceAfter=No
+33	(	(	PUNCT	_	_	38	punct	_	SpaceAfter=No
 34-35	do	_	_	_	_	_	_	_	_
 34	de	de	ADP	_	_	36	case	_	_
 35	o	o	DET	_	Gender=Masc|Number=Sing|PronType=Art	36	det	_	_
 36	qual	qual	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	38	nmod	_	_
 37	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	38	cop	_	_
-38	relator	relator	NOUN	_	Gender=Masc|Number=Sing	15	conj	_	SpaceAfter=No
-39	)	)	PUNCT	_	_	10	punct	_	SpaceAfter=No
+38	relator	relator	NOUN	_	Gender=Masc|Number=Sing	31	acl:relcl	_	SpaceAfter=No
+39	)	)	PUNCT	_	_	38	punct	_	SpaceAfter=No
 40	,	,	PUNCT	_	_	41	punct	_	_
-41	Goiás	Goiás	PROPN	_	Gender=Masc|Number=Sing	10	parataxis	_	_
+41	Goiás	Goiás	PROPN	_	Gender=Masc|Number=Sing	21	conj	_	_
 42	e	e	CCONJ	_	_	43	cc	_	_
-43	Alagoas	Alagoas	PROPN	_	Gender=Masc|Number=Sing	10	conj	_	SpaceAfter=No
-44	.	.	PUNCT	_	_	10	punct	_	SpacesAfter=\n
+43	Alagoas	Alagoas	PROPN	_	Gender=Masc|Number=Sing	21	conj	_	SpaceAfter=No
+44	.	.	PUNCT	_	_	10	punct	_	_
 
-# text = Ainda no mesmo ano, tomou parte nos julgamentos do STF relativos à acusação de homicídio contra o desembargador Edgar Joaquim de Sousa Carneiro, à fixação do número dos juízes, dos tribunais de Justiça e à ordem de habeas-corpus requerida pelos dirigentes do Partido Comunista Brasileiro, então Partido Comunista do Brasil (PCB), após o cancelamento do registro da agremiação.
 # sent_id = 11
-1	Ainda	ainda	ADV	_	_	7	advmod	_	_
+# text = Ainda no mesmo ano, tomou parte nos julgamentos do STF relativos à acusação de homicídio contra o desembargador Edgar Joaquim de Sousa Carneiro, à fixação do número dos juízes, dos tribunais de Justiça e à ordem de habeas-corpus requerida pelos dirigentes do Partido Comunista Brasileiro, então Partido Comunista do Brasil (PCB), após o cancelamento do registro da agremiação.
+1	Ainda	ainda	ADV	_	_	5	advmod	_	_
 2-3	no	_	_	_	_	_	_	_	_
 2	em	em	ADP	_	_	5	case	_	_
 3	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	5	det	_	_
 4	mesmo	mesmo	ADJ	_	Gender=Masc|Number=Sing	5	amod	_	_
-5	ano	ano	NOUN	_	Gender=Masc|Number=Sing	1	obl	_	SpaceAfter=No
-6	,	,	PUNCT	_	_	1	punct	_	_
+5	ano	ano	NOUN	_	Gender=Masc|Number=Sing	7	obl	_	SpaceAfter=No
+6	,	,	PUNCT	_	_	5	punct	_	_
 7	tomou	tomar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 8	parte	parte	NOUN	_	Gender=Fem|Number=Sing	7	obj	_	_
 9-10	nos	_	_	_	_	_	_	_	_
 9	em	em	ADP	_	_	11	case	_	_
 10	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	11	det	_	_
-11	julgamentos	julgamento	NOUN	_	Gender=Masc|Number=Plur	8	nmod	_	_
+11	julgamentos	julgamento	NOUN	_	Gender=Masc|Number=Plur	7	obl	_	_
 12-13	do	_	_	_	_	_	_	_	_
 12	de	de	ADP	_	_	14	case	_	_
 13	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	14	det	_	_
 14	STF	STF	PROPN	_	Gender=Masc|Number=Sing	11	nmod	_	_
-15	relativos	relativo	ADJ	_	Gender=Masc|Number=Plur	14	amod	_	_
+15	relativos	relativo	ADJ	_	Gender=Masc|Number=Plur	11	amod	_	_
 16-17	à	_	_	_	_	_	_	_	_
 16	a	a	ADP	_	_	18	case	_	_
 17	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	18	det	_	_
-18	acusação	acusação	NOUN	_	Gender=Fem|Number=Sing	14	nmod	_	_
+18	acusação	acusação	NOUN	_	Gender=Fem|Number=Sing	15	obl	_	_
 19	de	de	ADP	_	_	20	case	_	_
 20	homicídio	homicídio	NOUN	_	Gender=Masc|Number=Sing	18	nmod	_	_
 21	contra	contra	ADP	_	_	23	case	_	_
 22	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	23	det	_	_
-23	desembargador	desembargador	NOUN	_	Gender=Masc|Number=Sing	7	obl	_	_
-24	Edgar	Edgar	PROPN	_	Gender=Masc|Number=Sing	23	appos	_	_
+23	desembargador	desembargador	NOUN	_	Gender=Masc|Number=Sing	20	nmod	_	_
+24	Edgar	Edgar	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	23	appos	_	_
 25	Joaquim	Joaquim	PROPN	_	Number=Sing	24	flat:name	_	_
 26	de	de	ADP	_	_	27	case	_	_
-27	Sousa	Sousa	PROPN	_	Number=Sing	24	nmod	_	_
+27	Sousa	Sousa	PROPN	_	ExtPos=PROPN|Number=Sing	24	nmod	_	_
 28	Carneiro	Carneiro	PROPN	_	Number=Sing	27	flat:name	_	SpaceAfter=No
 29	,	,	PUNCT	_	_	32	punct	_	_
 30-31	à	_	_	_	_	_	_	_	_
 30	a	a	ADP	_	_	32	case	_	_
 31	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	32	det	_	_
-32	fixação	fixação	NOUN	_	Gender=Fem|Number=Sing	23	nmod	_	_
+32	fixação	fixação	NOUN	_	Gender=Fem|Number=Sing	18	conj	_	_
 33-34	do	_	_	_	_	_	_	_	_
 33	de	de	ADP	_	_	35	case	_	_
 34	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	35	det	_	_
@@ -437,22 +440,22 @@
 36-37	dos	_	_	_	_	_	_	_	_
 36	de	de	ADP	_	_	38	case	_	_
 37	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	38	det	_	_
-38	juízes	juíz	NOUN	_	Gender=Masc|Number=Plur	35	nmod	_	SpaceAfter=No
-39	,	,	PUNCT	_	_	32	punct	_	_
+38	juízes	juiz	NOUN	_	Gender=Masc|Number=Plur	35	nmod	_	SpaceAfter=No
+39	,	,	PUNCT	_	_	42	punct	_	_
 40-41	dos	_	_	_	_	_	_	_	_
 40	de	de	ADP	_	_	42	case	_	_
 41	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	42	det	_	_
-42	tribunais	tribunal	NOUN	_	Gender=Masc|Number=Plur	23	nmod	_	_
+42	tribunais	tribunal	NOUN	_	Gender=Masc|Number=Plur	35	conj	_	_
 43	de	de	ADP	_	_	44	case	_	_
-44	Justiça	Justiça	NOUN	_	Gender=Fem|Number=Sing	42	nmod	_	_
+44	Justiça	justiça	PROPN	_	Gender=Fem|Number=Sing	42	nmod	_	_
 45	e	e	CCONJ	_	_	48	cc	_	_
 46-47	à	_	_	_	_	_	_	_	_
 46	a	a	ADP	_	_	48	case	_	_
 47	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	48	det	_	_
-48	ordem	ordem	NOUN	_	Gender=Fem|Number=Sing	42	conj	_	_
+48	ordem	ordem	NOUN	_	Gender=Fem|Number=Sing	11	conj	_	_
 49	de	de	ADP	_	_	50	case	_	_
 50	habeas-corpus	habeas-corpus	NOUN	_	Gender=Masc|Number=Sing	48	nmod	_	_
-51	requerida	requerir	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	50	acl	_	_
+51	requerida	requerer	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	48	acl	_	_
 52-53	pelos	_	_	_	_	_	_	_	_
 52	por	por	ADP	_	_	54	case	_	_
 53	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	54	det	_	_
@@ -460,24 +463,24 @@
 55-56	do	_	_	_	_	_	_	_	_
 55	de	de	ADP	_	_	57	case	_	_
 56	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	57	det	_	_
-57	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	54	nmod	_	_
+57	Partido	Partido	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	54	nmod	_	_
 58	Comunista	Comunista	PROPN	_	Number=Sing	57	flat:name	_	_
-59	Brasileiro	brasileiro	PROPN	_	Number=Sing	57	flat:name	_	SpaceAfter=No
-60	,	,	PUNCT	_	_	7	punct	_	_
+59	Brasileiro	Brasileiro	PROPN	_	Number=Sing	57	flat:name	_	SpaceAfter=No
+60	,	,	PUNCT	_	_	62	punct	_	_
 61	então	então	ADV	_	_	62	advmod	_	_
-62	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	57	appos	_	_
+62	Partido	Partido	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	57	appos	_	_
 63	Comunista	Comunista	PROPN	_	Number=Sing	62	flat:name	_	_
 64-65	do	_	_	_	_	_	_	_	_
 64	de	de	ADP	_	_	66	case	_	_
 65	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	66	det	_	_
-66	Brasil	Brasil	PROPN	_	Gender=Masc|Number=Sing	62	nmod	_	_
+66	Brasil	Brasil	PROPN	_	Number=Sing	62	nmod	_	_
 67	(	(	PUNCT	_	_	68	punct	_	SpaceAfter=No
-68	PCB	PCB	PROPN	_	Gender=Masc|Number=Sing	66	appos	_	SpaceAfter=No
+68	PCB	PCB	PROPN	_	Gender=Masc|Number=Sing	62	appos	_	SpaceAfter=No
 69	)	)	PUNCT	_	_	68	punct	_	SpaceAfter=No
 70	,	,	PUNCT	_	_	73	punct	_	_
 71	após	após	ADP	_	_	73	case	_	_
 72	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	73	det	_	_
-73	cancelamento	cancelamento	NOUN	_	Gender=Masc|Number=Sing	62	nmod	_	_
+73	cancelamento	cancelamento	NOUN	_	Gender=Masc|Number=Sing	51	obl	_	_
 74-75	do	_	_	_	_	_	_	_	_
 74	de	de	ADP	_	_	76	case	_	_
 75	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	76	det	_	_
@@ -486,10 +489,10 @@
 77	de	de	ADP	_	_	79	case	_	_
 78	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	79	det	_	_
 79	agremiação	agremiação	NOUN	_	Gender=Fem|Number=Sing	76	nmod	_	SpaceAfter=No
-80	.	.	PUNCT	_	_	7	punct	_	SpacesAfter=\n
+80	.	.	PUNCT	_	_	7	punct	_	_
 
-# text = Nesse último julgamento, o STF votou por unanimidade contra a concessão de «habeas-corpus».
 # sent_id = 12
+# text = Nesse último julgamento, o STF votou por unanimidade contra a concessão de «habeas-corpus».
 1-2	Nesse	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	4	case	_	_
 2	esse	esse	DET	_	Gender=Masc|Number=Sing|PronType=Dem	4	det	_	_
@@ -500,18 +503,18 @@
 7	STF	STF	PROPN	_	Gender=Masc|Number=Sing	8	nsubj	_	_
 8	votou	votar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 9	por	por	ADP	_	_	10	case	_	_
-10	unanimidade	unanimidade	NOUN	_	Gender=Masc|Number=Sing	8	obl	_	_
+10	unanimidade	unanimidade	NOUN	_	Gender=Fem|Number=Sing	8	obl	_	_
 11	contra	contra	ADP	_	_	13	case	_	_
 12	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	13	det	_	_
-13	concessão	concessão	NOUN	_	Gender=Fem|Number=Sing	10	nmod	_	_
+13	concessão	concessão	NOUN	_	Gender=Fem|Number=Sing	8	obl	_	_
 14	de	de	ADP	_	_	16	case	_	_
 15	«	«	PUNCT	_	_	16	punct	_	SpaceAfter=No
 16	habeas-corpus	habeas-corpus	NOUN	_	Gender=Masc|Number=Sing	13	nmod	_	SpaceAfter=No
 17	»	»	PUNCT	_	_	16	punct	_	SpaceAfter=No
 18	.	.	PUNCT	_	_	8	punct	_	SpacesAfter=\n
 
-# text = Permaneceu no STF até seu falecimento, ocorrido no Rio de Janeiro no dia 28 de maio de 1950.
 # sent_id = 13
+# text = Permaneceu no STF até seu falecimento, ocorrido no Rio de Janeiro no dia 28 de maio de 1950.
 1	Permaneceu	permanecer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2-3	no	_	_	_	_	_	_	_	_
 2	em	em	ADP	_	_	4	case	_	_
@@ -521,13 +524,13 @@
 6	seu	seu	DET	_	Gender=Masc|Number=Sing|PronType=Prs	7	det	_	_
 7	falecimento	falecimento	NOUN	_	Gender=Masc|Number=Sing	1	obl	_	SpaceAfter=No
 8	,	,	PUNCT	_	_	9	punct	_	_
-9	ocorrido	ocorrer	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	1	advcl	_	_
+9	ocorrido	ocorrer	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	7	acl	_	_
 10-11	no	_	_	_	_	_	_	_	_
 10	em	em	ADP	_	_	12	case	_	_
 11	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	12	det	_	_
 12	Rio	Rio	PROPN	_	Gender=Masc|Number=Sing	9	obl	_	_
 13	de	de	ADP	_	_	14	case	_	_
-14	Janeiro	janeiro	PROPN	_	Number=Sing	12	nmod	_	_
+14	Janeiro	Janeiro	PROPN	_	Number=Sing	12	nmod	_	_
 15-16	no	_	_	_	_	_	_	_	_
 15	em	em	ADP	_	_	17	case	_	_
 16	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	17	det	_	_
@@ -539,38 +542,38 @@
 22	1950	1950	NUM	_	NumType=Card	20	nmod	_	SpaceAfter=No
 23	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
 
-# text = Escreveu «Recurso de revista» (1933), «Renovação de contrato» (2v., 1941) e «Rosácea de luz» (poemas, 1942).
 # sent_id = 14
+# text = Escreveu «Recurso de revista» (1933), «Renovação de contrato» (2v., 1941) e «Rosácea de luz» (poemas, 1942).
 1	Escreveu	escrever	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2	«	«	PUNCT	_	_	3	punct	_	SpaceAfter=No
-3	Recurso	recurso	PROPN	_	Gender=Masc|Number=Sing	1	obj	_	_
+3	Recurso	Recurso	PROPN	_	Gender=Masc|Number=Sing	1	obj	_	_
 4	de	de	ADP	_	_	5	case	_	_
-5	revista	revista	PROPN	_	Number=Sing	3	nmod	_	SpaceAfter=No
+5	revista	revista	NOUN	_	Number=Sing	3	nmod	_	SpaceAfter=No
 6	»	»	PUNCT	_	_	3	punct	_	_
 7	(	(	PUNCT	_	_	8	punct	_	SpaceAfter=No
-8	1933	1933	NUM	_	NumType=Card	3	parataxis	_	SpaceAfter=No
+8	1933	1933	NUM	_	NumType=Card	3	nmod	_	SpaceAfter=No
 9	)	)	PUNCT	_	_	8	punct	_	SpaceAfter=No
 10	,	,	PUNCT	_	_	12	punct	_	_
 11	«	«	PUNCT	_	_	12	punct	_	SpaceAfter=No
 12	Renovação	renovação	NOUN	_	Gender=Fem|Number=Sing	3	conj	_	_
 13	de	de	ADP	_	_	14	case	_	_
-14	contrato	contrato	NOUN	_	Gender=Masc|Number=Sing	12	nmod	_	SpaceAfter=No
+14	contrato	contrato	NOUN	_	Number=Sing	12	nmod	_	SpaceAfter=No
 15	»	»	PUNCT	_	_	12	punct	_	_
-16	(	(	PUNCT	_	_	19	punct	_	SpaceAfter=No
-17	2v.	2v.	PUNCT	_	_	19	punct	_	SpaceAfter=No
+16	(	(	PUNCT	_	_	17	punct	_	SpaceAfter=No
+17	2v.	2v.	NOUN	_	Gender=Masc|Number=Sing	3	parataxis	_	SpaceAfter=No
 18	,	,	PUNCT	_	_	19	punct	_	_
-19	1941	1941	NUM	_	NumType=Card	12	parataxis	_	SpaceAfter=No
-20	)	)	PUNCT	_	_	19	punct	_	_
+19	1941	1941	NUM	_	NumType=Card	17	nmod	_	SpaceAfter=No
+20	)	)	PUNCT	_	_	17	punct	_	_
 21	e	e	CCONJ	_	_	23	cc	_	_
 22	«	«	PUNCT	_	_	23	punct	_	SpaceAfter=No
 23	Rosácea	Rosácea	PROPN	_	Gender=Fem|Number=Sing	3	conj	_	_
 24	de	de	ADP	_	_	25	case	_	_
-25	luz	luz	PROPN	_	Number=Sing	23	nmod	_	SpaceAfter=No
+25	luz	luz	NOUN	_	Number=Sing	23	nmod	_	SpaceAfter=No
 26	»	»	PUNCT	_	_	23	punct	_	_
 27	(	(	PUNCT	_	_	28	punct	_	SpaceAfter=No
-28	poemas	poema	NOUN	_	Gender=Masc|Number=Plur	23	appos	_	SpaceAfter=No
+28	poemas	poema	NOUN	_	Gender=Masc|Number=Plur	23	parataxis	_	SpaceAfter=No
 29	,	,	PUNCT	_	_	30	punct	_	_
-30	1942	1942	NUM	_	NumType=Card	28	conj	_	SpaceAfter=No
+30	1942	1942	NUM	_	NumType=Card	28	nmod	_	SpaceAfter=No
 31	)	)	PUNCT	_	_	28	punct	_	SpaceAfter=No
-32	.	.	PUNCT	_	_	3	punct	_	SpacesAfter=\n
+32	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
 

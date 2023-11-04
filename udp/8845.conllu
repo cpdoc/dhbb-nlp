@@ -1,28 +1,17 @@
-# text = «INSTITUTOS DE APOSENTADORIA
+# generator = UDPipe 2, https://lindat.mff.cuni.cz/services/udpipe
+# udpipe_model = portuguese-bosque-ud-2.12-230717
+# udpipe_model_licence = CC BY-NC-SA
+# newdoc
+# newpar
 # sent_id = 1
-# newpar
-# newdoc id = ../raw/8845.raw
-1	«	«	PUNCT	_	_	2	punct	_	SpaceAfter=No|SpacesBefore=\n
-2	INSTITUTOS	Institutos	PROPN	_	Gender=Masc|Number=Plur	0	root	_	_
-3	DE	DE	PROPN	_	_	2	flat:name	_	_
-4	APOSENTADORIA	aposentadoria	PROPN	_	Gender=Fem|Number=Sing	2	flat:name	_	_
-
-# text = E PENSÕES»
-# sent_id = 2
-1	E	e	CCONJ	_	_	2	cc	_	_
-2	PENSÕES	PENSÕES	PROPN	_	Gender=Fem|Number=Plur	0	root	_	SpaceAfter=No
-3	»	»	PUNCT	_	_	2	punct	_	_
-
 # text = Instituições de previdência social surgidas a partir da década de 1930.
-# sent_id = 3
-# newpar
 1	Instituições	instituição	NOUN	_	Gender=Fem|Number=Plur	0	root	_	_
 2	de	de	ADP	_	_	3	case	_	_
 3	previdência	previdência	NOUN	_	Gender=Fem|Number=Sing	1	nmod	_	_
 4	social	social	ADJ	_	Gender=Fem|Number=Sing	3	amod	_	_
 5	surgidas	surgir	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part	1	acl	_	_
 6	a	a	ADP	_	_	7	case	_	_
-7	partir	partir	NOUN	_	_	5	obl	_	_
+7	partir	partir	VERB	_	VerbForm=Inf	5	obl	_	_
 8-9	da	_	_	_	_	_	_	_	_
 8	de	de	ADP	_	_	10	case	_	_
 9	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	10	det	_	_
@@ -31,12 +20,12 @@
 12	1930	1930	NUM	_	NumType=Card	10	nmod	_	SpaceAfter=No
 13	.	.	PUNCT	_	_	1	punct	_	_
 
+# sent_id = 2
 # text = Em 21 de novembro de 1966, todos os institutos que serviam aos trabalhadores do setor privado foram fundidos num único órgão, o Instituto Nacional de Previdência Social (INPS).
-# sent_id = 4
 1	Em	em	ADP	_	_	2	case	_	_
 2	21	21	NUM	_	NumType=Card	21	obl	_	_
 3	de	de	ADP	_	_	4	case	_	_
-4	novembro	novembro	NOUN	_	Gender=Masc|Number=Sing	2	nmod:tmod	_	_
+4	novembro	novembro	NOUN	_	Gender=Masc|Number=Sing	2	nmod	_	_
 5	de	de	ADP	_	_	6	case	_	_
 6	1966	1966	NUM	_	NumType=Card	4	nmod	_	SpaceAfter=No
 7	,	,	PUNCT	_	_	2	punct	_	_
@@ -48,7 +37,7 @@
 13-14	aos	_	_	_	_	_	_	_	_
 13	a	a	ADP	_	_	15	case	_	_
 14	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	15	det	_	_
-15	trabalhadores	trabalhador	NOUN	_	Gender=Masc|Number=Plur	12	obl	_	_
+15	trabalhadores	trabalhador	NOUN	_	Gender=Masc|Number=Plur	12	obj	_	_
 16-17	do	_	_	_	_	_	_	_	_
 16	de	de	ADP	_	_	18	case	_	_
 17	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	18	det	_	_
@@ -63,18 +52,18 @@
 25	órgão	órgão	NOUN	_	Gender=Masc|Number=Sing	21	obl	_	SpaceAfter=No
 26	,	,	PUNCT	_	_	28	punct	_	_
 27	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	28	det	_	_
-28	Instituto	Instituto	PROPN	_	Gender=Masc|Number=Sing	25	appos	_	_
+28	Instituto	Instituto	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	25	appos	_	_
 29	Nacional	Nacional	PROPN	_	Number=Sing	28	flat:name	_	_
 30	de	de	ADP	_	_	31	case	_	_
-31	Previdência	Previdência	PROPN	_	Gender=Fem|Number=Sing	28	nmod	_	_
+31	Previdência	Previdência	PROPN	_	ExtPos=PROPN|Number=Sing	28	nmod	_	_
 32	Social	Social	PROPN	_	Number=Sing	31	flat:name	_	_
 33	(	(	PUNCT	_	_	34	punct	_	SpaceAfter=No
 34	INPS	INPS	PROPN	_	Gender=Masc|Number=Sing	28	appos	_	SpaceAfter=No
 35	)	)	PUNCT	_	_	34	punct	_	SpaceAfter=No
 36	.	.	PUNCT	_	_	21	punct	_	_
 
+# sent_id = 3
 # text = Os funcionários federais tiveram seu instituto absorvido pelo INPS somente em 1º de setembro de 1977, pela Lei nº 6.439, que extinguiu o Instituto de Previdência e Assistência aos Servidores do Estado (IPASE) e instituiu o Sistema Nacional de Previdência e Assistência Social (Sinpas).
-# sent_id = 5
 1	Os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	2	det	_	_
 2	funcionários	funcionário	NOUN	_	Gender=Masc|Number=Plur	4	nsubj	_	_
 3	federais	federal	ADJ	_	Gender=Masc|Number=Plur	2	amod	_	_
@@ -88,56 +77,55 @@
 10	INPS	INPS	PROPN	_	Gender=Masc|Number=Sing	7	obl:agent	_	_
 11	somente	somente	ADV	_	_	13	advmod	_	_
 12	em	em	ADP	_	_	13	case	_	_
-13	1º	1º	ADJ	_	Gender=Masc|Number=Sing|NumType=Ord	4	xcomp	_	_
+13	1º	1º	ADJ	_	Gender=Masc|Number=Sing|NumType=Ord	7	obl	_	_
 14	de	de	ADP	_	_	15	case	_	_
 15	setembro	setembro	NOUN	_	Gender=Masc|Number=Sing	13	obl	_	_
 16	de	de	ADP	_	_	17	case	_	_
 17	1977	1977	NUM	_	NumType=Card	15	nmod	_	SpaceAfter=No
-18	,	,	PUNCT	_	_	13	punct	_	_
+18	,	,	PUNCT	_	_	21	punct	_	_
 19-20	pela	_	_	_	_	_	_	_	_
 19	por	por	ADP	_	_	21	case	_	_
 20	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	21	det	_	_
-21	Lei	lei	NOUN	_	Gender=Fem|Number=Sing	4	obl	_	_
-22	nº	nº	NOUN	_	Gender=Masc|Number=Sing	21	appos	_	_
-23	6.439	6.439	NUM	_	NumType=Card	22	nummod	_	SpaceAfter=No
-24	,	,	PUNCT	_	_	22	punct	_	_
-25	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	26	nsubj	_	_
+21	Lei	lei	NOUN	_	Gender=Fem|Number=Sing	7	obl	_	_
+22	nº	número	NOUN	_	Abbr=Yes|Gender=Masc|Number=Sing	21	nmod	_	_
+23	6.439	6.439	NUM	_	NumType=Card	21	nummod	_	SpaceAfter=No
+24	,	,	PUNCT	_	_	26	punct	_	_
+25	que	que	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	26	nsubj	_	_
 26	extinguiu	extinguir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	21	acl:relcl	_	_
 27	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	28	det	_	_
 28	Instituto	Instituto	PROPN	_	Gender=Masc|Number=Sing	26	obj	_	_
 29	de	de	ADP	_	_	30	case	_	_
-30	Previdência	Previdência	PROPN	_	Gender=Fem|Number=Sing	28	nmod	_	_
-31	e	e	CCONJ	_	_	32	cc	_	_
-32	Assistência	assistência	PROPN	_	Gender=Fem|Number=Sing	30	conj	_	_
+30	Previdência	Previdência	PROPN	_	Number=Sing	28	nmod	_	_
+31	e	e	CCONJ	_	_	30	flat:name	_	_
+32	Assistência	Assistência	PROPN	_	Number=Sing	30	flat:name	_	_
 33-34	aos	_	_	_	_	_	_	_	_
 33	a	a	ADP	_	_	35	case	_	_
 34	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	35	det	_	_
-35	Servidores	Servidores	PROPN	_	Gender=Masc|Number=Plur	26	obl	_	_
+35	Servidores	Servidores	PROPN	_	Number=Sing	30	nmod	_	_
 36-37	do	_	_	_	_	_	_	_	_
 36	de	de	ADP	_	_	38	case	_	_
 37	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	38	det	_	_
-38	Estado	estado	NOUN	_	Gender=Masc|Number=Sing	35	nmod	_	_
+38	Estado	Estado	PROPN	_	Number=Sing	35	nmod	_	_
 39	(	(	PUNCT	_	_	40	punct	_	SpaceAfter=No
-40	IPASE	IPASE	PROPN	_	Gender=Masc|Number=Sing	38	appos	_	SpaceAfter=No
+40	IPASE	IPASE	PROPN	_	Gender=Masc|Number=Sing	28	appos	_	SpaceAfter=No
 41	)	)	PUNCT	_	_	40	punct	_	_
 42	e	e	CCONJ	_	_	43	cc	_	_
 43	instituiu	instituir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	26	conj	_	_
 44	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	45	det	_	_
-45	Sistema	sistema	PROPN	_	Gender=Masc|Number=Sing	43	obj	_	_
+45	Sistema	Sistema	PROPN	_	Gender=Masc|Number=Sing	43	obj	_	_
 46	Nacional	Nacional	PROPN	_	Number=Sing	45	flat:name	_	_
 47	de	de	ADP	_	_	48	case	_	_
-48	Previdência	Previdência	PROPN	_	Gender=Fem|Number=Sing	45	nmod	_	_
+48	Previdência	Previdência	PROPN	_	ExtPos=PROPN|Number=Sing	45	nmod	_	_
 49	e	e	CCONJ	_	_	48	flat:name	_	_
-50	Assistência	assistência	PROPN	_	_	48	flat:name	_	_
-51	Social	Social	PROPN	_	_	48	flat:name	_	_
+50	Assistência	Assistência	PROPN	_	Number=Sing	48	flat:name	_	_
+51	Social	Social	PROPN	_	Number=Sing	48	flat:name	_	_
 52	(	(	PUNCT	_	_	53	punct	_	SpaceAfter=No
-53	Sinpas	Sinpas	PROPN	_	Gender=Masc|Number=Plur	48	appos	_	SpaceAfter=No
+53	Sinpas	Sinpas	PROPN	_	Gender=Masc|Number=Sing	45	appos	_	SpaceAfter=No
 54	)	)	PUNCT	_	_	53	punct	_	SpaceAfter=No
-55	.	.	PUNCT	_	_	4	punct	_	_
+55	.	.	PUNCT	_	_	4	punct	_	SpacesAfter=\n
 
-# text = Desde o início do século — embora sem a garantia de uma implementação real — várias leis e decretos regulando as questões trabalhistas e sociais foram promulgados.
-# sent_id = 6
-# newpar
+# sent_id = 4
+# text = Desde o início do século - embora sem a garantia de uma implementação real - várias leis e decretos regulando as questões trabalhistas e sociais foram promulgados.
 1	Desde	desde	ADP	_	_	3	case	_	_
 2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
 3	início	início	NOUN	_	Gender=Masc|Number=Sing	28	obl	_	_
@@ -145,32 +133,32 @@
 4	de	de	ADP	_	_	6	case	_	_
 5	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	6	det	_	_
 6	século	século	NOUN	_	Gender=Masc|Number=Sing	3	nmod	_	_
-7	—	—	PUNCT	_	_	28	punct	_	_
-8	embora	embora	ADV	_	_	11	advmod	_	_
+7	-	-	PUNCT	_	_	3	punct	_	_
+8	embora	embora	SCONJ	_	_	11	mark	_	_
 9	sem	sem	ADP	_	_	11	case	_	_
 10	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	11	det	_	_
-11	garantia	garantia	NOUN	_	Gender=Fem|Number=Sing	28	nsubj:pass	_	_
+11	garantia	garantia	NOUN	_	Gender=Fem|Number=Sing	28	obl	_	_
 12	de	de	ADP	_	_	14	case	_	_
 13	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	14	det	_	_
 14	implementação	implementação	NOUN	_	Gender=Fem|Number=Sing	11	nmod	_	_
 15	real	real	ADJ	_	Gender=Fem|Number=Sing	14	amod	_	_
-16	—	—	PUNCT	_	_	18	punct	_	_
+16	-	-	PUNCT	_	_	11	punct	_	_
 17	várias	várias	DET	_	Gender=Fem|Number=Plur|PronType=Ind	18	det	_	_
-18	leis	lei	NOUN	_	Gender=Fem|Number=Plur	11	conj	_	_
+18	leis	lei	NOUN	_	Gender=Fem|Number=Plur	28	nsubj:pass	_	_
 19	e	e	CCONJ	_	_	20	cc	_	_
-20	decretos	decreto	NOUN	_	Gender=Masc|Number=Plur	11	conj	_	_
-21	regulando	regular	VERB	_	VerbForm=Ger	20	acl	_	_
+20	decretos	decreto	NOUN	_	Gender=Masc|Number=Plur	18	conj	_	_
+21	regulando	regular	VERB	_	VerbForm=Ger	18	acl	_	_
 22	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	23	det	_	_
 23	questões	questão	NOUN	_	Gender=Fem|Number=Plur	21	obj	_	_
-24	trabalhistas	trabalhista	ADJ	_	Gender=Masc|Number=Plur	23	amod	_	_
+24	trabalhistas	trabalhista	ADJ	_	Gender=Fem|Number=Plur	23	amod	_	_
 25	e	e	CCONJ	_	_	26	cc	_	_
-26	sociais	social	ADJ	_	Gender=Masc|Number=Plur	24	conj	_	_
-27	foram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	28	aux:pass	_	_
+26	sociais	social	ADJ	_	Gender=Fem|Number=Plur	24	conj	_	_
+27	foram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|VerbForm=Fin	28	aux:pass	_	_
 28	promulgados	promulgar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	0	root	_	SpaceAfter=No
 29	.	.	PUNCT	_	_	28	punct	_	_
 
-# text = Entre essas leis figurava a Lei de Acidentes do Trabalho (nº 3.724), de 15 de janeiro de 1919, que assegurava ao trabalhador e seus dependentes indenizações em caso de acidente ou moléstia profissional
-# sent_id = 7
+# sent_id = 5
+# text = Entre essas leis figurava a Lei de Acidentes do Trabalho (nº 3.724), de 15 de janeiro de 1919, que assegurava ao trabalhador e seus dependentes indenizações em caso de acidente ou moléstia profissional.
 1	Entre	entre	ADP	_	_	3	case	_	_
 2	essas	esse	DET	_	Gender=Fem|Number=Plur|PronType=Dem	3	det	_	_
 3	leis	lei	NOUN	_	Gender=Fem|Number=Plur	4	obl	_	_
@@ -178,29 +166,29 @@
 5	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	6	det	_	_
 6	Lei	Lei	PROPN	_	Gender=Fem|Number=Sing	4	nsubj	_	_
 7	de	de	ADP	_	_	8	case	_	_
-8	Acidentes	acidente	PROPN	_	Gender=Masc|Number=Plur	6	nmod	_	_
+8	Acidentes	Acidentes	PROPN	_	Number=Sing	6	nmod	_	_
 9-10	do	_	_	_	_	_	_	_	_
 9	de	de	ADP	_	_	11	case	_	_
 10	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	_	_
 11	Trabalho	Trabalho	PROPN	_	Number=Sing	8	nmod	_	_
 12	(	(	PUNCT	_	_	13	punct	_	SpaceAfter=No
-13	nº	nº	NOUN	_	Gender=Masc|Number=Sing	8	appos	_	_
+13	nº	número	NOUN	_	Abbr=Yes|Gender=Masc|Number=Sing	6	appos	_	_
 14	3.724	3.724	NUM	_	NumType=Card	13	nummod	_	SpaceAfter=No
 15	)	)	PUNCT	_	_	13	punct	_	SpaceAfter=No
 16	,	,	PUNCT	_	_	18	punct	_	_
 17	de	de	ADP	_	_	18	case	_	_
 18	15	15	NUM	_	NumType=Card	6	nmod	_	_
 19	de	de	ADP	_	_	20	case	_	_
-20	janeiro	janeiro	NOUN	_	Gender=Masc|Number=Sing	18	nmod:tmod	_	_
+20	janeiro	janeiro	NOUN	_	Gender=Masc|Number=Sing	18	nmod	_	_
 21	de	de	ADP	_	_	22	case	_	_
 22	1919	1919	NUM	_	NumType=Card	20	nmod	_	SpaceAfter=No
 23	,	,	PUNCT	_	_	18	punct	_	_
-24	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	25	nsubj	_	_
-25	assegurava	asseguravar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	18	acl:relcl	_	_
+24	que	que	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	25	nsubj	_	_
+25	assegurava	assegurar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	6	acl:relcl	_	_
 26-27	ao	_	_	_	_	_	_	_	_
 26	a	a	ADP	_	_	28	case	_	_
 27	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	28	det	_	_
-28	trabalhador	trabalhador	NOUN	_	Gender=Masc|Number=Sing	25	obl	_	_
+28	trabalhador	trabalhador	NOUN	_	Gender=Masc|Number=Sing	25	iobj	_	_
 29	e	e	CCONJ	_	_	32	cc	_	_
 30	seus	seu	DET	_	Gender=Masc|Number=Plur|PronType=Prs	32	det	_	_
 31	dependentes	dependente	ADJ	_	Gender=Masc|Number=Plur	32	amod	_	_
@@ -211,11 +199,11 @@
 36	acidente	acidente	NOUN	_	Gender=Masc|Number=Sing	34	nmod	_	_
 37	ou	ou	CCONJ	_	_	38	cc	_	_
 38	moléstia	moléstia	NOUN	_	Gender=Fem|Number=Sing	36	conj	_	_
-39	profissional	profissional	ADJ	_	Gender=Fem|Number=Sing	38	amod	_	_
+39	profissional	profissional	ADJ	_	Gender=Fem|Number=Sing	38	amod	_	SpaceAfter=No
+40	.	.	PUNCT	_	_	4	punct	_	SpacesAfter=\n
 
+# sent_id = 6
 # text = Nesse mesmo ano de 1919, com a assinatura do Tratado de Versalhes, no mês de junho, o Brasil comprometeu-se a observar certas medidas asseguradoras dos direitos e benefícios dos trabalhadores.
-# sent_id = 8
-# newpar
 1-2	Nesse	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	4	case	_	_
 2	esse	esse	DET	_	Gender=Masc|Number=Sing|PronType=Dem	4	det	_	_
@@ -233,20 +221,20 @@
 13	Tratado	Tratado	PROPN	_	Gender=Masc|Number=Sing	10	nmod	_	_
 14	de	de	ADP	_	_	15	case	_	_
 15	Versalhes	Versalhes	PROPN	_	Number=Sing	13	nmod	_	SpaceAfter=No
-16	,	,	PUNCT	_	_	4	punct	_	_
+16	,	,	PUNCT	_	_	10	punct	_	_
 17-18	no	_	_	_	_	_	_	_	_
 17	em	em	ADP	_	_	19	case	_	_
 18	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	19	det	_	_
 19	mês	mês	NOUN	_	Gender=Masc|Number=Sing	10	nmod	_	_
 20	de	de	ADP	_	_	21	case	_	_
-21	junho	junho	NOUN	_	Gender=Masc|Number=Sing	19	nmod:tmod	_	SpaceAfter=No
-22	,	,	PUNCT	_	_	10	punct	_	_
+21	junho	junho	NOUN	_	Gender=Masc|Number=Sing	19	nmod	_	SpaceAfter=No
+22	,	,	PUNCT	_	_	19	punct	_	_
 23	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	24	det	_	_
 24	Brasil	Brasil	PROPN	_	Gender=Masc|Number=Sing	25	nsubj	_	_
 25-26	comprometeu-se	_	_	_	_	_	_	_	_
 25	comprometeu	comprometer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 26	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	25	expl	_	_
-27	a	a	ADP	_	_	28	mark	_	_
+27	a	a	SCONJ	_	_	28	mark	_	_
 28	observar	observar	VERB	_	VerbForm=Inf	25	xcomp	_	_
 29	certas	certo	DET	_	Gender=Fem|Number=Plur|PronType=Ind	30	det	_	_
 30	medidas	medida	NOUN	_	Gender=Fem|Number=Plur	28	obj	_	_
@@ -263,8 +251,8 @@
 39	trabalhadores	trabalhador	NOUN	_	Gender=Masc|Number=Plur	36	nmod	_	SpaceAfter=No
 40	.	.	PUNCT	_	_	25	punct	_	_
 
+# sent_id = 7
 # text = Em decorrência desse compromisso, foi implantada no país a previdência social.
-# sent_id = 9
 1	Em	em	ADP	_	_	2	case	_	_
 2	decorrência	decorrência	NOUN	_	Gender=Fem|Number=Sing	8	obl	_	_
 3-4	desse	_	_	_	_	_	_	_	_
@@ -272,19 +260,19 @@
 4	esse	esse	DET	_	Gender=Masc|Number=Sing|PronType=Dem	5	det	_	_
 5	compromisso	compromisso	NOUN	_	Gender=Masc|Number=Sing	2	nmod	_	SpaceAfter=No
 6	,	,	PUNCT	_	_	2	punct	_	_
-7	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	8	aux	_	_
-8	implantada	implantar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	0	root	_	_
+7	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	8	aux:pass	_	_
+8	implantada	implantar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
 9-10	no	_	_	_	_	_	_	_	_
 9	em	em	ADP	_	_	11	case	_	_
 10	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	_	_
 11	país	país	NOUN	_	Gender=Masc|Number=Sing	8	obl	_	_
-12	a	o	ADP	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	13	case	_	_
-13	previdência	previdência	NOUN	_	Gender=Fem|Number=Sing	8	obl	_	_
+12	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	13	det	_	_
+13	previdência	previdência	NOUN	_	Gender=Fem|Number=Sing	8	nsubj:pass	_	_
 14	social	social	ADJ	_	Gender=Fem|Number=Sing	13	amod	_	SpaceAfter=No
 15	.	.	PUNCT	_	_	8	punct	_	_
 
+# sent_id = 8
 # text = A primeira lei importante nessa área só foi assinada, contudo, em 24 de janeiro de 1923: tratava-se da Lei nº 4.682, conhecida como Lei Elói Chaves em homenagem ao autor do projeto, através da qual foram instituídas as caixas de aposentadoria e pensões dos ferroviários empregados em companhias privadas.
-# sent_id = 10
 1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	3	det	_	_
 2	primeira	primeiro	ADJ	_	Gender=Fem|Number=Sing|NumType=Ord	3	amod	_	_
 3	lei	lei	NOUN	_	Gender=Fem|Number=Sing	10	nsubj:pass	_	_
@@ -292,37 +280,37 @@
 5-6	nessa	_	_	_	_	_	_	_	_
 5	em	em	ADP	_	_	7	case	_	_
 6	essa	esse	DET	_	Gender=Fem|Number=Sing|PronType=Dem	7	det	_	_
-7	área	área	NOUN	_	Gender=Fem|Number=Sing	10	obl	_	_
+7	área	área	NOUN	_	Gender=Fem|Number=Sing	3	nmod	_	_
 8	só	só	ADV	_	_	10	advmod	_	_
 9	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	10	aux:pass	_	_
-10	assinada	assinar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	21	ccomp	_	SpaceAfter=No
-11	,	,	PUNCT	_	_	10	punct	_	_
-12	contudo	contudo	ADV	_	_	10	advmod	_	SpaceAfter=No
-13	,	,	PUNCT	_	_	10	punct	_	_
+10	assinada	assinar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	SpaceAfter=No
+11	,	,	PUNCT	_	_	12	punct	_	_
+12	contudo	contudo	CCONJ	_	_	10	cc	_	SpaceAfter=No
+13	,	,	PUNCT	_	_	12	punct	_	_
 14	em	em	ADP	_	_	15	case	_	_
 15	24	24	NUM	_	NumType=Card	10	obl	_	_
 16	de	de	ADP	_	_	17	case	_	_
-17	janeiro	janeiro	NOUN	_	Gender=Masc|Number=Sing	15	nmod:tmod	_	_
+17	janeiro	janeiro	NOUN	_	Gender=Masc|Number=Sing	15	nmod	_	_
 18	de	de	ADP	_	_	19	case	_	_
 19	1923	1923	NUM	_	NumType=Card	17	nmod	_	SpaceAfter=No
 20	:	:	PUNCT	_	_	10	punct	_	_
 21-22	tratava-se	_	_	_	_	_	_	_	_
-21	tratava	tratar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	0	root	_	_
-22	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	21	expl	_	_
+21	tratava	tratar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	10	parataxis	_	_
+22	se	se	PRON	_	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	21	expl	_	_
 23-24	da	_	_	_	_	_	_	_	_
 23	de	de	ADP	_	_	25	case	_	_
 24	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	25	det	_	_
-25	Lei	lei	NOUN	_	Gender=Fem|Number=Sing	21	obl	_	_
-26	nº	nº	NOUN	_	Gender=Masc|Number=Sing	25	nmod:npmod	_	_
-27	4.682	4.682	NUM	_	NumType=Card	26	nummod	_	SpaceAfter=No
+25	Lei	lei	NOUN	_	Gender=Fem|Number=Sing	21	obj	_	_
+26	nº	número	NOUN	_	Abbr=Yes|Gender=Masc|Number=Sing	25	nmod	_	_
+27	4.682	4.682	NUM	_	NumType=Card	25	nummod	_	SpaceAfter=No
 28	,	,	PUNCT	_	_	29	punct	_	_
-29	conhecida	conhecido	ADJ	_	Gender=Fem|Number=Sing	25	acl	_	_
+29	conhecida	conhecer	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	25	acl	_	_
 30	como	como	ADP	_	_	31	case	_	_
-31	Lei	lei	PROPN	_	Gender=Masc|Number=Sing	29	xcomp	_	_
+31	Lei	Lei	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	29	xcomp	_	_
 32	Elói	Elói	PROPN	_	Number=Sing	31	flat:name	_	_
 33	Chaves	Chaves	PROPN	_	Number=Sing	31	flat:name	_	_
 34	em	em	ADP	_	_	35	case	_	_
-35	homenagem	homenagem	NOUN	_	_	31	nmod	_	_
+35	homenagem	homenagem	NOUN	_	Gender=Fem|Number=Sing	29	obl	_	_
 36-37	ao	_	_	_	_	_	_	_	_
 36	a	a	ADP	_	_	38	case	_	_
 37	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	38	det	_	_
@@ -331,14 +319,14 @@
 39	de	de	ADP	_	_	41	case	_	_
 40	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	41	det	_	_
 41	projeto	projeto	NOUN	_	Gender=Masc|Number=Sing	38	nmod	_	SpaceAfter=No
-42	,	,	PUNCT	_	_	29	punct	_	_
-43	através	através	ADV	_	_	29	advmod	_	_
+42	,	,	PUNCT	_	_	43	punct	_	_
+43	através	através	ADV	_	_	48	advmod	_	_
 44-45	da	_	_	_	_	_	_	_	_
 44	de	de	ADP	_	_	46	case	_	_
-45	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	46	det	_	_
+45	a	o	DET	_	Gender=Fem|Number=Sing|PronType=Art	46	det	_	_
 46	qual	qual	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	48	obl	_	_
-47	foram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	48	aux:pass	_	_
-48	instituídas	instituir	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part|Voice=Pass	43	advcl	_	_
+47	foram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|VerbForm=Fin	48	aux:pass	_	_
+48	instituídas	instituir	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part|Voice=Pass	38	acl:relcl	_	_
 49	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	50	det	_	_
 50	caixas	caixa	NOUN	_	Gender=Fem|Number=Plur	48	nsubj:pass	_	_
 51	de	de	ADP	_	_	52	case	_	_
@@ -348,20 +336,19 @@
 55-56	dos	_	_	_	_	_	_	_	_
 55	de	de	ADP	_	_	57	case	_	_
 56	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	57	det	_	_
-57	ferroviários	ferroviário	NOUN	_	Gender=Masc|Number=Plur	52	nmod	_	_
-58	empregados	empregar	VERB	_	Gender=Masc|Number=Plur	57	acl	_	_
+57	ferroviários	ferroviário	NOUN	_	Gender=Masc|Number=Plur	54	nmod	_	_
+58	empregados	empregar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part	57	acl	_	_
 59	em	em	ADP	_	_	60	case	_	_
 60	companhias	companhia	NOUN	_	Gender=Fem|Number=Plur	58	obl	_	_
-61	privadas	privado	ADJ	_	Gender=Fem|Number=Plur|VerbForm=Part	60	amod	_	SpaceAfter=No
-62	.	.	PUNCT	_	_	21	punct	_	_
+61	privadas	privado	ADJ	_	Gender=Fem|Number=Plur	60	amod	_	SpaceAfter=No
+62	.	.	PUNCT	_	_	10	punct	_	SpacesAfter=\n
 
+# sent_id = 9
 # text = A Lei nº 4.682 traçou na verdade os rumos seguidos pela legislação subseqüente, definindo as principais características das instituições de previdência criadas a partir de então.
-# sent_id = 11
-# newpar
 1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
 2	Lei	lei	NOUN	_	Gender=Fem|Number=Sing	5	nsubj	_	_
-3	nº	nº	NOUN	_	Gender=Masc|Number=Sing	2	nmod:npmod	_	_
-4	4.682	4.682	NUM	_	NumType=Card	3	nummod	_	_
+3	nº	número	NOUN	_	Abbr=Yes|Gender=Masc|Number=Sing	2	nmod	_	_
+4	4.682	4.682	NUM	_	NumType=Card	2	nummod	_	_
 5	traçou	traçar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 6-7	na	_	_	_	_	_	_	_	_
 6	em	em	ADP	_	_	8	case	_	_
@@ -386,15 +373,15 @@
 23	instituições	instituição	NOUN	_	Gender=Fem|Number=Plur	20	nmod	_	_
 24	de	de	ADP	_	_	25	case	_	_
 25	previdência	previdência	NOUN	_	Gender=Fem|Number=Sing	23	nmod	_	_
-26	criadas	criar	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part	25	acl	_	_
-27	a	a	ADP	_	_	28	case	_	_
-28	partir	partir	NOUN	_	_	26	obl	_	_
-29	de	de	ADP	_	_	30	case	_	_
-30	então	então	ADV	_	_	28	advmod	_	SpaceAfter=No
+26	criadas	criar	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part	23	acl	_	_
+27	a	a	ADP	_	ExtPos=ADP	30	case	_	_
+28	partir	partir	NOUN	_	_	27	fixed	_	_
+29	de	de	ADP	_	_	27	fixed	_	_
+30	então	então	ADV	_	_	26	advmod	_	SpaceAfter=No
 31	.	.	PUNCT	_	_	5	punct	_	_
 
+# sent_id = 10
 # text = Prevendo a criação de uma caixa para cada companhia ferroviária, a Lei nº 4.682 orientou a legislação previdenciária posterior para grupos específicos de trabalhadores, em lugar de amplas categorias.
-# sent_id = 12
 1	Prevendo	prever	VERB	_	VerbForm=Ger	16	advcl	_	_
 2	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	3	det	_	_
 3	criação	criação	NOUN	_	Gender=Fem|Number=Sing	1	obj	_	_
@@ -408,29 +395,28 @@
 11	,	,	PUNCT	_	_	1	punct	_	_
 12	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	13	det	_	_
 13	Lei	lei	NOUN	_	Gender=Fem|Number=Sing	16	nsubj	_	_
-14	nº	nº	NOUN	_	Gender=Masc|Number=Sing	13	nmod:npmod	_	_
-15	4.682	4.682	NUM	_	NumType=Card	14	nummod	_	_
+14	nº	número	NOUN	_	Abbr=Yes|Gender=Masc|Number=Sing	13	nmod	_	_
+15	4.682	4.682	NUM	_	NumType=Card	13	nummod	_	_
 16	orientou	orientar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 17	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	18	det	_	_
 18	legislação	legislação	NOUN	_	Gender=Fem|Number=Sing	16	obj	_	_
 19	previdenciária	previdenciário	ADJ	_	Gender=Fem|Number=Sing	18	amod	_	_
 20	posterior	posterior	ADJ	_	Gender=Fem|Number=Sing	18	amod	_	_
 21	para	para	ADP	_	_	22	case	_	_
-22	grupos	grupo	NOUN	_	Gender=Masc|Number=Plur	18	nmod	_	_
+22	grupos	grupo	NOUN	_	Gender=Masc|Number=Plur	16	obl	_	_
 23	específicos	específico	ADJ	_	Gender=Masc|Number=Plur	22	amod	_	_
 24	de	de	ADP	_	_	25	case	_	_
 25	trabalhadores	trabalhador	NOUN	_	Gender=Masc|Number=Plur	22	nmod	_	SpaceAfter=No
 26	,	,	PUNCT	_	_	28	punct	_	_
 27	em	em	ADP	_	_	28	case	_	_
-28	lugar	lugar	NOUN	_	Gender=Masc|Number=Sing	22	nmod	_	_
-29	de	de	ADP	_	_	30	case	_	_
-30	amplas	ampla	NOUN	_	Gender=Fem|Number=Plur	28	nmod	_	_
-31	categorias	categorio	ADJ	_	Gender=Fem|Number=Plur	30	amod	_	SpaceAfter=No
-32	.	.	PUNCT	_	_	16	punct	_	_
+28	lugar	lugar	NOUN	_	Gender=Masc|Number=Sing	16	obl	_	_
+29	de	de	ADP	_	_	31	case	_	_
+30	amplas	amplo	ADJ	_	Gender=Fem|Number=Plur	31	amod	_	_
+31	categorias	categoria	NOUN	_	Gender=Fem|Number=Plur	28	nmod	_	SpaceAfter=No
+32	.	.	PUNCT	_	_	16	punct	_	SpacesAfter=\n
 
+# sent_id = 11
 # text = As caixas dos ferroviários eram administradas por um conselho de administração formado por empregadores e empregados de cada companhia.
-# sent_id = 13
-# newpar
 1	As	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	2	det	_	_
 2	caixas	caixa	NOUN	_	Gender=Fem|Number=Plur	7	nsubj:pass	_	_
 3-4	dos	_	_	_	_	_	_	_	_
@@ -444,7 +430,7 @@
 10	conselho	conselho	NOUN	_	Gender=Masc|Number=Sing	7	obl:agent	_	_
 11	de	de	ADP	_	_	12	case	_	_
 12	administração	administração	NOUN	_	Gender=Fem|Number=Sing	10	nmod	_	_
-13	formado	formar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	12	acl	_	_
+13	formado	formar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	10	acl	_	_
 14	por	por	ADP	_	_	15	case	_	_
 15	empregadores	empregador	NOUN	_	Gender=Masc|Number=Plur	13	obl:agent	_	_
 16	e	e	CCONJ	_	_	17	cc	_	_
@@ -454,21 +440,21 @@
 20	companhia	companhia	NOUN	_	Gender=Fem|Number=Sing	17	nmod	_	SpaceAfter=No
 21	.	.	PUNCT	_	_	7	punct	_	_
 
-# text = Todos os empregados — mensalistas e diaristas — com mais de seis meses de casa eram sócios obrigatórios das caixas.
-# sent_id = 14
+# sent_id = 12
+# text = Todos os empregados - mensalistas e diaristas - com mais de seis meses de casa eram sócios obrigatórios das caixas.
 1	Todos	todo	DET	_	Gender=Masc|Number=Plur|PronType=Tot	3	det	_	_
-2	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	3	det	_	_
+2	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	1	fixed	_	_
 3	empregados	empregado	NOUN	_	Gender=Masc|Number=Plur	17	nsubj	_	_
-4	—	—	PUNCT	_	_	5	punct	_	_
-5	mensalistas	mensalista	NOUN	_	Gender=Masc|Number=Plur	3	conj	_	_
+4	-	-	PUNCT	_	_	5	punct	_	_
+5	mensalistas	mensalista	ADJ	_	Gender=Masc|Number=Plur	3	amod	_	_
 6	e	e	CCONJ	_	_	7	cc	_	_
-7	diaristas	diarista	NOUN	_	Gender=Unsp|Number=Plur	5	conj	_	_
-8	—	—	PUNCT	_	_	5	punct	_	_
+7	diaristas	diarista	ADJ	_	Gender=Masc|Number=Plur	5	conj	_	_
+8	-	-	PUNCT	_	_	5	punct	_	_
 9	com	com	ADP	_	_	13	case	_	_
-10	mais	mais	ADV	_	Gender=Masc|Number=Plur	12	advmod	_	_
-11	de	de	ADP	_	_	10	case	_	_
+10	mais	mais	ADV	_	_	12	advmod	_	_
+11	de	de	ADP	_	_	10	fixed	_	_
 12	seis	seis	NUM	_	NumType=Card	13	nummod	_	_
-13	meses	mês	NOUN	_	Gender=Masc|Number=Plur	5	nmod	_	_
+13	meses	mês	NOUN	_	Gender=Masc|Number=Plur	3	nmod	_	_
 14	de	de	ADP	_	_	15	case	_	_
 15	casa	casa	NOUN	_	Gender=Fem|Number=Sing	13	nmod	_	_
 16	eram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	17	cop	_	_
@@ -477,46 +463,46 @@
 19-20	das	_	_	_	_	_	_	_	_
 19	de	de	ADP	_	_	21	case	_	_
 20	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	21	det	_	_
-21	caixas	caixas	NOUN	_	Gender=Fem|Number=Plur	17	nmod	_	SpaceAfter=No
+21	caixas	caixa	NOUN	_	Gender=Fem|Number=Plur	17	nmod	_	SpaceAfter=No
 22	.	.	PUNCT	_	_	17	punct	_	_
 
+# sent_id = 13
 # text = O regime de contribuição era tríplice: os empregados contribuíam com 3% de seu salário mensal, a empresa com 1% de sua renda bruta e o governo federal com a receita arrecadada através da cobrança de taxas sobre os serviços ferroviários.
-# sent_id = 15
 1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	_	_
 2	regime	regime	NOUN	_	Gender=Masc|Number=Sing	6	nsubj	_	_
 3	de	de	ADP	_	_	4	case	_	_
 4	contribuição	contribuição	NOUN	_	Gender=Fem|Number=Sing	2	nmod	_	_
 5	era	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	6	cop	_	_
-6	tríplice	tríplicer	VERB	_	Gender=Fem|Number=Sing	0	root	_	SpaceAfter=No
+6	tríplice	tríplice	ADJ	_	Gender=Masc|Number=Sing	0	root	_	SpaceAfter=No
 7	:	:	PUNCT	_	_	6	punct	_	_
 8	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	9	det	_	_
 9	empregados	empregado	NOUN	_	Gender=Masc|Number=Plur	10	nsubj	_	_
-10	contribuíam	contribuir	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	6	dep	_	_
+10	contribuíam	contribuir	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	6	parataxis	_	_
 11	com	com	ADP	_	_	13	case	_	_
 12	3	3	NUM	_	NumType=Card	13	nummod	_	SpaceAfter=No
-13	%	%	SYM	_	Gender=Masc|Number=Plur	10	obl	_	_
+13	%	%	SYM	_	_	10	obl	_	_
 14	de	de	ADP	_	_	16	case	_	_
 15	seu	seu	DET	_	Gender=Masc|Number=Sing|PronType=Prs	16	det	_	_
 16	salário	salário	NOUN	_	Gender=Masc|Number=Sing	13	nmod	_	_
 17	mensal	mensal	ADJ	_	Gender=Masc|Number=Sing	16	amod	_	SpaceAfter=No
 18	,	,	PUNCT	_	_	20	punct	_	_
 19	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	20	det	_	_
-20	empresa	empresa	NOUN	_	Gender=Fem|Number=Sing	16	appos	_	_
+20	empresa	empresa	NOUN	_	Gender=Fem|Number=Sing	13	conj	_	_
 21	com	com	ADP	_	_	23	case	_	_
 22	1	1	NUM	_	NumType=Card	23	nummod	_	SpaceAfter=No
-23	%	%	SYM	_	Gender=Masc|Number=Plur	20	nmod	_	_
+23	%	%	SYM	_	_	20	nmod	_	_
 24	de	de	ADP	_	_	26	case	_	_
 25	sua	seu	DET	_	Gender=Fem|Number=Sing|PronType=Prs	26	det	_	_
 26	renda	renda	NOUN	_	Gender=Fem|Number=Sing	23	nmod	_	_
 27	bruta	bruto	ADJ	_	Gender=Fem|Number=Sing	26	amod	_	_
 28	e	e	CCONJ	_	_	30	cc	_	_
 29	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	30	det	_	_
-30	governo	governo	NOUN	_	Gender=Masc|Number=Sing	26	conj	_	_
+30	governo	governo	NOUN	_	Gender=Masc|Number=Sing	13	conj	_	_
 31	federal	federal	ADJ	_	Gender=Masc|Number=Sing	30	amod	_	_
 32	com	com	ADP	_	_	34	case	_	_
 33	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	34	det	_	_
 34	receita	receita	NOUN	_	Gender=Fem|Number=Sing	30	nmod	_	_
-35	arrecadada	arrecadadar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	34	acl	_	_
+35	arrecadada	arrecadar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	34	acl	_	_
 36	através	através	ADV	_	_	35	advmod	_	_
 37-38	da	_	_	_	_	_	_	_	_
 37	de	de	ADP	_	_	39	case	_	_
@@ -528,22 +514,21 @@
 43	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	44	det	_	_
 44	serviços	serviço	NOUN	_	Gender=Masc|Number=Plur	41	nmod	_	_
 45	ferroviários	ferroviário	ADJ	_	Gender=Masc|Number=Plur	44	amod	_	SpaceAfter=No
-46	.	.	PUNCT	_	_	6	punct	_	_
+46	.	.	PUNCT	_	_	6	punct	_	SpacesAfter=\n
 
+# sent_id = 14
 # text = Em 20 de dezembro de 1926, o Decreto nº 5.109 estendeu as caixas de aposentadoria e pensões às estradas de ferro exploradas pela União, os estados e os municípios, e instituiu-as igualmente nos estabelecimentos portuários e nas empresas de navegação marítima e fluvial.
-# sent_id = 16
-# newpar
 1	Em	em	ADP	_	_	2	case	_	_
 2	20	20	NUM	_	NumType=Card	12	obl	_	_
 3	de	de	ADP	_	_	4	case	_	_
-4	dezembro	dezembro	NOUN	_	Gender=Masc|Number=Sing	2	nmod:tmod	_	_
+4	dezembro	dezembro	NOUN	_	Gender=Masc|Number=Sing	2	nmod	_	_
 5	de	de	ADP	_	_	6	case	_	_
 6	1926	1926	NUM	_	NumType=Card	4	nmod	_	SpaceAfter=No
 7	,	,	PUNCT	_	_	2	punct	_	_
 8	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	9	det	_	_
-9	Decreto	Decreto	PROPN	_	Gender=Masc|Number=Sing	12	nsubj	_	_
-10	nº	nº	NOUN	_	Gender=Masc|Number=Sing	9	nmod:npmod	_	_
-11	5.109	5.109	NUM	_	NumType=Card	10	nummod	_	_
+9	Decreto	decreto	NOUN	_	Gender=Masc|Number=Sing	12	nsubj	_	_
+10	nº	número	NOUN	_	Abbr=Yes|Gender=Masc|Number=Sing	9	nmod	_	_
+11	5.109	5.109	NUM	_	NumType=Card	9	nummod	_	_
 12	estendeu	estender	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 13	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	14	det	_	_
 14	caixas	caixa	NOUN	_	Gender=Fem|Number=Plur	12	obj	_	_
@@ -554,25 +539,25 @@
 19-20	às	_	_	_	_	_	_	_	_
 19	a	a	ADP	_	_	21	case	_	_
 20	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	21	det	_	_
-21	estradas	estrada	NOUN	_	Gender=Fem|Number=Plur	12	obl	_	_
+21	estradas	estrada	NOUN	_	Gender=Fem|Number=Plur	12	iobj	_	_
 22	de	de	ADP	_	_	23	case	_	_
-23	ferro	ferro	NOUN	_	_	21	nmod	_	_
+23	ferro	ferro	NOUN	_	Gender=Masc|Number=Sing	21	nmod	_	_
 24	exploradas	explorar	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part|Voice=Pass	21	acl	_	_
 25-26	pela	_	_	_	_	_	_	_	_
 25	por	por	ADP	_	_	27	case	_	_
 26	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	27	det	_	_
-27	União	União	PROPN	_	Gender=Fem|Number=Sing	24	obl:agent	_	SpaceAfter=No
-28	,	,	PUNCT	_	_	24	punct	_	_
+27	União	união	NOUN	_	Gender=Fem|Number=Sing	24	obl:agent	_	SpaceAfter=No
+28	,	,	PUNCT	_	_	30	punct	_	_
 29	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	30	det	_	_
-30	estados	estado	NOUN	_	Gender=Masc|Number=Plur|VerbForm=Part	12	obj	_	_
+30	estados	estado	NOUN	_	Gender=Masc|Number=Plur	27	conj	_	_
 31	e	e	CCONJ	_	_	33	cc	_	_
 32	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	33	det	_	_
-33	municípios	município	NOUN	_	Gender=Masc|Number=Plur	30	conj	_	SpaceAfter=No
+33	municípios	município	NOUN	_	Gender=Masc|Number=Plur	27	conj	_	SpaceAfter=No
 34	,	,	PUNCT	_	_	36	punct	_	_
 35	e	e	CCONJ	_	_	36	cc	_	_
 36-37	instituiu-as	_	_	_	_	_	_	_	_
 36	instituiu	instituir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	12	conj	_	_
-37	as	elas	PRON	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	36	obj	_	_
+37	as	elas	PRON	_	Case=Acc|Gender=Fem|Number=Plur|Person=3|PronType=Prs	36	obj	_	_
 38	igualmente	igualmente	ADV	_	_	36	advmod	_	_
 39-40	nos	_	_	_	_	_	_	_	_
 39	em	em	ADP	_	_	41	case	_	_
@@ -588,22 +573,22 @@
 48	navegação	navegação	NOUN	_	Gender=Fem|Number=Sing	46	nmod	_	_
 49	marítima	marítimo	ADJ	_	Gender=Fem|Number=Sing	48	amod	_	_
 50	e	e	CCONJ	_	_	51	cc	_	_
-51	fluvial	fluvial	ADJ	_	Gender=Masc|Number=Sing	49	conj	_	SpaceAfter=No
+51	fluvial	fluvial	ADJ	_	Gender=Fem|Number=Sing	49	conj	_	SpaceAfter=No
 52	.	.	PUNCT	_	_	12	punct	_	_
 
+# sent_id = 15
 # text = O mesmo decreto submeteu todas as caixas à administração e à fiscalização do Conselho Nacional do Trabalho (CNT), órgão criado em 30 de abril de 1923, vinculado ao Ministério da Agricultura, Indústria e Comércio.
-# sent_id = 17
 1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
 2	mesmo	mesmo	ADJ	_	Gender=Masc|Number=Sing	3	amod	_	_
 3	decreto	decreto	NOUN	_	Gender=Masc|Number=Sing	4	nsubj	_	_
 4	submeteu	submeter	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 5	todas	todo	DET	_	Gender=Fem|Number=Plur|PronType=Tot	7	det	_	_
-6	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	7	det	_	_
+6	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	5	fixed	_	_
 7	caixas	caixa	NOUN	_	Gender=Fem|Number=Plur	4	obj	_	_
 8-9	à	_	_	_	_	_	_	_	_
 8	a	a	ADP	_	_	10	case	_	_
 9	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	10	det	_	_
-10	administração	administração	NOUN	_	Gender=Fem|Number=Sing	4	obl	_	_
+10	administração	administração	NOUN	_	Gender=Fem|Number=Sing	4	iobj	_	_
 11	e	e	CCONJ	_	_	14	cc	_	_
 12-13	à	_	_	_	_	_	_	_	_
 12	a	a	ADP	_	_	14	case	_	_
@@ -622,12 +607,12 @@
 23	CNT	CNT	PROPN	_	Gender=Masc|Number=Sing	17	appos	_	SpaceAfter=No
 24	)	)	PUNCT	_	_	23	punct	_	SpaceAfter=No
 25	,	,	PUNCT	_	_	26	punct	_	_
-26	órgão	órgão	NOUN	_	Gender=Masc|Number=Sing	14	appos	_	_
+26	órgão	órgão	NOUN	_	Gender=Masc|Number=Sing	17	appos	_	_
 27	criado	criar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	26	acl	_	_
 28	em	em	ADP	_	_	29	case	_	_
 29	30	30	NUM	_	NumType=Card	27	obl	_	_
 30	de	de	ADP	_	_	31	case	_	_
-31	abril	abril	NOUN	_	Gender=Masc|Number=Sing	29	nmod:tmod	_	_
+31	abril	abril	NOUN	_	Gender=Masc|Number=Sing	29	nmod	_	_
 32	de	de	ADP	_	_	33	case	_	_
 33	1923	1923	NUM	_	NumType=Card	31	nmod	_	SpaceAfter=No
 34	,	,	PUNCT	_	_	35	punct	_	_
@@ -635,31 +620,30 @@
 36-37	ao	_	_	_	_	_	_	_	_
 36	a	a	ADP	_	_	38	case	_	_
 37	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	38	det	_	_
-38	Ministério	Ministério	PROPN	_	Gender=Masc|Number=Sing	35	obl	_	_
+38	Ministério	Ministério	PROPN	_	Gender=Masc|Number=Sing	35	obj	_	_
 39-40	da	_	_	_	_	_	_	_	_
 39	de	de	ADP	_	_	41	case	_	_
 40	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	41	det	_	_
 41	Agricultura	Agricultura	PROPN	_	Number=Sing	38	nmod	_	SpaceAfter=No
-42	,	,	PUNCT	_	_	35	punct	_	_
-43	Indústria	indústria	PROPN	_	Gender=Fem|Number=Sing	26	appos	_	_
+42	,	,	PUNCT	_	_	43	punct	_	_
+43	Indústria	Indústria	PROPN	_	ExtPos=PROPN|Number=Sing	41	conj	_	_
 44	e	e	CCONJ	_	_	43	flat:name	_	_
 45	Comércio	Comércio	PROPN	_	Number=Sing	43	flat:name	_	SpaceAfter=No
-46	.	.	PUNCT	_	_	4	punct	_	_
+46	.	.	PUNCT	_	_	4	punct	_	SpacesAfter=\n
 
+# sent_id = 16
 # text = Em 1928, o deputado Agamenon Magalhães apresentou um projeto propondo a criação de um instituto de aposentadoria e pensões para os comerciários.
-# sent_id = 18
-# newpar
 1	Em	em	ADP	_	_	2	case	_	_
 2	1928	1928	NUM	_	NumType=Card	8	obl	_	SpaceAfter=No
 3	,	,	PUNCT	_	_	2	punct	_	_
 4	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	5	det	_	_
 5	deputado	deputado	NOUN	_	Gender=Masc|Number=Sing	8	nsubj	_	_
-6	Agamenon	Agamenon	PROPN	_	Gender=Masc|Number=Sing	5	appos	_	_
+6	Agamenon	Agamenon	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	5	appos	_	_
 7	Magalhães	Magalhães	PROPN	_	Number=Sing	6	flat:name	_	_
 8	apresentou	apresentar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 9	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	10	det	_	_
 10	projeto	projeto	NOUN	_	Gender=Masc|Number=Sing	8	obj	_	_
-11	propondo	propor	VERB	_	VerbForm=Ger	10	acl	_	_
+11	propondo	propor	VERB	_	VerbForm=Ger	8	advcl	_	_
 12	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	13	det	_	_
 13	criação	criação	NOUN	_	Gender=Fem|Number=Sing	11	obj	_	_
 14	de	de	ADP	_	_	16	case	_	_
@@ -674,8 +658,8 @@
 23	comerciários	comerciário	NOUN	_	Gender=Masc|Number=Plur	16	nmod	_	SpaceAfter=No
 24	.	.	PUNCT	_	_	8	punct	_	_
 
+# sent_id = 17
 # text = Com a dissolução do Congresso após a Revolução de 1930, entretanto, o projeto não chegou a ser aprovado.
-# sent_id = 19
 1	Com	com	ADP	_	_	3	case	_	_
 2	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	3	det	_	_
 3	dissolução	dissolução	NOUN	_	Gender=Fem|Number=Sing	21	obl	_	_
@@ -685,32 +669,31 @@
 6	Congresso	congresso	NOUN	_	Gender=Masc|Number=Sing	3	nmod	_	_
 7	após	após	ADP	_	_	9	case	_	_
 8	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	9	det	_	_
-9	Revolução	Revolução	PROPN	_	Gender=Fem|Number=Sing	21	obl	_	_
+9	Revolução	revolução	NOUN	_	Gender=Fem|Number=Sing	3	nmod	_	_
 10	de	de	ADP	_	_	11	case	_	_
 11	1930	1930	NUM	_	NumType=Card	9	nmod	_	SpaceAfter=No
-12	,	,	PUNCT	_	_	13	punct	_	_
-13	entretanto	entretanto	ADV	_	_	21	advmod	_	SpaceAfter=No
+12	,	,	PUNCT	_	_	3	punct	_	_
+13	entretanto	entretanto	CCONJ	_	_	21	cc	_	SpaceAfter=No
 14	,	,	PUNCT	_	_	13	punct	_	_
 15	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	16	det	_	_
-16	projeto	projeto	NOUN	_	Gender=Masc|Number=Sing	21	nsubj:pass	_	_
+16	projeto	projeto	NOUN	_	Gender=Masc|Number=Sing	18	nsubj:pass	_	_
 17	não	não	ADV	_	Polarity=Neg	21	advmod	_	_
-18	chegou	chegar	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	21	aux	_	_
-19	a	a	ADP	_	_	21	obl	_	_
+18	chegou	chegar	VERB	_	ExtPos=AUX|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+19	a	a	SCONJ	_	_	21	mark	_	_
 20	ser	ser	AUX	_	VerbForm=Inf	21	aux:pass	_	_
-21	aprovado	aprovar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	SpaceAfter=No
-22	.	.	PUNCT	_	_	21	punct	_	_
+21	aprovado	aprovar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	18	xcomp	_	SpaceAfter=No
+22	.	.	PUNCT	_	_	21	punct	_	SpacesAfter=\n
 
+# sent_id = 18
 # text = A década de 1930, por outro lado, inaugurou uma fase de grande expansão para a previdência social.
-# sent_id = 20
-# newpar
 1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
 2	década	década	NOUN	_	Gender=Fem|Number=Sing	10	nsubj	_	_
 3	de	de	ADP	_	_	4	case	_	_
 4	1930	1930	NUM	_	NumType=Card	2	nmod	_	SpaceAfter=No
-5	,	,	PUNCT	_	_	8	punct	_	_
-6	por	por	ADP	_	_	8	case	_	_
-7	outro	outro	DET	_	Gender=Masc|Number=Sing|PronType=Ind	8	det	_	_
-8	lado	lado	NOUN	_	Gender=Masc|Number=Sing	10	obl	_	SpaceAfter=No
+5	,	,	PUNCT	_	_	6	punct	_	_
+6	por	por	ADP	_	ExtPos=CCONJ	10	cc	_	_
+7	outro	outro	DET	_	Gender=Masc|Number=Sing|PronType=Ind	6	fixed	_	_
+8	lado	lado	NOUN	_	Gender=Masc|Number=Sing	6	fixed	_	SpaceAfter=No
 9	,	,	PUNCT	_	_	8	punct	_	_
 10	inaugurou	inaugurar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 11	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	12	det	_	_
@@ -720,12 +703,12 @@
 15	expansão	expansão	NOUN	_	Gender=Fem|Number=Sing	12	nmod	_	_
 16	para	para	ADP	_	_	18	case	_	_
 17	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	18	det	_	_
-18	previdência	previdência	NOUN	_	Gender=Fem|Number=Sing	10	obl	_	_
+18	previdência	previdência	NOUN	_	Gender=Fem|Number=Sing	15	nmod	_	_
 19	social	social	ADJ	_	Gender=Fem|Number=Sing	18	amod	_	SpaceAfter=No
 20	.	.	PUNCT	_	_	10	punct	_	_
 
+# sent_id = 19
 # text = Com a criação do Ministério do Trabalho, Indústria e Comércio em 26 de novembro de 1930, o CNT e, por conseguinte, as caixas de aposentadoria se subordinaram ao novo órgão.
-# sent_id = 21
 1	Com	com	ADP	_	_	3	case	_	_
 2	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	3	det	_	_
 3	criação	criação	NOUN	_	Gender=Fem|Number=Sing	33	obl	_	_
@@ -738,62 +721,61 @@
 8	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	9	det	_	_
 9	Trabalho	Trabalho	PROPN	_	Number=Sing	6	nmod	_	SpaceAfter=No
 10	,	,	PUNCT	_	_	11	punct	_	_
-11	Indústria	indústria	PROPN	_	Gender=Fem|Number=Sing	6	appos	_	_
-12	e	e	CCONJ	_	_	13	cc	_	_
-13	Comércio	Comércio	PROPN	_	Gender=Masc|Number=Sing	11	conj	_	_
+11	Indústria	Indústria	PROPN	_	ExtPos=PROPN|Number=Sing	9	conj	_	_
+12	e	e	CCONJ	_	_	11	flat:name	_	_
+13	Comércio	Comércio	PROPN	_	Number=Sing	11	flat:name	_	_
 14	em	em	ADP	_	_	15	case	_	_
 15	26	26	NUM	_	NumType=Card	3	nmod	_	_
 16	de	de	ADP	_	_	17	case	_	_
-17	novembro	novembro	NOUN	_	Gender=Masc|Number=Sing	15	nmod:tmod	_	_
+17	novembro	novembro	NOUN	_	Gender=Masc|Number=Sing	15	nmod	_	_
 18	de	de	ADP	_	_	19	case	_	_
 19	1930	1930	NUM	_	NumType=Card	17	nmod	_	SpaceAfter=No
 20	,	,	PUNCT	_	_	3	punct	_	_
 21	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	22	det	_	_
 22	CNT	CNT	PROPN	_	Gender=Masc|Number=Sing	33	nsubj	_	_
 23	e	e	CCONJ	_	_	29	cc	_	SpaceAfter=No
-24	,	,	PUNCT	_	_	29	punct	_	_
-25	por	por	ADP	_	_	26	case	_	_
-26	conseguinte	conseguinte	NUM	_	Gender=Masc|Number=Sing	29	nmod	_	SpaceAfter=No
-27	,	,	PUNCT	_	_	29	punct	_	_
+24	,	,	PUNCT	_	_	25	punct	_	_
+25	por	por	ADP	_	_	33	advmod	_	_
+26	conseguinte	conseguinte	NOUN	_	Gender=Masc|Number=Sing	25	fixed	_	SpaceAfter=No
+27	,	,	PUNCT	_	_	25	punct	_	_
 28	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	29	det	_	_
 29	caixas	caixa	NOUN	_	Gender=Fem|Number=Plur	22	conj	_	_
 30	de	de	ADP	_	_	31	case	_	_
 31	aposentadoria	aposentadoria	NOUN	_	Gender=Fem|Number=Sing	29	nmod	_	_
-32	se	se	PRON	_	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	33	expl	_	_
-33	subordinaram	subordinarar	VERB	_	Mood=Ind|Number=Plur|Person=3|VerbForm=Fin	0	root	_	_
+32	se	se	PRON	_	Case=Acc|Gender=Fem|Number=Plur|Person=3|PronType=Prs	33	expl	_	_
+33	subordinaram	subordinar	VERB	_	Mood=Ind|Number=Plur|Person=3|VerbForm=Fin	0	root	_	_
 34-35	ao	_	_	_	_	_	_	_	_
 34	a	a	ADP	_	_	37	case	_	_
 35	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	37	det	_	_
 36	novo	novo	ADJ	_	Gender=Masc|Number=Sing	37	amod	_	_
-37	órgão	órgão	NOUN	_	Gender=Masc|Number=Sing	33	obl	_	SpaceAfter=No
-38	.	.	PUNCT	_	_	33	punct	_	_
+37	órgão	órgão	NOUN	_	Gender=Masc|Number=Sing	33	obj	_	SpaceAfter=No
+38	.	.	PUNCT	_	_	33	punct	_	SpacesAfter=\n
 
+# sent_id = 20
 # text = Os decretos nº 20.465, de 1º de outubro de 1931, e nº 21.081, de 24 de fevereiro de 1932, consolidaram a legislação relativa às caixas de aposentadoria, concedendo a seus segurados aposentadoria por invalidez e velhice e garantindo aos dependentes destes pensões em caso de morte, além de auxílio-funeral e assistência médica.
-# sent_id = 22
-# newpar
 1	Os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	2	det	_	_
 2	decretos	decreto	NOUN	_	Gender=Masc|Number=Plur	24	nsubj	_	_
-3	nº	nº	NOUN	_	Gender=Masc|Number=Sing	2	nmod:npmod	_	_
+3	nº	número	NOUN	_	Abbr=Yes|Gender=Masc|Number=Sing	2	nmod	_	_
 4	20.465	20.465	NUM	_	NumType=Card	3	nummod	_	SpaceAfter=No
 5	,	,	PUNCT	_	_	7	punct	_	_
 6	de	de	ADP	_	_	7	case	_	_
-7	1º	1º	ADJ	_	Gender=Masc|Number=Sing|NumType=Ord	2	nmod	_	_
+7	1º	1º	ADJ	_	Gender=Masc|Number=Sing|NumType=Ord	2	amod	_	_
 8	de	de	ADP	_	_	9	case	_	_
 9	outubro	outubro	NOUN	_	Gender=Masc|Number=Sing	7	obl	_	_
 10	de	de	ADP	_	_	11	case	_	_
 11	1931	1931	NUM	_	NumType=Card	9	nmod	_	SpaceAfter=No
-12	,	,	PUNCT	_	_	14	punct	_	_
+12	,	,	PUNCT	_	_	7	punct	_	_
 13	e	e	CCONJ	_	_	14	cc	_	_
-14	nº	nº	NOUN	_	Gender=Masc|Number=Sing	7	conj	_	_
+14	nº	número	NOUN	_	Abbr=Yes|Gender=Masc|Number=Sing	3	conj	_	_
 15	21.081	21.081	NUM	_	NumType=Card	14	nummod	_	SpaceAfter=No
-16	,	,	PUNCT	_	_	7	punct	_	_
+16	,	,	PUNCT	_	_	18	punct	_	_
 17	de	de	ADP	_	_	18	case	_	_
-18	24	24	NUM	_	NumType=Card	7	obl	_	_
+18	24	24	NUM	_	NumType=Card	14	nmod	_	_
 19	de	de	ADP	_	_	20	case	_	_
-20	fevereiro	fevereiro	NOUN	_	Gender=Masc|Number=Sing	18	nmod:tmod	_	_
+20	fevereiro	fevereiro	NOUN	_	Gender=Masc|Number=Sing	18	nmod	_	_
 21	de	de	ADP	_	_	22	case	_	_
 22	1932	1932	NUM	_	NumType=Card	20	nmod	_	SpaceAfter=No
-23	,	,	PUNCT	_	_	7	punct	_	_
+23	,	,	PUNCT	_	_	18	punct	_	_
 24	consolidaram	consolidar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 25	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	26	det	_	_
 26	legislação	legislação	NOUN	_	Gender=Fem|Number=Sing	24	obj	_	_
@@ -801,25 +783,25 @@
 28-29	às	_	_	_	_	_	_	_	_
 28	a	a	ADP	_	_	30	case	_	_
 29	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	30	det	_	_
-30	caixas	caixa	NOUN	_	Gender=Fem|Number=Plur	24	obl	_	_
+30	caixas	caixa	NOUN	_	Gender=Fem|Number=Plur	27	obl	_	_
 31	de	de	ADP	_	_	32	case	_	_
 32	aposentadoria	aposentadoria	NOUN	_	Gender=Fem|Number=Sing	30	nmod	_	SpaceAfter=No
 33	,	,	PUNCT	_	_	34	punct	_	_
 34	concedendo	conceder	VERB	_	VerbForm=Ger	24	advcl	_	_
-35	a	a	DET	_	_	38	det	_	_
+35	a	a	ADP	_	_	38	case	_	_
 36	seus	seu	DET	_	Gender=Masc|Number=Plur|PronType=Prs	38	det	_	_
-37	segurados	segurado	ADJ	_	Gender=Masc|Number=Plur|VerbForm=Part	38	amod	_	_
+37	segurados	segurado	ADJ	_	Gender=Masc|Number=Plur	38	amod	_	_
 38	aposentadoria	aposentadoria	NOUN	_	Gender=Fem|Number=Sing	34	obj	_	_
 39	por	por	ADP	_	_	40	case	_	_
 40	invalidez	invalidez	NOUN	_	Gender=Fem|Number=Sing	34	obl	_	_
 41	e	e	CCONJ	_	_	42	cc	_	_
 42	velhice	velhice	NOUN	_	Gender=Fem|Number=Sing	40	conj	_	_
 43	e	e	CCONJ	_	_	44	cc	_	_
-44	garantindo	garantindar	VERB	_	VerbForm=Ger	34	conj	_	_
+44	garantindo	garantir	VERB	_	VerbForm=Ger	34	conj	_	_
 45-46	aos	_	_	_	_	_	_	_	_
 45	a	a	ADP	_	_	47	case	_	_
 46	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	47	det	_	_
-47	dependentes	dependente	NOUN	_	Gender=Masc|Number=Plur	44	obl	_	_
+47	dependentes	dependente	NOUN	_	Gender=Masc|Number=Plur	44	iobj	_	_
 48-49	destes	_	_	_	_	_	_	_	_
 48	de	de	ADP	_	_	50	case	_	_
 49	estes	este	DET	_	Gender=Masc|Number=Plur|PronType=Dem	50	det	_	_
@@ -828,18 +810,17 @@
 52	caso	caso	NOUN	_	Gender=Masc|Number=Sing	44	obl	_	_
 53	de	de	ADP	_	_	54	case	_	_
 54	morte	morte	NOUN	_	Gender=Fem|Number=Sing	52	nmod	_	SpaceAfter=No
-55	,	,	PUNCT	_	_	34	punct	_	_
-56	além	além	ADV	_	_	44	advmod	_	_
-57	de	de	ADP	_	_	58	case	_	_
-58	auxílio-funeral	auxílio-funeral	NOUN	_	_	56	obl	_	_
+55	,	,	PUNCT	_	_	58	punct	_	_
+56	além	além	ADV	_	_	58	cc	_	_
+57	de	de	ADP	_	_	56	fixed	_	_
+58	auxílio-funeral	auxílio-funeral	NOUN	_	Gender=Masc|Number=Sing	52	conj	_	_
 59	e	e	CCONJ	_	_	60	cc	_	_
 60	assistência	assistência	NOUN	_	Gender=Fem|Number=Sing	58	conj	_	_
 61	médica	médico	ADJ	_	Gender=Fem|Number=Sing	60	amod	_	SpaceAfter=No
-62	.	.	PUNCT	_	_	24	punct	_	_
+62	.	.	PUNCT	_	_	24	punct	_	SpacesAfter=\n
 
+# sent_id = 21
 # text = O ano de 1933 marcou o início de uma nova fase na história do seguro social brasileiro.
-# sent_id = 23
-# newpar
 1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	_	_
 2	ano	ano	NOUN	_	Gender=Masc|Number=Sing	5	nsubj	_	_
 3	de	de	ADP	_	_	4	case	_	_
@@ -854,7 +835,7 @@
 12-13	na	_	_	_	_	_	_	_	_
 12	em	em	ADP	_	_	14	case	_	_
 13	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	14	det	_	_
-14	história	história	NOUN	_	Gender=Fem|Number=Sing	5	obl	_	_
+14	história	história	NOUN	_	Gender=Fem|Number=Sing	11	nmod	_	_
 15-16	do	_	_	_	_	_	_	_	_
 15	de	de	ADP	_	_	17	case	_	_
 16	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	17	det	_	_
@@ -863,31 +844,31 @@
 19	brasileiro	brasileiro	ADJ	_	Gender=Masc|Number=Sing	17	amod	_	SpaceAfter=No
 20	.	.	PUNCT	_	_	5	punct	_	_
 
+# sent_id = 22
 # text = A orientação adotada a partir de então estabeleceu a organização previdenciária em torno de categorias funcionais nacionais de trabalhadores.
-# sent_id = 24
 1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
 2	orientação	orientação	NOUN	_	Gender=Fem|Number=Sing	8	nsubj	_	_
 3	adotada	adotar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	2	acl	_	_
-4	a	a	ADP	_	_	5	case	_	_
-5	partir	partir	NOUN	_	_	3	obl	_	_
-6	de	de	ADP	_	_	7	case	_	_
-7	então	então	ADV	_	_	5	advmod	_	_
+4	a	a	ADP	_	ExtPos=ADP	7	case	_	_
+5	partir	partir	VERB	_	_	4	fixed	_	_
+6	de	de	ADP	_	_	4	fixed	_	_
+7	então	então	ADV	_	_	3	advmod	_	_
 8	estabeleceu	estabelecer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 9	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	10	det	_	_
 10	organização	organização	NOUN	_	Gender=Fem|Number=Sing	8	obj	_	_
 11	previdenciária	previdenciário	ADJ	_	Gender=Fem|Number=Sing	10	amod	_	_
-12	em	em	ADP	_	_	13	case	_	_
-13	torno	torno	NOUN	_	_	8	obl	_	_
-14	de	de	ADP	_	_	15	case	_	_
-15	categorias	categorio	NOUN	_	Gender=Fem|Number=Plur	13	nmod	_	_
+12	em	em	ADP	_	_	15	obl	_	_
+13	torno	torno	NOUN	_	Gender=Masc|Number=Sing	12	fixed	_	_
+14	de	de	ADP	_	_	12	fixed	_	_
+15	categorias	categoria	NOUN	_	Gender=Fem|Number=Plur	8	obl	_	_
 16	funcionais	funcional	ADJ	_	Gender=Fem|Number=Plur	15	amod	_	_
 17	nacionais	nacional	ADJ	_	Gender=Fem|Number=Plur	15	amod	_	_
 18	de	de	ADP	_	_	19	case	_	_
 19	trabalhadores	trabalhador	NOUN	_	Gender=Masc|Number=Plur	15	nmod	_	SpaceAfter=No
 20	.	.	PUNCT	_	_	8	punct	_	_
 
+# sent_id = 23
 # text = Assim, no dia 29 de junho desse ano, foi criado o Instituto de Aposentadoria e Pensões dos Marítimos (IAPM), o primeiro no gênero.
-# sent_id = 25
 1	Assim	assim	ADV	_	_	14	advmod	_	SpaceAfter=No
 2	,	,	PUNCT	_	_	1	punct	_	_
 3-4	no	_	_	_	_	_	_	_	_
@@ -896,28 +877,28 @@
 5	dia	dia	NOUN	_	Gender=Masc|Number=Sing	14	obl	_	_
 6	29	29	NUM	_	NumType=Card	5	nummod	_	_
 7	de	de	ADP	_	_	8	case	_	_
-8	junho	junho	NOUN	_	Gender=Masc|Number=Sing	5	nmod:tmod	_	_
+8	junho	junho	NOUN	_	Gender=Masc|Number=Sing	5	nmod	_	_
 9-10	desse	_	_	_	_	_	_	_	_
 9	de	de	ADP	_	_	11	case	_	_
 10	esse	esse	DET	_	Gender=Masc|Number=Sing|PronType=Dem	11	det	_	_
-11	ano	ano	NOUN	_	Gender=Masc|Number=Sing	5	nmod	_	SpaceAfter=No
+11	ano	ano	NOUN	_	Gender=Masc|Number=Sing	8	nmod	_	SpaceAfter=No
 12	,	,	PUNCT	_	_	5	punct	_	_
 13	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	14	aux:pass	_	_
 14	criado	criar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
 15	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	16	det	_	_
 16	Instituto	Instituto	PROPN	_	Gender=Masc|Number=Sing	14	nsubj:pass	_	_
 17	de	de	ADP	_	_	18	case	_	_
-18	Aposentadoria	aposentadoria	PROPN	_	Gender=Fem|Number=Sing	16	nmod	_	_
-19	e	e	CCONJ	_	_	20	cc	_	_
-20	Pensões	Pensões	PROPN	_	Gender=Fem|Number=Plur	18	conj	_	_
+18	Aposentadoria	Aposentadoria	PROPN	_	ExtPos=PROPN|Number=Sing	16	nmod	_	_
+19	e	e	CCONJ	_	_	18	flat:name	_	_
+20	Pensões	Pensões	PROPN	_	Number=Sing	18	flat:name	_	_
 21-22	dos	_	_	_	_	_	_	_	_
 21	de	de	ADP	_	_	23	case	_	_
 22	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	23	det	_	_
-23	Marítimos	Marítimo	NOUN	_	Gender=Masc|Number=Plur	18	nmod	_	_
+23	Marítimos	Marítimos	PROPN	_	Number=Sing	18	nmod	_	_
 24	(	(	PUNCT	_	_	25	punct	_	SpaceAfter=No
-25	IAPM	IAPM	PROPN	_	Gender=Masc|Number=Sing	18	appos	_	SpaceAfter=No
+25	IAPM	IAPM	PROPN	_	Gender=Masc|Number=Sing	16	appos	_	SpaceAfter=No
 26	)	)	PUNCT	_	_	25	punct	_	SpaceAfter=No
-27	,	,	PUNCT	_	_	14	punct	_	_
+27	,	,	PUNCT	_	_	29	punct	_	_
 28	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	29	det	_	_
 29	primeiro	primeiro	ADJ	_	Gender=Masc|Number=Sing|NumType=Ord	16	amod	_	_
 30-31	no	_	_	_	_	_	_	_	_
@@ -926,65 +907,65 @@
 32	gênero	gênero	NOUN	_	Gender=Masc|Number=Sing	29	obl	_	SpaceAfter=No
 33	.	.	PUNCT	_	_	14	punct	_	_
 
+# sent_id = 24
 # text = Logo em seguida surgiram o Instituto de Aposentadoria e Pensões dos Comerciários (IAPC), em 22 de maio de 1934, o Instituto de Aposentadoria e Pensões dos Bancários (IAPB), em 9 de julho de 1934, e o Instituto de Aposentadoria e Pensões dos Industriários (IAPI), em 31 de dezembro de 1936.
-# sent_id = 26
-1	Logo	logo	NOUN	_	_	4	obl	_	_
+1	Logo	logo	NOUN	_	Gender=Masc|Number=Sing	4	obl	_	_
 2	em	em	ADP	_	_	3	case	_	_
 3	seguida	seguida	NOUN	_	Gender=Fem|Number=Sing	1	nmod	_	_
 4	surgiram	surgir	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 5	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	6	det	_	_
 6	Instituto	Instituto	PROPN	_	Gender=Masc|Number=Sing	4	nsubj	_	_
 7	de	de	ADP	_	_	8	case	_	_
-8	Aposentadoria	aposentadoria	PROPN	_	Gender=Fem|Number=Sing	6	nmod	_	_
-9	e	e	CCONJ	_	_	10	cc	_	_
-10	Pensões	Pensões	PROPN	_	Gender=Fem|Number=Plur	8	conj	_	_
+8	Aposentadoria	Aposentadoria	PROPN	_	Number=Sing	6	nmod	_	_
+9	e	e	CCONJ	_	_	8	flat:name	_	_
+10	Pensões	Pensões	PROPN	_	Number=Sing	8	flat:name	_	_
 11-12	dos	_	_	_	_	_	_	_	_
 11	de	de	ADP	_	_	13	case	_	_
 12	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	13	det	_	_
-13	Comerciários	Comerciários	PROPN	_	Gender=Masc|Number=Plur	6	nmod	_	_
+13	Comerciários	Comerciários	PROPN	_	Number=Sing	8	nmod	_	_
 14	(	(	PUNCT	_	_	15	punct	_	SpaceAfter=No
-15	IAPC	IAPC	PROPN	_	Gender=Masc|Number=Sing	13	appos	_	SpaceAfter=No
+15	IAPC	IAPC	PROPN	_	Gender=Masc|Number=Sing	6	appos	_	SpaceAfter=No
 16	)	)	PUNCT	_	_	15	punct	_	SpaceAfter=No
-17	,	,	PUNCT	_	_	4	punct	_	_
+17	,	,	PUNCT	_	_	19	punct	_	_
 18	em	em	ADP	_	_	19	case	_	_
-19	22	22	NUM	_	NumType=Card	4	obl	_	_
+19	22	22	NUM	_	NumType=Card	6	nmod	_	_
 20	de	de	ADP	_	_	21	case	_	_
-21	maio	maio	NOUN	_	Gender=Masc|Number=Sing	19	nmod:tmod	_	_
+21	maio	maio	NOUN	_	Gender=Masc|Number=Sing	19	nmod	_	_
 22	de	de	ADP	_	_	23	case	_	_
 23	1934	1934	NUM	_	NumType=Card	21	nmod	_	SpaceAfter=No
-24	,	,	PUNCT	_	_	4	punct	_	_
+24	,	,	PUNCT	_	_	26	punct	_	_
 25	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	26	det	_	_
-26	Instituto	Instituto	PROPN	_	Gender=Masc|Number=Sing	4	obj	_	_
+26	Instituto	Instituto	PROPN	_	Gender=Masc|Number=Sing	6	conj	_	_
 27	de	de	ADP	_	_	28	case	_	_
-28	Aposentadoria	aposentadoria	PROPN	_	Gender=Fem|Number=Sing	26	nmod	_	_
-29	e	e	CCONJ	_	_	30	cc	_	_
-30	Pensões	Pensões	PROPN	_	Gender=Fem|Number=Plur	28	conj	_	_
+28	Aposentadoria	Aposentadoria	PROPN	_	Number=Sing	26	nmod	_	_
+29	e	e	CCONJ	_	_	28	flat:name	_	_
+30	Pensões	Pensões	PROPN	_	Number=Sing	28	flat:name	_	_
 31-32	dos	_	_	_	_	_	_	_	_
 31	de	de	ADP	_	_	33	case	_	_
 32	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	33	det	_	_
-33	Bancários	bancários	PROPN	_	Gender=Masc|Number=Plur	26	nmod	_	_
+33	Bancários	Bancários	PROPN	_	Number=Sing	28	nmod	_	_
 34	(	(	PUNCT	_	_	35	punct	_	SpaceAfter=No
-35	IAPB	IAPB	PROPN	_	Gender=Masc|Number=Sing	33	appos	_	SpaceAfter=No
+35	IAPB	IAPB	PROPN	_	Gender=Masc|Number=Sing	26	appos	_	SpaceAfter=No
 36	)	)	PUNCT	_	_	35	punct	_	SpaceAfter=No
-37	,	,	PUNCT	_	_	4	punct	_	_
+37	,	,	PUNCT	_	_	39	punct	_	_
 38	em	em	ADP	_	_	39	case	_	_
-39	9	9	NUM	_	NumType=Card	4	obl	_	_
+39	9	9	NUM	_	NumType=Card	26	nmod	_	_
 40	de	de	ADP	_	_	41	case	_	_
-41	julho	julho	NOUN	_	Gender=Masc|Number=Sing	39	nmod:tmod	_	_
+41	julho	julho	NOUN	_	Gender=Masc|Number=Sing	39	nmod	_	_
 42	de	de	ADP	_	_	43	case	_	_
 43	1934	1934	NUM	_	NumType=Card	41	nmod	_	SpaceAfter=No
 44	,	,	PUNCT	_	_	47	punct	_	_
 45	e	e	CCONJ	_	_	47	cc	_	_
 46	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	47	det	_	_
-47	Instituto	Instituto	PROPN	_	Gender=Masc|Number=Sing	4	conj	_	_
+47	Instituto	Instituto	PROPN	_	Gender=Masc|Number=Sing	6	conj	_	_
 48	de	de	ADP	_	_	49	case	_	_
-49	Aposentadoria	aposentadoria	PROPN	_	Gender=Fem|Number=Sing	47	nmod	_	_
-50	e	e	CCONJ	_	_	51	cc	_	_
-51	Pensões	Pensões	PROPN	_	Gender=Fem|Number=Plur	47	conj	_	_
+49	Aposentadoria	Aposentadoria	PROPN	_	Number=Sing	47	nmod	_	_
+50	e	e	CCONJ	_	_	49	flat:name	_	_
+51	Pensões	Pensões	PROPN	_	Number=Sing	49	flat:name	_	_
 52-53	dos	_	_	_	_	_	_	_	_
 52	de	de	ADP	_	_	54	case	_	_
 53	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	54	det	_	_
-54	Industriários	Industriários	PROPN	_	Gender=Masc|Number=Plur	51	nmod	_	_
+54	Industriários	Industriários	PROPN	_	Number=Sing	49	nmod	_	_
 55	(	(	PUNCT	_	_	56	punct	_	SpaceAfter=No
 56	IAPI	IAPI	PROPN	_	Gender=Masc|Number=Sing	47	appos	_	SpaceAfter=No
 57	)	)	PUNCT	_	_	56	punct	_	SpaceAfter=No
@@ -992,18 +973,17 @@
 59	em	em	ADP	_	_	60	case	_	_
 60	31	31	NUM	_	NumType=Card	47	nmod	_	_
 61	de	de	ADP	_	_	62	case	_	_
-62	dezembro	dezembro	NOUN	_	Gender=Masc|Number=Sing	60	nmod:tmod	_	_
+62	dezembro	dezembro	NOUN	_	Gender=Masc|Number=Sing	60	nmod	_	_
 63	de	de	ADP	_	_	64	case	_	_
 64	1936	1936	NUM	_	NumType=Card	62	nmod	_	SpaceAfter=No
-65	.	.	PUNCT	_	_	4	punct	_	_
+65	.	.	PUNCT	_	_	4	punct	_	SpacesAfter=\n
 
+# sent_id = 25
 # text = A Caixa de Aposentadoria e Pensões dos Trabalhadores em Trapiche e Armazéns de Café, criada em 22 de maio de 1934, foi transformada em 18 de agosto de 1937 no Instituto de Aposentadoria e Pensões dos Empregados em Transportes e Cargas (IAPETEC), incluindo em seus quadros novos e importantes grupos profissionais, como os empregados em empresas de transportes e de petróleo e os motoristas de táxi.
-# sent_id = 27
-# newpar
 1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
 2	Caixa	Caixa	PROPN	_	Gender=Fem|Number=Sing	26	nsubj:pass	_	_
 3	de	de	ADP	_	_	4	case	_	_
-4	Aposentadoria	aposentadoria	PROPN	_	Gender=Fem|Number=Sing	2	nmod	_	_
+4	Aposentadoria	Aposentadoria	PROPN	_	Number=Sing	2	nmod	_	_
 5	e	e	CCONJ	_	_	4	flat:name	_	_
 6	Pensões	Pensões	PROPN	_	Number=Sing	4	flat:name	_	_
 7-8	dos	_	_	_	_	_	_	_	_
@@ -1011,17 +991,17 @@
 8	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	9	det	_	_
 9	Trabalhadores	Trabalhadores	PROPN	_	Number=Sing	4	nmod	_	_
 10	em	em	ADP	_	_	11	case	_	_
-11	Trapiche	Trapiche	PROPN	_	Gender=Fem|Number=Sing	2	nmod	_	_
+11	Trapiche	Trapiche	PROPN	_	Number=Sing	9	nmod	_	_
 12	e	e	CCONJ	_	_	13	cc	_	_
-13	Armazéns	armazéns	PROPN	_	Gender=Masc|Number=Sing	2	conj	_	_
+13	Armazéns	Armazéns	PROPN	_	Number=Sing	11	conj	_	_
 14	de	de	ADP	_	_	15	case	_	_
-15	Café	café	PROPN	_	Number=Sing	13	nmod	_	SpaceAfter=No
+15	Café	Café	PROPN	_	Number=Sing	13	nmod	_	SpaceAfter=No
 16	,	,	PUNCT	_	_	17	punct	_	_
-17	criada	criar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	2	acl	_	_
+17	criada	criar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	2	acl	_	_
 18	em	em	ADP	_	_	19	case	_	_
 19	22	22	NUM	_	NumType=Card	17	obl	_	_
 20	de	de	ADP	_	_	21	case	_	_
-21	maio	maio	NOUN	_	Gender=Masc|Number=Sing	19	nmod:tmod	_	_
+21	maio	maio	NOUN	_	Gender=Masc|Number=Sing	19	nmod	_	_
 22	de	de	ADP	_	_	23	case	_	_
 23	1934	1934	NUM	_	NumType=Card	21	nmod	_	SpaceAfter=No
 24	,	,	PUNCT	_	_	17	punct	_	_
@@ -1030,7 +1010,7 @@
 27	em	em	ADP	_	_	28	case	_	_
 28	18	18	NUM	_	NumType=Card	26	obl	_	_
 29	de	de	ADP	_	_	30	case	_	_
-30	agosto	agosto	NOUN	_	Gender=Masc|Number=Sing	28	nmod:tmod	_	_
+30	agosto	agosto	NOUN	_	Gender=Masc|Number=Sing	28	nmod	_	_
 31	de	de	ADP	_	_	32	case	_	_
 32	1937	1937	NUM	_	NumType=Card	30	nmod	_	_
 33-34	no	_	_	_	_	_	_	_	_
@@ -1038,19 +1018,19 @@
 34	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	35	det	_	_
 35	Instituto	Instituto	PROPN	_	Gender=Masc|Number=Sing	26	obl	_	_
 36	de	de	ADP	_	_	37	case	_	_
-37	Aposentadoria	aposentadoria	PROPN	_	Gender=Fem|Number=Sing	35	nmod	_	_
-38	e	e	CCONJ	_	_	39	cc	_	_
-39	Pensões	Pensões	PROPN	_	Gender=Fem|Number=Plur	35	conj	_	_
+37	Aposentadoria	Aposentadoria	PROPN	_	Number=Sing	35	nmod	_	_
+38	e	e	CCONJ	_	_	37	flat:name	_	_
+39	Pensões	Pensões	PROPN	_	Number=Sing	37	flat:name	_	_
 40-41	dos	_	_	_	_	_	_	_	_
 40	de	de	ADP	_	_	42	case	_	_
 41	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	42	det	_	_
-42	Empregados	empregados	PROPN	_	Gender=Masc|Number=Plur	39	nmod	_	_
+42	Empregados	Empregados	PROPN	_	Number=Sing	37	nmod	_	_
 43	em	em	ADP	_	_	44	case	_	_
-44	Transportes	Transportes	PROPN	_	Gender=Masc|Number=Plur	39	nmod	_	_
-45	e	e	CCONJ	_	_	46	cc	_	_
-46	Cargas	cargas	PROPN	_	Gender=Masc|Number=Sing	44	conj	_	_
+44	Transportes	Transportes	PROPN	_	ExtPos=PROPN|Number=Sing	42	nmod	_	_
+45	e	e	CCONJ	_	_	44	flat:name	_	_
+46	Cargas	Cargas	PROPN	_	Number=Sing	44	flat:name	_	_
 47	(	(	PUNCT	_	_	48	punct	_	SpaceAfter=No
-48	IAPETEC	IAPETEC	PROPN	_	Gender=Masc|Number=Sing	39	appos	_	SpaceAfter=No
+48	IAPETEC	IAPETEC	PROPN	_	Gender=Masc|Number=Sing	35	appos	_	SpaceAfter=No
 49	)	)	PUNCT	_	_	48	punct	_	SpaceAfter=No
 50	,	,	PUNCT	_	_	51	punct	_	_
 51	incluindo	incluir	VERB	_	VerbForm=Ger	26	advcl	_	_
@@ -1058,41 +1038,41 @@
 53	seus	seu	DET	_	Gender=Masc|Number=Plur|PronType=Prs	54	det	_	_
 54	quadros	quadro	NOUN	_	Gender=Masc|Number=Plur	51	obl	_	_
 55	novos	novo	ADJ	_	Gender=Masc|Number=Plur	58	amod	_	_
-56	e	e	CCONJ	_	_	57	cc	_	_
-57	importantes	importante	ADJ	_	Gender=Masc|Number=Plur	55	conj	_	_
-58	grupos	grupo	NOUN	_	Gender=Masc|Number=Plur	54	appos	_	_
+56	e	e	CCONJ	_	_	58	cc	_	_
+57	importantes	importante	ADJ	_	Gender=Masc|Number=Plur	58	amod	_	_
+58	grupos	grupo	NOUN	_	Gender=Masc|Number=Plur	51	obj	_	_
 59	profissionais	profissional	ADJ	_	Gender=Masc|Number=Plur	58	amod	_	SpaceAfter=No
 60	,	,	PUNCT	_	_	63	punct	_	_
 61	como	como	ADP	_	_	63	case	_	_
 62	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	63	det	_	_
-63	empregados	empregado	NOUN	_	Gender=Masc|Number=Plur	58	conj	_	_
+63	empregados	empregado	NOUN	_	Gender=Masc|Number=Plur	58	nmod	_	_
 64	em	em	ADP	_	_	65	case	_	_
 65	empresas	empresa	NOUN	_	Gender=Fem|Number=Plur	63	nmod	_	_
 66	de	de	ADP	_	_	67	case	_	_
-67	transportes	transportes	NOUN	_	Gender=Masc|Number=Plur	65	nmod	_	_
+67	transportes	transporte	NOUN	_	Gender=Masc|Number=Plur	65	nmod	_	_
 68	e	e	CCONJ	_	_	70	cc	_	_
 69	de	de	ADP	_	_	70	case	_	_
 70	petróleo	petróleo	NOUN	_	Gender=Masc|Number=Sing	67	conj	_	_
 71	e	e	CCONJ	_	_	73	cc	_	_
 72	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	73	det	_	_
-73	motoristas	motorista	NOUN	_	Gender=Masc|Number=Plur	58	conj	_	_
+73	motoristas	motorista	NOUN	_	Gender=Masc|Number=Plur	63	conj	_	_
 74	de	de	ADP	_	_	75	case	_	_
 75	táxi	táxi	NOUN	_	Gender=Masc|Number=Sing	73	nmod	_	SpaceAfter=No
 76	.	.	PUNCT	_	_	26	punct	_	_
 
+# sent_id = 26
 # text = A Caixa de Aposentadoria e Pensões dos Operários Estivadores, também criada em 1934, transformou-se em 18 de agosto de 1938 no Instituto de Aposentadoria e Pensões da Estiva (IAPE).
-# sent_id = 28
 1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
 2	Caixa	Caixa	PROPN	_	Gender=Fem|Number=Sing	17	nsubj	_	_
 3	de	de	ADP	_	_	4	case	_	_
-4	Aposentadoria	aposentadoria	PROPN	_	Gender=Fem|Number=Sing	2	nmod	_	_
-5	e	e	CCONJ	_	_	6	cc	_	_
-6	Pensões	Pensões	PROPN	_	Gender=Fem|Number=Plur	2	conj	_	_
+4	Aposentadoria	Aposentadoria	PROPN	_	Number=Sing	2	nmod	_	_
+5	e	e	CCONJ	_	_	4	flat:name	_	_
+6	Pensões	Pensões	PROPN	_	Number=Sing	4	flat:name	_	_
 7-8	dos	_	_	_	_	_	_	_	_
 7	de	de	ADP	_	_	9	case	_	_
 8	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	9	det	_	_
-9	Operários	operários	PROPN	_	Gender=Masc|Number=Plur	6	nmod	_	_
-10	Estivadores	Estivadores	PROPN	_	Gender=Masc|Number=Plur	9	appos	_	SpaceAfter=No
+9	Operários	Operários	PROPN	_	ExtPos=PROPN|Number=Sing	4	nmod	_	_
+10	Estivadores	Estivadores	PROPN	_	Number=Sing	9	flat:name	_	SpaceAfter=No
 11	,	,	PUNCT	_	_	13	punct	_	_
 12	também	também	ADV	_	_	13	advmod	_	_
 13	criada	criar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	2	acl	_	_
@@ -1101,11 +1081,11 @@
 16	,	,	PUNCT	_	_	13	punct	_	_
 17-18	transformou-se	_	_	_	_	_	_	_	_
 17	transformou	transformar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
-18	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	17	expl	_	_
+18	se	se	PRON	_	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	17	expl	_	_
 19	em	em	ADP	_	_	20	case	_	_
 20	18	18	NUM	_	NumType=Card	17	obl	_	_
 21	de	de	ADP	_	_	22	case	_	_
-22	agosto	agosto	NOUN	_	Gender=Masc|Number=Sing	20	nmod:tmod	_	_
+22	agosto	agosto	NOUN	_	Gender=Masc|Number=Sing	20	nmod	_	_
 23	de	de	ADP	_	_	24	case	_	_
 24	1938	1938	NUM	_	NumType=Card	22	nmod	_	_
 25-26	no	_	_	_	_	_	_	_	_
@@ -1113,54 +1093,53 @@
 26	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	27	det	_	_
 27	Instituto	Instituto	PROPN	_	Gender=Masc|Number=Sing	17	obl	_	_
 28	de	de	ADP	_	_	29	case	_	_
-29	Aposentadoria	aposentadoria	PROPN	_	Gender=Fem|Number=Sing	27	nmod	_	_
-30	e	e	CCONJ	_	_	31	cc	_	_
-31	Pensões	Pensões	PROPN	_	Gender=Fem|Number=Plur	27	conj	_	_
+29	Aposentadoria	Aposentadoria	PROPN	_	ExtPos=PROPN|Number=Sing	27	nmod	_	_
+30	e	e	CCONJ	_	_	29	flat:name	_	_
+31	Pensões	Pensões	PROPN	_	Number=Sing	29	flat:name	_	_
 32-33	da	_	_	_	_	_	_	_	_
 32	de	de	ADP	_	_	34	case	_	_
 33	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	34	det	_	_
-34	Estiva	Estiva	PROPN	_	Gender=Fem|Number=Sing	31	nmod	_	_
+34	Estiva	Estiva	PROPN	_	Number=Sing	29	nmod	_	_
 35	(	(	PUNCT	_	_	36	punct	_	SpaceAfter=No
-36	IAPE	IAPE	PROPN	_	Gender=Masc|Number=Sing	31	appos	_	SpaceAfter=No
+36	IAPE	IAPE	PROPN	_	Gender=Masc|Number=Sing	27	appos	_	SpaceAfter=No
 37	)	)	PUNCT	_	_	36	punct	_	SpaceAfter=No
-38	.	.	PUNCT	_	_	17	punct	_	_
+38	.	.	PUNCT	_	_	17	punct	_	SpacesAfter=\n
 
+# sent_id = 27
 # text = Por outro lado, os funcionários federais civis, que assim como os militares eram amparados de maneira pouco organizada antes de 1930, passaram a contar em 1938 com os benefícios de que já gozavam outras categorias profissionais.
-# sent_id = 29
-# newpar
-1	Por	por	ADP	_	_	3	case	_	_
-2	outro	outro	DET	_	Gender=Masc|Number=Sing|PronType=Ind	3	det	_	_
-3	lado	lado	NOUN	_	Gender=Masc|Number=Sing	27	obl	_	SpaceAfter=No
+1	Por	por	ADP	_	ExtPos=CCONJ	27	cc	_	_
+2	outro	outro	DET	_	Gender=Masc|Number=Sing|PronType=Ind	1	fixed	_	_
+3	lado	lado	NOUN	_	Gender=Masc|Number=Sing	1	fixed	_	SpaceAfter=No
 4	,	,	PUNCT	_	_	3	punct	_	_
 5	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	6	det	_	_
-6	funcionários	funcionário	NOUN	_	Gender=Masc|Number=Plur	27	nsubj	_	_
+6	funcionários	funcionário	NOUN	_	Gender=Masc|Number=Plur	25	nsubj	_	_
 7	federais	federal	ADJ	_	Gender=Masc|Number=Plur	6	amod	_	_
 8	civis	civil	ADJ	_	Gender=Masc|Number=Plur	6	amod	_	SpaceAfter=No
 9	,	,	PUNCT	_	_	16	punct	_	_
-10	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	16	nsubj:pass	_	_
-11	assim	assim	ADV	_	_	14	advmod	_	_
-12	como	como	ADP	_	_	14	case	_	_
+10	que	que	PRON	_	Gender=Masc|Number=Plur|PronType=Rel	16	nsubj	_	_
+11	assim	assim	ADV	_	ExtPos=SCONJ	16	mark	_	_
+12	como	como	ADP	_	_	11	fixed	_	_
 13	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	14	det	_	_
-14	militares	militar	NOUN	_	Gender=Masc|Number=Plur	16	obl	_	_
+14	militares	militar	NOUN	_	Gender=Masc|Number=Plur	16	nsubj	_	_
 15	eram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	16	aux:pass	_	_
-16	amparados	amparar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	6	acl:relcl	_	_
+16	amparados	amparar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part	6	acl:relcl	_	_
 17	de	de	ADP	_	_	18	case	_	_
 18	maneira	maneira	NOUN	_	Gender=Fem|Number=Sing	16	obl	_	_
 19	pouco	pouco	ADV	_	_	20	advmod	_	_
 20	organizada	organizar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	18	acl	_	_
-21	antes	antes	ADV	_	_	18	advmod	_	_
+21	antes	antes	ADV	_	_	20	advmod	_	_
 22	de	de	ADP	_	_	23	case	_	_
 23	1930	1930	NUM	_	NumType=Card	21	obl	_	SpaceAfter=No
-24	,	,	PUNCT	_	_	23	punct	_	_
-25	passaram	passar	AUX	_	Mood=Ind|Number=Plur|Person=3|VerbForm=Fin	27	aux	_	_
-26	a	a	ADP	_	_	27	obl	_	_
-27	contar	contar	VERB	_	VerbForm=Inf	0	root	_	_
+24	,	,	PUNCT	_	_	16	punct	_	_
+25	passaram	passar	VERB	_	ExtPos=AUX|Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+26	a	a	SCONJ	_	_	27	mark	_	_
+27	contar	contar	VERB	_	VerbForm=Inf	25	xcomp	_	_
 28	em	em	ADP	_	_	29	case	_	_
 29	1938	1938	NUM	_	NumType=Card	27	obl	_	_
 30	com	com	ADP	_	_	32	case	_	_
 31	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	32	det	_	_
-32	benefícios	benefício	NOUN	_	Gender=Masc|Number=Plur	27	obl	_	_
-33	de	de	ADP	_	_	36	mark	_	_
+32	benefícios	benefício	NOUN	_	Gender=Masc|Number=Plur	27	obj	_	_
+33	de	de	SCONJ	_	_	36	mark	_	_
 34	que	que	SCONJ	_	_	36	mark	_	_
 35	já	já	ADV	_	_	36	advmod	_	_
 36	gozavam	gozar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	32	acl	_	_
@@ -1169,8 +1148,8 @@
 39	profissionais	profissional	ADJ	_	Gender=Fem|Number=Plur	38	amod	_	SpaceAfter=No
 40	.	.	PUNCT	_	_	27	punct	_	_
 
+# sent_id = 28
 # text = No dia 23 de fevereiro desse ano, foi criado o Instituto de Previdência e Assistência aos Servidores do Estado (IPASE), que só entrou realmente em funcionamento em 12 de dezembro de 1940, quando foi definida sua estrutura.
-# sent_id = 30
 1-2	No	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	3	case	_	_
 2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
@@ -1188,50 +1167,49 @@
 13	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	14	det	_	_
 14	Instituto	Instituto	PROPN	_	Gender=Masc|Number=Sing	12	nsubj:pass	_	_
 15	de	de	ADP	_	_	16	case	_	_
-16	Previdência	Previdência	PROPN	_	Gender=Fem|Number=Sing	14	nmod	_	_
-17	e	e	CCONJ	_	_	18	cc	_	_
-18	Assistência	assistência	PROPN	_	Gender=Fem|Number=Sing	16	conj	_	_
+16	Previdência	Previdência	PROPN	_	Number=Sing	14	nmod	_	_
+17	e	e	CCONJ	_	_	16	flat:name	_	_
+18	Assistência	Assistência	PROPN	_	Number=Sing	16	flat:name	_	_
 19-20	aos	_	_	_	_	_	_	_	_
 19	a	a	ADP	_	_	21	case	_	_
 20	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	21	det	_	_
-21	Servidores	Servidores	PROPN	_	Gender=Masc|Number=Plur	12	obl	_	_
+21	Servidores	Servidores	PROPN	_	Number=Sing	16	nmod	_	_
 22-23	do	_	_	_	_	_	_	_	_
 22	de	de	ADP	_	_	24	case	_	_
 23	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	24	det	_	_
-24	Estado	estado	NOUN	_	Gender=Masc|Number=Sing	21	nmod	_	_
+24	Estado	Estado	PROPN	_	Number=Sing	21	nmod	_	_
 25	(	(	PUNCT	_	_	26	punct	_	SpaceAfter=No
-26	IPASE	IPASE	PROPN	_	Gender=Masc|Number=Sing	24	appos	_	SpaceAfter=No
+26	IPASE	IPASE	PROPN	_	Gender=Masc|Number=Sing	14	appos	_	SpaceAfter=No
 27	)	)	PUNCT	_	_	26	punct	_	SpaceAfter=No
-28	,	,	PUNCT	_	_	12	punct	_	_
-29	que	que	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	31	nsubj	_	_
+28	,	,	PUNCT	_	_	31	punct	_	_
+29	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	31	nsubj	_	_
 30	só	só	ADV	_	_	31	advmod	_	_
-31	entrou	entrar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	24	acl:relcl	_	_
+31	entrou	entrar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	14	acl:relcl	_	_
 32	realmente	realmente	ADV	_	_	31	advmod	_	_
 33	em	em	ADP	_	_	34	case	_	_
 34	funcionamento	funcionamento	NOUN	_	Gender=Masc|Number=Sing	31	obl	_	_
 35	em	em	ADP	_	_	36	case	_	_
 36	12	12	NUM	_	NumType=Card	31	obl	_	_
 37	de	de	ADP	_	_	38	case	_	_
-38	dezembro	dezembro	NOUN	_	Gender=Masc|Number=Sing	36	nmod:tmod	_	_
+38	dezembro	dezembro	NOUN	_	Gender=Masc|Number=Sing	36	nmod	_	_
 39	de	de	ADP	_	_	40	case	_	_
 40	1940	1940	NUM	_	NumType=Card	38	nmod	_	SpaceAfter=No
 41	,	,	PUNCT	_	_	31	punct	_	_
 42	quando	quando	ADV	_	_	44	advmod	_	_
 43	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	44	aux:pass	_	_
-44	definida	definir	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	12	advcl	_	_
+44	definida	definir	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	31	advcl	_	_
 45	sua	seu	DET	_	Gender=Fem|Number=Sing|PronType=Prs	46	det	_	_
 46	estrutura	estrutura	NOUN	_	Gender=Fem|Number=Sing	44	nsubj:pass	_	SpaceAfter=No
-47	.	.	PUNCT	_	_	12	punct	_	_
+47	.	.	PUNCT	_	_	12	punct	_	SpacesAfter=\n
 
+# sent_id = 29
 # text = Os institutos asseguravam a seus filiados os mesmos direitos consubstanciados na legislação relativa às caixas de aposentadoria.
-# sent_id = 31
-# newpar
 1	Os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	2	det	_	_
 2	institutos	instituto	NOUN	_	Gender=Masc|Number=Plur	3	nsubj	_	_
 3	asseguravam	assegurar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	0	root	_	_
-4	a	a	DET	_	_	6	det	_	_
+4	a	a	ADP	_	_	6	case	_	_
 5	seus	seu	DET	_	Gender=Masc|Number=Plur|PronType=Prs	6	det	_	_
-6	filiados	filiado	NOUN	_	Gender=Masc|Number=Plur	3	obl	_	_
+6	filiados	filiado	NOUN	_	Gender=Masc|Number=Plur	3	iobj	_	_
 7	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	9	det	_	_
 8	mesmos	mesmo	ADJ	_	Gender=Masc|Number=Plur	9	amod	_	_
 9	direitos	direito	NOUN	_	Gender=Masc|Number=Plur	3	obj	_	_
@@ -1244,18 +1222,18 @@
 15-16	às	_	_	_	_	_	_	_	_
 15	a	a	ADP	_	_	17	case	_	_
 16	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	17	det	_	_
-17	caixas	caixa	NOUN	_	Gender=Fem|Number=Plur	13	nmod	_	_
+17	caixas	caixa	NOUN	_	Gender=Fem|Number=Plur	14	obl	_	_
 18	de	de	ADP	_	_	19	case	_	_
 19	aposentadoria	aposentadoria	NOUN	_	Gender=Fem|Number=Sing	17	nmod	_	SpaceAfter=No
 20	.	.	PUNCT	_	_	3	punct	_	_
 
+# sent_id = 30
 # text = Sua administração estava a cargo de um presidente, de livre nomeação do presidente da República, assessorado por um conselho administrativo composto em geral de seis membros.
-# sent_id = 32
 1	Sua	seu	DET	_	Gender=Fem|Number=Sing|PronType=Prs	2	det	_	_
 2	administração	administração	NOUN	_	Gender=Fem|Number=Sing	5	nsubj	_	_
 3	estava	estar	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	5	cop	_	_
 4	a	a	ADP	_	_	5	case	_	_
-5	cargo	cargo	NOUN	_	_	0	root	_	_
+5	cargo	cargo	NOUN	_	Gender=Masc|Number=Sing	0	root	_	_
 6	de	de	ADP	_	_	8	case	_	_
 7	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	8	det	_	_
 8	presidente	presidente	NOUN	_	Gender=Masc|Number=Sing	5	nmod	_	SpaceAfter=No
@@ -1270,23 +1248,23 @@
 16-17	da	_	_	_	_	_	_	_	_
 16	de	de	ADP	_	_	18	case	_	_
 17	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	18	det	_	_
-18	República	República	PROPN	_	Number=Sing	15	nmod	_	SpaceAfter=No
-19	,	,	PUNCT	_	_	12	punct	_	_
-20	assessorado	assessorar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	8	acl	_	_
+18	República	república	NOUN	_	Gender=Fem|Number=Sing	15	nmod	_	SpaceAfter=No
+19	,	,	PUNCT	_	_	20	punct	_	_
+20	assessorado	assessorar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	8	acl	_	_
 21	por	por	ADP	_	_	23	case	_	_
 22	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	23	det	_	_
-23	conselho	conselho	NOUN	_	Gender=Masc|Number=Sing	20	obl	_	_
+23	conselho	conselho	NOUN	_	Gender=Masc|Number=Sing	20	obl:agent	_	_
 24	administrativo	administrativo	ADJ	_	Gender=Masc|Number=Sing	23	amod	_	_
-25	composto	compor	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	23	acl	_	_
+25	composto	compor	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	23	acl	_	_
 26	em	em	ADP	_	_	27	case	_	_
-27	geral	geral	NOUN	_	_	25	obl	_	_
+27	geral	geral	ADJ	_	Gender=Masc|Number=Sing	25	obl	_	_
 28	de	de	ADP	_	_	30	case	_	_
 29	seis	seis	NUM	_	NumType=Card	30	nummod	_	_
-30	membros	membro	NOUN	_	Gender=Masc|Number=Plur	27	nmod	_	SpaceAfter=No
+30	membros	membro	NOUN	_	Gender=Masc|Number=Plur	25	obj	_	SpaceAfter=No
 31	.	.	PUNCT	_	_	5	punct	_	_
 
+# sent_id = 31
 # text = De todas essas entidades, o IAPI foi a que mais se destacou, por reunir em seu interior um grupo de técnicos e especialistas em previdência social.
-# sent_id = 33
 1	De	de	ADP	_	_	4	case	_	_
 2	todas	todo	DET	_	Gender=Fem|Number=Plur|PronType=Tot	4	det	_	_
 3	essas	esse	DET	_	Gender=Fem|Number=Plur|PronType=Dem	4	det	_	_
@@ -1294,14 +1272,14 @@
 5	,	,	PUNCT	_	_	4	punct	_	_
 6	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	7	det	_	_
 7	IAPI	IAPI	PROPN	_	Gender=Masc|Number=Sing	9	nsubj	_	_
-8	foi	ir	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	9	cop	_	_
-9	a	a	PRON	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	0	root	_	_
-10	que	que	PRON	_	Gender=Fem|Number=Plur|PronType=Rel	13	obj	_	_
+8	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	9	cop	_	_
+9	a	o	PRON	_	Gender=Fem|Number=Sing|PronType=Dem	0	root	_	_
+10	que	que	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	13	nsubj	_	_
 11	mais	mais	ADV	_	_	13	advmod	_	_
-12	se	se	PRON	_	Case=Acc|Gender=Unsp|PronType=Prs	13	nsubj	_	_
+12	se	se	PRON	_	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	13	expl	_	_
 13	destacou	destacar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	9	acl:relcl	_	SpaceAfter=No
 14	,	,	PUNCT	_	_	16	punct	_	_
-15	por	por	ADP	_	_	16	mark	_	_
+15	por	por	SCONJ	_	_	16	mark	_	_
 16	reunir	reunir	VERB	_	VerbForm=Inf	13	advcl	_	_
 17	em	em	ADP	_	_	19	case	_	_
 18	seu	seu	DET	_	Gender=Masc|Number=Sing|PronType=Prs	19	det	_	_
@@ -1311,14 +1289,14 @@
 22	de	de	ADP	_	_	23	case	_	_
 23	técnicos	técnico	NOUN	_	Gender=Masc|Number=Plur	21	nmod	_	_
 24	e	e	CCONJ	_	_	25	cc	_	_
-25	especialistas	especialista	NOUN	_	Gender=Unsp|Number=Plur	21	conj	_	_
+25	especialistas	especialista	NOUN	_	Number=Plur	23	conj	_	_
 26	em	em	ADP	_	_	27	case	_	_
 27	previdência	previdência	NOUN	_	Gender=Fem|Number=Sing	25	nmod	_	_
 28	social	social	ADJ	_	Gender=Fem|Number=Sing	27	amod	_	SpaceAfter=No
 29	.	.	PUNCT	_	_	9	punct	_	_
 
+# sent_id = 32
 # text = A influência desse grupo foi marcante, e dele sairiam muitos dos dirigentes dos órgãos de previdência criados posteriormente.
-# sent_id = 34
 1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
 2	influência	influência	NOUN	_	Gender=Fem|Number=Sing	7	nsubj	_	_
 3-4	desse	_	_	_	_	_	_	_	_
@@ -1326,14 +1304,14 @@
 4	esse	esse	DET	_	Gender=Masc|Number=Sing|PronType=Dem	5	det	_	_
 5	grupo	grupo	NOUN	_	Gender=Masc|Number=Sing	2	nmod	_	_
 6	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	7	cop	_	_
-7	marcante	marcante	ADJ	_	Gender=Masc|Number=Sing	0	root	_	SpaceAfter=No
+7	marcante	marcante	ADJ	_	Gender=Fem|Number=Sing	0	root	_	SpaceAfter=No
 8	,	,	PUNCT	_	_	12	punct	_	_
 9	e	e	CCONJ	_	_	12	cc	_	_
 10-11	dele	_	_	_	_	_	_	_	_
 10	de	de	ADP	_	_	11	case	_	_
 11	ele	ele	PRON	_	Gender=Masc|Number=Sing|Person=3|PronType=Prs	12	obl	_	_
-12	sairiam	sair	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	7	conj	_	_
-13	muitos	muito	PRON	_	Gender=Masc|Number=Plur|PronType=Ind	12	obj	_	_
+12	sairiam	sair	VERB	_	Mood=Cnd|Number=Plur|Person=3|VerbForm=Fin	7	conj	_	_
+13	muitos	muito	PRON	_	Gender=Masc|Number=Plur|PronType=Ind	12	nsubj	_	_
 14-15	dos	_	_	_	_	_	_	_	_
 14	de	de	ADP	_	_	16	case	_	_
 15	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	16	det	_	_
@@ -1344,16 +1322,16 @@
 19	órgãos	órgão	NOUN	_	Gender=Masc|Number=Plur	16	nmod	_	_
 20	de	de	ADP	_	_	21	case	_	_
 21	previdência	previdência	NOUN	_	Gender=Fem|Number=Sing	19	nmod	_	_
-22	criados	criar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part	21	acl	_	_
-23	posteriormente	posteriormente	ADV	_	_	12	advmod	_	SpaceAfter=No
+22	criados	criar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part	19	acl	_	_
+23	posteriormente	posteriormente	ADV	_	_	22	advmod	_	SpaceAfter=No
 24	.	.	PUNCT	_	_	7	punct	_	_
 
+# sent_id = 33
 # text = Mais tarde, também, muitos membros desse grupo, entre os quais Plínio Cantanhede, Hélio Beltrão, Arnaldo Süssekind, Aníbal Pinto e João Carlos Vital, ocupariam postos importantes em outros setores da administração pública.
-# sent_id = 35
-1	Mais	mais	ADV	_	Gender=Unsp|Number=Unsp|PronType=Ind	2	advmod	_	_
+1	Mais	mais	ADV	_	_	2	advmod	_	_
 2	tarde	tarde	ADV	_	_	31	advmod	_	SpaceAfter=No
 3	,	,	PUNCT	_	_	2	punct	_	_
-4	também	também	ADV	_	_	2	advmod	_	SpaceAfter=No
+4	também	também	ADV	_	_	31	advmod	_	SpaceAfter=No
 5	,	,	PUNCT	_	_	2	punct	_	_
 6	muitos	muito	DET	_	Gender=Masc|Number=Plur|PronType=Ind	7	det	_	_
 7	membros	membro	NOUN	_	Gender=Masc|Number=Plur	31	nsubj	_	_
@@ -1362,27 +1340,27 @@
 9	esse	esse	DET	_	Gender=Masc|Number=Sing|PronType=Dem	10	det	_	_
 10	grupo	grupo	NOUN	_	Gender=Masc|Number=Sing	7	nmod	_	SpaceAfter=No
 11	,	,	PUNCT	_	_	15	punct	_	_
-12	entre	entre	ADP	_	_	15	case	_	_
-13	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	15	det	_	_
-14	quais	qual	DET	_	Gender=Masc|Number=Plur|PronType=Rel	15	det	_	_
-15	Plínio	Plínio	PROPN	_	Gender=Masc|Number=Sing	7	nmod	_	_
-16	Cantanhede	Cantanhede	PROPN	_	Gender=Unsp|Number=Sing	15	conj	_	SpaceAfter=No
+12	entre	entre	ADP	_	_	14	case	_	_
+13	os	o	DET	_	Gender=Masc|Number=Plur|PronType=Art	14	det	_	_
+14	quais	qual	PRON	_	Gender=Masc|Number=Plur|PronType=Rel	15	nmod	_	_
+15	Plínio	Plínio	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	10	appos	_	_
+16	Cantanhede	Cantanhede	PROPN	_	Number=Sing	15	flat:name	_	SpaceAfter=No
 17	,	,	PUNCT	_	_	18	punct	_	_
-18	Hélio	Hélio	PROPN	_	Gender=Masc|Number=Sing	15	conj	_	_
+18	Hélio	Hélio	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	15	conj	_	_
 19	Beltrão	Beltrão	PROPN	_	Number=Sing	18	flat:name	_	SpaceAfter=No
 20	,	,	PUNCT	_	_	21	punct	_	_
-21	Arnaldo	Arnaldo	PROPN	_	Gender=Masc|Number=Sing	15	conj	_	_
+21	Arnaldo	Arnaldo	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	15	conj	_	_
 22	Süssekind	Süssekind	PROPN	_	Number=Sing	21	flat:name	_	SpaceAfter=No
 23	,	,	PUNCT	_	_	24	punct	_	_
-24	Aníbal	Aníbal	PROPN	_	Gender=Masc|Number=Sing	15	conj	_	_
+24	Aníbal	Aníbal	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	15	conj	_	_
 25	Pinto	Pinto	PROPN	_	Number=Sing	24	flat:name	_	_
 26	e	e	CCONJ	_	_	27	cc	_	_
-27	João	João	PROPN	_	Gender=Masc|Number=Sing	15	conj	_	_
+27	João	João	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	15	conj	_	_
 28	Carlos	Carlos	PROPN	_	Number=Sing	27	flat:name	_	_
 29	Vital	Vital	PROPN	_	Number=Sing	27	flat:name	_	SpaceAfter=No
-30	,	,	PUNCT	_	_	15	punct	_	_
-31	ocupariam	ocupar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	0	root	_	_
-32	postos	postos	NOUN	_	Gender=Masc|Number=Plur	31	obj	_	_
+30	,	,	PUNCT	_	_	31	punct	_	_
+31	ocupariam	ocupar	VERB	_	Mood=Cnd|Number=Plur|Person=3|VerbForm=Fin	0	root	_	_
+32	postos	posto	NOUN	_	Gender=Masc|Number=Plur	31	obj	_	_
 33	importantes	importante	ADJ	_	Gender=Masc|Number=Plur	32	amod	_	_
 34	em	em	ADP	_	_	36	case	_	_
 35	outros	outro	DET	_	Gender=Masc|Number=Plur|PronType=Ind	36	det	_	_
@@ -1392,11 +1370,10 @@
 38	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	39	det	_	_
 39	administração	administração	NOUN	_	Gender=Fem|Number=Sing	36	nmod	_	_
 40	pública	público	ADJ	_	Gender=Fem|Number=Sing	39	amod	_	SpaceAfter=No
-41	.	.	PUNCT	_	_	31	punct	_	_
+41	.	.	PUNCT	_	_	31	punct	_	SpacesAfter=\n
 
+# sent_id = 34
 # text = A fase de redemocratização que se abriu após 1945 assistiu ao aumento da pressão dos segurados sobre os institutos, visando à ampliação e à melhoria dos serviços.
-# sent_id = 36
-# newpar
 1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
 2	fase	fase	NOUN	_	Gender=Fem|Number=Sing	10	nsubj	_	_
 3	de	de	ADP	_	_	4	case	_	_
@@ -1410,7 +1387,7 @@
 11-12	ao	_	_	_	_	_	_	_	_
 11	a	a	ADP	_	_	13	case	_	_
 12	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	13	det	_	_
-13	aumento	aumento	NOUN	_	Gender=Masc|Number=Sing	10	obl	_	_
+13	aumento	aumento	NOUN	_	Gender=Masc|Number=Sing	10	obj	_	_
 14-15	da	_	_	_	_	_	_	_	_
 14	de	de	ADP	_	_	16	case	_	_
 15	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	16	det	_	_
@@ -1427,7 +1404,7 @@
 25-26	à	_	_	_	_	_	_	_	_
 25	a	a	ADP	_	_	27	case	_	_
 26	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	27	det	_	_
-27	ampliação	ampliação	NOUN	_	Gender=Fem|Number=Sing	24	obl	_	_
+27	ampliação	ampliação	NOUN	_	Gender=Fem|Number=Sing	24	obj	_	_
 28	e	e	CCONJ	_	_	31	cc	_	_
 29-30	à	_	_	_	_	_	_	_	_
 29	a	a	ADP	_	_	31	case	_	_
@@ -1439,18 +1416,18 @@
 34	serviços	serviço	NOUN	_	Gender=Masc|Number=Plur	31	nmod	_	SpaceAfter=No
 35	.	.	PUNCT	_	_	10	punct	_	_
 
-# text = As tentativas de introdução de reformas — embora já se manifestassem no final do Estado Novo — ganharam maior vigor, concentrando-se na uniformização das bases jurídicas no tocante às contribuições e benefícios.
-# sent_id = 37
+# sent_id = 35
+# text = As tentativas de introdução de reformas - embora já se manifestassem no final do Estado Novo - ganharam maior vigor, concentrando-se na uniformização das bases jurídicas no tocante às contribuições e benefícios.
 1	As	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	2	det	_	_
 2	tentativas	tentativa	NOUN	_	Gender=Fem|Number=Plur	20	nsubj	_	_
 3	de	de	ADP	_	_	4	case	_	_
 4	introdução	introdução	NOUN	_	Gender=Fem|Number=Sing	2	nmod	_	_
 5	de	de	ADP	_	_	6	case	_	_
 6	reformas	reforma	NOUN	_	Gender=Fem|Number=Plur	4	nmod	_	_
-7	—	—	PUNCT	_	_	2	punct	_	_
-8	embora	embora	ADV	_	_	11	advmod	_	_
+7	-	-	PUNCT	_	_	11	punct	_	_
+8	embora	embora	SCONJ	_	_	11	mark	_	_
 9	já	já	ADV	_	_	11	advmod	_	_
-10	se	se	PRON	_	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	11	expl	_	_
+10	se	se	PRON	_	Case=Acc|Gender=Fem|Number=Plur|Person=3|PronType=Prs	11	expl	_	_
 11	manifestassem	manifestar	VERB	_	Mood=Sub|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	20	advcl	_	_
 12-13	no	_	_	_	_	_	_	_	_
 12	em	em	ADP	_	_	14	case	_	_
@@ -1459,11 +1436,11 @@
 15-16	do	_	_	_	_	_	_	_	_
 15	de	de	ADP	_	_	17	case	_	_
 16	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	17	det	_	_
-17	Estado	Estado	PROPN	_	Gender=Masc|Number=Sing	14	nmod	_	_
+17	Estado	Estado	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	14	nmod	_	_
 18	Novo	Novo	PROPN	_	Number=Sing	17	flat:name	_	_
-19	—	—	PUNCT	_	_	11	punct	_	_
-20	ganharam	ganhar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
-21	maior	grande	ADJ	_	Gender=Masc|Number=Sing	22	amod	_	_
+19	-	-	PUNCT	_	_	11	punct	_	_
+20	ganharam	ganhar	VERB	_	Mood=Ind|Number=Plur|Person=3|VerbForm=Fin	0	root	_	_
+21	maior	maior	ADJ	_	Gender=Masc|Number=Sing	22	amod	_	_
 22	vigor	vigor	NOUN	_	Gender=Masc|Number=Sing	20	obj	_	SpaceAfter=No
 23	,	,	PUNCT	_	_	24	punct	_	_
 24-25	concentrando-se	_	_	_	_	_	_	_	_
@@ -1472,7 +1449,7 @@
 26-27	na	_	_	_	_	_	_	_	_
 26	em	em	ADP	_	_	28	case	_	_
 27	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	28	det	_	_
-28	uniformização	uniformização	NOUN	_	Gender=Fem|Number=Sing	24	obl	_	_
+28	uniformização	uniformização	NOUN	_	Gender=Fem|Number=Sing	24	obj	_	_
 29-30	das	_	_	_	_	_	_	_	_
 29	de	de	ADP	_	_	31	case	_	_
 30	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	31	det	_	_
@@ -1481,7 +1458,7 @@
 33-34	no	_	_	_	_	_	_	_	_
 33	em	em	ADP	_	_	35	case	_	_
 34	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	35	det	_	_
-35	tocante	tocante	NOUN	_	Gender=Masc|Number=Sing	31	nmod	_	_
+35	tocante	tocante	NOUN	_	Gender=Masc|Number=Sing	28	nmod	_	_
 36-37	às	_	_	_	_	_	_	_	_
 36	a	a	ADP	_	_	38	case	_	_
 37	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	38	det	_	_
@@ -1490,13 +1467,13 @@
 40	benefícios	benefício	NOUN	_	Gender=Masc|Number=Plur	38	conj	_	SpaceAfter=No
 41	.	.	PUNCT	_	_	20	punct	_	_
 
+# sent_id = 36
 # text = Começou-se também a discutir a unificação dos institutos, questão que suscitava muitas controvérsias e oposições.
-# sent_id = 38
 1-2	Começou-se	_	_	_	_	_	_	_	_
 1	Começou	começar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
-2	se	se	PRON	_	Case=Acc|Gender=Unsp|PronType=Prs	1	nsubj	_	_
-3	também	também	ADV	_	_	1	advmod	_	_
-4	a	a	ADP	_	_	5	mark	_	_
+2	se	se	PRON	_	Case=Acc|PronType=Prs	1	nsubj	_	_
+3	também	também	ADV	_	_	5	advmod	_	_
+4	a	a	SCONJ	_	_	5	mark	_	_
 5	discutir	discutir	VERB	_	VerbForm=Inf	1	xcomp	_	_
 6	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	7	det	_	_
 7	unificação	unificação	NOUN	_	Gender=Fem|Number=Sing	5	obj	_	_
@@ -1505,37 +1482,36 @@
 9	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	10	det	_	_
 10	institutos	instituto	NOUN	_	Gender=Masc|Number=Plur	7	nmod	_	SpaceAfter=No
 11	,	,	PUNCT	_	_	12	punct	_	_
-12	questão	questão	NOUN	_	Gender=Fem|Number=Sing	10	appos	_	_
+12	questão	questão	NOUN	_	Gender=Fem|Number=Sing	7	appos	_	_
 13	que	que	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	14	nsubj	_	_
 14	suscitava	suscitar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	12	acl:relcl	_	_
 15	muitas	muito	DET	_	Gender=Fem|Number=Plur|PronType=Ind	16	det	_	_
 16	controvérsias	controvérsia	NOUN	_	Gender=Fem|Number=Plur	14	obj	_	_
 17	e	e	CCONJ	_	_	18	cc	_	_
-18	oposições	oposições	NOUN	_	Gender=Fem|Number=Plur	16	conj	_	SpaceAfter=No
-19	.	.	PUNCT	_	_	1	punct	_	_
+18	oposições	oposição	NOUN	_	Gender=Fem|Number=Plur	16	conj	_	SpaceAfter=No
+19	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
 
+# sent_id = 37
 # text = De fato, os institutos passaram a diversificar seus planos, investindo tanto em benefícios pecuniários quanto em serviços na área de saúde, alimentação e habitação.
-# sent_id = 39
-# newpar
 1	De	de	ADP	_	_	2	case	_	_
 2	fato	fato	NOUN	_	Gender=Masc|Number=Sing	8	obl	_	SpaceAfter=No
 3	,	,	PUNCT	_	_	2	punct	_	_
 4	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	5	det	_	_
-5	institutos	instituto	NOUN	_	Gender=Masc|Number=Plur	8	nsubj	_	_
-6	passaram	passar	AUX	_	Mood=Ind|Number=Plur|Person=3|VerbForm=Fin	8	aux	_	_
-7	a	a	ADP	_	_	8	obl	_	_
-8	diversificar	diversificar	VERB	_	VerbForm=Inf	0	root	_	_
+5	institutos	instituto	NOUN	_	Gender=Masc|Number=Plur	6	nsubj	_	_
+6	passaram	passar	VERB	_	ExtPos=AUX|Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+7	a	a	SCONJ	_	_	8	mark	_	_
+8	diversificar	diversificar	VERB	_	VerbForm=Inf	6	xcomp	_	_
 9	seus	seu	DET	_	Gender=Masc|Number=Plur|PronType=Prs	10	det	_	_
 10	planos	plano	NOUN	_	Gender=Masc|Number=Plur	8	obj	_	SpaceAfter=No
 11	,	,	PUNCT	_	_	12	punct	_	_
 12	investindo	investir	VERB	_	VerbForm=Ger	8	advcl	_	_
 13	tanto	tanto	ADV	_	_	12	advmod	_	_
 14	em	em	ADP	_	_	15	case	_	_
-15	benefícios	benefício	NOUN	_	Gender=Masc|Number=Plur	12	obl	_	_
+15	benefícios	benefício	NOUN	_	Gender=Masc|Number=Plur	12	obj	_	_
 16	pecuniários	pecuniário	ADJ	_	Gender=Masc|Number=Plur	15	amod	_	_
-17	quanto	quanto	ADV	_	Gender=Masc|Number=Sing|PronType=Int	15	advmod	_	_
+17	quanto	quanto	CCONJ	_	_	19	cc	_	_
 18	em	em	ADP	_	_	19	case	_	_
-19	serviços	serviço	NOUN	_	Gender=Masc|Number=Plur	17	obl	_	_
+19	serviços	serviço	NOUN	_	Gender=Masc|Number=Plur	15	conj	_	_
 20-21	na	_	_	_	_	_	_	_	_
 20	em	em	ADP	_	_	22	case	_	_
 21	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	22	det	_	_
@@ -1543,43 +1519,43 @@
 23	de	de	ADP	_	_	24	case	_	_
 24	saúde	saúde	NOUN	_	Gender=Fem|Number=Sing	22	nmod	_	SpaceAfter=No
 25	,	,	PUNCT	_	_	26	punct	_	_
-26	alimentação	alimentação	NOUN	_	Gender=Fem|Number=Sing	22	conj	_	_
+26	alimentação	alimentação	NOUN	_	Gender=Fem|Number=Sing	24	conj	_	_
 27	e	e	CCONJ	_	_	28	cc	_	_
-28	habitação	habitação	NOUN	_	Gender=Fem|Number=Sing	22	conj	_	SpaceAfter=No
+28	habitação	habitação	NOUN	_	Gender=Fem|Number=Sing	24	conj	_	SpaceAfter=No
 29	.	.	PUNCT	_	_	8	punct	_	_
 
+# sent_id = 38
 # text = Por outro lado, foram promulgados vários decretos estendendo benefícios e serviços a categorias e grupos até então excluídos do sistema previdenciário.
-# sent_id = 40
-1	Por	por	ADP	_	_	3	case	_	_
-2	outro	outro	DET	_	Gender=Masc|Number=Sing|PronType=Ind	3	det	_	_
-3	lado	lado	NOUN	_	Gender=Masc|Number=Sing	6	obl	_	SpaceAfter=No
+1	Por	por	ADP	_	ExtPos=CCONJ	6	cc	_	_
+2	outro	outro	DET	_	Gender=Masc|Number=Sing|PronType=Ind	1	fixed	_	_
+3	lado	lado	NOUN	_	Gender=Masc|Number=Sing	1	fixed	_	SpaceAfter=No
 4	,	,	PUNCT	_	_	3	punct	_	_
-5	foram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	6	aux:pass	_	_
+5	foram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|VerbForm=Fin	6	aux:pass	_	_
 6	promulgados	promulgar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	0	root	_	_
 7	vários	vários	DET	_	Gender=Masc|Number=Plur|PronType=Ind	8	det	_	_
 8	decretos	decreto	NOUN	_	Gender=Masc|Number=Plur	6	nsubj:pass	_	_
-9	estendendo	estender	VERB	_	VerbForm=Ger	8	acl	_	_
+9	estendendo	estender	VERB	_	VerbForm=Ger	6	advcl	_	_
 10	benefícios	benefício	NOUN	_	Gender=Masc|Number=Plur	9	obj	_	_
 11	e	e	CCONJ	_	_	12	cc	_	_
 12	serviços	serviço	NOUN	_	Gender=Masc|Number=Plur	10	conj	_	_
 13	a	a	ADP	_	_	14	case	_	_
-14	categorias	categorio	NOUN	_	Gender=Fem|Number=Plur	12	nmod	_	_
+14	categorias	categoria	NOUN	_	Gender=Fem|Number=Plur	9	iobj	_	_
 15	e	e	CCONJ	_	_	16	cc	_	_
 16	grupos	grupo	NOUN	_	Gender=Masc|Number=Plur	14	conj	_	_
 17	até	até	ADP	_	_	18	case	_	_
-18	então	então	ADV	_	Gender=Masc|Number=Sing	19	advmod	_	_
-19	excluídos	excluir	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part	9	advcl	_	_
+18	então	então	ADV	_	_	19	advmod	_	_
+19	excluídos	excluir	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part	16	acl	_	_
 20-21	do	_	_	_	_	_	_	_	_
 20	de	de	ADP	_	_	22	case	_	_
 21	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	22	det	_	_
-22	sistema	sistema	NOUN	_	Gender=Masc|Number=Sing	19	obl	_	_
+22	sistema	sistema	NOUN	_	Gender=Masc|Number=Sing	19	obj	_	_
 23	previdenciário	previdenciário	ADJ	_	Gender=Masc|Number=Sing	22	amod	_	SpaceAfter=No
 24	.	.	PUNCT	_	_	6	punct	_	_
 
-# text = O valor dos benefícios e dos recursos despendidos com os diferentes serviços pôde ser ampliado graças ao capital acumulado pelos institutos — sobretudo em investimentos imobiliários — no período anterior.
-# sent_id = 41
+# sent_id = 39
+# text = O valor dos benefícios e dos recursos despendidos com os diferentes serviços pôde ser ampliado graças ao capital acumulado pelos institutos - sobretudo em investimentos imobiliários - no período anterior.
 1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	_	_
-2	valor	valor	NOUN	_	Gender=Masc|Number=Sing	17	nsubj	_	_
+2	valor	valor	NOUN	_	Gender=Masc|Number=Sing	15	nsubj:pass	_	_
 3-4	dos	_	_	_	_	_	_	_	_
 3	de	de	ADP	_	_	5	case	_	_
 4	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	5	det	_	_
@@ -1589,58 +1565,57 @@
 7	de	de	ADP	_	_	9	case	_	_
 8	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	9	det	_	_
 9	recursos	recurso	NOUN	_	Gender=Masc|Number=Plur	5	conj	_	_
-10	despendidos	despendir	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part	9	acl	_	_
+10	despendidos	despender	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part	9	acl	_	_
 11	com	com	ADP	_	_	14	case	_	_
 12	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	14	det	_	_
-13	diferentes	diferentes	DET	_	Gender=Masc|Number=Plur|PronType=Ind	14	det	_	_
+13	diferentes	diferente	ADJ	_	Gender=Masc|Number=Plur	14	amod	_	_
 14	serviços	serviço	NOUN	_	Gender=Masc|Number=Plur	10	obl	_	_
-15	pôde	poder	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	17	aux	_	_
-16	ser	ser	AUX	_	VerbForm=Inf	17	aux	_	_
-17	ampliado	ampliar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	0	root	_	_
-18	graças	graças	ADV	_	_	17	advmod	_	_
+15	pôde	poder	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+16	ser	ser	AUX	_	VerbForm=Inf	17	aux:pass	_	_
+17	ampliado	ampliar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	15	xcomp	_	_
+18	graças	graças	ADV	_	ExtPos=ADP	21	case	_	_
 19-20	ao	_	_	_	_	_	_	_	_
-19	a	a	ADP	_	_	21	case	_	_
+19	a	a	ADP	_	_	18	fixed	_	_
 20	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	21	det	_	_
-21	capital	capital	NOUN	_	Gender=Masc|Number=Sing	18	obl	_	_
+21	capital	capital	NOUN	_	Gender=Masc|Number=Sing	17	obl	_	_
 22	acumulado	acumular	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	21	acl	_	_
 23-24	pelos	_	_	_	_	_	_	_	_
 23	por	por	ADP	_	_	25	case	_	_
 24	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	25	det	_	_
 25	institutos	instituto	NOUN	_	Gender=Masc|Number=Plur	22	obl:agent	_	_
-26	—	—	PUNCT	_	_	17	punct	_	_
+26	-	-	PUNCT	_	_	29	punct	_	_
 27	sobretudo	sobretudo	ADV	_	_	29	advmod	_	_
 28	em	em	ADP	_	_	29	case	_	_
-29	investimentos	investimento	NOUN	_	Gender=Masc|Number=Plur	17	obl	_	_
+29	investimentos	investimento	NOUN	_	Gender=Masc|Number=Plur	25	nmod	_	_
 30	imobiliários	imobiliário	ADJ	_	Gender=Masc|Number=Plur	29	amod	_	_
-31	—	—	PUNCT	_	_	17	punct	_	_
+31	-	-	PUNCT	_	_	29	punct	_	_
 32-33	no	_	_	_	_	_	_	_	_
 32	em	em	ADP	_	_	34	case	_	_
 33	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	34	det	_	_
-34	período	período	NOUN	_	Gender=Masc|Number=Sing	17	obl	_	_
+34	período	período	NOUN	_	Gender=Masc|Number=Sing	22	obl	_	_
 35	anterior	anterior	ADJ	_	Gender=Masc|Number=Sing	34	amod	_	SpaceAfter=No
-36	.	.	PUNCT	_	_	17	punct	_	_
+36	.	.	PUNCT	_	_	17	punct	_	SpacesAfter=\n
 
+# sent_id = 40
 # text = Em 1951, o deputado Aluísio Alves, da União Democrática Nacional (UDN), com a colaboração de técnicos da previdência social, elaborou o projeto de uma única lei orgânica para o sistema previdenciário.
-# sent_id = 42
-# newpar
 1	Em	em	ADP	_	_	2	case	_	_
 2	1951	1951	NUM	_	NumType=Card	28	obl	_	SpaceAfter=No
 3	,	,	PUNCT	_	_	2	punct	_	_
 4	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	5	det	_	_
 5	deputado	deputado	NOUN	_	Gender=Masc|Number=Sing	28	nsubj	_	_
-6	Aluísio	Aluísio	PROPN	_	Gender=Masc|Number=Sing	5	appos	_	_
+6	Aluísio	Aluísio	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	5	appos	_	_
 7	Alves	Alves	PROPN	_	Number=Sing	6	flat:name	_	SpaceAfter=No
 8	,	,	PUNCT	_	_	11	punct	_	_
 9-10	da	_	_	_	_	_	_	_	_
 9	de	de	ADP	_	_	11	case	_	_
 10	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	11	det	_	_
-11	União	União	PROPN	_	Gender=Fem|Number=Sing	5	nmod	_	_
+11	União	União	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	5	nmod	_	_
 12	Democrática	Democrática	PROPN	_	Number=Sing	11	flat:name	_	_
 13	Nacional	Nacional	PROPN	_	Number=Sing	11	flat:name	_	_
 14	(	(	PUNCT	_	_	15	punct	_	SpaceAfter=No
-15	UDN	UDN	PROPN	_	Gender=Masc|Number=Sing	11	appos	_	SpaceAfter=No
+15	UDN	UDN	PROPN	_	Gender=Fem|Number=Sing	11	appos	_	SpaceAfter=No
 16	)	)	PUNCT	_	_	15	punct	_	SpaceAfter=No
-17	,	,	PUNCT	_	_	11	punct	_	_
+17	,	,	PUNCT	_	_	20	punct	_	_
 18	com	com	ADP	_	_	20	case	_	_
 19	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	20	det	_	_
 20	colaboração	colaboração	NOUN	_	Gender=Fem|Number=Sing	5	nmod	_	_
@@ -1651,7 +1626,7 @@
 24	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	25	det	_	_
 25	previdência	previdência	NOUN	_	Gender=Fem|Number=Sing	22	nmod	_	_
 26	social	social	ADJ	_	Gender=Fem|Number=Sing	25	amod	_	SpaceAfter=No
-27	,	,	PUNCT	_	_	5	punct	_	_
+27	,	,	PUNCT	_	_	20	punct	_	_
 28	elaborou	elaborar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 29	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	30	det	_	_
 30	projeto	projeto	NOUN	_	Gender=Masc|Number=Sing	28	obj	_	_
@@ -1666,9 +1641,9 @@
 39	previdenciário	previdenciário	ADJ	_	Gender=Masc|Number=Sing	38	amod	_	SpaceAfter=No
 40	.	.	PUNCT	_	_	28	punct	_	_
 
+# sent_id = 41
 # text = Após sofrer várias modificações, essa lei seria aprovada em 1960.
-# sent_id = 43
-1	Após	após	ADP	_	_	2	mark	_	_
+1	Após	após	SCONJ	_	_	2	mark	_	_
 2	sofrer	sofrer	VERB	_	VerbForm=Inf	9	advcl	_	_
 3	várias	várias	DET	_	Gender=Fem|Number=Plur|PronType=Ind	4	det	_	_
 4	modificações	modificação	NOUN	_	Gender=Fem|Number=Plur	2	obj	_	SpaceAfter=No
@@ -1679,21 +1654,20 @@
 9	aprovada	aprovar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
 10	em	em	ADP	_	_	11	case	_	_
 11	1960	1960	NUM	_	NumType=Card	9	obl	_	SpaceAfter=No
-12	.	.	PUNCT	_	_	9	punct	_	_
+12	.	.	PUNCT	_	_	9	punct	_	SpacesAfter=\n
 
+# sent_id = 42
 # text = Em 1953, pelo Decreto nº 34.589, todas as caixas de ferroviários foram incorporadas numa única entidade, a Caixa de Aposentadoria e Pensões dos Ferroviários e Empregados em Serviços Públicos (CAPFESP).
-# sent_id = 44
-# newpar
 1	Em	em	ADP	_	_	2	case	_	_
 2	1953	1953	NUM	_	NumType=Card	16	obl	_	SpaceAfter=No
 3	,	,	PUNCT	_	_	2	punct	_	_
 4-5	pelo	_	_	_	_	_	_	_	_
 4	por	por	ADP	_	_	6	case	_	_
 5	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	6	det	_	_
-6	Decreto	Decreto	PROPN	_	Gender=Masc|Number=Sing	16	obl	_	_
-7	nº	nº	NOUN	_	Gender=Masc|Number=Sing	6	appos	_	_
-8	34.589	34.589	NUM	_	NumType=Card	7	nummod	_	SpaceAfter=No
-9	,	,	PUNCT	_	_	12	punct	_	_
+6	Decreto	decreto	NOUN	_	Gender=Masc|Number=Sing	16	obl	_	_
+7	nº	número	NOUN	_	Abbr=Yes|Gender=Masc|Number=Sing	6	nmod	_	_
+8	34.589	34.589	NUM	_	NumType=Card	6	nummod	_	SpaceAfter=No
+9	,	,	PUNCT	_	_	6	punct	_	_
 10	todas	todo	DET	_	Gender=Fem|Number=Plur|PronType=Tot	12	det	_	_
 11	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	12	det	_	_
 12	caixas	caixa	NOUN	_	Gender=Fem|Number=Plur	16	nsubj:pass	_	_
@@ -1708,54 +1682,53 @@
 20	entidade	entidade	NOUN	_	Gender=Fem|Number=Sing	16	obl	_	SpaceAfter=No
 21	,	,	PUNCT	_	_	23	punct	_	_
 22	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	23	det	_	_
-23	Caixa	Caixa	PROPN	_	Gender=Fem|Number=Sing	20	conj	_	_
+23	Caixa	Caixa	PROPN	_	Gender=Fem|Number=Sing	20	appos	_	_
 24	de	de	ADP	_	_	25	case	_	_
-25	Aposentadoria	aposentadoria	PROPN	_	Gender=Fem|Number=Sing	23	nmod	_	_
-26	e	e	CCONJ	_	_	27	cc	_	_
-27	Pensões	Pensões	PROPN	_	Gender=Fem|Number=Plur	20	conj	_	_
+25	Aposentadoria	Aposentadoria	PROPN	_	ExtPos=PROPN|Number=Sing	23	nmod	_	_
+26	e	e	CCONJ	_	_	25	flat:name	_	_
+27	Pensões	Pensões	PROPN	_	Number=Sing	25	flat:name	_	_
 28-29	dos	_	_	_	_	_	_	_	_
 28	de	de	ADP	_	_	30	case	_	_
 29	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	30	det	_	_
-30	Ferroviários	Ferroviários	PROPN	_	Gender=Masc|Number=Plur	27	nmod	_	_
-31	e	e	CCONJ	_	_	32	cc	_	_
-32	Empregados	empregados	PROPN	_	Gender=Masc|Number=Plur	30	conj	_	_
+30	Ferroviários	Ferroviários	PROPN	_	ExtPos=PROPN|Number=Sing	25	nmod	_	_
+31	e	e	CCONJ	_	_	30	flat:name	_	_
+32	Empregados	Empregados	PROPN	_	Number=Sing	30	flat:name	_	_
 33	em	em	ADP	_	_	34	case	_	_
-34	Serviços	Serviços	PROPN	_	_	27	nmod	_	_
-35	Públicos	públicos	PROPN	_	Gender=Masc|Number=Plur	34	amod	_	_
+34	Serviços	Serviços	PROPN	_	Number=Sing	30	nmod	_	_
+35	Públicos	Públicos	PROPN	_	Number=Sing	34	flat:name	_	_
 36	(	(	PUNCT	_	_	37	punct	_	SpaceAfter=No
-37	CAPFESP	CAPFESP	PROPN	_	Gender=Masc|Number=Sing	27	appos	_	SpaceAfter=No
+37	CAPFESP	CAPFESP	PROPN	_	Gender=Fem|Number=Sing	23	appos	_	SpaceAfter=No
 38	)	)	PUNCT	_	_	37	punct	_	SpaceAfter=No
 39	.	.	PUNCT	_	_	16	punct	_	_
 
+# sent_id = 43
 # text = Com a Lei Orgânica da Previdência Social, de 1960, essa caixa seria transformada em instituto, o IAPFESP.
-# sent_id = 45
 1	Com	com	ADP	_	_	3	case	_	_
 2	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	3	det	_	_
-3	Lei	lei	NOUN	_	Gender=Fem|Number=Sing	16	obl	_	_
-4	Orgânica	Orgânica	ADJ	_	Number=Sing	3	amod	_	_
+3	Lei	Lei	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	16	obl	_	_
+4	Orgânica	Orgânica	PROPN	_	Number=Sing	3	flat:name	_	_
 5-6	da	_	_	_	_	_	_	_	_
 5	de	de	ADP	_	_	7	case	_	_
 6	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	7	det	_	_
-7	Previdência	Previdência	PROPN	_	Gender=Fem|Number=Sing	3	nmod	_	_
+7	Previdência	Previdência	PROPN	_	ExtPos=PROPN|Number=Sing	3	nmod	_	_
 8	Social	Social	PROPN	_	Number=Sing	7	flat:name	_	SpaceAfter=No
 9	,	,	PUNCT	_	_	11	punct	_	_
 10	de	de	ADP	_	_	11	case	_	_
-11	1960	1960	NUM	_	NumType=Card	7	nmod	_	SpaceAfter=No
+11	1960	1960	NUM	_	NumType=Card	3	nmod	_	SpaceAfter=No
 12	,	,	PUNCT	_	_	11	punct	_	_
 13	essa	esse	DET	_	Gender=Fem|Number=Sing|PronType=Dem	14	det	_	_
 14	caixa	caixa	NOUN	_	Gender=Fem|Number=Sing	16	nsubj:pass	_	_
 15	seria	ser	AUX	_	Mood=Cnd|Number=Sing|Person=3|VerbForm=Fin	16	aux:pass	_	_
-16	transformada	transformadar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
+16	transformada	transformar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
 17	em	em	ADP	_	_	18	case	_	_
-18	instituto	instituto	NOUN	_	Gender=Masc|Number=Sing	16	obl	_	SpaceAfter=No
-19	,	,	PUNCT	_	_	16	punct	_	_
+18	instituto	instituto	NOUN	_	Gender=Masc|Number=Sing	16	obj	_	SpaceAfter=No
+19	,	,	PUNCT	_	_	21	punct	_	_
 20	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	21	det	_	_
-21	IAPFESP	IAPFESP	PROPN	_	Gender=Masc|Number=Sing	16	nsubj	_	SpaceAfter=No
-22	.	.	PUNCT	_	_	16	punct	_	_
+21	IAPFESP	IAPFESP	PROPN	_	Gender=Masc|Number=Sing	18	appos	_	SpaceAfter=No
+22	.	.	PUNCT	_	_	16	punct	_	SpacesAfter=\n
 
+# sent_id = 44
 # text = Já no final da década de 1950, as conseqüências da ampliação dos serviços dos institutos manifestaram-se através de uma séria crise financeira.
-# sent_id = 46
-# newpar
 1	Já	já	ADV	_	_	4	advmod	_	_
 2-3	no	_	_	_	_	_	_	_	_
 2	em	em	ADP	_	_	4	case	_	_
@@ -1784,7 +1757,7 @@
 21	institutos	instituto	NOUN	_	Gender=Masc|Number=Plur	18	nmod	_	_
 22-23	manifestaram-se	_	_	_	_	_	_	_	_
 22	manifestaram	manifestar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
-23	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	22	expl	_	_
+23	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Plur|Person=3|PronType=Prs	22	expl	_	_
 24	através	através	ADV	_	_	22	advmod	_	_
 25	de	de	ADP	_	_	28	case	_	_
 26	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	28	det	_	_
@@ -1793,13 +1766,13 @@
 29	financeira	financeiro	ADJ	_	Gender=Fem|Number=Sing	28	amod	_	SpaceAfter=No
 30	.	.	PUNCT	_	_	22	punct	_	_
 
+# sent_id = 45
 # text = Na verdade, essa crise era também resultado da permanente dívida da União e dos empregadores para com a previdência social.
-# sent_id = 47
 1-2	Na	_	_	_	_	_	_	_	_
-1	Em	em	ADP	_	_	3	case	_	_
-2	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	3	det	_	_
-3	verdade	verdade	NOUN	_	Gender=Fem|Number=Sing	9	nmod	_	SpaceAfter=No
-4	,	,	PUNCT	_	_	3	punct	_	_
+1	Em	em	ADP	_	ExtPos=ADV	9	advmod	_	_
+2	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	1	fixed	_	_
+3	verdade	verdade	NOUN	_	Gender=Fem|Number=Sing	1	fixed	_	SpaceAfter=No
+4	,	,	PUNCT	_	_	1	punct	_	_
 5	essa	esse	DET	_	Gender=Fem|Number=Sing|PronType=Dem	6	det	_	_
 6	crise	crise	NOUN	_	Gender=Fem|Number=Sing	9	nsubj	_	_
 7	era	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	9	cop	_	_
@@ -1824,25 +1797,24 @@
 23	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	24	det	_	_
 24	previdência	previdência	NOUN	_	Gender=Fem|Number=Sing	13	nmod	_	_
 25	social	social	ADJ	_	Gender=Fem|Number=Sing	24	amod	_	SpaceAfter=No
-26	.	.	PUNCT	_	_	9	punct	_	_
+26	.	.	PUNCT	_	_	9	punct	_	SpacesAfter=\n
 
+# sent_id = 46
 # text = Aprovada finalmente em 1960, a Lei Orgânica da Previdência Social uniformizou e ampliou, por um lado, os direitos dos segurados dos diferentes institutos.
-# sent_id = 48
-# newpar
-1	Aprovada	aprovar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	0	root	_	_
+1	Aprovada	aprovar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	7	acl	_	_
 2	finalmente	finalmente	ADV	_	_	1	advmod	_	_
 3	em	em	ADP	_	_	4	case	_	_
 4	1960	1960	NUM	_	NumType=Card	1	obl	_	SpaceAfter=No
 5	,	,	PUNCT	_	_	1	punct	_	_
 6	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	7	det	_	_
-7	Lei	Lei	NOUN	_	Gender=Fem|Number=Sing	13	nsubj	_	_
-8	Orgânica	Orgânica	ADJ	_	Number=Sing	7	compound	_	_
+7	Lei	Lei	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	13	nsubj	_	_
+8	Orgânica	Orgânica	PROPN	_	Number=Sing	7	flat:name	_	_
 9-10	da	_	_	_	_	_	_	_	_
 9	de	de	ADP	_	_	11	case	_	_
 10	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	11	det	_	_
-11	Previdência	Previdência	PROPN	_	Gender=Fem|Number=Sing	7	nmod	_	_
+11	Previdência	Previdência	PROPN	_	ExtPos=PROPN|Number=Sing	7	nmod	_	_
 12	Social	Social	PROPN	_	Number=Sing	11	flat:name	_	_
-13	uniformizou	uniformizar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	1	parataxis	_	_
+13	uniformizou	uniformizar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 14	e	e	CCONJ	_	_	15	cc	_	_
 15	ampliou	ampliar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	13	conj	_	SpaceAfter=No
 16	,	,	PUNCT	_	_	15	punct	_	_
@@ -1859,26 +1831,26 @@
 26-27	dos	_	_	_	_	_	_	_	_
 26	de	de	ADP	_	_	29	case	_	_
 27	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	29	det	_	_
-28	diferentes	diferentes	DET	_	Gender=Masc|Number=Plur|PronType=Ind	29	det	_	_
+28	diferentes	diferente	ADJ	_	Gender=Masc|Number=Plur	29	amod	_	_
 29	institutos	instituto	NOUN	_	Gender=Masc|Number=Plur	25	nmod	_	SpaceAfter=No
-30	.	.	PUNCT	_	_	1	punct	_	_
+30	.	.	PUNCT	_	_	13	punct	_	_
 
+# sent_id = 47
 # text = Através dela, por exemplo, foi estabelecido o auxilio-natalidade e foram aumentadas as aposentadorias e pensões.
-# sent_id = 49
 1	Através	através	ADV	_	_	9	advmod	_	_
 2-3	dela	_	_	_	_	_	_	_	SpaceAfter=No
 2	de	de	ADP	_	_	3	case	_	_
 3	ela	ela	PRON	_	Gender=Fem|Number=Sing|Person=3|PronType=Prs	1	obl	_	_
 4	,	,	PUNCT	_	_	1	punct	_	_
-5	por	por	ADP	_	_	1	cc	_	_
+5	por	por	ADP	_	ExtPos=ADV	9	advmod	_	_
 6	exemplo	exemplo	NOUN	_	Gender=Masc|Number=Sing	5	fixed	_	SpaceAfter=No
-7	,	,	PUNCT	_	_	1	punct	_	_
+7	,	,	PUNCT	_	_	5	punct	_	_
 8	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	9	aux:pass	_	_
 9	estabelecido	estabelecer	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
 10	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	_	_
-11	auxilio-natalidade	auxilio-natalidade	NOUN	_	Gender=Fem|Number=Sing	9	nsubj:pass	_	_
+11	auxilio-natalidade	auxilio-natalidade	NOUN	_	Gender=Masc|Number=Sing	9	nsubj:pass	_	_
 12	e	e	CCONJ	_	_	14	cc	_	_
-13	foram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	14	aux:pass	_	_
+13	foram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|VerbForm=Fin	14	aux:pass	_	_
 14	aumentadas	aumentar	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part|Voice=Pass	9	conj	_	_
 15	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	16	det	_	_
 16	aposentadorias	aposentadoria	NOUN	_	Gender=Fem|Number=Plur	14	nsubj:pass	_	_
@@ -1886,18 +1858,18 @@
 18	pensões	pensão	NOUN	_	Gender=Fem|Number=Plur	16	conj	_	SpaceAfter=No
 19	.	.	PUNCT	_	_	9	punct	_	_
 
+# sent_id = 48
 # text = Por outro lado, porém, ao conservar a mesma estrutura e o mesmo regime financeiro dos institutos, a lei agravou a crise que já se vinha manifestando.
-# sent_id = 50
-1	Por	por	ADP	_	_	3	case	_	_
-2	outro	outro	DET	_	Gender=Masc|Number=Sing|PronType=Ind	3	det	_	_
-3	lado	lado	NOUN	_	Gender=Masc|Number=Sing	9	obl	_	SpaceAfter=No
+1	Por	por	ADP	_	ExtPos=CCONJ	24	cc	_	_
+2	outro	outro	DET	_	Gender=Masc|Number=Sing|PronType=Ind	1	fixed	_	_
+3	lado	lado	NOUN	_	Gender=Masc|Number=Sing	1	fixed	_	SpaceAfter=No
 4	,	,	PUNCT	_	_	3	punct	_	_
-5	porém	porém	ADV	_	_	9	advmod	_	SpaceAfter=No
-6	,	,	PUNCT	_	_	9	punct	_	_
+5	porém	porém	CCONJ	_	_	24	cc	_	SpaceAfter=No
+6	,	,	PUNCT	_	_	5	punct	_	_
 7-8	ao	_	_	_	_	_	_	_	_
-7	a	a	ADP	_	_	9	mark	_	_
+7	a	a	SCONJ	_	_	9	mark	_	_
 8	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	9	det	_	_
-9	conservar	conservar	VERB	_	VerbForm=Inf	0	root	_	_
+9	conservar	conservar	VERB	_	VerbForm=Inf	24	advcl	_	_
 10	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	12	det	_	_
 11	mesma	mesmo	ADJ	_	Gender=Fem|Number=Sing	12	amod	_	_
 12	estrutura	estrutura	NOUN	_	Gender=Fem|Number=Sing	9	obj	_	_
@@ -1913,19 +1885,18 @@
 21	,	,	PUNCT	_	_	9	punct	_	_
 22	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	23	det	_	_
 23	lei	lei	NOUN	_	Gender=Fem|Number=Sing	24	nsubj	_	_
-24	agravou	agravar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	12	acl:relcl	_	_
+24	agravou	agravar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 25	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	26	det	_	_
 26	crise	crise	NOUN	_	Gender=Fem|Number=Sing	24	obj	_	_
 27	que	que	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	30	nsubj	_	_
 28	já	já	ADV	_	_	30	advmod	_	_
 29	se	se	PRON	_	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	30	expl	_	_
-30	vinha	ver	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	26	acl:relcl	_	_
-31	manifestando	manifestar	VERB	_	VerbForm=Ger	30	advcl	_	SpaceAfter=No
-32	.	.	PUNCT	_	_	9	punct	_	_
+30	vinha	vir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	26	acl:relcl	_	_
+31	manifestando	manifestar	VERB	_	VerbForm=Ger	30	xcomp	_	SpaceAfter=No
+32	.	.	PUNCT	_	_	24	punct	_	SpacesAfter=\n
 
+# sent_id = 49
 # text = A expansão dos serviços com a criação de hospitais, de postos de atendimento médico e de postos de assistência jurídica sem um planejamento central teve sérias conseqüências.
-# sent_id = 51
-# newpar
 1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
 2	expansão	expansão	NOUN	_	Gender=Fem|Number=Sing	27	nsubj	_	_
 3-4	dos	_	_	_	_	_	_	_	_
@@ -1934,64 +1905,64 @@
 5	serviços	serviço	NOUN	_	Gender=Masc|Number=Plur	2	nmod	_	_
 6	com	com	ADP	_	_	8	case	_	_
 7	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	8	det	_	_
-8	criação	criação	NOUN	_	Gender=Fem|Number=Sing	5	nmod	_	_
+8	criação	criação	NOUN	_	Gender=Fem|Number=Sing	2	nmod	_	_
 9	de	de	ADP	_	_	10	case	_	_
 10	hospitais	hospital	NOUN	_	Gender=Masc|Number=Plur	8	nmod	_	SpaceAfter=No
 11	,	,	PUNCT	_	_	13	punct	_	_
 12	de	de	ADP	_	_	13	case	_	_
-13	postos	posto	NOUN	_	Gender=Masc|Number=Sing	10	conj	_	_
+13	postos	posto	NOUN	_	Gender=Masc|Number=Plur	10	conj	_	_
 14	de	de	ADP	_	_	15	case	_	_
 15	atendimento	atendimento	NOUN	_	Gender=Masc|Number=Sing	13	nmod	_	_
 16	médico	médico	ADJ	_	Gender=Masc|Number=Sing	15	amod	_	_
 17	e	e	CCONJ	_	_	19	cc	_	_
 18	de	de	ADP	_	_	19	case	_	_
-19	postos	posto	NOUN	_	Gender=Masc|Number=Sing	10	conj	_	_
+19	postos	posto	NOUN	_	Gender=Masc|Number=Plur	10	conj	_	_
 20	de	de	ADP	_	_	21	case	_	_
 21	assistência	assistência	NOUN	_	Gender=Fem|Number=Sing	19	nmod	_	_
-22	jurídica	jurídico	ADJ	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	21	amod	_	_
+22	jurídica	jurídico	ADJ	_	Gender=Fem|Number=Sing	21	amod	_	_
 23	sem	sem	ADP	_	_	25	case	_	_
 24	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	25	det	_	_
-25	planejamento	planejamento	NOUN	_	Gender=Masc|Number=Sing	8	nmod	_	_
+25	planejamento	planejamento	NOUN	_	Gender=Masc|Number=Sing	19	nmod	_	_
 26	central	central	ADJ	_	Gender=Masc|Number=Sing	25	amod	_	_
 27	teve	ter	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 28	sérias	sério	ADJ	_	Gender=Fem|Number=Plur	29	amod	_	_
 29	conseqüências	conseqüência	NOUN	_	Gender=Fem|Number=Plur	27	obj	_	SpaceAfter=No
 30	.	.	PUNCT	_	_	27	punct	_	_
 
+# sent_id = 50
 # text = Coexistiam numa mesma região serviços médicos e de assistência social com capacidade ociosa de pessoal e de material e uma população destituída de qualquer assistência previdenciária.
-# sent_id = 52
-1	Coexistiam	Coexistir	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	0	root	_	_
+1	Coexistiam	coexistir	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	0	root	_	_
 2-3	numa	_	_	_	_	_	_	_	_
 2	em	em	ADP	_	_	5	case	_	_
 3	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	5	det	_	_
 4	mesma	mesmo	ADJ	_	Gender=Fem|Number=Sing	5	amod	_	_
 5	região	região	NOUN	_	Gender=Fem|Number=Sing	1	obl	_	_
-6	serviços	serviço	ADJ	_	Gender=Masc|Number=Plur	5	amod	_	_
+6	serviços	serviço	NOUN	_	Gender=Masc|Number=Plur	1	nsubj	_	_
 7	médicos	médico	ADJ	_	Gender=Masc|Number=Plur	6	amod	_	_
 8	e	e	CCONJ	_	_	10	cc	_	_
 9	de	de	ADP	_	_	10	case	_	_
-10	assistência	assistência	NOUN	_	_	6	conj	_	_
-11	social	social	ADJ	_	_	10	compound	_	_
+10	assistência	assistência	NOUN	_	Gender=Fem|Number=Sing	6	conj	_	_
+11	social	social	ADJ	_	Gender=Fem|Number=Sing	10	amod	_	_
 12	com	com	ADP	_	_	13	case	_	_
-13	capacidade	capacidade	NOUN	_	Gender=Fem|Number=Sing	10	nmod	_	_
+13	capacidade	capacidade	NOUN	_	Gender=Fem|Number=Sing	6	nmod	_	_
 14	ociosa	ocioso	ADJ	_	Gender=Fem|Number=Sing	13	amod	_	_
 15	de	de	ADP	_	_	16	case	_	_
 16	pessoal	pessoal	NOUN	_	Gender=Masc|Number=Sing	13	nmod	_	_
-17	e	e	CCONJ	_	_	13	cc	_	_
+17	e	e	CCONJ	_	_	19	cc	_	_
 18	de	de	ADP	_	_	19	case	_	_
-19	material	material	NOUN	_	Gender=Masc|Number=Sing	13	nmod	_	_
+19	material	material	NOUN	_	Gender=Masc|Number=Sing	16	conj	_	_
 20	e	e	CCONJ	_	_	22	cc	_	_
 21	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	22	det	_	_
-22	população	população	NOUN	_	Gender=Fem|Number=Sing	13	conj	_	_
+22	população	população	NOUN	_	Gender=Fem|Number=Sing	6	conj	_	_
 23	destituída	destituir	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	22	acl	_	_
 24	de	de	ADP	_	_	26	case	_	_
 25	qualquer	qualquer	DET	_	Gender=Fem|Number=Sing|PronType=Ind	26	det	_	_
-26	assistência	assistência	NOUN	_	Gender=Fem|Number=Sing	22	nmod	_	_
+26	assistência	assistência	NOUN	_	Gender=Fem|Number=Sing	23	obj	_	_
 27	previdenciária	previdenciário	ADJ	_	Gender=Fem|Number=Sing	26	amod	_	SpaceAfter=No
 28	.	.	PUNCT	_	_	1	punct	_	_
 
+# sent_id = 51
 # text = A qualidade do atendimento variava também de acordo com a organização de cada instituto, havendo categorias bem servidas ao lado de outras precariamente atendidas.
-# sent_id = 53
 1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
 2	qualidade	qualidade	NOUN	_	Gender=Fem|Number=Sing	6	nsubj	_	_
 3-4	do	_	_	_	_	_	_	_	_
@@ -2011,44 +1982,44 @@
 16	,	,	PUNCT	_	_	17	punct	_	_
 17	havendo	haver	VERB	_	VerbForm=Ger	6	advcl	_	_
 18	categorias	categoria	NOUN	_	Gender=Fem|Number=Plur	17	obj	_	_
-19	bem	bem	ADV	_	_	23	advmod	_	_
-20	servidas	servir	AUX	_	Gender=Fem|Number=Plur	23	cop	_	_
+19	bem	bem	ADV	_	_	20	advmod	_	_
+20	servidas	servir	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part	18	acl	_	_
 21-22	ao	_	_	_	_	_	_	_	_
 21	a	a	ADP	_	_	23	case	_	_
 22	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	23	det	_	_
-23	lado	lado	NOUN	_	_	17	obl	_	_
-24	de	de	ADP	_	_	27	case	_	_
-25	outras	outro	DET	_	Gender=Fem|Number=Plur|PronType=Ind	27	det	_	_
+23	lado	lado	NOUN	_	Gender=Masc|Number=Sing	20	obl	_	_
+24	de	de	ADP	_	_	25	case	_	_
+25	outras	outro	PRON	_	Gender=Fem|Number=Plur|PronType=Ind	23	nmod	_	_
 26	precariamente	precariamente	ADV	_	_	27	advmod	_	_
-27	atendidas	atendida	ADJ	_	Gender=Fem|Number=Plur	23	nmod	_	SpaceAfter=No
+27	atendidas	atender	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part	25	acl	_	SpaceAfter=No
 28	.	.	PUNCT	_	_	6	punct	_	_
 
+# sent_id = 52
 # text = Havia ainda o problema da população marginalizada (desempregados e subempregados) que não contava com qualquer assistência.
-# sent_id = 54
 1	Havia	haver	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	0	root	_	_
 2	ainda	ainda	ADV	_	_	1	advmod	_	_
 3	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	4	det	_	_
-4	problema	problema	NOUN	_	Gender=Masc|Number=Sing	1	nsubj	_	_
+4	problema	problema	NOUN	_	Gender=Masc|Number=Sing	1	obj	_	_
 5-6	da	_	_	_	_	_	_	_	_
 5	de	de	ADP	_	_	7	case	_	_
 6	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	7	det	_	_
 7	população	população	NOUN	_	Gender=Fem|Number=Sing	4	nmod	_	_
-8	marginalizada	marginalizado	ADJ	_	Gender=Fem|Number=Sing	7	amod	_	_
+8	marginalizada	marginalizar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	7	acl	_	_
 9	(	(	PUNCT	_	_	10	punct	_	SpaceAfter=No
-10	desempregados	desempregado	ADJ	_	Gender=Masc|Number=Plur	7	amod	_	_
+10	desempregados	desempregado	NOUN	_	Gender=Masc|Number=Plur	7	appos	_	_
 11	e	e	CCONJ	_	_	12	cc	_	_
-12	subempregados	subempregado	ADJ	_	Gender=Masc|Number=Plur|VerbForm=Part	10	conj	_	SpaceAfter=No
+12	subempregados	subempregado	NOUN	_	Gender=Masc|Number=Plur	10	conj	_	SpaceAfter=No
 13	)	)	PUNCT	_	_	10	punct	_	_
-14	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	16	nsubj	_	_
+14	que	que	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	16	nsubj	_	_
 15	não	não	ADV	_	Polarity=Neg	16	advmod	_	_
 16	contava	contar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	7	acl:relcl	_	_
 17	com	com	ADP	_	_	19	case	_	_
 18	qualquer	qualquer	DET	_	Gender=Fem|Number=Sing|PronType=Ind	19	det	_	_
-19	assistência	assistência	NOUN	_	Gender=Fem|Number=Sing	16	obl	_	SpaceAfter=No
+19	assistência	assistência	NOUN	_	Gender=Fem|Number=Sing	16	obj	_	SpaceAfter=No
 20	.	.	PUNCT	_	_	1	punct	_	_
 
+# sent_id = 53
 # text = Em contraste com a população dos grandes centros urbanos, a população do interior tampouco recebia qualquer tipo de atendimento.
-# sent_id = 55
 1	Em	em	ADP	_	_	2	case	_	_
 2	contraste	contraste	NOUN	_	Gender=Masc|Number=Sing	18	obl	_	_
 3	com	com	ADP	_	_	5	case	_	_
@@ -2075,24 +2046,24 @@
 22	atendimento	atendimento	NOUN	_	Gender=Masc|Number=Sing	20	nmod	_	SpaceAfter=No
 23	.	.	PUNCT	_	_	18	punct	_	_
 
+# sent_id = 54
 # text = Por outro lado, os institutos eram utilizados como recurso político, sendo muitas vezes manipulados por líderes trabalhistas que dessa forma procuravam aumentar seu poder pessoal.
-# sent_id = 56
-1	Por	por	ADP	_	_	3	case	_	_
-2	outro	outro	DET	_	Gender=Masc|Number=Sing|PronType=Ind	3	det	_	_
-3	lado	lado	NOUN	_	Gender=Masc|Number=Sing	8	obl	_	SpaceAfter=No
+1	Por	por	ADP	_	ExtPos=CCONJ	8	cc	_	_
+2	outro	outro	DET	_	Gender=Masc|Number=Sing|PronType=Ind	1	fixed	_	_
+3	lado	lado	NOUN	_	Gender=Masc|Number=Sing	1	fixed	_	SpaceAfter=No
 4	,	,	PUNCT	_	_	3	punct	_	_
 5	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	6	det	_	_
-6	institutos	instituto	NOUN	_	Gender=Masc|Number=Plur	8	nsubj:pass	_	_
-7	eram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	8	aux:pass	_	_
-8	utilizados	utilizar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	0	root	_	_
+6	institutos	instituto	NOUN	_	Gender=Masc|Number=Plur	8	nsubj	_	_
+7	eram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	8	cop	_	_
+8	utilizados	utilizar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part	0	root	_	_
 9	como	como	ADP	_	_	10	case	_	_
 10	recurso	recurso	NOUN	_	Gender=Masc|Number=Sing	8	xcomp	_	_
 11	político	político	ADJ	_	Gender=Masc|Number=Sing	10	amod	_	SpaceAfter=No
-12	,	,	PUNCT	_	_	13	punct	_	_
-13	sendo	ser	VERB	_	VerbForm=Ger	8	advcl	_	_
-14	muitas	muito	DET	_	_	15	det	_	_
-15	vezes	vez	NOUN	_	Gender=Masc|Number=Plur	13	obl	_	_
-16	manipulados	manipular	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	15	acl	_	_
+12	,	,	PUNCT	_	_	16	punct	_	_
+13	sendo	ser	AUX	_	VerbForm=Ger	16	aux:pass	_	_
+14	muitas	muitas	ADP	_	_	15	case	_	_
+15	vezes	vez	NOUN	_	Gender=Fem|Number=Plur	16	obl	_	_
+16	manipulados	manipular	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	8	advcl	_	_
 17	por	por	ADP	_	_	18	case	_	_
 18	líderes	líder	NOUN	_	Gender=Masc|Number=Plur	16	obl:agent	_	_
 19	trabalhistas	trabalhista	ADJ	_	Gender=Masc|Number=Plur	18	amod	_	_
@@ -2106,11 +2077,10 @@
 26	seu	seu	DET	_	Gender=Masc|Number=Sing|PronType=Prs	27	det	_	_
 27	poder	poder	NOUN	_	Gender=Masc|Number=Sing	25	obj	_	_
 28	pessoal	pessoal	ADJ	_	Gender=Masc|Number=Sing	27	amod	_	SpaceAfter=No
-29	.	.	PUNCT	_	_	8	punct	_	_
+29	.	.	PUNCT	_	_	8	punct	_	SpacesAfter=\n
 
+# sent_id = 55
 # text = No início da década de 1960, a crise financeira que afetava todos os institutos, agravada pela crise política que enfrentava a sociedade, determinou um acirrado debate em torno da previdência social.
-# sent_id = 57
-# newpar
 1-2	No	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	3	case	_	_
 2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
@@ -2126,55 +2096,55 @@
 11	crise	crise	NOUN	_	Gender=Fem|Number=Sing	29	nsubj	_	_
 12	financeira	financeiro	ADJ	_	Gender=Fem|Number=Sing	11	amod	_	_
 13	que	que	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	14	nsubj	_	_
-14	afetava	afetavar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	11	acl:relcl	_	_
+14	afetava	afetar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	11	acl:relcl	_	_
 15	todos	todo	DET	_	Gender=Masc|Number=Plur|PronType=Tot	17	det	_	_
-16	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	17	det	_	_
+16	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	15	fixed	_	_
 17	institutos	instituto	NOUN	_	Gender=Masc|Number=Plur	14	obj	_	SpaceAfter=No
 18	,	,	PUNCT	_	_	19	punct	_	_
-19	agravada	agravar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	17	acl	_	_
+19	agravada	agravar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	11	acl	_	_
 20-21	pela	_	_	_	_	_	_	_	_
 20	por	por	ADP	_	_	22	case	_	_
 21	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	22	det	_	_
-22	crise	crise	NOUN	_	Gender=Fem|Number=Sing	19	obl	_	_
+22	crise	crise	NOUN	_	Gender=Fem|Number=Sing	19	obl:agent	_	_
 23	política	político	ADJ	_	Gender=Fem|Number=Sing	22	amod	_	_
 24	que	que	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	25	nsubj	_	_
 25	enfrentava	enfrentar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	22	acl:relcl	_	_
 26	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	27	det	_	_
 27	sociedade	sociedade	NOUN	_	Gender=Fem|Number=Sing	25	obj	_	SpaceAfter=No
-28	,	,	PUNCT	_	_	25	punct	_	_
+28	,	,	PUNCT	_	_	19	punct	_	_
 29	determinou	determinar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 30	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	32	det	_	_
-31	acirrado	acirrar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	32	acl	_	_
+31	acirrado	acirrado	ADJ	_	Gender=Masc|Number=Sing	32	amod	_	_
 32	debate	debate	NOUN	_	Gender=Masc|Number=Sing	29	obj	_	_
-33	em	em	ADP	_	_	34	case	_	_
-34	torno	torno	NOUN	_	_	32	nmod	_	_
+33	em	em	ADP	_	_	37	case	_	_
+34	torno	torno	NOUN	_	Gender=Masc|Number=Sing	33	fixed	_	_
 35-36	da	_	_	_	_	_	_	_	_
-35	de	de	ADP	_	_	37	case	_	_
-36	a	o	DET	_	Definite=Def|PronType=Art	37	det	_	_
-37	previdência	previdência	NOUN	_	Gender=Fem|Number=Sing	34	nmod	_	_
+35	de	de	ADP	_	_	33	fixed	_	_
+36	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	37	det	_	_
+37	previdência	previdência	NOUN	_	Gender=Fem|Number=Sing	29	obl	_	_
 38	social	social	ADJ	_	Gender=Fem|Number=Sing	37	amod	_	SpaceAfter=No
 39	.	.	PUNCT	_	_	29	punct	_	_
 
-# text = As críticas incidiam principalmente sobre os critérios políticos — e não técnicos — nos quais se baseava a administração dos institutos.
-# sent_id = 58
+# sent_id = 56
+# text = As críticas incidiam principalmente sobre os critérios políticos - e não técnicos - nos quais se baseava a administração dos institutos.
 1	As	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	2	det	_	_
 2	críticas	crítica	NOUN	_	Gender=Fem|Number=Plur	3	nsubj	_	_
 3	incidiam	incidir	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	0	root	_	_
-4	principalmente	principalmente	ADV	_	_	7	advmod	_	_
+4	principalmente	principalmente	ADV	_	_	3	advmod	_	_
 5	sobre	sobre	ADP	_	_	7	case	_	_
 6	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	7	det	_	_
-7	critérios	critério	NOUN	_	Gender=Masc|Number=Plur	3	obl	_	_
+7	critérios	critério	NOUN	_	Gender=Masc|Number=Plur	3	obj	_	_
 8	políticos	político	ADJ	_	Gender=Masc|Number=Plur	7	amod	_	_
-9	—	—	PUNCT	_	_	12	punct	_	_
+9	-	-	PUNCT	_	_	12	punct	_	_
 10	e	e	CCONJ	_	_	12	cc	_	_
 11	não	não	ADV	_	Polarity=Neg	12	advmod	_	_
-12	técnicos	técnico	ADJ	_	Gender=Masc|Number=Plur	7	amod	_	_
-13	—	—	PUNCT	_	_	3	punct	_	_
+12	técnicos	técnico	ADJ	_	Gender=Masc|Number=Plur	8	conj	_	_
+13	-	-	PUNCT	_	_	12	punct	_	_
 14-15	nos	_	_	_	_	_	_	_	_
 14	em	em	ADP	_	_	16	case	_	_
 15	os	o	DET	_	Gender=Masc|Number=Plur|PronType=Art	16	det	_	_
 16	quais	qual	PRON	_	Gender=Masc|Number=Plur|PronType=Rel	18	obl	_	_
-17	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	18	expl	_	_
+17	se	se	PRON	_	Case=Acc|PronType=Prs	18	expl	_	_
 18	baseava	basear	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	7	acl:relcl	_	_
 19	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	20	det	_	_
 20	administração	administração	NOUN	_	Gender=Fem|Number=Sing	18	nsubj	_	_
@@ -2182,12 +2152,11 @@
 21	de	de	ADP	_	_	23	case	_	_
 22	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	23	det	_	_
 23	institutos	instituto	NOUN	_	Gender=Masc|Number=Plur	20	nmod	_	SpaceAfter=No
-24	.	.	PUNCT	_	_	3	punct	_	_
+24	.	.	PUNCT	_	_	3	punct	_	SpacesAfter=\n
 
+# sent_id = 57
 # text = Logo após a derrubada do governo João Goulart, os militares que assumiram o poder decidiram reformular a previdência social, unificando-a num órgão central.
-# sent_id = 59
-# newpar
-1	Logo	logo	ADV	_	_	4	advmod	_	_
+1	Logo	logo	ADV	_	_	17	advmod	_	_
 2	após	após	ADP	_	_	4	case	_	_
 3	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	4	det	_	_
 4	derrubada	derrubada	NOUN	_	Gender=Fem|Number=Sing	17	obl	_	_
@@ -2195,13 +2164,13 @@
 5	de	de	ADP	_	_	7	case	_	_
 6	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	7	det	_	_
 7	governo	governo	NOUN	_	Gender=Masc|Number=Sing	4	nmod	_	_
-8	João	João	PROPN	_	Gender=Masc|Number=Sing	7	appos	_	_
+8	João	João	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	7	appos	_	_
 9	Goulart	Goulart	PROPN	_	Number=Sing	8	flat:name	_	SpaceAfter=No
 10	,	,	PUNCT	_	_	4	punct	_	_
 11	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	12	det	_	_
 12	militares	militar	NOUN	_	Gender=Masc|Number=Plur	17	nsubj	_	_
 13	que	que	PRON	_	Gender=Masc|Number=Plur|PronType=Rel	14	nsubj	_	_
-14	assumiram	assumir	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	12	acl:relcl	_	_
+14	assumiram	assumir	VERB	_	Mood=Ind|Number=Plur|Person=3|VerbForm=Fin	12	acl:relcl	_	_
 15	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	16	det	_	_
 16	poder	poder	NOUN	_	Gender=Masc|Number=Sing	14	obj	_	_
 17	decidiram	decidir	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
@@ -2211,8 +2180,8 @@
 21	social	social	ADJ	_	Gender=Fem|Number=Sing	20	amod	_	SpaceAfter=No
 22	,	,	PUNCT	_	_	23	punct	_	_
 23-24	unificando-a	_	_	_	_	_	_	_	_
-23	unificando	unificar	VERB	_	VerbForm=Ger	17	advcl	_	_
-24	a	ela	PRON	_	_	23	obj	_	_
+23	unificando	unificar	VERB	_	VerbForm=Ger	18	advcl	_	_
+24	a	ela	PRON	_	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	23	obj	_	_
 25-26	num	_	_	_	_	_	_	_	_
 25	em	em	ADP	_	_	27	case	_	_
 26	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	27	det	_	_
@@ -2220,37 +2189,37 @@
 28	central	central	ADJ	_	Gender=Masc|Number=Sing	27	amod	_	SpaceAfter=No
 29	.	.	PUNCT	_	_	17	punct	_	_
 
+# sent_id = 58
 # text = Assim, em 21 de novembro de 1966, todos os institutos do setor privado foram fundidos no Instituto Nacional de Previdência Social (INPS).
-# sent_id = 60
 1	Assim	assim	ADV	_	_	18	advmod	_	SpaceAfter=No
 2	,	,	PUNCT	_	_	1	punct	_	_
 3	em	em	ADP	_	_	4	case	_	_
 4	21	21	NUM	_	NumType=Card	18	obl	_	_
 5	de	de	ADP	_	_	6	case	_	_
-6	novembro	novembro	NOUN	_	Gender=Masc|Number=Sing	4	nmod:tmod	_	_
+6	novembro	novembro	NOUN	_	Gender=Masc|Number=Sing	4	nmod	_	_
 7	de	de	ADP	_	_	8	case	_	_
 8	1966	1966	NUM	_	NumType=Card	6	nmod	_	SpaceAfter=No
 9	,	,	PUNCT	_	_	4	punct	_	_
 10	todos	todo	DET	_	Gender=Masc|Number=Plur|PronType=Tot	12	det	_	_
-11	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	10	fixed	_	_
-12	institutos	institutos	NOUN	_	Gender=Masc|Number=Plur	18	nsubj:pass	_	_
+11	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	12	det	_	_
+12	institutos	instituto	NOUN	_	Gender=Masc|Number=Plur	18	nsubj:pass	_	_
 13-14	do	_	_	_	_	_	_	_	_
 13	de	de	ADP	_	_	15	case	_	_
 14	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	15	det	_	_
 15	setor	setor	NOUN	_	Gender=Masc|Number=Sing	12	nmod	_	_
 16	privado	privado	ADJ	_	Gender=Masc|Number=Sing	15	amod	_	_
-17	foram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	18	aux:pass	_	_
+17	foram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|VerbForm=Fin	18	aux:pass	_	_
 18	fundidos	fundir	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	0	root	_	_
 19-20	no	_	_	_	_	_	_	_	_
 19	em	em	ADP	_	_	21	case	_	_
 20	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	21	det	_	_
-21	Instituto	Instituto	PROPN	_	Gender=Masc|Number=Sing	18	obl	_	_
+21	Instituto	Instituto	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	18	obl	_	_
 22	Nacional	Nacional	PROPN	_	Number=Sing	21	flat:name	_	_
 23	de	de	ADP	_	_	24	case	_	_
-24	Previdência	Previdência	PROPN	_	Gender=Fem|Number=Sing	21	nmod	_	_
+24	Previdência	Previdência	PROPN	_	ExtPos=PROPN|Number=Sing	21	nmod	_	_
 25	Social	Social	PROPN	_	Number=Sing	24	flat:name	_	_
 26	(	(	PUNCT	_	_	27	punct	_	SpaceAfter=No
 27	INPS	INPS	PROPN	_	Gender=Masc|Number=Sing	21	appos	_	SpaceAfter=No
 28	)	)	PUNCT	_	_	27	punct	_	SpaceAfter=No
-29	.	.	PUNCT	_	_	18	punct	_	_
+29	.	.	PUNCT	_	_	18	punct	_	SpacesAfter=\n
 

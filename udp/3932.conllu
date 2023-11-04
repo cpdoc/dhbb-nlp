@@ -1,16 +1,19 @@
-# text = «José Lopes de Oliveira» nasceu em Vitória em 10 de abril de 1927, filho de Ivan de Oliveira e Amélia Carlos Oliveira.
-# sent_id = 1
-# newpar
+# generator = UDPipe 2, https://lindat.mff.cuni.cz/services/udpipe
+# udpipe_model = portuguese-bosque-ud-2.12-230717
+# udpipe_model_licence = CC BY-NC-SA
 # newdoc
+# newpar
+# sent_id = 1
+# text = «José Lopes de Oliveira» nasceu em Vitória em 10 de abril de 1927, filho de Ivan de Oliveira e Amélia Carlos Oliveira.
 1	«	«	PUNCT	_	_	2	punct	_	SpaceAfter=No
-2	José	José	PROPN	_	Gender=Masc|Number=Sing	7	nsubj	_	_
+2	José	José	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	7	nsubj	_	_
 3	Lopes	Lopes	PROPN	_	Number=Sing	2	flat:name	_	_
 4	de	de	ADP	_	_	5	case	_	_
-5	Oliveira	Oliveira	PROPN	_	Number=Sing	2	flat:name	_	SpaceAfter=No
+5	Oliveira	Oliveira	PROPN	_	Number=Sing	2	nmod	_	SpaceAfter=No
 6	»	»	PUNCT	_	_	2	punct	_	_
 7	nasceu	nascer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 8	em	em	ADP	_	_	9	case	_	_
-9	Vitória	vitória	NOUN	_	Gender=Fem|Number=Sing	7	obl	_	_
+9	Vitória	Vitória	PROPN	_	Gender=Fem|Number=Sing	7	obl	_	_
 10	em	em	ADP	_	_	11	case	_	_
 11	10	10	NUM	_	NumType=Card	7	obl	_	_
 12	de	de	ADP	_	_	13	case	_	_
@@ -18,20 +21,20 @@
 14	de	de	ADP	_	_	15	case	_	_
 15	1927	1927	NUM	_	NumType=Card	13	nmod	_	SpaceAfter=No
 16	,	,	PUNCT	_	_	17	punct	_	_
-17	filho	filho	NOUN	_	Gender=Masc|Number=Sing	2	appos	_	_
+17	filho	filho	NOUN	_	Gender=Masc|Number=Sing	7	appos	_	_
 18	de	de	ADP	_	_	19	case	_	_
 19	Ivan	Ivan	PROPN	_	Gender=Masc|Number=Sing	17	nmod	_	_
 20	de	de	ADP	_	_	21	case	_	_
-21	Oliveira	Oliveira	PROPN	_	Number=Sing	19	flat:name	_	_
+21	Oliveira	Oliveira	PROPN	_	Number=Sing	19	nmod	_	_
 22	e	e	CCONJ	_	_	23	cc	_	_
-23	Amélia	Amélia	PROPN	_	Gender=Fem|Number=Sing	19	conj	_	_
+23	Amélia	Amélia	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	19	conj	_	_
 24	Carlos	Carlos	PROPN	_	Number=Sing	23	flat:name	_	_
 25	Oliveira	Oliveira	PROPN	_	Number=Sing	23	flat:name	_	SpaceAfter=No
 26	.	.	PUNCT	_	_	7	punct	_	SpacesAfter=\n
 
-# text = Ingressou no Banco do Brasil em 1948.
 # sent_id = 2
-1	Ingressou	Ingressar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+# text = Ingressou no Banco do Brasil em 1948.
+1	Ingressou	ingressar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2-3	no	_	_	_	_	_	_	_	_
 2	em	em	ADP	_	_	4	case	_	_
 3	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	4	det	_	_
@@ -39,45 +42,45 @@
 5-6	do	_	_	_	_	_	_	_	_
 5	de	de	ADP	_	_	7	case	_	_
 6	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	7	det	_	_
-7	Brasil	Brasil	PROPN	_	Gender=Masc|Number=Sing	4	nmod	_	_
+7	Brasil	Brasil	PROPN	_	Number=Sing	4	nmod	_	_
 8	em	em	ADP	_	_	9	case	_	_
 9	1948	1948	NUM	_	NumType=Card	1	obl	_	SpaceAfter=No
-10	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
+10	.	.	PUNCT	_	_	1	punct	_	_
 
-# text = Formou-se dois anos depois pela Faculdade de Direito da Universidade do Distrito Federal, no Rio de Janeiro.
 # sent_id = 3
+# text = Formou-se dois anos depois pela Faculdade de Direito da Universidade do Distrito Federal, no Rio de Janeiro.
 1-2	Formou-se	_	_	_	_	_	_	_	_
 1	Formou	formar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	1	expl	_	_
 3	dois	dois	NUM	_	NumType=Card	4	nummod	_	_
-4	anos	ano	NOUN	_	Gender=Masc|Number=Plur	1	nsubj	_	_
-5	depois	depois	ADV	_	_	4	advmod	_	_
+4	anos	ano	NOUN	_	Gender=Masc|Number=Plur	1	obl	_	_
+5	depois	depois	ADV	_	_	1	advmod	_	_
 6-7	pela	_	_	_	_	_	_	_	_
 6	por	por	ADP	_	_	8	case	_	_
 7	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	8	det	_	_
-8	Faculdade	Faculdade	PROPN	_	Gender=Fem|Number=Sing	4	nmod	_	_
+8	Faculdade	Faculdade	PROPN	_	Gender=Fem|Number=Sing	1	obl:agent	_	_
 9	de	de	ADP	_	_	10	case	_	_
 10	Direito	Direito	PROPN	_	Number=Sing	8	nmod	_	_
 11-12	da	_	_	_	_	_	_	_	_
 11	de	de	ADP	_	_	13	case	_	_
 12	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	13	det	_	_
-13	Universidade	universidade	PROPN	_	Gender=Fem|Number=Sing	8	nmod	_	_
+13	Universidade	Universidade	PROPN	_	Number=Sing	10	nmod	_	_
 14-15	do	_	_	_	_	_	_	_	_
 14	de	de	ADP	_	_	16	case	_	_
 15	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	16	det	_	_
-16	Distrito	Distrito	PROPN	_	Gender=Masc|Number=Sing	13	nmod	_	_
+16	Distrito	Distrito	PROPN	_	ExtPos=PROPN|Number=Sing	13	nmod	_	_
 17	Federal	Federal	PROPN	_	Number=Sing	16	flat:name	_	SpaceAfter=No
 18	,	,	PUNCT	_	_	21	punct	_	_
 19-20	no	_	_	_	_	_	_	_	_
 19	em	em	ADP	_	_	21	case	_	_
 20	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	21	det	_	_
-21	Rio	Rio	PROPN	_	Gender=Masc|Number=Sing	16	nmod	_	_
+21	Rio	Rio	PROPN	_	Gender=Masc|Number=Sing	1	obl	_	_
 22	de	de	ADP	_	_	23	case	_	_
 23	Janeiro	Janeiro	PROPN	_	Number=Sing	21	nmod	_	SpaceAfter=No
-24	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
+24	.	.	PUNCT	_	_	1	punct	_	_
 
-# text = Em 1953, recebeu indicação direta do ministro Osvaldo Aranha para ser seu assistente no Ministério da Fazenda, permanecendo nessa função até 1954.
 # sent_id = 4
+# text = Em 1953, recebeu indicação direta do ministro Osvaldo Aranha para ser seu assistente no Ministério da Fazenda, permanecendo nessa função até 1954.
 1	Em	em	ADP	_	_	2	case	_	_
 2	1953	1953	NUM	_	NumType=Card	4	obl	_	SpaceAfter=No
 3	,	,	PUNCT	_	_	2	punct	_	_
@@ -88,12 +91,12 @@
 7	de	de	ADP	_	_	9	case	_	_
 8	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	9	det	_	_
 9	ministro	ministro	NOUN	_	Gender=Masc|Number=Sing	5	nmod	_	_
-10	Osvaldo	Osvaldo	PROPN	_	Gender=Masc|Number=Sing	9	appos	_	_
+10	Osvaldo	Osvaldo	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	9	appos	_	_
 11	Aranha	Aranha	PROPN	_	Number=Sing	10	flat:name	_	_
 12	para	para	SCONJ	_	_	15	mark	_	_
 13	ser	ser	AUX	_	VerbForm=Inf	15	cop	_	_
-14	seu	meu	DET	_	Gender=Masc|Number=Sing|PronType=Prs	15	det	_	_
-15	assistente	assistente	NOUN	_	Gender=Masc|Number=Sing	5	nmod	_	_
+14	seu	seu	DET	_	Gender=Masc|Number=Sing|PronType=Prs	15	det	_	_
+15	assistente	assistente	NOUN	_	Gender=Masc|Number=Sing	4	advcl	_	_
 16-17	no	_	_	_	_	_	_	_	_
 16	em	em	ADP	_	_	18	case	_	_
 17	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	18	det	_	_
@@ -101,19 +104,19 @@
 19-20	da	_	_	_	_	_	_	_	_
 19	de	de	ADP	_	_	21	case	_	_
 20	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	21	det	_	_
-21	Fazenda	fazenda	PROPN	_	Gender=Fem|Number=Sing	18	nmod	_	SpaceAfter=No
+21	Fazenda	Fazenda	PROPN	_	Number=Sing	18	nmod	_	SpaceAfter=No
 22	,	,	PUNCT	_	_	23	punct	_	_
-23	permanecendo	permanecer	VERB	_	VerbForm=Ger	5	acl	_	_
+23	permanecendo	permanecer	VERB	_	VerbForm=Ger	4	advcl	_	_
 24-25	nessa	_	_	_	_	_	_	_	_
 24	em	em	ADP	_	_	26	case	_	_
 25	essa	esse	DET	_	Gender=Fem|Number=Sing|PronType=Dem	26	det	_	_
 26	função	função	NOUN	_	Gender=Fem|Number=Sing	23	obl	_	_
 27	até	até	ADP	_	_	28	case	_	_
 28	1954	1954	NUM	_	NumType=Card	23	obl	_	SpaceAfter=No
-29	.	.	PUNCT	_	_	4	punct	_	SpacesAfter=\n
+29	.	.	PUNCT	_	_	4	punct	_	_
 
-# text = Foi responsável pela reorganização das operações orçamentárias e de câmbio do Banco do Brasil, redefinindo suas relações com o Ministério da Fazenda.
 # sent_id = 5
+# text = Foi responsável pela reorganização das operações orçamentárias e de câmbio do Banco do Brasil, redefinindo suas relações com o Ministério da Fazenda.
 1	Foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	cop	_	_
 2	responsável	responsável	ADJ	_	Gender=Masc|Number=Sing	0	root	_	_
 3-4	pela	_	_	_	_	_	_	_	_
@@ -127,15 +130,15 @@
 9	orçamentárias	orçamentário	ADJ	_	Gender=Fem|Number=Plur	8	amod	_	_
 10	e	e	CCONJ	_	_	12	cc	_	_
 11	de	de	ADP	_	_	12	case	_	_
-12	câmbio	câmbio	NOUN	_	Gender=Masc|Number=Sing	8	conj	_	_
+12	câmbio	câmbio	NOUN	_	Gender=Masc|Number=Sing	9	conj	_	_
 13-14	do	_	_	_	_	_	_	_	_
 13	de	de	ADP	_	_	15	case	_	_
 14	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	15	det	_	_
-15	Banco	Banco	PROPN	_	Gender=Masc|Number=Sing	12	nmod	_	_
+15	Banco	Banco	PROPN	_	Gender=Masc|Number=Sing	8	nmod	_	_
 16-17	do	_	_	_	_	_	_	_	_
 16	de	de	ADP	_	_	18	case	_	_
 17	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	18	det	_	_
-18	Brasil	Brasil	PROPN	_	Gender=Masc|Number=Sing	15	nmod	_	SpaceAfter=No
+18	Brasil	Brasil	PROPN	_	Number=Sing	15	nmod	_	SpaceAfter=No
 19	,	,	PUNCT	_	_	20	punct	_	_
 20	redefinindo	redefinir	VERB	_	VerbForm=Ger	2	advcl	_	_
 21	suas	seu	DET	_	Gender=Fem|Number=Plur|PronType=Prs	22	det	_	_
@@ -146,11 +149,11 @@
 26-27	da	_	_	_	_	_	_	_	_
 26	de	de	ADP	_	_	28	case	_	_
 27	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	28	det	_	_
-28	Fazenda	fazenda	PROPN	_	Gender=Fem|Number=Sing	25	nmod	_	SpaceAfter=No
-29	.	.	PUNCT	_	_	2	punct	_	SpacesAfter=\n
+28	Fazenda	Fazenda	PROPN	_	Number=Sing	25	nmod	_	SpaceAfter=No
+29	.	.	PUNCT	_	_	2	punct	_	_
 
-# text = Entre 1956 e 1959, foi assessor dos diretores executivos da Superintendência da Moeda e do Crédito (Sumoc).
 # sent_id = 6
+# text = Entre 1956 e 1959, foi assessor dos diretores executivos da Superintendência da Moeda e do Crédito (Sumoc).
 1	Entre	entre	ADP	_	_	2	case	_	_
 2	1956	1956	NUM	_	NumType=Card	7	nmod	_	_
 3	e	e	CCONJ	_	_	4	cc	_	_
@@ -175,19 +178,19 @@
 19-20	do	_	_	_	_	_	_	_	_
 19	de	de	ADP	_	_	21	case	_	_
 20	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	21	det	_	_
-21	Crédito	Crédito	PROPN	_	Number=Sing	7	conj	_	_
+21	Crédito	Crédito	PROPN	_	Number=Sing	17	conj	_	_
 22	(	(	PUNCT	_	_	23	punct	_	SpaceAfter=No
-23	Sumoc	Sumoc	PROPN	_	Gender=Fem|Number=Sing	21	appos	_	SpaceAfter=No
+23	Sumoc	Sumoc	PROPN	_	Gender=Fem|Number=Sing	14	appos	_	SpaceAfter=No
 24	)	)	PUNCT	_	_	23	punct	_	SpaceAfter=No
-25	.	.	PUNCT	_	_	7	punct	_	SpacesAfter=\n
+25	.	.	PUNCT	_	_	7	punct	_	_
 
-# text = Nesse órgão, em 1958, participou do Grupo Executivo da Indústria de Construção Naval (Geicon).
 # sent_id = 7
+# text = Nesse órgão, em 1958, participou do Grupo Executivo da Indústria de Construção Naval (Geicon).
 1-2	Nesse	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	3	case	_	_
 2	esse	esse	DET	_	Gender=Masc|Number=Sing|PronType=Dem	3	det	_	_
 3	órgão	órgão	NOUN	_	Gender=Masc|Number=Sing	8	obl	_	SpaceAfter=No
-4	,	,	PUNCT	_	_	3	punct	_	_
+4	,	,	PUNCT	_	_	6	punct	_	_
 5	em	em	ADP	_	_	6	case	_	_
 6	1958	1958	NUM	_	NumType=Card	8	obl	_	SpaceAfter=No
 7	,	,	PUNCT	_	_	6	punct	_	_
@@ -195,28 +198,28 @@
 9-10	do	_	_	_	_	_	_	_	_
 9	de	de	ADP	_	_	11	case	_	_
 10	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	_	_
-11	Grupo	Grupo	PROPN	_	Gender=Masc|Number=Sing	8	obl	_	_
-12	Executivo	executivo	PROPN	_	Number=Sing	11	flat:name	_	_
+11	Grupo	Grupo	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	8	obj	_	_
+12	Executivo	Executivo	PROPN	_	Number=Sing	11	flat:name	_	_
 13-14	da	_	_	_	_	_	_	_	_
 13	de	de	ADP	_	_	15	case	_	_
 14	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	15	det	_	_
-15	Indústria	indústria	PROPN	_	Number=Sing	11	nmod	_	_
+15	Indústria	Indústria	PROPN	_	Number=Sing	11	nmod	_	_
 16	de	de	ADP	_	_	17	case	_	_
-17	Construção	construção	PROPN	_	Number=Sing	15	nmod	_	_
+17	Construção	Construção	PROPN	_	ExtPos=PROPN|Number=Sing	15	nmod	_	_
 18	Naval	Naval	PROPN	_	Number=Sing	17	flat:name	_	_
 19	(	(	PUNCT	_	_	20	punct	_	SpaceAfter=No
-20	Geicon	Geicon	PROPN	_	Gender=Fem|Number=Sing	11	appos	_	SpaceAfter=No
+20	Geicon	Geicon	PROPN	_	Gender=Masc|Number=Sing	11	appos	_	SpaceAfter=No
 21	)	)	PUNCT	_	_	20	punct	_	SpaceAfter=No
-22	.	.	PUNCT	_	_	8	punct	_	SpacesAfter=\n
+22	.	.	PUNCT	_	_	8	punct	_	_
 
-# text = Em 1959, vinculou-se novamente ao Ministério da Fazenda, onde veio a integrar a assessoria técnica do ministro Sebastião Pais Almeida, sendo o principal assessor para assuntos de política financeira.
 # sent_id = 8
+# text = Em 1959, vinculou-se novamente ao Ministério da Fazenda, onde veio a integrar a assessoria técnica do ministro Sebastião Pais Almeida, sendo o principal assessor para assuntos de política financeira.
 1	Em	em	ADP	_	_	2	case	_	_
 2	1959	1959	NUM	_	NumType=Card	4	obl	_	SpaceAfter=No
 3	,	,	PUNCT	_	_	2	punct	_	_
 4-5	vinculou-se	_	_	_	_	_	_	_	_
 4	vinculou	vincular	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
-5	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	4	nsubj	_	_
+5	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	4	expl	_	_
 6	novamente	novamente	ADV	_	_	4	advmod	_	_
 7-8	ao	_	_	_	_	_	_	_	_
 7	a	a	ADP	_	_	9	case	_	_
@@ -225,10 +228,10 @@
 10-11	da	_	_	_	_	_	_	_	_
 10	de	de	ADP	_	_	12	case	_	_
 11	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	12	det	_	_
-12	Fazenda	fazenda	PROPN	_	Gender=Fem|Number=Sing	9	nmod	_	SpaceAfter=No
-13	,	,	PUNCT	_	_	4	punct	_	_
-14	onde	onde	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	15	obl	_	_
-15	veio	vir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	9	acl:relcl	_	_
+12	Fazenda	Fazenda	PROPN	_	Number=Sing	9	nmod	_	SpaceAfter=No
+13	,	,	PUNCT	_	_	15	punct	_	_
+14	onde	onde	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	15	obl	_	_
+15	veio	vir	VERB	_	ExtPos=AUX|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	9	acl:relcl	_	_
 16	a	a	SCONJ	_	_	17	mark	_	_
 17	integrar	integrar	VERB	_	VerbForm=Inf	15	xcomp	_	_
 18	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	19	det	_	_
@@ -238,23 +241,23 @@
 21	de	de	ADP	_	_	23	case	_	_
 22	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	23	det	_	_
 23	ministro	ministro	NOUN	_	Gender=Masc|Number=Sing	19	nmod	_	_
-24	Sebastião	Sebastião	PROPN	_	Gender=Masc|Number=Sing	23	appos	_	_
-25	Pais	pais	PROPN	_	Number=Sing	24	flat:name	_	_
+24	Sebastião	Sebastião	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	23	appos	_	_
+25	Pais	Pais	PROPN	_	Number=Sing	24	flat:name	_	_
 26	Almeida	Almeida	PROPN	_	Number=Sing	24	flat:name	_	SpaceAfter=No
 27	,	,	PUNCT	_	_	31	punct	_	_
 28	sendo	ser	AUX	_	VerbForm=Ger	31	cop	_	_
 29	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	31	det	_	_
 30	principal	principal	ADJ	_	Gender=Masc|Number=Sing	31	amod	_	_
-31	assessor	assessor	NOUN	_	Gender=Masc|Number=Sing	17	obl	_	_
+31	assessor	assessor	NOUN	_	Gender=Masc|Number=Sing	17	advcl	_	_
 32	para	para	ADP	_	_	33	case	_	_
 33	assuntos	assunto	NOUN	_	Gender=Masc|Number=Plur	31	nmod	_	_
 34	de	de	ADP	_	_	35	case	_	_
 35	política	política	NOUN	_	Gender=Fem|Number=Sing	33	nmod	_	_
 36	financeira	financeiro	ADJ	_	Gender=Fem|Number=Sing	35	amod	_	SpaceAfter=No
-37	.	.	PUNCT	_	_	4	punct	_	SpacesAfter=\n
+37	.	.	PUNCT	_	_	4	punct	_	_
 
-# text = Entre 1960 e 1961, integrou-se à Junta Administrativa da Caixa de Amortização.
 # sent_id = 9
+# text = Entre 1960 e 1961, integrou-se à Junta Administrativa da Caixa de Amortização.
 1	Entre	entre	ADP	_	_	2	case	_	_
 2	1960	1960	NUM	_	NumType=Card	6	obl	_	_
 3	e	e	CCONJ	_	_	4	cc	_	_
@@ -266,18 +269,18 @@
 8-9	à	_	_	_	_	_	_	_	_
 8	a	a	ADP	_	_	10	case	_	_
 9	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	10	det	_	_
-10	Junta	Junta	NOUN	_	Gender=Fem|Number=Sing	6	obj	_	_
-11	Administrativa	administrativo	ADJ	_	Gender=Fem|Number=Sing	10	amod	_	_
+10	Junta	Junta	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	6	obj	_	_
+11	Administrativa	Administrativa	PROPN	_	Number=Sing	10	flat:name	_	_
 12-13	da	_	_	_	_	_	_	_	_
 12	de	de	ADP	_	_	14	case	_	_
 13	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	14	det	_	_
-14	Caixa	caixa	PROPN	_	Gender=Fem|Number=Sing	10	nmod	_	_
+14	Caixa	Caixa	PROPN	_	Number=Sing	10	nmod	_	_
 15	de	de	ADP	_	_	16	case	_	_
 16	Amortização	Amortização	PROPN	_	Number=Sing	14	nmod	_	SpaceAfter=No
 17	.	.	PUNCT	_	_	6	punct	_	SpacesAfter=\n
 
-# text = Ainda em 1961 integrou a assessoria técnica do presidente do Banco do Brasil, na qual permaneceria durante os dois anos seguintes.
 # sent_id = 10
+# text = Ainda em 1961 integrou a assessoria técnica do presidente do Banco do Brasil, na qual permaneceria durante os dois anos seguintes.
 1	Ainda	ainda	ADV	_	_	3	advmod	_	_
 2	em	em	ADP	_	_	3	case	_	_
 3	1961	1961	NUM	_	NumType=Card	4	obl	_	_
@@ -292,7 +295,7 @@
 11-12	do	_	_	_	_	_	_	_	_
 11	de	de	ADP	_	_	13	case	_	_
 12	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	13	det	_	_
-13	Banco	Banco	PROPN	_	Gender=Masc|Number=Sing	10	nmod	_	_
+13	Banco	banco	NOUN	_	Gender=Masc|Number=Sing	10	nmod	_	_
 14-15	do	_	_	_	_	_	_	_	_
 14	de	de	ADP	_	_	16	case	_	_
 15	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	16	det	_	_
@@ -302,16 +305,16 @@
 18	em	em	ADP	_	_	20	case	_	_
 19	a	o	DET	_	Gender=Fem|Number=Sing|PronType=Art	20	det	_	_
 20	qual	qual	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	21	obl	_	_
-21	permaneceria	permanecerir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	6	acl:relcl	_	_
+21	permaneceria	permanecer	VERB	_	Mood=Cnd|Number=Sing|Person=3|VerbForm=Fin	10	acl:relcl	_	_
 22	durante	durante	ADP	_	_	25	case	_	_
 23	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	25	det	_	_
 24	dois	dois	NUM	_	NumType=Card	25	nummod	_	_
 25	anos	ano	NOUN	_	Gender=Masc|Number=Plur	21	obl	_	_
 26	seguintes	seguinte	ADJ	_	Gender=Masc|Number=Plur	25	amod	_	SpaceAfter=No
-27	.	.	PUNCT	_	_	4	punct	_	SpacesAfter=\n
+27	.	.	PUNCT	_	_	4	punct	_	_
 
-# text = Simultaneamente, na Sumoc, tornou-se relator do Plano de Padronização da Contabilidade Bancária, posto que viria a ocupar durante os seis anos seguintes.
 # sent_id = 11
+# text = Simultaneamente, na Sumoc, tornou-se relator do Plano de Padronização da Contabilidade Bancária, posto que viria a ocupar durante os seis anos seguintes.
 1	Simultaneamente	simultaneamente	ADV	_	_	7	advmod	_	SpaceAfter=No
 2	,	,	PUNCT	_	_	1	punct	_	_
 3-4	na	_	_	_	_	_	_	_	_
@@ -321,8 +324,8 @@
 6	,	,	PUNCT	_	_	5	punct	_	_
 7-8	tornou-se	_	_	_	_	_	_	_	_
 7	tornou	tornar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
-8	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	7	nsubj	_	_
-9	relator	relator	NOUN	_	Gender=Masc|Number=Sing	7	obj	_	_
+8	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	7	expl	_	_
+9	relator	relator	NOUN	_	Gender=Masc|Number=Sing	7	xcomp	_	_
 10-11	do	_	_	_	_	_	_	_	_
 10	de	de	ADP	_	_	12	case	_	_
 11	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	12	det	_	_
@@ -332,12 +335,12 @@
 15-16	da	_	_	_	_	_	_	_	_
 15	de	de	ADP	_	_	17	case	_	_
 16	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	17	det	_	_
-17	Contabilidade	contabilidade	NOUN	_	Gender=Fem|Number=Sing	12	nmod	_	_
-18	Bancária	bancário	ADJ	_	Gender=Fem|Number=Sing	17	amod	_	SpaceAfter=No
+17	Contabilidade	Contabilidade	PROPN	_	Number=Sing	14	nmod	_	_
+18	Bancária	Bancária	PROPN	_	Number=Sing	17	flat:name	_	SpaceAfter=No
 19	,	,	PUNCT	_	_	20	punct	_	_
-20	posto	postar	VERB	_	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	7	advcl	_	_
-21	que	que	SCONJ	_	_	24	mark	_	_
-22	viria	vir	VERB	_	Mood=Cnd|Number=Sing|Person=3|VerbForm=Fin	20	ccomp	_	_
+20	posto	posto	NOUN	_	Gender=Masc|Number=Sing	12	appos	_	_
+21	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	22	nsubj	_	_
+22	viria	vir	VERB	_	ExtPos=AUX|Mood=Cnd|Number=Sing|Person=3|VerbForm=Fin	20	acl:relcl	_	_
 23	a	a	SCONJ	_	_	24	mark	_	_
 24	ocupar	ocupar	VERB	_	VerbForm=Inf	22	xcomp	_	_
 25	durante	durante	ADP	_	_	28	case	_	_
@@ -345,10 +348,10 @@
 27	seis	seis	NUM	_	NumType=Card	28	nummod	_	_
 28	anos	ano	NOUN	_	Gender=Masc|Number=Plur	24	obl	_	_
 29	seguintes	seguinte	ADJ	_	Gender=Masc|Number=Plur	28	amod	_	SpaceAfter=No
-30	.	.	PUNCT	_	_	7	punct	_	SpacesAfter=\n
+30	.	.	PUNCT	_	_	7	punct	_	_
 
-# text = Também na Sumoc, assumiu o cargo de inspetor de bancos, desempenhando-o durante cinco anos.
 # sent_id = 12
+# text = Também na Sumoc, assumiu o cargo de inspetor de bancos, desempenhando-o durante cinco anos.
 1	Também	também	ADV	_	_	4	advmod	_	_
 2-3	na	_	_	_	_	_	_	_	_
 2	em	em	ADP	_	_	4	case	_	_
@@ -369,10 +372,10 @@
 16	durante	durante	ADP	_	_	18	case	_	_
 17	cinco	cinco	NUM	_	NumType=Card	18	nummod	_	_
 18	anos	ano	NOUN	_	Gender=Masc|Number=Plur	14	obl	_	SpaceAfter=No
-19	.	.	PUNCT	_	_	6	punct	_	SpacesAfter=\n
+19	.	.	PUNCT	_	_	6	punct	_	_
 
-# text = Em 1963, participou da assessoria técnica dos ministros da Fazenda Carvalho Pinto e Nei Galvão.
 # sent_id = 13
+# text = Em 1963, participou da assessoria técnica dos ministros da Fazenda Carvalho Pinto e Nei Galvão.
 1	Em	em	ADP	_	_	2	case	_	_
 2	1963	1963	NUM	_	NumType=Card	4	obl	_	SpaceAfter=No
 3	,	,	PUNCT	_	_	2	punct	_	_
@@ -385,20 +388,20 @@
 9-10	dos	_	_	_	_	_	_	_	_
 9	de	de	ADP	_	_	11	case	_	_
 10	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	11	det	_	_
-11	ministros	ministros	NOUN	_	Gender=Masc|Number=Plur	7	nmod	_	_
+11	ministros	ministro	NOUN	_	Gender=Masc|Number=Plur	7	nmod	_	_
 12-13	da	_	_	_	_	_	_	_	_
 12	de	de	ADP	_	_	14	case	_	_
 13	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	14	det	_	_
-14	Fazenda	Fazenda	PROPN	_	Gender=Fem|Number=Sing	11	nmod	_	_
-15	Carvalho	Carvalho	PROPN	_	Number=Sing	14	flat:name	_	_
-16	Pinto	Pinto	PROPN	_	Number=Sing	14	flat:name	_	_
+14	Fazenda	fazenda	NOUN	_	Gender=Fem|Number=Sing	11	nmod	_	_
+15	Carvalho	Carvalho	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	14	appos	_	_
+16	Pinto	Pinto	PROPN	_	Number=Sing	15	flat:name	_	_
 17	e	e	CCONJ	_	_	18	cc	_	_
-18	Nei	Nei	PROPN	_	Gender=Masc|Number=Sing	14	conj	_	_
+18	Nei	Nei	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	14	conj	_	_
 19	Galvão	Galvão	PROPN	_	Number=Sing	18	flat:name	_	SpaceAfter=No
-20	.	.	PUNCT	_	_	4	punct	_	SpacesAfter=\n
+20	.	.	PUNCT	_	_	4	punct	_	_
 
-# text = Em 1964, após o movimento político-militar que derrubou o presidente João Goulart em 31 de março, desempenhou a função de emissário pessoal do novo presidente da República, Castelo Branco, junto ao presidente da França, Charles de Gaulle, para a normalização das relações diplomáticas.
 # sent_id = 14
+# text = Em 1964, após o movimento político-militar que derrubou o presidente João Goulart em 31 de março, desempenhou a função de emissário pessoal do novo presidente da República, Castelo Branco, junto ao presidente da França, Charles de Gaulle, para a normalização das relações diplomáticas.
 1	Em	em	ADP	_	_	2	case	_	_
 2	1964	1964	NUM	_	NumType=Card	19	obl	_	SpaceAfter=No
 3	,	,	PUNCT	_	_	2	punct	_	_
@@ -410,16 +413,16 @@
 9	derrubou	derrubar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	acl:relcl	_	_
 10	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	_	_
 11	presidente	presidente	NOUN	_	Gender=Masc|Number=Sing	9	obj	_	_
-12	João	João	PROPN	_	Gender=Masc|Number=Sing	11	appos	_	_
+12	João	João	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	11	appos	_	_
 13	Goulart	Goulart	PROPN	_	Number=Sing	12	flat:name	_	_
 14	em	em	ADP	_	_	15	case	_	_
 15	31	31	NUM	_	NumType=Card	9	obl	_	_
 16	de	de	ADP	_	_	17	case	_	_
 17	março	março	NOUN	_	Gender=Masc|Number=Sing	15	nmod	_	SpaceAfter=No
-18	,	,	PUNCT	_	_	2	punct	_	_
+18	,	,	PUNCT	_	_	9	punct	_	_
 19	desempenhou	desempenhar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 20	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	21	det	_	_
-21	função	função	NOUN	_	Gender=Fem|Number=Sing	19	nsubj	_	_
+21	função	função	NOUN	_	Gender=Fem|Number=Sing	19	obj	_	_
 22	de	de	ADP	_	_	23	case	_	_
 23	emissário	emissário	NOUN	_	Gender=Masc|Number=Sing	21	nmod	_	_
 24	pessoal	pessoal	ADJ	_	Gender=Masc|Number=Sing	23	amod	_	_
@@ -431,12 +434,12 @@
 29-30	da	_	_	_	_	_	_	_	_
 29	de	de	ADP	_	_	31	case	_	_
 30	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	31	det	_	_
-31	República	República	PROPN	_	Number=Sing	28	nmod	_	SpaceAfter=No
+31	República	república	NOUN	_	Gender=Fem|Number=Sing	28	nmod	_	SpaceAfter=No
 32	,	,	PUNCT	_	_	33	punct	_	_
-33	Castelo	Castelo	PROPN	_	Gender=Masc|Number=Sing	21	appos	_	_
+33	Castelo	Castelo	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	28	appos	_	_
 34	Branco	Branco	PROPN	_	Number=Sing	33	flat:name	_	SpaceAfter=No
 35	,	,	PUNCT	_	_	33	punct	_	_
-36	junto	junto	ADV	_	_	21	advmod	_	_
+36	junto	junto	ADV	_	_	19	advmod	_	_
 37-38	ao	_	_	_	_	_	_	_	_
 37	a	a	ADP	_	_	39	case	_	_
 38	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	39	det	_	_
@@ -458,10 +461,10 @@
 52	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	53	det	_	_
 53	relações	relação	NOUN	_	Gender=Fem|Number=Plur	50	nmod	_	_
 54	diplomáticas	diplomático	ADJ	_	Gender=Fem|Number=Plur	53	amod	_	SpaceAfter=No
-55	.	.	PUNCT	_	_	19	punct	_	SpacesAfter=\n
+55	.	.	PUNCT	_	_	19	punct	_	_
 
-# text = Nesse mesmo ano, foi assessor do secretário-geral e do inspetor-geral da Sumoc.
 # sent_id = 15
+# text = Nesse mesmo ano, foi assessor do secretário-geral e do inspetor-geral da Sumoc.
 1-2	Nesse	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	4	case	_	_
 2	esse	esse	DET	_	Gender=Masc|Number=Sing|PronType=Dem	4	det	_	_
@@ -482,16 +485,16 @@
 15-16	da	_	_	_	_	_	_	_	_
 15	de	de	ADP	_	_	17	case	_	_
 16	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	17	det	_	_
-17	Sumoc	Sumoc	PROPN	_	Gender=Fem|Number=Sing	14	nmod	_	SpaceAfter=No
+17	Sumoc	sumoc	NOUN	_	Gender=Fem|Number=Sing	14	nmod	_	SpaceAfter=No
 18	.	.	PUNCT	_	_	7	punct	_	SpacesAfter=\n
 
-# text = Em 1966, ainda vinculado ao Banco do Brasil, desempenhou a chefia da Contabilidade Geral.
 # sent_id = 16
+# text = Em 1966, ainda vinculado ao Banco do Brasil, desempenhou a chefia da Contabilidade Geral.
 1	Em	em	ADP	_	_	2	case	_	_
-2	1966	1966	NUM	_	NumType=Card	5	obl	_	SpaceAfter=No
+2	1966	1966	NUM	_	NumType=Card	13	obl	_	SpaceAfter=No
 3	,	,	PUNCT	_	_	2	punct	_	_
 4	ainda	ainda	ADV	_	_	5	advmod	_	_
-5	vinculado	vincular	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	13	advcl	_	_
+5	vinculado	vincular	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	2	acl	_	_
 6-7	ao	_	_	_	_	_	_	_	_
 6	a	a	ADP	_	_	8	case	_	_
 7	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	8	det	_	_
@@ -499,20 +502,20 @@
 9-10	do	_	_	_	_	_	_	_	_
 9	de	de	ADP	_	_	11	case	_	_
 10	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	_	_
-11	Brasil	Brasil	PROPN	_	Gender=Masc|Number=Sing	8	nmod	_	SpaceAfter=No
+11	Brasil	Brasil	PROPN	_	Number=Sing	8	nmod	_	SpaceAfter=No
 12	,	,	PUNCT	_	_	5	punct	_	_
 13	desempenhou	desempenhar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 14	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	15	det	_	_
-15	chefia	chefia	NOUN	_	Gender=Fem|Number=Sing	13	nsubj	_	_
+15	chefia	chefia	NOUN	_	Gender=Fem|Number=Sing	13	obj	_	_
 16-17	da	_	_	_	_	_	_	_	_
 16	de	de	ADP	_	_	18	case	_	_
 17	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	18	det	_	_
-18	Contabilidade	contabilidade	PROPN	_	Gender=Fem|Number=Sing	15	nmod	_	_
+18	Contabilidade	Contabilidade	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	15	nmod	_	_
 19	Geral	Geral	PROPN	_	Number=Sing	18	flat:name	_	SpaceAfter=No
-20	.	.	PUNCT	_	_	13	punct	_	SpacesAfter=\n
+20	.	.	PUNCT	_	_	13	punct	_	_
 
-# text = Nesse mesmo ano, redigiu a tese denominada “Bases para a estabilização monetária com crescimento econômico”, apresentada pela Confederação Nacional do Comércio à Conferência das Classes Produtoras de São Paulo sobre a Realidade Brasileira.
 # sent_id = 17
+# text = Nesse mesmo ano, redigiu a tese denominada “Bases para a estabilização monetária com crescimento econômico”, apresentada pela Confederação Nacional do Comércio à Conferência das Classes Produtoras de São Paulo sobre a Realidade Brasileira.
 1-2	Nesse	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	4	case	_	_
 2	esse	esse	DET	_	Gender=Masc|Number=Sing|PronType=Dem	4	det	_	_
@@ -523,16 +526,16 @@
 7	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	8	det	_	_
 8	tese	tese	NOUN	_	Gender=Fem|Number=Sing	6	obj	_	_
 9	denominada	denominar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	8	acl	_	_
-10	“	“	PUNCT	_	_	11	punct	_	SpaceAfter=No
-11	Bases	Bases	NOUN	_	Gender=Fem|Number=Plur	8	appos	_	_
+10	“	"	PUNCT	_	_	11	punct	_	SpaceAfter=No
+11	Bases	Bases	PROPN	_	Gender=Fem|Number=Sing	8	appos	_	_
 12	para	para	ADP	_	_	14	case	_	_
 13	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	14	det	_	_
-14	estabilização	estabilização	NOUN	_	Gender=Fem|Number=Sing	11	nmod	_	_
+14	estabilização	estabilização	NOUN	_	Number=Sing	11	nmod	_	_
 15	monetária	monetário	ADJ	_	Gender=Fem|Number=Sing	14	amod	_	_
 16	com	com	ADP	_	_	17	case	_	_
-17	crescimento	crescimento	NOUN	_	Gender=Masc|Number=Sing	14	nmod	_	_
+17	crescimento	crescimento	NOUN	_	Gender=Masc|Number=Sing	11	nmod	_	_
 18	econômico	econômico	ADJ	_	Gender=Masc|Number=Sing	17	amod	_	SpaceAfter=No
-19	”	”	PUNCT	_	_	11	punct	_	SpaceAfter=No
+19	”	"	PUNCT	_	_	11	punct	_	SpaceAfter=No
 20	,	,	PUNCT	_	_	21	punct	_	_
 21	apresentada	apresentar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	8	acl	_	_
 22-23	pela	_	_	_	_	_	_	_	_
@@ -547,23 +550,23 @@
 29-30	à	_	_	_	_	_	_	_	_
 29	a	a	ADP	_	_	31	case	_	_
 30	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	31	det	_	_
-31	Conferência	Conferência	NOUN	_	Gender=Fem|Number=Sing	21	obl	_	_
+31	Conferência	Conferência	PROPN	_	Gender=Fem|Number=Sing	21	obl	_	_
 32-33	das	_	_	_	_	_	_	_	_
 32	de	de	ADP	_	_	34	case	_	_
 33	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	34	det	_	_
-34	Classes	classes	PROPN	_	Number=Sing	31	nmod	_	_
-35	Produtoras	produtoras	PROPN	_	Number=Sing	34	flat:name	_	_
+34	Classes	Classes	PROPN	_	ExtPos=PROPN|Number=Sing	31	nmod	_	_
+35	Produtoras	Produtoras	PROPN	_	Number=Sing	34	flat:name	_	_
 36	de	de	ADP	_	_	37	case	_	_
-37	São	São	PROPN	_	Gender=Masc|Number=Sing	34	nmod	_	_
+37	São	São	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	31	nmod	_	_
 38	Paulo	Paulo	PROPN	_	Number=Sing	37	flat:name	_	_
 39	sobre	sobre	ADP	_	_	41	case	_	_
 40	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	41	det	_	_
-41	Realidade	realidade	NOUN	_	Gender=Fem|Number=Sing	31	nmod	_	_
-42	Brasileira	brasileiro	ADJ	_	Gender=Fem|Number=Sing	41	amod	_	SpaceAfter=No
+41	Realidade	Realidade	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	31	nmod	_	_
+42	Brasileira	Brasileira	PROPN	_	Number=Sing	41	flat:name	_	SpaceAfter=No
 43	.	.	PUNCT	_	_	6	punct	_	SpacesAfter=\n
 
-# text = Em 1967 assumiu o cargo de diretor financeiro da Superintendência Nacional da Marinha Mercante (Sunamam), promovendo uma revisão da política financeira da indústria da construção naval ao criar o Fundo de Refinanciamento da Marinha Mercante.
 # sent_id = 18
+# text = Em 1967 assumiu o cargo de diretor financeiro da Superintendência Nacional da Marinha Mercante (Sunamam), promovendo uma revisão da política financeira da indústria da construção naval ao criar o Fundo de Refinanciamento da Marinha Mercante.
 1	Em	em	ADP	_	_	2	case	_	_
 2	1967	1967	NUM	_	NumType=Card	3	obl	_	_
 3	assumiu	assumir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
@@ -575,15 +578,15 @@
 9-10	da	_	_	_	_	_	_	_	_
 9	de	de	ADP	_	_	11	case	_	_
 10	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	11	det	_	_
-11	Superintendência	Superintendência	PROPN	_	Gender=Fem|Number=Sing	5	nmod	_	_
+11	Superintendência	Superintendência	PROPN	_	Gender=Fem|Number=Sing	7	nmod	_	_
 12	Nacional	Nacional	PROPN	_	Number=Sing	11	flat:name	_	_
 13-14	da	_	_	_	_	_	_	_	_
 13	de	de	ADP	_	_	15	case	_	_
 14	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	15	det	_	_
-15	Marinha	Marinha	PROPN	_	Gender=Fem|Number=Sing	11	nmod	_	_
+15	Marinha	Marinha	PROPN	_	ExtPos=PROPN|Number=Sing	11	nmod	_	_
 16	Mercante	Mercante	PROPN	_	Number=Sing	15	flat:name	_	_
 17	(	(	PUNCT	_	_	18	punct	_	SpaceAfter=No
-18	Sunamam	Sunamam	PROPN	_	Gender=Masc|Number=Sing	15	appos	_	SpaceAfter=No
+18	Sunamam	Sunamam	PROPN	_	Gender=Fem|Number=Sing	11	appos	_	SpaceAfter=No
 19	)	)	PUNCT	_	_	18	punct	_	SpaceAfter=No
 20	,	,	PUNCT	_	_	21	punct	_	_
 21	promovendo	promover	VERB	_	VerbForm=Ger	3	advcl	_	_
@@ -614,12 +617,12 @@
 42-43	da	_	_	_	_	_	_	_	_
 42	de	de	ADP	_	_	44	case	_	_
 43	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	44	det	_	_
-44	Marinha	Marinha	PROPN	_	Gender=Fem|Number=Sing	39	nmod	_	_
+44	Marinha	Marinha	PROPN	_	ExtPos=PROPN|Number=Sing	41	nmod	_	_
 45	Mercante	Mercante	PROPN	_	Number=Sing	44	flat:name	_	SpaceAfter=No
-46	.	.	PUNCT	_	_	3	punct	_	SpacesAfter=\n
+46	.	.	PUNCT	_	_	3	punct	_	_
 
-# text = Nesse mesmo ano, viajou ao México e aos EUA para negociar a possibilidade de esses países comprarem navios construídos no Brasil e, no ano seguinte, esteve na Europa para obter empréstimos para o Ministério dos Transportes.
 # sent_id = 19
+# text = Nesse mesmo ano, viajou ao México e aos EUA para negociar a possibilidade de esses países comprarem navios construídos no Brasil e, no ano seguinte, esteve na Europa para obter empréstimos para o Ministério dos Transportes.
 1-2	Nesse	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	4	case	_	_
 2	esse	esse	DET	_	Gender=Masc|Number=Sing|PronType=Dem	4	det	_	_
@@ -640,16 +643,16 @@
 15	negociar	negociar	VERB	_	VerbForm=Inf	6	advcl	_	_
 16	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	17	det	_	_
 17	possibilidade	possibilidade	NOUN	_	Gender=Fem|Number=Sing	15	obj	_	_
-18	de	de	ADP	_	_	20	case	_	_
+18	de	de	SCONJ	_	_	21	mark	_	_
 19	esses	esse	DET	_	Gender=Masc|Number=Plur|PronType=Dem	20	det	_	_
-20	países	país	NOUN	_	Gender=Masc|Number=Plur	17	nmod	_	_
-21	comprarem	comprar	VERB	_	Number=Plur|Person=3|VerbForm=Inf	15	xcomp	_	_
+20	países	país	NOUN	_	Gender=Masc|Number=Plur	21	nsubj	_	_
+21	comprarem	comprar	VERB	_	Number=Plur|Person=3|VerbForm=Inf	17	acl	_	_
 22	navios	navio	NOUN	_	Gender=Masc|Number=Plur	21	obj	_	_
 23	construídos	construir	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part	22	acl	_	_
 24-25	no	_	_	_	_	_	_	_	_
 24	em	em	ADP	_	_	26	case	_	_
 25	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	26	det	_	_
-26	Brasil	Brasil	PROPN	_	Gender=Masc|Number=Sing	23	obj	_	_
+26	Brasil	Brasil	PROPN	_	Gender=Masc|Number=Sing	23	obl	_	_
 27	e	e	CCONJ	_	_	37	cc	_	SpaceAfter=No
 28	,	,	PUNCT	_	_	31	punct	_	_
 29-30	no	_	_	_	_	_	_	_	_
@@ -661,10 +664,10 @@
 34	esteve	estar	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	37	cop	_	_
 35-36	na	_	_	_	_	_	_	_	_
 35	em	em	ADP	_	_	37	case	_	_
-36	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	37	det	_	_
-37	Europa	Europa	PROPN	_	Gender=Fem|Number=Sing	21	conj	_	_
+36	a	o	DET	_	Definite=Def|PronType=Art	37	det	_	_
+37	Europa	Europa	PROPN	_	Gender=Fem|Number=Sing	6	conj	_	_
 38	para	para	SCONJ	_	_	39	mark	_	_
-39	obter	obter	VERB	_	VerbForm=Inf	37	acl	_	_
+39	obter	obter	VERB	_	VerbForm=Inf	37	advcl	_	_
 40	empréstimos	empréstimo	NOUN	_	Gender=Masc|Number=Plur	39	obj	_	_
 41	para	para	ADP	_	_	43	case	_	_
 42	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	43	det	_	_
@@ -672,12 +675,12 @@
 44-45	dos	_	_	_	_	_	_	_	_
 44	de	de	ADP	_	_	46	case	_	_
 45	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	46	det	_	_
-46	Transportes	transporte	NOUN	_	Gender=Masc|Number=Plur	43	nmod	_	SpaceAfter=No
-47	.	.	PUNCT	_	_	6	punct	_	SpacesAfter=\n
+46	Transportes	Transportes	PROPN	_	Number=Sing	43	nmod	_	SpaceAfter=No
+47	.	.	PUNCT	_	_	6	punct	_	_
 
-# text = Relator da reformulação da lei básica do Fundo da Marinha Mercante, publicada como decreto-lei em janeiro de 1969, durante o período em que esteve na direção da Sunamam estreitou seu relacionamento com Mário Andreazza, ministro dos Transportes, ao qual a superintendência estava subordinada.
 # sent_id = 20
-1	Relator	relator	NOUN	_	Gender=Masc|Number=Sing	0	root	_	_
+# text = Relator da reformulação da lei básica do Fundo da Marinha Mercante, publicada como decreto-lei em janeiro de 1969, durante o período em que esteve na direção da Sunamam estreitou seu relacionamento com Mário Andreazza, ministro dos Transportes, ao qual a superintendência estava subordinada.
+1	Relator	relator	NOUN	_	Gender=Masc|Number=Sing	37	nsubj	_	_
 2-3	da	_	_	_	_	_	_	_	_
 2	de	de	ADP	_	_	4	case	_	_
 3	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	4	det	_	_
@@ -694,56 +697,56 @@
 12-13	da	_	_	_	_	_	_	_	_
 12	de	de	ADP	_	_	14	case	_	_
 13	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	14	det	_	_
-14	Marinha	Marinha	PROPN	_	Gender=Fem|Number=Sing	11	nmod	_	_
+14	Marinha	Marinha	PROPN	_	ExtPos=PROPN|Number=Sing	11	nmod	_	_
 15	Mercante	Mercante	PROPN	_	Number=Sing	14	flat:name	_	SpaceAfter=No
 16	,	,	PUNCT	_	_	17	punct	_	_
-17	publicada	publicar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	11	acl	_	_
+17	publicada	publicar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	7	acl	_	_
 18	como	como	ADP	_	_	19	case	_	_
-19	decreto-lei	decreto-lei	NOUN	_	_	17	obl	_	_
+19	decreto-lei	decreto-lei	NOUN	_	Gender=Masc|Number=Sing	17	xcomp	_	_
 20	em	em	ADP	_	_	21	case	_	_
 21	janeiro	janeiro	NOUN	_	Gender=Masc|Number=Sing	17	obl	_	_
 22	de	de	ADP	_	_	23	case	_	_
-23	1969	1969	NUM	_	NumType=Card	19	nmod	_	SpaceAfter=No
+23	1969	1969	NUM	_	NumType=Card	21	nmod	_	SpaceAfter=No
 24	,	,	PUNCT	_	_	17	punct	_	_
 25	durante	durante	ADP	_	_	27	case	_	_
 26	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	27	det	_	_
-27	período	período	NOUN	_	Gender=Masc|Number=Sing	1	nmod	_	_
+27	período	período	NOUN	_	Gender=Masc|Number=Sing	37	obl	_	_
 28	em	em	ADP	_	_	29	case	_	_
-29	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	37	obl	_	_
+29	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	33	nmod	_	_
 30	esteve	estar	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	33	cop	_	_
 31-32	na	_	_	_	_	_	_	_	_
 31	em	em	ADP	_	_	33	case	_	_
 32	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	33	det	_	_
-33	direção	direção	NOUN	_	Gender=Fem|Number=Sing	37	obl	_	_
+33	direção	direção	NOUN	_	Gender=Fem|Number=Sing	27	nmod	_	_
 34-35	da	_	_	_	_	_	_	_	_
 34	de	de	ADP	_	_	36	case	_	_
-35	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	36	det	_	_
-36	Sunamam	sunamam	PROPN	_	Number=Sing	33	nmod	_	_
-37	estreitou	estreitar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	27	acl:relcl	_	_
+35	a	o	DET	_	Definite=Def|PronType=Art	36	det	_	_
+36	Sunamam	Sunamam	PROPN	_	Gender=Fem|Number=Sing	33	nmod	_	_
+37	estreitou	estreitar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 38	seu	seu	DET	_	Gender=Masc|Number=Sing|PronType=Prs	39	det	_	_
 39	relacionamento	relacionamento	NOUN	_	Gender=Masc|Number=Sing	37	obj	_	_
 40	com	com	ADP	_	_	41	case	_	_
-41	Mário	Mário	PROPN	_	Gender=Masc|Number=Sing	37	obl	_	_
+41	Mário	Mário	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	39	nmod	_	_
 42	Andreazza	Andreazza	PROPN	_	Number=Sing	41	flat:name	_	SpaceAfter=No
 43	,	,	PUNCT	_	_	44	punct	_	_
 44	ministro	ministro	NOUN	_	Gender=Masc|Number=Sing	41	appos	_	_
 45-46	dos	_	_	_	_	_	_	_	_
 45	de	de	ADP	_	_	47	case	_	_
 46	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	47	det	_	_
-47	Transportes	Transportes	PROPN	_	Number=Sing	44	nmod	_	SpaceAfter=No
+47	Transportes	transporte	PROPN	_	Gender=Masc|Number=Plur	44	nmod	_	SpaceAfter=No
 48	,	,	PUNCT	_	_	44	punct	_	_
 49-50	ao	_	_	_	_	_	_	_	_
 49	a	a	ADP	_	_	51	case	_	_
-50	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	51	det	_	_
-51	qual	qual	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	55	obj	_	_
+50	o	o	DET	_	Gender=Masc|Number=Sing|PronType=Art	51	det	_	_
+51	qual	qual	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	55	obl	_	_
 52	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	53	det	_	_
 53	superintendência	superintendência	NOUN	_	Gender=Fem|Number=Sing	55	nsubj	_	_
 54	estava	estar	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	55	cop	_	_
-55	subordinada	subordinar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	37	advcl	_	SpaceAfter=No
+55	subordinada	subordinar	ADJ	_	Gender=Fem|Number=Sing	41	acl:relcl	_	SpaceAfter=No
 56	.	.	PUNCT	_	_	37	punct	_	SpacesAfter=\n
 
-# text = Em 1970, deixou a direção da Sunamam e assumiu a presidência do Instituto de Resseguros do Brasil (IRB).
 # sent_id = 21
+# text = Em 1970, deixou a direção da Sunamam e assumiu a presidência do Instituto de Resseguros do Brasil (IRB).
 1	Em	em	ADP	_	_	2	case	_	_
 2	1970	1970	NUM	_	NumType=Card	4	obl	_	SpaceAfter=No
 3	,	,	PUNCT	_	_	2	punct	_	_
@@ -753,9 +756,9 @@
 7-8	da	_	_	_	_	_	_	_	_
 7	de	de	ADP	_	_	9	case	_	_
 8	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	9	det	_	_
-9	Sunamam	sunamam	PROPN	_	Number=Sing	6	nmod	_	_
+9	Sunamam	Sunamam	PROPN	_	Gender=Fem|Number=Sing	6	nmod	_	_
 10	e	e	CCONJ	_	_	11	cc	_	_
-11	assumiu	assumir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	conj	_	_
+11	assumiu	assumir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	conj	_	_
 12	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	13	det	_	_
 13	presidência	presidência	NOUN	_	Gender=Fem|Number=Sing	11	obj	_	_
 14-15	do	_	_	_	_	_	_	_	_
@@ -767,14 +770,14 @@
 19-20	do	_	_	_	_	_	_	_	_
 19	de	de	ADP	_	_	21	case	_	_
 20	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	21	det	_	_
-21	Brasil	Brasil	PROPN	_	Gender=Masc|Number=Sing	16	nmod	_	_
+21	Brasil	Brasil	PROPN	_	Number=Sing	18	nmod	_	_
 22	(	(	PUNCT	_	_	23	punct	_	SpaceAfter=No
-23	IRB	IRB	PROPN	_	Gender=Masc|Number=Sing	16	parataxis	_	SpaceAfter=No
+23	IRB	IRB	PROPN	_	Gender=Masc|Number=Sing	16	appos	_	SpaceAfter=No
 24	)	)	PUNCT	_	_	23	punct	_	SpaceAfter=No
-25	.	.	PUNCT	_	_	4	punct	_	SpacesAfter=\n
+25	.	.	PUNCT	_	_	4	punct	_	_
 
-# text = Sua gestão foi marcada pela expansão do instituto e do mercado segurador.
 # sent_id = 22
+# text = Sua gestão foi marcada pela expansão do instituto e do mercado segurador.
 1	Sua	seu	DET	_	Gender=Fem|Number=Sing|PronType=Prs	2	det	_	_
 2	gestão	gestão	NOUN	_	Gender=Fem|Number=Sing	4	nsubj:pass	_	_
 3	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	aux:pass	_	_
@@ -793,47 +796,47 @@
 13	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	14	det	_	_
 14	mercado	mercado	NOUN	_	Gender=Masc|Number=Sing	10	conj	_	_
 15	segurador	segurador	ADJ	_	Gender=Masc|Number=Sing	14	amod	_	SpaceAfter=No
-16	.	.	PUNCT	_	_	4	punct	_	SpacesAfter=\n
+16	.	.	PUNCT	_	_	4	punct	_	_
 
-# text = Incentivou a fusão e incorporação de companhias como forma de dotar o sistema de maior solidez.
 # sent_id = 23
-1	Incentivou	Incentivar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+# text = Incentivou a fusão e incorporação de companhias como forma de dotar o sistema de maior solidez.
+1	Incentivou	incentivar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	3	det	_	_
-3	fusão	fusão	NOUN	_	Gender=Fem|Number=Sing	11	nsubj	_	_
+3	fusão	fusão	NOUN	_	Gender=Fem|Number=Sing	1	obj	_	_
 4	e	e	CCONJ	_	_	5	cc	_	_
 5	incorporação	incorporação	NOUN	_	Gender=Fem|Number=Sing	3	conj	_	_
 6	de	de	ADP	_	_	7	case	_	_
-7	companhias	companhias	NOUN	_	Gender=Fem|Number=Plur	5	nmod	_	_
+7	companhias	companhia	NOUN	_	Gender=Fem|Number=Plur	5	nmod	_	_
 8	como	como	ADP	_	_	9	case	_	_
-9	forma	forma	NOUN	_	Gender=Fem|Number=Sing	11	obl	_	_
+9	forma	forma	NOUN	_	Gender=Fem|Number=Sing	1	obl	_	_
 10	de	de	SCONJ	_	_	11	mark	_	_
-11	dotar	dotar	VERB	_	VerbForm=Inf	1	xcomp	_	_
+11	dotar	dotar	VERB	_	VerbForm=Inf	9	acl	_	_
 12	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	13	det	_	_
 13	sistema	sistema	NOUN	_	Gender=Masc|Number=Sing	11	obj	_	_
 14	de	de	ADP	_	_	16	case	_	_
-15	maior	grande	ADJ	_	Gender=Fem|Number=Sing	16	amod	_	_
+15	maior	maior	ADJ	_	Gender=Fem|Number=Sing	16	amod	_	_
 16	solidez	solidez	NOUN	_	Gender=Fem|Number=Sing	13	nmod	_	SpaceAfter=No
-17	.	.	PUNCT	_	_	11	punct	_	SpacesAfter=\n
+17	.	.	PUNCT	_	_	1	punct	_	_
 
-# text = Em 1974, fundou a primeira subsidiária do IRB, em Londres, como parte da política de internacionalização do resseguro.
 # sent_id = 24
+# text = Em 1974, fundou a primeira subsidiária do IRB, em Londres, como parte da política de internacionalização do resseguro.
 1	Em	em	ADP	_	_	2	case	_	_
 2	1974	1974	NUM	_	NumType=Card	4	obl	_	SpaceAfter=No
 3	,	,	PUNCT	_	_	2	punct	_	_
 4	fundou	fundar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 5	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	7	det	_	_
 6	primeira	primeiro	ADJ	_	Gender=Fem|Number=Sing|NumType=Ord	7	amod	_	_
-7	subsidiária	subsidiário	NOUN	_	Gender=Fem|Number=Sing	4	obj	_	_
+7	subsidiária	subsidiária	NOUN	_	Gender=Fem|Number=Sing	4	obj	_	_
 8-9	do	_	_	_	_	_	_	_	_
 8	de	de	ADP	_	_	10	case	_	_
 9	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	10	det	_	_
 10	IRB	IRB	PROPN	_	Gender=Masc|Number=Sing	7	nmod	_	SpaceAfter=No
-11	,	,	PUNCT	_	_	13	punct	_	_
+11	,	,	PUNCT	_	_	4	punct	_	_
 12	em	em	ADP	_	_	13	case	_	_
-13	Londres	Londres	PROPN	_	Gender=Masc|Number=Sing	7	nmod	_	SpaceAfter=No
-14	,	,	PUNCT	_	_	13	punct	_	_
+13	Londres	Londres	PROPN	_	Gender=Masc|Number=Sing	4	obl	_	SpaceAfter=No
+14	,	,	PUNCT	_	_	4	punct	_	_
 15	como	como	ADP	_	_	16	case	_	_
-16	parte	parte	NOUN	_	Gender=Fem|Number=Sing	13	nmod	_	_
+16	parte	parte	NOUN	_	Gender=Fem|Number=Sing	4	obl	_	_
 17-18	da	_	_	_	_	_	_	_	_
 17	de	de	ADP	_	_	19	case	_	_
 18	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	19	det	_	_
@@ -844,16 +847,16 @@
 22	de	de	ADP	_	_	24	case	_	_
 23	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	24	det	_	_
 24	resseguro	resseguro	NOUN	_	Gender=Masc|Number=Sing	21	nmod	_	SpaceAfter=No
-25	.	.	PUNCT	_	_	4	punct	_	SpacesAfter=\n
+25	.	.	PUNCT	_	_	4	punct	_	_
 
-# text = Em 1977, fundou a United Americas Insurance Company (UAIC), companhia de resseguros controlada por capitais brasileiros e com sede em Nova Iorque, da qual foi o primeiro presidente.
 # sent_id = 25
+# text = Em 1977, fundou a United Americas Insurance Company (UAIC), companhia de resseguros controlada por capitais brasileiros e com sede em Nova Iorque, da qual foi o primeiro presidente.
 1	Em	em	ADP	_	_	2	case	_	_
 2	1977	1977	NUM	_	NumType=Card	4	obl	_	SpaceAfter=No
 3	,	,	PUNCT	_	_	2	punct	_	_
 4	fundou	fundar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 5	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	6	det	_	_
-6	United	United	PROPN	_	Gender=Fem|Number=Sing	4	obj	_	_
+6	United	United	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	4	obj	_	_
 7	Americas	Americas	PROPN	_	Number=Sing	6	flat:name	_	_
 8	Insurance	Insurance	PROPN	_	Number=Sing	6	flat:name	_	_
 9	Company	Company	PROPN	_	Number=Sing	6	flat:name	_	_
@@ -864,7 +867,7 @@
 14	companhia	companhia	NOUN	_	Gender=Fem|Number=Sing	6	appos	_	_
 15	de	de	ADP	_	_	16	case	_	_
 16	resseguros	resseguro	NOUN	_	Gender=Masc|Number=Plur	14	nmod	_	_
-17	controlada	controlar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	16	acl	_	_
+17	controlada	controlar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	14	acl	_	_
 18	por	por	ADP	_	_	19	case	_	_
 19	capitais	capital	NOUN	_	Gender=Masc|Number=Plur	17	obl:agent	_	_
 20	brasileiros	brasileiro	ADJ	_	Gender=Masc|Number=Plur	19	amod	_	_
@@ -872,9 +875,9 @@
 22	com	com	ADP	_	_	23	case	_	_
 23	sede	sede	NOUN	_	Gender=Fem|Number=Sing	19	conj	_	_
 24	em	em	ADP	_	_	25	case	_	_
-25	Nova	Nova	PROPN	_	Gender=Masc|Number=Sing	23	nmod	_	_
+25	Nova	Nova	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	23	nmod	_	_
 26	Iorque	Iorque	PROPN	_	Number=Sing	25	flat:name	_	SpaceAfter=No
-27	,	,	PUNCT	_	_	30	punct	_	_
+27	,	,	PUNCT	_	_	34	punct	_	_
 28-29	da	_	_	_	_	_	_	_	_
 28	de	de	ADP	_	_	30	case	_	_
 29	a	o	DET	_	Gender=Fem|Number=Sing|PronType=Art	30	det	_	_
@@ -882,12 +885,12 @@
 31	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	34	cop	_	_
 32	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	34	det	_	_
 33	primeiro	primeiro	ADJ	_	Gender=Masc|Number=Sing|NumType=Ord	34	amod	_	_
-34	presidente	presidente	NOUN	_	Gender=Masc|Number=Sing	23	acl:relcl	_	SpaceAfter=No
+34	presidente	presidente	NOUN	_	Gender=Masc|Number=Sing	25	acl:relcl	_	SpaceAfter=No
 35	.	.	PUNCT	_	_	4	punct	_	SpacesAfter=\n
 
-# text = Convidado a ocupar a presidência do Banco Nacional da Habitação (BNH) pelo ministro do Interior, Mário Andreazza, assumiu o cargo em março de 1979, no início da presidência de João Figueiredo, sucedendo Maurício Schulman.
 # sent_id = 26
-1	Convidado	convidar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	26	acl	_	_
+# text = Convidado a ocupar a presidência do Banco Nacional da Habitação (BNH) pelo ministro do Interior, Mário Andreazza, assumiu o cargo em março de 1979, no início da presidência de João Figueiredo, sucedendo Maurício Schulman.
+1	Convidado	convidar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	26	advcl	_	_
 2	a	a	SCONJ	_	_	3	mark	_	_
 3	ocupar	ocupar	VERB	_	VerbForm=Inf	1	xcomp	_	_
 4	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	5	det	_	_
@@ -895,7 +898,7 @@
 6-7	do	_	_	_	_	_	_	_	_
 6	de	de	ADP	_	_	8	case	_	_
 7	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	8	det	_	_
-8	Banco	Banco	PROPN	_	Gender=Masc|Number=Sing	5	nmod	_	_
+8	Banco	Banco	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	5	nmod	_	_
 9	Nacional	Nacional	PROPN	_	Number=Sing	8	flat:name	_	_
 10-11	da	_	_	_	_	_	_	_	_
 10	de	de	ADP	_	_	12	case	_	_
@@ -911,9 +914,9 @@
 19-20	do	_	_	_	_	_	_	_	_
 19	de	de	ADP	_	_	21	case	_	_
 20	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	21	det	_	_
-21	Interior	Interior	PROPN	_	Number=Sing	18	nmod	_	SpaceAfter=No
+21	Interior	interior	NOUN	_	Gender=Masc|Number=Sing	18	nmod	_	SpaceAfter=No
 22	,	,	PUNCT	_	_	23	punct	_	_
-23	Mário	Mário	PROPN	_	Gender=Masc|Number=Sing	18	appos	_	_
+23	Mário	Mário	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	18	appos	_	_
 24	Andreazza	Andreazza	PROPN	_	Number=Sing	23	flat:name	_	SpaceAfter=No
 25	,	,	PUNCT	_	_	23	punct	_	_
 26	assumiu	assumir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
@@ -933,64 +936,64 @@
 38	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	39	det	_	_
 39	presidência	presidência	NOUN	_	Gender=Fem|Number=Sing	36	nmod	_	_
 40	de	de	ADP	_	_	41	case	_	_
-41	João	João	PROPN	_	Gender=Masc|Number=Sing	39	nmod	_	_
+41	João	João	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	39	nmod	_	_
 42	Figueiredo	Figueiredo	PROPN	_	Number=Sing	41	flat:name	_	SpaceAfter=No
 43	,	,	PUNCT	_	_	44	punct	_	_
 44	sucedendo	suceder	VERB	_	VerbForm=Ger	26	advcl	_	_
-45	Maurício	Maurício	PROPN	_	Gender=Masc|Number=Sing	44	obj	_	_
+45	Maurício	Maurício	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	44	obj	_	_
 46	Schulman	Schulman	PROPN	_	Number=Sing	45	flat:name	_	SpaceAfter=No
-47	.	.	PUNCT	_	_	26	punct	_	SpacesAfter=\n
+47	.	.	PUNCT	_	_	26	punct	_	_
 
-# text = No mesmo mês, tornou-se titular da diretoria do Banco Interamericano de Poupança e Empréstimo (Biape), sediado em Caracas.
 # sent_id = 27
+# text = No mesmo mês, tornou-se titular da diretoria do Banco Interamericano de Poupança e Empréstimo (Biape), sediado em Caracas.
 1-2	No	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	4	case	_	_
 2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	4	det	_	_
 3	mesmo	mesmo	ADJ	_	Gender=Masc|Number=Sing	4	amod	_	_
-4	mês	mês	NOUN	_	Gender=Masc|Number=Sing	8	obl	_	SpaceAfter=No
+4	mês	mês	NOUN	_	Gender=Masc|Number=Sing	6	obl	_	SpaceAfter=No
 5	,	,	PUNCT	_	_	4	punct	_	_
 6-7	tornou-se	_	_	_	_	_	_	_	_
 6	tornou	tornar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
-7	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	8	expl	_	_
-8	titular	titular	VERB	_	VerbForm=Inf	6	xcomp	_	_
+7	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	6	expl	_	_
+8	titular	titular	NOUN	_	Gender=Masc|Number=Sing	6	xcomp	_	_
 9-10	da	_	_	_	_	_	_	_	_
 9	de	de	ADP	_	_	11	case	_	_
 10	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	11	det	_	_
-11	diretoria	diretoria	NOUN	_	Gender=Fem|Number=Sing	8	obj	_	_
+11	diretoria	diretoria	NOUN	_	Gender=Fem|Number=Sing	8	nmod	_	_
 12-13	do	_	_	_	_	_	_	_	_
 12	de	de	ADP	_	_	14	case	_	_
 13	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	14	det	_	_
-14	Banco	Banco	PROPN	_	Gender=Masc|Number=Sing	11	nmod	_	_
+14	Banco	Banco	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	11	nmod	_	_
 15	Interamericano	Interamericano	PROPN	_	Number=Sing	14	flat:name	_	_
 16	de	de	ADP	_	_	17	case	_	_
-17	Poupança	poupança	PROPN	_	Number=Sing	14	nmod	_	_
+17	Poupança	Poupança	PROPN	_	ExtPos=PROPN|Number=Sing	14	nmod	_	_
 18	e	e	CCONJ	_	_	17	flat:name	_	_
-19	Empréstimo	empréstimo	PROPN	_	Gender=Masc|Number=Sing	17	flat:name	_	_
+19	Empréstimo	Empréstimo	PROPN	_	Number=Sing	17	flat:name	_	_
 20	(	(	PUNCT	_	_	21	punct	_	SpaceAfter=No
 21	Biape	Biape	PROPN	_	Gender=Masc|Number=Sing	14	appos	_	SpaceAfter=No
 22	)	)	PUNCT	_	_	21	punct	_	SpaceAfter=No
 23	,	,	PUNCT	_	_	24	punct	_	_
 24	sediado	sediar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	14	acl	_	_
 25	em	em	ADP	_	_	26	case	_	_
-26	Caracas	Caracas	PROPN	_	Gender=Fem|Number=Plur	24	obl	_	SpaceAfter=No
-27	.	.	PUNCT	_	_	8	punct	_	SpacesAfter=\n
+26	Caracas	Caracas	PROPN	_	Gender=Masc|Number=Sing	24	obl	_	SpaceAfter=No
+27	.	.	PUNCT	_	_	6	punct	_	_
 
-# text = Ainda em 1979, passou a integrar o Conselho Fiscal da Companhia Siderúrgica Nacional (CSN).
 # sent_id = 28
+# text = Ainda em 1979, passou a integrar o Conselho Fiscal da Companhia Siderúrgica Nacional (CSN).
 1	Ainda	ainda	ADV	_	_	3	advmod	_	_
-2	em	em	ADP	_	_	1	fixed	_	_
+2	em	em	ADP	_	_	3	case	_	_
 3	1979	1979	NUM	_	NumType=Card	7	obl	_	SpaceAfter=No
 4	,	,	PUNCT	_	_	3	punct	_	_
-5	passou	passar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+5	passou	passar	VERB	_	ExtPos=AUX|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 6	a	a	SCONJ	_	_	7	mark	_	_
 7	integrar	integrar	VERB	_	VerbForm=Inf	5	xcomp	_	_
 8	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	9	det	_	_
-9	Conselho	Conselho	PROPN	_	Gender=Masc|Number=Sing	7	nsubj	_	_
+9	Conselho	Conselho	PROPN	_	Gender=Masc|Number=Sing	7	obj	_	_
 10	Fiscal	Fiscal	PROPN	_	Number=Sing	9	flat:name	_	_
 11-12	da	_	_	_	_	_	_	_	_
 11	de	de	ADP	_	_	13	case	_	_
 12	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	13	det	_	_
-13	Companhia	Companhia	PROPN	_	Gender=Fem|Number=Sing	9	nmod	_	_
+13	Companhia	Companhia	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	9	nmod	_	_
 14	Siderúrgica	Siderúrgica	PROPN	_	Number=Sing	13	flat:name	_	_
 15	Nacional	Nacional	PROPN	_	Number=Sing	13	flat:name	_	_
 16	(	(	PUNCT	_	_	17	punct	_	SpaceAfter=No
@@ -998,14 +1001,14 @@
 18	)	)	PUNCT	_	_	17	punct	_	SpaceAfter=No
 19	.	.	PUNCT	_	_	7	punct	_	SpacesAfter=\n
 
-# text = No BNH deixou manifesta a intenção de ampliar a fiscalização sobre as aplicações dos recursos da caderneta de poupança captados pelos agentes financeiros e a disposição contrária ao ingresso maciço de empresas estrangeiras na área da habitação.
 # sent_id = 29
+# text = No BNH deixou manifesta a intenção de ampliar a fiscalização sobre as aplicações dos recursos da caderneta de poupança captados pelos agentes financeiros e a disposição contrária ao ingresso maciço de empresas estrangeiras na área da habitação.
 1-2	No	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	3	case	_	_
 2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
 3	BNH	BNH	PROPN	_	Gender=Masc|Number=Sing	4	obl	_	_
 4	deixou	deixar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
-5	manifesta	manifeste	PRON	_	Gender=Fem|Number=Sing|PronType=Dem	4	obj	_	_
+5	manifesta	manifesta	NOUN	_	Gender=Fem|Number=Sing	4	xcomp	_	_
 6	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	7	det	_	_
 7	intenção	intenção	NOUN	_	Gender=Fem|Number=Sing	4	nsubj	_	_
 8	de	de	SCONJ	_	_	9	mark	_	_
@@ -1025,7 +1028,7 @@
 20	caderneta	caderneta	NOUN	_	Gender=Fem|Number=Sing	17	nmod	_	_
 21	de	de	ADP	_	_	22	case	_	_
 22	poupança	poupança	NOUN	_	Gender=Fem|Number=Sing	20	nmod	_	_
-23	captados	captar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	22	acl	_	_
+23	captados	captar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	17	acl	_	_
 24-25	pelos	_	_	_	_	_	_	_	_
 24	por	por	ADP	_	_	26	case	_	_
 25	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	26	det	_	_
@@ -1033,7 +1036,7 @@
 27	financeiros	financeiro	ADJ	_	Gender=Masc|Number=Plur	26	amod	_	_
 28	e	e	CCONJ	_	_	30	cc	_	_
 29	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	30	det	_	_
-30	disposição	disposição	NOUN	_	Gender=Fem|Number=Sing	11	conj	_	_
+30	disposição	disposição	NOUN	_	Gender=Fem|Number=Sing	7	conj	_	_
 31	contrária	contrário	ADJ	_	Gender=Fem|Number=Sing	30	amod	_	_
 32-33	ao	_	_	_	_	_	_	_	_
 32	a	a	ADP	_	_	34	case	_	_
@@ -1046,22 +1049,22 @@
 39-40	na	_	_	_	_	_	_	_	_
 39	em	em	ADP	_	_	41	case	_	_
 40	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	41	det	_	_
-41	área	área	NOUN	_	Gender=Fem|Number=Sing	30	nmod	_	_
+41	área	área	NOUN	_	Gender=Fem|Number=Sing	34	nmod	_	_
 42-43	da	_	_	_	_	_	_	_	_
 42	de	de	ADP	_	_	44	case	_	_
 43	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	44	det	_	_
 44	habitação	habitação	NOUN	_	Gender=Fem|Number=Sing	41	nmod	_	SpaceAfter=No
-45	.	.	PUNCT	_	_	4	punct	_	SpacesAfter=\n
+45	.	.	PUNCT	_	_	4	punct	_	_
 
-# text = Caracterizou sua administração pelo saneamento no mercado financeiro, obrigando as associações de poupança e empréstimo a transformarem-se em empresas de crédito imobiliário.
 # sent_id = 30
+# text = Caracterizou sua administração pelo saneamento no mercado financeiro, obrigando as associações de poupança e empréstimo a transformarem-se em empresas de crédito imobiliário.
 1	Caracterizou	caracterizar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2	sua	seu	DET	_	Gender=Fem|Number=Sing|PronType=Prs	3	det	_	_
 3	administração	administração	NOUN	_	Gender=Fem|Number=Sing	1	obj	_	_
 4-5	pelo	_	_	_	_	_	_	_	_
 4	por	por	ADP	_	_	6	case	_	_
 5	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	6	det	_	_
-6	saneamento	saneamento	NOUN	_	Gender=Masc|Number=Sing	3	nmod	_	_
+6	saneamento	saneamento	NOUN	_	Gender=Masc|Number=Sing	1	obl	_	_
 7-8	no	_	_	_	_	_	_	_	_
 7	em	em	ADP	_	_	9	case	_	_
 8	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	9	det	_	_
@@ -1080,14 +1083,14 @@
 20	transformarem	transformar	VERB	_	Number=Plur|Person=3|VerbForm=Inf	12	xcomp	_	_
 21	se	se	PRON	_	Case=Acc|Gender=Fem|Number=Plur|Person=3|PronType=Prs	20	expl	_	_
 22	em	em	ADP	_	_	23	case	_	_
-23	empresas	empresa	NOUN	_	Gender=Fem|Number=Plur	20	obl	_	_
+23	empresas	empresa	NOUN	_	Gender=Fem|Number=Plur	20	obj	_	_
 24	de	de	ADP	_	_	25	case	_	_
 25	crédito	crédito	NOUN	_	Gender=Masc|Number=Sing	23	nmod	_	_
 26	imobiliário	imobiliário	ADJ	_	Gender=Masc|Number=Sing	25	amod	_	SpaceAfter=No
-27	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
+27	.	.	PUNCT	_	_	1	punct	_	_
 
-# text = Em dezembro de 1982, enfrentou uma denúncia feita pela imprensa acerca do favorecimento da empresa Delfin Crédito Imobiliário numa negociação de dívidas com o BNH.
 # sent_id = 31
+# text = Em dezembro de 1982, enfrentou uma denúncia feita pela imprensa acerca do favorecimento da empresa Delfin Crédito Imobiliário numa negociação de dívidas com o BNH.
 1	Em	em	ADP	_	_	2	case	_	_
 2	dezembro	dezembro	NOUN	_	Gender=Masc|Number=Sing	6	obl	_	_
 3	de	de	ADP	_	_	4	case	_	_
@@ -1101,38 +1104,38 @@
 10	por	por	ADP	_	_	12	case	_	_
 11	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	12	det	_	_
 12	imprensa	imprensa	NOUN	_	Gender=Fem|Number=Sing	9	obl:agent	_	_
-13	acerca	acerco	ADJ	_	Gender=Fem|Number=Sing	12	amod	_	_
+13	acerca	acerca	ADV	_	_	9	advmod	_	_
 14-15	do	_	_	_	_	_	_	_	_
 14	de	de	ADP	_	_	16	case	_	_
 15	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	16	det	_	_
-16	favorecimento	favorecimento	NOUN	_	Gender=Masc|Number=Sing	12	nmod	_	_
+16	favorecimento	favorecimento	NOUN	_	Gender=Masc|Number=Sing	13	obl	_	_
 17-18	da	_	_	_	_	_	_	_	_
 17	de	de	ADP	_	_	19	case	_	_
 18	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	19	det	_	_
 19	empresa	empresa	NOUN	_	Gender=Fem|Number=Sing	16	nmod	_	_
-20	Delfin	Delfin	PROPN	_	Gender=Masc|Number=Sing	19	appos	_	_
+20	Delfin	Delfin	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	19	appos	_	_
 21	Crédito	Crédito	PROPN	_	Number=Sing	20	flat:name	_	_
-22	Imobiliário	imobiliário	PROPN	_	Number=Sing	20	flat:name	_	_
+22	Imobiliário	Imobiliário	PROPN	_	Number=Sing	20	flat:name	_	_
 23-24	numa	_	_	_	_	_	_	_	_
 23	em	em	ADP	_	_	25	case	_	_
 24	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	25	det	_	_
-25	negociação	negociação	NOUN	_	Gender=Fem|Number=Sing	6	obl	_	_
+25	negociação	negociação	NOUN	_	Gender=Fem|Number=Sing	16	nmod	_	_
 26	de	de	ADP	_	_	27	case	_	_
 27	dívidas	dívida	NOUN	_	Gender=Fem|Number=Plur	25	nmod	_	_
 28	com	com	ADP	_	_	30	case	_	_
 29	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	30	det	_	_
 30	BNH	BNH	PROPN	_	Gender=Masc|Number=Sing	27	nmod	_	SpaceAfter=No
-31	.	.	PUNCT	_	_	6	punct	_	SpacesAfter=\n
+31	.	.	PUNCT	_	_	6	punct	_	_
 
-# text = Em novembro de 1983, ameaçou renunciar à presidência do BNH, caso o governo não revisse a sua política salarial, um dos principais responsáveis pelo grande número de mutuários inadimplentes no Sistema Financeiro de Habitação.
 # sent_id = 32
+# text = Em novembro de 1983, ameaçou renunciar à presidência do BNH, caso o governo não revisse a sua política salarial, um dos principais responsáveis pelo grande número de mutuários inadimplentes no Sistema Financeiro de Habitação.
 1	Em	em	ADP	_	_	2	case	_	_
 2	novembro	novembro	NOUN	_	Gender=Masc|Number=Sing	6	obl	_	_
 3	de	de	ADP	_	_	4	case	_	_
 4	1983	1983	NUM	_	NumType=Card	2	nmod	_	SpaceAfter=No
 5	,	,	PUNCT	_	_	2	punct	_	_
 6	ameaçou	ameaçar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
-7	renunciar	renunciar	VERB	_	VerbForm=Inf	6	csubj	_	_
+7	renunciar	renunciar	VERB	_	VerbForm=Inf	6	xcomp	_	_
 8-9	à	_	_	_	_	_	_	_	_
 8	a	a	ADP	_	_	10	case	_	_
 9	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	10	det	_	_
@@ -1146,37 +1149,37 @@
 16	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	17	det	_	_
 17	governo	governo	NOUN	_	Gender=Masc|Number=Sing	19	nsubj	_	_
 18	não	não	ADV	_	Polarity=Neg	19	advmod	_	_
-19	revisse	revizer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	7	advcl	_	_
+19	revisse	rever	VERB	_	Mood=Sub|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	6	advcl	_	_
 20	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	22	det	_	_
 21	sua	seu	DET	_	Gender=Fem|Number=Sing|PronType=Prs	22	det	_	_
 22	política	política	NOUN	_	Gender=Fem|Number=Sing	19	obj	_	_
 23	salarial	salarial	ADJ	_	Gender=Fem|Number=Sing	22	amod	_	SpaceAfter=No
 24	,	,	PUNCT	_	_	25	punct	_	_
-25	um	um	NUM	_	NumType=Card	19	obl	_	_
+25	um	um	NUM	_	NumType=Card	22	appos	_	_
 26-27	dos	_	_	_	_	_	_	_	_
 26	de	de	ADP	_	_	29	case	_	_
 27	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	29	det	_	_
 28	principais	principal	ADJ	_	Gender=Masc|Number=Plur	29	amod	_	_
-29	responsáveis	responsável	ADJ	_	Gender=Masc|Number=Plur	25	nmod	_	_
+29	responsáveis	responsável	NOUN	_	Gender=Masc|Number=Plur	25	nmod	_	_
 30-31	pelo	_	_	_	_	_	_	_	_
 30	por	por	ADP	_	_	33	case	_	_
 31	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	33	det	_	_
 32	grande	grande	ADJ	_	Gender=Masc|Number=Sing	33	amod	_	_
-33	número	número	NOUN	_	Gender=Masc|Number=Sing	29	nmod	_	_
+33	número	número	NOUN	_	Gender=Masc|Number=Sing	29	obl	_	_
 34	de	de	ADP	_	_	35	case	_	_
 35	mutuários	mutuário	NOUN	_	Gender=Masc|Number=Plur	33	nmod	_	_
 36	inadimplentes	inadimplente	ADJ	_	Gender=Masc|Number=Plur	35	amod	_	_
 37-38	no	_	_	_	_	_	_	_	_
 37	em	em	ADP	_	_	39	case	_	_
 38	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	39	det	_	_
-39	Sistema	Sistema	NOUN	_	Gender=Masc|Number=Sing	33	nmod	_	_
-40	Financeiro	financeiro	PROPN	_	Gender=Masc|Number=Sing	39	appos	_	_
+39	Sistema	Sistema	PROPN	_	Gender=Masc|Number=Sing	35	nmod	_	_
+40	Financeiro	Financeiro	PROPN	_	Number=Sing	39	flat:name	_	_
 41	de	de	ADP	_	_	42	case	_	_
-42	Habitação	Habitação	PROPN	_	Number=Sing	40	nmod	_	SpaceAfter=No
-43	.	.	PUNCT	_	_	6	punct	_	SpacesAfter=\n
+42	Habitação	Habitação	PROPN	_	Number=Sing	39	nmod	_	SpaceAfter=No
+43	.	.	PUNCT	_	_	6	punct	_	_
 
-# text = Com a proximidade da sucessão, por via indireta, do presidente Figueiredo, não concordou com a subordinação do BNH aos compromissos de campanha de Andreazza.
 # sent_id = 33
+# text = Com a proximidade da sucessão, por via indireta, do presidente Figueiredo, não concordou com a subordinação do BNH aos compromissos de campanha de Andreazza.
 1	Com	com	ADP	_	_	3	case	_	_
 2	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	3	det	_	_
 3	proximidade	proximidade	NOUN	_	Gender=Fem|Number=Sing	18	obl	_	_
@@ -1184,17 +1187,17 @@
 4	de	de	ADP	_	_	6	case	_	_
 5	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	6	det	_	_
 6	sucessão	sucessão	NOUN	_	Gender=Fem|Number=Sing	3	nmod	_	SpaceAfter=No
-7	,	,	PUNCT	_	_	3	punct	_	_
+7	,	,	PUNCT	_	_	9	punct	_	_
 8	por	por	ADP	_	_	9	case	_	_
-9	via	via	NOUN	_	Gender=Fem|Number=Sing	18	obl	_	_
+9	via	via	NOUN	_	Gender=Fem|Number=Sing	6	nmod	_	_
 10	indireta	indireto	ADJ	_	Gender=Fem|Number=Sing	9	amod	_	SpaceAfter=No
-11	,	,	PUNCT	_	_	14	punct	_	_
+11	,	,	PUNCT	_	_	9	punct	_	_
 12-13	do	_	_	_	_	_	_	_	_
 12	de	de	ADP	_	_	14	case	_	_
 13	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	14	det	_	_
-14	presidente	presidente	NOUN	_	Gender=Masc|Number=Sing	9	appos	_	_
+14	presidente	presidente	NOUN	_	Gender=Masc|Number=Sing	6	nmod	_	_
 15	Figueiredo	Figueiredo	PROPN	_	Gender=Masc|Number=Sing	14	appos	_	SpaceAfter=No
-16	,	,	PUNCT	_	_	14	punct	_	_
+16	,	,	PUNCT	_	_	3	punct	_	_
 17	não	não	ADV	_	Polarity=Neg	18	advmod	_	_
 18	concordou	concordar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 19	com	com	ADP	_	_	21	case	_	_
@@ -1207,15 +1210,15 @@
 25-26	aos	_	_	_	_	_	_	_	_
 25	a	a	ADP	_	_	27	case	_	_
 26	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	27	det	_	_
-27	compromissos	compromisso	NOUN	_	Gender=Masc|Number=Plur	24	nmod	_	_
+27	compromissos	compromisso	NOUN	_	Gender=Masc|Number=Plur	21	nmod	_	_
 28	de	de	ADP	_	_	29	case	_	_
 29	campanha	campanha	NOUN	_	Gender=Fem|Number=Sing	27	nmod	_	_
 30	de	de	ADP	_	_	31	case	_	_
-31	Andreazza	Andreazza	PROPN	_	Gender=Masc|Number=Sing	29	nmod	_	SpaceAfter=No
-32	.	.	PUNCT	_	_	18	punct	_	SpacesAfter=\n
+31	Andreazza	Andreazza	PROPN	_	Gender=Fem|Number=Sing	29	nmod	_	SpaceAfter=No
+32	.	.	PUNCT	_	_	18	punct	_	_
 
-# text = Pediu demissão em dezembro de 1983, sendo sucedido por Nélson da Mata.
 # sent_id = 34
+# text = Pediu demissão em dezembro de 1983, sendo sucedido por Nélson da Mata.
 1	Pediu	pedir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2	demissão	demissão	NOUN	_	Gender=Fem|Number=Sing	1	obj	_	_
 3	em	em	ADP	_	_	4	case	_	_
@@ -1231,10 +1234,10 @@
 12	de	de	ADP	_	_	14	case	_	_
 13	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	14	det	_	_
 14	Mata	Mata	PROPN	_	Number=Sing	11	nmod	_	SpaceAfter=No
-15	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
+15	.	.	PUNCT	_	_	1	punct	_	_
 
-# text = Ainda no mesmo ano, encerrou suas atividades governamentais deixando a presidência do Conselho Fiscal da CSN e a diretoria do Biape.
 # sent_id = 35
+# text = Ainda no mesmo ano, encerrou suas atividades governamentais deixando a presidência do Conselho Fiscal da CSN e a diretoria do Biape.
 1	Ainda	ainda	ADV	_	_	5	advmod	_	_
 2-3	no	_	_	_	_	_	_	_	_
 2	em	em	ADP	_	_	5	case	_	_
@@ -1252,7 +1255,7 @@
 14-15	do	_	_	_	_	_	_	_	_
 14	de	de	ADP	_	_	16	case	_	_
 15	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	16	det	_	_
-16	Conselho	Conselho	PROPN	_	Gender=Masc|Number=Sing	13	nmod	_	_
+16	Conselho	Conselho	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	13	nmod	_	_
 17	Fiscal	Fiscal	PROPN	_	Number=Sing	16	flat:name	_	_
 18-19	da	_	_	_	_	_	_	_	_
 18	de	de	ADP	_	_	20	case	_	_
@@ -1267,24 +1270,24 @@
 26	Biape	Biape	PROPN	_	Gender=Masc|Number=Sing	23	nmod	_	SpaceAfter=No
 27	.	.	PUNCT	_	_	7	punct	_	SpacesAfter=\n
 
-# text = A partir de então, dedicou-se apenas a atividades privadas.
 # sent_id = 36
-1	A	a	SCONJ	_	_	4	case	_	_
-2	partir	partir	VERB	_	VerbForm=Inf	1	fixed	_	_
+# text = A partir de então, dedicou-se apenas a atividades privadas.
+1	A	a	ADP	_	ExtPos=ADP	4	case	_	_
+2	partir	partir	NOUN	_	_	1	fixed	_	_
 3	de	de	ADP	_	_	1	fixed	_	_
-4	então	então	ADV	_	_	6	obl	_	SpaceAfter=No
+4	então	então	ADV	_	_	6	advmod	_	SpaceAfter=No
 5	,	,	PUNCT	_	_	4	punct	_	_
 6-7	dedicou-se	_	_	_	_	_	_	_	_
 6	dedicou	dedicar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 7	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	6	expl	_	_
 8	apenas	apenas	ADV	_	_	10	advmod	_	_
 9	a	a	ADP	_	_	10	case	_	_
-10	atividades	atividade	NOUN	_	Gender=Fem|Number=Plur	6	obl	_	_
+10	atividades	atividade	NOUN	_	Gender=Fem|Number=Plur	6	obj	_	_
 11	privadas	privado	ADJ	_	Gender=Fem|Number=Plur	10	amod	_	SpaceAfter=No
-12	.	.	PUNCT	_	_	6	punct	_	SpacesAfter=\n
+12	.	.	PUNCT	_	_	6	punct	_	_
 
-# text = De março de 1984 a novembro de 1985, ocupou a vice-presidência do Banco de Comércio e Indústria de São Paulo S.A. - (Comind).
 # sent_id = 37
+# text = De março de 1984 a novembro de 1985, ocupou a vice-presidência do Banco de Comércio e Indústria de São Paulo S.A. - (Comind).
 1	De	de	ADP	_	_	2	case	_	_
 2	março	março	NOUN	_	Gender=Masc|Number=Sing	10	obl	_	_
 3	de	de	ADP	_	_	4	case	_	_
@@ -1302,21 +1305,21 @@
 14	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	15	det	_	_
 15	Banco	Banco	PROPN	_	Gender=Masc|Number=Sing	12	nmod	_	_
 16	de	de	ADP	_	_	17	case	_	_
-17	Comércio	Comércio	PROPN	_	Number=Sing	15	nmod	_	_
+17	Comércio	Comércio	PROPN	_	ExtPos=PROPN|Number=Sing	15	nmod	_	_
 18	e	e	CCONJ	_	_	17	flat:name	_	_
-19	Indústria	indústria	PROPN	_	Number=Sing	17	flat:name	_	_
+19	Indústria	Indústria	PROPN	_	Number=Sing	17	flat:name	_	_
 20	de	de	ADP	_	_	21	case	_	_
-21	São	São	PROPN	_	Gender=Masc|Number=Sing	17	nmod	_	_
+21	São	São	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	15	nmod	_	_
 22	Paulo	Paulo	PROPN	_	Number=Sing	21	flat:name	_	_
 23	S.A.	S.A.	PROPN	_	Number=Sing	21	flat:name	_	_
-24	-	-	PUNCT	_	_	10	punct	_	_
+24	-	-	PUNCT	_	_	26	punct	_	_
 25	(	(	PUNCT	_	_	26	punct	_	SpaceAfter=No
-26	Comind	Comind	PROPN	_	Gender=Masc|Number=Sing	12	appos	_	SpaceAfter=No
+26	Comind	Comind	PROPN	_	Gender=Masc|Number=Sing	15	appos	_	SpaceAfter=No
 27	)	)	PUNCT	_	_	26	punct	_	SpaceAfter=No
-28	.	.	PUNCT	_	_	10	punct	_	SpacesAfter=\n
+28	.	.	PUNCT	_	_	10	punct	_	_
 
-# text = Em 1991, tornou-se representante no Brasil da Skandia International Insurance Co., maior grupo segurador da Escandinávia.
 # sent_id = 38
+# text = Em 1991, tornou-se representante no Brasil da Skandia International Insurance Co., maior grupo segurador da Escandinávia.
 1	Em	em	ADP	_	_	2	case	_	_
 2	1991	1991	NUM	_	NumType=Card	4	obl	_	SpaceAfter=No
 3	,	,	PUNCT	_	_	2	punct	_	_
@@ -1327,26 +1330,26 @@
 7-8	no	_	_	_	_	_	_	_	_
 7	em	em	ADP	_	_	9	case	_	_
 8	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	9	det	_	_
-9	Brasil	Brasil	PROPN	_	Gender=Masc|Number=Sing	6	nmod	_	_
+9	Brasil	Brasil	PROPN	_	Gender=Masc|Number=Sing	4	obl	_	_
 10-11	da	_	_	_	_	_	_	_	_
 10	de	de	ADP	_	_	12	case	_	_
 11	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	12	det	_	_
-12	Skandia	Skandia	PROPN	_	Gender=Fem|Number=Sing	9	nmod	_	_
-13	International	international	PROPN	_	Number=Sing	12	flat:name	_	_
+12	Skandia	Skandia	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	9	nmod	_	_
+13	International	International	PROPN	_	Number=Sing	12	flat:name	_	_
 14	Insurance	Insurance	PROPN	_	Number=Sing	12	flat:name	_	_
-15	Co.	Co.	PUNCT	_	_	6	punct	_	SpaceAfter=No
+15	Co.	Co.	PROPN	_	Abbr=Yes|Gender=Masc|Number=Sing	12	flat:name	_	SpaceAfter=No
 16	,	,	PUNCT	_	_	18	punct	_	_
-17	maior	grande	ADJ	_	Gender=Masc|Number=Sing	18	amod	_	_
+17	maior	maior	ADJ	_	Gender=Masc|Number=Sing	18	amod	_	_
 18	grupo	grupo	NOUN	_	Gender=Masc|Number=Sing	12	appos	_	_
 19	segurador	segurador	ADJ	_	Gender=Masc|Number=Sing	18	amod	_	_
 20-21	da	_	_	_	_	_	_	_	_
 20	de	de	ADP	_	_	22	case	_	_
 21	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	22	det	_	_
 22	Escandinávia	Escandinávia	PROPN	_	Gender=Fem|Number=Sing	18	nmod	_	SpaceAfter=No
-23	.	.	PUNCT	_	_	4	punct	_	SpacesAfter=\n
+23	.	.	PUNCT	_	_	4	punct	_	_
 
-# text = Em 1993 assumiu a presidência da Associação Brasileira Beneficente de Reabilitação (ABBR), onde permaneceria até setembro de 1999.
 # sent_id = 39
+# text = Em 1993 assumiu a presidência da Associação Brasileira Beneficente de Reabilitação (ABBR), onde permaneceria até setembro de 1999.
 1	Em	em	ADP	_	_	2	case	_	_
 2	1993	1993	NUM	_	NumType=Card	3	obl	_	_
 3	assumiu	assumir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
@@ -1364,16 +1367,16 @@
 14	ABBR	ABBR	PROPN	_	Gender=Fem|Number=Sing	8	appos	_	SpaceAfter=No
 15	)	)	PUNCT	_	_	14	punct	_	SpaceAfter=No
 16	,	,	PUNCT	_	_	18	punct	_	_
-17	onde	onde	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	18	obl	_	_
+17	onde	onde	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	18	obl	_	_
 18	permaneceria	permanecer	VERB	_	Mood=Cnd|Number=Sing|Person=3|VerbForm=Fin	8	acl:relcl	_	_
 19	até	até	ADP	_	_	20	case	_	_
 20	setembro	setembro	NOUN	_	Gender=Masc|Number=Sing	18	obl	_	_
 21	de	de	ADP	_	_	22	case	_	_
 22	1999	1999	NUM	_	NumType=Card	20	nmod	_	SpaceAfter=No
-23	.	.	PUNCT	_	_	3	punct	_	SpacesAfter=\n
+23	.	.	PUNCT	_	_	3	punct	_	_
 
-# text = Em setembro de 1997, a Skandia vendeu sua carteira de negócios de seguros para a empresa alemã Hanover e desde então passou a atuar como representante dessa empresa no Brasil.
 # sent_id = 40
+# text = Em setembro de 1997, a Skandia vendeu sua carteira de negócios de seguros para a empresa alemã Hanover e desde então passou a atuar como representante dessa empresa no Brasil.
 1	Em	em	ADP	_	_	2	case	_	_
 2	setembro	setembro	NOUN	_	Gender=Masc|Number=Sing	8	obl	_	_
 3	de	de	ADP	_	_	4	case	_	_
@@ -1390,13 +1393,13 @@
 14	seguros	seguro	NOUN	_	Gender=Masc|Number=Plur	12	nmod	_	_
 15	para	para	ADP	_	_	17	case	_	_
 16	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	17	det	_	_
-17	empresa	empresa	NOUN	_	Gender=Fem|Number=Sing	12	nmod	_	_
-18	alemã	alemã	PROPN	_	Gender=Fem|Number=Sing	17	appos	_	_
-19	Hanover	Hanover	PROPN	_	Number=Sing	18	flat:name	_	_
+17	empresa	empresa	NOUN	_	Gender=Fem|Number=Sing	8	obl	_	_
+18	alemã	alemão	ADJ	_	Gender=Fem|Number=Sing	17	amod	_	_
+19	Hanover	Hanover	PROPN	_	Gender=Fem|Number=Sing	17	appos	_	_
 20	e	e	CCONJ	_	_	25	cc	_	_
 21	desde	desde	ADP	_	_	22	case	_	_
 22	então	então	NOUN	_	Gender=Masc|Number=Sing	25	obl	_	_
-23	passou	passar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	8	conj	_	_
+23	passou	passar	VERB	_	ExtPos=AUX|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	8	conj	_	_
 24	a	a	SCONJ	_	_	25	mark	_	_
 25	atuar	atuar	VERB	_	VerbForm=Inf	23	xcomp	_	_
 26	como	como	ADP	_	_	27	case	_	_
@@ -1408,16 +1411,16 @@
 31-32	no	_	_	_	_	_	_	_	_
 31	em	em	ADP	_	_	33	case	_	_
 32	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	33	det	_	_
-33	Brasil	Brasil	PROPN	_	Gender=Masc|Number=Sing	27	nmod	_	SpaceAfter=No
+33	Brasil	Brasil	PROPN	_	Gender=Masc|Number=Sing	25	obl	_	SpaceAfter=No
 34	.	.	PUNCT	_	_	8	punct	_	SpacesAfter=\n
 
-# text = Casou-se com Zenita Ferrano de Oliveira, com quem teve quatro filhos.
 # sent_id = 41
+# text = Casou-se com Zenita Ferrano de Oliveira, com quem teve quatro filhos.
 1-2	Casou-se	_	_	_	_	_	_	_	_
-1	Casou	Casar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+1	Casou	casar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	1	expl	_	_
 3	com	com	ADP	_	_	4	case	_	_
-4	Zenita	Zenita	PROPN	_	Gender=Masc|Number=Sing	1	obl	_	_
+4	Zenita	Zenita	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	1	obl	_	_
 5	Ferrano	Ferrano	PROPN	_	Number=Sing	4	flat:name	_	_
 6	de	de	ADP	_	_	7	case	_	_
 7	Oliveira	Oliveira	PROPN	_	Number=Sing	4	nmod	_	SpaceAfter=No
@@ -1426,6 +1429,6 @@
 10	quem	quem	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	11	obl	_	_
 11	teve	ter	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	acl:relcl	_	_
 12	quatro	quatro	NUM	_	NumType=Card	13	nummod	_	_
-13	filhos	filho	NOUN	_	Gender=Masc|Number=Plur	11	nsubj	_	SpaceAfter=No
+13	filhos	filho	NOUN	_	Gender=Masc|Number=Plur	11	obj	_	SpaceAfter=No
 14	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
 

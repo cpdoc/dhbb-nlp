@@ -1,23 +1,16 @@
-# text = «CLUBE 24 DE FEVEREIRO»
+# generator = UDPipe 2, https://lindat.mff.cuni.cz/services/udpipe
+# udpipe_model = portuguese-bosque-ud-2.12-230717
+# udpipe_model_licence = CC BY-NC-SA
+# newdoc
+# newpar
 # sent_id = 1
-# newpar
-# newdoc id = ../raw/8743.raw
-1	«	«	PUNCT	_	_	2	punct	_	SpaceAfter=No|SpacesBefore=\n
-2	CLUBE	Clube	PROPN	_	Gender=Masc|Number=Sing	0	root	_	_
-3	24	24	PROPN	_	Number=Sing	2	flat:name	_	_
-4	DE	DE	PROPN	_	_	2	flat:name	_	_
-5	FEVEREIRO	fevereiro	PROPN	_	Gender=Masc|Number=Sing	2	flat:name	_	SpaceAfter=No
-6	»	»	PUNCT	_	_	2	punct	_	_
-
 # text = Associação fundada em 16 de fevereiro de 1932 no Rio de Janeiro, na sede do Clube de Engenharia, com a finalidade de “incrementar a campanha cívica em prol da volta do país ao regime constitucional”.
-# sent_id = 2
-# newpar
-1	Associação	Associação	NOUN	_	Gender=Fem|Number=Sing	0	root	_	_
+1	Associação	associação	NOUN	_	Gender=Fem|Number=Sing	0	root	_	_
 2	fundada	fundar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	1	acl	_	_
 3	em	em	ADP	_	_	4	case	_	_
 4	16	16	NUM	_	NumType=Card	2	obl	_	_
 5	de	de	ADP	_	_	6	case	_	_
-6	fevereiro	fevereiro	NOUN	_	Gender=Masc|Number=Sing	4	nmod:tmod	_	_
+6	fevereiro	fevereiro	NOUN	_	Gender=Masc|Number=Sing	4	nmod	_	_
 7	de	de	ADP	_	_	8	case	_	_
 8	1932	1932	NUM	_	NumType=Card	6	nmod	_	_
 9-10	no	_	_	_	_	_	_	_	_
@@ -29,30 +22,30 @@
 14	,	,	PUNCT	_	_	2	punct	_	_
 15-16	na	_	_	_	_	_	_	_	_
 15	em	em	ADP	_	_	17	case	_	_
-16	a	o	DET	_	Definite=Def|PronType=Art	17	det	_	_
-17	sede	sede	NOUN	_	Gender=Fem|Number=Sing	1	nmod	_	_
+16	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	17	det	_	_
+17	sede	sede	NOUN	_	Gender=Fem|Number=Sing	2	obl	_	_
 18-19	do	_	_	_	_	_	_	_	_
 18	de	de	ADP	_	_	20	case	_	_
 19	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	20	det	_	_
 20	Clube	Clube	PROPN	_	Gender=Masc|Number=Sing	17	nmod	_	_
 21	de	de	ADP	_	_	22	case	_	_
 22	Engenharia	Engenharia	PROPN	_	Number=Sing	20	nmod	_	SpaceAfter=No
-23	,	,	PUNCT	_	_	17	punct	_	_
+23	,	,	PUNCT	_	_	26	punct	_	_
 24	com	com	ADP	_	_	26	case	_	_
 25	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	26	det	_	_
-26	finalidade	finalidade	NOUN	_	Gender=Fem|Number=Sing	17	nmod	_	_
-27	de	de	ADP	_	_	29	mark	_	_
-28	“	“	PUNCT	_	_	29	punct	_	SpaceAfter=No
+26	finalidade	finalidade	NOUN	_	Gender=Fem|Number=Sing	2	obl	_	_
+27	de	de	SCONJ	_	_	29	mark	_	_
+28	“	"	PUNCT	_	_	29	punct	_	SpaceAfter=No
 29	incrementar	incrementar	VERB	_	VerbForm=Inf	26	acl	_	_
 30	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	31	det	_	_
 31	campanha	campanha	NOUN	_	Gender=Fem|Number=Sing	29	obj	_	_
 32	cívica	cívico	ADJ	_	Gender=Fem|Number=Sing	31	amod	_	_
-33	em	em	ADP	_	_	34	case	_	_
-34	prol	prol	NOUN	_	_	29	obl	_	_
+33	em	em	ADP	_	_	37	case	_	_
+34	prol	prol	NOUN	_	Gender=Masc|Number=Sing	33	fixed	_	_
 35-36	da	_	_	_	_	_	_	_	_
 35	de	de	ADP	_	_	37	case	_	_
 36	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	37	det	_	_
-37	volta	volta	NOUN	_	_	34	nmod	_	_
+37	volta	volta	NOUN	_	Gender=Fem|Number=Sing	31	nmod	_	_
 38-39	do	_	_	_	_	_	_	_	_
 38	de	de	ADP	_	_	40	case	_	_
 39	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	40	det	_	_
@@ -62,11 +55,11 @@
 42	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	43	det	_	_
 43	regime	regime	NOUN	_	Gender=Masc|Number=Sing	37	nmod	_	_
 44	constitucional	constitucional	ADJ	_	Gender=Masc|Number=Sing	43	amod	_	SpaceAfter=No
-45	”	”	PUNCT	_	_	29	punct	_	SpaceAfter=No
+45	”	"	PUNCT	_	_	29	punct	_	SpaceAfter=No
 46	.	.	PUNCT	_	_	1	punct	_	_
 
+# sent_id = 2
 # text = Sua denominação foi uma homenagem ao dia da promulgação da primeira Constituição republicana, em 1891.
-# sent_id = 3
 1	Sua	seu	DET	_	Gender=Fem|Number=Sing|PronType=Prs	2	det	_	_
 2	denominação	denominação	NOUN	_	Gender=Fem|Number=Sing	5	nsubj	_	_
 3	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	cop	_	_
@@ -84,21 +77,20 @@
 12	de	de	ADP	_	_	15	case	_	_
 13	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	15	det	_	_
 14	primeira	primeiro	ADJ	_	Gender=Fem|Number=Sing|NumType=Ord	15	amod	_	_
-15	Constituição	Constituição	NOUN	_	Gender=Fem|Number=Sing	11	nmod	_	_
-16	republicana	republicana	ADJ	_	Gender=Fem|Number=Sing	15	amod	_	SpaceAfter=No
+15	Constituição	constituição	NOUN	_	Gender=Fem|Number=Sing	11	nmod	_	_
+16	republicana	republicano	ADJ	_	Gender=Fem|Number=Sing	15	amod	_	SpaceAfter=No
 17	,	,	PUNCT	_	_	19	punct	_	_
 18	em	em	ADP	_	_	19	case	_	_
-19	1891	1891	NUM	_	NumType=Card	15	nmod	_	SpaceAfter=No
-20	.	.	PUNCT	_	_	5	punct	_	_
+19	1891	1891	NUM	_	NumType=Card	11	nmod	_	SpaceAfter=No
+20	.	.	PUNCT	_	_	5	punct	_	SpacesAfter=\n
 
+# sent_id = 3
 # text = O Clube 24 de Fevereiro foi criado num período de grande agitação política, quando setores de oposição a Getúlio Vargas intensificaram suas pressões no sentido da reconstitucionalização do país.
-# sent_id = 4
-# newpar
 1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	_	_
-2	Clube	Clube	PROPN	_	Gender=Masc|Number=Sing	7	nsubj:pass	_	_
-3	24	24	PROPN	_	NumType=Card	2	appos	_	_
+2	Clube	Clube	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	7	nsubj:pass	_	_
+3	24	24	PROPN	_	Number=Sing	2	flat:name	_	_
 4	de	de	ADP	_	_	5	case	_	_
-5	Fevereiro	fevereiro	NOUN	_	Gender=Masc|Number=Sing	3	nmod	_	_
+5	Fevereiro	Fevereiro	PROPN	_	Number=Sing	2	nmod	_	_
 6	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	7	aux:pass	_	_
 7	criado	criar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
 8-9	num	_	_	_	_	_	_	_	_
@@ -114,10 +106,10 @@
 17	setores	setor	NOUN	_	Gender=Masc|Number=Plur	23	nsubj	_	_
 18	de	de	ADP	_	_	19	case	_	_
 19	oposição	oposição	NOUN	_	Gender=Fem|Number=Sing	17	nmod	_	_
-20	a	a	DET	_	_	21	case	_	_
-21	Getúlio	Getúlio	PROPN	_	Gender=Masc|Number=Sing	17	nmod	_	_
+20	a	a	ADP	_	_	21	case	_	_
+21	Getúlio	Getúlio	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	19	nmod	_	_
 22	Vargas	Vargas	PROPN	_	Number=Sing	21	flat:name	_	_
-23	intensificaram	intensificar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	7	advcl	_	_
+23	intensificaram	intensificar	VERB	_	Mood=Ind|Number=Plur|Person=3|VerbForm=Fin	7	advcl	_	_
 24	suas	seu	DET	_	Gender=Fem|Number=Plur|PronType=Prs	25	det	_	_
 25	pressões	pressão	NOUN	_	Gender=Fem|Number=Plur	23	obj	_	_
 26-27	no	_	_	_	_	_	_	_	_
@@ -134,10 +126,10 @@
 34	país	país	NOUN	_	Gender=Masc|Number=Sing	31	nmod	_	SpaceAfter=No
 35	.	.	PUNCT	_	_	7	punct	_	_
 
+# sent_id = 4
 # text = Em São Paulo, em fevereiro de 1932, foi fundada a Frente Única Paulista (FUP), coligação política formada pelo Partido Democrático, pela “ala moça” do Partido Republicano Paulista e pela Liga de Defesa Paulista.
-# sent_id = 5
 1	Em	em	ADP	_	_	2	case	_	_
-2	São	São	PROPN	_	Gender=Masc|Number=Sing	11	obl	_	_
+2	São	São	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	11	obl	_	_
 3	Paulo	Paulo	PROPN	_	Number=Sing	2	flat:name	_	SpaceAfter=No
 4	,	,	PUNCT	_	_	2	punct	_	_
 5	em	em	ADP	_	_	6	case	_	_
@@ -147,52 +139,52 @@
 9	,	,	PUNCT	_	_	6	punct	_	_
 10	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	11	aux:pass	_	_
 11	fundada	fundar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
-12	a	o	ADP	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	13	case	_	_
-13	Frente	Frente	PROPN	_	Gender=Fem|Number=Sing	11	obl	_	_
-14	Única	única	PROPN	_	Gender=Fem|Number=Sing	13	flat:name	_	_
+12	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	13	det	_	_
+13	Frente	Frente	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	11	nsubj:pass	_	_
+14	Única	Única	PROPN	_	Number=Sing	13	flat:name	_	_
 15	Paulista	Paulista	PROPN	_	Number=Sing	13	flat:name	_	_
 16	(	(	PUNCT	_	_	17	punct	_	SpaceAfter=No
-17	FUP	FUP	PROPN	_	Gender=Masc|Number=Sing	13	appos	_	SpaceAfter=No
+17	FUP	FUP	PROPN	_	Gender=Fem|Number=Sing	13	appos	_	SpaceAfter=No
 18	)	)	PUNCT	_	_	17	punct	_	SpaceAfter=No
-19	,	,	PUNCT	_	_	11	punct	_	_
+19	,	,	PUNCT	_	_	20	punct	_	_
 20	coligação	coligação	NOUN	_	Gender=Fem|Number=Sing	13	appos	_	_
 21	política	político	ADJ	_	Gender=Fem|Number=Sing	20	amod	_	_
 22	formada	formar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	20	acl	_	_
 23-24	pelo	_	_	_	_	_	_	_	_
 23	por	por	ADP	_	_	25	case	_	_
 24	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	25	det	_	_
-25	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	22	obl:agent	_	_
+25	Partido	Partido	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	22	obl:agent	_	_
 26	Democrático	Democrático	PROPN	_	Number=Sing	25	flat:name	_	SpaceAfter=No
-27	,	,	PUNCT	_	_	22	punct	_	_
+27	,	,	PUNCT	_	_	31	punct	_	_
 28-29	pela	_	_	_	_	_	_	_	_
 28	por	por	ADP	_	_	31	case	_	_
 29	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	31	det	_	_
-30	“	“	PUNCT	_	_	31	punct	_	SpaceAfter=No
-31	ala	ala	NOUN	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	22	obl:agent	_	_
-32	moça	moço	ADJ	_	Gender=Fem|Number=Sing	31	amod	_	SpaceAfter=No
-33	”	”	PUNCT	_	_	31	punct	_	_
+30	“	"	PUNCT	_	_	31	punct	_	SpaceAfter=No
+31	ala	ala	NOUN	_	Gender=Fem|Number=Sing	25	conj	_	_
+32	moça	moça	NOUN	_	Gender=Fem|Number=Sing	31	nmod	_	SpaceAfter=No
+33	”	"	PUNCT	_	_	31	punct	_	_
 34-35	do	_	_	_	_	_	_	_	_
 34	de	de	ADP	_	_	36	case	_	_
 35	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	36	det	_	_
-36	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	31	nmod	_	_
+36	Partido	Partido	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	31	nmod	_	_
 37	Republicano	Republicano	PROPN	_	Number=Sing	36	flat:name	_	_
 38	Paulista	Paulista	PROPN	_	Number=Sing	36	flat:name	_	_
 39	e	e	CCONJ	_	_	42	cc	_	_
 40-41	pela	_	_	_	_	_	_	_	_
 40	por	por	ADP	_	_	42	case	_	_
 41	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	42	det	_	_
-42	Liga	Liga	PROPN	_	Gender=Fem|Number=Sing	36	conj	_	_
+42	Liga	Liga	PROPN	_	Gender=Fem|Number=Sing	25	conj	_	_
 43	de	de	ADP	_	_	44	case	_	_
 44	Defesa	Defesa	PROPN	_	Number=Sing	42	nmod	_	_
 45	Paulista	Paulista	PROPN	_	Number=Sing	44	flat:name	_	SpaceAfter=No
 46	.	.	PUNCT	_	_	11	punct	_	_
 
+# sent_id = 5
 # text = No Rio Grande do Sul, a Frente Única Gaúcha (FUG), fundada em 1928, também participou do movimento em favor da reconstitucionalização.
-# sent_id = 6
 1-2	No	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	3	case	_	_
 2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
-3	Rio	Rio	PROPN	_	Gender=Masc|Number=Sing	22	obl	_	_
+3	Rio	Rio	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	22	obl	_	_
 4	Grande	Grande	PROPN	_	Number=Sing	3	flat:name	_	_
 5-6	do	_	_	_	_	_	_	_	_
 5	de	de	ADP	_	_	7	case	_	_
@@ -200,11 +192,11 @@
 7	Sul	Sul	PROPN	_	Number=Sing	3	nmod	_	SpaceAfter=No
 8	,	,	PUNCT	_	_	3	punct	_	_
 9	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	10	det	_	_
-10	Frente	Frente	PROPN	_	Gender=Fem|Number=Sing	22	nsubj	_	_
-11	Única	única	PROPN	_	Gender=Fem|Number=Sing	10	flat:name	_	_
+10	Frente	Frente	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	22	nsubj	_	_
+11	Única	Única	PROPN	_	Number=Sing	10	flat:name	_	_
 12	Gaúcha	Gaúcha	PROPN	_	Number=Sing	10	flat:name	_	_
 13	(	(	PUNCT	_	_	14	punct	_	SpaceAfter=No
-14	FUG	FUG	PROPN	_	Gender=Masc|Number=Sing	10	appos	_	SpaceAfter=No
+14	FUG	FUG	PROPN	_	Gender=Fem|Number=Sing	10	appos	_	SpaceAfter=No
 15	)	)	PUNCT	_	_	14	punct	_	SpaceAfter=No
 16	,	,	PUNCT	_	_	17	punct	_	_
 17	fundada	fundar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	10	acl	_	_
@@ -216,28 +208,27 @@
 23-24	do	_	_	_	_	_	_	_	_
 23	de	de	ADP	_	_	25	case	_	_
 24	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	25	det	_	_
-25	movimento	movimento	NOUN	_	Gender=Masc|Number=Sing	22	obl	_	_
-26	em	em	ADP	_	_	27	case	_	_
-27	favor	favor	NOUN	_	_	22	obl	_	_
+25	movimento	movimento	NOUN	_	Gender=Masc|Number=Sing	22	obj	_	_
+26	em	em	ADP	_	_	25	case	_	_
+27	favor	favor	NOUN	_	Gender=Masc|Number=Sing	26	fixed	_	_
 28-29	da	_	_	_	_	_	_	_	_
 28	de	de	ADP	_	_	30	case	_	_
 29	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	30	det	_	_
 30	reconstitucionalização	reconstitucionalização	NOUN	_	Gender=Fem|Number=Sing	27	nmod	_	SpaceAfter=No
-31	.	.	PUNCT	_	_	22	punct	_	_
+31	.	.	PUNCT	_	_	22	punct	_	SpacesAfter=\n
 
+# sent_id = 6
 # text = A primeira diretoria do Clube 24 de Fevereiro, escolhida no dia de sua fundação, era constituída pelo general Lauro Sodré, ex-constituinte em 1891, que ocupou a presidência;
-# sent_id = 7
-# newpar
 1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	3	det	_	_
 2	primeira	primeiro	ADJ	_	Gender=Fem|Number=Sing|NumType=Ord	3	amod	_	_
 3	diretoria	diretoria	NOUN	_	Gender=Fem|Number=Sing	20	nsubj:pass	_	_
 4-5	do	_	_	_	_	_	_	_	_
 4	de	de	ADP	_	_	6	case	_	_
 5	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	6	det	_	_
-6	Clube	Clube	PROPN	_	Gender=Masc|Number=Sing	3	nmod	_	_
+6	Clube	Clube	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	3	nmod	_	_
 7	24	24	PROPN	_	Number=Sing	6	flat:name	_	_
 8	de	de	ADP	_	_	9	case	_	_
-9	Fevereiro	fevereiro	NOUN	_	Gender=Masc|Number=Sing	6	nmod	_	SpaceAfter=No
+9	Fevereiro	Fevereiro	PROPN	_	Number=Sing	6	nmod	_	SpaceAfter=No
 10	,	,	PUNCT	_	_	11	punct	_	_
 11	escolhida	escolher	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	3	acl	_	_
 12-13	no	_	_	_	_	_	_	_	_
@@ -254,29 +245,29 @@
 21	por	por	ADP	_	_	23	case	_	_
 22	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	23	det	_	_
 23	general	general	NOUN	_	Gender=Masc|Number=Sing	20	obl:agent	_	_
-24	Lauro	Lauro	PROPN	_	Gender=Masc|Number=Sing	23	appos	_	_
+24	Lauro	Lauro	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	23	appos	_	_
 25	Sodré	Sodré	PROPN	_	Number=Sing	24	flat:name	_	SpaceAfter=No
-26	,	,	PUNCT	_	_	20	punct	_	_
-27	ex-constituinte	ex-constituinte	NUM	_	Gender=Fem|Number=Sing	23	appos	_	_
+26	,	,	PUNCT	_	_	27	punct	_	_
+27	ex-constituinte	ex-constituinte	NOUN	_	Gender=Masc|Number=Sing	23	amod	_	_
 28	em	em	ADP	_	_	29	case	_	_
-29	1891	1891	NUM	_	NumType=Card	27	nmod	_	SpaceAfter=No
-30	,	,	PUNCT	_	_	29	punct	_	_
+29	1891	1891	NUM	_	NumType=Card	27	obl	_	SpaceAfter=No
+30	,	,	PUNCT	_	_	27	punct	_	_
 31	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	32	nsubj	_	_
-32	ocupou	ocupar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	29	acl:relcl	_	_
+32	ocupou	ocupar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	23	acl:relcl	_	_
 33	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	34	det	_	_
 34	presidência	presidência	NOUN	_	Gender=Fem|Number=Sing	32	obj	_	SpaceAfter=No
-35	;	;	PUNCT	_	_	29	punct	_	_
+35	;	;	PUNCT	_	_	20	punct	_	_
 
+# sent_id = 7
 # text = Paulo Lacerda e Nestor Massena, indicados respectivamente para a vice-presidência e para a secretaria geral, e os tenentes Adacto Pereira de Melo e Luís Albernaz (este último da Marinha), eleito primeiro e segundo-secretários, respectivamente.
-# sent_id = 8
-1	Paulo	Paulo	PROPN	_	Gender=Masc|Number=Sing	0	root	_	_
+1	Paulo	Paulo	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	0	root	_	_
 2	Lacerda	Lacerda	PROPN	_	Number=Sing	1	flat:name	_	_
 3	e	e	CCONJ	_	_	4	cc	_	_
-4	Nestor	Nestor	PROPN	_	Gender=Masc|Number=Sing	1	conj	_	_
+4	Nestor	Nestor	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	1	conj	_	_
 5	Massena	Massena	PROPN	_	Number=Sing	4	flat:name	_	SpaceAfter=No
 6	,	,	PUNCT	_	_	7	punct	_	_
-7	indicados	indicar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part	1	conj	_	_
-8	respectivamente	respectivamente	ADV	_	_	11	advmod	_	_
+7	indicados	indicar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part	1	acl	_	_
+8	respectivamente	respectivamente	ADV	_	_	7	advmod	_	_
 9	para	para	ADP	_	_	11	case	_	_
 10	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	11	det	_	_
 11	vice-presidência	vice-presidência	NOUN	_	Gender=Fem|Number=Sing	7	obl	_	_
@@ -285,16 +276,16 @@
 14	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	15	det	_	_
 15	secretaria	secretaria	NOUN	_	Gender=Fem|Number=Sing	11	conj	_	_
 16	geral	geral	ADJ	_	Gender=Fem|Number=Sing	15	amod	_	SpaceAfter=No
-17	,	,	PUNCT	_	_	7	punct	_	_
+17	,	,	PUNCT	_	_	20	punct	_	_
 18	e	e	CCONJ	_	_	20	cc	_	_
 19	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	20	det	_	_
 20	tenentes	tenente	NOUN	_	Gender=Masc|Number=Plur	1	conj	_	_
-21	Adacto	Adacto	PROPN	_	Gender=Masc|Number=Sing	20	appos	_	_
+21	Adacto	Adacto	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	20	appos	_	_
 22	Pereira	Pereira	PROPN	_	Number=Sing	21	flat:name	_	_
 23	de	de	ADP	_	_	24	case	_	_
 24	Melo	Melo	PROPN	_	Number=Sing	21	nmod	_	_
 25	e	e	CCONJ	_	_	26	cc	_	_
-26	Luís	Luís	PROPN	_	Gender=Masc|Number=Sing	21	conj	_	_
+26	Luís	Luís	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	21	conj	_	_
 27	Albernaz	Albernaz	PROPN	_	Number=Sing	26	flat:name	_	_
 28	(	(	PUNCT	_	_	30	punct	_	SpaceAfter=No
 29	este	este	DET	_	Gender=Masc|Number=Sing|PronType=Dem	30	det	_	_
@@ -305,26 +296,26 @@
 33	Marinha	Marinha	PROPN	_	Gender=Fem|Number=Sing	30	obl	_	SpaceAfter=No
 34	)	)	PUNCT	_	_	30	punct	_	SpaceAfter=No
 35	,	,	PUNCT	_	_	36	punct	_	_
-36	eleito	eleger	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	1	acl	_	_
-37	primeiro	primeiro	ADJ	_	Gender=Masc|Number=Sing|NumType=Ord	36	amod	_	_
+36	eleito	eleger	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	21	acl	_	_
+37	primeiro	primeiro	ADJ	_	Gender=Masc|Number=Sing|NumType=Ord	36	xcomp	_	_
 38	e	e	CCONJ	_	_	39	cc	_	_
-39	segundo-secretários	segundo-secretário	ADJ	_	Gender=Masc|Number=Plur	37	conj	_	SpaceAfter=No
+39	segundo-secretários	segundo-secretário	NOUN	_	Gender=Masc|Number=Plur	37	conj	_	SpaceAfter=No
 40	,	,	PUNCT	_	_	36	punct	_	_
 41	respectivamente	respectivamente	ADV	_	_	36	advmod	_	SpaceAfter=No
 42	.	.	PUNCT	_	_	1	punct	_	_
 
+# sent_id = 8
 # text = Luís Ferreira Guimarães e A. B. Machado Florence foram designados para as diretorias de serviços internos e de serviços externos.
-# sent_id = 9
-1	Luís	Luís	PROPN	_	Gender=Masc|Number=Sing	10	nsubj	_	_
+1	Luís	Luís	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	10	nsubj:pass	_	_
 2	Ferreira	Ferreira	PROPN	_	Number=Sing	1	flat:name	_	_
 3	Guimarães	Guimarães	PROPN	_	Number=Sing	1	flat:name	_	_
 4	e	e	CCONJ	_	_	5	cc	_	_
-5	A.	A.	PROPN	_	Gender=Masc|Number=Sing	1	conj	_	_
+5	A.	A.	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	1	conj	_	_
 6	B.	B.	PROPN	_	Number=Sing	5	flat:name	_	_
 7	Machado	Machado	PROPN	_	Number=Sing	5	flat:name	_	_
 8	Florence	Florence	PROPN	_	Number=Sing	5	flat:name	_	_
-9	foram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|VerbForm=Fin	10	aux	_	_
-10	designados	designar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part	0	root	_	_
+9	foram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|VerbForm=Fin	10	aux:pass	_	_
+10	designados	designar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	0	root	_	_
 11	para	para	ADP	_	_	13	case	_	_
 12	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	13	det	_	_
 13	diretorias	diretoria	NOUN	_	Gender=Fem|Number=Plur	10	obl	_	_
@@ -337,8 +328,8 @@
 20	externos	externo	ADJ	_	Gender=Masc|Number=Plur	19	amod	_	SpaceAfter=No
 21	.	.	PUNCT	_	_	10	punct	_	_
 
+# sent_id = 9
 # text = Entre os membros do clube figuravam o tenente Agildo Barata e José Eduardo de Macedo Soares, proprietário do «Diário Carioca».
-# sent_id = 10
 1	Entre	entre	ADP	_	_	3	case	_	_
 2	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	3	det	_	_
 3	membros	membro	NOUN	_	Gender=Masc|Number=Plur	7	obl	_	_
@@ -349,13 +340,13 @@
 7	figuravam	figurar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	0	root	_	_
 8	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	9	det	_	_
 9	tenente	tenente	NOUN	_	Gender=Masc|Number=Sing	7	nsubj	_	_
-10	Agildo	Agildo	PROPN	_	Gender=Masc|Number=Sing	9	appos	_	_
-11	Barata	barata	PROPN	_	Number=Sing	10	flat:name	_	_
+10	Agildo	Agildo	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	9	appos	_	_
+11	Barata	Barata	PROPN	_	Number=Sing	10	flat:name	_	_
 12	e	e	CCONJ	_	_	13	cc	_	_
-13	José	José	PROPN	_	Gender=Masc|Number=Sing	9	conj	_	_
+13	José	José	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	9	conj	_	_
 14	Eduardo	Eduardo	PROPN	_	Number=Sing	13	flat:name	_	_
 15	de	de	ADP	_	_	16	case	_	_
-16	Macedo	Macedo	PROPN	_	Number=Sing	13	nmod	_	_
+16	Macedo	Macedo	PROPN	_	ExtPos=PROPN|Number=Sing	13	nmod	_	_
 17	Soares	Soares	PROPN	_	Number=Sing	16	flat:name	_	SpaceAfter=No
 18	,	,	PUNCT	_	_	19	punct	_	_
 19	proprietário	proprietário	NOUN	_	Gender=Masc|Number=Sing	13	appos	_	_
@@ -363,22 +354,21 @@
 20	de	de	ADP	_	_	23	case	_	_
 21	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	23	det	_	_
 22	«	«	PUNCT	_	_	23	punct	_	SpaceAfter=No
-23	Diário	Diário	PROPN	_	Gender=Masc|Number=Sing	19	nmod	_	_
-24	Carioca	carioca	PROPN	_	Gender=Masc|Number=Sing	23	flat:name	_	SpaceAfter=No
+23	Diário	Diário	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	19	nmod	_	_
+24	Carioca	Carioca	PROPN	_	Number=Sing	23	flat:name	_	SpaceAfter=No
 25	»	»	PUNCT	_	_	23	punct	_	SpaceAfter=No
-26	.	.	PUNCT	_	_	7	punct	_	_
+26	.	.	PUNCT	_	_	7	punct	_	SpacesAfter=\n
 
+# sent_id = 10
 # text = Durante a reunião de fundação, foram redigidos telegramas para todos os líderes políticos que se haviam pronunciado a favor da convocação de uma assembléia constituinte.
-# sent_id = 11
-# newpar
 1	Durante	durante	ADP	_	_	3	case	_	_
 2	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	3	det	_	_
 3	reunião	reunião	NOUN	_	Gender=Fem|Number=Sing	8	obl	_	_
 4	de	de	ADP	_	_	5	case	_	_
 5	fundação	fundação	NOUN	_	Gender=Fem|Number=Sing	3	nmod	_	SpaceAfter=No
 6	,	,	PUNCT	_	_	3	punct	_	_
-7	foram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	8	aux:pass	_	_
-8	redigidos	rediger	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	0	root	_	_
+7	foram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|VerbForm=Fin	8	aux:pass	_	_
+8	redigidos	redigir	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	0	root	_	_
 9	telegramas	telegrama	NOUN	_	Gender=Masc|Number=Plur	8	nsubj:pass	_	_
 10	para	para	ADP	_	_	13	case	_	_
 11	todos	todo	DET	_	Gender=Masc|Number=Plur|PronType=Tot	13	det	_	_
@@ -389,7 +379,7 @@
 16	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Plur|Person=3|PronType=Prs	18	expl	_	_
 17	haviam	haver	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	18	aux	_	_
 18	pronunciado	pronunciar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	13	acl:relcl	_	_
-19	a	a	ADP	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	20	case	_	_
+19	a	a	ADP	_	_	20	case	_	_
 20	favor	favor	NOUN	_	Gender=Masc|Number=Sing	18	obl	_	_
 21-22	da	_	_	_	_	_	_	_	_
 21	de	de	ADP	_	_	23	case	_	_
@@ -401,31 +391,31 @@
 27	constituinte	constituinte	ADJ	_	Gender=Fem|Number=Sing	26	amod	_	SpaceAfter=No
 28	.	.	PUNCT	_	_	8	punct	_	_
 
+# sent_id = 11
 # text = Foi também programado um grande comício nas escadarias do Teatro Municipal para o dia 24 de fevereiro, a exemplo da manifestação pública que se realizaria na praça da Sé, em São Paulo, na mesma data, promovida pela Liga Paulista Pró-Constituinte.
-# sent_id = 12
-1	Foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	cop	_	_
+1	Foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	aux:pass	_	_
 2	também	também	ADV	_	_	3	advmod	_	_
-3	programado	programar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	0	root	_	_
+3	programado	programar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
 4	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	6	det	_	_
 5	grande	grande	ADJ	_	Gender=Masc|Number=Sing	6	amod	_	_
-6	comício	comício	NOUN	_	Gender=Masc|Number=Sing	3	nsubj	_	_
+6	comício	comício	NOUN	_	Gender=Masc|Number=Sing	3	nsubj:pass	_	_
 7-8	nas	_	_	_	_	_	_	_	_
 7	em	em	ADP	_	_	9	case	_	_
 8	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	9	det	_	_
-9	escadarias	escadaria	NOUN	_	Gender=Fem|Number=Plur	6	nmod	_	_
+9	escadarias	escadaria	NOUN	_	Gender=Fem|Number=Plur	3	obl	_	_
 10-11	do	_	_	_	_	_	_	_	_
 10	de	de	ADP	_	_	12	case	_	_
 11	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	12	det	_	_
-12	Teatro	teatro	NOUN	_	Gender=Masc|Number=Sing	9	nmod	_	_
-13	Municipal	Municipal	ADJ	_	Number=Sing	12	compound	_	_
+12	Teatro	Teatro	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	9	nmod	_	_
+13	Municipal	Municipal	PROPN	_	Number=Sing	12	flat:name	_	_
 14	para	para	ADP	_	_	16	case	_	_
 15	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	16	det	_	_
-16	dia	dia	NOUN	_	Gender=Masc|Number=Sing	3	obl	_	_
+16	dia	dia	NOUN	_	Gender=Masc|Number=Sing	9	nmod	_	_
 17	24	24	NUM	_	NumType=Card	16	nummod	_	_
 18	de	de	ADP	_	_	19	case	_	_
-19	fevereiro	fevereiro	NOUN	_	Gender=Masc|Number=Sing	16	nmod:tmod	_	SpaceAfter=No
-20	,	,	PUNCT	_	_	3	punct	_	_
-21	a	o	ADP	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	22	case	_	_
+19	fevereiro	fevereiro	NOUN	_	Gender=Masc|Number=Sing	16	nmod	_	SpaceAfter=No
+20	,	,	PUNCT	_	_	22	punct	_	_
+21	a	a	ADP	_	_	22	case	_	_
 22	exemplo	exemplo	NOUN	_	Gender=Masc|Number=Sing	3	obl	_	_
 23-24	da	_	_	_	_	_	_	_	_
 23	de	de	ADP	_	_	25	case	_	_
@@ -442,48 +432,47 @@
 33-34	da	_	_	_	_	_	_	_	_
 33	de	de	ADP	_	_	35	case	_	_
 34	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	35	det	_	_
-35	Sé	Sé	PROPN	_	Number=Sing	32	nmod	_	SpaceAfter=No
-36	,	,	PUNCT	_	_	29	punct	_	_
+35	Sé	Sé	PROPN	_	Gender=Fem|Number=Sing	32	nmod	_	SpaceAfter=No
+36	,	,	PUNCT	_	_	38	punct	_	_
 37	em	em	ADP	_	_	38	case	_	_
-38	São	São	PROPN	_	Gender=Masc|Number=Sing	29	obl	_	_
+38	São	São	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	32	nmod	_	_
 39	Paulo	Paulo	PROPN	_	Number=Sing	38	flat:name	_	SpaceAfter=No
-40	,	,	PUNCT	_	_	29	punct	_	_
+40	,	,	PUNCT	_	_	38	punct	_	_
 41-42	na	_	_	_	_	_	_	_	_
 41	em	em	ADP	_	_	44	case	_	_
 42	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	44	det	_	_
 43	mesma	mesmo	ADJ	_	Gender=Fem|Number=Sing	44	amod	_	_
 44	data	data	NOUN	_	Gender=Fem|Number=Sing	29	obl	_	SpaceAfter=No
 45	,	,	PUNCT	_	_	46	punct	_	_
-46	promovida	promover	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	29	dep	_	_
+46	promovida	promover	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	44	acl	_	_
 47-48	pela	_	_	_	_	_	_	_	_
 47	por	por	ADP	_	_	49	case	_	_
 48	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	49	det	_	_
-49	Liga	Liga	PROPN	_	Gender=Fem|Number=Sing	46	obl:agent	_	_
+49	Liga	Liga	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	46	obl:agent	_	_
 50	Paulista	Paulista	PROPN	_	Number=Sing	49	flat:name	_	_
 51	Pró-Constituinte	Pró-Constituinte	PROPN	_	Number=Sing	49	flat:name	_	SpaceAfter=No
-52	.	.	PUNCT	_	_	3	punct	_	_
+52	.	.	PUNCT	_	_	3	punct	_	SpacesAfter=\n
 
+# sent_id = 12
 # text = Temendo que ocorressem violências, o ministro da Marinha, almirante Protógenes Guimarães, procurou Lauro Sodré, pedindo-lhe que cancelasse o comício, pois fora informado de que membros do Clube 3 de Outubro, organização tenentista contrária à volta ao regime constitucional, estavam pensando em intervir na manifestação.
-# sent_id = 13
-# newpar
-1	Temendo	Temer	VERB	_	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	_	_
+1	Temendo	temer	VERB	_	VerbForm=Ger	16	advcl	_	_
 2	que	que	SCONJ	_	_	3	mark	_	_
 3	ocorressem	ocorrer	VERB	_	Mood=Sub|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	1	ccomp	_	_
-4	violências	violência	NOUN	_	Gender=Fem|Number=Plur	3	obj	_	SpaceAfter=No
-5	,	,	PUNCT	_	_	3	punct	_	_
+4	violências	violência	NOUN	_	Gender=Fem|Number=Plur	3	nsubj	_	SpaceAfter=No
+5	,	,	PUNCT	_	_	1	punct	_	_
 6	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	7	det	_	_
 7	ministro	ministro	NOUN	_	Gender=Masc|Number=Sing	16	nsubj	_	_
 8-9	da	_	_	_	_	_	_	_	_
 8	de	de	ADP	_	_	10	case	_	_
 9	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	10	det	_	_
-10	Marinha	Marinha	PROPN	_	Gender=Fem|Number=Sing	7	nmod	_	SpaceAfter=No
-11	,	,	PUNCT	_	_	13	punct	_	_
-12	almirante	almirante	DET	_	Gender=Masc|Number=Sing	13	det	_	_
-13	Protógenes	Protógenes	PROPN	_	Gender=Masc|Number=Sing	7	appos	_	_
+10	Marinha	marinha	NOUN	_	Gender=Fem|Number=Sing	7	nmod	_	SpaceAfter=No
+11	,	,	PUNCT	_	_	12	punct	_	_
+12	almirante	almirante	NOUN	_	Gender=Masc|Number=Sing	7	appos	_	_
+13	Protógenes	Protógenes	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	12	appos	_	_
 14	Guimarães	Guimarães	PROPN	_	Number=Sing	13	flat:name	_	SpaceAfter=No
-15	,	,	PUNCT	_	_	13	punct	_	_
-16	procurou	procurar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	xcomp	_	_
-17	Lauro	Lauro	PROPN	_	Gender=Masc|Number=Sing	16	obj	_	_
+15	,	,	PUNCT	_	_	12	punct	_	_
+16	procurou	procurar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+17	Lauro	Lauro	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	16	obj	_	_
 18	Sodré	Sodré	PROPN	_	Number=Sing	17	flat:name	_	SpaceAfter=No
 19	,	,	PUNCT	_	_	20	punct	_	_
 20-21	pedindo-lhe	_	_	_	_	_	_	_	_
@@ -494,19 +483,19 @@
 24	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	25	det	_	_
 25	comício	comício	NOUN	_	Gender=Masc|Number=Sing	23	obj	_	SpaceAfter=No
 26	,	,	PUNCT	_	_	23	punct	_	_
-27	pois	pois	SCONJ	_	_	29	advmod	_	_
-28	fora	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pqp|VerbForm=Fin	29	aux	_	_
-29	informado	informar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	20	advcl	_	_
-30	de	de	ADP	_	_	52	mark	_	_
+27	pois	pois	SCONJ	_	_	29	mark	_	_
+28	fora	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pqp|VerbForm=Fin	29	aux:pass	_	_
+29	informado	informar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	16	advcl	_	_
+30	de	de	SCONJ	_	_	52	mark	_	_
 31	que	que	SCONJ	_	_	52	mark	_	_
 32	membros	membro	NOUN	_	Gender=Masc|Number=Plur	52	nsubj	_	_
 33-34	do	_	_	_	_	_	_	_	_
 33	de	de	ADP	_	_	35	case	_	_
 34	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	35	det	_	_
-35	Clube	Clube	PROPN	_	Gender=Masc|Number=Sing	32	nmod	_	_
-36	3	3	NUM	_	NumType=Card	35	nummod	_	_
+35	Clube	Clube	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	32	nmod	_	_
+36	3	3	PROPN	_	Number=Sing	35	flat:name	_	_
 37	de	de	ADP	_	_	38	case	_	_
-38	Outubro	outubro	NOUN	_	Gender=Masc|Number=Sing	36	nmod:tmod	_	SpaceAfter=No
+38	Outubro	Outubro	PROPN	_	Number=Sing	35	nmod	_	SpaceAfter=No
 39	,	,	PUNCT	_	_	40	punct	_	_
 40	organização	organização	NOUN	_	Gender=Fem|Number=Sing	35	appos	_	_
 41	tenentista	tenentista	ADJ	_	Gender=Fem|Number=Sing	40	amod	_	_
@@ -514,7 +503,7 @@
 43-44	à	_	_	_	_	_	_	_	_
 43	a	a	ADP	_	_	45	case	_	_
 44	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	45	det	_	_
-45	volta	volta	NOUN	_	Gender=Fem|Number=Sing	40	nmod	_	_
+45	volta	volta	NOUN	_	Gender=Fem|Number=Sing	42	obl	_	_
 46-47	ao	_	_	_	_	_	_	_	_
 46	a	a	ADP	_	_	48	case	_	_
 47	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	48	det	_	_
@@ -522,17 +511,17 @@
 49	constitucional	constitucional	ADJ	_	Gender=Masc|Number=Sing	48	amod	_	SpaceAfter=No
 50	,	,	PUNCT	_	_	40	punct	_	_
 51	estavam	estar	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	52	aux	_	_
-52	pensando	pensar	VERB	_	VerbForm=Ger	29	advcl	_	_
-53	em	em	ADP	_	_	54	mark	_	_
+52	pensando	pensar	VERB	_	VerbForm=Ger	29	ccomp	_	_
+53	em	em	SCONJ	_	_	54	mark	_	_
 54	intervir	intervir	VERB	_	VerbForm=Inf	52	xcomp	_	_
 55-56	na	_	_	_	_	_	_	_	_
 55	em	em	ADP	_	_	57	case	_	_
 56	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	57	det	_	_
-57	manifestação	manifestação	NOUN	_	Gender=Fem|Number=Sing	54	obl	_	SpaceAfter=No
-58	.	.	PUNCT	_	_	1	punct	_	_
+57	manifestação	manifestação	NOUN	_	Gender=Fem|Number=Sing	54	obj	_	SpaceAfter=No
+58	.	.	PUNCT	_	_	16	punct	_	_
 
+# sent_id = 13
 # text = A diretoria do clube atendeu à solicitação, e em lugar do grande comício foram realizados comícios-relâmpago sob o comando de Luís Guimarães, Machado Florence e outros.
-# sent_id = 14
 1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
 2	diretoria	diretoria	NOUN	_	Gender=Fem|Number=Sing	6	nsubj	_	_
 3-4	do	_	_	_	_	_	_	_	_
@@ -543,7 +532,7 @@
 7-8	à	_	_	_	_	_	_	_	_
 7	a	a	ADP	_	_	9	case	_	_
 8	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	9	det	_	_
-9	solicitação	solicitação	NOUN	_	Gender=Fem|Number=Sing	6	obl	_	SpaceAfter=No
+9	solicitação	solicitação	NOUN	_	Gender=Fem|Number=Sing	6	obj	_	SpaceAfter=No
 10	,	,	PUNCT	_	_	19	punct	_	_
 11	e	e	CCONJ	_	_	19	cc	_	_
 12	em	em	ADP	_	_	13	case	_	_
@@ -553,26 +542,26 @@
 15	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	17	det	_	_
 16	grande	grande	ADJ	_	Gender=Masc|Number=Sing	17	amod	_	_
 17	comício	comício	NOUN	_	Gender=Masc|Number=Sing	13	nmod	_	_
-18	foram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	19	aux:pass	_	_
+18	foram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|VerbForm=Fin	19	aux:pass	_	_
 19	realizados	realizar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	6	conj	_	_
 20	comícios-relâmpago	comícios-relâmpago	NOUN	_	Gender=Masc|Number=Sing	19	nsubj:pass	_	_
 21	sob	sob	ADP	_	_	23	case	_	_
 22	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	23	det	_	_
-23	comando	comando	NOUN	_	Gender=Masc|Number=Sing	20	nmod	_	_
+23	comando	comando	NOUN	_	Gender=Masc|Number=Sing	19	obl	_	_
 24	de	de	ADP	_	_	25	case	_	_
-25	Luís	Luís	PROPN	_	Gender=Masc|Number=Sing	23	nmod	_	_
+25	Luís	Luís	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	23	nmod	_	_
 26	Guimarães	Guimarães	PROPN	_	Number=Sing	25	flat:name	_	SpaceAfter=No
-27	,	,	PUNCT	_	_	23	punct	_	_
-28	Machado	Machado	PROPN	_	Number=Sing	25	flat:name	_	_
-29	Florence	Florence	PROPN	_	Number=Sing	25	flat:name	_	_
+27	,	,	PUNCT	_	_	28	punct	_	_
+28	Machado	Machado	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	25	conj	_	_
+29	Florence	Florence	PROPN	_	Number=Sing	28	flat:name	_	_
 30	e	e	CCONJ	_	_	31	cc	_	_
 31	outros	outro	PRON	_	Gender=Masc|Number=Plur|PronType=Ind	25	conj	_	SpaceAfter=No
 32	.	.	PUNCT	_	_	6	punct	_	_
 
+# sent_id = 14
 # text = A maior parte desses comícios foi dissolvida por agentes de polícia da 4ª Delegacia Auxiliar.
-# sent_id = 15
 1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	3	det	_	_
-2	maior	grande	ADJ	_	Gender=Fem|Number=Sing	3	amod	_	_
+2	maior	maior	ADJ	_	Gender=Fem|Number=Sing	3	amod	_	_
 3	parte	parte	NOUN	_	Gender=Fem|Number=Sing	8	nsubj:pass	_	_
 4-5	desses	_	_	_	_	_	_	_	_
 4	de	de	ADP	_	_	6	case	_	_
@@ -588,20 +577,19 @@
 13	de	de	ADP	_	_	16	case	_	_
 14	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	16	det	_	_
 15	4ª	4ª	ADJ	_	Gender=Fem|Number=Sing|NumType=Ord	16	amod	_	_
-16	Delegacia	delegacia	PROPN	_	Gender=Fem|Number=Sing	12	nmod	_	_
-17	Auxiliar	auxiliar	PROPN	_	Gender=Fem|Number=Sing	16	appos	_	SpaceAfter=No
-18	.	.	PUNCT	_	_	8	punct	_	_
+16	Delegacia	Delegacia	PROPN	_	Gender=Fem|Number=Sing	10	nmod	_	_
+17	Auxiliar	Auxiliar	PROPN	_	Number=Sing	16	flat:name	_	SpaceAfter=No
+18	.	.	PUNCT	_	_	8	punct	_	SpacesAfter=\n
 
+# sent_id = 15
 # text = As medidas punitivas contra o clube se acentuaram no final de fevereiro, quando o capitão Floriano Keller e o tenente Adacto Pereira de Melo foram impedidos de se matricular na Escola de Estado-Maior.
-# sent_id = 16
-# newpar
 1	As	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	2	det	_	_
 2	medidas	medida	NOUN	_	Gender=Fem|Number=Plur	8	nsubj	_	_
 3	punitivas	punitivo	ADJ	_	Gender=Fem|Number=Plur	2	amod	_	_
 4	contra	contra	ADP	_	_	6	case	_	_
 5	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	6	det	_	_
 6	clube	clube	NOUN	_	Gender=Masc|Number=Sing	2	nmod	_	_
-7	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	8	expl	_	_
+7	se	se	PRON	_	Case=Acc|Gender=Fem|Number=Plur|Person=3|PronType=Prs	8	expl	_	_
 8	acentuaram	acentuar	VERB	_	Mood=Ind|Number=Plur|Person=3|VerbForm=Fin	0	root	_	_
 9-10	no	_	_	_	_	_	_	_	_
 9	em	em	ADP	_	_	11	case	_	_
@@ -613,18 +601,18 @@
 15	quando	quando	ADV	_	_	28	advmod	_	_
 16	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	17	det	_	_
 17	capitão	capitão	NOUN	_	Gender=Masc|Number=Sing	28	nsubj:pass	_	_
-18	Floriano	Floriano	PROPN	_	Gender=Masc|Number=Sing	17	appos	_	_
-19	Keller	Keller	PROPN	_	Gender=Masc|Number=Sing	17	appos	_	_
+18	Floriano	Floriano	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	17	appos	_	_
+19	Keller	Keller	PROPN	_	Number=Sing	18	flat:name	_	_
 20	e	e	CCONJ	_	_	22	cc	_	_
 21	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	22	det	_	_
-22	tenente	tenente	NOUN	_	Gender=Masc|Number=Sing	19	conj	_	_
-23	Adacto	Adacto	PROPN	_	Gender=Masc|Number=Sing	22	appos	_	_
+22	tenente	tenente	NOUN	_	Gender=Masc|Number=Sing	17	conj	_	_
+23	Adacto	Adacto	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	22	appos	_	_
 24	Pereira	Pereira	PROPN	_	Number=Sing	23	flat:name	_	_
 25	de	de	ADP	_	_	26	case	_	_
 26	Melo	Melo	PROPN	_	Number=Sing	23	nmod	_	_
-27	foram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|VerbForm=Fin	28	aux:pass	_	_
+27	foram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	28	aux:pass	_	_
 28	impedidos	impedir	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	8	advcl	_	_
-29	de	de	ADP	_	_	31	mark	_	_
+29	de	de	SCONJ	_	_	31	mark	_	_
 30	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	31	expl	_	_
 31	matricular	matricular	VERB	_	VerbForm=Inf	28	xcomp	_	_
 32-33	na	_	_	_	_	_	_	_	_
@@ -632,20 +620,20 @@
 33	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	34	det	_	_
 34	Escola	Escola	PROPN	_	Gender=Fem|Number=Sing	31	obl	_	_
 35	de	de	ADP	_	_	36	case	_	_
-36	Estado-Maior	Estado-Maior	PROPN	_	Gender=Masc|Number=Sing	34	nmod	_	SpaceAfter=No
+36	Estado-Maior	Estado-maior	PROPN	_	Number=Sing	34	nmod	_	SpaceAfter=No
 37	.	.	PUNCT	_	_	8	punct	_	_
 
+# sent_id = 16
 # text = Esses dois oficiais e o tenente Flodoaldo Maia, que também era integrante do clube, foram transferidos do Rio, sendo deslocados para guarnições distantes.
-# sent_id = 17
 1	Esses	esse	DET	_	Gender=Masc|Number=Plur|PronType=Dem	3	det	_	_
 2	dois	dois	NUM	_	NumType=Card	3	nummod	_	_
 3	oficiais	oficial	NOUN	_	Gender=Masc|Number=Plur	19	nsubj:pass	_	_
 4	e	e	CCONJ	_	_	6	cc	_	_
 5	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	6	det	_	_
 6	tenente	tenente	NOUN	_	Gender=Masc|Number=Sing	3	conj	_	_
-7	Flodoaldo	Flodoaldo	PROPN	_	Gender=Masc|Number=Sing	6	appos	_	_
+7	Flodoaldo	Flodoaldo	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	6	appos	_	_
 8	Maia	Maia	PROPN	_	Number=Sing	7	flat:name	_	SpaceAfter=No
-9	,	,	PUNCT	_	_	7	punct	_	_
+9	,	,	PUNCT	_	_	13	punct	_	_
 10	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	13	nsubj	_	_
 11	também	também	ADV	_	_	13	advmod	_	_
 12	era	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	13	cop	_	_
@@ -655,7 +643,7 @@
 15	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	16	det	_	_
 16	clube	clube	NOUN	_	Gender=Masc|Number=Sing	13	obl	_	SpaceAfter=No
 17	,	,	PUNCT	_	_	13	punct	_	_
-18	foram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	19	aux:pass	_	_
+18	foram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|VerbForm=Fin	19	aux:pass	_	_
 19	transferidos	transferir	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	0	root	_	_
 20-21	do	_	_	_	_	_	_	_	_
 20	de	de	ADP	_	_	22	case	_	_
@@ -665,13 +653,12 @@
 24	sendo	ser	AUX	_	VerbForm=Ger	25	aux:pass	_	_
 25	deslocados	deslocar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	19	advcl	_	_
 26	para	para	ADP	_	_	27	case	_	_
-27	guarnições	guarnições	NOUN	_	Gender=Fem|Number=Plur	25	obl	_	_
+27	guarnições	guarnição	NOUN	_	Gender=Fem|Number=Plur	25	obl	_	_
 28	distantes	distante	ADJ	_	Gender=Fem|Number=Plur	27	amod	_	SpaceAfter=No
-29	.	.	PUNCT	_	_	19	punct	_	_
+29	.	.	PUNCT	_	_	19	punct	_	SpacesAfter=\n
 
-# text = De passagem por Santos, o capitão Keller — com destino a Castro, no Paraná — e o tenente Maia — com destino a Cruz Alta, noRio Grande do Sul — foram recepcionados por uma comissão da Liga Paulista Pró-Constituinte, um dos grupos articulares da Revolução Constitucionalista de 1932.
-# sent_id = 18
-# newpar
+# sent_id = 17
+# text = De passagem por Santos, o capitão Keller - com destino a Castro, no Paraná - e o tenente Maia - com destino a Cruz Alta, noRio Grande do Sul - foram recepcionados por uma comissão da Liga Paulista Pró-Constituinte, um dos grupos articulares da Revolução Constitucionalista de 1932.
 1	De	de	ADP	_	_	2	case	_	_
 2	passagem	passagem	NOUN	_	Gender=Fem|Number=Sing	37	obl	_	_
 3	por	por	ADP	_	_	4	case	_	_
@@ -680,35 +667,35 @@
 6	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	7	det	_	_
 7	capitão	capitão	NOUN	_	Gender=Masc|Number=Sing	37	nsubj:pass	_	_
 8	Keller	Keller	PROPN	_	Gender=Masc|Number=Sing	7	appos	_	_
-9	—	—	PUNCT	_	_	11	punct	_	_
+9	-	-	PUNCT	_	_	11	punct	_	_
 10	com	com	ADP	_	_	11	case	_	_
 11	destino	destino	NOUN	_	Gender=Masc|Number=Sing	7	nmod	_	_
 12	a	a	ADP	_	_	13	case	_	_
 13	Castro	Castro	PROPN	_	Gender=Masc|Number=Sing	11	nmod	_	SpaceAfter=No
-14	,	,	PUNCT	_	_	11	punct	_	_
+14	,	,	PUNCT	_	_	17	punct	_	_
 15-16	no	_	_	_	_	_	_	_	_
 15	em	em	ADP	_	_	17	case	_	_
 16	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	17	det	_	_
-17	Paraná	Paraná	PROPN	_	Gender=Masc|Number=Sing	7	nmod	_	_
-18	—	—	PUNCT	_	_	21	punct	_	_
+17	Paraná	Paraná	PROPN	_	Gender=Masc|Number=Sing	11	nmod	_	_
+18	-	-	PUNCT	_	_	11	punct	_	_
 19	e	e	CCONJ	_	_	21	cc	_	_
 20	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	21	det	_	_
-21	tenente	tenente	NOUN	_	Gender=Masc|Number=Sing	17	conj	_	_
+21	tenente	tenente	NOUN	_	Gender=Masc|Number=Sing	7	conj	_	_
 22	Maia	Maia	PROPN	_	Gender=Masc|Number=Sing	21	appos	_	_
-23	—	—	PUNCT	_	_	25	punct	_	_
+23	-	-	PUNCT	_	_	25	punct	_	_
 24	com	com	ADP	_	_	25	case	_	_
 25	destino	destino	NOUN	_	Gender=Masc|Number=Sing	21	nmod	_	_
-26	a	o	ADP	_	_	27	case	_	_
-27	Cruz	Cruz	PROPN	_	Gender=Masc|Number=Sing	25	nmod	_	_
+26	a	a	ADP	_	_	27	case	_	_
+27	Cruz	Cruz	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	25	nmod	_	_
 28	Alta	Alta	PROPN	_	Number=Sing	27	flat:name	_	SpaceAfter=No
 29	,	,	PUNCT	_	_	30	punct	_	_
-30	noRio	noRio	PROPN	_	Gender=Masc|Number=Sing	27	appos	_	_
-31	Grande	Grande	PROPN	_	Number=Sing	30	flat:name	_	_
+30	noRio	norio	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	27	appos	_	_
+31	Grande	Grande	PROPN	_	Gender=Masc|Number=Sing	30	appos	_	_
 32-33	do	_	_	_	_	_	_	_	_
 32	de	de	ADP	_	_	34	case	_	_
 33	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	34	det	_	_
 34	Sul	Sul	PROPN	_	Number=Sing	30	nmod	_	_
-35	—	—	PUNCT	_	_	30	punct	_	_
+35	-	-	PUNCT	_	_	25	punct	_	_
 36	foram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	37	aux:pass	_	_
 37	recepcionados	recepcionar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	0	root	_	_
 38	por	por	ADP	_	_	40	case	_	_
@@ -717,7 +704,7 @@
 41-42	da	_	_	_	_	_	_	_	_
 41	de	de	ADP	_	_	43	case	_	_
 42	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	43	det	_	_
-43	Liga	Liga	PROPN	_	Gender=Fem|Number=Sing	40	nmod	_	_
+43	Liga	Liga	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	40	nmod	_	_
 44	Paulista	Paulista	PROPN	_	Number=Sing	43	flat:name	_	_
 45	Pró-Constituinte	Pró-Constituinte	PROPN	_	Number=Sing	43	flat:name	_	SpaceAfter=No
 46	,	,	PUNCT	_	_	47	punct	_	_
@@ -736,21 +723,21 @@
 57	1932	1932	NUM	_	NumType=Card	54	nmod	_	SpaceAfter=No
 58	.	.	PUNCT	_	_	37	punct	_	_
 
+# sent_id = 18
 # text = O tenente Melo, transferido para Cuiabá, permaneceu alguns dias em São Paulo, entrando em contato com membros do movimento constitucionalista.
-# sent_id = 19
 1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	_	_
 2	tenente	tenente	NOUN	_	Gender=Masc|Number=Sing	9	nsubj	_	_
 3	Melo	Melo	PROPN	_	Gender=Masc|Number=Sing	2	appos	_	SpaceAfter=No
 4	,	,	PUNCT	_	_	5	punct	_	_
 5	transferido	transferir	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	2	acl	_	_
 6	para	para	ADP	_	_	7	case	_	_
-7	Cuiabá	Cuiabá	PROPN	_	VerbForm=Inf	5	obl	_	SpaceAfter=No
+7	Cuiabá	Cuiabá	PROPN	_	Gender=Masc|Number=Sing	5	obl	_	SpaceAfter=No
 8	,	,	PUNCT	_	_	5	punct	_	_
 9	permaneceu	permanecer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 10	alguns	algum	DET	_	Gender=Masc|Number=Plur|PronType=Ind	11	det	_	_
 11	dias	dia	NOUN	_	Gender=Masc|Number=Plur	9	obl	_	_
 12	em	em	ADP	_	_	13	case	_	_
-13	São	São	PROPN	_	Gender=Masc|Number=Sing	9	obl	_	_
+13	São	São	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	9	obl	_	_
 14	Paulo	Paulo	PROPN	_	Number=Sing	13	flat:name	_	SpaceAfter=No
 15	,	,	PUNCT	_	_	16	punct	_	_
 16	entrando	entrar	VERB	_	VerbForm=Ger	9	advcl	_	_
@@ -765,14 +752,14 @@
 24	constitucionalista	constitucionalista	ADJ	_	Gender=Masc|Number=Sing	23	amod	_	SpaceAfter=No
 25	.	.	PUNCT	_	_	9	punct	_	_
 
+# sent_id = 19
 # text = A seguir, foi incumbido de fazer proselitismo nas guarnições de Mato Grosso e de imprimir maior eficiência às ligações entre estas guarnições e São Paulo.
-# sent_id = 20
-1	A	a	ADP	_	_	2	mark	_	_
+1	A	a	SCONJ	_	_	2	mark	_	_
 2	seguir	seguir	VERB	_	VerbForm=Inf	5	advcl	_	SpaceAfter=No
 3	,	,	PUNCT	_	_	2	punct	_	_
 4	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	aux:pass	_	_
-5	incumbido	incumber	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
-6	de	de	ADP	_	_	7	mark	_	_
+5	incumbido	incumbir	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
+6	de	de	SCONJ	_	_	7	mark	_	_
 7	fazer	fazer	VERB	_	VerbForm=Inf	5	xcomp	_	_
 8	proselitismo	proselitismo	NOUN	_	Gender=Masc|Number=Sing	7	obj	_	_
 9-10	nas	_	_	_	_	_	_	_	_
@@ -780,37 +767,36 @@
 10	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	11	det	_	_
 11	guarnições	guarnição	NOUN	_	Gender=Fem|Number=Plur	7	obl	_	_
 12	de	de	ADP	_	_	13	case	_	_
-13	Mato	Mato	PROPN	_	Gender=Masc|Number=Sing	11	nmod	_	_
+13	Mato	Mato	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	11	nmod	_	_
 14	Grosso	Grosso	PROPN	_	Number=Sing	13	flat:name	_	_
 15	e	e	CCONJ	_	_	17	cc	_	_
-16	de	de	ADP	_	_	17	mark	_	_
-17	imprimir	imprimir	VERB	_	VerbForm=Inf	13	conj	_	_
-18	maior	grande	ADJ	_	Gender=Fem|Number=Sing	19	amod	_	_
+16	de	de	SCONJ	_	_	17	mark	_	_
+17	imprimir	imprimir	VERB	_	VerbForm=Inf	7	conj	_	_
+18	maior	maior	ADJ	_	Gender=Fem|Number=Sing	19	amod	_	_
 19	eficiência	eficiência	NOUN	_	Gender=Fem|Number=Sing	17	obj	_	_
 20-21	às	_	_	_	_	_	_	_	_
 20	a	a	ADP	_	_	22	case	_	_
 21	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	22	det	_	_
-22	ligações	ligação	NOUN	_	Gender=Fem|Number=Plur	17	obl	_	_
+22	ligações	ligação	NOUN	_	Gender=Fem|Number=Plur	17	iobj	_	_
 23	entre	entre	ADP	_	_	25	case	_	_
 24	estas	este	DET	_	Gender=Fem|Number=Plur|PronType=Dem	25	det	_	_
 25	guarnições	guarnição	NOUN	_	Gender=Fem|Number=Plur	22	nmod	_	_
 26	e	e	CCONJ	_	_	27	cc	_	_
-27	São	São	PROPN	_	Gender=Masc|Number=Sing	25	conj	_	_
+27	São	São	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	25	conj	_	_
 28	Paulo	Paulo	PROPN	_	Number=Sing	27	flat:name	_	SpaceAfter=No
-29	.	.	PUNCT	_	_	5	punct	_	_
+29	.	.	PUNCT	_	_	5	punct	_	SpacesAfter=\n
 
+# sent_id = 20
 # text = A repressão ao Clube 24 de Fevereiro foi uma das causas do pedido de demissão, datado de 3 de março de 1932, do ministro do Trabalho Lindolfo Collor.
-# sent_id = 21
-# newpar
 1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
 2	repressão	repressão	NOUN	_	Gender=Fem|Number=Sing	10	nsubj	_	_
 3-4	ao	_	_	_	_	_	_	_	_
 3	a	a	ADP	_	_	5	case	_	_
 4	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	5	det	_	_
-5	Clube	Clube	PROPN	_	Gender=Masc|Number=Sing	2	nmod	_	_
-6	24	24	PROPN	_	NumType=Card	5	appos	_	_
+5	Clube	Clube	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	2	nmod	_	_
+6	24	24	PROPN	_	Number=Sing	5	flat:name	_	_
 7	de	de	ADP	_	_	8	case	_	_
-8	Fevereiro	fevereiro	NOUN	_	Gender=Masc|Number=Sing	6	nmod	_	_
+8	Fevereiro	Fevereiro	PROPN	_	Number=Sing	5	nmod	_	_
 9	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	10	cop	_	_
 10	uma	um	NUM	_	NumType=Card	0	root	_	_
 11-12	das	_	_	_	_	_	_	_	_
@@ -824,31 +810,31 @@
 17	de	de	ADP	_	_	18	case	_	_
 18	demissão	demissão	NOUN	_	Gender=Fem|Number=Sing	16	nmod	_	SpaceAfter=No
 19	,	,	PUNCT	_	_	20	punct	_	_
-20	datado	datar	VERB	_	Gender=Masc|Number=Sing	10	advcl	_	_
+20	datado	datar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	16	acl	_	_
 21	de	de	ADP	_	_	22	case	_	_
 22	3	3	NUM	_	NumType=Card	20	obl	_	_
 23	de	de	ADP	_	_	24	case	_	_
-24	março	março	NOUN	_	Gender=Masc|Number=Sing	22	nmod:tmod	_	_
+24	março	março	NOUN	_	Gender=Masc|Number=Sing	22	nmod	_	_
 25	de	de	ADP	_	_	26	case	_	_
 26	1932	1932	NUM	_	NumType=Card	24	nmod	_	SpaceAfter=No
 27	,	,	PUNCT	_	_	20	punct	_	_
 28-29	do	_	_	_	_	_	_	_	_
 28	de	de	ADP	_	_	30	case	_	_
 29	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	30	det	_	_
-30	ministro	ministro	NOUN	_	Gender=Masc|Number=Sing	20	obl	_	_
+30	ministro	ministro	NOUN	_	Gender=Masc|Number=Sing	16	nmod	_	_
 31-32	do	_	_	_	_	_	_	_	_
 31	de	de	ADP	_	_	33	case	_	_
 32	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	33	det	_	_
-33	Trabalho	Trabalho	PROPN	_	Number=Sing	30	nmod	_	_
-34	Lindolfo	Lindolfo	PROPN	_	Number=Sing	33	flat:name	_	_
-35	Collor	Collor	PROPN	_	Number=Sing	33	flat:name	_	SpaceAfter=No
+33	Trabalho	trabalho	NOUN	_	Gender=Masc|Number=Sing	30	nmod	_	_
+34	Lindolfo	Lindolfo	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	30	appos	_	_
+35	Collor	Collor	PROPN	_	Number=Sing	34	flat:name	_	SpaceAfter=No
 36	.	.	PUNCT	_	_	10	punct	_	_
 
+# sent_id = 21
 # text = Em carta a Vargas, Collor criticou, entre outros pontos, o ministro da Guerra, general José Fernandes Leite de Castro, por este ter autorizado a transferência dos oficiais ligados ao clube.
-# sent_id = 22
 1	Em	em	ADP	_	_	2	case	_	_
 2	carta	carta	NOUN	_	Gender=Fem|Number=Sing	7	obl	_	_
-3	a	o	ADP	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	4	case	_	_
+3	a	a	ADP	_	_	4	case	_	_
 4	Vargas	Vargas	PROPN	_	Gender=Masc|Number=Sing	2	nmod	_	SpaceAfter=No
 5	,	,	PUNCT	_	_	2	punct	_	_
 6	Collor	Collor	PROPN	_	Gender=Masc|Number=Sing	7	nsubj	_	_
@@ -863,16 +849,16 @@
 15-16	da	_	_	_	_	_	_	_	_
 15	de	de	ADP	_	_	17	case	_	_
 16	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	17	det	_	_
-17	Guerra	Guerra	NOUN	_	Number=Sing	14	nmod	_	SpaceAfter=No
+17	Guerra	guerra	NOUN	_	Gender=Fem|Number=Sing	14	nmod	_	SpaceAfter=No
 18	,	,	PUNCT	_	_	19	punct	_	_
 19	general	general	NOUN	_	Gender=Masc|Number=Sing	14	appos	_	_
-20	José	José	PROPN	_	Gender=Masc|Number=Sing	19	appos	_	_
+20	José	José	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	19	appos	_	_
 21	Fernandes	Fernandes	PROPN	_	Number=Sing	20	flat:name	_	_
 22	Leite	Leite	PROPN	_	Number=Sing	20	flat:name	_	_
 23	de	de	ADP	_	_	24	case	_	_
 24	Castro	Castro	PROPN	_	Number=Sing	20	nmod	_	SpaceAfter=No
 25	,	,	PUNCT	_	_	19	punct	_	_
-26	por	por	ADP	_	_	29	mark	_	_
+26	por	por	SCONJ	_	_	29	mark	_	_
 27	este	este	PRON	_	Gender=Masc|Number=Sing|PronType=Dem	29	nsubj	_	_
 28	ter	ter	AUX	_	VerbForm=Inf	29	aux	_	_
 29	autorizado	autorizar	VERB	_	VerbForm=Part	7	advcl	_	_
@@ -886,12 +872,11 @@
 36-37	ao	_	_	_	_	_	_	_	_
 36	a	a	ADP	_	_	38	case	_	_
 37	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	38	det	_	_
-38	clube	clube	NOUN	_	Gender=Masc|Number=Sing	35	obl	_	SpaceAfter=No
-39	.	.	PUNCT	_	_	7	punct	_	_
+38	clube	clube	NOUN	_	Gender=Masc|Number=Sing	35	obj	_	SpaceAfter=No
+39	.	.	PUNCT	_	_	7	punct	_	SpacesAfter=\n
 
+# sent_id = 22
 # text = O clube foi dissolvido pela polícia de Vargas no decorrer de 1932.
-# sent_id = 23
-# newpar
 1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	_	_
 2	clube	clube	NOUN	_	Gender=Masc|Number=Sing	4	nsubj:pass	_	_
 3	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	aux:pass	_	_
@@ -905,8 +890,8 @@
 10-11	no	_	_	_	_	_	_	_	_
 10	em	em	ADP	_	_	12	case	_	_
 11	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	12	det	_	_
-12	decorrer	decorrer	NOUN	_	_	4	obl	_	_
+12	decorrer	decorrer	NOUN	_	Gender=Masc|Number=Sing	4	obl	_	_
 13	de	de	ADP	_	_	14	case	_	_
 14	1932	1932	NUM	_	NumType=Card	12	nmod	_	SpaceAfter=No
-15	.	.	PUNCT	_	_	4	punct	_	_
+15	.	.	PUNCT	_	_	4	punct	_	SpacesAfter=\n
 

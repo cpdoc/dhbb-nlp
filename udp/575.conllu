@@ -1,9 +1,12 @@
-# text = «José Moreira Bastos Filho» nasceu em Itaperuna (RJ) no dia 22 de fevereiro de 1905, filho de José Moreira Bastos e de Altiva Santiago Bastos.
-# sent_id = 1
-# newpar
+# generator = UDPipe 2, https://lindat.mff.cuni.cz/services/udpipe
+# udpipe_model = portuguese-bosque-ud-2.12-230717
+# udpipe_model_licence = CC BY-NC-SA
 # newdoc
+# newpar
+# sent_id = 1
+# text = «José Moreira Bastos Filho» nasceu em Itaperuna (RJ) no dia 22 de fevereiro de 1905, filho de José Moreira Bastos e de Altiva Santiago Bastos.
 1	«	«	PUNCT	_	_	2	punct	_	SpaceAfter=No
-2	José	José	PROPN	_	Gender=Masc|Number=Sing	7	nsubj	_	_
+2	José	José	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	7	nsubj	_	_
 3	Moreira	Moreira	PROPN	_	Number=Sing	2	flat:name	_	_
 4	Bastos	Bastos	PROPN	_	Number=Sing	2	flat:name	_	_
 5	Filho	Filho	PROPN	_	Number=Sing	2	flat:name	_	SpaceAfter=No
@@ -12,7 +15,7 @@
 8	em	em	ADP	_	_	9	case	_	_
 9	Itaperuna	Itaperuna	PROPN	_	Gender=Masc|Number=Sing	7	obl	_	_
 10	(	(	PUNCT	_	_	11	punct	_	SpaceAfter=No
-11	RJ	RJ	PROPN	_	Gender=Masc|Number=Sing	9	appos	_	SpaceAfter=No
+11	RJ	RJ	PROPN	_	Gender=Masc|Number=Sing	9	parataxis	_	SpaceAfter=No
 12	)	)	PUNCT	_	_	11	punct	_	_
 13-14	no	_	_	_	_	_	_	_	_
 13	em	em	ADP	_	_	15	case	_	_
@@ -24,21 +27,21 @@
 19	de	de	ADP	_	_	20	case	_	_
 20	1905	1905	NUM	_	NumType=Card	18	nmod	_	SpaceAfter=No
 21	,	,	PUNCT	_	_	22	punct	_	_
-22	filho	filho	NOUN	_	Gender=Masc|Number=Sing	2	appos	_	_
+22	filho	filho	NOUN	_	Gender=Masc|Number=Sing	7	appos	_	_
 23	de	de	ADP	_	_	24	case	_	_
-24	José	José	PROPN	_	Gender=Masc|Number=Sing	22	nmod	_	_
+24	José	José	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	22	nmod	_	_
 25	Moreira	Moreira	PROPN	_	Number=Sing	24	flat:name	_	_
 26	Bastos	Bastos	PROPN	_	Number=Sing	24	flat:name	_	_
 27	e	e	CCONJ	_	_	29	cc	_	_
 28	de	de	ADP	_	_	29	case	_	_
-29	Altiva	Altiva	PROPN	_	Gender=Fem|Number=Sing	24	conj	_	_
+29	Altiva	Altiva	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	24	conj	_	_
 30	Santiago	Santiago	PROPN	_	Number=Sing	29	flat:name	_	_
 31	Bastos	Bastos	PROPN	_	Number=Sing	29	flat:name	_	SpaceAfter=No
 32	.	.	PUNCT	_	_	7	punct	_	SpacesAfter=\n
 
-# text = Cursou o secundário no Liceu de Humanidades de Campos (RJ), bacharelando-se pela Escola de Direito Clóvis Bevilacqua, da mesma cidade.
 # sent_id = 2
-1	Cursou	Cursar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+# text = Cursou o secundário no Liceu de Humanidades de Campos (RJ), bacharelando-se pela Escola de Direito Clóvis Bevilacqua, da mesma cidade.
+1	Cursou	cursar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
 3	secundário	secundário	NOUN	_	Gender=Masc|Number=Sing	1	obj	_	_
 4-5	no	_	_	_	_	_	_	_	_
@@ -50,19 +53,19 @@
 9	de	de	ADP	_	_	10	case	_	_
 10	Campos	Campos	PROPN	_	Number=Sing	8	nmod	_	_
 11	(	(	PUNCT	_	_	12	punct	_	SpaceAfter=No
-12	RJ	RJ	PROPN	_	Gender=Masc|Number=Sing	6	appos	_	SpaceAfter=No
+12	RJ	RJ	PROPN	_	Gender=Masc|Number=Sing	6	parataxis	_	SpaceAfter=No
 13	)	)	PUNCT	_	_	12	punct	_	SpaceAfter=No
 14	,	,	PUNCT	_	_	15	punct	_	_
 15-16	bacharelando-se	_	_	_	_	_	_	_	_
 15	bacharelando	bacharelar	VERB	_	VerbForm=Ger	1	advcl	_	_
-16	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	15	obj	_	_
+16	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	15	expl	_	_
 17-18	pela	_	_	_	_	_	_	_	_
 17	por	por	ADP	_	_	19	case	_	_
 18	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	19	det	_	_
 19	Escola	Escola	PROPN	_	Gender=Fem|Number=Sing	15	obl	_	_
 20	de	de	ADP	_	_	21	case	_	_
 21	Direito	Direito	PROPN	_	Number=Sing	19	nmod	_	_
-22	Clóvis	clóvis	PROPN	_	Number=Sing	21	flat:name	_	_
+22	Clóvis	Clóvis	PROPN	_	Number=Sing	21	flat:name	_	_
 23	Bevilacqua	Bevilacqua	PROPN	_	Number=Sing	21	flat:name	_	SpaceAfter=No
 24	,	,	PUNCT	_	_	28	punct	_	_
 25-26	da	_	_	_	_	_	_	_	_
@@ -70,16 +73,16 @@
 26	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	28	det	_	_
 27	mesma	mesmo	ADJ	_	Gender=Fem|Number=Sing	28	amod	_	_
 28	cidade	cidade	NOUN	_	Gender=Fem|Number=Sing	19	nmod	_	SpaceAfter=No
-29	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
+29	.	.	PUNCT	_	_	1	punct	_	_
 
-# text = Lecionou no Ginásio Estadual de Itaperuna e, como advogado, exerceu as funções de promotor público e promotor de justiça adjunto, tendo sido também prefeito de sua cidade natal.
 # sent_id = 3
-1	Lecionou	Lecionar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+# text = Lecionou no Ginásio Estadual de Itaperuna e, como advogado, exerceu as funções de promotor público e promotor de justiça adjunto, tendo sido também prefeito de sua cidade natal.
+1	Lecionou	lecionar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2-3	no	_	_	_	_	_	_	_	_
 2	em	em	ADP	_	_	4	case	_	_
 3	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	4	det	_	_
 4	Ginásio	Ginásio	PROPN	_	Gender=Masc|Number=Sing	1	obl	_	_
-5	Estadual	estadual	PROPN	_	Number=Sing	4	flat:name	_	_
+5	Estadual	Estadual	PROPN	_	Number=Sing	4	flat:name	_	_
 6	de	de	ADP	_	_	7	case	_	_
 7	Itaperuna	Itaperuna	PROPN	_	Number=Sing	4	nmod	_	_
 8	e	e	CCONJ	_	_	13	cc	_	SpaceAfter=No
@@ -97,20 +100,20 @@
 20	promotor	promotor	NOUN	_	Gender=Masc|Number=Sing	17	conj	_	_
 21	de	de	ADP	_	_	22	case	_	_
 22	justiça	justiça	NOUN	_	Gender=Fem|Number=Sing	20	nmod	_	_
-23	adjunto	adjunto	ADJ	_	Gender=Masc|Number=Sing	22	amod	_	SpaceAfter=No
+23	adjunto	adjunto	ADJ	_	Gender=Masc|Number=Sing	20	amod	_	SpaceAfter=No
 24	,	,	PUNCT	_	_	28	punct	_	_
 25	tendo	ter	AUX	_	VerbForm=Ger	28	aux	_	_
 26	sido	ser	AUX	_	VerbForm=Part	28	cop	_	_
 27	também	também	ADV	_	_	28	advmod	_	_
-28	prefeito	prefeito	NOUN	_	Gender=Masc|Number=Sing	1	conj	_	_
+28	prefeito	prefeito	NOUN	_	Gender=Masc|Number=Sing	13	advcl	_	_
 29	de	de	ADP	_	_	31	case	_	_
 30	sua	seu	DET	_	Gender=Fem|Number=Sing|PronType=Prs	31	det	_	_
 31	cidade	cidade	NOUN	_	Gender=Fem|Number=Sing	28	nmod	_	_
 32	natal	natal	ADJ	_	Gender=Fem|Number=Sing	31	amod	_	SpaceAfter=No
 33	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
 
-# text = Iniciou suas atividades políticas no Partido Socialista Brasileiro (PSB), filiando-se depois ao Partido Trabalhista Brasileiro (PTB).
 # sent_id = 4
+# text = Iniciou suas atividades políticas no Partido Socialista Brasileiro (PSB), filiando-se depois ao Partido Trabalhista Brasileiro (PTB).
 1	Iniciou	iniciar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2	suas	seu	DET	_	Gender=Fem|Number=Plur|PronType=Prs	3	det	_	_
 3	atividades	atividade	NOUN	_	Gender=Fem|Number=Plur	1	obj	_	_
@@ -118,11 +121,11 @@
 5-6	no	_	_	_	_	_	_	_	_
 5	em	em	ADP	_	_	7	case	_	_
 6	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	7	det	_	_
-7	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	1	obl	_	_
+7	Partido	Partido	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	1	obl	_	_
 8	Socialista	Socialista	PROPN	_	Number=Sing	7	flat:name	_	_
-9	Brasileiro	brasileiro	PROPN	_	Number=Sing	7	flat:name	_	_
+9	Brasileiro	Brasileiro	PROPN	_	Number=Sing	7	flat:name	_	_
 10	(	(	PUNCT	_	_	11	punct	_	SpaceAfter=No
-11	PSB	PMB	PROPN	_	Gender=Masc|Number=Sing	7	appos	_	SpaceAfter=No
+11	PSB	PSB	PROPN	_	Gender=Masc|Number=Sing	7	appos	_	SpaceAfter=No
 12	)	)	PUNCT	_	_	11	punct	_	SpaceAfter=No
 13	,	,	PUNCT	_	_	14	punct	_	_
 14-15	filiando-se	_	_	_	_	_	_	_	_
@@ -132,16 +135,16 @@
 17-18	ao	_	_	_	_	_	_	_	_
 17	a	a	ADP	_	_	19	case	_	_
 18	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	19	det	_	_
-19	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	14	obl	_	_
-20	Trabalhista	trabalhista	PROPN	_	Number=Sing	19	flat:name	_	_
-21	Brasileiro	brasileiro	PROPN	_	Number=Sing	19	flat:name	_	_
+19	Partido	Partido	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	14	obl	_	_
+20	Trabalhista	Trabalhista	PROPN	_	Number=Sing	19	flat:name	_	_
+21	Brasileiro	Brasileiro	PROPN	_	Number=Sing	19	flat:name	_	_
 22	(	(	PUNCT	_	_	23	punct	_	SpaceAfter=No
 23	PTB	PTB	PROPN	_	Gender=Masc|Number=Sing	19	appos	_	SpaceAfter=No
 24	)	)	PUNCT	_	_	23	punct	_	SpaceAfter=No
-25	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
+25	.	.	PUNCT	_	_	1	punct	_	_
 
-# text = Foi secretário-geral do diretório municipal do PTB em Itaperuna e integrou o diretório regional do partido no estado do Rio de Janeiro.
 # sent_id = 5
+# text = Foi secretário-geral do diretório municipal do PTB em Itaperuna e integrou o diretório regional do partido no estado do Rio de Janeiro.
 1	Foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	cop	_	_
 2	secretário-geral	secretário-geral	NOUN	_	Gender=Masc|Number=Sing	0	root	_	_
 3-4	do	_	_	_	_	_	_	_	_
@@ -154,7 +157,7 @@
 8	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	9	det	_	_
 9	PTB	PTB	PROPN	_	Gender=Masc|Number=Sing	5	nmod	_	_
 10	em	em	ADP	_	_	11	case	_	_
-11	Itaperuna	Itaperuna	PROPN	_	Gender=Fem|Number=Sing	9	nmod	_	_
+11	Itaperuna	Itaperuna	PROPN	_	Gender=Fem|Number=Sing	2	nmod	_	_
 12	e	e	CCONJ	_	_	13	cc	_	_
 13	integrou	integrar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	conj	_	_
 14	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	15	det	_	_
@@ -167,7 +170,7 @@
 20-21	no	_	_	_	_	_	_	_	_
 20	em	em	ADP	_	_	22	case	_	_
 21	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	22	det	_	_
-22	estado	estado	NOUN	_	Gender=Masc|Number=Sing	19	nmod	_	_
+22	estado	estado	NOUN	_	Gender=Masc|Number=Sing	13	obl	_	_
 23-24	do	_	_	_	_	_	_	_	_
 23	de	de	ADP	_	_	25	case	_	_
 24	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	25	det	_	_
@@ -176,8 +179,8 @@
 27	Janeiro	Janeiro	PROPN	_	Number=Sing	25	nmod	_	SpaceAfter=No
 28	.	.	PUNCT	_	_	2	punct	_	SpacesAfter=\n
 
-# text = No pleito de outubro de 1950, com o apoio do PTB e do Partido Social Democrático (PSD), elegeu-se suplente do senador pelo Rio de Janeiro Francisco Sá Tinoco.
 # sent_id = 6
+# text = No pleito de outubro de 1950, com o apoio do PTB e do Partido Social Democrático (PSD), elegeu-se suplente do senador pelo Rio de Janeiro Francisco Sá Tinoco.
 1-2	No	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	3	case	_	_
 2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
@@ -198,9 +201,9 @@
 16-17	do	_	_	_	_	_	_	_	_
 16	de	de	ADP	_	_	18	case	_	_
 17	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	18	det	_	_
-18	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	14	conj	_	_
+18	Partido	Partido	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	14	conj	_	_
 19	Social	Social	PROPN	_	Number=Sing	18	flat:name	_	_
-20	Democrático	democrático	PROPN	_	Number=Sing	18	flat:name	_	_
+20	Democrático	Democrático	PROPN	_	Number=Sing	18	flat:name	_	_
 21	(	(	PUNCT	_	_	22	punct	_	SpaceAfter=No
 22	PSD	PSD	PROPN	_	Gender=Masc|Number=Sing	18	appos	_	SpaceAfter=No
 23	)	)	PUNCT	_	_	22	punct	_	SpaceAfter=No
@@ -208,7 +211,7 @@
 25-26	elegeu-se	_	_	_	_	_	_	_	_
 25	elegeu	eleger	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 26	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	25	expl	_	_
-27	suplente	suplente	ADV	_	_	25	advmod	_	_
+27	suplente	suplente	ADJ	_	Gender=Masc|Number=Sing	25	xcomp	_	_
 28-29	do	_	_	_	_	_	_	_	_
 28	de	de	ADP	_	_	30	case	_	_
 29	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	30	det	_	_
@@ -218,14 +221,14 @@
 32	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	33	det	_	_
 33	Rio	Rio	PROPN	_	Gender=Masc|Number=Sing	30	nmod	_	_
 34	de	de	ADP	_	_	35	case	_	_
-35	Janeiro	janeiro	PROPN	_	Number=Sing	33	nmod	_	_
-36	Francisco	Francisco	PROPN	_	Number=Sing	35	flat:name	_	_
-37	Sá	Sá	PROPN	_	Number=Sing	35	flat:name	_	_
-38	Tinoco	Tinoco	PROPN	_	Number=Sing	35	flat:name	_	SpaceAfter=No
-39	.	.	PUNCT	_	_	25	punct	_	SpacesAfter=\n
+35	Janeiro	Janeiro	PROPN	_	Number=Sing	33	nmod	_	_
+36	Francisco	Francisco	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	33	appos	_	_
+37	Sá	Sá	PROPN	_	Number=Sing	36	flat:name	_	_
+38	Tinoco	Tinoco	PROPN	_	Number=Sing	36	flat:name	_	SpaceAfter=No
+39	.	.	PUNCT	_	_	25	punct	_	_
 
-# text = Com a nomeação deste para o Tribunal de Contas do estado, assumiu uma cadeira no Senado em agosto de 1958, exercendo o mandato até o final da legislatura, em janeiro do ano seguinte.
 # sent_id = 7
+# text = Com a nomeação deste para o Tribunal de Contas do estado, assumiu uma cadeira no Senado em agosto de 1958, exercendo o mandato até o final da legislatura, em janeiro do ano seguinte.
 1	Com	com	ADP	_	_	3	case	_	_
 2	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	3	det	_	_
 3	nomeação	nomeação	NOUN	_	Gender=Fem|Number=Sing	15	obl	_	_
@@ -234,9 +237,9 @@
 5	este	este	PRON	_	Gender=Masc|Number=Sing|PronType=Dem	3	nmod	_	_
 6	para	para	ADP	_	_	8	case	_	_
 7	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	8	det	_	_
-8	Tribunal	Tribunal	PROPN	_	Gender=Masc|Number=Sing	3	nmod	_	_
+8	Tribunal	tribunal	NOUN	_	Gender=Masc|Number=Sing	3	nmod	_	_
 9	de	de	ADP	_	_	10	case	_	_
-10	Contas	Contas	PROPN	_	Number=Sing	8	nmod	_	_
+10	Contas	contas	NOUN	_	Number=Sing	8	nmod	_	_
 11-12	do	_	_	_	_	_	_	_	_
 11	de	de	ADP	_	_	13	case	_	_
 12	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	13	det	_	_
@@ -248,9 +251,9 @@
 18-19	no	_	_	_	_	_	_	_	_
 18	em	em	ADP	_	_	20	case	_	_
 19	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	20	det	_	_
-20	Senado	senado	NOUN	_	Gender=Masc|Number=Sing	17	nmod	_	_
+20	Senado	senado	NOUN	_	Gender=Masc|Number=Sing	15	obl	_	_
 21	em	em	ADP	_	_	22	case	_	_
-22	agosto	agosto	NOUN	_	Gender=Masc|Number=Sing	17	nmod	_	_
+22	agosto	agosto	NOUN	_	Gender=Masc|Number=Sing	15	obl	_	_
 23	de	de	ADP	_	_	24	case	_	_
 24	1958	1958	NUM	_	NumType=Card	22	nmod	_	SpaceAfter=No
 25	,	,	PUNCT	_	_	26	punct	_	_
@@ -272,10 +275,10 @@
 39	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	40	det	_	_
 40	ano	ano	NOUN	_	Gender=Masc|Number=Sing	37	nmod	_	_
 41	seguinte	seguinte	ADJ	_	Gender=Masc|Number=Sing	40	amod	_	SpaceAfter=No
-42	.	.	PUNCT	_	_	15	punct	_	SpacesAfter=\n
+42	.	.	PUNCT	_	_	15	punct	_	_
 
-# text = Nesse período, integrou as comissões de Legislação Social, de Segurança Nacional e de Reforma Constitucional do Senado.
 # sent_id = 8
+# text = Nesse período, integrou as comissões de Legislação Social, de Segurança Nacional e de Reforma Constitucional do Senado.
 1-2	Nesse	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	3	case	_	_
 2	esse	esse	DET	_	Gender=Masc|Number=Sing|PronType=Dem	3	det	_	_
@@ -283,9 +286,9 @@
 4	,	,	PUNCT	_	_	3	punct	_	_
 5	integrou	integrar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 6	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	7	det	_	_
-7	comissões	comissão	NOUN	_	Gender=Fem|Number=Plur	5	nsubj	_	_
+7	comissões	comissão	NOUN	_	Gender=Fem|Number=Plur	5	obj	_	_
 8	de	de	ADP	_	_	9	case	_	_
-9	Legislação	legislação	PROPN	_	Gender=Masc|Number=Sing	7	nmod	_	_
+9	Legislação	Legislação	PROPN	_	Gender=Fem|Number=Sing	7	nmod	_	_
 10	Social	Social	PROPN	_	Number=Sing	9	flat:name	_	SpaceAfter=No
 11	,	,	PUNCT	_	_	13	punct	_	_
 12	de	de	ADP	_	_	13	case	_	_
@@ -293,16 +296,16 @@
 14	Nacional	Nacional	PROPN	_	Number=Sing	13	flat:name	_	_
 15	e	e	CCONJ	_	_	17	cc	_	_
 16	de	de	ADP	_	_	17	case	_	_
-17	Reforma	reforma	PROPN	_	Gender=Fem|Number=Sing	9	conj	_	_
+17	Reforma	Reforma	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	9	conj	_	_
 18	Constitucional	Constitucional	PROPN	_	Number=Sing	17	flat:name	_	_
 19-20	do	_	_	_	_	_	_	_	_
 19	de	de	ADP	_	_	21	case	_	_
 20	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	21	det	_	_
-21	Senado	senado	NOUN	_	Gender=Masc|Number=Sing	17	nmod	_	SpaceAfter=No
+21	Senado	senado	NOUN	_	Gender=Masc|Number=Sing	9	nmod	_	SpaceAfter=No
 22	.	.	PUNCT	_	_	5	punct	_	SpacesAfter=\n
 
-# text = Foi diretor do jornal «Brasil Novo», de sua cidade natal, além de colaborar na imprensa do Distrito Federal, escrevendo para os jornais «A Manhã» e «Vanguarda».
 # sent_id = 9
+# text = Foi diretor do jornal «Brasil Novo», de sua cidade natal, além de colaborar na imprensa do Distrito Federal, escrevendo para os jornais «A Manhã» e «Vanguarda».
 1	Foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	cop	_	_
 2	diretor	diretor	NOUN	_	Gender=Masc|Number=Sing	0	root	_	_
 3-4	do	_	_	_	_	_	_	_	_
@@ -310,18 +313,18 @@
 4	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	5	det	_	_
 5	jornal	jornal	NOUN	_	Gender=Masc|Number=Sing	2	nmod	_	_
 6	«	«	PUNCT	_	_	7	punct	_	SpaceAfter=No
-7	Brasil	Brasil	PROPN	_	Gender=Masc|Number=Sing	5	appos	_	_
+7	Brasil	Brasil	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	5	appos	_	_
 8	Novo	Novo	PROPN	_	Number=Sing	7	flat:name	_	SpaceAfter=No
 9	»	»	PUNCT	_	_	7	punct	_	SpaceAfter=No
-10	,	,	PUNCT	_	_	2	punct	_	_
+10	,	,	PUNCT	_	_	13	punct	_	_
 11	de	de	ADP	_	_	13	case	_	_
 12	sua	seu	DET	_	Gender=Fem|Number=Sing|PronType=Prs	13	det	_	_
-13	cidade	cidade	NOUN	_	Gender=Fem|Number=Sing	2	nmod	_	_
+13	cidade	cidade	NOUN	_	Gender=Fem|Number=Sing	5	nmod	_	_
 14	natal	natal	ADJ	_	Gender=Fem|Number=Sing	13	amod	_	SpaceAfter=No
 15	,	,	PUNCT	_	_	18	punct	_	_
-16	além	além	ADV	_	_	18	cc	_	_
+16	além	além	ADV	_	ExtPos=SCONJ	18	cc	_	_
 17	de	de	ADP	_	_	16	fixed	_	_
-18	colaborar	colaborar	VERB	_	VerbForm=Inf	13	acl	_	_
+18	colaborar	colaborar	VERB	_	VerbForm=Inf	2	conj	_	_
 19-20	na	_	_	_	_	_	_	_	_
 19	em	em	ADP	_	_	21	case	_	_
 20	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	21	det	_	_
@@ -329,7 +332,7 @@
 22-23	do	_	_	_	_	_	_	_	_
 22	de	de	ADP	_	_	24	case	_	_
 23	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	24	det	_	_
-24	Distrito	Distrito	PROPN	_	Gender=Masc|Number=Sing	21	nmod	_	_
+24	Distrito	Distrito	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	21	nmod	_	_
 25	Federal	Federal	PROPN	_	Number=Sing	24	flat:name	_	SpaceAfter=No
 26	,	,	PUNCT	_	_	27	punct	_	_
 27	escrevendo	escrever	VERB	_	VerbForm=Ger	18	advcl	_	_
@@ -337,29 +340,29 @@
 29	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	30	det	_	_
 30	jornais	jornal	NOUN	_	Gender=Masc|Number=Plur	27	obl	_	_
 31	«	«	PUNCT	_	_	32	punct	_	SpaceAfter=No
-32	A	A	PROPN	_	Gender=Fem|Number=Sing	30	appos	_	_
-33	Manhã	manhã	PROPN	_	Number=Sing	32	flat:name	_	SpaceAfter=No
-34	»	»	PUNCT	_	_	37	punct	_	_
+32	A	A	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	30	appos	_	_
+33	Manhã	Manhã	PROPN	_	Number=Sing	32	flat:name	_	SpaceAfter=No
+34	»	»	PUNCT	_	_	32	punct	_	_
 35	e	e	CCONJ	_	_	37	cc	_	_
 36	«	«	PUNCT	_	_	37	punct	_	SpaceAfter=No
-37	Vanguarda	vanguarda	PROPN	_	Gender=Fem|Number=Sing	32	conj	_	SpaceAfter=No
+37	Vanguarda	vanguarda	NOUN	_	Gender=Fem|Number=Sing	32	conj	_	SpaceAfter=No
 38	»	»	PUNCT	_	_	37	punct	_	SpaceAfter=No
 39	.	.	PUNCT	_	_	2	punct	_	SpacesAfter=\n
 
-# text = Casou-se com Duartina Duarte Bastos, com quem teve duas filhas.
 # sent_id = 10
+# text = Casou-se com Duartina Duarte Bastos, com quem teve duas filhas.
 1-2	Casou-se	_	_	_	_	_	_	_	_
-1	Casou	Casar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+1	Casou	casar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	1	expl	_	_
 3	com	com	ADP	_	_	4	case	_	_
-4	Duartina	Duartina	PROPN	_	Gender=Masc|Number=Sing	1	obl	_	_
+4	Duartina	Duartina	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	1	obl	_	_
 5	Duarte	Duarte	PROPN	_	Number=Sing	4	flat:name	_	_
 6	Bastos	Bastos	PROPN	_	Number=Sing	4	flat:name	_	SpaceAfter=No
 7	,	,	PUNCT	_	_	10	punct	_	_
 8	com	com	ADP	_	_	9	case	_	_
-9	quem	quem	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	10	obl	_	_
+9	quem	quem	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	10	obl	_	_
 10	teve	ter	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	acl:relcl	_	_
 11	duas	dois	NUM	_	NumType=Card	12	nummod	_	_
-12	filhas	filha	NOUN	_	Gender=Fem|Number=Plur	10	obl	_	SpaceAfter=No
+12	filhas	filha	NOUN	_	Gender=Fem|Number=Plur	10	obj	_	SpaceAfter=No
 13	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
 

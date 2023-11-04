@@ -1,16 +1,19 @@
-# text = «Paulo Fleury da Silva e Sousa» nasceu na cidade de Goiás (GO) no dia 16 de outubro de 1911, filho de Vicente Miguel da Silva Abreu e de Eugênia Fleury e Silva.
-# sent_id = 1
-# newpar
+# generator = UDPipe 2, https://lindat.mff.cuni.cz/services/udpipe
+# udpipe_model = portuguese-bosque-ud-2.12-230717
+# udpipe_model_licence = CC BY-NC-SA
 # newdoc
+# newpar
+# sent_id = 1
+# text = «Paulo Fleury da Silva e Sousa» nasceu na cidade de Goiás (GO) no dia 16 de outubro de 1911, filho de Vicente Miguel da Silva Abreu e de Eugênia Fleury e Silva.
 1	«	«	PUNCT	_	_	2	punct	_	SpaceAfter=No
-2	Paulo	Paulo	PROPN	_	Gender=Masc|Number=Sing	10	nsubj	_	_
+2	Paulo	Paulo	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	10	nsubj	_	_
 3	Fleury	Fleury	PROPN	_	Number=Sing	2	flat:name	_	_
 4-5	da	_	_	_	_	_	_	_	_
 4	de	de	ADP	_	_	6	case	_	_
 5	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	6	det	_	_
-6	Silva	Silva	PROPN	_	Number=Sing	2	flat:name	_	_
-7	e	e	CCONJ	_	_	8	cc	_	_
-8	Sousa	Sousa	PROPN	_	Number=Sing	2	conj	_	SpaceAfter=No
+6	Silva	Silva	PROPN	_	Number=Sing	2	nmod	_	_
+7	e	e	CCONJ	_	_	6	flat:name	_	_
+8	Sousa	Sousa	PROPN	_	Number=Sing	6	flat:name	_	SpaceAfter=No
 9	»	»	PUNCT	_	_	2	punct	_	_
 10	nasceu	nascer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 11-12	na	_	_	_	_	_	_	_	_
@@ -20,7 +23,7 @@
 14	de	de	ADP	_	_	15	case	_	_
 15	Goiás	Goiás	PROPN	_	Gender=Masc|Number=Sing	13	nmod	_	_
 16	(	(	PUNCT	_	_	17	punct	_	SpaceAfter=No
-17	GO	GO	PROPN	_	Gender=Masc|Number=Sing	15	appos	_	SpaceAfter=No
+17	GO	GO	PROPN	_	Gender=Masc|Number=Sing	15	parataxis	_	SpaceAfter=No
 18	)	)	PUNCT	_	_	17	punct	_	_
 19-20	no	_	_	_	_	_	_	_	_
 19	em	em	ADP	_	_	21	case	_	_
@@ -32,115 +35,114 @@
 25	de	de	ADP	_	_	26	case	_	_
 26	1911	1911	NUM	_	NumType=Card	24	nmod	_	SpaceAfter=No
 27	,	,	PUNCT	_	_	28	punct	_	_
-28	filho	filho	NOUN	_	Gender=Masc|Number=Sing	2	appos	_	_
+28	filho	filho	NOUN	_	Gender=Masc|Number=Sing	10	appos	_	_
 29	de	de	ADP	_	_	30	case	_	_
-30	Vicente	Vicente	PROPN	_	Gender=Masc|Number=Sing	28	nmod	_	_
+30	Vicente	Vicente	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	28	nmod	_	_
 31	Miguel	Miguel	PROPN	_	Number=Sing	30	flat:name	_	_
 32-33	da	_	_	_	_	_	_	_	_
 32	de	de	ADP	_	_	34	case	_	_
 33	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	34	det	_	_
-34	Silva	Silva	PROPN	_	Number=Sing	30	flat:name	_	_
-35	Abreu	Abrer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	10	conj	_	_
+34	Silva	Silva	PROPN	_	ExtPos=PROPN|Number=Sing	30	nmod	_	_
+35	Abreu	Abreu	PROPN	_	Number=Sing	34	flat:name	_	_
 36	e	e	CCONJ	_	_	38	cc	_	_
 37	de	de	ADP	_	_	38	case	_	_
-38	Eugênia	Eugênia	PROPN	_	Gender=Fem|Number=Sing	10	conj	_	_
+38	Eugênia	Eugênia	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	30	conj	_	_
 39	Fleury	Fleury	PROPN	_	Number=Sing	38	flat:name	_	_
-40	e	e	CCONJ	_	_	41	cc	_	_
-41	Silva	Silva	PROPN	_	Number=Sing	38	conj	_	SpaceAfter=No
-42	.	.	PUNCT	_	_	10	punct	_	SpacesAfter=\n
+40	e	e	CCONJ	_	_	38	flat:name	_	_
+41	Silva	Silva	PROPN	_	Number=Sing	38	flat:name	_	SpaceAfter=No
+42	.	.	PUNCT	_	_	10	punct	_	_
 
-# text = Seu pai foi advogado, professor, juiz em Mato Grosso, desembargador, chefe de polícia e deputado federal (1935-1937).
 # sent_id = 2
+# text = Seu pai foi advogado, professor, juiz em Mato Grosso, desembargador, chefe de polícia e deputado federal (1935-1937).
 1	Seu	seu	DET	_	Gender=Masc|Number=Sing|PronType=Prs	2	det	_	_
-2	pai	pai	NOUN	_	Gender=Masc|Number=Sing	4	nsubj:pass	_	_
-3	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	aux:pass	_	_
-4	advogado	advogar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	SpaceAfter=No
-5	,	,	PUNCT	_	_	4	punct	_	_
-6	professor	professor	NOUN	_	Gender=Masc|Number=Sing	4	appos	_	SpaceAfter=No
+2	pai	pai	NOUN	_	Gender=Masc|Number=Sing	4	nsubj	_	_
+3	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	cop	_	_
+4	advogado	advogado	NOUN	_	Gender=Masc|Number=Sing	0	root	_	SpaceAfter=No
+5	,	,	PUNCT	_	_	6	punct	_	_
+6	professor	professor	NOUN	_	Gender=Masc|Number=Sing	4	conj	_	SpaceAfter=No
 7	,	,	PUNCT	_	_	8	punct	_	_
-8	juiz	juiz	NOUN	_	Gender=Masc|Number=Sing	6	appos	_	_
+8	juiz	juiz	NOUN	_	Gender=Masc|Number=Sing	4	conj	_	_
 9	em	em	ADP	_	_	10	case	_	_
-10	Mato	Mato	PROPN	_	Gender=Masc|Number=Sing	8	nmod	_	_
+10	Mato	Mato	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	8	nmod	_	_
 11	Grosso	Grosso	PROPN	_	Number=Sing	10	flat:name	_	SpaceAfter=No
 12	,	,	PUNCT	_	_	13	punct	_	_
-13	desembargador	desembargador	NOUN	_	Gender=Masc|Number=Sing	10	appos	_	SpaceAfter=No
+13	desembargador	desembargador	NOUN	_	Gender=Masc|Number=Sing	4	conj	_	SpaceAfter=No
 14	,	,	PUNCT	_	_	15	punct	_	_
-15	chefe	chefe	NOUN	_	Gender=Masc|Number=Sing	10	conj	_	_
+15	chefe	chefe	NOUN	_	Gender=Masc|Number=Sing	4	conj	_	_
 16	de	de	ADP	_	_	17	case	_	_
 17	polícia	polícia	NOUN	_	Gender=Fem|Number=Sing	15	nmod	_	_
 18	e	e	CCONJ	_	_	19	cc	_	_
-19	deputado	deputado	NOUN	_	Gender=Masc|Number=Sing	10	conj	_	_
+19	deputado	deputado	NOUN	_	Gender=Masc|Number=Sing	4	conj	_	_
 20	federal	federal	ADJ	_	Gender=Masc|Number=Sing	19	amod	_	_
-21	(	(	PUNCT	_	_	22	punct	_	SpaceAfter=No
-22	1935-1937	1935-1937	NUM	_	NumType=Card	19	parataxis	_	SpaceAfter=No
-23	)	)	PUNCT	_	_	22	punct	_	SpaceAfter=No
-24	.	.	PUNCT	_	_	6	punct	_	SpacesAfter=\n
+21	(1935-1937	(1935-1937	NUM	_	NumType=Card	19	nummod	_	SpaceAfter=No
+22	)	)	PUNCT	_	_	4	punct	_	SpaceAfter=No
+23	.	.	PUNCT	_	_	4	punct	_	_
 
-# text = José Honorato da Silva e Souza, seu irmão, foi deputado federal de 1933 a 1935.
 # sent_id = 3
-1	José	José	PROPN	_	Gender=Masc|Number=Sing	13	nsubj:pass	_	_
+# text = José Honorato da Silva e Souza, seu irmão, foi deputado federal de 1933 a 1935.
+1	José	José	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	13	nsubj	_	_
 2	Honorato	Honorato	PROPN	_	Number=Sing	1	flat:name	_	_
 3-4	da	_	_	_	_	_	_	_	_
 3	de	de	ADP	_	_	5	case	_	_
 4	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	5	det	_	_
-5	Silva	Silva	PROPN	_	Number=Sing	1	flat:name	_	_
+5	Silva	Silva	PROPN	_	Number=Sing	1	nmod	_	_
 6	e	e	CCONJ	_	_	7	cc	_	_
-7	Souza	Souza	PROPN	_	Gender=Fem|Number=Sing	1	conj	_	SpaceAfter=No
+7	Souza	Souza	PROPN	_	Number=Sing	5	conj	_	SpaceAfter=No
 8	,	,	PUNCT	_	_	10	punct	_	_
 9	seu	seu	DET	_	Gender=Masc|Number=Sing|PronType=Prs	10	det	_	_
 10	irmão	irmão	NOUN	_	Gender=Masc|Number=Sing	1	appos	_	SpaceAfter=No
 11	,	,	PUNCT	_	_	10	punct	_	_
-12	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	13	aux:pass	_	_
-13	deputado	deputar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
-14	federal	federal	NOUN	_	Gender=Masc|Number=Sing	13	obj	_	_
+12	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	13	cop	_	_
+13	deputado	deputado	NOUN	_	Gender=Masc|Number=Sing	0	root	_	_
+14	federal	federal	ADJ	_	Gender=Masc|Number=Sing	13	amod	_	_
 15	de	de	ADP	_	_	16	case	_	_
-16	1933	1933	NUM	_	NumType=Card	14	nmod	_	_
+16	1933	1933	NUM	_	NumType=Card	13	nmod	_	_
 17	a	a	ADP	_	_	18	case	_	_
 18	1935	1935	NUM	_	NumType=Card	16	nmod	_	SpaceAfter=No
-19	.	.	PUNCT	_	_	13	punct	_	SpacesAfter=\n
+19	.	.	PUNCT	_	_	13	punct	_	_
 
-# text = Outros membros de sua família participaram ativamente da vida política nacional e estadual - o avô materno, Arlindo Gáudie Fleury, foi “senador estadual” e o bisavô materno, Antônio José Caiado, foi presidente do estado de Goiás (1892-1896) e senador federal (1896-1899).
 # sent_id = 4
+# text = Outros membros de sua família participaram ativamente da vida política nacional e estadual - o avô materno, Arlindo Gáudie Fleury, foi “senador estadual” e o bisavô materno, Antônio José Caiado, foi presidente do estado de Goiás (1892-1896) e senador federal (1896-1899).
 1	Outros	outro	DET	_	Gender=Masc|Number=Plur|PronType=Ind	2	det	_	_
 2	membros	membro	NOUN	_	Gender=Masc|Number=Plur	6	nsubj	_	_
 3	de	de	ADP	_	_	5	case	_	_
 4	sua	seu	DET	_	Gender=Fem|Number=Sing|PronType=Prs	5	det	_	_
 5	família	família	NOUN	_	Gender=Fem|Number=Sing	2	nmod	_	_
-6	participaram	participar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+6	participaram	participar	VERB	_	Mood=Ind|Number=Plur|Person=3|VerbForm=Fin	0	root	_	_
 7	ativamente	ativamente	ADV	_	_	6	advmod	_	_
 8-9	da	_	_	_	_	_	_	_	_
 8	de	de	ADP	_	_	10	case	_	_
 9	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	10	det	_	_
-10	vida	vida	NOUN	_	Gender=Fem|Number=Sing	7	obl	_	_
+10	vida	vida	NOUN	_	Gender=Fem|Number=Sing	6	obj	_	_
 11	política	político	ADJ	_	Gender=Fem|Number=Sing	10	amod	_	_
-12	nacional	nacional	ADJ	_	Gender=Masc|Number=Sing	10	amod	_	_
+12	nacional	nacional	ADJ	_	Gender=Fem|Number=Sing	10	amod	_	_
 13	e	e	CCONJ	_	_	14	cc	_	_
-14	estadual	estadual	ADJ	_	Gender=Masc|Number=Sing	12	conj	_	_
-15	-	-	PUNCT	_	_	6	punct	_	_
+14	estadual	estadual	ADJ	_	Gender=Fem|Number=Sing	12	conj	_	_
+15	-	-	PUNCT	_	_	26	punct	_	_
 16	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	17	det	_	_
-17	avô	avô	NOUN	_	Gender=Masc|Number=Sing	6	obj	_	_
+17	avô	avô	NOUN	_	Gender=Masc|Number=Sing	26	nsubj	_	_
 18	materno	materno	ADJ	_	Gender=Masc|Number=Sing	17	amod	_	SpaceAfter=No
 19	,	,	PUNCT	_	_	20	punct	_	_
-20	Arlindo	Arlir	VERB	_	VerbForm=Ger	6	advcl	_	_
-21	Gáudie	Gáudie	PROPN	_	Gender=Masc|Number=Sing	20	obj	_	_
-22	Fleury	Fleury	PROPN	_	Number=Sing	21	flat:name	_	SpaceAfter=No
+20	Arlindo	Arlindo	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	17	appos	_	_
+21	Gáudie	Gáudie	PROPN	_	Number=Sing	20	flat:name	_	_
+22	Fleury	Fleury	PROPN	_	Number=Sing	20	flat:name	_	SpaceAfter=No
 23	,	,	PUNCT	_	_	20	punct	_	_
-24	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	cop	_	_
-25	“	“	PUNCT	_	_	26	punct	_	SpaceAfter=No
-26	senador	senador	NOUN	_	Gender=Masc|Number=Sing	6	obl	_	_
+24	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	26	cop	_	_
+25	“	"	PUNCT	_	_	26	punct	_	SpaceAfter=No
+26	senador	senador	NOUN	_	Gender=Masc|Number=Sing	6	parataxis	_	_
 27	estadual	estadual	ADJ	_	Gender=Masc|Number=Sing	26	amod	_	SpaceAfter=No
-28	”	”	PUNCT	_	_	31	punct	_	_
-29	e	e	CCONJ	_	_	31	cc	_	_
+28	”	"	PUNCT	_	_	26	punct	_	_
+29	e	e	CCONJ	_	_	39	cc	_	_
 30	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	31	det	_	_
-31	bisavô	bisavô	NOUN	_	Gender=Masc|Number=Sing	26	conj	_	_
+31	bisavô	bisavô	NOUN	_	Gender=Masc|Number=Sing	39	nsubj	_	_
 32	materno	materno	ADJ	_	Gender=Masc|Number=Sing	31	amod	_	SpaceAfter=No
 33	,	,	PUNCT	_	_	34	punct	_	_
-34	Antônio	Antônio	PROPN	_	Gender=Masc|Number=Sing	26	appos	_	_
+34	Antônio	Antônio	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	31	appos	_	_
 35	José	José	PROPN	_	Number=Sing	34	flat:name	_	_
-36	Caiado	caiado	PROPN	_	Number=Sing	34	flat:name	_	SpaceAfter=No
+36	Caiado	Caiado	PROPN	_	Number=Sing	34	flat:name	_	SpaceAfter=No
 37	,	,	PUNCT	_	_	34	punct	_	_
 38	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	39	cop	_	_
-39	presidente	presidente	NOUN	_	Gender=Masc|Number=Sing	6	parataxis	_	_
+39	presidente	presidente	NOUN	_	Gender=Masc|Number=Sing	6	conj	_	_
 40-41	do	_	_	_	_	_	_	_	_
 40	de	de	ADP	_	_	42	case	_	_
 41	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	42	det	_	_
@@ -148,30 +150,30 @@
 43	de	de	ADP	_	_	44	case	_	_
 44	Goiás	Goiás	PROPN	_	Gender=Masc|Number=Sing	42	nmod	_	_
 45	(	(	PUNCT	_	_	46	punct	_	SpaceAfter=No
-46	1892-1896	1892-1896	NUM	_	NumType=Card	42	appos	_	SpaceAfter=No
+46	1892-1896	1892-1896	NUM	_	NumType=Card	44	nmod	_	SpaceAfter=No
 47	)	)	PUNCT	_	_	46	punct	_	_
 48	e	e	CCONJ	_	_	49	cc	_	_
-49	senador	senador	PROPN	_	Gender=Masc|Number=Sing	39	conj	_	_
-50	federal	federal	PROPN	_	Number=Sing	49	flat:name	_	_
+49	senador	senador	NOUN	_	Gender=Masc|Number=Sing	39	conj	_	_
+50	federal	federal	ADJ	_	Gender=Masc|Number=Sing	49	amod	_	_
 51	(	(	PUNCT	_	_	52	punct	_	SpaceAfter=No
-52	1896-1899	1896-1899	NUM	_	NumType=Card	49	appos	_	SpaceAfter=No
+52	1896-1899	1896-1899	NUM	_	NumType=Card	49	nmod	_	SpaceAfter=No
 53	)	)	PUNCT	_	_	52	punct	_	SpaceAfter=No
-54	.	.	PUNCT	_	_	6	punct	_	SpacesAfter=\n
+54	.	.	PUNCT	_	_	6	punct	_	_
 
-# text = O sobrinho Vicente Miguel foi deputado estadual.
 # sent_id = 5
+# text = O sobrinho Vicente Miguel foi deputado estadual.
 1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	_	_
 2	sobrinho	sobrinho	NOUN	_	Gender=Masc|Number=Sing	6	nsubj	_	_
-3	Vicente	Vicente	PROPN	_	Gender=Masc|Number=Sing	2	appos	_	_
+3	Vicente	Vicente	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	2	appos	_	_
 4	Miguel	Miguel	PROPN	_	Number=Sing	3	flat:name	_	_
 5	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	cop	_	_
 6	deputado	deputado	NOUN	_	Gender=Masc|Number=Sing	0	root	_	_
 7	estadual	estadual	ADJ	_	Gender=Masc|Number=Sing	6	amod	_	SpaceAfter=No
 8	.	.	PUNCT	_	_	6	punct	_	SpacesAfter=\n
 
-# text = Paulo Fleury estudou no Liceu de Goiás e bacharelou-se pela Faculdade de Direito da Universidade de Minas Gerais, atual Universidade Federal de Minas Gerais, no ano de 1932, tendo sido colega de turma de Tancredo Neves, futuro governador de Minas.
 # sent_id = 6
-1	Paulo	Paulo	PROPN	_	Gender=Masc|Number=Sing	3	nsubj	_	_
+# text = Paulo Fleury estudou no Liceu de Goiás e bacharelou-se pela Faculdade de Direito da Universidade de Minas Gerais, atual Universidade Federal de Minas Gerais, no ano de 1932, tendo sido colega de turma de Tancredo Neves, futuro governador de Minas.
+1	Paulo	Paulo	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	3	nsubj	_	_
 2	Fleury	Fleury	PROPN	_	Number=Sing	1	flat:name	_	_
 3	estudou	estudar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 4-5	no	_	_	_	_	_	_	_	_
@@ -179,31 +181,31 @@
 5	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	6	det	_	_
 6	Liceu	Liceu	PROPN	_	Gender=Masc|Number=Sing	3	obl	_	_
 7	de	de	ADP	_	_	8	case	_	_
-8	Goiás	Goiás	PROPN	_	Gender=Masc|Number=Sing	6	nmod	_	_
+8	Goiás	Goiás	PROPN	_	Number=Sing	6	nmod	_	_
 9	e	e	CCONJ	_	_	10	cc	_	_
 10-11	bacharelou-se	_	_	_	_	_	_	_	_
 10	bacharelou	bacharelar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	conj	_	_
-11	se	se	PRON	_	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	10	expl	_	_
+11	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	10	expl	_	_
 12-13	pela	_	_	_	_	_	_	_	_
 12	por	por	ADP	_	_	14	case	_	_
-13	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	14	det	_	_
+13	a	o	DET	_	Definite=Def|PronType=Art	14	det	_	_
 14	Faculdade	Faculdade	PROPN	_	Gender=Fem|Number=Sing	10	obl	_	_
 15	de	de	ADP	_	_	16	case	_	_
 16	Direito	Direito	PROPN	_	Number=Sing	14	nmod	_	_
 17-18	da	_	_	_	_	_	_	_	_
 17	de	de	ADP	_	_	19	case	_	_
 18	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	19	det	_	_
-19	Universidade	universidade	PROPN	_	Gender=Fem|Number=Sing	16	nmod	_	_
+19	Universidade	Universidade	PROPN	_	Number=Sing	14	nmod	_	_
 20	de	de	ADP	_	_	21	case	_	_
-21	Minas	Minas	PROPN	_	Number=Sing	19	nmod	_	_
+21	Minas	Minas	PROPN	_	ExtPos=PROPN|Number=Sing	19	nmod	_	_
 22	Gerais	Gerais	PROPN	_	Number=Sing	21	flat:name	_	SpaceAfter=No
 23	,	,	PUNCT	_	_	25	punct	_	_
-24	atual	atual	ADJ	_	Gender=Masc|Number=Sing	25	amod	_	_
-25	Universidade	Universidade	PROPN	_	Gender=Masc|Number=Sing	14	appos	_	_
+24	atual	atual	ADJ	_	Gender=Fem|Number=Sing	25	amod	_	_
+25	Universidade	Universidade	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	14	appos	_	_
 26	Federal	Federal	PROPN	_	Number=Sing	25	flat:name	_	_
 27	de	de	ADP	_	_	28	case	_	_
-28	Minas	Minas	PROPN	_	Number=Sing	25	flat:name	_	_
-29	Gerais	Gerais	PROPN	_	Number=Sing	25	flat:name	_	SpaceAfter=No
+28	Minas	Minas	PROPN	_	ExtPos=PROPN|Number=Sing	25	nmod	_	_
+29	Gerais	Gerais	PROPN	_	Number=Sing	28	flat:name	_	SpaceAfter=No
 30	,	,	PUNCT	_	_	25	punct	_	_
 31-32	no	_	_	_	_	_	_	_	_
 31	em	em	ADP	_	_	33	case	_	_
@@ -213,22 +215,22 @@
 35	1932	1932	NUM	_	NumType=Card	33	nmod	_	SpaceAfter=No
 36	,	,	PUNCT	_	_	39	punct	_	_
 37	tendo	ter	AUX	_	VerbForm=Ger	39	aux	_	_
-38	sido	ser	AUX	_	VerbForm=Part	39	aux:pass	_	_
-39	colega	colegar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	3	advcl	_	_
+38	sido	ser	AUX	_	VerbForm=Part	39	cop	_	_
+39	colega	colega	NOUN	_	Gender=Masc|Number=Sing	3	advcl	_	_
 40	de	de	ADP	_	_	41	case	_	_
-41	turma	turma	NOUN	_	Gender=Fem|Number=Sing	39	obj	_	_
+41	turma	turma	NOUN	_	Gender=Fem|Number=Sing	39	nmod	_	_
 42	de	de	ADP	_	_	43	case	_	_
-43	Tancredo	Tancredo	PROPN	_	Gender=Masc|Number=Sing	41	nmod	_	_
+43	Tancredo	Tancredo	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	41	nmod	_	_
 44	Neves	Neves	PROPN	_	Number=Sing	43	flat:name	_	SpaceAfter=No
-45	,	,	PUNCT	_	_	46	punct	_	_
-46	futuro	futuro	ADJ	_	Gender=Masc|Number=Sing	43	amod	_	_
-47	governador	governador	NOUN	_	Gender=Masc|Number=Sing	46	appos	_	_
+45	,	,	PUNCT	_	_	47	punct	_	_
+46	futuro	futuro	ADJ	_	Gender=Masc|Number=Sing	47	amod	_	_
+47	governador	governador	NOUN	_	Gender=Masc|Number=Sing	43	appos	_	_
 48	de	de	ADP	_	_	49	case	_	_
 49	Minas	Minas	PROPN	_	Gender=Masc|Number=Sing	47	nmod	_	SpaceAfter=No
-50	.	.	PUNCT	_	_	3	punct	_	SpacesAfter=\n
+50	.	.	PUNCT	_	_	3	punct	_	_
 
-# text = De volta a seu estado natal, Fleury foi contratado como professor da Faculdade de Direito de Goiás.
 # sent_id = 7
+# text = De volta a seu estado natal, Fleury foi contratado como professor da Faculdade de Direito de Goiás.
 1	De	de	ADP	_	_	2	case	_	_
 2	volta	volta	NOUN	_	Gender=Fem|Number=Sing	10	obl	_	_
 3	a	a	ADP	_	_	5	case	_	_
@@ -248,18 +250,18 @@
 16	de	de	ADP	_	_	17	case	_	_
 17	Direito	Direito	PROPN	_	Number=Sing	15	nmod	_	_
 18	de	de	ADP	_	_	19	case	_	_
-19	Goiás	Goiás	PROPN	_	Gender=Masc|Number=Sing	17	nmod	_	SpaceAfter=No
-20	.	.	PUNCT	_	_	10	punct	_	SpacesAfter=\n
+19	Goiás	Goiás	PROPN	_	Number=Sing	15	nmod	_	SpaceAfter=No
+20	.	.	PUNCT	_	_	10	punct	_	_
 
-# text = Ainda em 1932, foi nomeado secretário-geral do estado e assumiu os cargos de promotor público da Comarca da Capital e de chefe do gabinete civil do interventor federal de Goiás, Pedro Ludovico Teixeira (1930-1935).
 # sent_id = 8
+# text = Ainda em 1932, foi nomeado secretário-geral do estado e assumiu os cargos de promotor público da Comarca da Capital e de chefe do gabinete civil do interventor federal de Goiás, Pedro Ludovico Teixeira (1930-1935).
 1	Ainda	ainda	ADV	_	_	3	advmod	_	_
 2	em	em	ADP	_	_	3	case	_	_
 3	1932	1932	NUM	_	NumType=Card	6	obl	_	SpaceAfter=No
 4	,	,	PUNCT	_	_	3	punct	_	_
 5	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	aux:pass	_	_
 6	nomeado	nomear	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
-7	secretário-geral	secretário-geral	NOUN	_	Gender=Masc|Number=Sing	6	xcomp	_	_
+7	secretário-geral	secretário-geral	NOUN	_	Gender=Masc|Number=Sing	6	nsubj:pass	_	_
 8-9	do	_	_	_	_	_	_	_	_
 8	de	de	ADP	_	_	10	case	_	_
 9	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	10	det	_	_
@@ -278,10 +280,10 @@
 21-22	da	_	_	_	_	_	_	_	_
 21	de	de	ADP	_	_	23	case	_	_
 22	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	23	det	_	_
-23	Capital	capital	PROPN	_	Gender=Fem|Number=Sing	20	nmod	_	_
+23	Capital	Capital	PROPN	_	Number=Sing	20	nmod	_	_
 24	e	e	CCONJ	_	_	26	cc	_	_
 25	de	de	ADP	_	_	26	case	_	_
-26	chefe	chefe	NOUN	_	Gender=Masc|Number=Sing	20	conj	_	_
+26	chefe	chefe	NOUN	_	Gender=Masc|Number=Sing	16	conj	_	_
 27-28	do	_	_	_	_	_	_	_	_
 27	de	de	ADP	_	_	29	case	_	_
 28	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	29	det	_	_
@@ -295,16 +297,15 @@
 35	de	de	ADP	_	_	36	case	_	_
 36	Goiás	Goiás	PROPN	_	Gender=Masc|Number=Sing	33	nmod	_	SpaceAfter=No
 37	,	,	PUNCT	_	_	38	punct	_	_
-38	Pedro	Pedro	PROPN	_	Gender=Masc|Number=Sing	33	appos	_	_
+38	Pedro	Pedro	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	33	appos	_	_
 39	Ludovico	Ludovico	PROPN	_	Number=Sing	38	flat:name	_	_
 40	Teixeira	Teixeira	PROPN	_	Number=Sing	38	flat:name	_	_
-41	(	(	PUNCT	_	_	42	punct	_	SpaceAfter=No
-42	1930-1935	1930-1935	NUM	_	NumType=Card	38	appos	_	SpaceAfter=No
-43	)	)	PUNCT	_	_	42	punct	_	SpaceAfter=No
-44	.	.	PUNCT	_	_	6	punct	_	SpacesAfter=\n
+41	(1930-1935	(1930-1935	NUM	_	NumType=Card	38	flat:name	_	SpaceAfter=No
+42	)	)	PUNCT	_	_	38	punct	_	SpaceAfter=No
+43	.	.	PUNCT	_	_	6	punct	_	SpacesAfter=\n
 
-# text = Já em 1933 participava da vida política de seu estado, integrando a ala mais à esquerda do Partido Social Republicano de Goiás.
 # sent_id = 9
+# text = Já em 1933 participava da vida política de seu estado, integrando a ala mais à esquerda do Partido Social Republicano de Goiás.
 1	Já	já	ADV	_	_	3	advmod	_	_
 2	em	em	ADP	_	_	3	case	_	_
 3	1933	1933	NUM	_	NumType=Card	4	obl	_	_
@@ -329,15 +330,15 @@
 20-21	do	_	_	_	_	_	_	_	_
 20	de	de	ADP	_	_	22	case	_	_
 21	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	22	det	_	_
-22	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	19	nmod	_	_
+22	Partido	Partido	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	15	nmod	_	_
 23	Social	Social	PROPN	_	Number=Sing	22	flat:name	_	_
-24	Republicano	republicano	PROPN	_	Number=Sing	22	flat:name	_	_
+24	Republicano	Republicano	PROPN	_	Number=Sing	22	flat:name	_	_
 25	de	de	ADP	_	_	26	case	_	_
-26	Goiás	Goiás	PROPN	_	Gender=Masc|Number=Sing	22	nmod	_	SpaceAfter=No
-27	.	.	PUNCT	_	_	4	punct	_	SpacesAfter=\n
+26	Goiás	Goiás	PROPN	_	Number=Sing	22	nmod	_	SpaceAfter=No
+27	.	.	PUNCT	_	_	4	punct	_	_
 
-# text = Na eleição indireta de 1935 para o governo do estado, vencida por Pedro Ludovico Teixeira, sua facção apoiou o nome de Domingos Velasco.
 # sent_id = 10
+# text = Na eleição indireta de 1935 para o governo do estado, vencida por Pedro Ludovico Teixeira, sua facção apoiou o nome de Domingos Velasco.
 1-2	Na	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	3	case	_	_
 2	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	3	det	_	_
@@ -347,15 +348,15 @@
 6	1935	1935	NUM	_	NumType=Card	3	nmod	_	_
 7	para	para	ADP	_	_	9	case	_	_
 8	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	9	det	_	_
-9	governo	governo	NOUN	_	Gender=Masc|Number=Sing	6	nmod	_	_
+9	governo	governo	NOUN	_	Gender=Masc|Number=Sing	3	nmod	_	_
 10-11	do	_	_	_	_	_	_	_	_
 10	de	de	ADP	_	_	12	case	_	_
 11	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	12	det	_	_
 12	estado	estado	NOUN	_	Gender=Masc|Number=Sing	9	nmod	_	SpaceAfter=No
-13	,	,	PUNCT	_	_	3	punct	_	_
+13	,	,	PUNCT	_	_	14	punct	_	_
 14	vencida	vencer	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	3	acl	_	_
 15	por	por	ADP	_	_	16	case	_	_
-16	Pedro	Pedro	PROPN	_	Gender=Masc|Number=Sing	14	obl:agent	_	_
+16	Pedro	Pedro	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	14	obl:agent	_	_
 17	Ludovico	Ludovico	PROPN	_	Number=Sing	16	flat:name	_	_
 18	Teixeira	Teixeira	PROPN	_	Number=Sing	16	flat:name	_	SpaceAfter=No
 19	,	,	PUNCT	_	_	14	punct	_	_
@@ -365,36 +366,36 @@
 23	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	24	det	_	_
 24	nome	nome	NOUN	_	Gender=Masc|Number=Sing	22	obj	_	_
 25	de	de	ADP	_	_	26	case	_	_
-26	Domingos	Domingos	PROPN	_	Gender=Masc|Number=Sing	24	nmod	_	_
+26	Domingos	Domingos	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	24	nmod	_	_
 27	Velasco	Velasco	PROPN	_	Number=Sing	26	flat:name	_	SpaceAfter=No
-28	.	.	PUNCT	_	_	22	punct	_	SpacesAfter=\n
+28	.	.	PUNCT	_	_	22	punct	_	_
 
-# text = Entre 1935 e 1937 atuou como representante classista em Goiás.
 # sent_id = 11
+# text = Entre 1935 e 1937 atuou como representante classista em Goiás.
 1	Entre	entre	ADP	_	_	2	case	_	_
 2	1935	1935	NUM	_	NumType=Card	5	obl	_	_
 3	e	e	CCONJ	_	_	4	cc	_	_
 4	1937	1937	NUM	_	NumType=Card	2	conj	_	_
 5	atuou	atuar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 6	como	como	ADP	_	_	7	case	_	_
-7	representante	representante	NOUN	_	Gender=Masc|Number=Sing	5	obl	_	_
+7	representante	representante	NOUN	_	Gender=Masc|Number=Sing	5	xcomp	_	_
 8	classista	classista	ADJ	_	Gender=Masc|Number=Sing	7	amod	_	_
 9	em	em	ADP	_	_	10	case	_	_
-10	Goiás	Goiás	PROPN	_	Gender=Masc|Number=Sing	7	nmod	_	SpaceAfter=No
+10	Goiás	Goiás	PROPN	_	Gender=Masc|Number=Sing	5	obl	_	SpaceAfter=No
 11	.	.	PUNCT	_	_	5	punct	_	SpacesAfter=\n
 
-# text = Em 1936 deixou a Promotoria Pública.
 # sent_id = 12
+# text = Em 1936 deixou a Promotoria Pública.
 1	Em	em	ADP	_	_	2	case	_	_
 2	1936	1936	NUM	_	NumType=Card	3	obl	_	_
 3	deixou	deixar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 4	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	5	det	_	_
-5	Promotoria	Promotoria	PROPN	_	Gender=Fem|Number=Sing	3	nsubj	_	_
+5	Promotoria	Promotoria	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	3	obj	_	_
 6	Pública	Pública	PROPN	_	Number=Sing	5	flat:name	_	SpaceAfter=No
-7	.	.	PUNCT	_	_	3	punct	_	SpacesAfter=\n
+7	.	.	PUNCT	_	_	3	punct	_	_
 
-# text = Em 1941, afastou-se da chefia do Gabinete Civil do governador goiano e assumiu a vaga de juiz do Trabalho, tornando-se presidente da Junta de Conciliação e Julgamento de Goiânia.
 # sent_id = 13
+# text = Em 1941, afastou-se da chefia do Gabinete Civil do governador goiano e assumiu a vaga de juiz do Trabalho, tornando-se presidente da Junta de Conciliação e Julgamento de Goiânia.
 1	Em	em	ADP	_	_	2	case	_	_
 2	1941	1941	NUM	_	NumType=Card	4	obl	_	SpaceAfter=No
 3	,	,	PUNCT	_	_	2	punct	_	_
@@ -408,7 +409,7 @@
 9-10	do	_	_	_	_	_	_	_	_
 9	de	de	ADP	_	_	11	case	_	_
 10	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	_	_
-11	Gabinete	Gabinete	PROPN	_	Gender=Masc|Number=Sing	8	nmod	_	_
+11	Gabinete	Gabinete	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	8	nmod	_	_
 12	Civil	Civil	PROPN	_	Number=Sing	11	flat:name	_	_
 13-14	do	_	_	_	_	_	_	_	_
 13	de	de	ADP	_	_	15	case	_	_
@@ -416,7 +417,7 @@
 15	governador	governador	NOUN	_	Gender=Masc|Number=Sing	11	nmod	_	_
 16	goiano	goiano	ADJ	_	Gender=Masc|Number=Sing	15	amod	_	_
 17	e	e	CCONJ	_	_	18	cc	_	_
-18	assumiu	assumir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	8	conj	_	_
+18	assumiu	assumir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	conj	_	_
 19	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	20	det	_	_
 20	vaga	vaga	NOUN	_	Gender=Fem|Number=Sing	18	obj	_	_
 21	de	de	ADP	_	_	22	case	_	_
@@ -424,7 +425,7 @@
 23-24	do	_	_	_	_	_	_	_	_
 23	de	de	ADP	_	_	25	case	_	_
 24	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	25	det	_	_
-25	Trabalho	Trabalho	PROPN	_	Number=Sing	22	nmod	_	SpaceAfter=No
+25	Trabalho	trabalho	NOUN	_	Gender=Masc|Number=Sing	22	nmod	_	SpaceAfter=No
 26	,	,	PUNCT	_	_	27	punct	_	_
 27-28	tornando-se	_	_	_	_	_	_	_	_
 27	tornando	tornar	VERB	_	VerbForm=Ger	18	advcl	_	_
@@ -433,22 +434,22 @@
 30-31	da	_	_	_	_	_	_	_	_
 30	de	de	ADP	_	_	32	case	_	_
 31	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	32	det	_	_
-32	Junta	Junta	NOUN	_	Gender=Fem|Number=Sing	29	nmod	_	_
+32	Junta	junta	NOUN	_	Gender=Fem|Number=Sing	29	nmod	_	_
 33	de	de	ADP	_	_	34	case	_	_
 34	Conciliação	conciliação	NOUN	_	Gender=Fem|Number=Sing	32	nmod	_	_
-35	e	e	CCONJ	_	_	36	cc	_	_
-36	Julgamento	julgamento	NOUN	_	Gender=Masc|Number=Sing	32	conj	_	_
+35	e	e	CCONJ	_	_	34	flat:name	_	_
+36	Julgamento	julgamento	NOUN	_	Gender=Masc|Number=Sing	34	conj	_	_
 37	de	de	ADP	_	_	38	case	_	_
-38	Goiânia	Goiânia	PROPN	_	Gender=Unsp|Number=Sing	36	nmod	_	SpaceAfter=No
-39	.	.	PUNCT	_	_	4	punct	_	SpacesAfter=\n
+38	Goiânia	Goiânia	PROPN	_	Gender=Fem|Number=Sing	32	nmod	_	SpaceAfter=No
+39	.	.	PUNCT	_	_	4	punct	_	_
 
-# text = Atuou na Justiça do Trabalho até 1945, sendo nomeado, no ano seguinte, secretário do Interior e interventor federal interino do estado de Goiás.
 # sent_id = 14
+# text = Atuou na Justiça do Trabalho até 1945, sendo nomeado, no ano seguinte, secretário do Interior e interventor federal interino do estado de Goiás.
 1	Atuou	atuar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2-3	na	_	_	_	_	_	_	_	_
 2	em	em	ADP	_	_	4	case	_	_
 3	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	4	det	_	_
-4	Justiça	Justiça	NOUN	_	Gender=Fem|Number=Sing	1	obl	_	_
+4	Justiça	Justiça	PROPN	_	Gender=Fem|Number=Sing	1	obl	_	_
 5-6	do	_	_	_	_	_	_	_	_
 5	de	de	ADP	_	_	7	case	_	_
 6	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	7	det	_	_
@@ -464,14 +465,14 @@
 15	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	16	det	_	_
 16	ano	ano	NOUN	_	Gender=Masc|Number=Sing	12	obl	_	_
 17	seguinte	seguinte	ADJ	_	Gender=Masc|Number=Sing	16	amod	_	SpaceAfter=No
-18	,	,	PUNCT	_	_	19	punct	_	_
-19	secretário	secretário	NOUN	_	Gender=Masc|Number=Sing	16	appos	_	_
+18	,	,	PUNCT	_	_	12	punct	_	_
+19	secretário	secretário	NOUN	_	Gender=Masc|Number=Sing	12	nsubj:pass	_	_
 20-21	do	_	_	_	_	_	_	_	_
 20	de	de	ADP	_	_	22	case	_	_
 21	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	22	det	_	_
-22	Interior	Interior	NOUN	_	Gender=Masc|Number=Sing	19	nmod	_	_
+22	Interior	interior	NOUN	_	Gender=Masc|Number=Sing	19	nmod	_	_
 23	e	e	CCONJ	_	_	24	cc	_	_
-24	interventor	interventor	NOUN	_	Gender=Masc|Number=Sing	22	conj	_	_
+24	interventor	interventor	NOUN	_	Gender=Masc|Number=Sing	19	conj	_	_
 25	federal	federal	ADJ	_	Gender=Masc|Number=Sing	24	amod	_	_
 26	interino	interino	ADJ	_	Gender=Masc|Number=Sing	24	amod	_	_
 27-28	do	_	_	_	_	_	_	_	_
@@ -482,10 +483,10 @@
 31	Goiás	Goiás	PROPN	_	Gender=Masc|Number=Sing	29	nmod	_	SpaceAfter=No
 32	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
 
-# text = Candidatou-se a uma vaga de senador na legenda do Partido Social Democrático (PSD), no pleito de 1947, mas não foi eleito.
 # sent_id = 15
+# text = Candidatou-se a uma vaga de senador na legenda do Partido Social Democrático (PSD), no pleito de 1947, mas não foi eleito.
 1-2	Candidatou-se	_	_	_	_	_	_	_	_
-1	Candidatou	Candidatar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+1	Candidatou	candidatar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	1	expl	_	_
 3	a	a	ADP	_	_	5	case	_	_
 4	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	5	det	_	_
@@ -495,13 +496,13 @@
 8-9	na	_	_	_	_	_	_	_	_
 8	em	em	ADP	_	_	10	case	_	_
 9	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	10	det	_	_
-10	legenda	legenda	NOUN	_	Gender=Fem|Number=Sing	5	nmod	_	_
+10	legenda	legenda	NOUN	_	Gender=Fem|Number=Sing	1	obl	_	_
 11-12	do	_	_	_	_	_	_	_	_
 11	de	de	ADP	_	_	13	case	_	_
 12	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	13	det	_	_
-13	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	10	nmod	_	_
+13	Partido	Partido	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	10	nmod	_	_
 14	Social	Social	PROPN	_	Number=Sing	13	flat:name	_	_
-15	Democrático	democrático	PROPN	_	Number=Sing	13	flat:name	_	_
+15	Democrático	Democrático	PROPN	_	Number=Sing	13	flat:name	_	_
 16	(	(	PUNCT	_	_	17	punct	_	SpaceAfter=No
 17	PSD	PSD	PROPN	_	Gender=Masc|Number=Sing	13	appos	_	SpaceAfter=No
 18	)	)	PUNCT	_	_	17	punct	_	SpaceAfter=No
@@ -509,18 +510,18 @@
 20-21	no	_	_	_	_	_	_	_	_
 20	em	em	ADP	_	_	22	case	_	_
 21	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	22	det	_	_
-22	pleito	pleito	NOUN	_	Gender=Masc|Number=Sing	13	nmod	_	_
+22	pleito	pleito	NOUN	_	Gender=Masc|Number=Sing	1	obl	_	_
 23	de	de	ADP	_	_	24	case	_	_
 24	1947	1947	NUM	_	NumType=Card	22	nmod	_	SpaceAfter=No
-25	,	,	PUNCT	_	_	22	punct	_	_
+25	,	,	PUNCT	_	_	29	punct	_	_
 26	mas	mas	CCONJ	_	_	29	cc	_	_
 27	não	não	ADV	_	Polarity=Neg	29	advmod	_	_
 28	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	29	aux:pass	_	_
 29	eleito	eleger	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	1	conj	_	SpaceAfter=No
-30	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
+30	.	.	PUNCT	_	_	1	punct	_	_
 
-# text = No mesmo ano integrou o Conselho Administrativo do estado de Goiás.
 # sent_id = 16
+# text = No mesmo ano integrou o Conselho Administrativo do estado de Goiás.
 1-2	No	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	4	case	_	_
 2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	4	det	_	_
@@ -528,8 +529,8 @@
 4	ano	ano	NOUN	_	Gender=Masc|Number=Sing	5	obl	_	_
 5	integrou	integrar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 6	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	7	det	_	_
-7	Conselho	Conselho	PROPN	_	Gender=Masc|Number=Sing	5	nsubj	_	_
-8	Administrativo	administrativo	PROPN	_	Number=Sing	7	flat:name	_	_
+7	Conselho	Conselho	PROPN	_	Gender=Masc|Number=Sing	5	obj	_	_
+8	Administrativo	Administrativo	PROPN	_	Number=Sing	7	flat:name	_	_
 9-10	do	_	_	_	_	_	_	_	_
 9	de	de	ADP	_	_	11	case	_	_
 10	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	_	_
@@ -538,8 +539,8 @@
 13	Goiás	Goiás	PROPN	_	Gender=Masc|Number=Sing	11	nmod	_	SpaceAfter=No
 14	.	.	PUNCT	_	_	5	punct	_	SpacesAfter=\n
 
-# text = No pleito de outubro de 1950 candidatou-se a deputado federal por Goiás na legenda do PSD.
 # sent_id = 17
+# text = No pleito de outubro de 1950 candidatou-se a deputado federal por Goiás na legenda do PSD.
 1-2	No	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	3	case	_	_
 2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
@@ -559,17 +560,17 @@
 15-16	na	_	_	_	_	_	_	_	_
 15	em	em	ADP	_	_	17	case	_	_
 16	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	17	det	_	_
-17	legenda	legenda	NOUN	_	Gender=Fem|Number=Sing	14	nmod	_	_
+17	legenda	legenda	NOUN	_	Gender=Fem|Number=Sing	8	obl	_	_
 18-19	do	_	_	_	_	_	_	_	_
 18	de	de	ADP	_	_	20	case	_	_
 19	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	20	det	_	_
 20	PSD	PSD	PROPN	_	Gender=Masc|Number=Sing	17	nmod	_	SpaceAfter=No
-21	.	.	PUNCT	_	_	8	punct	_	SpacesAfter=\n
+21	.	.	PUNCT	_	_	8	punct	_	_
 
-# text = Com cerca de 16 mil votos, foi o deputado mais votado do estado, assumindo sua cadeira em fevereiro do ano seguinte.
 # sent_id = 18
+# text = Com cerca de 16 mil votos, foi o deputado mais votado do estado, assumindo sua cadeira em fevereiro do ano seguinte.
 1	Com	com	ADP	_	_	6	case	_	_
-2	cerca	cerca	ADV	_	_	6	advmod	_	_
+2	cerca	cerca	ADV	_	ExtPos=ADV	6	advmod	_	_
 3	de	de	ADP	_	_	2	fixed	_	_
 4	16	16	NUM	_	NumType=Card	6	nummod	_	_
 5	mil	mil	NUM	_	NumType=Card	4	flat	_	_
@@ -585,7 +586,7 @@
 14	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	15	det	_	_
 15	estado	estado	NOUN	_	Gender=Masc|Number=Sing	10	nmod	_	SpaceAfter=No
 16	,	,	PUNCT	_	_	17	punct	_	_
-17	assumindo	assumir	VERB	_	VerbForm=Ger	10	acl	_	_
+17	assumindo	assumir	VERB	_	VerbForm=Ger	10	advcl	_	_
 18	sua	seu	DET	_	Gender=Fem|Number=Sing|PronType=Prs	19	det	_	_
 19	cadeira	cadeira	NOUN	_	Gender=Fem|Number=Sing	17	obj	_	_
 20	em	em	ADP	_	_	21	case	_	_
@@ -595,10 +596,10 @@
 23	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	24	det	_	_
 24	ano	ano	NOUN	_	Gender=Masc|Number=Sing	21	nmod	_	_
 25	seguinte	seguinte	ADJ	_	Gender=Masc|Number=Sing	24	amod	_	SpaceAfter=No
-26	.	.	PUNCT	_	_	10	punct	_	SpacesAfter=\n
+26	.	.	PUNCT	_	_	10	punct	_	_
 
-# text = Em maio de 1954, renunciou ao mandato para retornar à Junta de Conciliação e Julgamento de Goiânia, sendo substituído na Câmara pelo cônego José Trindade da Fonseca e Silva, suplente do PSD.
 # sent_id = 19
+# text = Em maio de 1954, renunciou ao mandato para retornar à Junta de Conciliação e Julgamento de Goiânia, sendo substituído na Câmara pelo cônego José Trindade da Fonseca e Silva, suplente do PSD.
 1	Em	em	ADP	_	_	2	case	_	_
 2	maio	maio	NOUN	_	Gender=Masc|Number=Sing	6	obl	_	_
 3	de	de	ADP	_	_	4	case	_	_
@@ -608,22 +609,22 @@
 7-8	ao	_	_	_	_	_	_	_	_
 7	a	a	ADP	_	_	9	case	_	_
 8	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	9	det	_	_
-9	mandato	mandato	NOUN	_	Gender=Masc|Number=Sing	6	obl	_	_
+9	mandato	mandato	NOUN	_	Gender=Masc|Number=Sing	6	obj	_	_
 10	para	para	SCONJ	_	_	11	mark	_	_
 11	retornar	retornar	VERB	_	VerbForm=Inf	6	advcl	_	_
 12-13	à	_	_	_	_	_	_	_	_
 12	a	a	ADP	_	_	14	case	_	_
-13	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	14	det	_	_
-14	Junta	Junta	NOUN	_	Gender=Fem|Number=Sing	11	obl	_	_
+13	a	o	DET	_	Definite=Def|PronType=Art	14	det	_	_
+14	Junta	Junta	PROPN	_	Gender=Fem|Number=Sing	11	obl	_	_
 15	de	de	ADP	_	_	16	case	_	_
-16	Conciliação	conciliação	NOUN	_	Gender=Fem|Number=Sing	14	nmod	_	_
-17	e	e	CCONJ	_	_	18	cc	_	_
-18	Julgamento	julgamento	NOUN	_	Gender=Masc|Number=Sing	16	conj	_	_
+16	Conciliação	Conciliação	PROPN	_	ExtPos=PROPN|Number=Sing	14	nmod	_	_
+17	e	e	CCONJ	_	_	16	flat:name	_	_
+18	Julgamento	Julgamento	PROPN	_	Number=Sing	16	flat:name	_	_
 19	de	de	ADP	_	_	20	case	_	_
-20	Goiânia	Goiânia	PROPN	_	Gender=Unsp|Number=Sing	18	nmod	_	SpaceAfter=No
-21	,	,	PUNCT	_	_	11	punct	_	_
+20	Goiânia	Goiânia	PROPN	_	Number=Sing	14	nmod	_	SpaceAfter=No
+21	,	,	PUNCT	_	_	23	punct	_	_
 22	sendo	ser	AUX	_	VerbForm=Ger	23	aux:pass	_	_
-23	substituído	substituir	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	11	xcomp	_	_
+23	substituído	substituir	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	6	advcl	_	_
 24-25	na	_	_	_	_	_	_	_	_
 24	em	em	ADP	_	_	26	case	_	_
 25	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	26	det	_	_
@@ -632,24 +633,24 @@
 27	por	por	ADP	_	_	29	case	_	_
 28	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	29	det	_	_
 29	cônego	cônego	NOUN	_	Gender=Masc|Number=Sing	23	obl:agent	_	_
-30	José	José	PROPN	_	Gender=Masc|Number=Sing	29	appos	_	_
+30	José	José	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	29	appos	_	_
 31	Trindade	Trindade	PROPN	_	Number=Sing	30	flat:name	_	_
 32-33	da	_	_	_	_	_	_	_	_
 32	de	de	ADP	_	_	34	case	_	_
 33	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	34	det	_	_
-34	Fonseca	Fonseca	PROPN	_	Gender=Fem|Number=Sing	29	nmod	_	_
+34	Fonseca	Fonseca	PROPN	_	ExtPos=PROPN|Number=Sing	30	nmod	_	_
 35	e	e	CCONJ	_	_	34	flat:name	_	_
 36	Silva	Silva	PROPN	_	Number=Sing	34	flat:name	_	SpaceAfter=No
 37	,	,	PUNCT	_	_	38	punct	_	_
-38	suplente	suplente	NOUN	_	Gender=Masc|Number=Sing	34	appos	_	_
+38	suplente	suplente	NOUN	_	Gender=Masc|Number=Sing	29	appos	_	_
 39-40	do	_	_	_	_	_	_	_	_
 39	de	de	ADP	_	_	41	case	_	_
 40	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	41	det	_	_
-41	PSD	PSD	PROPN	_	Gender=Masc|Number=Sing	38	nmod	_	SpaceAfter=No
+41	PSD	PSD	PROPN	_	Gender=Masc|Number=Sing	38	obl	_	SpaceAfter=No
 42	.	.	PUNCT	_	_	6	punct	_	SpacesAfter=\n
 
-# text = No início de 1970, já então professor catedrático da Universidade Federal de Goiás, Fleury solicitou aposentadoria do cargo para assumir uma vaga de juiz no Tribunal Regional do Trabalho da 3ª Região, sediado em Belo Horizonte.
 # sent_id = 20
+# text = No início de 1970, já então professor catedrático da Universidade Federal de Goiás, Fleury solicitou aposentadoria do cargo para assumir uma vaga de juiz no Tribunal Regional do Trabalho da 3ª Região, sediado em Belo Horizonte.
 1-2	No	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	3	case	_	_
 2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
@@ -664,10 +665,10 @@
 11-12	da	_	_	_	_	_	_	_	_
 11	de	de	ADP	_	_	13	case	_	_
 12	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	13	det	_	_
-13	Universidade	Universidade	PROPN	_	Gender=Fem|Number=Sing	9	nmod	_	_
+13	Universidade	Universidade	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	9	nmod	_	_
 14	Federal	Federal	PROPN	_	Number=Sing	13	flat:name	_	_
 15	de	de	ADP	_	_	16	case	_	_
-16	Goiás	Goiás	PROPN	_	Gender=Masc|Number=Sing	13	nmod	_	SpaceAfter=No
+16	Goiás	Goiás	PROPN	_	Number=Sing	13	nmod	_	SpaceAfter=No
 17	,	,	PUNCT	_	_	9	punct	_	_
 18	Fleury	Fleury	PROPN	_	Gender=Masc|Number=Sing	19	nsubj	_	_
 19	solicitou	solicitar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
@@ -685,26 +686,26 @@
 30-31	no	_	_	_	_	_	_	_	_
 30	em	em	ADP	_	_	32	case	_	_
 31	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	32	det	_	_
-32	Tribunal	Tribunal	PROPN	_	Gender=Masc|Number=Sing	25	obl	_	_
+32	Tribunal	Tribunal	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	25	obl	_	_
 33	Regional	Regional	PROPN	_	Number=Sing	32	flat:name	_	_
 34-35	do	_	_	_	_	_	_	_	_
 34	de	de	ADP	_	_	36	case	_	_
 35	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	36	det	_	_
 36	Trabalho	Trabalho	PROPN	_	Number=Sing	32	nmod	_	_
 37-38	da	_	_	_	_	_	_	_	_
-37	de	de	ADP	_	_	40	case	_	_
-38	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	40	det	_	_
-39	3ª	3ª	ADJ	_	Gender=Fem|Number=Sing|NumType=Ord	40	amod	_	_
-40	Região	Região	NOUN	_	Gender=Fem|Number=Sing	36	nmod	_	SpaceAfter=No
+37	de	de	ADP	_	_	39	case	_	_
+38	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	39	det	_	_
+39	3ª	3ª	ADJ	_	Gender=Fem|Number=Sing|NumType=Ord	32	amod	_	_
+40	Região	Região	PROPN	_	Number=Sing	32	flat:name	_	SpaceAfter=No
 41	,	,	PUNCT	_	_	42	punct	_	_
-42	sediado	sediar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	25	acl	_	_
+42	sediado	sediar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	32	acl	_	_
 43	em	em	ADP	_	_	44	case	_	_
-44	Belo	Belo	PROPN	_	Gender=Masc|Number=Sing	42	obl	_	_
+44	Belo	Belo	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	42	obl	_	_
 45	Horizonte	Horizonte	PROPN	_	Number=Sing	44	flat:name	_	SpaceAfter=No
-46	.	.	PUNCT	_	_	19	punct	_	SpacesAfter=\n
+46	.	.	PUNCT	_	_	19	punct	_	_
 
-# text = Em 1974, foi nomeado ministro do Tribunal Superior do Trabalho, cargo no qual se aposentou em 1977.
 # sent_id = 21
+# text = Em 1974, foi nomeado ministro do Tribunal Superior do Trabalho, cargo no qual se aposentou em 1977.
 1	Em	em	ADP	_	_	2	case	_	_
 2	1974	1974	NUM	_	NumType=Card	5	obl	_	SpaceAfter=No
 3	,	,	PUNCT	_	_	2	punct	_	_
@@ -714,12 +715,12 @@
 7-8	do	_	_	_	_	_	_	_	_
 7	de	de	ADP	_	_	9	case	_	_
 8	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	9	det	_	_
-9	Tribunal	Tribunal	PROPN	_	Gender=Masc|Number=Sing	6	nmod	_	_
-10	Superior	Superior	PROPN	_	Number=Sing	9	flat:name	_	_
+9	Tribunal	tribunal	NOUN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	6	nmod	_	_
+10	Superior	superior	ADJ	_	Gender=Masc|Number=Sing	9	amod	_	_
 11-12	do	_	_	_	_	_	_	_	_
 11	de	de	ADP	_	_	13	case	_	_
 12	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	13	det	_	_
-13	Trabalho	Trabalho	PROPN	_	Number=Sing	9	nmod	_	SpaceAfter=No
+13	Trabalho	trabalho	NOUN	_	Gender=Masc|Number=Sing	9	nmod	_	SpaceAfter=No
 14	,	,	PUNCT	_	_	15	punct	_	_
 15	cargo	cargo	NOUN	_	Gender=Masc|Number=Sing	6	appos	_	_
 16-17	no	_	_	_	_	_	_	_	_
@@ -732,9 +733,9 @@
 22	1977	1977	NUM	_	NumType=Card	20	obl	_	SpaceAfter=No
 23	.	.	PUNCT	_	_	5	punct	_	SpacesAfter=\n
 
-# text = Paulo Fleury foi ainda presidente da seção goiana da Ordem dos Advogados do Brasil e membro do Instituto dos Advogados de Goiás.
 # sent_id = 22
-1	Paulo	Paulo	PROPN	_	Gender=Masc|Number=Sing	5	nsubj	_	_
+# text = Paulo Fleury foi ainda presidente da seção goiana da Ordem dos Advogados do Brasil e membro do Instituto dos Advogados de Goiás.
+1	Paulo	Paulo	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	5	nsubj	_	_
 2	Fleury	Fleury	PROPN	_	Number=Sing	1	flat:name	_	_
 3	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	cop	_	_
 4	ainda	ainda	ADV	_	_	5	advmod	_	_
@@ -747,7 +748,7 @@
 10-11	da	_	_	_	_	_	_	_	_
 10	de	de	ADP	_	_	12	case	_	_
 11	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	12	det	_	_
-12	Ordem	Ordem	PROPN	_	Gender=Fem|Number=Sing	8	nmod	_	_
+12	Ordem	ordem	NOUN	_	Gender=Fem|Number=Sing	8	nmod	_	_
 13-14	dos	_	_	_	_	_	_	_	_
 13	de	de	ADP	_	_	15	case	_	_
 14	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	15	det	_	_
@@ -757,21 +758,21 @@
 17	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	18	det	_	_
 18	Brasil	Brasil	PROPN	_	Gender=Masc|Number=Sing	15	nmod	_	_
 19	e	e	CCONJ	_	_	20	cc	_	_
-20	membro	membro	NOUN	_	Gender=Masc|Number=Sing	18	conj	_	_
+20	membro	membro	NOUN	_	Gender=Masc|Number=Sing	5	conj	_	_
 21-22	do	_	_	_	_	_	_	_	_
 21	de	de	ADP	_	_	23	case	_	_
 22	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	23	det	_	_
-23	Instituto	Instituto	PROPN	_	Gender=Masc|Number=Sing	18	nmod	_	_
+23	Instituto	Instituto	PROPN	_	Gender=Masc|Number=Sing	20	nmod	_	_
 24-25	dos	_	_	_	_	_	_	_	_
 24	de	de	ADP	_	_	26	case	_	_
 25	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	26	det	_	_
-26	Advogados	advogado	NOUN	_	Gender=Masc|Number=Plur	23	nmod	_	_
+26	Advogados	Advogados	PROPN	_	Number=Sing	23	nmod	_	_
 27	de	de	ADP	_	_	28	case	_	_
-28	Goiás	Goiás	PROPN	_	Gender=Masc|Number=Sing	26	nmod	_	SpaceAfter=No
+28	Goiás	Goiás	PROPN	_	Number=Sing	26	nmod	_	SpaceAfter=No
 29	.	.	PUNCT	_	_	5	punct	_	SpacesAfter=\n
 
-# text = Faleceu em Goiânia no dia 22 de fevereiro de 1990.
 # sent_id = 23
+# text = Faleceu em Goiânia no dia 22 de fevereiro de 1990.
 1	Faleceu	falecer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2	em	em	ADP	_	_	3	case	_	_
 3	Goiânia	Goiânia	PROPN	_	Gender=Masc|Number=Sing	1	obl	_	_
@@ -786,36 +787,36 @@
 11	1990	1990	NUM	_	NumType=Card	9	nmod	_	SpaceAfter=No
 12	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
 
-# text = Era casado com Célia Teixeira Silva e Sousa, com quem teve quatro filhos.
 # sent_id = 24
+# text = Era casado com Célia Teixeira Silva e Sousa, com quem teve quatro filhos.
 1	Era	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	2	cop	_	_
 2	casado	casado	ADJ	_	Gender=Masc|Number=Sing	0	root	_	_
 3	com	com	ADP	_	_	4	case	_	_
-4	Célia	Célia	PROPN	_	Gender=Masc|Number=Sing	2	obl	_	_
+4	Célia	Célia	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	2	obl	_	_
 5	Teixeira	Teixeira	PROPN	_	Number=Sing	4	flat:name	_	_
 6	Silva	Silva	PROPN	_	Number=Sing	4	flat:name	_	_
-7	e	e	CCONJ	_	_	8	cc	_	_
-8	Sousa	Sousa	PROPN	_	Number=Sing	4	conj	_	SpaceAfter=No
+7	e	e	CCONJ	_	_	4	flat:name	_	_
+8	Sousa	Sousa	PROPN	_	Number=Sing	4	flat:name	_	SpaceAfter=No
 9	,	,	PUNCT	_	_	12	punct	_	_
 10	com	com	ADP	_	_	11	case	_	_
-11	quem	quem	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	12	obl	_	_
+11	quem	quem	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	12	obl	_	_
 12	teve	ter	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	acl:relcl	_	_
 13	quatro	quatro	NUM	_	NumType=Card	14	nummod	_	_
-14	filhos	filho	NOUN	_	Gender=Masc|Number=Plur	12	nsubj	_	SpaceAfter=No
-15	.	.	PUNCT	_	_	2	punct	_	SpacesAfter=\n
+14	filhos	filho	NOUN	_	Gender=Masc|Number=Plur	12	obj	_	SpaceAfter=No
+15	.	.	PUNCT	_	_	2	punct	_	_
 
-# text = Seu sogro, João Teixeira Álvares Júnior, foi médico e ocupou uma secretaria de estado.
 # sent_id = 25
+# text = Seu sogro, João Teixeira Álvares Júnior, foi médico e ocupou uma secretaria de estado.
 1	Seu	seu	DET	_	Gender=Masc|Number=Sing|PronType=Prs	2	det	_	_
 2	sogro	sogro	NOUN	_	Gender=Masc|Number=Sing	10	nsubj	_	SpaceAfter=No
 3	,	,	PUNCT	_	_	4	punct	_	_
-4	João	João	PROPN	_	Gender=Masc|Number=Sing	2	appos	_	_
+4	João	João	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	2	appos	_	_
 5	Teixeira	Teixeira	PROPN	_	Number=Sing	4	flat:name	_	_
 6	Álvares	Álvares	PROPN	_	Number=Sing	4	flat:name	_	_
 7	Júnior	Júnior	PROPN	_	Number=Sing	4	flat:name	_	SpaceAfter=No
 8	,	,	PUNCT	_	_	4	punct	_	_
 9	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	10	cop	_	_
-10	médico	médico	ADJ	_	Gender=Masc|Number=Sing	0	root	_	_
+10	médico	médico	NOUN	_	Gender=Masc|Number=Sing	0	root	_	_
 11	e	e	CCONJ	_	_	12	cc	_	_
 12	ocupou	ocupar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	10	conj	_	_
 13	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	14	det	_	_

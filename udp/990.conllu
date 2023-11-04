@@ -1,9 +1,12 @@
-# text = «Ari Campista» nasceu no Rio de Janeiro, então Distrito Federal, em 1912.
-# sent_id = 1
+# generator = UDPipe 2, https://lindat.mff.cuni.cz/services/udpipe
+# udpipe_model = portuguese-bosque-ud-2.12-230717
+# udpipe_model_licence = CC BY-NC-SA
+# newdoc
 # newpar
-# newdoc id = ../raw/990.raw
-1	«	«	PUNCT	_	_	2	punct	_	SpaceAfter=No|SpacesBefore=\n
-2	Ari	Ari	PROPN	_	Gender=Masc|Number=Sing	5	nsubj	_	_
+# sent_id = 1
+# text = «Ari Campista» nasceu no Rio de Janeiro, então Distrito Federal, em 1912.
+1	«	«	PUNCT	_	_	2	punct	_	SpaceAfter=No
+2	Ari	Ari	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	5	nsubj	_	_
 3	Campista	Campista	PROPN	_	Number=Sing	2	flat:name	_	SpaceAfter=No
 4	»	»	PUNCT	_	_	2	punct	_	_
 5	nasceu	nascer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
@@ -15,23 +18,22 @@
 10	Janeiro	Janeiro	PROPN	_	Number=Sing	8	nmod	_	SpaceAfter=No
 11	,	,	PUNCT	_	_	13	punct	_	_
 12	então	então	ADV	_	_	13	advmod	_	_
-13	Distrito	Distrito	PROPN	_	Number=Sing	8	flat:name	_	_
+13	Distrito	Distrito	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	8	appos	_	_
 14	Federal	Federal	PROPN	_	Number=Sing	13	flat:name	_	SpaceAfter=No
 15	,	,	PUNCT	_	_	13	punct	_	_
 16	em	em	ADP	_	_	17	case	_	_
 17	1912	1912	NUM	_	NumType=Card	5	obl	_	SpaceAfter=No
-18	.	.	PUNCT	_	_	5	punct	_	_
+18	.	.	PUNCT	_	_	5	punct	_	SpacesAfter=\n
 
-# text = Iniciou sua carreira de sindicalista em 1933, dentro do modelo de organização sindical de tipo corporativista introduzido pela Revolução de 1930.
 # sent_id = 2
-# newpar
+# text = Iniciou sua carreira de sindicalista em 1933, dentro do modelo de organização sindical de tipo corporativista introduzido pela Revolução de 1930.
 1	Iniciou	iniciar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2	sua	seu	DET	_	Gender=Fem|Number=Sing|PronType=Prs	3	det	_	_
 3	carreira	carreira	NOUN	_	Gender=Fem|Number=Sing	1	obj	_	_
 4	de	de	ADP	_	_	5	case	_	_
 5	sindicalista	sindicalista	NOUN	_	Gender=Masc|Number=Sing	3	nmod	_	_
 6	em	em	ADP	_	_	7	case	_	_
-7	1933	1933	NUM	_	NumType=Card	5	nmod	_	SpaceAfter=No
+7	1933	1933	NUM	_	NumType=Card	1	obl	_	SpaceAfter=No
 8	,	,	PUNCT	_	_	1	punct	_	_
 9	dentro	dentro	ADV	_	_	1	advmod	_	_
 10-11	do	_	_	_	_	_	_	_	_
@@ -44,17 +46,17 @@
 16	de	de	ADP	_	_	17	case	_	_
 17	tipo	tipo	NOUN	_	Gender=Masc|Number=Sing	14	nmod	_	_
 18	corporativista	corporativista	ADJ	_	Gender=Masc|Number=Sing	17	amod	_	_
-19	introduzido	introduzir	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	12	acl	_	_
+19	introduzido	introduzir	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	17	acl	_	_
 20-21	pela	_	_	_	_	_	_	_	_
 20	por	por	ADP	_	_	22	case	_	_
 21	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	22	det	_	_
-22	Revolução	Revolução	PROPN	_	Gender=Fem|Number=Sing	19	obl:agent	_	_
+22	Revolução	revolução	NOUN	_	Gender=Fem|Number=Sing	19	obl:agent	_	_
 23	de	de	ADP	_	_	24	case	_	_
 24	1930	1930	NUM	_	NumType=Card	22	nmod	_	SpaceAfter=No
 25	.	.	PUNCT	_	_	1	punct	_	_
 
-# text = Como funcionário do Banco do Comércio e Indústria de Minas Gerais, atuou inicialmente no Sindicato dos Bancários do Rio de Janeiro.
 # sent_id = 3
+# text = Como funcionário do Banco do Comércio e Indústria de Minas Gerais, atuou inicialmente no Sindicato dos Bancários do Rio de Janeiro.
 1	Como	como	ADP	_	_	2	case	_	_
 2	funcionário	funcionário	NOUN	_	Gender=Masc|Number=Sing	15	obl	_	_
 3-4	do	_	_	_	_	_	_	_	_
@@ -65,10 +67,10 @@
 6	de	de	ADP	_	_	8	case	_	_
 7	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	8	det	_	_
 8	Comércio	Comércio	PROPN	_	Number=Sing	5	nmod	_	_
-9	e	e	PROPN	_	_	8	flat:name	_	_
-10	Indústria	Indústria	PROPN	_	Gender=Fem|Number=Sing	8	flat:name	_	_
+9	e	e	CCONJ	_	_	8	flat:name	_	_
+10	Indústria	Indústria	PROPN	_	Number=Sing	8	flat:name	_	_
 11	de	de	ADP	_	_	12	case	_	_
-12	Minas	Minas	PROPN	_	Gender=Masc|Number=Sing	8	nmod	_	_
+12	Minas	Minas	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	5	nmod	_	_
 13	Gerais	Gerais	PROPN	_	Number=Sing	12	flat:name	_	SpaceAfter=No
 14	,	,	PUNCT	_	_	2	punct	_	_
 15	atuou	atuar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
@@ -80,22 +82,22 @@
 20-21	dos	_	_	_	_	_	_	_	_
 20	de	de	ADP	_	_	22	case	_	_
 21	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	22	det	_	_
-22	Bancários	bancários	PROPN	_	Gender=Masc|Number=Plur	19	nmod	_	_
+22	Bancários	Bancários	PROPN	_	Number=Sing	19	nmod	_	_
 23-24	do	_	_	_	_	_	_	_	_
 23	de	de	ADP	_	_	25	case	_	_
 24	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	25	det	_	_
-25	Rio	Rio	PROPN	_	Gender=Masc|Number=Sing	22	nmod	_	_
+25	Rio	Rio	PROPN	_	Gender=Masc|Number=Sing	19	nmod	_	_
 26	de	de	ADP	_	_	27	case	_	_
 27	Janeiro	Janeiro	PROPN	_	Number=Sing	25	nmod	_	SpaceAfter=No
 28	.	.	PUNCT	_	_	15	punct	_	_
 
-# text = Em seguida passou a trabalhar na indústria química, participando da direção do Sindicato dos Trabalhadores nas Indústrias de Produtos Químicos do Rio de Janeiro.
 # sent_id = 4
+# text = Em seguida passou a trabalhar na indústria química, participando da direção do Sindicato dos Trabalhadores nas Indústrias de Produtos Químicos do Rio de Janeiro.
 1	Em	em	ADP	_	_	2	case	_	_
-2	seguida	seguida	NOUN	_	Gender=Fem|Number=Sing	5	obl	_	_
-3	passou	passar	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	aux	_	_
-4	a	a	ADP	_	_	5	obl	_	_
-5	trabalhar	trabalhar	VERB	_	VerbForm=Inf	0	root	_	_
+2	seguida	seguida	NOUN	_	Gender=Fem|Number=Sing	3	obl	_	_
+3	passou	passar	VERB	_	ExtPos=AUX|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+4	a	a	SCONJ	_	_	5	mark	_	_
+5	trabalhar	trabalhar	VERB	_	VerbForm=Inf	3	xcomp	_	_
 6-7	na	_	_	_	_	_	_	_	_
 6	em	em	ADP	_	_	8	case	_	_
 7	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	8	det	_	_
@@ -106,11 +108,11 @@
 12-13	da	_	_	_	_	_	_	_	_
 12	de	de	ADP	_	_	14	case	_	_
 13	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	14	det	_	_
-14	direção	direção	NOUN	_	Gender=Fem|Number=Sing	11	obl	_	_
+14	direção	direção	NOUN	_	Gender=Fem|Number=Sing	11	obj	_	_
 15-16	do	_	_	_	_	_	_	_	_
 15	de	de	ADP	_	_	17	case	_	_
 16	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	17	det	_	_
-17	Sindicato	sindicato	PROPN	_	Gender=Masc|Number=Sing	14	nmod	_	_
+17	Sindicato	Sindicato	PROPN	_	Gender=Masc|Number=Sing	14	nmod	_	_
 18-19	dos	_	_	_	_	_	_	_	_
 18	de	de	ADP	_	_	20	case	_	_
 19	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	20	det	_	_
@@ -118,20 +120,20 @@
 21-22	nas	_	_	_	_	_	_	_	_
 21	em	em	ADP	_	_	23	case	_	_
 22	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	23	det	_	_
-23	Indústrias	indústrias	PROPN	_	Gender=Fem|Number=Plur	17	nmod	_	_
+23	Indústrias	Indústrias	PROPN	_	Number=Sing	17	nmod	_	_
 24	de	de	ADP	_	_	25	case	_	_
-25	Produtos	Produtos	PROPN	_	Number=Sing	23	nmod	_	_
+25	Produtos	Produtos	PROPN	_	ExtPos=PROPN|Number=Sing	23	nmod	_	_
 26	Químicos	Químicos	PROPN	_	Number=Sing	25	flat:name	_	_
 27-28	do	_	_	_	_	_	_	_	_
 27	de	de	ADP	_	_	29	case	_	_
 28	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	29	det	_	_
-29	Rio	Rio	PROPN	_	Gender=Masc|Number=Sing	17	nmod	_	_
+29	Rio	Rio	PROPN	_	Gender=Masc|Number=Sing	23	nmod	_	_
 30	de	de	ADP	_	_	31	case	_	_
 31	Janeiro	Janeiro	PROPN	_	Number=Sing	29	nmod	_	SpaceAfter=No
 32	.	.	PUNCT	_	_	5	punct	_	_
 
-# text = Em 1934, liderou um movimento empreendido pelos operários da Companhia Química Merck do Brasil, reivindicando melhores salários.
 # sent_id = 5
+# text = Em 1934, liderou um movimento empreendido pelos operários da Companhia Química Merck do Brasil, reivindicando melhores salários.
 1	Em	em	ADP	_	_	2	case	_	_
 2	1934	1934	NUM	_	NumType=Card	4	obl	_	SpaceAfter=No
 3	,	,	PUNCT	_	_	2	punct	_	_
@@ -146,29 +148,28 @@
 11-12	da	_	_	_	_	_	_	_	_
 11	de	de	ADP	_	_	13	case	_	_
 12	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	13	det	_	_
-13	Companhia	Companhia	PROPN	_	Gender=Fem|Number=Sing	10	nmod	_	_
-14	Química	química	PROPN	_	Number=Sing	13	flat:name	_	_
-15	Merck	Merck	PROPN	_	Gender=Unsp|Number=Sing	13	flat:name	_	_
+13	Companhia	Companhia	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	10	nmod	_	_
+14	Química	Química	PROPN	_	Number=Sing	13	flat:name	_	_
+15	Merck	Merck	PROPN	_	Number=Sing	13	flat:name	_	_
 16-17	do	_	_	_	_	_	_	_	_
 16	de	de	ADP	_	_	18	case	_	_
 17	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	18	det	_	_
-18	Brasil	Brasil	PROPN	_	Number=Sing	13	nmod	_	SpaceAfter=No
+18	Brasil	Brasil	PROPN	_	Gender=Masc|Number=Sing	13	nmod	_	SpaceAfter=No
 19	,	,	PUNCT	_	_	20	punct	_	_
 20	reivindicando	reivindicar	VERB	_	VerbForm=Ger	4	advcl	_	_
 21	melhores	bom	ADJ	_	Gender=Masc|Number=Plur	22	amod	_	_
 22	salários	salário	NOUN	_	Gender=Masc|Number=Plur	20	obj	_	SpaceAfter=No
-23	.	.	PUNCT	_	_	4	punct	_	_
+23	.	.	PUNCT	_	_	4	punct	_	SpacesAfter=\n
 
-# text = Após a instauração do Estado Novo, em novembro de 1937, participou — segundo seu próprio depoimento — do movimento integralista, que subsistiu a despeito de a Ação Integralista Brasileira ter sido declarada ilegal no mês de dezembro desse mesmo ano.
 # sent_id = 6
-# newpar
+# text = Após a instauração do Estado Novo, em novembro de 1937, participou - segundo seu próprio depoimento - do movimento integralista, que subsistiu a despeito de a Ação Integralista Brasileira ter sido declarada ilegal no mês de dezembro desse mesmo ano.
 1	Após	após	ADP	_	_	3	case	_	_
 2	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	3	det	_	_
 3	instauração	instauração	NOUN	_	Gender=Fem|Number=Sing	14	obl	_	_
 4-5	do	_	_	_	_	_	_	_	_
 4	de	de	ADP	_	_	6	case	_	_
 5	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	6	det	_	_
-6	Estado	Estado	PROPN	_	Gender=Masc|Number=Sing	3	nmod	_	_
+6	Estado	Estado	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	3	nmod	_	_
 7	Novo	Novo	PROPN	_	Number=Sing	6	flat:name	_	SpaceAfter=No
 8	,	,	PUNCT	_	_	3	punct	_	_
 9	em	em	ADP	_	_	10	case	_	_
@@ -177,46 +178,46 @@
 12	1937	1937	NUM	_	NumType=Card	10	nmod	_	SpaceAfter=No
 13	,	,	PUNCT	_	_	10	punct	_	_
 14	participou	participar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
-15	—	—	PUNCT	_	_	14	punct	_	_
-16	segundo	segundo	ADJ	_	_	14	parataxis	_	_
+15	-	-	PUNCT	_	_	14	punct	_	_
+16	segundo	segundo	ADP	_	_	19	case	_	_
 17	seu	seu	DET	_	Gender=Masc|Number=Sing|PronType=Prs	19	det	_	_
-18	próprio	próprio	ADJ	_	Gender=Masc|Number=Sing|PronType=Emp	19	amod	_	_
-19	depoimento	depoimento	NOUN	_	Gender=Masc|Number=Sing	16	nsubj	_	_
-20	—	—	PUNCT	_	_	16	punct	_	_
+18	próprio	próprio	ADJ	_	Gender=Masc|Number=Sing	19	amod	_	_
+19	depoimento	depoimento	NOUN	_	Gender=Masc|Number=Sing	14	obl	_	_
+20	-	-	PUNCT	_	_	14	punct	_	_
 21-22	do	_	_	_	_	_	_	_	_
 21	de	de	ADP	_	_	23	case	_	_
 22	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	23	det	_	_
-23	movimento	movimento	NOUN	_	Gender=Masc|Number=Sing	19	nmod	_	_
+23	movimento	movimento	NOUN	_	Gender=Masc|Number=Sing	14	obj	_	_
 24	integralista	integralista	ADJ	_	Gender=Masc|Number=Sing	23	amod	_	SpaceAfter=No
-25	,	,	PUNCT	_	_	16	punct	_	_
+25	,	,	PUNCT	_	_	27	punct	_	_
 26	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	27	nsubj	_	_
-27	subsistiu	subsistir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	19	acl:relcl	_	_
-28	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	29	det	_	_
-29	despeito	despeito	NOUN	_	Gender=Masc|Number=Sing	27	obj	_	_
-30	de	de	ADP	_	_	32	case	_	_
+27	subsistiu	subsistir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	23	acl:relcl	_	_
+28	a	a	ADP	_	_	29	case	_	_
+29	despeito	despeito	NOUN	_	Gender=Masc|Number=Sing	27	obl	_	_
+30	de	de	ADP	_	_	37	mark	_	_
 31	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	32	det	_	_
-32	Ação	ação	PROPN	_	Number=Sing	29	nmod	_	_
+32	Ação	Ação	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	37	nsubj:pass	_	_
 33	Integralista	Integralista	PROPN	_	Number=Sing	32	flat:name	_	_
-34	Brasileira	brasileira	PROPN	_	Number=Sing	32	flat:name	_	_
-35	ter	ter	AUX	_	VerbForm=Inf	37	aux	_	_
+34	Brasileira	Brasileira	PROPN	_	Number=Sing	32	flat:name	_	_
+35	ter	ter	AUX	_	Number=Sing|Person=3|VerbForm=Inf	37	aux	_	_
 36	sido	ser	AUX	_	VerbForm=Part	37	aux:pass	_	_
 37	declarada	declarar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	27	advcl	_	_
-38	ilegal	ilegal	ADJ	_	Gender=Fem|Number=Sing	37	advmod	_	_
+38	ilegal	ilegal	ADJ	_	Gender=Fem|Number=Sing	37	xcomp	_	_
 39-40	no	_	_	_	_	_	_	_	_
 39	em	em	ADP	_	_	41	case	_	_
 40	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	41	det	_	_
-41	mês	mês	NOUN	_	Gender=Masc|Number=Sing	38	obl	_	_
+41	mês	mês	NOUN	_	Gender=Masc|Number=Sing	37	obl	_	_
 42	de	de	ADP	_	_	43	case	_	_
-43	dezembro	dezembro	NOUN	_	Gender=Masc|Number=Sing	41	nmod:tmod	_	_
+43	dezembro	dezembro	NOUN	_	Gender=Masc|Number=Sing	41	nmod	_	_
 44-45	desse	_	_	_	_	_	_	_	_
 44	de	de	ADP	_	_	47	case	_	_
 45	esse	esse	DET	_	Gender=Masc|Number=Sing|PronType=Dem	47	det	_	_
 46	mesmo	mesmo	ADJ	_	Gender=Masc|Number=Sing	47	amod	_	_
-47	ano	ano	NOUN	_	Gender=Masc|Number=Sing	41	nmod	_	SpaceAfter=No
+47	ano	ano	NOUN	_	Gender=Masc|Number=Sing	43	nmod	_	SpaceAfter=No
 48	.	.	PUNCT	_	_	14	punct	_	_
 
-# text = Em maio de 1938, tomou parte ativa no levante integralista desencadeado no dia 11 contra Getúlio Vargas, com o apoio de oposicionistas liberais.
 # sent_id = 7
+# text = Em maio de 1938, tomou parte ativa no levante integralista desencadeado no dia 11 contra Getúlio Vargas, com o apoio de oposicionistas liberais.
 1	Em	em	ADP	_	_	2	case	_	_
 2	maio	maio	NOUN	_	Gender=Masc|Number=Sing	6	obl	_	_
 3	de	de	ADP	_	_	4	case	_	_
@@ -237,20 +238,20 @@
 16	dia	dia	NOUN	_	Gender=Masc|Number=Sing	13	obl	_	_
 17	11	11	NUM	_	NumType=Card	16	nummod	_	_
 18	contra	contra	ADP	_	_	19	case	_	_
-19	Getúlio	Getúlio	PROPN	_	Gender=Masc|Number=Sing	16	nmod	_	_
+19	Getúlio	Getúlio	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	16	nmod	_	_
 20	Vargas	Vargas	PROPN	_	Number=Sing	19	flat:name	_	SpaceAfter=No
 21	,	,	PUNCT	_	_	13	punct	_	_
 22	com	com	ADP	_	_	24	case	_	_
 23	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	24	det	_	_
-24	apoio	apoio	NOUN	_	Gender=Masc|Number=Sing	6	obl	_	_
+24	apoio	apoio	NOUN	_	Gender=Masc|Number=Sing	13	obl	_	_
 25	de	de	ADP	_	_	26	case	_	_
-26	oposicionistas	oposicionista	NOUN	_	Gender=Fem|Number=Plur	24	nmod	_	_
-27	liberais	liberal	ADJ	_	Gender=Fem|Number=Plur	26	amod	_	SpaceAfter=No
+26	oposicionistas	oposicionista	NOUN	_	Gender=Masc|Number=Plur	24	nmod	_	_
+27	liberais	liberal	ADJ	_	Gender=Masc|Number=Plur	26	amod	_	SpaceAfter=No
 28	.	.	PUNCT	_	_	6	punct	_	_
 
-# text = Esmagado o levante em poucas horas, permaneceu algum tempo na prisão.
 # sent_id = 8
-1	Esmagado	Esmagar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	8	dep	_	_
+# text = Esmagado o levante em poucas horas, permaneceu algum tempo na prisão.
+1	Esmagado	esmagar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	8	advcl	_	_
 2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
 3	levante	levante	NOUN	_	Gender=Masc|Number=Sing	1	obj	_	_
 4	em	em	ADP	_	_	6	case	_	_
@@ -264,16 +265,15 @@
 11	em	em	ADP	_	_	13	case	_	_
 12	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	13	det	_	_
 13	prisão	prisão	NOUN	_	Gender=Fem|Number=Sing	8	obl	_	SpaceAfter=No
-14	.	.	PUNCT	_	_	8	punct	_	_
+14	.	.	PUNCT	_	_	8	punct	_	SpacesAfter=\n
 
-# text = Com a deposição de Vargas em outubro de 1945 e o início do processo de redemocratização do país, o sindicalismo corporativista expandiu suas bases.
 # sent_id = 9
-# newpar
+# text = Com a deposição de Vargas em outubro de 1945 e o início do processo de redemocratização do país, o sindicalismo corporativista expandiu suas bases.
 1	Com	com	ADP	_	_	3	case	_	_
 2	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	3	det	_	_
 3	deposição	deposição	NOUN	_	Gender=Fem|Number=Sing	25	obl	_	_
 4	de	de	ADP	_	_	5	case	_	_
-5	Vargas	Vargas	PROPN	_	Gender=Fem|Number=Plur	3	nmod	_	_
+5	Vargas	Vargas	PROPN	_	Gender=Masc|Number=Sing	3	nmod	_	_
 6	em	em	ADP	_	_	7	case	_	_
 7	outubro	outubro	NOUN	_	Gender=Masc|Number=Sing	3	nmod	_	_
 8	de	de	ADP	_	_	9	case	_	_
@@ -300,14 +300,14 @@
 27	bases	base	NOUN	_	Gender=Fem|Number=Plur	25	obj	_	SpaceAfter=No
 28	.	.	PUNCT	_	_	25	punct	_	_
 
-# text = Assim, em 19 de julho de 1946 foi criada a Confederação Nacional dos Trabalhadores na Indústria (CNTI), reconhecida pelo presidente da República em 25 de outubro e presidida por Deocleciano de Holanda Cavalcanti.
 # sent_id = 10
+# text = Assim, em 19 de julho de 1946 foi criada a Confederação Nacional dos Trabalhadores na Indústria (CNTI), reconhecida pelo presidente da República em 25 de outubro e presidida por Deocleciano de Holanda Cavalcanti.
 1	Assim	assim	ADV	_	_	10	advmod	_	SpaceAfter=No
 2	,	,	PUNCT	_	_	1	punct	_	_
 3	em	em	ADP	_	_	4	case	_	_
 4	19	19	NUM	_	NumType=Card	10	obl	_	_
 5	de	de	ADP	_	_	6	case	_	_
-6	julho	julho	NOUN	_	Gender=Masc|Number=Sing	4	nmod:tmod	_	_
+6	julho	julho	NOUN	_	Gender=Masc|Number=Sing	4	nmod	_	_
 7	de	de	ADP	_	_	8	case	_	_
 8	1946	1946	NUM	_	NumType=Card	6	nmod	_	_
 9	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	10	aux:pass	_	_
@@ -322,9 +322,9 @@
 17-18	na	_	_	_	_	_	_	_	_
 17	em	em	ADP	_	_	19	case	_	_
 18	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	19	det	_	_
-19	Indústria	Indústria	PROPN	_	Gender=Fem|Number=Sing	12	nmod	_	_
+19	Indústria	Indústria	PROPN	_	Number=Sing	16	nmod	_	_
 20	(	(	PUNCT	_	_	21	punct	_	SpaceAfter=No
-21	CNTI	CNTI	PROPN	_	Gender=Masc|Number=Sing	19	appos	_	SpaceAfter=No
+21	CNTI	CNTI	PROPN	_	Gender=Fem|Number=Sing	12	appos	_	SpaceAfter=No
 22	)	)	PUNCT	_	_	21	punct	_	SpaceAfter=No
 23	,	,	PUNCT	_	_	24	punct	_	_
 24	reconhecida	reconhecer	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	12	acl	_	_
@@ -335,26 +335,26 @@
 28-29	da	_	_	_	_	_	_	_	_
 28	de	de	ADP	_	_	30	case	_	_
 29	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	30	det	_	_
-30	República	República	PROPN	_	Number=Sing	27	nmod	_	_
+30	República	república	NOUN	_	Gender=Fem|Number=Sing	27	nmod	_	_
 31	em	em	ADP	_	_	32	case	_	_
 32	25	25	NUM	_	NumType=Card	24	obl	_	_
 33	de	de	ADP	_	_	34	case	_	_
-34	outubro	outubro	NOUN	_	Gender=Masc|Number=Sing	32	nmod:tmod	_	_
+34	outubro	outubro	NOUN	_	Gender=Masc|Number=Sing	32	nmod	_	_
 35	e	e	CCONJ	_	_	36	cc	_	_
-36	presidida	presidir	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	32	conj	_	_
+36	presidida	presidir	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	24	conj	_	_
 37	por	por	ADP	_	_	38	case	_	_
 38	Deocleciano	Deocleciano	PROPN	_	Gender=Masc|Number=Sing	36	obl:agent	_	_
 39	de	de	ADP	_	_	40	case	_	_
-40	Holanda	Holanda	PROPN	_	Number=Sing	38	nmod	_	_
+40	Holanda	Holanda	PROPN	_	ExtPos=PROPN|Number=Sing	38	nmod	_	_
 41	Cavalcanti	Cavalcanti	PROPN	_	Number=Sing	40	flat:name	_	SpaceAfter=No
 42	.	.	PUNCT	_	_	10	punct	_	_
 
-# text = Campista começou a atuar na CNTI em 1953, introduzido pelo presidente da organização.
 # sent_id = 11
-1	Campista	Campista	PROPN	_	Gender=Masc|Number=Sing	4	nsubj	_	_
-2	começou	começar	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	aux	_	_
-3	a	a	ADP	_	_	4	obl	_	_
-4	atuar	atuar	VERB	_	VerbForm=Inf	0	root	_	_
+# text = Campista começou a atuar na CNTI em 1953, introduzido pelo presidente da organização.
+1	Campista	Campista	PROPN	_	Gender=Masc|Number=Sing	2	nsubj	_	_
+2	começou	começar	VERB	_	ExtPos=AUX|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+3	a	a	SCONJ	_	_	4	mark	_	_
+4	atuar	atuar	VERB	_	VerbForm=Inf	2	xcomp	_	_
 5-6	na	_	_	_	_	_	_	_	_
 5	em	em	ADP	_	_	7	case	_	_
 6	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	7	det	_	_
@@ -362,36 +362,35 @@
 8	em	em	ADP	_	_	9	case	_	_
 9	1953	1953	NUM	_	NumType=Card	4	obl	_	SpaceAfter=No
 10	,	,	PUNCT	_	_	11	punct	_	_
-11	introduzido	introduzir	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	4	advcl	_	_
+11	introduzido	introduzir	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	4	advcl	_	_
 12-13	pelo	_	_	_	_	_	_	_	_
 12	por	por	ADP	_	_	14	case	_	_
 13	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	14	det	_	_
-14	presidente	presidente	NOUN	_	Gender=Masc|Number=Sing	11	obl	_	_
+14	presidente	presidente	NOUN	_	Gender=Masc|Number=Sing	11	obl:agent	_	_
 15-16	da	_	_	_	_	_	_	_	_
 15	de	de	ADP	_	_	17	case	_	_
 16	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	17	det	_	_
 17	organização	organização	NOUN	_	Gender=Fem|Number=Sing	14	nmod	_	SpaceAfter=No
-18	.	.	PUNCT	_	_	4	punct	_	_
+18	.	.	PUNCT	_	_	4	punct	_	SpacesAfter=\n
 
-# text = Por outro lado, em maio de 1955 o Partido Comunista Brasileiro, então chamado Partido Comunista do Brasil (PCB), criou um organismo eleitoral denominado Movimento Nacional Popular Trabalhista (MNPT), com vistas às eleições presidenciais marcadas para outubro daquele ano.
 # sent_id = 12
-# newpar
-1	Por	por	ADP	_	_	3	case	_	_
-2	outro	outro	DET	_	Gender=Masc|Number=Sing|PronType=Ind	3	det	_	_
-3	lado	lado	NOUN	_	Gender=Masc|Number=Sing	25	obl	_	SpaceAfter=No
+# text = Por outro lado, em maio de 1955 o Partido Comunista Brasileiro, então chamado Partido Comunista do Brasil (PCB), criou um organismo eleitoral denominado Movimento Nacional Popular Trabalhista (MNPT), com vistas às eleições presidenciais marcadas para outubro daquele ano.
+1	Por	por	ADP	_	ExtPos=CCONJ	25	cc	_	_
+2	outro	outro	DET	_	Gender=Masc|Number=Sing|PronType=Ind	1	fixed	_	_
+3	lado	lado	NOUN	_	Gender=Masc|Number=Sing	1	fixed	_	SpaceAfter=No
 4	,	,	PUNCT	_	_	3	punct	_	_
 5	em	em	ADP	_	_	6	case	_	_
 6	maio	maio	NOUN	_	Gender=Masc|Number=Sing	25	obl	_	_
 7	de	de	ADP	_	_	8	case	_	_
 8	1955	1955	NUM	_	NumType=Card	6	nmod	_	_
 9	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	10	det	_	_
-10	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	6	appos	_	_
+10	Partido	Partido	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	25	nsubj	_	_
 11	Comunista	Comunista	PROPN	_	Number=Sing	10	flat:name	_	_
 12	Brasileiro	Brasileiro	PROPN	_	Number=Sing	10	flat:name	_	SpaceAfter=No
 13	,	,	PUNCT	_	_	15	punct	_	_
 14	então	então	ADV	_	_	15	advmod	_	_
-15	chamado	chamar	VERB	_	Gender=Masc|Number=Sing	10	acl	_	_
-16	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	15	obj	_	_
+15	chamado	chamar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	10	acl	_	_
+16	Partido	Partido	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	15	obj	_	_
 17	Comunista	Comunista	PROPN	_	Number=Sing	16	flat:name	_	_
 18-19	do	_	_	_	_	_	_	_	_
 18	de	de	ADP	_	_	20	case	_	_
@@ -406,16 +405,16 @@
 27	organismo	organismo	NOUN	_	Gender=Masc|Number=Sing	25	obj	_	_
 28	eleitoral	eleitoral	ADJ	_	Gender=Masc|Number=Sing	27	amod	_	_
 29	denominado	denominar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	27	acl	_	_
-30	Movimento	Movimento	PROPN	_	Gender=Masc|Number=Sing	29	appos	_	_
+30	Movimento	Movimento	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	29	obj	_	_
 31	Nacional	Nacional	PROPN	_	Number=Sing	30	flat:name	_	_
 32	Popular	Popular	PROPN	_	Number=Sing	30	flat:name	_	_
-33	Trabalhista	trabalhista	PROPN	_	Number=Sing	30	flat:name	_	_
+33	Trabalhista	Trabalhista	PROPN	_	Number=Sing	30	flat:name	_	_
 34	(	(	PUNCT	_	_	35	punct	_	SpaceAfter=No
-35	MNPT	MNPT	PROPN	_	Gender=Fem|Number=Sing	30	appos	_	SpaceAfter=No
+35	MNPT	MNPT	PROPN	_	Gender=Masc|Number=Sing	30	appos	_	SpaceAfter=No
 36	)	)	PUNCT	_	_	35	punct	_	SpaceAfter=No
 37	,	,	PUNCT	_	_	39	punct	_	_
 38	com	com	ADP	_	_	39	case	_	_
-39	vistas	vista	NOUN	_	Gender=Fem|Number=Plur|VerbForm=Part	30	nmod	_	_
+39	vistas	vista	NOUN	_	Gender=Fem|Number=Plur	25	obl	_	_
 40-41	às	_	_	_	_	_	_	_	_
 40	a	a	ADP	_	_	42	case	_	_
 41	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	42	det	_	_
@@ -430,8 +429,8 @@
 49	ano	ano	NOUN	_	Gender=Masc|Number=Sing	46	nmod	_	SpaceAfter=No
 50	.	.	PUNCT	_	_	25	punct	_	_
 
-# text = Campista foi escolhido para a presidência do movimento, que tinha por objetivo mobilizar o apoio dos trabalhadores ao candidato apontado pelo partido.
 # sent_id = 13
+# text = Campista foi escolhido para a presidência do movimento, que tinha por objetivo mobilizar o apoio dos trabalhadores ao candidato apontado pelo partido.
 1	Campista	Campista	PROPN	_	Gender=Masc|Number=Sing	3	nsubj:pass	_	_
 2	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	aux:pass	_	_
 3	escolhido	escolher	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
@@ -442,12 +441,12 @@
 7	de	de	ADP	_	_	9	case	_	_
 8	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	9	det	_	_
 9	movimento	movimento	NOUN	_	Gender=Masc|Number=Sing	6	nmod	_	SpaceAfter=No
-10	,	,	PUNCT	_	_	3	punct	_	_
+10	,	,	PUNCT	_	_	12	punct	_	_
 11	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	12	nsubj	_	_
 12	tinha	ter	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	9	acl:relcl	_	_
 13	por	por	ADP	_	_	14	case	_	_
 14	objetivo	objetivo	NOUN	_	Gender=Masc|Number=Sing	12	obl	_	_
-15	mobilizar	mobilizar	VERB	_	VerbForm=Inf	14	acl	_	_
+15	mobilizar	mobilizar	VERB	_	VerbForm=Inf	12	xcomp	_	_
 16	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	17	det	_	_
 17	apoio	apoio	NOUN	_	Gender=Masc|Number=Sing	15	obj	_	_
 18-19	dos	_	_	_	_	_	_	_	_
@@ -457,7 +456,7 @@
 21-22	ao	_	_	_	_	_	_	_	_
 21	a	a	ADP	_	_	23	case	_	_
 22	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	23	det	_	_
-23	candidato	candidato	NOUN	_	Gender=Masc|Number=Sing	15	obl	_	_
+23	candidato	candidato	NOUN	_	Gender=Masc|Number=Sing	15	iobj	_	_
 24	apontado	apontar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	23	acl	_	_
 25-26	pelo	_	_	_	_	_	_	_	_
 25	por	por	ADP	_	_	27	case	_	_
@@ -465,20 +464,20 @@
 27	partido	partido	NOUN	_	Gender=Masc|Number=Sing	24	obl:agent	_	SpaceAfter=No
 28	.	.	PUNCT	_	_	3	punct	_	_
 
-# text = Este, em princípio, não apoiava nem Juscelino Kubitschek, candidato da coalizão formada pelo Partido Social Democrático (PSD) e o Partido Trabalhista Brasileiro (PTB), nem Juarez Távora, candidato da União Democrática Nacional (UDN).
 # sent_id = 14
+# text = Este, em princípio, não apoiava nem Juscelino Kubitschek, candidato da coalizão formada pelo Partido Social Democrático (PSD) e o Partido Trabalhista Brasileiro (PTB), nem Juarez Távora, candidato da União Democrática Nacional (UDN).
 1	Este	este	PRON	_	Gender=Masc|Number=Sing|PronType=Dem	7	nsubj	_	SpaceAfter=No
-2	,	,	PUNCT	_	_	1	punct	_	_
+2	,	,	PUNCT	_	_	4	punct	_	_
 3	em	em	ADP	_	_	4	case	_	_
-4	princípio	princípio	NOUN	_	Gender=Masc|Number=Sing	1	nmod	_	SpaceAfter=No
-5	,	,	PUNCT	_	_	1	punct	_	_
+4	princípio	princípio	NOUN	_	Gender=Masc|Number=Sing	7	obl	_	SpaceAfter=No
+5	,	,	PUNCT	_	_	4	punct	_	_
 6	não	não	ADV	_	Polarity=Neg	7	advmod	_	_
 7	apoiava	apoiar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	0	root	_	_
 8	nem	nem	CCONJ	_	_	9	cc	_	_
-9	Juscelino	Juscelino	PROPN	_	Gender=Masc|Number=Sing	7	obj	_	_
+9	Juscelino	Juscelino	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	7	obj	_	_
 10	Kubitschek	Kubitschek	PROPN	_	Number=Sing	9	flat:name	_	SpaceAfter=No
 11	,	,	PUNCT	_	_	12	punct	_	_
-12	candidato	candidato	NOUN	_	Gender=Masc|Number=Sing	9	conj	_	_
+12	candidato	candidato	NOUN	_	Gender=Masc|Number=Sing	9	appos	_	_
 13-14	da	_	_	_	_	_	_	_	_
 13	de	de	ADP	_	_	15	case	_	_
 14	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	15	det	_	_
@@ -487,7 +486,7 @@
 17-18	pelo	_	_	_	_	_	_	_	_
 17	por	por	ADP	_	_	19	case	_	_
 18	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	19	det	_	_
-19	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	16	obl:agent	_	_
+19	Partido	Partido	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	16	obl:agent	_	_
 20	Social	Social	PROPN	_	Number=Sing	19	flat:name	_	_
 21	Democrático	Democrático	PROPN	_	Number=Sing	19	flat:name	_	_
 22	(	(	PUNCT	_	_	23	punct	_	SpaceAfter=No
@@ -495,49 +494,49 @@
 24	)	)	PUNCT	_	_	23	punct	_	_
 25	e	e	CCONJ	_	_	27	cc	_	_
 26	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	27	det	_	_
-27	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	9	conj	_	_
-28	Trabalhista	trabalhista	PROPN	_	Number=Sing	27	flat:name	_	_
+27	Partido	Partido	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	19	conj	_	_
+28	Trabalhista	Trabalhista	PROPN	_	Number=Sing	27	flat:name	_	_
 29	Brasileiro	Brasileiro	PROPN	_	Number=Sing	27	flat:name	_	_
 30	(	(	PUNCT	_	_	31	punct	_	SpaceAfter=No
 31	PTB	PTB	PROPN	_	Gender=Masc|Number=Sing	27	appos	_	SpaceAfter=No
 32	)	)	PUNCT	_	_	31	punct	_	SpaceAfter=No
 33	,	,	PUNCT	_	_	35	punct	_	_
 34	nem	nem	CCONJ	_	_	35	cc	_	_
-35	Juarez	Juarez	PROPN	_	Gender=Fem|Number=Sing	9	conj	_	_
+35	Juarez	Juarez	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	19	conj	_	_
 36	Távora	Távora	PROPN	_	Number=Sing	35	flat:name	_	SpaceAfter=No
 37	,	,	PUNCT	_	_	38	punct	_	_
 38	candidato	candidato	NOUN	_	Gender=Masc|Number=Sing	35	appos	_	_
 39-40	da	_	_	_	_	_	_	_	_
 39	de	de	ADP	_	_	41	case	_	_
 40	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	41	det	_	_
-41	União	União	PROPN	_	Gender=Fem|Number=Sing	38	nmod	_	_
+41	União	União	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	38	nmod	_	_
 42	Democrática	Democrática	PROPN	_	Number=Sing	41	flat:name	_	_
 43	Nacional	Nacional	PROPN	_	Number=Sing	41	flat:name	_	_
 44	(	(	PUNCT	_	_	45	punct	_	SpaceAfter=No
-45	UDN	UDN	PROPN	_	Gender=Masc|Number=Sing	41	appos	_	SpaceAfter=No
+45	UDN	UDN	PROPN	_	Gender=Fem|Number=Sing	41	appos	_	SpaceAfter=No
 46	)	)	PUNCT	_	_	45	punct	_	SpaceAfter=No
 47	.	.	PUNCT	_	_	7	punct	_	_
 
-# text = No mês de junho, contudo, o PCB passou a apoiar a candidatura de Juscelino Kubitschek, e convocou para julho uma convenção nacional em que esse apoio seria oficializado.
 # sent_id = 15
+# text = No mês de junho, contudo, o PCB passou a apoiar a candidatura de Juscelino Kubitschek, e convocou para julho uma convenção nacional em que esse apoio seria oficializado.
 1-2	No	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	3	case	_	_
 2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
 3	mês	mês	NOUN	_	Gender=Masc|Number=Sing	13	obl	_	_
 4	de	de	ADP	_	_	5	case	_	_
-5	junho	junho	NOUN	_	Gender=Masc|Number=Sing	3	nmod:tmod	_	SpaceAfter=No
+5	junho	junho	NOUN	_	Gender=Masc|Number=Sing	3	nmod	_	SpaceAfter=No
 6	,	,	PUNCT	_	_	3	punct	_	_
-7	contudo	contudo	ADV	_	_	3	advmod	_	SpaceAfter=No
-8	,	,	PUNCT	_	_	3	punct	_	_
+7	contudo	contudo	CCONJ	_	_	13	cc	_	SpaceAfter=No
+8	,	,	PUNCT	_	_	7	punct	_	_
 9	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	10	det	_	_
-10	PCB	PCB	PROPN	_	Gender=Masc|Number=Sing	13	nsubj	_	_
-11	passou	passar	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	13	aux	_	_
-12	a	a	ADP	_	_	13	obl	_	_
-13	apoiar	apoiar	VERB	_	VerbForm=Inf	0	root	_	_
+10	PCB	PCB	PROPN	_	Gender=Masc|Number=Sing	11	nsubj	_	_
+11	passou	passar	VERB	_	ExtPos=AUX|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+12	a	a	SCONJ	_	_	13	mark	_	_
+13	apoiar	apoiar	VERB	_	VerbForm=Inf	11	xcomp	_	_
 14	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	15	det	_	_
 15	candidatura	candidatura	NOUN	_	Gender=Fem|Number=Sing	13	obj	_	_
 16	de	de	ADP	_	_	17	case	_	_
-17	Juscelino	Juscelino	PROPN	_	Gender=Masc|Number=Sing	15	nmod	_	_
+17	Juscelino	Juscelino	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	15	nmod	_	_
 18	Kubitschek	Kubitschek	PROPN	_	Number=Sing	17	flat:name	_	SpaceAfter=No
 19	,	,	PUNCT	_	_	21	punct	_	_
 20	e	e	CCONJ	_	_	21	cc	_	_
@@ -548,20 +547,20 @@
 25	convenção	convenção	NOUN	_	Gender=Fem|Number=Sing	21	obj	_	_
 26	nacional	nacional	ADJ	_	Gender=Fem|Number=Sing	25	amod	_	_
 27	em	em	ADP	_	_	28	case	_	_
-28	que	que	PRON	_	_	32	obl	_	_
+28	que	que	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	32	obl	_	_
 29	esse	esse	DET	_	Gender=Masc|Number=Sing|PronType=Dem	30	det	_	_
 30	apoio	apoio	NOUN	_	Gender=Masc|Number=Sing	32	nsubj:pass	_	_
 31	seria	ser	AUX	_	Mood=Cnd|Number=Sing|Person=3|VerbForm=Fin	32	aux:pass	_	_
 32	oficializado	oficializar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	25	acl:relcl	_	SpaceAfter=No
 33	.	.	PUNCT	_	_	13	punct	_	_
 
-# text = Discordando dessa decisão, Campista anunciou seu desligamento do MNPT.
 # sent_id = 16
-1	Discordando	Discordar	VERB	_	VerbForm=Ger	7	dep	_	_
+# text = Discordando dessa decisão, Campista anunciou seu desligamento do MNPT.
+1	Discordando	discordar	VERB	_	VerbForm=Ger	7	advcl	_	_
 2-3	dessa	_	_	_	_	_	_	_	_
 2	de	de	ADP	_	_	4	case	_	_
 3	essa	esse	DET	_	Gender=Fem|Number=Sing|PronType=Dem	4	det	_	_
-4	decisão	decisão	NOUN	_	Gender=Fem|Number=Sing	1	obl	_	SpaceAfter=No
+4	decisão	decisão	NOUN	_	Gender=Fem|Number=Sing	1	obj	_	SpaceAfter=No
 5	,	,	PUNCT	_	_	1	punct	_	_
 6	Campista	Campista	PROPN	_	Gender=Masc|Number=Sing	7	nsubj	_	_
 7	anunciou	anunciar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
@@ -573,26 +572,26 @@
 12	MNPT	MNPT	PROPN	_	Gender=Masc|Number=Sing	9	nmod	_	SpaceAfter=No
 13	.	.	PUNCT	_	_	7	punct	_	_
 
-# text = Acusou em seguida os comunistas de planejarem uma greve em memória de Getúlio Vargas, que se suicidara em agosto do ano anterior.
 # sent_id = 17
+# text = Acusou em seguida os comunistas de planejarem uma greve em memória de Getúlio Vargas, que se suicidara em agosto do ano anterior.
 1	Acusou	acusar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2	em	em	ADP	_	_	3	case	_	_
 3	seguida	seguida	NOUN	_	Gender=Fem|Number=Sing	1	obl	_	_
 4	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	5	det	_	_
 5	comunistas	comunista	NOUN	_	Gender=Masc|Number=Plur	1	obj	_	_
-6	de	de	ADP	_	_	7	mark	_	_
-7	planejarem	planejar	VERB	_	Number=Plur|Person=3|VerbForm=Inf	5	acl	_	_
+6	de	de	SCONJ	_	_	7	mark	_	_
+7	planejarem	planejar	VERB	_	Number=Plur|Person=3|VerbForm=Inf	1	xcomp	_	_
 8	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	9	det	_	_
 9	greve	greve	NOUN	_	Gender=Fem|Number=Sing	7	obj	_	_
 10	em	em	ADP	_	_	11	case	_	_
-11	memória	memória	NOUN	_	Gender=Fem|Number=Sing	7	obl	_	_
+11	memória	memória	NOUN	_	Gender=Fem|Number=Sing	9	nmod	_	_
 12	de	de	ADP	_	_	13	case	_	_
-13	Getúlio	Getúlio	PROPN	_	Gender=Masc|Number=Sing	11	nmod	_	_
+13	Getúlio	Getúlio	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	11	nmod	_	_
 14	Vargas	Vargas	PROPN	_	Number=Sing	13	flat:name	_	SpaceAfter=No
-15	,	,	PUNCT	_	_	7	punct	_	_
+15	,	,	PUNCT	_	_	18	punct	_	_
 16	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	18	nsubj	_	_
 17	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	18	expl	_	_
-18	suicidara	suicidarar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pqp|VerbForm=Fin	13	acl:relcl	_	_
+18	suicidara	suicidar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pqp|VerbForm=Fin	13	acl:relcl	_	_
 19	em	em	ADP	_	_	20	case	_	_
 20	agosto	agosto	NOUN	_	Gender=Masc|Number=Sing	18	obl	_	_
 21-22	do	_	_	_	_	_	_	_	_
@@ -602,21 +601,21 @@
 24	anterior	anterior	ADJ	_	Gender=Masc|Number=Sing	23	amod	_	SpaceAfter=No
 25	.	.	PUNCT	_	_	1	punct	_	_
 
-# text = Essa acusação serviu de pretexto para o governo de João Café Filho prender os líderes comunistas ativos na campanha de Juscelino.
 # sent_id = 18
+# text = Essa acusação serviu de pretexto para o governo de João Café Filho prender os líderes comunistas ativos na campanha de Juscelino.
 1	Essa	esse	DET	_	Gender=Fem|Number=Sing|PronType=Dem	2	det	_	_
 2	acusação	acusação	NOUN	_	Gender=Fem|Number=Sing	3	nsubj	_	_
 3	serviu	servir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 4	de	de	ADP	_	_	5	case	_	_
-5	pretexto	pretexto	NOUN	_	Gender=Masc|Number=Sing	3	obl	_	_
-6	para	para	ADP	_	_	8	case	_	_
+5	pretexto	pretexto	NOUN	_	Gender=Masc|Number=Sing	3	obj	_	_
+6	para	para	SCONJ	_	_	13	mark	_	_
 7	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	8	det	_	_
-8	governo	governo	NOUN	_	Gender=Masc|Number=Sing	3	obl	_	_
+8	governo	governo	NOUN	_	Gender=Masc|Number=Sing	13	nsubj	_	_
 9	de	de	ADP	_	_	10	case	_	_
-10	João	João	PROPN	_	Gender=Masc|Number=Sing	8	nmod	_	_
-11	Café	Café	PROPN	_	Gender=Masc|Number=Sing	10	flat:name	_	_
-12	Filho	Filho	PROPN	_	Gender=Masc|Number=Sing	10	flat:name	_	_
-13	prender	prender	VERB	_	VerbForm=Inf	3	xcomp	_	_
+10	João	João	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	8	nmod	_	_
+11	Café	Café	PROPN	_	Number=Sing	10	flat:name	_	_
+12	Filho	Filho	PROPN	_	Number=Sing	10	flat:name	_	_
+13	prender	prender	VERB	_	Number=Sing|Person=3|VerbForm=Inf	5	acl	_	_
 14	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	15	det	_	_
 15	líderes	líder	NOUN	_	Gender=Masc|Number=Plur	13	obj	_	_
 16	comunistas	comunista	ADJ	_	Gender=Masc|Number=Plur	15	amod	_	_
@@ -626,13 +625,13 @@
 19	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	20	det	_	_
 20	campanha	campanha	NOUN	_	Gender=Fem|Number=Sing	13	obl	_	_
 21	de	de	ADP	_	_	22	case	_	_
-22	Juscelino	Juscelino	PROPN	_	Number=Sing	20	nmod	_	SpaceAfter=No
+22	Juscelino	Juscelino	PROPN	_	Gender=Masc|Number=Sing	20	nmod	_	SpaceAfter=No
 23	.	.	PUNCT	_	_	3	punct	_	_
 
-# text = Pouco depois das eleições que deram a vitória à chapa Juscelino-João Goulart, o MNPT foi desativado.
 # sent_id = 19
+# text = Pouco depois das eleições que deram a vitória à chapa Juscelino-João Goulart, o MNPT foi desativado.
 1	Pouco	pouco	ADV	_	_	2	advmod	_	_
-2	depois	depois	ADV	_	_	20	advmod	_	_
+2	depois	depois	ADV	_	_	19	advmod	_	_
 3-4	das	_	_	_	_	_	_	_	_
 3	de	de	ADP	_	_	5	case	_	_
 4	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	5	det	_	_
@@ -644,39 +643,37 @@
 10-11	à	_	_	_	_	_	_	_	_
 10	a	a	ADP	_	_	12	case	_	_
 11	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	12	det	_	_
-12	chapa	chapa	NOUN	_	Gender=Fem|Number=Sing	7	obl	_	_
-13	Juscelino	Juscelino	PROPN	_	Gender=Masc|Number=Sing	12	appos	_	SpaceAfter=No
-14	-João	-João	PROPN	_	Number=Sing	13	flat:name	_	_
-15	Goulart	Goulart	PROPN	_	Number=Sing	13	flat:name	_	SpaceAfter=No
-16	,	,	PUNCT	_	_	2	punct	_	_
-17	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	18	det	_	_
-18	MNPT	MNPT	PROPN	_	Gender=Masc|Number=Sing	20	nsubj:pass	_	_
-19	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	20	aux:pass	_	_
-20	desativado	desativar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	SpaceAfter=No
-21	.	.	PUNCT	_	_	20	punct	_	_
+12	chapa	chapa	NOUN	_	Gender=Fem|Number=Sing	7	iobj	_	_
+13	Juscelino-João	Juscelino-João	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	12	appos	_	_
+14	Goulart	Goulart	PROPN	_	Number=Sing	13	flat:name	_	SpaceAfter=No
+15	,	,	PUNCT	_	_	2	punct	_	_
+16	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	17	det	_	_
+17	MNPT	MNPT	PROPN	_	Gender=Masc|Number=Sing	19	nsubj:pass	_	_
+18	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	19	aux:pass	_	_
+19	desativado	desativar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	SpaceAfter=No
+20	.	.	PUNCT	_	_	19	punct	_	SpacesAfter=\n
 
-# text = Durante o governo de Kubitschek, formaram-se várias organizações sindicais paralelas — ou seja, não reconhecidas pelo Ministério do Trabalho —, entre as quais a Comissão Permanente de Organizações Sindicais (CPOS), no Rio de Janeiro.
 # sent_id = 20
-# newpar
+# text = Durante o governo de Kubitschek, formaram-se várias organizações sindicais paralelas - ou seja, não reconhecidas pelo Ministério do Trabalho -, entre as quais a Comissão Permanente de Organizações Sindicais (CPOS), no Rio de Janeiro.
 1	Durante	durante	ADP	_	_	3	case	_	_
 2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
 3	governo	governo	NOUN	_	Gender=Masc|Number=Sing	7	obl	_	_
 4	de	de	ADP	_	_	5	case	_	_
-5	Kubitschek	Kubitschek	PROPN	_	Gender=Unsp|Number=Sing	3	nmod	_	SpaceAfter=No
+5	Kubitschek	Kubitschek	PROPN	_	Gender=Masc|Number=Sing	3	nmod	_	SpaceAfter=No
 6	,	,	PUNCT	_	_	3	punct	_	_
 7-8	formaram-se	_	_	_	_	_	_	_	_
 7	formaram	formar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
-8	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Plur|Person=3|PronType=Prs	7	expl	_	_
+8	se	se	PRON	_	Case=Acc|Gender=Fem|Number=Plur|Person=3|PronType=Prs	7	expl	_	_
 9	várias	várias	DET	_	Gender=Fem|Number=Plur|PronType=Ind	10	det	_	_
 10	organizações	organização	NOUN	_	Gender=Fem|Number=Plur	7	nsubj	_	_
 11	sindicais	sindical	ADJ	_	Gender=Fem|Number=Plur	10	amod	_	_
 12	paralelas	paralelo	ADJ	_	Gender=Fem|Number=Plur	10	amod	_	_
-13	—	—	PUNCT	_	_	18	punct	_	_
-14	ou	ou	CCONJ	_	_	18	cc	_	_
+13	-	-	PUNCT	_	_	14	punct	_	_
+14	ou	ou	CCONJ	_	ExtPos=CCONJ	18	cc	_	_
 15	seja	ser	VERB	_	Mood=Sub|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	14	fixed	_	SpaceAfter=No
 16	,	,	PUNCT	_	_	14	punct	_	_
 17	não	não	ADV	_	Polarity=Neg	18	advmod	_	_
-18	reconhecidas	reconhecer	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part|Voice=Pass	10	conj	_	_
+18	reconhecidas	reconhecer	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part|Voice=Pass	10	acl	_	_
 19-20	pelo	_	_	_	_	_	_	_	_
 19	por	por	ADP	_	_	21	case	_	_
 20	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	21	det	_	_
@@ -685,21 +682,21 @@
 22	de	de	ADP	_	_	24	case	_	_
 23	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	24	det	_	_
 24	Trabalho	Trabalho	PROPN	_	Number=Sing	21	nmod	_	_
-25	—	—	PUNCT	_	_	18	punct	_	SpaceAfter=No
-26	,	,	PUNCT	_	_	18	punct	_	_
+25	-	-	PUNCT	_	_	18	punct	_	SpaceAfter=No
+26	,	,	PUNCT	_	_	31	punct	_	_
 27	entre	entre	ADP	_	_	29	case	_	_
 28	as	o	DET	_	Gender=Fem|Number=Plur|PronType=Art	29	det	_	_
 29	quais	qual	PRON	_	Gender=Fem|Number=Plur|PronType=Rel	31	nmod	_	_
 30	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	31	det	_	_
-31	Comissão	Comissão	PROPN	_	Gender=Fem|Number=Sing	25	appos	_	_
+31	Comissão	Comissão	PROPN	_	Gender=Fem|Number=Sing	10	appos	_	_
 32	Permanente	Permanente	PROPN	_	Number=Sing	31	flat:name	_	_
 33	de	de	ADP	_	_	34	case	_	_
-34	Organizações	Organizações	PROPN	_	Number=Sing	31	nmod	_	_
-35	Sindicais	sindicais	PROPN	_	Gender=Masc|Number=Plur	31	appos	_	_
+34	Organizações	Organizações	PROPN	_	ExtPos=PROPN|Number=Sing	31	nmod	_	_
+35	Sindicais	Sindicais	PROPN	_	Number=Sing	34	flat:name	_	_
 36	(	(	PUNCT	_	_	37	punct	_	SpaceAfter=No
-37	CPOS	CPOS	PROPN	_	Gender=Masc|Number=Sing	31	appos	_	SpaceAfter=No
+37	CPOS	CPOS	PROPN	_	Gender=Fem|Number=Sing	31	appos	_	SpaceAfter=No
 38	)	)	PUNCT	_	_	37	punct	_	SpaceAfter=No
-39	,	,	PUNCT	_	_	29	punct	_	_
+39	,	,	PUNCT	_	_	42	punct	_	_
 40-41	no	_	_	_	_	_	_	_	_
 40	em	em	ADP	_	_	42	case	_	_
 41	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	42	det	_	_
@@ -708,63 +705,62 @@
 44	Janeiro	Janeiro	PROPN	_	Number=Sing	42	nmod	_	SpaceAfter=No
 45	.	.	PUNCT	_	_	7	punct	_	_
 
-# text = Ari Campista participou de sua fundação, ao lado dos líderes sindicais comunistas Roberto Morena e Hércules Correia dos Reis, tornando-se seu primeiro presidente.
 # sent_id = 21
-1	Ari	Ari	PROPN	_	Gender=Masc|Number=Sing	3	nsubj	_	_
+# text = Ari Campista participou de sua fundação, ao lado dos líderes sindicais comunistas Roberto Morena e Hércules Correia dos Reis, tornando-se seu primeiro presidente.
+1	Ari	Ari	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	3	nsubj	_	_
 2	Campista	Campista	PROPN	_	Number=Sing	1	flat:name	_	_
 3	participou	participar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 4	de	de	ADP	_	_	6	case	_	_
 5	sua	seu	DET	_	Gender=Fem|Number=Sing|PronType=Prs	6	det	_	_
-6	fundação	fundação	NOUN	_	Gender=Fem|Number=Sing	3	obl	_	SpaceAfter=No
+6	fundação	fundação	NOUN	_	Gender=Fem|Number=Sing	3	obj	_	SpaceAfter=No
 7	,	,	PUNCT	_	_	3	punct	_	_
 8-9	ao	_	_	_	_	_	_	_	_
 8	a	a	ADP	_	_	10	case	_	_
 9	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	10	det	_	_
-10	lado	lado	NOUN	_	_	3	obl	_	_
+10	lado	lado	NOUN	_	Gender=Masc|Number=Sing	3	obl	_	_
 11-12	dos	_	_	_	_	_	_	_	_
 11	de	de	ADP	_	_	13	case	_	_
 12	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	13	det	_	_
 13	líderes	líder	NOUN	_	Gender=Masc|Number=Plur	10	nmod	_	_
 14	sindicais	sindical	ADJ	_	Gender=Masc|Number=Plur	13	amod	_	_
 15	comunistas	comunista	ADJ	_	Gender=Masc|Number=Plur	13	amod	_	_
-16	Roberto	Roberto	PROPN	_	Gender=Masc|Number=Sing	13	appos	_	_
+16	Roberto	Roberto	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	13	appos	_	_
 17	Morena	Morena	PROPN	_	Number=Sing	16	flat:name	_	_
 18	e	e	CCONJ	_	_	19	cc	_	_
-19	Hércules	Hércules	PROPN	_	Gender=Masc|Number=Sing	16	conj	_	_
+19	Hércules	Hércules	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	16	conj	_	_
 20	Correia	Correia	PROPN	_	Number=Sing	19	flat:name	_	_
 21-22	dos	_	_	_	_	_	_	_	_
 21	de	de	ADP	_	_	23	case	_	_
 22	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	23	det	_	_
-23	Reis	Reis	PROPN	_	Gender=Masc|Number=Sing	13	nmod	_	SpaceAfter=No
+23	Reis	Reis	PROPN	_	Number=Sing	19	nmod	_	SpaceAfter=No
 24	,	,	PUNCT	_	_	25	punct	_	_
 25-26	tornando-se	_	_	_	_	_	_	_	_
 25	tornando	tornar	VERB	_	VerbForm=Ger	3	advcl	_	_
 26	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	25	expl	_	_
 27	seu	seu	DET	_	Gender=Masc|Number=Sing|PronType=Prs	29	det	_	_
 28	primeiro	primeiro	ADJ	_	Gender=Masc|Number=Sing|NumType=Ord	29	amod	_	_
-29	presidente	presidente	NOUN	_	Gender=Masc|Number=Sing	25	nsubj	_	SpaceAfter=No
+29	presidente	presidente	NOUN	_	Gender=Masc|Number=Sing	25	obj	_	SpaceAfter=No
 30	.	.	PUNCT	_	_	3	punct	_	_
 
-# text = Criada em 1956, em pouco tempo a CPOS congregava 118 entidades sindicais.
 # sent_id = 22
-1	Criada	criar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	0	root	_	_
+# text = Criada em 1956, em pouco tempo a CPOS congregava 118 entidades sindicais.
+1	Criada	criar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	9	acl	_	_
 2	em	em	ADP	_	_	3	case	_	_
 3	1956	1956	NUM	_	NumType=Card	1	obl	_	SpaceAfter=No
 4	,	,	PUNCT	_	_	1	punct	_	_
 5	em	em	ADP	_	_	7	case	_	_
 6	pouco	pouco	DET	_	Gender=Masc|Number=Sing|PronType=Ind	7	det	_	_
 7	tempo	tempo	NOUN	_	Gender=Masc|Number=Sing	10	obl	_	_
-8	a	o	DET	_	_	9	det	_	_
-9	CPOS	CPOS	PROPN	_	Gender=Masc|Number=Plur	10	nsubj	_	_
-10	congregava	congregar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	1	parataxis	_	_
+8	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	9	det	_	_
+9	CPOS	CPOS	PROPN	_	Gender=Fem|Number=Sing	10	nsubj	_	_
+10	congregava	congregar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	0	root	_	_
 11	118	118	NUM	_	NumType=Card	12	nummod	_	_
 12	entidades	entidade	NOUN	_	Gender=Fem|Number=Plur	10	obj	_	_
 13	sindicais	sindical	ADJ	_	Gender=Fem|Number=Plur	12	amod	_	SpaceAfter=No
-14	.	.	PUNCT	_	_	1	punct	_	_
+14	.	.	PUNCT	_	_	10	punct	_	SpacesAfter=\n
 
-# text = Promovendo uma política de unificação das diferentes facções atuantes no movimento sindical, o vice-presidente João Goulart incentivou nesse período a atuação conjunta dos sindicalistas vinculados ao PTB e ao PCB e dos chamados “pelegos” — dirigentes sindicais que, na prática, defendiam as diretrizes do Ministério do Trabalho.
 # sent_id = 23
-# newpar
+# text = Promovendo uma política de unificação das diferentes facções atuantes no movimento sindical, o vice-presidente João Goulart incentivou nesse período a atuação conjunta dos sindicalistas vinculados ao PTB e ao PCB e dos chamados “pelegos” - dirigentes sindicais que, na prática, defendiam as diretrizes do Ministério do Trabalho.
 1	Promovendo	promover	VERB	_	VerbForm=Ger	20	advcl	_	_
 2	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	3	det	_	_
 3	política	política	NOUN	_	Gender=Fem|Number=Sing	1	obj	_	_
@@ -779,20 +775,20 @@
 11-12	no	_	_	_	_	_	_	_	_
 11	em	em	ADP	_	_	13	case	_	_
 12	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	13	det	_	_
-13	movimento	movimento	NOUN	_	Gender=Masc|Number=Sing	1	obl	_	_
+13	movimento	movimento	NOUN	_	Gender=Masc|Number=Sing	10	obl	_	_
 14	sindical	sindical	ADJ	_	Gender=Masc|Number=Sing	13	amod	_	SpaceAfter=No
 15	,	,	PUNCT	_	_	1	punct	_	_
 16	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	17	det	_	_
 17	vice-presidente	vice-presidente	NOUN	_	Gender=Masc|Number=Sing	20	nsubj	_	_
-18	João	João	PROPN	_	Gender=Masc|Number=Sing	17	appos	_	_
+18	João	João	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	17	appos	_	_
 19	Goulart	Goulart	PROPN	_	Number=Sing	18	flat:name	_	_
 20	incentivou	incentivar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 21-22	nesse	_	_	_	_	_	_	_	_
 21	em	em	ADP	_	_	23	case	_	_
 22	esse	esse	DET	_	Gender=Masc|Number=Sing|PronType=Dem	23	det	_	_
 23	período	período	NOUN	_	Gender=Masc|Number=Sing	20	obl	_	_
-24	a	o	ADP	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	25	case	_	_
-25	atuação	atuação	NOUN	_	Gender=Fem|Number=Sing	20	obl	_	_
+24	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	25	det	_	_
+25	atuação	atuação	NOUN	_	Gender=Fem|Number=Sing	20	obj	_	_
 26	conjunta	conjunto	ADJ	_	Gender=Fem|Number=Sing	25	amod	_	_
 27-28	dos	_	_	_	_	_	_	_	_
 27	de	de	ADP	_	_	29	case	_	_
@@ -802,21 +798,21 @@
 31-32	ao	_	_	_	_	_	_	_	_
 31	a	a	ADP	_	_	33	case	_	_
 32	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	33	det	_	_
-33	PTB	PTB	PROPN	_	Gender=Masc|Number=Sing	30	obl	_	_
+33	PTB	PTB	PROPN	_	Gender=Masc|Number=Sing	30	obj	_	_
 34	e	e	CCONJ	_	_	37	cc	_	_
 35-36	ao	_	_	_	_	_	_	_	_
 35	a	a	ADP	_	_	37	case	_	_
 36	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	37	det	_	_
 37	PCB	PCB	PROPN	_	Gender=Masc|Number=Sing	33	conj	_	_
-38	e	e	CCONJ	_	_	41	cc	_	_
+38	e	e	CCONJ	_	_	43	cc	_	_
 39-40	dos	_	_	_	_	_	_	_	_
-39	de	de	ADP	_	_	41	mark	_	_
-40	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	41	det	_	_
-41	chamados	chamar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part	37	conj	_	_
-42	“	“	PUNCT	_	_	43	punct	_	SpaceAfter=No
-43	pelegos	pelego	NOUN	_	Gender=Masc|Number=Plur	41	conj	_	SpaceAfter=No
-44	”	”	PUNCT	_	_	46	punct	_	_
-45	—	—	PUNCT	_	_	46	punct	_	_
+39	de	de	ADP	_	_	43	case	_	_
+40	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	43	det	_	_
+41	chamados	chamado	ADJ	_	Gender=Masc|Number=Plur	43	amod	_	_
+42	“	"	PUNCT	_	_	43	punct	_	SpaceAfter=No
+43	pelegos	pelego	NOUN	_	Gender=Masc|Number=Plur	29	conj	_	SpaceAfter=No
+44	”	"	PUNCT	_	_	43	punct	_	_
+45	-	-	PUNCT	_	_	46	punct	_	_
 46	dirigentes	dirigente	NOUN	_	Gender=Masc|Number=Plur	43	appos	_	_
 47	sindicais	sindical	ADJ	_	Gender=Masc|Number=Plur	46	amod	_	_
 48	que	que	PRON	_	Gender=Masc|Number=Plur|PronType=Rel	54	nsubj	_	SpaceAfter=No
@@ -837,10 +833,10 @@
 60	de	de	ADP	_	_	62	case	_	_
 61	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	62	det	_	_
 62	Trabalho	Trabalho	PROPN	_	Number=Sing	59	nmod	_	SpaceAfter=No
-63	.	.	PUNCT	_	_	46	punct	_	_
+63	.	.	PUNCT	_	_	20	punct	_	_
 
-# text = Essa política mostrou seus resultados nas comemorações do 1º de maio de 1956, ocasião em que Deocleciano de Holanda Cavalcanti e Ari Campista prepararam um discurso cujo texto foi previamente negociado com os comunistas.
 # sent_id = 24
+# text = Essa política mostrou seus resultados nas comemorações do 1º de maio de 1956, ocasião em que Deocleciano de Holanda Cavalcanti e Ari Campista prepararam um discurso cujo texto foi previamente negociado com os comunistas.
 1	Essa	esse	DET	_	Gender=Fem|Number=Sing|PronType=Dem	2	det	_	_
 2	política	política	NOUN	_	Gender=Fem|Number=Sing	3	nsubj	_	_
 3	mostrou	mostrar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
@@ -853,21 +849,21 @@
 9-10	do	_	_	_	_	_	_	_	_
 9	de	de	ADP	_	_	11	case	_	_
 10	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	_	_
-11	1º	1º	ADJ	_	_	8	nmod	_	_
+11	1º	1º	ADJ	_	Gender=Masc|Number=Sing|NumType=Ord	8	nmod	_	_
 12	de	de	ADP	_	_	13	case	_	_
-13	maio	maio	NOUN	_	Gender=Masc|Number=Sing	11	nmod:tmod	_	_
+13	maio	maio	NOUN	_	Gender=Masc|Number=Sing	11	nmod	_	_
 14	de	de	ADP	_	_	15	case	_	_
 15	1956	1956	NUM	_	NumType=Card	13	nmod	_	SpaceAfter=No
 16	,	,	PUNCT	_	_	17	punct	_	_
-17	ocasião	ocasião	NOUN	_	Gender=Fem|Number=Sing	8	appos	_	_
+17	ocasião	ocasião	NOUN	_	Gender=Fem|Number=Sing	11	appos	_	_
 18	em	em	ADP	_	_	19	case	_	_
-19	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	27	obl	_	_
+19	que	que	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	27	obl	_	_
 20	Deocleciano	Deocleciano	PROPN	_	Gender=Masc|Number=Sing	27	nsubj	_	_
 21	de	de	ADP	_	_	22	case	_	_
-22	Holanda	Holanda	PROPN	_	Number=Sing	20	nmod	_	_
+22	Holanda	Holanda	PROPN	_	ExtPos=PROPN|Number=Sing	20	nmod	_	_
 23	Cavalcanti	Cavalcanti	PROPN	_	Number=Sing	22	flat:name	_	_
 24	e	e	CCONJ	_	_	25	cc	_	_
-25	Ari	Ari	PROPN	_	Gender=Masc|Number=Sing	20	conj	_	_
+25	Ari	Ari	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	20	conj	_	_
 26	Campista	Campista	PROPN	_	Number=Sing	25	flat:name	_	_
 27	prepararam	preparar	VERB	_	Mood=Ind|Number=Plur|Person=3|VerbForm=Fin	17	acl:relcl	_	_
 28	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	29	det	_	_
@@ -882,35 +878,35 @@
 37	comunistas	comunista	NOUN	_	Gender=Masc|Number=Plur	34	obl	_	SpaceAfter=No
 38	.	.	PUNCT	_	_	3	punct	_	_
 
-# text = As principais reivindicações apresentadas referiam-se ao aumento do salário mínimo, à reforma agrária, à extensão da legislação trabalhista aos trabalhadores rurais e à suspensão das restrições ao direito de greve.
 # sent_id = 25
+# text = As principais reivindicações apresentadas referiam-se ao aumento do salário mínimo, à reforma agrária, à extensão da legislação trabalhista aos trabalhadores rurais e à suspensão das restrições ao direito de greve.
 1	As	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	3	det	_	_
 2	principais	principal	ADJ	_	Gender=Fem|Number=Plur	3	amod	_	_
 3	reivindicações	reivindicação	NOUN	_	Gender=Fem|Number=Plur	5	nsubj	_	_
 4	apresentadas	apresentar	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part	3	acl	_	_
 5-6	referiam-se	_	_	_	_	_	_	_	_
 5	referiam	referir	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	0	root	_	_
-6	se	se	PRON	_	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	5	expl	_	_
+6	se	se	PRON	_	Case=Acc|Gender=Fem|Number=Plur|Person=3|PronType=Prs	5	expl	_	_
 7-8	ao	_	_	_	_	_	_	_	_
 7	a	a	ADP	_	_	9	case	_	_
 8	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	9	det	_	_
-9	aumento	aumento	NOUN	_	Gender=Masc|Number=Sing	5	obl	_	_
+9	aumento	aumento	NOUN	_	Gender=Masc|Number=Sing	5	obj	_	_
 10-11	do	_	_	_	_	_	_	_	_
 10	de	de	ADP	_	_	12	case	_	_
 11	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	12	det	_	_
 12	salário	salário	NOUN	_	Gender=Masc|Number=Sing	9	nmod	_	_
-13	mínimo	pequeno	ADJ	_	Gender=Masc|Number=Sing	12	amod	_	SpaceAfter=No
+13	mínimo	mínimo	ADJ	_	Gender=Masc|Number=Sing	12	amod	_	SpaceAfter=No
 14	,	,	PUNCT	_	_	17	punct	_	_
 15-16	à	_	_	_	_	_	_	_	_
 15	a	a	ADP	_	_	17	case	_	_
 16	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	17	det	_	_
-17	reforma	reforma	NOUN	_	Gender=Fem|Number=Sing	9	nmod	_	_
+17	reforma	reforma	NOUN	_	Gender=Fem|Number=Sing	9	conj	_	_
 18	agrária	agrário	ADJ	_	Gender=Fem|Number=Sing	17	amod	_	SpaceAfter=No
-19	,	,	PUNCT	_	_	17	punct	_	_
+19	,	,	PUNCT	_	_	22	punct	_	_
 20-21	à	_	_	_	_	_	_	_	_
 20	a	a	ADP	_	_	22	case	_	_
 21	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	22	det	_	_
-22	extensão	extensão	NOUN	_	Gender=Fem|Number=Sing	17	nmod	_	_
+22	extensão	extensão	NOUN	_	Gender=Fem|Number=Sing	9	conj	_	_
 23-24	da	_	_	_	_	_	_	_	_
 23	de	de	ADP	_	_	25	case	_	_
 24	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	25	det	_	_
@@ -925,7 +921,7 @@
 32-33	à	_	_	_	_	_	_	_	_
 32	a	a	ADP	_	_	34	case	_	_
 33	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	34	det	_	_
-34	suspensão	suspensão	NOUN	_	Gender=Fem|Number=Sing	30	conj	_	_
+34	suspensão	suspensão	NOUN	_	Gender=Fem|Number=Sing	9	conj	_	_
 35-36	das	_	_	_	_	_	_	_	_
 35	de	de	ADP	_	_	37	case	_	_
 36	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	37	det	_	_
@@ -936,11 +932,10 @@
 40	direito	direito	NOUN	_	Gender=Masc|Number=Sing	37	nmod	_	_
 41	de	de	ADP	_	_	42	case	_	_
 42	greve	greve	NOUN	_	Gender=Fem|Number=Sing	40	nmod	_	SpaceAfter=No
-43	.	.	PUNCT	_	_	5	punct	_	_
+43	.	.	PUNCT	_	_	5	punct	_	SpacesAfter=\n
 
-# text = Em outubro de 1956, Campista foi eleito vice-presidente da CNTI, cargo que ocuparia até janeiro de 1960, quando foi eleito primeiro-secretário da confederação.
 # sent_id = 26
-# newpar
+# text = Em outubro de 1956, Campista foi eleito vice-presidente da CNTI, cargo que ocuparia até janeiro de 1960, quando foi eleito primeiro-secretário da confederação.
 1	Em	em	ADP	_	_	2	case	_	_
 2	outubro	outubro	NOUN	_	Gender=Masc|Number=Sing	8	obl	_	_
 3	de	de	ADP	_	_	4	case	_	_
@@ -949,11 +944,11 @@
 6	Campista	Campista	PROPN	_	Gender=Masc|Number=Sing	8	nsubj:pass	_	_
 7	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	8	aux:pass	_	_
 8	eleito	eleger	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
-9	vice-presidente	vice-presidente	NOUN	_	Gender=Masc|Number=Sing	8	nsubj:pass	_	_
+9	vice-presidente	vice-presidente	NOUN	_	Gender=Masc|Number=Sing	8	xcomp	_	_
 10-11	da	_	_	_	_	_	_	_	_
 10	de	de	ADP	_	_	12	case	_	_
 11	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	12	det	_	_
-12	CNTI	CNTI	PROPN	_	Gender=Fem|Number=Sing	9	nmod	_	SpaceAfter=No
+12	CNTI	cnti	NOUN	_	Gender=Fem|Number=Sing	9	nmod	_	SpaceAfter=No
 13	,	,	PUNCT	_	_	14	punct	_	_
 14	cargo	cargo	NOUN	_	Gender=Masc|Number=Sing	9	appos	_	_
 15	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	16	nsubj	_	_
@@ -965,37 +960,36 @@
 21	,	,	PUNCT	_	_	16	punct	_	_
 22	quando	quando	ADV	_	_	24	advmod	_	_
 23	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	24	aux:pass	_	_
-24	eleito	eleger	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	8	advcl	_	_
-25	primeiro-secretário	primeiro-secretário	ADJ	_	Gender=Masc|Number=Sing	24	amod	_	_
+24	eleito	eleger	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	16	advcl	_	_
+25	primeiro-secretário	primeiro-secretário	NOUN	_	Gender=Masc|Number=Sing	24	nsubj:pass	_	_
 26-27	da	_	_	_	_	_	_	_	_
 26	de	de	ADP	_	_	28	case	_	_
 27	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	28	det	_	_
-28	confederação	confederação	NOUN	_	Gender=Fem|Number=Sing	25	obl	_	SpaceAfter=No
-29	.	.	PUNCT	_	_	8	punct	_	_
+28	confederação	confederação	NOUN	_	Gender=Fem|Number=Sing	25	nmod	_	SpaceAfter=No
+29	.	.	PUNCT	_	_	8	punct	_	SpacesAfter=\n
 
-# text = Em janeiro de 1957, ao ser criado o Conselho de Política Aduaneira, Campista foi convidado a integrá-lo como representante dos trabalhadores.
 # sent_id = 27
-# newpar
+# text = Em janeiro de 1957, ao ser criado o Conselho de Política Aduaneira, Campista foi convidado a integrá-lo como representante dos trabalhadores.
 1	Em	em	ADP	_	_	2	case	_	_
 2	janeiro	janeiro	NOUN	_	Gender=Masc|Number=Sing	18	obl	_	_
 3	de	de	ADP	_	_	4	case	_	_
 4	1957	1957	NUM	_	NumType=Card	2	nmod	_	SpaceAfter=No
 5	,	,	PUNCT	_	_	2	punct	_	_
 6-7	ao	_	_	_	_	_	_	_	_
-6	a	a	ADP	_	_	8	case	_	_
-7	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	8	det	_	_
-8	ser	ser	NOUN	_	VerbForm=Inf	9	obl	_	_
+6	a	a	SCONJ	_	_	9	mark	_	_
+7	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	9	det	_	_
+8	ser	ser	AUX	_	VerbForm=Inf	9	aux:pass	_	_
 9	criado	criar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	18	advcl	_	_
 10	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	_	_
-11	Conselho	Conselho	PROPN	_	Gender=Masc|Number=Sing	18	nsubj:pass	_	_
+11	Conselho	Conselho	PROPN	_	Gender=Masc|Number=Sing	9	nsubj:pass	_	_
 12	de	de	ADP	_	_	13	case	_	_
-13	Política	Política	PROPN	_	Number=Sing	11	nmod	_	_
-14	Aduaneira	aduaneira	PROPN	_	Number=Sing	13	flat:name	_	SpaceAfter=No
+13	Política	Política	PROPN	_	ExtPos=PROPN|Number=Sing	11	nmod	_	_
+14	Aduaneira	Aduaneira	PROPN	_	Number=Sing	13	flat:name	_	SpaceAfter=No
 15	,	,	PUNCT	_	_	9	punct	_	_
-16	Campista	Campista	PROPN	_	Gender=Masc|Number=Sing	11	appos	_	_
+16	Campista	Campista	PROPN	_	Gender=Masc|Number=Sing	18	nsubj:pass	_	_
 17	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	18	aux:pass	_	_
 18	convidado	convidar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
-19	a	a	ADP	_	_	20	mark	_	_
+19	a	a	SCONJ	_	_	20	mark	_	_
 20-21	integrá-lo	_	_	_	_	_	_	_	_
 20	integrá	integrar	VERB	_	VerbForm=Inf	18	xcomp	_	_
 21	lo	ele	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	20	obj	_	_
@@ -1007,15 +1001,15 @@
 26	trabalhadores	trabalhador	NOUN	_	Gender=Masc|Number=Plur	23	nmod	_	SpaceAfter=No
 27	.	.	PUNCT	_	_	18	punct	_	_
 
-# text = No conselho atuavam também representantes do empresariado vinculado ao comércio, à indústria e à agricultura, incumbidos de fornecer informações para a revisão dos resultados do Plano de Metas do governo Kubitschek.
 # sent_id = 28
+# text = No conselho atuavam também representantes do empresariado vinculado ao comércio, à indústria e à agricultura, incumbidos de fornecer informações para a revisão dos resultados do Plano de Metas do governo Kubitschek.
 1-2	No	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	3	case	_	_
 2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
 3	conselho	conselho	NOUN	_	Gender=Masc|Number=Sing	4	obl	_	_
 4	atuavam	atuar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	0	root	_	_
 5	também	também	ADV	_	_	4	advmod	_	_
-6	representantes	representante	NOUN	_	Gender=Unsp|Number=Plur	4	nsubj	_	_
+6	representantes	representante	NOUN	_	Number=Plur	4	nsubj	_	_
 7-8	do	_	_	_	_	_	_	_	_
 7	de	de	ADP	_	_	9	case	_	_
 8	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	9	det	_	_
@@ -1024,20 +1018,20 @@
 11-12	ao	_	_	_	_	_	_	_	_
 11	a	a	ADP	_	_	13	case	_	_
 12	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	13	det	_	_
-13	comércio	comércio	NOUN	_	Gender=Masc|Number=Sing	10	obl	_	SpaceAfter=No
-14	,	,	PUNCT	_	_	10	punct	_	_
+13	comércio	comércio	NOUN	_	Gender=Masc|Number=Sing	10	obj	_	SpaceAfter=No
+14	,	,	PUNCT	_	_	17	punct	_	_
 15-16	à	_	_	_	_	_	_	_	_
 15	a	a	ADP	_	_	17	case	_	_
 16	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	17	det	_	_
-17	indústria	indústria	NOUN	_	Gender=Fem|Number=Sing	10	obl	_	_
+17	indústria	indústria	NOUN	_	Gender=Fem|Number=Sing	13	conj	_	_
 18	e	e	CCONJ	_	_	21	cc	_	_
 19-20	à	_	_	_	_	_	_	_	_
 19	a	a	ADP	_	_	21	case	_	_
 20	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	21	det	_	_
-21	agricultura	agricultura	NOUN	_	Gender=Fem|Number=Sing	17	conj	_	SpaceAfter=No
+21	agricultura	agricultura	NOUN	_	Gender=Fem|Number=Sing	13	conj	_	SpaceAfter=No
 22	,	,	PUNCT	_	_	23	punct	_	_
-23	incumbidos	incumber	VERB	_	Gender=Masc|Number=Plur	10	conj	_	_
-24	de	de	ADP	_	_	25	mark	_	_
+23	incumbidos	incumbir	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part	6	acl	_	_
+24	de	de	SCONJ	_	_	25	mark	_	_
 25	fornecer	fornecer	VERB	_	VerbForm=Inf	23	xcomp	_	_
 26	informações	informação	NOUN	_	Gender=Fem|Number=Plur	25	obj	_	_
 27	para	para	ADP	_	_	29	case	_	_
@@ -1052,17 +1046,16 @@
 34	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	35	det	_	_
 35	Plano	Plano	PROPN	_	Gender=Masc|Number=Sing	32	nmod	_	_
 36	de	de	ADP	_	_	37	case	_	_
-37	Metas	metas	PROPN	_	Gender=Fem|Number=Plur	35	nmod	_	_
+37	Metas	Metas	PROPN	_	Number=Sing	35	nmod	_	_
 38-39	do	_	_	_	_	_	_	_	_
 38	de	de	ADP	_	_	40	case	_	_
 39	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	40	det	_	_
-40	governo	governo	NOUN	_	Gender=Masc|Number=Sing	37	nmod	_	_
+40	governo	governo	NOUN	_	Gender=Masc|Number=Sing	35	nmod	_	_
 41	Kubitschek	Kubitschek	PROPN	_	Gender=Masc|Number=Sing	40	appos	_	SpaceAfter=No
-42	.	.	PUNCT	_	_	4	punct	_	_
+42	.	.	PUNCT	_	_	4	punct	_	SpacesAfter=\n
 
-# text = Na preparação do III Congresso Nacional dos Trabalhadores, realizado em agosto de 1960 no Rio de Janeiro, tornou-se nítida a disputa entre as diferentes facções do movimento sindical.
 # sent_id = 29
-# newpar
+# text = Na preparação do III Congresso Nacional dos Trabalhadores, realizado em agosto de 1960 no Rio de Janeiro, tornou-se nítida a disputa entre as diferentes facções do movimento sindical.
 1-2	Na	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	3	case	_	_
 2	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	3	det	_	_
@@ -1070,7 +1063,7 @@
 4-5	do	_	_	_	_	_	_	_	_
 4	de	de	ADP	_	_	6	case	_	_
 5	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	6	det	_	_
-6	III	Iii	PROPN	_	Gender=Masc|Number=Sing	3	nmod	_	_
+6	III	III	PROPN	_	Gender=Masc|Number=Sing|NumType=Ord	3	nmod	_	_
 7	Congresso	Congresso	PROPN	_	Number=Sing	6	flat:name	_	_
 8	Nacional	Nacional	PROPN	_	Number=Sing	6	flat:name	_	_
 9-10	dos	_	_	_	_	_	_	_	_
@@ -1093,12 +1086,12 @@
 24-25	tornou-se	_	_	_	_	_	_	_	_
 24	tornou	tornar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 25	se	se	PRON	_	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	24	expl	_	_
-26	nítida	nítir	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	24	xcomp	_	_
+26	nítida	nítido	ADJ	_	Gender=Fem|Number=Sing	24	xcomp	_	_
 27	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	28	det	_	_
-28	disputa	disputa	NOUN	_	Gender=Fem|Number=Sing	26	obj	_	_
+28	disputa	disputa	NOUN	_	Gender=Fem|Number=Sing	24	nsubj	_	_
 29	entre	entre	ADP	_	_	32	case	_	_
 30	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	32	det	_	_
-31	diferentes	diferentes	DET	_	Gender=Fem|Number=Plur	32	det	_	_
+31	diferentes	diferente	ADJ	_	Gender=Fem|Number=Plur	32	amod	_	_
 32	facções	facção	NOUN	_	Gender=Fem|Number=Plur	28	nmod	_	_
 33-34	do	_	_	_	_	_	_	_	_
 33	de	de	ADP	_	_	35	case	_	_
@@ -1107,16 +1100,16 @@
 36	sindical	sindical	ADJ	_	Gender=Masc|Number=Sing	35	amod	_	SpaceAfter=No
 37	.	.	PUNCT	_	_	24	punct	_	_
 
-# text = Campista, ao lado de Holanda Cavalcanti e de outros líderes de confederações nacionais, participou em São Paulo de reuniões com líderes trabalhistas locais, procurando obter apoio para suas posições.
 # sent_id = 30
-1	Campista	Campista	ADJ	_	Gender=Masc|Number=Sing	17	dep	_	SpaceAfter=No
-2	,	,	PUNCT	_	_	1	punct	_	_
+# text = Campista, ao lado de Holanda Cavalcanti e de outros líderes de confederações nacionais, participou em São Paulo de reuniões com líderes trabalhistas locais, procurando obter apoio para suas posições.
+1	Campista	Campista	PROPN	_	Gender=Masc|Number=Sing	17	nsubj	_	SpaceAfter=No
+2	,	,	PUNCT	_	_	5	punct	_	_
 3-4	ao	_	_	_	_	_	_	_	_
 3	a	a	ADP	_	_	5	case	_	_
 4	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	5	det	_	_
-5	lado	lado	NOUN	_	_	1	obl	_	_
+5	lado	lado	NOUN	_	Gender=Masc|Number=Sing	17	obl	_	_
 6	de	de	ADP	_	_	7	case	_	_
-7	Holanda	Holanda	PROPN	_	Gender=Fem|Number=Sing	5	nmod	_	_
+7	Holanda	Holanda	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	5	nmod	_	_
 8	Cavalcanti	Cavalcanti	PROPN	_	Number=Sing	7	flat:name	_	_
 9	e	e	CCONJ	_	_	12	cc	_	_
 10	de	de	ADP	_	_	12	case	_	_
@@ -1125,13 +1118,13 @@
 13	de	de	ADP	_	_	14	case	_	_
 14	confederações	confederação	NOUN	_	Gender=Fem|Number=Plur	12	nmod	_	_
 15	nacionais	nacional	ADJ	_	Gender=Fem|Number=Plur	14	amod	_	SpaceAfter=No
-16	,	,	PUNCT	_	_	1	punct	_	_
+16	,	,	PUNCT	_	_	5	punct	_	_
 17	participou	participar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 18	em	em	ADP	_	_	19	case	_	_
-19	São	São	PROPN	_	Gender=Masc|Number=Sing	17	obl	_	_
+19	São	São	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	17	obl	_	_
 20	Paulo	Paulo	PROPN	_	Number=Sing	19	flat:name	_	_
 21	de	de	ADP	_	_	22	case	_	_
-22	reuniões	reunião	NOUN	_	Gender=Fem|Number=Plur	19	nmod	_	_
+22	reuniões	reunião	NOUN	_	Gender=Fem|Number=Plur	17	obj	_	_
 23	com	com	ADP	_	_	24	case	_	_
 24	líderes	líder	NOUN	_	Gender=Masc|Number=Plur	22	nmod	_	_
 25	trabalhistas	trabalhista	ADJ	_	Gender=Masc|Number=Plur	24	amod	_	_
@@ -1143,11 +1136,10 @@
 31	para	para	ADP	_	_	33	case	_	_
 32	suas	seu	DET	_	Gender=Fem|Number=Plur|PronType=Prs	33	det	_	_
 33	posições	posição	NOUN	_	Gender=Fem|Number=Plur	30	nmod	_	SpaceAfter=No
-34	.	.	PUNCT	_	_	17	punct	_	_
+34	.	.	PUNCT	_	_	17	punct	_	SpacesAfter=\n
 
-# text = Durante o congresso, que contou com a participação de três mil delegados e a presença do vice-presidente Goulart, as propostas apresentadas constituíram a manifestação concreta das divergências entre as lideranças vinculadas aos comunistas e aquelas que a eles se opunham.
 # sent_id = 31
-# newpar
+# text = Durante o congresso, que contou com a participação de três mil delegados e a presença do vice-presidente Goulart, as propostas apresentadas constituíram a manifestação concreta das divergências entre as lideranças vinculadas aos comunistas e aquelas que a eles se opunham.
 1	Durante	durante	ADP	_	_	3	case	_	_
 2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
 3	congresso	congresso	NOUN	_	Gender=Masc|Number=Sing	25	obl	_	SpaceAfter=No
@@ -1156,14 +1148,14 @@
 6	contou	contar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	acl:relcl	_	_
 7	com	com	ADP	_	_	9	case	_	_
 8	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	9	det	_	_
-9	participação	participação	NOUN	_	Gender=Fem|Number=Sing	6	obl	_	_
+9	participação	participação	NOUN	_	Gender=Fem|Number=Sing	6	obj	_	_
 10	de	de	ADP	_	_	13	case	_	_
-11	três	três	NUM	_	NumType=Card	12	dep	_	_
-12	mil	mil	NUM	_	NumType=Card	13	nummod	_	_
+11	três	três	NUM	_	NumType=Card	13	nummod	_	_
+12	mil	mil	NUM	_	NumType=Card	11	flat	_	_
 13	delegados	delegado	NOUN	_	Gender=Masc|Number=Plur	9	nmod	_	_
 14	e	e	CCONJ	_	_	16	cc	_	_
 15	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	16	det	_	_
-16	presença	presença	NOUN	_	Gender=Fem|Number=Sing	13	conj	_	_
+16	presença	presença	NOUN	_	Gender=Fem|Number=Sing	9	conj	_	_
 17-18	do	_	_	_	_	_	_	_	_
 17	de	de	ADP	_	_	19	case	_	_
 18	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	19	det	_	_
@@ -1173,7 +1165,7 @@
 22	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	23	det	_	_
 23	propostas	proposta	NOUN	_	Gender=Fem|Number=Plur	25	nsubj	_	_
 24	apresentadas	apresentar	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part	23	acl	_	_
-25	constituíram	constituir	VERB	_	Mood=Ind|Number=Plur|Person=3|VerbForm=Fin	0	root	_	_
+25	constituíram	constituir	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 26	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	27	det	_	_
 27	manifestação	manifestação	NOUN	_	Gender=Fem|Number=Sing	25	obj	_	_
 28	concreta	concreto	ADJ	_	Gender=Fem|Number=Sing	27	amod	_	_
@@ -1188,18 +1180,18 @@
 36-37	aos	_	_	_	_	_	_	_	_
 36	a	a	ADP	_	_	38	case	_	_
 37	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	38	det	_	_
-38	comunistas	comunista	NOUN	_	Gender=Masc|Number=Plur	35	obl	_	_
+38	comunistas	comunista	NOUN	_	Gender=Masc|Number=Plur	35	obj	_	_
 39	e	e	CCONJ	_	_	40	cc	_	_
-40	aquelas	aquele	PRON	_	Gender=Fem|Number=Plur|PronType=Dem	38	conj	_	_
-41	que	que	PRON	_	Gender=Fem|Number=Plur|PronType=Rel	45	obj	_	_
-42	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	43	det	_	_
-43	eles	eles	PRON	_	Case=Nom|Gender=Masc|Number=Plur|Person=3|PronType=Prs	45	nsubj	_	_
-44	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Plur|Person=3|PronType=Prs	45	expl	_	_
-45	opunham	opor	VERB	_	Mood=Sub|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	40	acl:relcl	_	SpaceAfter=No
+40	aquelas	aquele	PRON	_	Gender=Fem|Number=Plur|PronType=Dem	34	conj	_	_
+41	que	que	PRON	_	Gender=Fem|Number=Plur|PronType=Rel	45	nsubj	_	_
+42	a	a	ADP	_	_	43	case	_	_
+43	eles	eles	PRON	_	Gender=Masc|Number=Plur|Person=3|PronType=Prs	45	iobj	_	_
+44	se	se	PRON	_	Case=Acc|Gender=Fem|Number=Plur|Person=3|PronType=Prs	45	expl	_	_
+45	opunham	opor	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	40	acl:relcl	_	SpaceAfter=No
 46	.	.	PUNCT	_	_	25	punct	_	_
 
-# text = A luta entre as duas tendências resultou no abandono do congresso por parte dos dirigentes da CNTI, da Confederação Nacional dos Trabalhadores no Comércio (CNTC) e da Confederação Nacional dos Trabalhadores em Transportes Terrestres (CNTTT), além de 45 delegados contrários ao PCB, entre os quais se incluíam os representantes da Confederação Internacional das Organizações Sindicais Livres (CIOSL) e da Organização Regional Interamericana de Trabalho (ORIT).
 # sent_id = 32
+# text = A luta entre as duas tendências resultou no abandono do congresso por parte dos dirigentes da CNTI, da Confederação Nacional dos Trabalhadores no Comércio (CNTC) e da Confederação Nacional dos Trabalhadores em Transportes Terrestres (CNTTT), além de 45 delegados contrários ao PCB, entre os quais se incluíam os representantes da Confederação Internacional das Organizações Sindicais Livres (CIOSL) e da Organização Regional Interamericana de Trabalho (ORIT).
 1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
 2	luta	luta	NOUN	_	Gender=Fem|Number=Sing	7	nsubj	_	_
 3	entre	entre	ADP	_	_	6	case	_	_
@@ -1210,20 +1202,20 @@
 8-9	no	_	_	_	_	_	_	_	_
 8	em	em	ADP	_	_	10	case	_	_
 9	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	10	det	_	_
-10	abandono	abandono	NOUN	_	Gender=Masc|Number=Sing	7	obl	_	_
+10	abandono	abandono	NOUN	_	Gender=Masc|Number=Sing	7	obj	_	_
 11-12	do	_	_	_	_	_	_	_	_
 11	de	de	ADP	_	_	13	case	_	_
 12	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	13	det	_	_
 13	congresso	congresso	NOUN	_	Gender=Masc|Number=Sing	10	nmod	_	_
 14	por	por	ADP	_	_	15	case	_	_
-15	parte	parte	NOUN	_	_	7	obl	_	_
+15	parte	parte	NOUN	_	Gender=Fem|Number=Sing	7	obl	_	_
 16-17	dos	_	_	_	_	_	_	_	_
 16	de	de	ADP	_	_	18	case	_	_
 17	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	18	det	_	_
 18	dirigentes	dirigente	NOUN	_	Gender=Masc|Number=Plur	15	nmod	_	_
 19-20	da	_	_	_	_	_	_	_	_
 19	de	de	ADP	_	_	21	case	_	_
-20	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	21	det	_	_
+20	a	o	DET	_	Definite=Def|PronType=Art	21	det	_	_
 21	CNTI	CNTI	PROPN	_	Gender=Fem|Number=Sing	18	nmod	_	SpaceAfter=No
 22	,	,	PUNCT	_	_	25	punct	_	_
 23-24	da	_	_	_	_	_	_	_	_
@@ -1238,7 +1230,7 @@
 30-31	no	_	_	_	_	_	_	_	_
 30	em	em	ADP	_	_	32	case	_	_
 31	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	32	det	_	_
-32	Comércio	Comércio	PROPN	_	Number=Sing	25	nmod	_	_
+32	Comércio	Comércio	PROPN	_	Number=Sing	29	nmod	_	_
 33	(	(	PUNCT	_	_	34	punct	_	SpaceAfter=No
 34	CNTC	CNTC	PROPN	_	Gender=Fem|Number=Sing	25	appos	_	SpaceAfter=No
 35	)	)	PUNCT	_	_	34	punct	_	_
@@ -1253,22 +1245,22 @@
 42	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	43	det	_	_
 43	Trabalhadores	Trabalhadores	PROPN	_	Number=Sing	39	nmod	_	_
 44	em	em	ADP	_	_	45	case	_	_
-45	Transportes	Transportes	PROPN	_	Number=Sing	43	nmod	_	_
-46	Terrestres	terrestres	PROPN	_	Number=Sing	45	flat:name	_	_
+45	Transportes	Transportes	PROPN	_	ExtPos=PROPN|Number=Sing	43	nmod	_	_
+46	Terrestres	Terrestres	PROPN	_	Number=Sing	45	flat:name	_	_
 47	(	(	PUNCT	_	_	48	punct	_	SpaceAfter=No
-48	CNTTT	CNTTT	PROPN	_	Gender=Masc|Number=Sing	39	appos	_	SpaceAfter=No
+48	CNTTT	CNTTT	PROPN	_	Gender=Fem|Number=Sing	39	appos	_	SpaceAfter=No
 49	)	)	PUNCT	_	_	48	punct	_	SpaceAfter=No
-50	,	,	PUNCT	_	_	7	punct	_	_
-51	além	além	ADV	_	_	7	advmod	_	_
-52	de	de	ADP	_	_	54	case	_	_
+50	,	,	PUNCT	_	_	54	punct	_	_
+51	além	além	ADV	_	_	54	cc	_	_
+52	de	de	ADP	_	_	51	fixed	_	_
 53	45	45	NUM	_	NumType=Card	54	nummod	_	_
-54	delegados	delegado	NOUN	_	Gender=Masc|Number=Plur	51	obl	_	_
+54	delegados	delegado	NOUN	_	Gender=Masc|Number=Plur	10	conj	_	_
 55	contrários	contrário	ADJ	_	Gender=Masc|Number=Plur	54	amod	_	_
 56-57	ao	_	_	_	_	_	_	_	_
 56	a	a	ADP	_	_	58	case	_	_
 57	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	58	det	_	_
-58	PCB	PCB	PROPN	_	Gender=Masc|Number=Sing	54	nmod	_	SpaceAfter=No
-59	,	,	PUNCT	_	_	7	punct	_	_
+58	PCB	PCB	PROPN	_	Gender=Masc|Number=Sing	55	obl	_	SpaceAfter=No
+59	,	,	PUNCT	_	_	64	punct	_	_
 60	entre	entre	ADP	_	_	62	case	_	_
 61	os	o	DET	_	Gender=Masc|Number=Plur|PronType=Art	62	det	_	_
 62	quais	qual	PRON	_	Gender=Masc|Number=Plur|PronType=Rel	64	obl	_	_
@@ -1278,23 +1270,23 @@
 66	representantes	representante	NOUN	_	Gender=Masc|Number=Plur	64	nsubj	_	_
 67-68	da	_	_	_	_	_	_	_	_
 67	de	de	ADP	_	_	69	case	_	_
-68	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	69	det	_	_
+68	a	o	DET	_	Definite=Def|PronType=Art	69	det	_	_
 69	Confederação	Confederação	PROPN	_	Gender=Fem|Number=Sing	66	nmod	_	_
 70	Internacional	Internacional	PROPN	_	Number=Sing	69	flat:name	_	_
 71-72	das	_	_	_	_	_	_	_	_
 71	de	de	ADP	_	_	73	case	_	_
 72	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	73	det	_	_
-73	Organizações	Organizações	PROPN	_	Gender=Fem|Number=Plur	69	nmod	_	_
-74	Sindicais	sindicais	PROPN	_	Gender=Fem|Number=Plur	69	appos	_	_
-75	Livres	livres	PROPN	_	Gender=Fem|Number=Plur	74	appos	_	_
+73	Organizações	Organizações	PROPN	_	ExtPos=PROPN|Number=Sing	69	nmod	_	_
+74	Sindicais	Sindicais	PROPN	_	Number=Sing	73	flat:name	_	_
+75	Livres	Livres	PROPN	_	Number=Sing	73	flat:name	_	_
 76	(	(	PUNCT	_	_	77	punct	_	SpaceAfter=No
-77	CIOSL	CIOSL	PROPN	_	Gender=Fem|Number=Sing	75	appos	_	SpaceAfter=No
+77	CIOSL	CIOSL	PROPN	_	Gender=Fem|Number=Sing	69	appos	_	SpaceAfter=No
 78	)	)	PUNCT	_	_	77	punct	_	_
 79	e	e	CCONJ	_	_	82	cc	_	_
 80-81	da	_	_	_	_	_	_	_	_
 80	de	de	ADP	_	_	82	case	_	_
 81	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	82	det	_	_
-82	Organização	Organização	PROPN	_	Gender=Fem|Number=Sing	75	conj	_	_
+82	Organização	Organização	PROPN	_	Gender=Fem|Number=Sing	69	conj	_	_
 83	Regional	Regional	PROPN	_	Number=Sing	82	flat:name	_	_
 84	Interamericana	Interamericana	PROPN	_	Number=Sing	82	flat:name	_	_
 85	de	de	ADP	_	_	86	case	_	_
@@ -1304,17 +1296,17 @@
 89	)	)	PUNCT	_	_	88	punct	_	SpaceAfter=No
 90	.	.	PUNCT	_	_	7	punct	_	_
 
-# text = A despeito da tentativa de Goulart de promover um acordo que assegurasse a volta ao congresso da facção dissidente, Campista declarou que não seriam feitas concessões aos comunistas.
 # sent_id = 33
-1	A	o	DET	_	_	2	det	_	_
-2	despeito	despeito	NOUN	_	Gender=Masc|Number=Sing	25	nsubj	_	_
+# text = A despeito da tentativa de Goulart de promover um acordo que assegurasse a volta ao congresso da facção dissidente, Campista declarou que não seriam feitas concessões aos comunistas.
+1	A	a	ADP	_	_	2	case	_	_
+2	despeito	despeito	NOUN	_	Gender=Masc|Number=Sing	25	obl	_	_
 3-4	da	_	_	_	_	_	_	_	_
 3	de	de	ADP	_	_	5	case	_	_
 4	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	5	det	_	_
 5	tentativa	tentativa	NOUN	_	Gender=Fem|Number=Sing	2	nmod	_	_
 6	de	de	ADP	_	_	7	case	_	_
-7	Goulart	Goulart	PROPN	_	Gender=Fem|Number=Sing	5	nmod	_	_
-8	de	de	ADP	_	_	9	mark	_	_
+7	Goulart	Goulart	PROPN	_	Gender=Masc|Number=Sing	5	nmod	_	_
+8	de	de	SCONJ	_	_	9	mark	_	_
 9	promover	promover	VERB	_	VerbForm=Inf	5	acl	_	_
 10	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	11	det	_	_
 11	acordo	acordo	NOUN	_	Gender=Masc|Number=Sing	9	obj	_	_
@@ -1332,21 +1324,21 @@
 21	facção	facção	NOUN	_	Gender=Fem|Number=Sing	18	nmod	_	_
 22	dissidente	dissidente	ADJ	_	Gender=Fem|Number=Sing	21	amod	_	SpaceAfter=No
 23	,	,	PUNCT	_	_	13	punct	_	_
-24	Campista	Campista	PROPN	_	Gender=Masc|Number=Sing	2	appos	_	_
+24	Campista	Campista	PROPN	_	Gender=Masc|Number=Sing	25	nsubj	_	_
 25	declarou	declarar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 26	que	que	SCONJ	_	_	29	mark	_	_
 27	não	não	ADV	_	Polarity=Neg	29	advmod	_	_
 28	seriam	ser	AUX	_	Mood=Cnd|Number=Plur|Person=3|VerbForm=Fin	29	aux:pass	_	_
 29	feitas	fazer	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part|Voice=Pass	25	ccomp	_	_
-30	concessões	concessão	NOUN	_	Gender=Fem|Number=Plur	29	nsubj:pass	_	_
+30	concessões	concessão	NOUN	_	Gender=Masc|Number=Plur	29	nsubj:pass	_	_
 31-32	aos	_	_	_	_	_	_	_	_
 31	a	a	ADP	_	_	33	case	_	_
 32	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	33	det	_	_
-33	comunistas	comunista	NOUN	_	Gender=Masc|Number=Plur	30	nmod	_	SpaceAfter=No
+33	comunistas	comunista	NOUN	_	Gender=Masc|Number=Plur	29	obj	_	SpaceAfter=No
 34	.	.	PUNCT	_	_	25	punct	_	_
 
-# text = Seu grupo enviou em seguida um telegrama ao presidente da República anunciando o encerramento da reunião “face às manobras do PCB”.
 # sent_id = 34
+# text = Seu grupo enviou em seguida um telegrama ao presidente da República anunciando o encerramento da reunião “face às manobras do PCB”.
 1	Seu	seu	DET	_	Gender=Masc|Number=Sing|PronType=Prs	2	det	_	_
 2	grupo	grupo	NOUN	_	Gender=Masc|Number=Sing	3	nsubj	_	_
 3	enviou	enviar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
@@ -1357,11 +1349,11 @@
 8-9	ao	_	_	_	_	_	_	_	_
 8	a	a	ADP	_	_	10	case	_	_
 9	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	10	det	_	_
-10	presidente	presidente	NOUN	_	Gender=Masc|Number=Sing	3	obl	_	_
+10	presidente	presidente	NOUN	_	Gender=Masc|Number=Sing	3	iobj	_	_
 11-12	da	_	_	_	_	_	_	_	_
 11	de	de	ADP	_	_	13	case	_	_
 12	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	13	det	_	_
-13	República	república	PROPN	_	Number=Sing	10	nmod	_	_
+13	República	república	NOUN	_	Gender=Fem|Number=Sing	10	nmod	_	_
 14	anunciando	anunciar	VERB	_	VerbForm=Ger	3	advcl	_	_
 15	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	16	det	_	_
 16	encerramento	encerramento	NOUN	_	Gender=Masc|Number=Sing	14	obj	_	_
@@ -1369,7 +1361,7 @@
 17	de	de	ADP	_	_	19	case	_	_
 18	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	19	det	_	_
 19	reunião	reunião	NOUN	_	Gender=Fem|Number=Sing	16	nmod	_	_
-20	“	“	PUNCT	_	_	14	punct	_	SpaceAfter=No
+20	“	"	PUNCT	_	_	21	punct	_	SpaceAfter=No
 21	face	face	ADV	_	_	14	advmod	_	_
 22-23	às	_	_	_	_	_	_	_	_
 22	a	a	ADP	_	_	24	case	_	_
@@ -1379,11 +1371,11 @@
 25	de	de	ADP	_	_	27	case	_	_
 26	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	27	det	_	_
 27	PCB	PCB	PROPN	_	Gender=Masc|Number=Sing	24	nmod	_	SpaceAfter=No
-28	”	”	PUNCT	_	_	14	punct	_	SpaceAfter=No
+28	”	"	PUNCT	_	_	21	punct	_	SpaceAfter=No
 29	.	.	PUNCT	_	_	3	punct	_	_
 
-# text = Entretanto, a grande maioria dos delegados permaneceu reunida, dando prosseguimento a seus trabalhos.
 # sent_id = 35
+# text = Entretanto, a grande maioria dos delegados permaneceu reunida, dando prosseguimento a seus trabalhos.
 1	Entretanto	entretanto	ADV	_	_	9	advmod	_	SpaceAfter=No
 2	,	,	PUNCT	_	_	1	punct	_	_
 3	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	5	det	_	_
@@ -1394,18 +1386,17 @@
 7	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	8	det	_	_
 8	delegados	delegado	NOUN	_	Gender=Masc|Number=Plur	5	nmod	_	_
 9	permaneceu	permanecer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
-10	reunida	reunir	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	9	xcomp	_	SpaceAfter=No
+10	reunida	reunido	ADJ	_	Gender=Fem|Number=Sing	9	xcomp	_	SpaceAfter=No
 11	,	,	PUNCT	_	_	12	punct	_	_
 12	dando	dar	VERB	_	VerbForm=Ger	9	advcl	_	_
 13	prosseguimento	prosseguimento	NOUN	_	Gender=Masc|Number=Sing	12	obj	_	_
 14	a	a	ADP	_	_	16	case	_	_
 15	seus	seu	DET	_	Gender=Masc|Number=Plur|PronType=Prs	16	det	_	_
-16	trabalhos	trabalho	NOUN	_	Gender=Masc|Number=Plur	12	obl	_	SpaceAfter=No
-17	.	.	PUNCT	_	_	9	punct	_	_
+16	trabalhos	trabalho	NOUN	_	Gender=Masc|Number=Plur	12	iobj	_	SpaceAfter=No
+17	.	.	PUNCT	_	_	9	punct	_	SpacesAfter=\n
 
-# text = Após o encerramento do congresso, Campista renunciou a seu cargo de presidente do CPOS, desligando-se definitivamente dessa organização em protesto contra os líderes comunistas que nela atuavam.
 # sent_id = 36
-# newpar
+# text = Após o encerramento do congresso, Campista renunciou a seu cargo de presidente do CPOS, desligando-se definitivamente dessa organização em protesto contra os líderes comunistas que nela atuavam.
 1	Após	após	ADP	_	_	3	case	_	_
 2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
 3	encerramento	encerramento	NOUN	_	Gender=Masc|Number=Sing	9	obl	_	_
@@ -1418,22 +1409,22 @@
 9	renunciou	renunciar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 10	a	a	ADP	_	_	12	case	_	_
 11	seu	seu	DET	_	Gender=Masc|Number=Sing|PronType=Prs	12	det	_	_
-12	cargo	cargo	NOUN	_	Gender=Masc|Number=Sing	9	obl	_	_
+12	cargo	cargo	NOUN	_	Gender=Masc|Number=Sing	9	obj	_	_
 13	de	de	ADP	_	_	14	case	_	_
 14	presidente	presidente	NOUN	_	Gender=Masc|Number=Sing	12	nmod	_	_
 15-16	do	_	_	_	_	_	_	_	_
 15	de	de	ADP	_	_	17	case	_	_
 16	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	17	det	_	_
-17	CPOS	CPOS	PROPN	_	Gender=Masc|Number=Sing	14	nmod	_	SpaceAfter=No
+17	CPOS	cpos	PROPN	_	Gender=Masc|Number=Sing	14	nmod	_	SpaceAfter=No
 18	,	,	PUNCT	_	_	19	punct	_	_
 19-20	desligando-se	_	_	_	_	_	_	_	_
 19	desligando	desligar	VERB	_	VerbForm=Ger	9	advcl	_	_
-20	se	se	PRON	_	Case=Acc|Gender=Unsp|PronType=Prs	19	nsubj	_	_
+20	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	19	expl	_	_
 21	definitivamente	definitivamente	ADV	_	_	19	advmod	_	_
 22-23	dessa	_	_	_	_	_	_	_	_
 22	de	de	ADP	_	_	24	case	_	_
 23	essa	esse	DET	_	Gender=Fem|Number=Sing|PronType=Dem	24	det	_	_
-24	organização	organização	NOUN	_	Gender=Fem|Number=Sing	21	obl	_	_
+24	organização	organização	NOUN	_	Gender=Fem|Number=Sing	19	obj	_	_
 25	em	em	ADP	_	_	26	case	_	_
 26	protesto	protesto	NOUN	_	Gender=Masc|Number=Sing	19	obl	_	_
 27	contra	contra	ADP	_	_	29	case	_	_
@@ -1443,13 +1434,12 @@
 31	que	que	PRON	_	Gender=Masc|Number=Plur|PronType=Rel	34	nsubj	_	_
 32-33	nela	_	_	_	_	_	_	_	_
 32	em	em	ADP	_	_	33	case	_	_
-33	ela	ele	PRON	_	Gender=Fem|Number=Sing|Person=3|PronType=Prs	34	obl	_	_
-34	atuavam	atuavar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	29	acl:relcl	_	SpaceAfter=No
-35	.	.	PUNCT	_	_	9	punct	_	_
+33	ela	ela	PRON	_	Gender=Fem|Number=Sing|Person=3|PronType=Prs	34	obl	_	_
+34	atuavam	atuar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	29	acl:relcl	_	SpaceAfter=No
+35	.	.	PUNCT	_	_	9	punct	_	SpacesAfter=\n
 
-# text = Ainda em 1960, Campista recebeu uma mensagem de elogio do presidente dos Estados Unidos, Dwight Eisenhower, a qual lhe foi transmitida pelo adido do trabalho da embaixada norte-americana, «mr. Fishburn».
 # sent_id = 37
-# newpar
+# text = Ainda em 1960, Campista recebeu uma mensagem de elogio do presidente dos Estados Unidos, Dwight Eisenhower, a qual lhe foi transmitida pelo adido do trabalho da embaixada norte-americana, «mr. Fishburn».
 1	Ainda	ainda	ADV	_	_	3	advmod	_	_
 2	em	em	ADP	_	_	3	case	_	_
 3	1960	1960	NUM	_	NumType=Card	6	obl	_	SpaceAfter=No
@@ -1463,25 +1453,25 @@
 11-12	do	_	_	_	_	_	_	_	_
 11	de	de	ADP	_	_	13	case	_	_
 12	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	13	det	_	_
-13	presidente	presidente	NOUN	_	Gender=Masc|Number=Sing	8	nmod	_	_
+13	presidente	presidente	NOUN	_	Gender=Masc|Number=Sing	10	nmod	_	_
 14-15	dos	_	_	_	_	_	_	_	_
 14	de	de	ADP	_	_	16	case	_	_
 15	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	16	det	_	_
-16	Estados	Estados	PROPN	_	Gender=Masc|Number=Plur	13	nmod	_	_
-17	Unidos	Unidos	PROPN	_	Number=Sing	16	flat:name	_	SpaceAfter=No
+16	Estados	estado	NOUN	_	Gender=Masc|Number=Plur	13	nmod	_	_
+17	Unidos	Unidos	PROPN	_	Gender=Masc|Number=Plur	16	flat:name	_	SpaceAfter=No
 18	,	,	PUNCT	_	_	19	punct	_	_
-19	Dwight	Dwight	PROPN	_	Gender=Fem|Number=Sing	13	appos	_	_
+19	Dwight	Dwight	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	13	appos	_	_
 20	Eisenhower	Eisenhower	PROPN	_	Number=Sing	19	flat:name	_	SpaceAfter=No
 21	,	,	PUNCT	_	_	19	punct	_	_
-22	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	23	det	_	_
+22	a	o	DET	_	Gender=Fem|Number=Sing|PronType=Art	23	det	_	_
 23	qual	qual	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	26	nsubj:pass	_	_
 24	lhe	ele	PRON	_	Case=Dat|Gender=Masc|Number=Sing|Person=3|PronType=Prs	26	iobj	_	_
 25	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	26	aux:pass	_	_
-26	transmitida	transmitir	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	6	advcl	_	_
+26	transmitida	transmitir	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	13	acl:relcl	_	_
 27-28	pelo	_	_	_	_	_	_	_	_
 27	por	por	ADP	_	_	29	case	_	_
 28	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	29	det	_	_
-29	adido	adir	NOUN	_	Gender=Masc|Number=Sing|VerbForm=Part	26	obl	_	_
+29	adido	adido	NOUN	_	Gender=Masc|Number=Sing	26	obl:agent	_	_
 30-31	do	_	_	_	_	_	_	_	_
 30	de	de	ADP	_	_	32	case	_	_
 31	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	32	det	_	_
@@ -1493,31 +1483,29 @@
 36	norte-americana	norte-americano	ADJ	_	Gender=Fem|Number=Sing	35	amod	_	SpaceAfter=No
 37	,	,	PUNCT	_	_	39	punct	_	_
 38	«	«	PUNCT	_	_	39	punct	_	SpaceAfter=No
-39	mr	mr	VERB	_	Gender=Masc|Number=Sing	26	conj	_	SpaceAfter=No
-40	.	.	PUNCT	_	_	39	punct	_	_
-41	Fishburn	Fishburn	PROPN	_	Gender=Masc|Number=Sing	39	obj	_	SpaceAfter=No
-42	»	»	PUNCT	_	_	39	punct	_	SpaceAfter=No
-43	.	.	PUNCT	_	_	6	punct	_	_
+39	mr.	mr.	NOUN	_	Abbr=Yes|Gender=Masc|Number=Sing	35	appos	_	_
+40	Fishburn	Fishburn	PROPN	_	Gender=Masc|Number=Sing	39	appos	_	SpaceAfter=No
+41	»	»	PUNCT	_	_	39	punct	_	SpaceAfter=No
+42	.	.	PUNCT	_	_	6	punct	_	SpacesAfter=\n
 
-# text = Nas eleições presidenciais de outubro de 1960, saíram vitoriosos Jânio Quadros, candidato da UDN à presidência da República, e João Goulart, candidato à vice-presidência na chapa liderada pelo general Henrique Lott, lançada pela coalizão PSD-PTB.
 # sent_id = 38
-# newpar
+# text = Nas eleições presidenciais de outubro de 1960, saíram vitoriosos Jânio Quadros, candidato da UDN à presidência da República, e João Goulart, candidato à vice-presidência na chapa liderada pelo general Henrique Lott, lançada pela coalizão PSD-PTB.
 1-2	Nas	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	3	case	_	_
 2	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	3	det	_	_
 3	eleições	eleição	NOUN	_	Gender=Fem|Number=Plur	10	obl	_	_
 4	presidenciais	presidencial	ADJ	_	Gender=Fem|Number=Plur	3	amod	_	_
 5	de	de	ADP	_	_	6	case	_	_
-6	outubro	outubro	NOUN	_	Gender=Masc|Number=Sing	3	nmod:tmod	_	_
+6	outubro	outubro	NOUN	_	Gender=Masc|Number=Sing	3	nmod	_	_
 7	de	de	ADP	_	_	8	case	_	_
 8	1960	1960	NUM	_	NumType=Card	6	nmod	_	SpaceAfter=No
 9	,	,	PUNCT	_	_	3	punct	_	_
 10	saíram	sair	VERB	_	Mood=Ind|Number=Plur|Person=3|VerbForm=Fin	0	root	_	_
-11	vitoriosos	vitorioso	ADJ	_	Gender=Masc|Number=Plur	12	amod	_	_
-12	Jânio	Jânio	PROPN	_	Gender=Masc|Number=Sing	10	nsubj	_	_
+11	vitoriosos	vitorioso	ADJ	_	Gender=Masc|Number=Plur	10	xcomp	_	_
+12	Jânio	Jânio	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	10	nsubj	_	_
 13	Quadros	Quadros	PROPN	_	Number=Sing	12	flat:name	_	SpaceAfter=No
 14	,	,	PUNCT	_	_	15	punct	_	_
-15	candidato	candidato	NOUN	_	Gender=Masc|Number=Sing	12	conj	_	_
+15	candidato	candidato	NOUN	_	Gender=Masc|Number=Sing	12	appos	_	_
 16-17	da	_	_	_	_	_	_	_	_
 16	de	de	ADP	_	_	18	case	_	_
 17	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	18	det	_	_
@@ -1529,10 +1517,10 @@
 22-23	da	_	_	_	_	_	_	_	_
 22	de	de	ADP	_	_	24	case	_	_
 23	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	24	det	_	_
-24	República	República	PROPN	_	Number=Sing	21	nmod	_	SpaceAfter=No
+24	República	república	NOUN	_	Gender=Fem|Number=Sing	21	nmod	_	SpaceAfter=No
 25	,	,	PUNCT	_	_	27	punct	_	_
 26	e	e	CCONJ	_	_	27	cc	_	_
-27	João	João	PROPN	_	Gender=Masc|Number=Sing	12	conj	_	_
+27	João	João	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	12	conj	_	_
 28	Goulart	Goulart	PROPN	_	Number=Sing	27	flat:name	_	SpaceAfter=No
 29	,	,	PUNCT	_	_	30	punct	_	_
 30	candidato	candidato	NOUN	_	Gender=Masc|Number=Sing	27	appos	_	_
@@ -1549,24 +1537,24 @@
 38	por	por	ADP	_	_	40	case	_	_
 39	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	40	det	_	_
 40	general	general	NOUN	_	Gender=Masc|Number=Sing	37	obl:agent	_	_
-41	Henrique	Henrique	PROPN	_	Gender=Masc|Number=Sing	40	appos	_	_
+41	Henrique	Henrique	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	40	appos	_	_
 42	Lott	Lott	PROPN	_	Number=Sing	41	flat:name	_	SpaceAfter=No
-43	,	,	PUNCT	_	_	37	punct	_	_
+43	,	,	PUNCT	_	_	44	punct	_	_
 44	lançada	lançar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	36	acl	_	_
 45-46	pela	_	_	_	_	_	_	_	_
 45	por	por	ADP	_	_	47	case	_	_
 46	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	47	det	_	_
 47	coalizão	coalizão	NOUN	_	Gender=Fem|Number=Sing	44	obl:agent	_	_
-48	PSD-PTB	PSD-PTB	PROPN	_	Gender=Masc|Number=Sing	47	appos	_	SpaceAfter=No
+48	PSD-PTB	PSD-pTB	PROPN	_	Gender=Fem|Number=Sing	47	appos	_	SpaceAfter=No
 49	.	.	PUNCT	_	_	10	punct	_	_
 
-# text = Com a renúncia de Quadros em 25 de agosto de 1961, teve início uma crise política provocada pelo veto dos ministros militares à posse de Goulart na presidência.
 # sent_id = 39
+# text = Com a renúncia de Quadros em 25 de agosto de 1961, teve início uma crise política provocada pelo veto dos ministros militares à posse de Goulart na presidência.
 1	Com	com	ADP	_	_	3	case	_	_
 2	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	3	det	_	_
 3	renúncia	renúncia	NOUN	_	Gender=Fem|Number=Sing	13	obl	_	_
 4	de	de	ADP	_	_	5	case	_	_
-5	Quadros	Quadro	NOUN	_	Gender=Masc|Number=Plur	3	nmod	_	_
+5	Quadros	Quadros	PROPN	_	Gender=Masc|Number=Sing	3	nmod	_	_
 6	em	em	ADP	_	_	7	case	_	_
 7	25	25	NUM	_	NumType=Card	3	nmod	_	_
 8	de	de	ADP	_	_	9	case	_	_
@@ -1575,9 +1563,9 @@
 11	1961	1961	NUM	_	NumType=Card	9	nmod	_	SpaceAfter=No
 12	,	,	PUNCT	_	_	3	punct	_	_
 13	teve	ter	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
-14	início	início	NOUN	_	Gender=Masc|Number=Sing	13	obl	_	_
+14	início	início	NOUN	_	Gender=Masc|Number=Sing	13	obj	_	_
 15	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	16	det	_	_
-16	crise	crise	NOUN	_	Gender=Fem|Number=Sing	13	obj	_	_
+16	crise	crise	NOUN	_	Gender=Fem|Number=Sing	13	nsubj	_	_
 17	política	político	ADJ	_	Gender=Fem|Number=Sing	16	amod	_	_
 18	provocada	provocar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	16	acl	_	_
 19-20	pelo	_	_	_	_	_	_	_	_
@@ -1592,17 +1580,17 @@
 26-27	à	_	_	_	_	_	_	_	_
 26	a	a	ADP	_	_	28	case	_	_
 27	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	28	det	_	_
-28	posse	posse	NOUN	_	Gender=Fem|Number=Sing	24	nmod	_	_
+28	posse	posse	NOUN	_	Gender=Fem|Number=Sing	21	nmod	_	_
 29	de	de	ADP	_	_	30	case	_	_
-30	Goulart	Goulart	PROPN	_	Gender=Unsp|Number=Sing	28	nmod	_	_
+30	Goulart	Goulart	PROPN	_	Gender=Masc|Number=Sing	28	nmod	_	_
 31-32	na	_	_	_	_	_	_	_	_
 31	em	em	ADP	_	_	33	case	_	_
 32	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	33	det	_	_
 33	presidência	presidência	NOUN	_	Gender=Fem|Number=Sing	28	nmod	_	SpaceAfter=No
 34	.	.	PUNCT	_	_	13	punct	_	_
 
-# text = A crise foi contornada com a adoção do sistema parlamentarista de governo, e Goulart tomou posse em 7 de setembro de 1961.
 # sent_id = 40
+# text = A crise foi contornada com a adoção do sistema parlamentarista de governo, e Goulart tomou posse em 7 de setembro de 1961.
 1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
 2	crise	crise	NOUN	_	Gender=Fem|Number=Sing	4	nsubj:pass	_	_
 3	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	aux:pass	_	_
@@ -1616,23 +1604,22 @@
 10	sistema	sistema	NOUN	_	Gender=Masc|Number=Sing	7	nmod	_	_
 11	parlamentarista	parlamentarista	ADJ	_	Gender=Masc|Number=Sing	10	amod	_	_
 12	de	de	ADP	_	_	13	case	_	_
-13	governo	governo	NOUN	_	_	10	nmod	_	SpaceAfter=No
+13	governo	governo	NOUN	_	Gender=Masc|Number=Sing	10	nmod	_	SpaceAfter=No
 14	,	,	PUNCT	_	_	17	punct	_	_
 15	e	e	CCONJ	_	_	17	cc	_	_
-16	Goulart	Goulart	PROPN	_	Gender=Unsp|Number=Sing	17	nsubj	_	_
+16	Goulart	Goulart	PROPN	_	Gender=Masc|Number=Sing	17	nsubj	_	_
 17	tomou	tomar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	conj	_	_
 18	posse	posse	NOUN	_	Gender=Fem|Number=Sing	17	obj	_	_
 19	em	em	ADP	_	_	20	case	_	_
 20	7	7	NUM	_	NumType=Card	17	obl	_	_
 21	de	de	ADP	_	_	22	case	_	_
-22	setembro	setembro	NOUN	_	Gender=Masc|Number=Sing	20	nmod:tmod	_	_
+22	setembro	setembro	NOUN	_	Gender=Masc|Number=Sing	20	nmod	_	_
 23	de	de	ADP	_	_	24	case	_	_
 24	1961	1961	NUM	_	NumType=Card	22	nmod	_	SpaceAfter=No
-25	.	.	PUNCT	_	_	4	punct	_	_
+25	.	.	PUNCT	_	_	4	punct	_	SpacesAfter=\n
 
-# text = Em dezembro desse mesmo ano, foram realizadas eleições para a diretoria da CNTI.
 # sent_id = 41
-# newpar
+# text = Em dezembro desse mesmo ano, foram realizadas eleições para a diretoria da CNTI.
 1	Em	em	ADP	_	_	2	case	_	_
 2	dezembro	dezembro	NOUN	_	Gender=Masc|Number=Sing	9	obl	_	_
 3-4	desse	_	_	_	_	_	_	_	_
@@ -1653,20 +1640,20 @@
 16	CNTI	CNTI	PROPN	_	Gender=Fem|Number=Sing	13	nmod	_	SpaceAfter=No
 17	.	.	PUNCT	_	_	9	punct	_	_
 
-# text = Ao lado de Holanda Cavalcanti e de todas as correntes anticomunistas que atuavam no movimento trabalhista, Ari Campista apoiou a chapa liderada por Heraci Fagundes Wagner.
 # sent_id = 42
+# text = Ao lado de Holanda Cavalcanti e de todas as correntes anticomunistas que atuavam no movimento trabalhista, Ari Campista apoiou a chapa liderada por Heraci Fagundes Wagner.
 1-2	Ao	_	_	_	_	_	_	_	_
 1	A	a	ADP	_	_	3	case	_	_
 2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
-3	lado	lado	NOUN	_	_	22	obl	_	_
+3	lado	lado	NOUN	_	Gender=Masc|Number=Sing	22	obl	_	_
 4	de	de	ADP	_	_	5	case	_	_
-5	Holanda	Holanda	PROPN	_	Gender=Fem|Number=Sing	3	nmod	_	_
+5	Holanda	Holanda	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	3	nmod	_	_
 6	Cavalcanti	Cavalcanti	PROPN	_	Number=Sing	5	flat:name	_	_
 7	e	e	CCONJ	_	_	11	cc	_	_
 8	de	de	ADP	_	_	11	case	_	_
 9	todas	todo	DET	_	Gender=Fem|Number=Plur|PronType=Tot	11	det	_	_
-10	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	9	fixed	_	_
-11	correntes	correntes	NOUN	_	Gender=Masc|Number=Plur	5	conj	_	_
+10	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	11	det	_	_
+11	correntes	corrente	NOUN	_	Gender=Fem|Number=Plur	5	conj	_	_
 12	anticomunistas	anticomunista	ADJ	_	Gender=Fem|Number=Plur	11	amod	_	_
 13	que	que	PRON	_	Gender=Fem|Number=Plur|PronType=Rel	14	nsubj	_	_
 14	atuavam	atuar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	11	acl:relcl	_	_
@@ -1676,56 +1663,56 @@
 17	movimento	movimento	NOUN	_	Gender=Masc|Number=Sing	14	obl	_	_
 18	trabalhista	trabalhista	ADJ	_	Gender=Masc|Number=Sing	17	amod	_	SpaceAfter=No
 19	,	,	PUNCT	_	_	14	punct	_	_
-20	Ari	Ari	PROPN	_	Gender=Masc|Number=Sing	22	nsubj	_	_
+20	Ari	Ari	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	22	nsubj	_	_
 21	Campista	Campista	PROPN	_	Number=Sing	20	flat:name	_	_
 22	apoiou	apoiar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 23	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	24	det	_	_
 24	chapa	chapa	NOUN	_	Gender=Fem|Number=Sing	22	obj	_	_
 25	liderada	liderar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	24	acl	_	_
 26	por	por	ADP	_	_	27	case	_	_
-27	Heraci	Heraci	PROPN	_	Gender=Masc|Number=Sing	25	obl:agent	_	_
+27	Heraci	Heraci	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	25	obl:agent	_	_
 28	Fagundes	Fagundes	PROPN	_	Number=Sing	27	flat:name	_	_
 29	Wagner	Wagner	PROPN	_	Number=Sing	27	flat:name	_	SpaceAfter=No
 30	.	.	PUNCT	_	_	22	punct	_	_
 
-# text = A vitória coube contudo à chapa apoiada por Goulart, liderada por Clodesmidt Riani, do PTB, e Dante Pellacani, ambos favoráveis aos comunistas.
 # sent_id = 43
+# text = A vitória coube contudo à chapa apoiada por Goulart, liderada por Clodesmidt Riani, do PTB, e Dante Pellacani, ambos favoráveis aos comunistas.
 1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
 2	vitória	vitória	NOUN	_	Gender=Fem|Number=Sing	3	nsubj	_	_
 3	coube	caber	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
-4	contudo	contudo	NOUN	_	_	3	obj	_	_
+4	contudo	contudo	CCONJ	_	_	3	cc	_	_
 5-6	à	_	_	_	_	_	_	_	_
 5	a	a	ADP	_	_	7	case	_	_
 6	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	7	det	_	_
-7	chapa	chapa	NOUN	_	Gender=Fem|Number=Sing	3	obl	_	_
+7	chapa	chapa	NOUN	_	Gender=Fem|Number=Sing	3	obj	_	_
 8	apoiada	apoiar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	7	acl	_	_
 9	por	por	ADP	_	_	10	case	_	_
 10	Goulart	Goulart	PROPN	_	Gender=Masc|Number=Sing	8	obl:agent	_	SpaceAfter=No
 11	,	,	PUNCT	_	_	12	punct	_	_
-12	liderada	liderar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	7	acl	_	_
+12	liderada	liderar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	10	acl	_	_
 13	por	por	ADP	_	_	14	case	_	_
-14	Clodesmidt	Clodesmidt	PROPN	_	Gender=Masc|Number=Sing	12	obl:agent	_	_
+14	Clodesmidt	Clodesmidt	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	12	obl:agent	_	_
 15	Riani	Riani	PROPN	_	Number=Sing	14	flat:name	_	SpaceAfter=No
-16	,	,	PUNCT	_	_	12	punct	_	_
+16	,	,	PUNCT	_	_	19	punct	_	_
 17-18	do	_	_	_	_	_	_	_	_
 17	de	de	ADP	_	_	19	case	_	_
 18	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	19	det	_	_
-19	PTB	PTB	PROPN	_	Gender=Masc|Number=Sing	12	obl	_	SpaceAfter=No
-20	,	,	PUNCT	_	_	22	punct	_	_
+19	PTB	PTB	PROPN	_	Gender=Masc|Number=Sing	14	nmod	_	SpaceAfter=No
+20	,	,	PUNCT	_	_	19	punct	_	_
 21	e	e	CCONJ	_	_	22	cc	_	_
-22	Dante	Dante	PROPN	_	Gender=Masc|Number=Sing	12	conj	_	_
-23	Pellacani	Pellacani	PROPN	_	Gender=Masc|Number=Sing	22	appos	_	SpaceAfter=No
-24	,	,	PUNCT	_	_	26	punct	_	_
-25	ambos	ambos	DET	_	Gender=Masc|Number=Plur|PronType=Tot	26	det	_	_
-26	favoráveis	favorável	ADJ	_	Gender=Masc|Number=Plur	22	amod	_	_
+22	Dante	Dante	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	14	conj	_	_
+23	Pellacani	Pellacani	PROPN	_	Number=Sing	22	flat:name	_	SpaceAfter=No
+24	,	,	PUNCT	_	_	25	punct	_	_
+25	ambos	ambos	DET	_	Gender=Masc|Number=Plur|PronType=Tot	22	appos	_	_
+26	favoráveis	favorável	ADJ	_	Gender=Masc|Number=Plur	25	amod	_	_
 27-28	aos	_	_	_	_	_	_	_	_
 27	a	a	ADP	_	_	29	case	_	_
 28	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	29	det	_	_
 29	comunistas	comunista	NOUN	_	Gender=Masc|Number=Plur	26	obl	_	SpaceAfter=No
 30	.	.	PUNCT	_	_	3	punct	_	_
 
-# text = Além da CNTI, a aliança entre petebistas radicais e comunistas assumiu também a partir desse ano o controle de duas outras confederações de trabalhadores — a Confederação Nacional dos Trabalhadores em Estabelecimentos de Crédito (Contec) e a Confederação Nacional dos Trabalhadores em Transportes Marítimos, Fluviais e Aéreos (CNTTMFA).
 # sent_id = 44
+# text = Além da CNTI, a aliança entre petebistas radicais e comunistas assumiu também a partir desse ano o controle de duas outras confederações de trabalhadores - a Confederação Nacional dos Trabalhadores em Estabelecimentos de Crédito (Contec) e a Confederação Nacional dos Trabalhadores em Transportes Marítimos, Fluviais e Aéreos (CNTTMFA).
 1	Além	além	ADV	_	_	13	advmod	_	_
 2-3	da	_	_	_	_	_	_	_	_
 2	de	de	ADP	_	_	4	case	_	_
@@ -1738,13 +1725,13 @@
 9	petebistas	petebista	NOUN	_	Gender=Masc|Number=Plur	7	nmod	_	_
 10	radicais	radical	ADJ	_	Gender=Masc|Number=Plur	9	amod	_	_
 11	e	e	CCONJ	_	_	12	cc	_	_
-12	comunistas	comunista	ADJ	_	Gender=Masc|Number=Plur	10	conj	_	_
+12	comunistas	comunista	NOUN	_	Gender=Masc|Number=Plur	10	conj	_	_
 13	assumiu	assumir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 14	também	também	ADV	_	_	13	advmod	_	_
-15	a	a	ADP	_	_	16	case	_	_
-16	partir	partir	NOUN	_	_	13	obl	_	_
+15	a	a	ADP	_	ExtPos=ADP	16	case	_	_
+16	partir	partir	VERB	_	VerbForm=Inf	13	obl	_	_
 17-18	desse	_	_	_	_	_	_	_	_
-17	de	de	ADP	_	_	19	case	_	_
+17	de	de	ADP	_	_	15	fixed	_	_
 18	esse	esse	DET	_	Gender=Masc|Number=Sing|PronType=Dem	19	det	_	_
 19	ano	ano	NOUN	_	Gender=Masc|Number=Sing	16	nmod	_	_
 20	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	21	det	_	_
@@ -1755,7 +1742,7 @@
 25	confederações	confederação	NOUN	_	Gender=Fem|Number=Plur	21	nmod	_	_
 26	de	de	ADP	_	_	27	case	_	_
 27	trabalhadores	trabalhador	NOUN	_	Gender=Masc|Number=Plur	25	nmod	_	_
-28	—	—	PUNCT	_	_	13	punct	_	_
+28	-	-	PUNCT	_	_	30	punct	_	_
 29	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	30	det	_	_
 30	Confederação	Confederação	PROPN	_	Gender=Fem|Number=Sing	25	appos	_	_
 31	Nacional	Nacional	PROPN	_	Number=Sing	30	flat:name	_	_
@@ -1764,7 +1751,7 @@
 33	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	34	det	_	_
 34	Trabalhadores	Trabalhadores	PROPN	_	Number=Sing	30	nmod	_	_
 35	em	em	ADP	_	_	36	case	_	_
-36	Estabelecimentos	estabelecimentos	PROPN	_	Gender=Masc|Number=Plur	30	nmod	_	_
+36	Estabelecimentos	Estabelecimentos	PROPN	_	Number=Sing	34	nmod	_	_
 37	de	de	ADP	_	_	38	case	_	_
 38	Crédito	Crédito	PROPN	_	Number=Sing	36	nmod	_	_
 39	(	(	PUNCT	_	_	40	punct	_	SpaceAfter=No
@@ -1780,32 +1767,31 @@
 48	Trabalhadores	Trabalhadores	PROPN	_	Number=Sing	44	nmod	_	_
 49	em	em	ADP	_	_	50	case	_	_
 50	Transportes	Transportes	PROPN	_	Number=Sing	48	nmod	_	_
-51	Marítimos	Marítimo	ADJ	_	Number=Sing	50	flat:name	_	SpaceAfter=No
-52	,	,	PUNCT	_	_	53	punct	_	_
-53	Fluviais	fluviais	PROPN	_	Gender=Fem|Number=Plur	30	conj	_	_
-54	e	e	CCONJ	_	_	55	cc	_	_
-55	Aéreos	aéreos	PROPN	_	Gender=Masc|Number=Plur	30	conj	_	_
+51	Marítimos	Marítimos	PROPN	_	Number=Sing	50	flat:name	_	SpaceAfter=No
+52	,	,	PUNCT	_	_	50	punct	_	_
+53	Fluviais	Fluviais	PROPN	_	Number=Sing	50	flat:name	_	_
+54	e	e	CCONJ	_	_	50	flat:name	_	_
+55	Aéreos	Aéreos	PROPN	_	Number=Sing	50	flat:name	_	_
 56	(	(	PUNCT	_	_	57	punct	_	SpaceAfter=No
-57	CNTTMFA	CNTTMFA	PROPN	_	Gender=Masc|Number=Sing	55	appos	_	SpaceAfter=No
+57	CNTTMFA	CNTTMFA	PROPN	_	Gender=Fem|Number=Sing	44	appos	_	SpaceAfter=No
 58	)	)	PUNCT	_	_	57	punct	_	SpaceAfter=No
-59	.	.	PUNCT	_	_	13	punct	_	_
+59	.	.	PUNCT	_	_	13	punct	_	SpacesAfter=\n
 
-# text = Em agosto de 1962, no decorrer do IV Congresso Sindical Nacional dos Trabalhadores realizado no Rio de Janeiro, foi criado o Comando Geral dos Trabalhadores (CGT).
 # sent_id = 45
-# newpar
+# text = Em agosto de 1962, no decorrer do IV Congresso Sindical Nacional dos Trabalhadores realizado no Rio de Janeiro, foi criado o Comando Geral dos Trabalhadores (CGT).
 1	Em	em	ADP	_	_	2	case	_	_
 2	agosto	agosto	NOUN	_	Gender=Masc|Number=Sing	26	obl	_	_
 3	de	de	ADP	_	_	4	case	_	_
 4	1962	1962	NUM	_	NumType=Card	2	nmod	_	SpaceAfter=No
 5	,	,	PUNCT	_	_	2	punct	_	_
 6-7	no	_	_	_	_	_	_	_	_
-6	em	em	ADP	_	_	8	mark	_	_
+6	em	em	ADP	_	_	8	case	_	_
 7	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	8	det	_	_
-8	decorrer	decorrer	VERB	_	Gender=Masc|Number=Sing	26	advcl	_	_
+8	decorrer	decorrer	NOUN	_	Gender=Masc|Number=Sing	26	obl	_	_
 9-10	do	_	_	_	_	_	_	_	_
 9	de	de	ADP	_	_	11	case	_	_
 10	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	_	_
-11	IV	Iv	PROPN	_	Gender=Masc|Number=Sing	8	obl	_	_
+11	IV	IV	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	8	nmod	_	_
 12	Congresso	Congresso	PROPN	_	Number=Sing	11	flat:name	_	_
 13	Sindical	Sindical	PROPN	_	Number=Sing	11	flat:name	_	_
 14	Nacional	Nacional	PROPN	_	Number=Sing	11	flat:name	_	_
@@ -1824,19 +1810,19 @@
 25	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	26	aux:pass	_	_
 26	criado	criar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
 27	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	28	det	_	_
-28	Comando	Comando	PROPN	_	Gender=Masc|Number=Sing	26	nsubj:pass	_	_
+28	Comando	Comando	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	26	nsubj:pass	_	_
 29	Geral	Geral	PROPN	_	Number=Sing	28	flat:name	_	_
 30-31	dos	_	_	_	_	_	_	_	_
 30	de	de	ADP	_	_	32	case	_	_
 31	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	32	det	_	_
 32	Trabalhadores	Trabalhadores	PROPN	_	Number=Sing	28	nmod	_	_
 33	(	(	PUNCT	_	_	34	punct	_	SpaceAfter=No
-34	CGT	CGT	PROPN	_	Gender=Fem|Number=Sing	28	appos	_	SpaceAfter=No
+34	CGT	CGT	PROPN	_	Gender=Masc|Number=Sing	28	appos	_	SpaceAfter=No
 35	)	)	PUNCT	_	_	34	punct	_	SpaceAfter=No
 36	.	.	PUNCT	_	_	26	punct	_	_
 
-# text = O núcleo da nova organização paralela de âmbito nacional era constituído pelas lideranças de três confederações nacionais de trabalhadores — a CNTI, a Contec e a CNTTMFA — e de órgãos intersindicais como a CPOS.
 # sent_id = 46
+# text = O núcleo da nova organização paralela de âmbito nacional era constituído pelas lideranças de três confederações nacionais de trabalhadores - a CNTI, a Contec e a CNTTMFA - e de órgãos intersindicais como a CPOS.
 1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	_	_
 2	núcleo	núcleo	NOUN	_	Gender=Masc|Number=Sing	12	nsubj:pass	_	_
 3-4	da	_	_	_	_	_	_	_	_
@@ -1860,32 +1846,32 @@
 19	nacionais	nacional	ADJ	_	Gender=Fem|Number=Plur	18	amod	_	_
 20	de	de	ADP	_	_	21	case	_	_
 21	trabalhadores	trabalhador	NOUN	_	Gender=Masc|Number=Plur	18	nmod	_	_
-22	—	—	PUNCT	_	_	24	punct	_	_
+22	-	-	PUNCT	_	_	24	punct	_	_
 23	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	24	det	_	_
-24	CNTI	CNTI	PROPN	_	Gender=Fem|Number=Sing	18	conj	_	SpaceAfter=No
+24	CNTI	CNTI	PROPN	_	Gender=Fem|Number=Sing	18	appos	_	SpaceAfter=No
 25	,	,	PUNCT	_	_	27	punct	_	_
 26	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	27	det	_	_
 27	Contec	Contec	PROPN	_	Gender=Fem|Number=Sing	24	conj	_	_
 28	e	e	CCONJ	_	_	30	cc	_	_
 29	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	30	det	_	_
-30	CNTTMFA	CNTTMFA	PROPN	_	Gender=Fem|Number=Sing	18	conj	_	_
-31	—	—	PUNCT	_	_	12	punct	_	_
+30	CNTTMFA	CNTTMFA	PROPN	_	Gender=Fem|Number=Sing	24	conj	_	_
+31	-	-	PUNCT	_	_	24	punct	_	_
 32	e	e	CCONJ	_	_	34	cc	_	_
 33	de	de	ADP	_	_	34	case	_	_
-34	órgãos	órgão	NOUN	_	Gender=Masc|Number=Plur	30	conj	_	_
+34	órgãos	órgão	NOUN	_	Gender=Masc|Number=Plur	18	conj	_	_
 35	intersindicais	intersindical	ADJ	_	Gender=Masc|Number=Plur	34	amod	_	_
 36	como	como	ADP	_	_	38	case	_	_
 37	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	38	det	_	_
 38	CPOS	CPOS	PROPN	_	Gender=Fem|Number=Sing	34	nmod	_	SpaceAfter=No
 39	.	.	PUNCT	_	_	12	punct	_	_
 
-# text = Pellacani foi escolhido para ocupar a presidência do CGT e Riani, a vice-presidência.
 # sent_id = 47
+# text = Pellacani foi escolhido para ocupar a presidência do CGT e Riani, a vice-presidência.
 1	Pellacani	Pellacani	PROPN	_	Gender=Masc|Number=Sing	3	nsubj:pass	_	_
 2	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	aux:pass	_	_
 3	escolhido	escolher	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
-4	para	para	ADP	_	_	5	mark	_	_
-5	ocupar	ocupar	VERB	_	VerbForm=Inf	3	xcomp	_	_
+4	para	para	SCONJ	_	_	5	mark	_	_
+5	ocupar	ocupar	VERB	_	VerbForm=Inf	3	advcl	_	_
 6	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	7	det	_	_
 7	presidência	presidência	NOUN	_	Gender=Fem|Number=Sing	5	obj	_	_
 8-9	do	_	_	_	_	_	_	_	_
@@ -1894,16 +1880,15 @@
 10	CGT	CGT	PROPN	_	Gender=Masc|Number=Sing	7	nmod	_	_
 11	e	e	CCONJ	_	_	12	cc	_	_
 12	Riani	Riani	PROPN	_	Gender=Masc|Number=Sing	10	conj	_	SpaceAfter=No
-13	,	,	PUNCT	_	_	5	punct	_	_
+13	,	,	PUNCT	_	_	15	punct	_	_
 14	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	15	det	_	_
-15	vice-presidência	vice-presidência	NOUN	_	Gender=Fem|Number=Sing	3	nsubj:pass	_	SpaceAfter=No
-16	.	.	PUNCT	_	_	3	punct	_	_
+15	vice-presidência	vice-presidência	NOUN	_	Gender=Fem|Number=Sing	12	appos	_	SpaceAfter=No
+16	.	.	PUNCT	_	_	3	punct	_	SpacesAfter=\n
 
-# text = A partir da criação do CGT, as lideranças trabalhistas anticomunistas intensificaram sua oposição ao presidente João Goulart e à influência comunista nas organizações sindicais.
 # sent_id = 48
-# newpar
+# text = A partir da criação do CGT, as lideranças trabalhistas anticomunistas intensificaram sua oposição ao presidente João Goulart e à influência comunista nas organizações sindicais.
 1	A	a	ADP	_	_	2	case	_	_
-2	partir	partir	NOUN	_	VerbForm=Inf	14	obl	_	_
+2	partir	partir	VERB	_	VerbForm=Inf	14	obl	_	_
 3-4	da	_	_	_	_	_	_	_	_
 3	de	de	ADP	_	_	5	case	_	_
 4	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	5	det	_	_
@@ -1915,16 +1900,16 @@
 9	,	,	PUNCT	_	_	2	punct	_	_
 10	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	11	det	_	_
 11	lideranças	liderança	NOUN	_	Gender=Fem|Number=Plur	14	nsubj	_	_
-12	trabalhistas	trabalhista	ADJ	_	Gender=Masc|Number=Plur	11	amod	_	_
+12	trabalhistas	trabalhista	ADJ	_	Gender=Fem|Number=Plur	11	amod	_	_
 13	anticomunistas	anticomunista	ADJ	_	Gender=Fem|Number=Plur	11	amod	_	_
-14	intensificaram	intensificar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+14	intensificaram	intensificar	VERB	_	Mood=Ind|Number=Plur|Person=3|VerbForm=Fin	0	root	_	_
 15	sua	seu	DET	_	Gender=Fem|Number=Sing|PronType=Prs	16	det	_	_
 16	oposição	oposição	NOUN	_	Gender=Fem|Number=Sing	14	obj	_	_
 17-18	ao	_	_	_	_	_	_	_	_
 17	a	a	ADP	_	_	19	case	_	_
 18	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	19	det	_	_
-19	presidente	presidente	NOUN	_	Gender=Masc|Number=Sing	14	obl	_	_
-20	João	João	PROPN	_	Gender=Masc|Number=Sing	19	appos	_	_
+19	presidente	presidente	NOUN	_	Gender=Masc|Number=Sing	16	nmod	_	_
+20	João	João	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	19	appos	_	_
 21	Goulart	Goulart	PROPN	_	Number=Sing	20	flat:name	_	_
 22	e	e	CCONJ	_	_	25	cc	_	_
 23-24	à	_	_	_	_	_	_	_	_
@@ -1937,11 +1922,10 @@
 28	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	29	det	_	_
 29	organizações	organização	NOUN	_	Gender=Fem|Number=Plur	25	nmod	_	_
 30	sindicais	sindical	ADJ	_	Gender=Fem|Number=Plur	29	amod	_	SpaceAfter=No
-31	.	.	PUNCT	_	_	14	punct	_	_
+31	.	.	PUNCT	_	_	14	punct	_	SpacesAfter=\n
 
-# text = Em janeiro de 1964, realizaram-se eleições para a diretoria da CNTI.
 # sent_id = 49
-# newpar
+# text = Em janeiro de 1964, realizaram-se eleições para a diretoria da CNTI.
 1	Em	em	ADP	_	_	2	case	_	_
 2	janeiro	janeiro	NOUN	_	Gender=Masc|Number=Sing	6	obl	_	_
 3	de	de	ADP	_	_	4	case	_	_
@@ -1949,7 +1933,7 @@
 5	,	,	PUNCT	_	_	2	punct	_	_
 6-7	realizaram-se	_	_	_	_	_	_	_	_
 6	realizaram	realizar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
-7	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Plur|Person=3|PronType=Prs	6	expl	_	_
+7	se	se	PRON	_	Case=Acc|Gender=Fem|Number=Plur|Person=3|PronType=Prs	6	expl	_	_
 8	eleições	eleição	NOUN	_	Gender=Fem|Number=Plur	6	nsubj	_	_
 9	para	para	ADP	_	_	11	case	_	_
 10	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	11	det	_	_
@@ -1960,8 +1944,8 @@
 14	CNTI	CNTI	PROPN	_	Gender=Fem|Number=Sing	11	nmod	_	SpaceAfter=No
 15	.	.	PUNCT	_	_	6	punct	_	_
 
-# text = A chapa da situação, lançada pelo CGT, era liderada por Pellacani e Riani, e a chapa de oposição, por João Wagner e Ari Campista.
 # sent_id = 50
+# text = A chapa da situação, lançada pelo CGT, era liderada por Pellacani e Riani, e a chapa de oposição, por João Wagner e Ari Campista.
 1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
 2	chapa	chapa	NOUN	_	Gender=Fem|Number=Sing	13	nsubj:pass	_	_
 3-4	da	_	_	_	_	_	_	_	_
@@ -1984,58 +1968,57 @@
 18	,	,	PUNCT	_	_	21	punct	_	_
 19	e	e	CCONJ	_	_	21	cc	_	_
 20	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	21	det	_	_
-21	chapa	chapa	NOUN	_	Gender=Fem|Number=Sing	13	conj	_	_
+21	chapa	chapa	NOUN	_	Gender=Fem|Number=Sing	15	conj	_	_
 22	de	de	ADP	_	_	23	case	_	_
 23	oposição	oposição	NOUN	_	Gender=Fem|Number=Sing	21	nmod	_	SpaceAfter=No
-24	,	,	PUNCT	_	_	13	punct	_	_
+24	,	,	PUNCT	_	_	26	punct	_	_
 25	por	por	ADP	_	_	26	case	_	_
-26	João	João	PROPN	_	Gender=Masc|Number=Sing	13	obl:agent	_	_
+26	João	João	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	21	nmod	_	_
 27	Wagner	Wagner	PROPN	_	Number=Sing	26	flat:name	_	_
 28	e	e	CCONJ	_	_	29	cc	_	_
-29	Ari	Ari	PROPN	_	Gender=Masc|Number=Sing	26	conj	_	_
+29	Ari	Ari	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	26	conj	_	_
 30	Campista	Campista	PROPN	_	Number=Sing	29	flat:name	_	SpaceAfter=No
 31	.	.	PUNCT	_	_	13	punct	_	_
 
-# text = Goulart apoiou de início a chapa de oposição, mas pouco antes da eleição passou a apoiar a chapa do CGT, que saiu vitoriosa.
 # sent_id = 51
-1	Goulart	Goulart	PROPN	_	Gender=Unsp|Number=Sing	2	nsubj	_	_
+# text = Goulart apoiou de início a chapa de oposição, mas pouco antes da eleição passou a apoiar a chapa do CGT, que saiu vitoriosa.
+1	Goulart	Goulart	PROPN	_	Gender=Masc|Number=Sing	2	nsubj	_	_
 2	apoiou	apoiar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 3	de	de	ADP	_	_	4	case	_	_
 4	início	início	NOUN	_	Gender=Masc|Number=Sing	2	obl	_	_
-5	a	a	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	6	det	_	_
+5	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	6	det	_	_
 6	chapa	chapa	NOUN	_	Gender=Fem|Number=Sing	2	obj	_	_
 7	de	de	ADP	_	_	8	case	_	_
 8	oposição	oposição	NOUN	_	Gender=Fem|Number=Sing	6	nmod	_	SpaceAfter=No
-9	,	,	PUNCT	_	_	18	punct	_	_
-10	mas	mas	CCONJ	_	_	18	cc	_	_
+9	,	,	PUNCT	_	_	16	punct	_	_
+10	mas	mas	CCONJ	_	_	16	cc	_	_
 11	pouco	pouco	ADV	_	_	12	advmod	_	_
-12	antes	antes	ADV	_	_	18	advmod	_	_
+12	antes	antes	ADV	_	_	16	advmod	_	_
 13-14	da	_	_	_	_	_	_	_	_
 13	de	de	ADP	_	_	15	case	_	_
 14	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	15	det	_	_
 15	eleição	eleição	NOUN	_	Gender=Fem|Number=Sing	12	obl	_	_
-16	passou	passar	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	18	aux	_	_
-17	a	a	ADP	_	_	18	obl	_	_
-18	apoiar	apoiar	VERB	_	VerbForm=Inf	2	conj	_	_
+16	passou	passar	VERB	_	ExtPos=AUX|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	conj	_	_
+17	a	a	SCONJ	_	_	18	mark	_	_
+18	apoiar	apoiar	VERB	_	VerbForm=Inf	16	xcomp	_	_
 19	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	20	det	_	_
 20	chapa	chapa	NOUN	_	Gender=Fem|Number=Sing	18	obj	_	_
 21-22	do	_	_	_	_	_	_	_	_
 21	de	de	ADP	_	_	23	case	_	_
 22	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	23	det	_	_
 23	CGT	CGT	PROPN	_	Gender=Masc|Number=Sing	20	nmod	_	SpaceAfter=No
-24	,	,	PUNCT	_	_	18	punct	_	_
+24	,	,	PUNCT	_	_	26	punct	_	_
 25	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	26	nsubj	_	_
-26	saiu	sair	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	20	acl:relcl	_	_
-27	vitoriosa	vitorioso	ADJ	_	Gender=Fem|Number=Sing	26	dep	_	SpaceAfter=No
-28	.	.	PUNCT	_	_	2	punct	_	_
+26	saiu	sair	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	23	acl:relcl	_	_
+27	vitoriosa	vitorioso	ADJ	_	Gender=Fem|Number=Sing	26	xcomp	_	SpaceAfter=No
+28	.	.	PUNCT	_	_	2	punct	_	SpacesAfter=\n
 
-# text = Em 31 de março do mesmo ano, desencadeou-se o movimento político-militar que depôs Goulart do poder.
 # sent_id = 52
-# newpar
+# text = Em 31 de março do mesmo ano, desencadeou-se o movimento político-militar que depôs Goulart do poder.
 1	Em	em	ADP	_	_	2	case	_	_
 2	31	31	NUM	_	NumType=Card	10	obl	_	_
 3	de	de	ADP	_	_	4	case	_	_
-4	março	março	NOUN	_	Gender=Masc|Number=Sing	2	nmod:tmod	_	_
+4	março	março	NOUN	_	Gender=Masc|Number=Sing	2	nmod	_	_
 5-6	do	_	_	_	_	_	_	_	_
 5	de	de	ADP	_	_	8	case	_	_
 6	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	8	det	_	_
@@ -2044,21 +2027,21 @@
 9	,	,	PUNCT	_	_	2	punct	_	_
 10-11	desencadeou-se	_	_	_	_	_	_	_	_
 10	desencadeou	desencadear	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
-11	se	se	SCONJ	_	Case=Acc|Gender=Unsp|PronType=Prs	10	nsubj	_	_
+11	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	10	expl	_	_
 12	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	13	det	_	_
-13	movimento	movimento	NOUN	_	Gender=Masc|Number=Sing	10	obj	_	_
-14	político-militar	político-militar	ADJ	_	VerbForm=Inf	13	amod	_	_
-15	que	que	PRON	_	_	16	mark	_	_
-16	depôs	depor	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	10	advcl	_	_
+13	movimento	movimento	NOUN	_	Gender=Masc|Number=Sing	10	nsubj	_	_
+14	político-militar	político-militar	ADJ	_	Gender=Masc|Number=Sing	13	amod	_	_
+15	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	16	nsubj	_	_
+16	depôs	depor	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	13	acl:relcl	_	_
 17	Goulart	Goulart	PROPN	_	Gender=Masc|Number=Sing	16	obj	_	_
 18-19	do	_	_	_	_	_	_	_	_
 18	de	de	ADP	_	_	20	case	_	_
 19	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	20	det	_	_
-20	poder	poder	NOUN	_	Gender=Masc|Number=Sing	17	nmod	_	SpaceAfter=No
+20	poder	poder	NOUN	_	Gender=Masc|Number=Sing	16	iobj	_	SpaceAfter=No
 21	.	.	PUNCT	_	_	10	punct	_	_
 
-# text = O novo governo interveio imediatamente em todos os sindicatos, federações e confederações ligados ao CGT, destituindo seus dirigentes e incluindo muitos deles na primeira lista de cassações imposta pelo Ato Institucional nº 1, de 9 de abril.
 # sent_id = 53
+# text = O novo governo interveio imediatamente em todos os sindicatos, federações e confederações ligados ao CGT, destituindo seus dirigentes e incluindo muitos deles na primeira lista de cassações imposta pelo Ato Institucional nº 1, de 9 de abril.
 1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
 2	novo	novo	ADJ	_	Gender=Masc|Number=Sing	3	amod	_	_
 3	governo	governo	NOUN	_	Gender=Masc|Number=Sing	4	nsubj	_	_
@@ -2069,14 +2052,14 @@
 8	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	7	fixed	_	_
 9	sindicatos	sindicato	NOUN	_	Gender=Masc|Number=Plur	4	obl	_	SpaceAfter=No
 10	,	,	PUNCT	_	_	11	punct	_	_
-11	federações	federaçõe	NOUN	_	Gender=Fem|Number=Plur	9	conj	_	_
+11	federações	federação	NOUN	_	Gender=Fem|Number=Plur	9	conj	_	_
 12	e	e	CCONJ	_	_	13	cc	_	_
 13	confederações	confederação	NOUN	_	Gender=Fem|Number=Plur	9	conj	_	_
-14	ligados	ligar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part	13	acl	_	_
+14	ligados	ligar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part	9	acl	_	_
 15-16	ao	_	_	_	_	_	_	_	_
 15	a	a	ADP	_	_	17	case	_	_
 16	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	17	det	_	_
-17	CGT	CGT	PROPN	_	Gender=Masc|Number=Sing	14	obl	_	SpaceAfter=No
+17	CGT	CGT	PROPN	_	Gender=Masc|Number=Sing	14	obj	_	SpaceAfter=No
 18	,	,	PUNCT	_	_	19	punct	_	_
 19	destituindo	destituir	VERB	_	VerbForm=Ger	4	advcl	_	_
 20	seus	seu	DET	_	Gender=Masc|Number=Plur|PronType=Prs	21	det	_	_
@@ -2086,7 +2069,7 @@
 24	muitos	muito	PRON	_	Gender=Masc|Number=Plur|PronType=Ind	23	obj	_	_
 25-26	deles	_	_	_	_	_	_	_	_
 25	de	de	ADP	_	_	26	case	_	_
-26	eles	eles	PRON	_	Gender=Masc|Number=Plur|Person=3|PronType=Prs	24	nmod	_	_
+26	eles	ele	PRON	_	Gender=Masc|Number=Plur|Person=3|PronType=Prs	24	nmod	_	_
 27-28	na	_	_	_	_	_	_	_	_
 27	em	em	ADP	_	_	30	case	_	_
 28	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	30	det	_	_
@@ -2094,23 +2077,23 @@
 30	lista	lista	NOUN	_	Gender=Fem|Number=Sing	23	obl	_	_
 31	de	de	ADP	_	_	32	case	_	_
 32	cassações	cassação	NOUN	_	Gender=Fem|Number=Plur	30	nmod	_	_
-33	imposta	impor	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	32	acl	_	_
+33	imposta	impor	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	30	acl	_	_
 34-35	pelo	_	_	_	_	_	_	_	_
 34	por	por	ADP	_	_	36	case	_	_
 35	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	36	det	_	_
-36	Ato	ato	PROPN	_	Gender=Masc|Number=Sing	33	obl:agent	_	_
-37	Institucional	Institucional	PROPN	_	Number=Sing	36	flat:name	_	_
-38	nº	nº	NOUN	_	Gender=Masc|Number=Sing	36	nmod:npmod	_	_
-39	1	1	NUM	_	NumType=Card	38	nummod	_	SpaceAfter=No
+36	Ato	ato	NOUN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	33	obl:agent	_	_
+37	Institucional	Institucional	PROPN	_	Number=Sing	36	amod	_	_
+38	nº	número	NOUN	_	Abbr=Yes|Gender=Masc|Number=Sing	36	nmod	_	_
+39	1	1	PROPN	_	Number=Sing	36	flat:name	_	SpaceAfter=No
 40	,	,	PUNCT	_	_	42	punct	_	_
 41	de	de	ADP	_	_	42	case	_	_
 42	9	9	NUM	_	NumType=Card	36	nmod	_	_
 43	de	de	ADP	_	_	44	case	_	_
-44	abril	abril	NOUN	_	Gender=Masc|Number=Sing	42	nmod:tmod	_	SpaceAfter=No
+44	abril	abril	NOUN	_	Gender=Masc|Number=Sing	42	nmod	_	SpaceAfter=No
 45	.	.	PUNCT	_	_	4	punct	_	_
 
-# text = A CNTI sofreu intervenção federal e em 12 de maio uma junta presidida por Francisco Spolidoro Borges assumiu sua direção.
 # sent_id = 54
+# text = A CNTI sofreu intervenção federal e em 12 de maio uma junta presidida por Francisco Spolidoro Borges assumiu sua direção.
 1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
 2	CNTI	CNTI	PROPN	_	Gender=Fem|Number=Sing	3	nsubj	_	_
 3	sofreu	sofrer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
@@ -2120,12 +2103,12 @@
 7	em	em	ADP	_	_	8	case	_	_
 8	12	12	NUM	_	NumType=Card	18	obl	_	_
 9	de	de	ADP	_	_	10	case	_	_
-10	maio	maio	NOUN	_	Gender=Masc|Number=Sing	8	nmod:tmod	_	_
+10	maio	maio	NOUN	_	Gender=Masc|Number=Sing	8	nmod	_	_
 11	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	12	det	_	_
 12	junta	junta	NOUN	_	Gender=Fem|Number=Sing	18	nsubj	_	_
 13	presidida	presidir	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	12	acl	_	_
 14	por	por	ADP	_	_	15	case	_	_
-15	Francisco	Francisco	PROPN	_	Gender=Masc|Number=Sing	13	obl:agent	_	_
+15	Francisco	Francisco	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	13	obl:agent	_	_
 16	Spolidoro	Spolidoro	PROPN	_	Number=Sing	15	flat:name	_	_
 17	Borges	Borges	PROPN	_	Number=Sing	15	flat:name	_	_
 18	assumiu	assumir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	conj	_	_
@@ -2133,25 +2116,25 @@
 20	direção	direção	NOUN	_	Gender=Fem|Number=Sing	18	obj	_	SpaceAfter=No
 21	.	.	PUNCT	_	_	3	punct	_	_
 
-# text = No dia 29 de maio foi eleita nova diretoria, assumindo João Wagner o cargo de presidente da CNTI, e Ari Campista o de secretário-geral.
 # sent_id = 55
+# text = No dia 29 de maio foi eleita nova diretoria, assumindo João Wagner o cargo de presidente da CNTI, e Ari Campista o de secretário-geral.
 1-2	No	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	3	case	_	_
 2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
 3	dia	dia	NOUN	_	Gender=Masc|Number=Sing	8	obl	_	_
 4	29	29	NUM	_	NumType=Card	3	nummod	_	_
 5	de	de	ADP	_	_	6	case	_	_
-6	maio	maio	NOUN	_	Gender=Masc|Number=Sing	3	nmod:tmod	_	_
-7	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	8	aux	_	_
-8	eleita	eleger	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	0	root	_	_
+6	maio	maio	NOUN	_	Gender=Masc|Number=Sing	3	nmod	_	_
+7	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	8	aux:pass	_	_
+8	eleita	eleger	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
 9	nova	novo	ADJ	_	Gender=Fem|Number=Sing	10	amod	_	_
-10	diretoria	diretoria	NOUN	_	Gender=Fem|Number=Sing	8	obj	_	SpaceAfter=No
+10	diretoria	diretoria	NOUN	_	Gender=Fem|Number=Sing	8	nsubj:pass	_	SpaceAfter=No
 11	,	,	PUNCT	_	_	12	punct	_	_
 12	assumindo	assumir	VERB	_	VerbForm=Ger	8	advcl	_	_
-13	João	João	PROPN	_	Gender=Masc|Number=Sing	12	nsubj	_	_
+13	João	João	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	12	obj	_	_
 14	Wagner	Wagner	PROPN	_	Number=Sing	13	flat:name	_	_
 15	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	16	det	_	_
-16	cargo	cargo	NOUN	_	Gender=Masc|Number=Sing	13	appos	_	_
+16	cargo	cargo	NOUN	_	Gender=Masc|Number=Sing	12	obj	_	_
 17	de	de	ADP	_	_	18	case	_	_
 18	presidente	presidente	NOUN	_	Gender=Masc|Number=Sing	16	nmod	_	_
 19-20	da	_	_	_	_	_	_	_	_
@@ -2160,53 +2143,51 @@
 21	CNTI	CNTI	PROPN	_	Gender=Fem|Number=Sing	18	nmod	_	SpaceAfter=No
 22	,	,	PUNCT	_	_	24	punct	_	_
 23	e	e	CCONJ	_	_	24	cc	_	_
-24	Ari	Ari	PROPN	_	Gender=Masc|Number=Sing	16	conj	_	_
+24	Ari	Ari	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	16	conj	_	_
 25	Campista	Campista	PROPN	_	Number=Sing	24	flat:name	_	_
-26	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	24	appos	_	_
+26	o	o	PRON	_	Gender=Masc|Number=Sing|PronType=Dem	24	obj	_	_
 27	de	de	ADP	_	_	28	case	_	_
-28	secretário-geral	secretário-geral	NOUN	_	_	26	nmod	_	SpaceAfter=No
-29	.	.	PUNCT	_	_	8	punct	_	_
+28	secretário-geral	secretário-geral	NOUN	_	Gender=Masc|Number=Sing	26	nmod	_	SpaceAfter=No
+29	.	.	PUNCT	_	_	8	punct	_	SpacesAfter=\n
 
-# text = Ainda em 1964, Arnaldo Sussekind, ministro do Trabalho, nomeou Campista ministro do Tribunal Superior do Trabalho, como representante dos trabalhadores.
 # sent_id = 56
-# newpar
+# text = Ainda em 1964, Arnaldo Sussekind, ministro do Trabalho, nomeou Campista ministro do Tribunal Superior do Trabalho, como representante dos trabalhadores.
 1	Ainda	ainda	ADV	_	_	3	advmod	_	_
 2	em	em	ADP	_	_	3	case	_	_
 3	1964	1964	NUM	_	NumType=Card	13	obl	_	SpaceAfter=No
 4	,	,	PUNCT	_	_	3	punct	_	_
-5	Arnaldo	Arnaldo	PROPN	_	Gender=Masc|Number=Sing	13	nsubj	_	_
+5	Arnaldo	Arnaldo	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	13	nsubj	_	_
 6	Sussekind	Sussekind	PROPN	_	Number=Sing	5	flat:name	_	SpaceAfter=No
 7	,	,	PUNCT	_	_	8	punct	_	_
 8	ministro	ministro	NOUN	_	Gender=Masc|Number=Sing	5	appos	_	_
 9-10	do	_	_	_	_	_	_	_	_
 9	de	de	ADP	_	_	11	case	_	_
 10	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	_	_
-11	Trabalho	Trabalho	PROPN	_	Number=Sing	8	nmod	_	SpaceAfter=No
+11	Trabalho	trabalho	NOUN	_	Gender=Masc|Number=Sing	8	nmod	_	SpaceAfter=No
 12	,	,	PUNCT	_	_	8	punct	_	_
 13	nomeou	nomear	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
-14	Campista	Campista	ADJ	_	Gender=Masc|Number=Sing	15	amod	_	_
+14	Campista	Campista	PROPN	_	Gender=Masc|Number=Sing	13	obj	_	_
 15	ministro	ministro	NOUN	_	Gender=Masc|Number=Sing	13	obj	_	_
 16-17	do	_	_	_	_	_	_	_	_
 16	de	de	ADP	_	_	18	case	_	_
 17	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	18	det	_	_
-18	Tribunal	Tribunal	PROPN	_	Gender=Masc|Number=Sing	15	nmod	_	_
-19	Superior	Superior	PROPN	_	Number=Sing	18	flat:name	_	_
+18	Tribunal	tribunal	NOUN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	15	nmod	_	_
+19	Superior	superior	ADJ	_	Gender=Masc|Number=Sing	18	amod	_	_
 20-21	do	_	_	_	_	_	_	_	_
 20	de	de	ADP	_	_	22	case	_	_
 21	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	22	det	_	_
-22	Trabalho	Trabalho	PROPN	_	Number=Sing	18	nmod	_	SpaceAfter=No
-23	,	,	PUNCT	_	_	25	punct	_	_
+22	Trabalho	trabalho	NOUN	_	Gender=Masc|Number=Sing	18	nmod	_	SpaceAfter=No
+23	,	,	PUNCT	_	_	13	punct	_	_
 24	como	como	ADP	_	_	25	case	_	_
-25	representante	representante	NOUN	_	Gender=Masc|Number=Sing	15	nmod	_	_
+25	representante	representante	NOUN	_	Gender=Masc|Number=Sing	13	obl	_	_
 26-27	dos	_	_	_	_	_	_	_	_
 26	de	de	ADP	_	_	28	case	_	_
 27	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	28	det	_	_
 28	trabalhadores	trabalhador	NOUN	_	Gender=Masc|Number=Plur	25	nmod	_	SpaceAfter=No
-29	.	.	PUNCT	_	_	13	punct	_	_
+29	.	.	PUNCT	_	_	13	punct	_	SpacesAfter=\n
 
-# text = Nas eleições da CNTI de maio de 1966, Campista foi eleito secretário para assuntos de trabalho e previdência.
 # sent_id = 57
-# newpar
+# text = Nas eleições da CNTI de maio de 1966, Campista foi eleito secretário para assuntos de trabalho e previdência.
 1-2	Nas	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	3	case	_	_
 2	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	3	det	_	_
@@ -2216,25 +2197,24 @@
 5	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	6	det	_	_
 6	CNTI	CNTI	PROPN	_	Gender=Fem|Number=Sing	3	nmod	_	_
 7	de	de	ADP	_	_	8	case	_	_
-8	maio	maio	NOUN	_	Gender=Masc|Number=Sing	6	nmod	_	_
+8	maio	maio	NOUN	_	Gender=Masc|Number=Sing	3	nmod	_	_
 9	de	de	ADP	_	_	10	case	_	_
 10	1966	1966	NUM	_	NumType=Card	8	nmod	_	SpaceAfter=No
 11	,	,	PUNCT	_	_	3	punct	_	_
 12	Campista	Campista	PROPN	_	Gender=Masc|Number=Sing	14	nsubj:pass	_	_
 13	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	14	aux:pass	_	_
 14	eleito	eleger	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
-15	secretário	secretário	NOUN	_	Gender=Masc|Number=Sing	14	nsubj:pass	_	_
+15	secretário	secretário	NOUN	_	Gender=Masc|Number=Sing	14	xcomp	_	_
 16	para	para	ADP	_	_	17	case	_	_
 17	assuntos	assunto	NOUN	_	Gender=Masc|Number=Plur	15	nmod	_	_
 18	de	de	ADP	_	_	19	case	_	_
 19	trabalho	trabalho	NOUN	_	Gender=Masc|Number=Sing	17	nmod	_	_
 20	e	e	CCONJ	_	_	21	cc	_	_
 21	previdência	previdência	NOUN	_	Gender=Fem|Number=Sing	19	conj	_	SpaceAfter=No
-22	.	.	PUNCT	_	_	14	punct	_	_
+22	.	.	PUNCT	_	_	14	punct	_	SpacesAfter=\n
 
-# text = Em abril de 1967, realizou-se em Brasília o III Congresso Brasileiro dos Trabalhadores na Indústria, com a presença de 408 delegados de federações e sindicatos de trabalhadores, além do ministro do Trabalho, Jarbas Passarinho.
 # sent_id = 58
-# newpar
+# text = Em abril de 1967, realizou-se em Brasília o III Congresso Brasileiro dos Trabalhadores na Indústria, com a presença de 408 delegados de federações e sindicatos de trabalhadores, além do ministro do Trabalho, Jarbas Passarinho.
 1	Em	em	ADP	_	_	2	case	_	_
 2	abril	abril	NOUN	_	Gender=Masc|Number=Sing	6	obl	_	_
 3	de	de	ADP	_	_	4	case	_	_
@@ -2244,9 +2224,9 @@
 6	realizou	realizar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 7	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	6	expl	_	_
 8	em	em	ADP	_	_	9	case	_	_
-9	Brasília	Brasília	PROPN	_	Gender=Masc|Number=Sing	6	obl	_	_
+9	Brasília	Brasília	PROPN	_	Gender=Fem|Number=Sing	6	obl	_	_
 10	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	_	_
-11	III	III	PROPN	_	Gender=Masc|Number=Sing	6	nsubj	_	_
+11	III	III	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	6	nsubj	_	_
 12	Congresso	Congresso	PROPN	_	Number=Sing	11	flat:name	_	_
 13	Brasileiro	Brasileiro	PROPN	_	Number=Sing	11	flat:name	_	_
 14-15	dos	_	_	_	_	_	_	_	_
@@ -2256,7 +2236,7 @@
 17-18	na	_	_	_	_	_	_	_	_
 17	em	em	ADP	_	_	19	case	_	_
 18	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	19	det	_	_
-19	Indústria	indústria	PROPN	_	Number=Sing	16	nmod	_	SpaceAfter=No
+19	Indústria	Indústria	PROPN	_	Number=Sing	16	nmod	_	SpaceAfter=No
 20	,	,	PUNCT	_	_	6	punct	_	_
 21	com	com	ADP	_	_	23	case	_	_
 22	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	23	det	_	_
@@ -2265,28 +2245,28 @@
 25	408	408	NUM	_	NumType=Card	26	nummod	_	_
 26	delegados	delegado	NOUN	_	Gender=Masc|Number=Plur	23	nmod	_	_
 27	de	de	ADP	_	_	28	case	_	_
-28	federações	federaçõe	NOUN	_	Gender=Fem|Number=Plur	26	nmod	_	_
+28	federações	federação	NOUN	_	Gender=Fem|Number=Plur	26	nmod	_	_
 29	e	e	CCONJ	_	_	30	cc	_	_
 30	sindicatos	sindicato	NOUN	_	Gender=Masc|Number=Plur	28	conj	_	_
 31	de	de	ADP	_	_	32	case	_	_
 32	trabalhadores	trabalhador	NOUN	_	Gender=Masc|Number=Plur	30	nmod	_	SpaceAfter=No
-33	,	,	PUNCT	_	_	34	punct	_	_
-34	além	além	ADV	_	_	26	advmod	_	_
+33	,	,	PUNCT	_	_	23	punct	_	_
+34	além	além	ADV	_	_	37	cc	_	_
 35-36	do	_	_	_	_	_	_	_	_
 35	de	de	ADP	_	_	37	case	_	_
 36	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	37	det	_	_
-37	ministro	ministro	NOUN	_	Gender=Masc|Number=Sing	34	obl	_	_
+37	ministro	ministro	NOUN	_	Gender=Masc|Number=Sing	23	conj	_	_
 38-39	do	_	_	_	_	_	_	_	_
 38	de	de	ADP	_	_	40	case	_	_
 39	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	40	det	_	_
-40	Trabalho	Trabalho	PROPN	_	Number=Sing	37	nmod	_	SpaceAfter=No
+40	Trabalho	trabalho	NOUN	_	Gender=Masc|Number=Sing	37	nmod	_	SpaceAfter=No
 41	,	,	PUNCT	_	_	42	punct	_	_
-42	Jarbas	Jarbas	PROPN	_	Number=Sing	37	appos	_	_
-43	Passarinho	passarinho	PROPN	_	Number=Sing	42	flat:name	_	SpaceAfter=No
+42	Jarbas	Jarbas	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	37	appos	_	_
+43	Passarinho	Passarinho	PROPN	_	Number=Sing	42	flat:name	_	SpaceAfter=No
 44	.	.	PUNCT	_	_	6	punct	_	_
 
-# text = Nessa ocasião, a direção da CNTI defendeu a elevação dos salários reais médios até os níveis aceitos antes da entrada em vigor da política salarial do governo Castelo Branco, e o aumento do nível de emprego, que vinha sendo seriamente afetado segundo as estatísticas elaboradas nas federações das indústrias.
 # sent_id = 59
+# text = Nessa ocasião, a direção da CNTI defendeu a elevação dos salários reais médios até os níveis aceitos antes da entrada em vigor da política salarial do governo Castelo Branco, e o aumento do nível de emprego, que vinha sendo seriamente afetado segundo as estatísticas elaboradas nas federações das indústrias.
 1-2	Nessa	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	3	case	_	_
 2	essa	esse	DET	_	Gender=Fem|Number=Sing|PronType=Dem	3	det	_	_
@@ -2296,7 +2276,7 @@
 6	direção	direção	NOUN	_	Gender=Fem|Number=Sing	10	nsubj	_	_
 7-8	da	_	_	_	_	_	_	_	_
 7	de	de	ADP	_	_	9	case	_	_
-8	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	9	det	_	_
+8	a	o	DET	_	Definite=Def|PronType=Art	9	det	_	_
 9	CNTI	CNTI	PROPN	_	Gender=Fem|Number=Sing	6	nmod	_	_
 10	defendeu	defender	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 11	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	12	det	_	_
@@ -2306,18 +2286,18 @@
 14	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	15	det	_	_
 15	salários	salário	NOUN	_	Gender=Masc|Number=Plur	12	nmod	_	_
 16	reais	real	ADJ	_	Gender=Masc|Number=Plur	15	amod	_	_
-17	médios	médio	NOUN	_	Gender=Masc|Number=Plur	15	nmod:npmod	_	_
+17	médios	médio	ADJ	_	Gender=Masc|Number=Plur	15	amod	_	_
 18	até	até	ADP	_	_	20	case	_	_
 19	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	20	det	_	_
-20	níveis	nível	NOUN	_	Gender=Masc|Number=Plur	10	obl	_	_
-21	aceitos	aceever	VERB	_	Gender=Masc|Number=Plur	20	acl	_	_
+20	níveis	nível	NOUN	_	Gender=Masc|Number=Plur	12	nmod	_	_
+21	aceitos	aceitar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part	20	acl	_	_
 22	antes	antes	ADV	_	_	21	advmod	_	_
 23-24	da	_	_	_	_	_	_	_	_
 23	de	de	ADP	_	_	25	case	_	_
 24	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	25	det	_	_
 25	entrada	entrada	NOUN	_	Gender=Fem|Number=Sing	22	obl	_	_
 26	em	em	ADP	_	_	27	case	_	_
-27	vigor	vigor	NOUN	_	_	25	nmod	_	_
+27	vigor	vigor	NOUN	_	Gender=Masc|Number=Sing	25	nmod	_	_
 28-29	da	_	_	_	_	_	_	_	_
 28	de	de	ADP	_	_	30	case	_	_
 29	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	30	det	_	_
@@ -2327,24 +2307,24 @@
 32	de	de	ADP	_	_	34	case	_	_
 33	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	34	det	_	_
 34	governo	governo	NOUN	_	Gender=Masc|Number=Sing	30	nmod	_	_
-35	Castelo	Castelo	PROPN	_	Gender=Masc|Number=Sing	34	appos	_	_
+35	Castelo	Castelo	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	34	appos	_	_
 36	Branco	Branco	PROPN	_	Number=Sing	35	flat:name	_	SpaceAfter=No
 37	,	,	PUNCT	_	_	40	punct	_	_
 38	e	e	CCONJ	_	_	40	cc	_	_
 39	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	40	det	_	_
-40	aumento	aumento	NOUN	_	Gender=Masc|Number=Sing	21	conj	_	_
+40	aumento	aumento	NOUN	_	Gender=Masc|Number=Sing	12	conj	_	_
 41-42	do	_	_	_	_	_	_	_	_
 41	de	de	ADP	_	_	43	case	_	_
 42	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	43	det	_	_
 43	nível	nível	NOUN	_	Gender=Masc|Number=Sing	40	nmod	_	_
 44	de	de	ADP	_	_	45	case	_	_
 45	emprego	emprego	NOUN	_	Gender=Masc|Number=Sing	43	nmod	_	SpaceAfter=No
-46	,	,	PUNCT	_	_	21	punct	_	_
-47	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	48	nsubj	_	_
-48	vinha	ver	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	40	acl:relcl	_	_
-49	sendo	ser	AUX	_	VerbForm=Ger	51	aux	_	_
+46	,	,	PUNCT	_	_	48	punct	_	_
+47	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	48	nsubj:pass	_	_
+48	vinha	vir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	43	acl:relcl	_	_
+49	sendo	ser	AUX	_	VerbForm=Ger	51	aux:pass	_	_
 50	seriamente	seriamente	ADV	_	_	51	advmod	_	_
-51	afetado	afetar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	48	xcomp	_	_
+51	afetado	afetar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	48	xcomp	_	_
 52	segundo	segundo	ADP	_	_	54	case	_	_
 53	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	54	det	_	_
 54	estatísticas	estatística	NOUN	_	Gender=Fem|Number=Plur	51	obl	_	_
@@ -2359,12 +2339,12 @@
 61	indústrias	indústria	NOUN	_	Gender=Fem|Number=Plur	58	nmod	_	SpaceAfter=No
 62	.	.	PUNCT	_	_	10	punct	_	_
 
-# text = Os sindicatos presentes criticaram a política de contenção salarial, acusando a CNTI de omissão na luta dos trabalhadores por melhores salários.
 # sent_id = 60
+# text = Os sindicatos presentes criticaram a política de contenção salarial, acusando a CNTI de omissão na luta dos trabalhadores por melhores salários.
 1	Os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	2	det	_	_
 2	sindicatos	sindicato	NOUN	_	Gender=Masc|Number=Plur	4	nsubj	_	_
 3	presentes	presente	ADJ	_	Gender=Masc|Number=Plur	2	amod	_	_
-4	criticaram	criticar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+4	criticaram	criticar	VERB	_	Mood=Ind|Number=Plur|Person=3|VerbForm=Fin	0	root	_	_
 5	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	6	det	_	_
 6	política	política	NOUN	_	Gender=Fem|Number=Sing	4	obj	_	_
 7	de	de	ADP	_	_	8	case	_	_
@@ -2375,7 +2355,7 @@
 12	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	13	det	_	_
 13	CNTI	CNTI	PROPN	_	Gender=Fem|Number=Sing	11	obj	_	_
 14	de	de	ADP	_	_	15	case	_	_
-15	omissão	omissão	NOUN	_	Gender=Fem|Number=Sing	13	nmod	_	_
+15	omissão	omissão	NOUN	_	Gender=Fem|Number=Sing	11	iobj	_	_
 16-17	na	_	_	_	_	_	_	_	_
 16	em	em	ADP	_	_	18	case	_	_
 17	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	18	det	_	_
@@ -2386,12 +2366,11 @@
 21	trabalhadores	trabalhador	NOUN	_	Gender=Masc|Number=Plur	18	nmod	_	_
 22	por	por	ADP	_	_	24	case	_	_
 23	melhores	bom	ADJ	_	Gender=Masc|Number=Plur	24	amod	_	_
-24	salários	salário	NOUN	_	Gender=Masc|Number=Plur	11	obl	_	SpaceAfter=No
-25	.	.	PUNCT	_	_	4	punct	_	_
+24	salários	salário	NOUN	_	Gender=Masc|Number=Plur	18	nmod	_	SpaceAfter=No
+25	.	.	PUNCT	_	_	4	punct	_	SpacesAfter=\n
 
-# text = Nas eleições da CNTI realizadas em maio de 1968, Campista foi eleito secretário para assuntos internacionais e Olavo Previatti foi escolhido o novo presidente da confederação.
 # sent_id = 61
-# newpar
+# text = Nas eleições da CNTI realizadas em maio de 1968, Campista foi eleito secretário para assuntos internacionais e Olavo Previatti foi escolhido o novo presidente da confederação.
 1-2	Nas	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	3	case	_	_
 2	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	3	det	_	_
@@ -2408,32 +2387,31 @@
 12	,	,	PUNCT	_	_	7	punct	_	_
 13	Campista	Campista	PROPN	_	Gender=Masc|Number=Sing	15	nsubj:pass	_	_
 14	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	15	aux:pass	_	_
-15	eleito	eleger	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	24	advcl	_	_
-16	secretário	secretário	NOUN	_	Gender=Masc|Number=Sing	15	nsubj:pass	_	_
+15	eleito	eleger	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
+16	secretário	secretário	NOUN	_	Gender=Masc|Number=Sing	15	xcomp	_	_
 17	para	para	ADP	_	_	18	case	_	_
 18	assuntos	assunto	NOUN	_	Gender=Masc|Number=Plur	16	nmod	_	_
 19	internacionais	internacional	ADJ	_	Gender=Masc|Number=Plur	18	amod	_	_
-20	e	e	CCONJ	_	_	21	cc	_	_
-21	Olavo	Olavo	PROPN	_	Gender=Masc|Number=Sing	16	conj	_	_
+20	e	e	CCONJ	_	_	24	cc	_	_
+21	Olavo	Olavo	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	24	nsubj:pass	_	_
 22	Previatti	Previatti	PROPN	_	Number=Sing	21	flat:name	_	_
 23	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	24	aux:pass	_	_
-24	escolhido	escolher	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
+24	escolhido	escolher	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	15	conj	_	_
 25	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	27	det	_	_
 26	novo	novo	ADJ	_	Gender=Masc|Number=Sing	27	amod	_	_
-27	presidente	presidente	NOUN	_	Gender=Masc|Number=Sing	24	nsubj:pass	_	_
+27	presidente	presidente	NOUN	_	Gender=Masc|Number=Sing	24	xcomp	_	_
 28-29	da	_	_	_	_	_	_	_	_
 28	de	de	ADP	_	_	30	case	_	_
 29	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	30	det	_	_
 30	confederação	confederação	NOUN	_	Gender=Fem|Number=Sing	27	nmod	_	SpaceAfter=No
-31	.	.	PUNCT	_	_	24	punct	_	_
+31	.	.	PUNCT	_	_	15	punct	_	SpacesAfter=\n
 
-# text = Em 25 de outubro de 1969, Campista integrou uma delegação de trabalhadores recebida no Rio pelo general Emílio Garrastazu Médici, tendo sido o primeiro civil a cumprimentar o general por sua ascensão à presidência da República.
 # sent_id = 62
-# newpar
+# text = Em 25 de outubro de 1969, Campista integrou uma delegação de trabalhadores recebida no Rio pelo general Emílio Garrastazu Médici, tendo sido o primeiro civil a cumprimentar o general por sua ascensão à presidência da República.
 1	Em	em	ADP	_	_	2	case	_	_
 2	25	25	NUM	_	NumType=Card	9	obl	_	_
 3	de	de	ADP	_	_	4	case	_	_
-4	outubro	outubro	NOUN	_	Gender=Masc|Number=Sing	2	nmod:tmod	_	_
+4	outubro	outubro	NOUN	_	Gender=Masc|Number=Sing	2	nmod	_	_
 5	de	de	ADP	_	_	6	case	_	_
 6	1969	1969	NUM	_	NumType=Card	4	nmod	_	SpaceAfter=No
 7	,	,	PUNCT	_	_	2	punct	_	_
@@ -2451,8 +2429,8 @@
 18-19	pelo	_	_	_	_	_	_	_	_
 18	por	por	ADP	_	_	20	case	_	_
 19	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	20	det	_	_
-20	general	general	NOUN	_	Gender=Masc|Number=Sing	14	obl	_	_
-21	Emílio	Emílio	PROPN	_	Gender=Masc|Number=Sing	20	appos	_	_
+20	general	general	NOUN	_	Gender=Masc|Number=Sing	14	obl:agent	_	_
+21	Emílio	Emílio	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	20	appos	_	_
 22	Garrastazu	Garrastazu	PROPN	_	Number=Sing	21	flat:name	_	_
 23	Médici	Médici	PROPN	_	Number=Sing	21	flat:name	_	SpaceAfter=No
 24	,	,	PUNCT	_	_	29	punct	_	_
@@ -2460,8 +2438,8 @@
 26	sido	ser	AUX	_	VerbForm=Part	29	cop	_	_
 27	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	29	det	_	_
 28	primeiro	primeiro	ADJ	_	Gender=Masc|Number=Sing|NumType=Ord	29	amod	_	_
-29	civil	civil	NOUN	_	Gender=Masc|Number=Sing	9	obl	_	_
-30	a	a	ADP	_	_	31	mark	_	_
+29	civil	civil	NOUN	_	Gender=Masc|Number=Sing	9	advcl	_	_
+30	a	a	SCONJ	_	_	31	mark	_	_
 31	cumprimentar	cumprimentar	VERB	_	VerbForm=Inf	29	acl	_	_
 32	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	33	det	_	_
 33	general	general	NOUN	_	Gender=Masc|Number=Sing	31	obj	_	_
@@ -2475,11 +2453,11 @@
 40-41	da	_	_	_	_	_	_	_	_
 40	de	de	ADP	_	_	42	case	_	_
 41	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	42	det	_	_
-42	República	República	PROPN	_	Gender=Fem|Number=Sing	39	nmod	_	SpaceAfter=No
+42	República	república	NOUN	_	Gender=Fem|Number=Sing	39	nmod	_	SpaceAfter=No
 43	.	.	PUNCT	_	_	9	punct	_	_
 
-# text = No mês de dezembro desse ano, contudo, o presidente Médici vetou a recondução de Campista ao cargo de ministro do Tribunal Superior do Trabalho.
 # sent_id = 63
+# text = No mês de dezembro desse ano, contudo, o presidente Médici vetou a recondução de Campista ao cargo de ministro do Tribunal Superior do Trabalho.
 1-2	No	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	3	case	_	_
 2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
@@ -2491,7 +2469,7 @@
 7	esse	esse	DET	_	Gender=Masc|Number=Sing|PronType=Dem	8	det	_	_
 8	ano	ano	NOUN	_	Gender=Masc|Number=Sing	5	nmod	_	SpaceAfter=No
 9	,	,	PUNCT	_	_	3	punct	_	_
-10	contudo	contudo	ADV	_	_	3	advmod	_	SpaceAfter=No
+10	contudo	contudo	CCONJ	_	_	15	cc	_	SpaceAfter=No
 11	,	,	PUNCT	_	_	10	punct	_	_
 12	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	13	det	_	_
 13	presidente	presidente	NOUN	_	Gender=Masc|Number=Sing	15	nsubj	_	_
@@ -2504,23 +2482,22 @@
 20-21	ao	_	_	_	_	_	_	_	_
 20	a	a	ADP	_	_	22	case	_	_
 21	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	22	det	_	_
-22	cargo	cargo	NOUN	_	Gender=Masc|Number=Sing	15	obl	_	_
+22	cargo	cargo	NOUN	_	Gender=Masc|Number=Sing	17	nmod	_	_
 23	de	de	ADP	_	_	24	case	_	_
 24	ministro	ministro	NOUN	_	Gender=Masc|Number=Sing	22	nmod	_	_
 25-26	do	_	_	_	_	_	_	_	_
 25	de	de	ADP	_	_	27	case	_	_
 26	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	27	det	_	_
-27	Tribunal	Tribunal	PROPN	_	Gender=Masc|Number=Sing	24	nmod	_	_
-28	Superior	Superior	PROPN	_	Number=Sing	27	flat:name	_	_
+27	Tribunal	tribunal	NOUN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	24	nmod	_	_
+28	Superior	superior	ADJ	_	Gender=Masc|Number=Sing	27	amod	_	_
 29-30	do	_	_	_	_	_	_	_	_
 29	de	de	ADP	_	_	31	case	_	_
 30	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	31	det	_	_
-31	Trabalho	Trabalho	PROPN	_	Number=Sing	27	nmod	_	SpaceAfter=No
-32	.	.	PUNCT	_	_	15	punct	_	_
+31	Trabalho	trabalho	NOUN	_	Number=Sing	27	nmod	_	SpaceAfter=No
+32	.	.	PUNCT	_	_	15	punct	_	SpacesAfter=\n
 
-# text = Nas eleições da CNTI realizadas em maio de 1971, Campista foi eleito secretário-geral e Rudor Blumm o novo presidente da entidade.
 # sent_id = 64
-# newpar
+# text = Nas eleições da CNTI realizadas em maio de 1971, Campista foi eleito secretário-geral e Rudor Blumm o novo presidente da entidade.
 1-2	Nas	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	3	case	_	_
 2	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	3	det	_	_
@@ -2538,25 +2515,25 @@
 13	Campista	Campista	PROPN	_	Gender=Masc|Number=Sing	15	nsubj:pass	_	_
 14	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	15	aux:pass	_	_
 15	eleito	eleger	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
-16	secretário-geral	secretário-geral	NOUN	_	Gender=Masc|Number=Sing	15	nsubj:pass	_	_
+16	secretário-geral	secretário-geral	NOUN	_	Gender=Masc|Number=Sing	15	xcomp	_	_
 17	e	e	CCONJ	_	_	18	cc	_	_
-18	Rudor	Rudor	PROPN	_	Number=Sing	16	conj	_	_
+18	Rudor	Rudor	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	22	conj	_	_
 19	Blumm	Blumm	PROPN	_	Number=Sing	18	flat:name	_	_
 20	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	22	det	_	_
 21	novo	novo	ADJ	_	Gender=Masc|Number=Sing	22	amod	_	_
-22	presidente	presidente	NOUN	_	Gender=Masc|Number=Sing	16	appos	_	_
+22	presidente	presidente	NOUN	_	Gender=Masc|Number=Sing	15	conj	_	_
 23-24	da	_	_	_	_	_	_	_	_
 23	de	de	ADP	_	_	25	case	_	_
 24	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	25	det	_	_
 25	entidade	entidade	NOUN	_	Gender=Fem|Number=Sing	22	nmod	_	SpaceAfter=No
 26	.	.	PUNCT	_	_	15	punct	_	_
 
-# text = Em 9 de fevereiro do ano seguinte, Campista substituiu Blumm na presidência da CNTI, quando este foi nomeado para o Tribunal Superior do Trabalho.
 # sent_id = 65
+# text = Em 9 de fevereiro do ano seguinte, Campista substituiu Blumm na presidência da CNTI, quando este foi nomeado para o Tribunal Superior do Trabalho.
 1	Em	em	ADP	_	_	2	case	_	_
 2	9	9	NUM	_	NumType=Card	11	obl	_	_
 3	de	de	ADP	_	_	4	case	_	_
-4	fevereiro	fevereiro	NOUN	_	Gender=Masc|Number=Sing	2	nmod:tmod	_	_
+4	fevereiro	fevereiro	NOUN	_	Gender=Masc|Number=Sing	2	nmod	_	_
 5-6	do	_	_	_	_	_	_	_	_
 5	de	de	ADP	_	_	7	case	_	_
 6	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	7	det	_	_
@@ -2581,7 +2558,7 @@
 23	nomeado	nomear	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	11	advcl	_	_
 24	para	para	ADP	_	_	26	case	_	_
 25	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	26	det	_	_
-26	Tribunal	Tribunal	PROPN	_	Gender=Masc|Number=Sing	23	obl	_	_
+26	Tribunal	Tribunal	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	23	obl	_	_
 27	Superior	Superior	PROPN	_	Number=Sing	26	flat:name	_	_
 28-29	do	_	_	_	_	_	_	_	_
 28	de	de	ADP	_	_	30	case	_	_
@@ -2589,13 +2566,13 @@
 30	Trabalho	Trabalho	PROPN	_	Number=Sing	26	nmod	_	SpaceAfter=No
 31	.	.	PUNCT	_	_	11	punct	_	_
 
-# text = A partir de 1971, os mandatos da diretoria da CNTI tornaram-se trienais, sendo realizadas novas eleições em maio de 1974.
 # sent_id = 66
-1	A	a	ADP	_	_	2	case	_	_
-2	partir	partir	NOUN	_	_	14	obl	_	_
-3	de	de	ADP	_	_	4	case	_	_
-4	1971	1971	NUM	_	NumType=Card	2	nmod	_	SpaceAfter=No
-5	,	,	PUNCT	_	_	2	punct	_	_
+# text = A partir de 1971, os mandatos da diretoria da CNTI tornaram-se trienais, sendo realizadas novas eleições em maio de 1974.
+1	A	a	ADP	_	ExtPos=ADP	4	case	_	_
+2	partir	partir	NOUN	_	_	1	fixed	_	_
+3	de	de	ADP	_	_	1	fixed	_	_
+4	1971	1971	NUM	_	NumType=Card	14	obl	_	SpaceAfter=No
+5	,	,	PUNCT	_	_	4	punct	_	_
 6	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	7	det	_	_
 7	mandatos	mandato	NOUN	_	Gender=Masc|Number=Plur	14	nsubj	_	_
 8-9	da	_	_	_	_	_	_	_	_
@@ -2608,21 +2585,21 @@
 13	CNTI	CNTI	PROPN	_	Gender=Fem|Number=Sing	10	nmod	_	_
 14-15	tornaram-se	_	_	_	_	_	_	_	_
 14	tornaram	tornar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
-15	se	se	PRON	_	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	14	obj	_	_
-16	trienais	trienal	ADJ	_	Gender=Fem|Number=Plur	14	xcomp	_	SpaceAfter=No
+15	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Plur|Person=3|PronType=Prs	14	obj	_	_
+16	trienais	trienal	ADJ	_	Gender=Masc|Number=Plur	14	xcomp	_	SpaceAfter=No
 17	,	,	PUNCT	_	_	19	punct	_	_
 18	sendo	ser	AUX	_	VerbForm=Ger	19	aux:pass	_	_
 19	realizadas	realizar	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part|Voice=Pass	14	advcl	_	_
 20	novas	novo	ADJ	_	Gender=Fem|Number=Plur	21	amod	_	_
 21	eleições	eleição	NOUN	_	Gender=Fem|Number=Plur	19	nsubj:pass	_	_
 22	em	em	ADP	_	_	23	case	_	_
-23	maio	maio	NOUN	_	Gender=Masc|Number=Sing	21	nmod	_	_
+23	maio	maio	NOUN	_	Gender=Masc|Number=Sing	19	obl	_	_
 24	de	de	ADP	_	_	25	case	_	_
 25	1974	1974	NUM	_	NumType=Card	23	nmod	_	SpaceAfter=No
 26	.	.	PUNCT	_	_	14	punct	_	_
 
-# text = Nessa ocasião, Campista foi eleito presidente da entidade, encabeçando uma chapa única.
 # sent_id = 67
+# text = Nessa ocasião, Campista foi eleito presidente da entidade, encabeçando uma chapa única.
 1-2	Nessa	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	3	case	_	_
 2	essa	esse	DET	_	Gender=Fem|Number=Sing|PronType=Dem	3	det	_	_
@@ -2631,7 +2608,7 @@
 5	Campista	Campista	PROPN	_	Gender=Masc|Number=Sing	7	nsubj:pass	_	_
 6	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	7	aux:pass	_	_
 7	eleito	eleger	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
-8	presidente	presidente	NOUN	_	Gender=Masc|Number=Sing	7	nsubj:pass	_	_
+8	presidente	presidente	NOUN	_	Gender=Masc|Number=Sing	7	xcomp	_	_
 9-10	da	_	_	_	_	_	_	_	_
 9	de	de	ADP	_	_	11	case	_	_
 10	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	11	det	_	_
@@ -2641,61 +2618,57 @@
 14	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	15	det	_	_
 15	chapa	chapa	NOUN	_	Gender=Fem|Number=Sing	13	obj	_	_
 16	única	único	ADJ	_	Gender=Fem|Number=Sing	15	amod	_	SpaceAfter=No
-17	.	.	PUNCT	_	_	7	punct	_	_
+17	.	.	PUNCT	_	_	7	punct	_	SpacesAfter=\n
 
-# text = Em 26 de fevereiro de 1975
 # sent_id = 68
-# newpar
+# text = Em 26 de fevereiro de 1975 Campista foi reconduzido pelo presidente da República, Ernesto Geisel, ao cargo de ministro do Tribunal Superior do Trabalho, como representante dos empregados.
 1	Em	em	ADP	_	_	2	case	_	_
-2	26	26	NUM	_	NumType=Card	0	root	_	_
+2	26	26	NUM	_	NumType=Card	9	obl	_	_
 3	de	de	ADP	_	_	4	case	_	_
-4	fevereiro	fevereiro	NOUN	_	Gender=Masc|Number=Sing	2	nmod:tmod	_	_
+4	fevereiro	fevereiro	NOUN	_	Gender=Masc|Number=Sing	2	nmod	_	_
 5	de	de	ADP	_	_	6	case	_	_
 6	1975	1975	NUM	_	NumType=Card	4	nmod	_	_
-
-# text = Campista foi reconduzido pelo presidente da República, Ernesto Geisel, ao cargo de ministro do Tribunal Superior do Trabalho, como representante dos empregados.
-# sent_id = 69
-1	Campista	Campista	PROPN	_	Gender=Masc|Number=Sing	3	nsubj:pass	_	_
-2	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	aux:pass	_	_
-3	reconduzido	reconduzir	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
-4-5	pelo	_	_	_	_	_	_	_	_
-4	por	por	ADP	_	_	6	case	_	_
-5	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	6	det	_	_
-6	presidente	presidente	NOUN	_	Gender=Masc|Number=Sing	3	obl:agent	_	_
-7-8	da	_	_	_	_	_	_	_	_
-7	de	de	ADP	_	_	9	case	_	_
-8	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	9	det	_	_
-9	República	República	PROPN	_	Number=Sing	6	nmod	_	SpaceAfter=No
-10	,	,	PUNCT	_	_	11	punct	_	_
-11	Ernesto	Ernesto	PROPN	_	Gender=Masc|Number=Sing	6	appos	_	_
-12	Geisel	Geisel	PROPN	_	Number=Sing	11	flat:name	_	SpaceAfter=No
-13	,	,	PUNCT	_	_	11	punct	_	_
-14-15	ao	_	_	_	_	_	_	_	_
-14	a	a	ADP	_	_	16	case	_	_
-15	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	16	det	_	_
-16	cargo	cargo	NOUN	_	Gender=Masc|Number=Sing	3	obl	_	_
-17	de	de	ADP	_	_	18	case	_	_
-18	ministro	ministro	NOUN	_	Gender=Masc|Number=Sing	16	nmod	_	_
-19-20	do	_	_	_	_	_	_	_	_
-19	de	de	ADP	_	_	21	case	_	_
-20	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	21	det	_	_
-21	Tribunal	Tribunal	PROPN	_	Gender=Masc|Number=Sing	18	nmod	_	_
-22	Superior	Superior	PROPN	_	Number=Sing	21	flat:name	_	_
-23-24	do	_	_	_	_	_	_	_	_
-23	de	de	ADP	_	_	25	case	_	_
-24	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	25	det	_	_
-25	Trabalho	Trabalho	PROPN	_	Number=Sing	21	nmod	_	SpaceAfter=No
-26	,	,	PUNCT	_	_	3	punct	_	_
-27	como	como	ADP	_	_	28	case	_	_
-28	representante	representante	NOUN	_	Gender=Masc|Number=Sing	3	xcomp	_	_
-29-30	dos	_	_	_	_	_	_	_	_
+7	Campista	Campista	PROPN	_	Gender=Masc|Number=Sing	9	nsubj:pass	_	_
+8	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	9	aux:pass	_	_
+9	reconduzido	reconduzir	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
+10-11	pelo	_	_	_	_	_	_	_	_
+10	por	por	ADP	_	_	12	case	_	_
+11	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	12	det	_	_
+12	presidente	presidente	NOUN	_	Gender=Masc|Number=Sing	9	obl:agent	_	_
+13-14	da	_	_	_	_	_	_	_	_
+13	de	de	ADP	_	_	15	case	_	_
+14	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	15	det	_	_
+15	República	república	NOUN	_	Gender=Fem|Number=Sing	12	nmod	_	SpaceAfter=No
+16	,	,	PUNCT	_	_	17	punct	_	_
+17	Ernesto	Ernesto	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	12	appos	_	_
+18	Geisel	Geisel	PROPN	_	Number=Sing	17	flat:name	_	SpaceAfter=No
+19	,	,	PUNCT	_	_	17	punct	_	_
+20-21	ao	_	_	_	_	_	_	_	_
+20	a	a	ADP	_	_	22	case	_	_
+21	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	22	det	_	_
+22	cargo	cargo	NOUN	_	Gender=Masc|Number=Sing	9	obl	_	_
+23	de	de	ADP	_	_	24	case	_	_
+24	ministro	ministro	NOUN	_	Gender=Masc|Number=Sing	22	nmod	_	_
+25-26	do	_	_	_	_	_	_	_	_
+25	de	de	ADP	_	_	27	case	_	_
+26	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	27	det	_	_
+27	Tribunal	Tribunal	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	24	nmod	_	_
+28	Superior	superior	PROPN	_	Number=Sing	27	amod	_	_
+29-30	do	_	_	_	_	_	_	_	_
 29	de	de	ADP	_	_	31	case	_	_
-30	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	31	det	_	_
-31	empregados	empregado	NOUN	_	Gender=Masc|Number=Plur	28	nmod	_	SpaceAfter=No
-32	.	.	PUNCT	_	_	3	punct	_	_
+30	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	31	det	_	_
+31	Trabalho	Trabalho	PROPN	_	Number=Sing	27	nmod	_	SpaceAfter=No
+32	,	,	PUNCT	_	_	34	punct	_	_
+33	como	como	ADP	_	_	34	case	_	_
+34	representante	representante	NOUN	_	Gender=Masc|Number=Sing	9	obl	_	_
+35-36	dos	_	_	_	_	_	_	_	_
+35	de	de	ADP	_	_	37	case	_	_
+36	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	37	det	_	_
+37	empregados	empregado	NOUN	_	Gender=Masc|Number=Plur	34	nmod	_	SpaceAfter=No
+38	.	.	PUNCT	_	_	9	punct	_	_
 
+# sent_id = 69
 # text = Em maio de 1977, foi reeleito presidente da CNTI, encabeçando mais uma vez uma chapa única.
-# sent_id = 70
 1	Em	em	ADP	_	_	2	case	_	_
 2	maio	maio	NOUN	_	Gender=Masc|Number=Sing	7	obl	_	_
 3	de	de	ADP	_	_	4	case	_	_
@@ -2707,26 +2680,26 @@
 9-10	da	_	_	_	_	_	_	_	_
 9	de	de	ADP	_	_	11	case	_	_
 10	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	11	det	_	_
-11	CNTI	CNTI	PROPN	_	Gender=Fem|Number=Sing	8	nmod	_	SpaceAfter=No
+11	CNTI	cnti	NOUN	_	Gender=Fem|Number=Sing	8	nmod	_	SpaceAfter=No
 12	,	,	PUNCT	_	_	13	punct	_	_
 13	encabeçando	encabeçar	VERB	_	VerbForm=Ger	7	advcl	_	_
-14	mais	mais	NOUN	_	_	13	obl	_	_
-15	uma	uma	ADP	_	NumType=Card	16	case	_	_
-16	vez	vez	NOUN	_	Gender=Fem|Number=Sing	14	nmod	_	_
+14	mais	mais	NOUN	_	Gender=Masc|Number=Sing	13	obl	_	_
+15	uma	uma	ADP	_	_	16	case	_	_
+16	vez	vez	NOUN	_	Gender=Masc|Number=Sing	14	nmod	_	_
 17	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	18	det	_	_
 18	chapa	chapa	NOUN	_	Gender=Fem|Number=Sing	13	obj	_	_
 19	única	único	ADJ	_	Gender=Fem|Number=Sing	18	amod	_	SpaceAfter=No
 20	.	.	PUNCT	_	_	7	punct	_	_
 
+# sent_id = 70
 # text = Terminado seu mandato no Tribunal Superior do Trabalho em 18 de fevereiro de 1978, foi pela terceira vez designado para o cargo de ministro.
-# sent_id = 71
-1	Terminado	terminar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	23	dep	_	_
+1	Terminado	terminar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	23	advcl	_	_
 2	seu	seu	DET	_	Gender=Masc|Number=Sing|PronType=Prs	3	det	_	_
-3	mandato	mandato	NOUN	_	Gender=Masc|Number=Sing	1	nsubj	_	_
+3	mandato	mandato	NOUN	_	Gender=Masc|Number=Sing	1	obj	_	_
 4-5	no	_	_	_	_	_	_	_	_
 4	em	em	ADP	_	_	6	case	_	_
 5	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	6	det	_	_
-6	Tribunal	Tribunal	PROPN	_	Gender=Masc|Number=Sing	3	nmod	_	_
+6	Tribunal	Tribunal	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	3	nmod	_	_
 7	Superior	Superior	PROPN	_	Number=Sing	6	flat:name	_	_
 8-9	do	_	_	_	_	_	_	_	_
 8	de	de	ADP	_	_	10	case	_	_
@@ -2735,11 +2708,11 @@
 11	em	em	ADP	_	_	12	case	_	_
 12	18	18	NUM	_	NumType=Card	1	obl	_	_
 13	de	de	ADP	_	_	14	case	_	_
-14	fevereiro	fevereiro	NOUN	_	Gender=Masc|Number=Sing	12	nmod:tmod	_	_
+14	fevereiro	fevereiro	NOUN	_	Gender=Masc|Number=Sing	12	nmod	_	_
 15	de	de	ADP	_	_	16	case	_	_
 16	1978	1978	NUM	_	NumType=Card	14	nmod	_	SpaceAfter=No
 17	,	,	PUNCT	_	_	1	punct	_	_
-18	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	23	aux	_	_
+18	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	23	cop	_	_
 19-20	pela	_	_	_	_	_	_	_	_
 19	por	por	ADP	_	_	22	case	_	_
 20	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	22	det	_	_
@@ -2748,14 +2721,13 @@
 23	designado	designar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	0	root	_	_
 24	para	para	ADP	_	_	26	case	_	_
 25	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	26	det	_	_
-26	cargo	cargo	NOUN	_	Gender=Masc|Number=Sing	23	obl	_	_
+26	cargo	cargo	NOUN	_	Gender=Masc|Number=Sing	23	obj	_	_
 27	de	de	ADP	_	_	28	case	_	_
 28	ministro	ministro	NOUN	_	Gender=Masc|Number=Sing	26	nmod	_	SpaceAfter=No
-29	.	.	PUNCT	_	_	23	punct	_	_
+29	.	.	PUNCT	_	_	23	punct	_	SpacesAfter=\n
 
+# sent_id = 71
 # text = Em junho de 1978, realizou-se no Rio de Janeiro o V Congresso Nacional dos Trabalhadores na Indústria.
-# sent_id = 72
-# newpar
 1	Em	em	ADP	_	_	2	case	_	_
 2	junho	junho	NOUN	_	Gender=Masc|Number=Sing	6	obl	_	_
 3	de	de	ADP	_	_	4	case	_	_
@@ -2771,7 +2743,7 @@
 11	de	de	ADP	_	_	12	case	_	_
 12	Janeiro	Janeiro	PROPN	_	Number=Sing	10	nmod	_	_
 13	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	14	det	_	_
-14	V	V	PROPN	_	Gender=Masc|Number=Sing	6	nsubj	_	_
+14	V	V	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	6	nsubj	_	_
 15	Congresso	Congresso	PROPN	_	Number=Sing	14	flat:name	_	_
 16	Nacional	Nacional	PROPN	_	Number=Sing	14	flat:name	_	_
 17-18	dos	_	_	_	_	_	_	_	_
@@ -2781,12 +2753,12 @@
 20-21	na	_	_	_	_	_	_	_	_
 20	em	em	ADP	_	_	22	case	_	_
 21	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	22	det	_	_
-22	Indústria	Indústria	PROPN	_	Gender=Fem|Number=Sing	6	obl	_	SpaceAfter=No
+22	Indústria	Indústria	PROPN	_	Number=Sing	19	nmod	_	SpaceAfter=No
 23	.	.	PUNCT	_	_	6	punct	_	_
 
-# text = Idealizado por Campista, o encontro contou com a presença do presidente Geisel em sua sessão inaugural e com a participação de seis mil trabalhadores, segundo estimativas oficiais — ou dois mil, segundo um grupo de delegados de oposição à diretoria da CNTI.
-# sent_id = 73
-1	Idealizado	idealizar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	7	dep	_	_
+# sent_id = 72
+# text = Idealizado por Campista, o encontro contou com a presença do presidente Geisel em sua sessão inaugural e com a participação de seis mil trabalhadores, segundo estimativas oficiais - ou dois mil, segundo um grupo de delegados de oposição à diretoria da CNTI.
+1	Idealizado	idealizar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	6	acl	_	_
 2	por	por	ADP	_	_	3	case	_	_
 3	Campista	Campista	PROPN	_	Gender=Masc|Number=Sing	1	obl:agent	_	SpaceAfter=No
 4	,	,	PUNCT	_	_	1	punct	_	_
@@ -2795,7 +2767,7 @@
 7	contou	contar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 8	com	com	ADP	_	_	10	case	_	_
 9	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	10	det	_	_
-10	presença	presença	NOUN	_	Gender=Fem|Number=Sing	7	obl	_	_
+10	presença	presença	NOUN	_	Gender=Fem|Number=Sing	7	obj	_	_
 11-12	do	_	_	_	_	_	_	_	_
 11	de	de	ADP	_	_	13	case	_	_
 12	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	13	det	_	_
@@ -2803,28 +2775,28 @@
 14	Geisel	Geisel	PROPN	_	Gender=Masc|Number=Sing	13	appos	_	_
 15	em	em	ADP	_	_	17	case	_	_
 16	sua	seu	DET	_	Gender=Fem|Number=Sing|PronType=Prs	17	det	_	_
-17	sessão	sessão	NOUN	_	Gender=Fem|Number=Sing	13	nmod	_	_
+17	sessão	sessão	NOUN	_	Gender=Fem|Number=Sing	7	obl	_	_
 18	inaugural	inaugural	ADJ	_	Gender=Fem|Number=Sing	17	amod	_	_
 19	e	e	CCONJ	_	_	22	cc	_	_
 20	com	com	ADP	_	_	22	case	_	_
 21	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	22	det	_	_
-22	participação	participação	NOUN	_	Gender=Fem|Number=Sing	17	conj	_	_
+22	participação	participação	NOUN	_	Gender=Fem|Number=Sing	10	conj	_	_
 23	de	de	ADP	_	_	26	case	_	_
-24	seis	seis	NUM	_	NumType=Card	25	dep	_	_
-25	mil	mil	NUM	_	NumType=Card	26	nummod	_	_
+24	seis	seis	NUM	_	NumType=Card	26	nummod	_	_
+25	mil	mil	NUM	_	NumType=Card	24	flat	_	_
 26	trabalhadores	trabalhador	NOUN	_	Gender=Masc|Number=Plur	22	nmod	_	SpaceAfter=No
 27	,	,	PUNCT	_	_	29	punct	_	_
 28	segundo	segundo	ADP	_	_	29	case	_	_
 29	estimativas	estimativa	NOUN	_	Gender=Fem|Number=Plur	22	nmod	_	_
 30	oficiais	oficial	ADJ	_	Gender=Fem|Number=Plur	29	amod	_	_
-31	—	—	PUNCT	_	_	29	punct	_	_
-32	ou	ou	CCONJ	_	_	34	cc	_	_
-33	dois	dois	NUM	_	NumType=Card	34	nummod	_	_
-34	mil	mil	NUM	_	NumType=Card	31	conj	_	SpaceAfter=No
+31	-	-	PUNCT	_	_	33	punct	_	_
+32	ou	ou	CCONJ	_	_	33	cc	_	_
+33	dois	dois	NUM	_	NumType=Card	29	conj	_	_
+34	mil	mil	NUM	_	NumType=Card	33	flat	_	SpaceAfter=No
 35	,	,	PUNCT	_	_	38	punct	_	_
 36	segundo	segundo	ADP	_	_	38	case	_	_
 37	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	38	det	_	_
-38	grupo	grupo	NOUN	_	Gender=Masc|Number=Sing	34	nmod	_	_
+38	grupo	grupo	NOUN	_	Gender=Masc|Number=Sing	33	nmod	_	_
 39	de	de	ADP	_	_	40	case	_	_
 40	delegados	delegado	NOUN	_	Gender=Masc|Number=Plur	38	nmod	_	_
 41	de	de	ADP	_	_	42	case	_	_
@@ -2832,20 +2804,20 @@
 43-44	à	_	_	_	_	_	_	_	_
 43	a	a	ADP	_	_	45	case	_	_
 44	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	45	det	_	_
-45	diretoria	diretoria	NOUN	_	Gender=Fem|Number=Sing	38	nmod	_	_
+45	diretoria	diretoria	NOUN	_	Gender=Fem|Number=Sing	42	nmod	_	_
 46-47	da	_	_	_	_	_	_	_	_
 46	de	de	ADP	_	_	48	case	_	_
 47	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	48	det	_	_
 48	CNTI	CNTI	PROPN	_	Gender=Fem|Number=Sing	45	nmod	_	SpaceAfter=No
 49	.	.	PUNCT	_	_	7	punct	_	_
 
+# sent_id = 73
 # text = Durante o encontro travou-se uma luta entre a direção da CNTI e novas lideranças sindicais, que pela primeira vez participavam de um congresso nacional.
-# sent_id = 74
 1	Durante	durante	ADP	_	_	3	case	_	_
 2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
 3	encontro	encontro	NOUN	_	Gender=Masc|Number=Sing	4	obl	_	_
 4-5	travou-se	_	_	_	_	_	_	_	_
-4	travou	travar	VERB	_	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	_	_
+4	travou	travar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 5	se	se	PRON	_	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	4	expl	_	_
 6	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	7	det	_	_
 7	luta	luta	NOUN	_	Gender=Fem|Number=Sing	4	nsubj	_	_
@@ -2858,91 +2830,91 @@
 13	CNTI	CNTI	PROPN	_	Gender=Fem|Number=Sing	10	nmod	_	_
 14	e	e	CCONJ	_	_	16	cc	_	_
 15	novas	novo	ADJ	_	Gender=Fem|Number=Plur	16	amod	_	_
-16	lideranças	liderança	NOUN	_	Gender=Fem|Number=Plur	13	conj	_	_
+16	lideranças	liderança	NOUN	_	Gender=Fem|Number=Plur	10	conj	_	_
 17	sindicais	sindical	ADJ	_	Gender=Fem|Number=Plur	16	amod	_	SpaceAfter=No
-18	,	,	PUNCT	_	_	4	punct	_	_
+18	,	,	PUNCT	_	_	24	punct	_	_
 19	que	que	PRON	_	Gender=Fem|Number=Plur|PronType=Rel	24	nsubj	_	_
 20-21	pela	_	_	_	_	_	_	_	_
 20	por	por	ADP	_	_	23	case	_	_
 21	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	23	det	_	_
 22	primeira	primeira	ADP	_	_	23	case	_	_
-23	vez	vez	NOUN	_	Gender=Masc|Number=Sing	24	obl	_	_
-24	participavam	participar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	13	acl:relcl	_	_
+23	vez	vez	NOUN	_	Gender=Fem|Number=Sing	24	obl	_	_
+24	participavam	participar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	16	acl:relcl	_	_
 25	de	de	ADP	_	_	27	case	_	_
 26	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	27	det	_	_
-27	congresso	congresso	NOUN	_	Gender=Masc|Number=Sing	24	obl	_	_
+27	congresso	congresso	NOUN	_	Gender=Masc|Number=Sing	24	obj	_	_
 28	nacional	nacional	ADJ	_	Gender=Masc|Number=Sing	27	amod	_	SpaceAfter=No
 29	.	.	PUNCT	_	_	4	punct	_	_
 
+# sent_id = 74
 # text = Entre os novos líderes destacou-se Luís Inácio da Silva, conhecido como Lula, presidente do Sindicato dos Metalúrgicos de São Bernardo do Campo e Diadema (SP).
-# sent_id = 75
 1	Entre	entre	ADP	_	_	4	case	_	_
 2	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	4	det	_	_
 3	novos	novo	ADJ	_	Gender=Masc|Number=Plur	4	amod	_	_
 4	líderes	líder	NOUN	_	Gender=Masc|Number=Plur	5	obl	_	_
 5-6	destacou-se	_	_	_	_	_	_	_	_
 5	destacou	destacar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
-6	se	se	PRON	_	_	5	expl	_	_
-7	Luís	Luís	PROPN	_	Gender=Masc|Number=Sing	5	nsubj	_	_
+6	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	5	expl	_	_
+7	Luís	Luís	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	5	nsubj	_	_
 8	Inácio	Inácio	PROPN	_	Number=Sing	7	flat:name	_	_
 9-10	da	_	_	_	_	_	_	_	_
 9	de	de	ADP	_	_	11	case	_	_
 10	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	11	det	_	_
 11	Silva	Silva	PROPN	_	Number=Sing	7	nmod	_	SpaceAfter=No
 12	,	,	PUNCT	_	_	13	punct	_	_
-13	conhecido	conhecido	ADJ	_	Gender=Masc|Number=Sing	7	appos	_	_
+13	conhecido	conhecer	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	7	acl	_	_
 14	como	como	ADP	_	_	15	case	_	_
 15	Lula	Lula	PROPN	_	Gender=Masc|Number=Sing	13	xcomp	_	SpaceAfter=No
 16	,	,	PUNCT	_	_	17	punct	_	_
-17	presidente	presidente	NOUN	_	Gender=Masc|Number=Sing	15	appos	_	_
+17	presidente	presidente	NOUN	_	Gender=Masc|Number=Sing	7	appos	_	_
 18-19	do	_	_	_	_	_	_	_	_
 18	de	de	ADP	_	_	20	case	_	_
 19	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	20	det	_	_
-20	Sindicato	sindicato	PROPN	_	Gender=Masc|Number=Sing	17	nmod	_	_
+20	Sindicato	sindicato	NOUN	_	Gender=Masc|Number=Sing	17	nmod	_	_
 21-22	dos	_	_	_	_	_	_	_	_
 21	de	de	ADP	_	_	23	case	_	_
 22	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	23	det	_	_
-23	Metalúrgicos	Metalúrgicos	PROPN	_	Number=Sing	20	nmod	_	_
+23	Metalúrgicos	metalúrgico	NOUN	_	Gender=Masc|Number=Plur	20	nmod	_	_
 24	de	de	ADP	_	_	25	case	_	_
-25	São	São	PROPN	_	Gender=Masc|Number=Sing	20	nmod	_	_
+25	São	São	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	23	nmod	_	_
 26	Bernardo	Bernardo	PROPN	_	Number=Sing	25	flat:name	_	_
 27-28	do	_	_	_	_	_	_	_	_
 27	de	de	ADP	_	_	29	case	_	_
 28	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	29	det	_	_
-29	Campo	Campo	PROPN	_	Gender=Masc|Number=Sing	25	nmod	_	_
-30	e	e	CCONJ	_	_	29	flat:name	_	_
-31	Diadema	Diadema	PROPN	_	Number=Sing	29	flat:name	_	_
+29	Campo	Campo	PROPN	_	Number=Sing	25	nmod	_	_
+30	e	e	CCONJ	_	_	31	cc	_	_
+31	Diadema	Diadema	PROPN	_	Gender=Masc|Number=Sing	25	conj	_	_
 32	(	(	PUNCT	_	_	33	punct	_	SpaceAfter=No
-33	SP	SP	PROPN	_	Gender=Masc|Number=Sing	25	appos	_	SpaceAfter=No
+33	SP	SP	PROPN	_	Gender=Masc|Number=Sing	31	parataxis	_	SpaceAfter=No
 34	)	)	PUNCT	_	_	33	punct	_	SpaceAfter=No
 35	.	.	PUNCT	_	_	5	punct	_	_
 
+# sent_id = 75
 # text = As resoluções finais do congresso foram consubstanciadas na «Carta sindical dos industriários brasileiros», que abordava a política salarial, a higiene e a segurança do trabalho, a lei de férias, a previdência social e a organização sindical.
-# sent_id = 76
 1	As	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	2	det	_	_
-2	resoluções	resoluções	NOUN	_	Gender=Fem|Number=Plur	8	nsubj	_	_
+2	resoluções	resolução	NOUN	_	Gender=Fem|Number=Plur	8	nsubj:pass	_	_
 3	finais	final	ADJ	_	Gender=Fem|Number=Plur	2	amod	_	_
 4-5	do	_	_	_	_	_	_	_	_
 4	de	de	ADP	_	_	6	case	_	_
 5	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	6	det	_	_
 6	congresso	congresso	NOUN	_	Gender=Masc|Number=Sing	2	nmod	_	_
-7	foram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	8	aux	_	_
-8	consubstanciadas	consubstanciar	VERB	_	Gender=Fem|Number=Plur	0	root	_	_
+7	foram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|VerbForm=Fin	8	aux:pass	_	_
+8	consubstanciadas	consubstanciar	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part|Voice=Pass	0	root	_	_
 9-10	na	_	_	_	_	_	_	_	_
 9	em	em	ADP	_	_	12	case	_	_
 10	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	12	det	_	_
 11	«	«	PUNCT	_	_	12	punct	_	SpaceAfter=No
-12	Carta	carta	PROPN	_	Gender=Fem|Number=Sing	8	obl	_	_
-13	sindical	sindical	PROPN	_	Gender=Fem|Number=Sing	12	flat:name	_	_
+12	Carta	carta	NOUN	_	Gender=Fem|Number=Sing	8	obl	_	_
+13	sindical	sindical	ADJ	_	Gender=Fem|Number=Sing	12	amod	_	_
 14-15	dos	_	_	_	_	_	_	_	_
 14	de	de	ADP	_	_	16	case	_	_
 15	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	16	det	_	_
 16	industriários	industriário	NOUN	_	Gender=Masc|Number=Plur	12	nmod	_	_
 17	brasileiros	brasileiro	ADJ	_	Gender=Masc|Number=Plur	16	amod	_	SpaceAfter=No
-18	»	»	PUNCT	_	_	16	punct	_	SpaceAfter=No
-19	,	,	PUNCT	_	_	12	punct	_	_
-20	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	21	nsubj	_	_
-21	abordava	abordar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	16	acl:relcl	_	_
+18	»	»	PUNCT	_	_	12	punct	_	SpaceAfter=No
+19	,	,	PUNCT	_	_	21	punct	_	_
+20	que	que	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	21	nsubj	_	_
+21	abordava	abordar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	12	acl:relcl	_	_
 22	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	23	det	_	_
 23	política	política	NOUN	_	Gender=Fem|Number=Sing	21	obj	_	_
 24	salarial	salarial	ADJ	_	Gender=Fem|Number=Sing	23	amod	_	SpaceAfter=No
@@ -2971,8 +2943,8 @@
 46	sindical	sindical	ADJ	_	Gender=Fem|Number=Sing	45	amod	_	SpaceAfter=No
 47	.	.	PUNCT	_	_	8	punct	_	_
 
+# sent_id = 76
 # text = O documento foi entregue por Campista ao representante de Arnaldo Prieto, ministro do Trabalho.
-# sent_id = 77
 1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	_	_
 2	documento	documento	NOUN	_	Gender=Masc|Number=Sing	4	nsubj:pass	_	_
 3	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	aux:pass	_	_
@@ -2982,20 +2954,20 @@
 7-8	ao	_	_	_	_	_	_	_	_
 7	a	a	ADP	_	_	9	case	_	_
 8	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	9	det	_	_
-9	representante	representante	NOUN	_	Gender=Masc|Number=Sing	4	obl	_	_
+9	representante	representante	NOUN	_	Gender=Masc|Number=Sing	4	obj	_	_
 10	de	de	ADP	_	_	11	case	_	_
-11	Arnaldo	Arnaldo	PROPN	_	Gender=Masc|Number=Sing	9	nmod	_	_
+11	Arnaldo	Arnaldo	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	9	nmod	_	_
 12	Prieto	Prieto	PROPN	_	Number=Sing	11	flat:name	_	SpaceAfter=No
 13	,	,	PUNCT	_	_	14	punct	_	_
 14	ministro	ministro	NOUN	_	Gender=Masc|Number=Sing	11	appos	_	_
 15-16	do	_	_	_	_	_	_	_	_
 15	de	de	ADP	_	_	17	case	_	_
 16	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	17	det	_	_
-17	Trabalho	Trabalho	PROPN	_	Number=Sing	14	nmod	_	SpaceAfter=No
+17	Trabalho	trabalho	NOUN	_	Gender=Masc|Number=Sing	14	nmod	_	SpaceAfter=No
 18	.	.	PUNCT	_	_	4	punct	_	_
 
+# sent_id = 77
 # text = A oposição liderada pelos metalúrgicos contestou essas conclusões, afirmando que não refletiam a opinião dos trabalhadores e, sim, o pensamento de Ari Campista.
-# sent_id = 78
 1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
 2	oposição	oposição	NOUN	_	Gender=Fem|Number=Sing	7	nsubj	_	_
 3	liderada	liderar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	2	acl	_	_
@@ -3018,19 +2990,18 @@
 18	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	19	det	_	_
 19	trabalhadores	trabalhador	NOUN	_	Gender=Masc|Number=Plur	16	nmod	_	_
 20	e	e	CCONJ	_	_	25	cc	_	SpaceAfter=No
-21	,	,	PUNCT	_	_	25	punct	_	_
+21	,	,	PUNCT	_	_	22	punct	_	_
 22	sim	sim	ADV	_	_	25	advmod	_	SpaceAfter=No
-23	,	,	PUNCT	_	_	25	punct	_	_
+23	,	,	PUNCT	_	_	22	punct	_	_
 24	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	25	det	_	_
-25	pensamento	pensamento	NOUN	_	Gender=Masc|Number=Sing	14	conj	_	_
+25	pensamento	pensamento	NOUN	_	Gender=Masc|Number=Sing	16	conj	_	_
 26	de	de	ADP	_	_	27	case	_	_
-27	Ari	Ari	PROPN	_	Gender=Masc|Number=Sing	25	nmod	_	_
+27	Ari	Ari	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	25	nmod	_	_
 28	Campista	Campista	PROPN	_	Number=Sing	27	flat:name	_	SpaceAfter=No
-29	.	.	PUNCT	_	_	7	punct	_	_
+29	.	.	PUNCT	_	_	7	punct	_	SpacesAfter=\n
 
+# sent_id = 78
 # text = Nas eleições da CNTI de 12 de abril de 1980, Campista foi eleito presidente pela terceira vez consecutiva, encabeçando novamente uma chapa única.
-# sent_id = 79
-# newpar
 1-2	Nas	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	3	case	_	_
 2	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	3	det	_	_
@@ -3040,16 +3011,16 @@
 5	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	6	det	_	_
 6	CNTI	CNTI	PROPN	_	Gender=Fem|Number=Sing	3	nmod	_	_
 7	de	de	ADP	_	_	8	case	_	_
-8	12	12	NUM	_	NumType=Card	6	nmod	_	_
+8	12	12	NUM	_	NumType=Card	3	nmod	_	_
 9	de	de	ADP	_	_	10	case	_	_
-10	abril	abril	NOUN	_	Gender=Masc|Number=Sing	8	nmod:tmod	_	_
+10	abril	abril	NOUN	_	Gender=Masc|Number=Sing	8	nmod	_	_
 11	de	de	ADP	_	_	12	case	_	_
 12	1980	1980	NUM	_	NumType=Card	10	nmod	_	SpaceAfter=No
 13	,	,	PUNCT	_	_	3	punct	_	_
 14	Campista	Campista	PROPN	_	Gender=Masc|Number=Sing	16	nsubj:pass	_	_
 15	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	16	aux:pass	_	_
 16	eleito	eleger	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
-17	presidente	presidente	NOUN	_	Gender=Masc|Number=Sing	16	nsubj:pass	_	_
+17	presidente	presidente	NOUN	_	Gender=Masc|Number=Sing	16	xcomp	_	_
 18-19	pela	_	_	_	_	_	_	_	_
 18	por	por	ADP	_	_	21	case	_	_
 19	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	21	det	_	_
@@ -3062,44 +3033,43 @@
 26	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	27	det	_	_
 27	chapa	chapa	NOUN	_	Gender=Fem|Number=Sing	24	obj	_	_
 28	única	único	ADJ	_	Gender=Fem|Number=Sing	27	amod	_	SpaceAfter=No
-29	.	.	PUNCT	_	_	16	punct	_	_
+29	.	.	PUNCT	_	_	16	punct	_	SpacesAfter=\n
 
+# sent_id = 79
 # text = Na qualidade de delegado trabalhista, Ari Campista foi diversas vezes a Genebra, na Suíça, para participar de conferências da Organização Internacional do Trabalho.
-# sent_id = 80
-# newpar
 1-2	Na	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	3	case	_	_
 2	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	3	det	_	_
-3	qualidade	qualidade	NOUN	_	Gender=Fem|Number=Sing	12	nmod	_	_
+3	qualidade	qualidade	NOUN	_	Gender=Fem|Number=Sing	10	obl	_	_
 4	de	de	ADP	_	_	5	case	_	_
 5	delegado	delegado	NOUN	_	Gender=Masc|Number=Sing	3	nmod	_	_
 6	trabalhista	trabalhista	ADJ	_	Gender=Masc|Number=Sing	5	amod	_	SpaceAfter=No
 7	,	,	PUNCT	_	_	3	punct	_	_
-8	Ari	Ari	PROPN	_	Gender=Masc|Number=Sing	12	nsubj	_	_
+8	Ari	Ari	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	10	nsubj	_	_
 9	Campista	Campista	PROPN	_	Number=Sing	8	flat:name	_	_
-10	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	12	cop	_	_
-11	diversas	diversos	DET	_	Gender=Fem|Number=Plur|PronType=Ind	12	det	_	_
-12	vezes	vez	NOUN	_	Gender=Fem|Number=Plur	0	root	_	_
-13	a	o	ADP	_	_	14	case	_	_
-14	Genebra	Genebra	PROPN	_	Gender=Fem|Number=Sing	12	nmod	_	SpaceAfter=No
-15	,	,	PUNCT	_	_	12	punct	_	_
+10	foi	ir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+11	diversas	diverso	DET	_	Gender=Fem|Number=Plur|PronType=Ind	12	det	_	_
+12	vezes	vez	NOUN	_	Gender=Fem|Number=Plur	10	obl	_	_
+13	a	a	ADP	_	_	14	case	_	_
+14	Genebra	Genebra	PROPN	_	Gender=Fem|Number=Sing	10	obl	_	SpaceAfter=No
+15	,	,	PUNCT	_	_	18	punct	_	_
 16-17	na	_	_	_	_	_	_	_	_
 16	em	em	ADP	_	_	18	case	_	_
 17	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	18	det	_	_
-18	Suíça	Suíça	PROPN	_	Gender=Fem|Number=Sing	12	nmod	_	SpaceAfter=No
-19	,	,	PUNCT	_	_	21	punct	_	_
-20	para	para	ADP	_	_	21	mark	_	_
-21	participar	participar	VERB	_	VerbForm=Inf	18	acl	_	_
+18	Suíça	Suíça	PROPN	_	Gender=Fem|Number=Sing	14	nmod	_	SpaceAfter=No
+19	,	,	PUNCT	_	_	18	punct	_	_
+20	para	para	SCONJ	_	_	21	mark	_	_
+21	participar	participar	VERB	_	VerbForm=Inf	10	advcl	_	_
 22	de	de	ADP	_	_	23	case	_	_
-23	conferências	conferências	NOUN	_	Gender=Fem|Number=Plur	21	obl	_	_
+23	conferências	conferência	NOUN	_	Gender=Fem|Number=Plur	21	obj	_	_
 24-25	da	_	_	_	_	_	_	_	_
 24	de	de	ADP	_	_	26	case	_	_
 25	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	26	det	_	_
-26	Organização	Organização	PROPN	_	Gender=Fem|Number=Sing	23	nmod	_	_
+26	Organização	Organização	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	23	nmod	_	_
 27	Internacional	Internacional	PROPN	_	Number=Sing	26	flat:name	_	_
 28-29	do	_	_	_	_	_	_	_	_
 28	de	de	ADP	_	_	30	case	_	_
 29	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	30	det	_	_
 30	Trabalho	Trabalho	PROPN	_	Number=Sing	26	nmod	_	SpaceAfter=No
-31	.	.	PUNCT	_	_	12	punct	_	_
+31	.	.	PUNCT	_	_	10	punct	_	SpacesAfter=\n
 

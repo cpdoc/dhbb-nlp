@@ -1,43 +1,46 @@
-# text = Partido político paranaense de oposição ao governo de Manuel Ribas.
-# sent_id = 1
-# newpar
+# generator = UDPipe 2, https://lindat.mff.cuni.cz/services/udpipe
+# udpipe_model = portuguese-bosque-ud-2.12-230717
+# udpipe_model_licence = CC BY-NC-SA
 # newdoc
-1	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	0	root	_	_
-2	político	político	PROPN	_	Number=Sing	1	flat:name	_	_
-3	paranaense	paranaense	PROPN	_	Number=Sing	1	flat:name	_	_
+# newpar
+# sent_id = 1
+# text = Partido político paranaense de oposição ao governo de Manuel Ribas.
+1	Partido	partido	NOUN	_	Gender=Masc|Number=Sing	0	root	_	_
+2	político	político	ADJ	_	Gender=Masc|Number=Sing	1	amod	_	_
+3	paranaense	paranaense	ADJ	_	Gender=Masc|Number=Sing	1	amod	_	_
 4	de	de	ADP	_	_	5	case	_	_
 5	oposição	oposição	NOUN	_	Gender=Fem|Number=Sing	1	nmod	_	_
 6-7	ao	_	_	_	_	_	_	_	_
 6	a	a	ADP	_	_	8	case	_	_
 7	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	8	det	_	_
-8	governo	governo	NOUN	_	Gender=Masc|Number=Sing	1	nmod	_	_
+8	governo	governo	NOUN	_	Gender=Masc|Number=Sing	5	nmod	_	_
 9	de	de	ADP	_	_	10	case	_	_
-10	Manuel	Manuel	PROPN	_	Gender=Masc|Number=Sing	8	nmod	_	_
+10	Manuel	Manuel	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	8	nmod	_	_
 11	Ribas	Ribas	PROPN	_	Number=Sing	10	flat:name	_	SpaceAfter=No
-12	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
+12	.	.	PUNCT	_	_	1	punct	_	_
 
-# text = Foi extinto junto com os demais partidos do país pelo Decreto nº 37, de 2 de dezembro de 1937, após a instalação do Estado Novo.
 # sent_id = 2
-1	Foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	aux	_	_
-2	extinto	extinguir	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	0	root	_	_
+# text = Foi extinto junto com os demais partidos do país pelo Decreto nº 37, de 2 de dezembro de 1937, após a instalação do Estado Novo.
+1	Foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	aux:pass	_	_
+2	extinto	extinguir	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
 3	junto	junto	ADV	_	_	2	advmod	_	_
 4	com	com	ADP	_	_	7	case	_	_
 5	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	7	det	_	_
 6	demais	demais	DET	_	Gender=Masc|Number=Plur|PronType=Ind	7	det	_	_
-7	partidos	partido	NOUN	_	Gender=Masc|Number=Plur	2	obl	_	_
+7	partidos	partido	NOUN	_	Gender=Masc|Number=Plur	3	obl	_	_
 8-9	do	_	_	_	_	_	_	_	_
 8	de	de	ADP	_	_	10	case	_	_
 9	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	10	det	_	_
 10	país	país	NOUN	_	Gender=Masc|Number=Sing	7	nmod	_	_
 11-12	pelo	_	_	_	_	_	_	_	_
-11	por	por	ADP	_	_	14	case	_	_
-12	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	14	det	_	_
-13	Decreto	Decreto	ADJ	_	Gender=Masc|Number=Sing	14	amod	_	_
-14	nº	nº	NOUN	_	Gender=Masc|Number=Sing	2	obl	_	_
-15	37	37	NUM	_	NumType=Card	14	nummod	_	SpaceAfter=No
+11	por	por	ADP	_	_	13	case	_	_
+12	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	13	det	_	_
+13	Decreto	decreto	NOUN	_	Gender=Masc|Number=Sing	2	obl:agent	_	_
+14	nº	número	NOUN	_	Abbr=Yes|Gender=Masc|Number=Sing	13	nmod	_	_
+15	37	37	NUM	_	NumType=Card	13	nummod	_	SpaceAfter=No
 16	,	,	PUNCT	_	_	18	punct	_	_
 17	de	de	ADP	_	_	18	case	_	_
-18	2	2	NUM	_	NumType=Card	14	nmod	_	_
+18	2	2	NUM	_	NumType=Card	13	nmod	_	_
 19	de	de	ADP	_	_	20	case	_	_
 20	dezembro	dezembro	NOUN	_	Gender=Masc|Number=Sing	18	nmod	_	_
 21	de	de	ADP	_	_	22	case	_	_
@@ -45,16 +48,16 @@
 23	,	,	PUNCT	_	_	18	punct	_	_
 24	após	após	ADP	_	_	26	case	_	_
 25	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	26	det	_	_
-26	instalação	instalação	NOUN	_	Gender=Fem|Number=Sing	14	nmod	_	_
+26	instalação	instalação	NOUN	_	Gender=Fem|Number=Sing	2	obl	_	_
 27-28	do	_	_	_	_	_	_	_	_
 27	de	de	ADP	_	_	29	case	_	_
 28	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	29	det	_	_
-29	Estado	Estado	PROPN	_	Gender=Masc|Number=Sing	26	nmod	_	_
+29	Estado	Estado	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	26	nmod	_	_
 30	Novo	Novo	PROPN	_	Number=Sing	29	flat:name	_	SpaceAfter=No
 31	.	.	PUNCT	_	_	2	punct	_	SpacesAfter=\n
 
-# text = Em 1936, seu presidente era Munhoz da Rocha, ex-governador do estado.
 # sent_id = 3
+# text = Em 1936, seu presidente era Munhoz da Rocha, ex-governador do estado.
 1	Em	em	ADP	_	_	2	case	_	_
 2	1936	1936	NUM	_	NumType=Card	7	nmod	_	SpaceAfter=No
 3	,	,	PUNCT	_	_	2	punct	_	_
@@ -72,10 +75,10 @@
 13	de	de	ADP	_	_	15	case	_	_
 14	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	15	det	_	_
 15	estado	estado	NOUN	_	Gender=Masc|Number=Sing	12	nmod	_	SpaceAfter=No
-16	.	.	PUNCT	_	_	7	punct	_	SpacesAfter=\n
+16	.	.	PUNCT	_	_	7	punct	_	_
 
-# text = Nesse mesmo ano, o governador Manuel Ribas tentou minimizar as forças de oposição a seu governo através de propostas de acordos entre seu partido, o Partido Social Democrático (PSD) do Paraná, e os principais partidos oposicionistas, que eram o Partido Social Nacionalista (PSN) do Paraná e a União Republicana do Paraná.
 # sent_id = 4
+# text = Nesse mesmo ano, o governador Manuel Ribas tentou minimizar as forças de oposição a seu governo através de propostas de acordos entre seu partido, o Partido Social Democrático (PSD) do Paraná, e os principais partidos oposicionistas, que eram o Partido Social Nacionalista (PSN) do Paraná e a União Republicana do Paraná.
 1-2	Nesse	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	4	case	_	_
 2	esse	esse	DET	_	Gender=Masc|Number=Sing|PronType=Dem	4	det	_	_
@@ -84,7 +87,7 @@
 5	,	,	PUNCT	_	_	4	punct	_	_
 6	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	7	det	_	_
 7	governador	governador	NOUN	_	Gender=Masc|Number=Sing	10	nsubj	_	_
-8	Manuel	Manuel	PROPN	_	Gender=Masc|Number=Sing	7	appos	_	_
+8	Manuel	Manuel	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	7	appos	_	_
 9	Ribas	Ribas	PROPN	_	Number=Sing	8	flat:name	_	_
 10	tentou	tentar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 11	minimizar	minimizar	VERB	_	VerbForm=Inf	10	xcomp	_	_
@@ -103,11 +106,11 @@
 24	entre	entre	ADP	_	_	26	case	_	_
 25	seu	seu	DET	_	Gender=Masc|Number=Sing|PronType=Prs	26	det	_	_
 26	partido	partido	NOUN	_	Gender=Masc|Number=Sing	23	nmod	_	SpaceAfter=No
-27	,	,	PUNCT	_	_	11	punct	_	_
+27	,	,	PUNCT	_	_	29	punct	_	_
 28	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	29	det	_	_
-29	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	11	obj	_	_
+29	Partido	Partido	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	26	appos	_	_
 30	Social	Social	PROPN	_	Number=Sing	29	flat:name	_	_
-31	Democrático	democrático	PROPN	_	Number=Sing	29	flat:name	_	_
+31	Democrático	Democrático	PROPN	_	Number=Sing	29	flat:name	_	_
 32	(	(	PUNCT	_	_	33	punct	_	SpaceAfter=No
 33	PSD	PSD	PROPN	_	Gender=Masc|Number=Sing	29	appos	_	SpaceAfter=No
 34	)	)	PUNCT	_	_	33	punct	_	_
@@ -119,13 +122,13 @@
 39	e	e	CCONJ	_	_	42	cc	_	_
 40	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	42	det	_	_
 41	principais	principal	ADJ	_	Gender=Masc|Number=Plur	42	amod	_	_
-42	partidos	partido	NOUN	_	Gender=Masc|Number=Plur	11	conj	_	_
+42	partidos	partido	NOUN	_	Gender=Masc|Number=Plur	26	conj	_	_
 43	oposicionistas	oposicionista	ADJ	_	Gender=Masc|Number=Plur	42	amod	_	SpaceAfter=No
 44	,	,	PUNCT	_	_	48	punct	_	_
 45	que	que	PRON	_	Gender=Masc|Number=Plur|PronType=Rel	48	nsubj	_	_
 46	eram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	48	cop	_	_
 47	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	48	det	_	_
-48	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	42	appos	_	_
+48	Partido	Partido	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	42	acl:relcl	_	_
 49	Social	Social	PROPN	_	Number=Sing	48	flat:name	_	_
 50	Nacionalista	Nacionalista	PROPN	_	Number=Sing	48	flat:name	_	_
 51	(	(	PUNCT	_	_	52	punct	_	SpaceAfter=No
@@ -137,36 +140,36 @@
 56	Paraná	Paraná	PROPN	_	Gender=Masc|Number=Sing	48	nmod	_	_
 57	e	e	CCONJ	_	_	59	cc	_	_
 58	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	59	det	_	_
-59	União	União	PROPN	_	Gender=Fem|Number=Sing	48	conj	_	_
+59	União	União	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	48	conj	_	_
 60	Republicana	Republicana	PROPN	_	Number=Sing	59	flat:name	_	_
 61-62	do	_	_	_	_	_	_	_	_
 61	de	de	ADP	_	_	63	case	_	_
 62	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	63	det	_	_
-63	Paraná	Paraná	PROPN	_	Gender=Masc|Number=Sing	59	nmod	_	SpaceAfter=No
-64	.	.	PUNCT	_	_	10	punct	_	SpacesAfter=\n
+63	Paraná	Paraná	PROPN	_	Number=Sing	59	nmod	_	SpaceAfter=No
+64	.	.	PUNCT	_	_	10	punct	_	_
 
-# text = Esses acordos, no entanto, não se concretizaram.
 # sent_id = 5
+# text = Esses acordos, no entanto, não se concretizaram.
 1	Esses	esse	DET	_	Gender=Masc|Number=Plur|PronType=Dem	2	det	_	_
 2	acordos	acordo	NOUN	_	Gender=Masc|Number=Plur	10	nsubj	_	SpaceAfter=No
-3	,	,	PUNCT	_	_	6	punct	_	_
+3	,	,	PUNCT	_	_	4	punct	_	_
 4-5	no	_	_	_	_	_	_	_	_
-4	em	em	ADP	_	_	10	cc	_	_
+4	em	em	ADP	_	ExtPos=CCONJ	10	cc	_	_
 5	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	4	fixed	_	_
 6	entanto	entanto	NOUN	_	Gender=Masc|Number=Sing	4	fixed	_	SpaceAfter=No
-7	,	,	PUNCT	_	_	6	punct	_	_
+7	,	,	PUNCT	_	_	4	punct	_	_
 8	não	não	ADV	_	Polarity=Neg	10	advmod	_	_
 9	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Plur|Person=3|PronType=Prs	10	expl	_	_
 10	concretizaram	concretizar	VERB	_	Mood=Ind|Number=Plur|Person=3|VerbForm=Fin	0	root	_	SpaceAfter=No
 11	.	.	PUNCT	_	_	10	punct	_	SpacesAfter=\n
 
-# text = Em 1937, a União Republicana apoiou a candidatura de Armando de Sales Oliveira à presidência da República.
 # sent_id = 6
+# text = Em 1937, a União Republicana apoiou a candidatura de Armando de Sales Oliveira à presidência da República.
 1	Em	em	ADP	_	_	2	case	_	_
 2	1937	1937	NUM	_	NumType=Card	7	obl	_	SpaceAfter=No
 3	,	,	PUNCT	_	_	2	punct	_	_
 4	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	5	det	_	_
-5	União	União	PROPN	_	Gender=Fem|Number=Sing	7	nsubj	_	_
+5	União	União	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	7	nsubj	_	_
 6	Republicana	Republicana	PROPN	_	Number=Sing	5	flat:name	_	_
 7	apoiou	apoiar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 8	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	9	det	_	_
@@ -174,15 +177,15 @@
 10	de	de	ADP	_	_	11	case	_	_
 11	Armando	Armando	PROPN	_	Gender=Masc|Number=Sing	9	nmod	_	_
 12	de	de	ADP	_	_	13	case	_	_
-13	Sales	Sales	PROPN	_	Number=Sing	11	nmod	_	_
+13	Sales	Sales	PROPN	_	ExtPos=PROPN|Number=Sing	11	nmod	_	_
 14	Oliveira	Oliveira	PROPN	_	Number=Sing	13	flat:name	_	_
 15-16	à	_	_	_	_	_	_	_	_
 15	a	a	ADP	_	_	17	case	_	_
 16	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	17	det	_	_
-17	presidência	presidência	NOUN	_	Gender=Fem|Number=Sing	7	iobj	_	_
+17	presidência	presidência	NOUN	_	Gender=Fem|Number=Sing	9	nmod	_	_
 18-19	da	_	_	_	_	_	_	_	_
 18	de	de	ADP	_	_	20	case	_	_
 19	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	20	det	_	_
-20	República	República	PROPN	_	Number=Sing	17	nmod	_	SpaceAfter=No
+20	República	República	NOUN	_	Gender=Fem|Number=Sing	17	nmod	_	SpaceAfter=No
 21	.	.	PUNCT	_	_	7	punct	_	SpacesAfter=\n
 

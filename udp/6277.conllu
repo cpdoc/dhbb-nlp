@@ -1,17 +1,20 @@
-# text = Partido político paraense fundado em 1934 e registrado em 24 de fevereiro do mesmo ano no Tribunal Regional Eleitoral.
-# sent_id = 1
-# newpar
+# generator = UDPipe 2, https://lindat.mff.cuni.cz/services/udpipe
+# udpipe_model = portuguese-bosque-ud-2.12-230717
+# udpipe_model_licence = CC BY-NC-SA
 # newdoc
-1	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	4	nsubj	_	_
-2	político	político	PROPN	_	Number=Sing	1	flat:name	_	_
+# newpar
+# sent_id = 1
+# text = Partido político paraense fundado em 1934 e registrado em 24 de fevereiro do mesmo ano no Tribunal Regional Eleitoral.
+1	Partido	partido	NOUN	_	Gender=Masc|Number=Sing	0	root	_	_
+2	político	político	ADJ	_	Gender=Masc|Number=Sing	1	amod	_	_
 3	paraense	paraense	ADJ	_	Gender=Masc|Number=Sing	1	amod	_	_
-4	fundado	fundar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
+4	fundado	fundar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	1	acl	_	_
 5	em	em	ADP	_	_	6	case	_	_
 6	1934	1934	NUM	_	NumType=Card	4	obl	_	_
 7	e	e	CCONJ	_	_	8	cc	_	_
-8	registrado	registrar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	6	conj	_	_
+8	registrado	registrar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	4	conj	_	_
 9	em	em	ADP	_	_	10	case	_	_
-10	24	24	NUM	_	NumType=Card	4	obl	_	_
+10	24	24	NUM	_	NumType=Card	8	obl	_	_
 11	de	de	ADP	_	_	12	case	_	_
 12	fevereiro	fevereiro	NOUN	_	Gender=Masc|Number=Sing	10	nmod	_	_
 13-14	do	_	_	_	_	_	_	_	_
@@ -22,13 +25,13 @@
 17-18	no	_	_	_	_	_	_	_	_
 17	em	em	ADP	_	_	19	case	_	_
 18	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	19	det	_	_
-19	Tribunal	Tribunal	PROPN	_	Gender=Masc|Number=Sing	4	obl	_	_
+19	Tribunal	Tribunal	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	8	obl	_	_
 20	Regional	Regional	PROPN	_	Number=Sing	19	flat:name	_	_
 21	Eleitoral	Eleitoral	PROPN	_	Number=Sing	19	flat:name	_	SpaceAfter=No
-22	.	.	PUNCT	_	_	4	punct	_	SpacesAfter=\n
+22	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
 
-# text = Seu diretório era composto dos seguintes membros: Floriano Silva (presidente), Raimundo Canuto dos Reis (vice-presidente), José Mariano dos Santos (primeiro-secretário), Manuel Afonso Júnior (segundo-secretário) e Raimundo Teixeira Barbosa (tesoureiro).
 # sent_id = 2
+# text = Seu diretório era composto dos seguintes membros:
 1	Seu	seu	DET	_	Gender=Masc|Number=Sing|PronType=Prs	2	det	_	_
 2	diretório	diretório	NOUN	_	Gender=Masc|Number=Sing	4	nsubj:pass	_	_
 3	era	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	4	aux:pass	_	_
@@ -39,44 +42,47 @@
 7	seguintes	seguinte	ADJ	_	Gender=Masc|Number=Plur	8	amod	_	_
 8	membros	membro	NOUN	_	Gender=Masc|Number=Plur	4	obj	_	SpaceAfter=No
 9	:	:	PUNCT	_	_	4	punct	_	_
-10	Floriano	Floriano	PROPN	_	Gender=Masc|Number=Sing	8	appos	_	_
-11	Silva	Silva	PROPN	_	Number=Sing	10	flat:name	_	_
+
+# sent_id = 3
+# text = Floriano Silva (presidente), Raimundo Canuto dos Reis (vice-presidente), José Mariano dos Santos (primeiro-secretário), Manuel Afonso Júnior (segundo-secretário) e Raimundo Teixeira Barbosa (tesoureiro).
+1	Floriano	Floriano	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	0	root	_	_
+2	Silva	Silva	PROPN	_	Number=Sing	1	flat:name	_	_
+3	(	(	PUNCT	_	_	4	punct	_	SpaceAfter=No
+4	presidente	presidente	NOUN	_	Gender=Masc|Number=Sing	1	parataxis	_	SpaceAfter=No
+5	)	)	PUNCT	_	_	4	punct	_	SpaceAfter=No
+6	,	,	PUNCT	_	_	7	punct	_	_
+7	Raimundo	Raimundo	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	1	conj	_	_
+8	Canuto	Canuto	PROPN	_	Number=Sing	7	flat:name	_	_
+9-10	dos	_	_	_	_	_	_	_	_
+9	de	de	ADP	_	_	11	case	_	_
+10	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	11	det	_	_
+11	Reis	Reis	PROPN	_	Number=Sing	7	nmod	_	_
 12	(	(	PUNCT	_	_	13	punct	_	SpaceAfter=No
-13	presidente	presidente	NOUN	_	Gender=Masc|Number=Sing	10	parataxis	_	SpaceAfter=No
+13	vice-presidente	vice-presidente	NOUN	_	Gender=Masc|Number=Sing	7	parataxis	_	SpaceAfter=No
 14	)	)	PUNCT	_	_	13	punct	_	SpaceAfter=No
 15	,	,	PUNCT	_	_	16	punct	_	_
-16	Raimundo	Raimundo	PROPN	_	Gender=Masc|Number=Sing	10	conj	_	_
-17	Canuto	Canuto	PROPN	_	Number=Sing	16	flat:name	_	_
+16	José	José	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	1	conj	_	_
+17	Mariano	Mariano	PROPN	_	Number=Sing	16	flat:name	_	_
 18-19	dos	_	_	_	_	_	_	_	_
 18	de	de	ADP	_	_	20	case	_	_
 19	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	20	det	_	_
-20	Reis	Reis	PROPN	_	Number=Sing	16	flat:name	_	_
+20	Santos	Santos	PROPN	_	Number=Sing	16	nmod	_	_
 21	(	(	PUNCT	_	_	22	punct	_	SpaceAfter=No
-22	vice-presidente	vice-presidente	NOUN	_	Gender=Masc|Number=Sing	16	appos	_	SpaceAfter=No
+22	primeiro-secretário	primeiro-secretário	NOUN	_	Gender=Masc|Number=Sing	16	parataxis	_	SpaceAfter=No
 23	)	)	PUNCT	_	_	22	punct	_	SpaceAfter=No
 24	,	,	PUNCT	_	_	25	punct	_	_
-25	José	José	PROPN	_	Gender=Masc|Number=Sing	10	conj	_	_
-26	Mariano	Mariano	PROPN	_	Number=Sing	25	flat:name	_	_
-27-28	dos	_	_	_	_	_	_	_	_
-27	de	de	ADP	_	_	29	case	_	_
-28	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	29	det	_	_
-29	Santos	Santos	PROPN	_	Number=Sing	25	flat:name	_	_
-30	(	(	PUNCT	_	_	31	punct	_	SpaceAfter=No
-31	primeiro-secretário	primeiro-secretário	NOUN	_	Gender=Masc|Number=Sing	25	parataxis	_	SpaceAfter=No
-32	)	)	PUNCT	_	_	31	punct	_	SpaceAfter=No
-33	,	,	PUNCT	_	_	34	punct	_	_
-34	Manuel	Manuel	PROPN	_	Gender=Masc|Number=Sing	10	conj	_	_
-35	Afonso	Afonso	PROPN	_	Number=Sing	34	flat:name	_	_
-36	Júnior	Júnior	PROPN	_	Number=Sing	34	flat:name	_	_
-37	(	(	PUNCT	_	_	38	punct	_	SpaceAfter=No
-38	segundo-secretário	segundo-secretário	NOUN	_	Gender=Masc|Number=Sing	34	appos	_	SpaceAfter=No
-39	)	)	PUNCT	_	_	38	punct	_	_
-40	e	e	CCONJ	_	_	41	cc	_	_
-41	Raimundo	Raimundo	PROPN	_	Gender=Masc|Number=Sing	10	conj	_	_
-42	Teixeira	Teixeira	PROPN	_	Number=Sing	41	flat:name	_	_
-43	Barbosa	Barbosa	PROPN	_	Number=Sing	41	flat:name	_	_
-44	(	(	PUNCT	_	_	45	punct	_	SpaceAfter=No
-45	tesoureiro	tesoureiro	NOUN	_	Gender=Masc|Number=Sing	41	appos	_	SpaceAfter=No
-46	)	)	PUNCT	_	_	45	punct	_	SpaceAfter=No
-47	.	.	PUNCT	_	_	4	punct	_	SpacesAfter=\n
+25	Manuel	Manuel	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	1	conj	_	_
+26	Afonso	Afonso	PROPN	_	Number=Sing	25	flat:name	_	_
+27	Júnior	Júnior	PROPN	_	Number=Sing	25	flat:name	_	_
+28	(	(	PUNCT	_	_	29	punct	_	SpaceAfter=No
+29	segundo-secretário	segundo-secretário	NOUN	_	Gender=Masc|Number=Sing	25	parataxis	_	SpaceAfter=No
+30	)	)	PUNCT	_	_	29	punct	_	_
+31	e	e	CCONJ	_	_	32	cc	_	_
+32	Raimundo	Raimundo	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	1	conj	_	_
+33	Teixeira	Teixeira	PROPN	_	Number=Sing	32	flat:name	_	_
+34	Barbosa	Barbosa	PROPN	_	Number=Sing	32	flat:name	_	_
+35	(	(	PUNCT	_	_	36	punct	_	SpaceAfter=No
+36	tesoureiro	tesoureiro	NOUN	_	Gender=Masc|Number=Sing	32	parataxis	_	SpaceAfter=No
+37	)	)	PUNCT	_	_	36	punct	_	SpaceAfter=No
+38	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
 

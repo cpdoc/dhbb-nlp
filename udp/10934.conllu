@@ -1,9 +1,12 @@
-# text = «José Maurício Rodrigues Garcia», conhecido como coronel Garcia, nasceu no Rio de Janeiro, no dia 27 de setembro de 1956, filho de Adelino de Souza Garcia e de Daise Rodrigues Garcia.
-# sent_id = 1
-# newpar
+# generator = UDPipe 2, https://lindat.mff.cuni.cz/services/udpipe
+# udpipe_model = portuguese-bosque-ud-2.12-230717
+# udpipe_model_licence = CC BY-NC-SA
 # newdoc
+# newpar
+# sent_id = 1
+# text = «José Maurício Rodrigues Garcia», conhecido como coronel Garcia, nasceu no Rio de Janeiro, no dia 27 de setembro de 1956, filho de Adelino de Souza Garcia e de Daise Rodrigues Garcia.
 1	«	«	PUNCT	_	_	2	punct	_	SpaceAfter=No
-2	José	José	PROPN	_	Gender=Masc|Number=Sing	13	nsubj	_	_
+2	José	José	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	13	nsubj	_	_
 3	Maurício	Maurício	PROPN	_	Number=Sing	2	flat:name	_	_
 4	Rodrigues	Rodrigues	PROPN	_	Number=Sing	2	flat:name	_	_
 5	Garcia	Garcia	PROPN	_	Number=Sing	2	flat:name	_	SpaceAfter=No
@@ -11,8 +14,8 @@
 7	,	,	PUNCT	_	_	8	punct	_	_
 8	conhecido	conhecer	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	2	acl	_	_
 9	como	como	ADP	_	_	10	case	_	_
-10	coronel	coronel	PROPN	_	Gender=Masc|Number=Sing	8	xcomp	_	_
-11	Garcia	Garcia	PROPN	_	Number=Sing	10	flat:name	_	SpaceAfter=No
+10	coronel	coronel	NOUN	_	Gender=Masc|Number=Sing	8	xcomp	_	_
+11	Garcia	Garcia	PROPN	_	Gender=Masc|Number=Sing	10	appos	_	SpaceAfter=No
 12	,	,	PUNCT	_	_	8	punct	_	_
 13	nasceu	nascer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 14-15	no	_	_	_	_	_	_	_	_
@@ -31,42 +34,42 @@
 25	setembro	setembro	NOUN	_	Gender=Masc|Number=Sing	22	nmod	_	_
 26	de	de	ADP	_	_	27	case	_	_
 27	1956	1956	NUM	_	NumType=Card	25	nmod	_	SpaceAfter=No
-28	,	,	PUNCT	_	_	29	punct	_	_
-29	filho	filho	NOUN	_	Gender=Masc|Number=Sing	22	appos	_	_
+28	,	,	PUNCT	_	_	13	punct	_	_
+29	filho	filho	NOUN	_	Gender=Masc|Number=Sing	13	obj	_	_
 30	de	de	ADP	_	_	31	case	_	_
 31	Adelino	Adelino	PROPN	_	Gender=Masc|Number=Sing	29	nmod	_	_
 32	de	de	ADP	_	_	33	case	_	_
-33	Souza	souza	PROPN	_	Number=Sing	31	flat:name	_	_
-34	Garcia	Garcia	PROPN	_	Number=Sing	31	flat:name	_	_
+33	Souza	Souza	PROPN	_	ExtPos=PROPN|Number=Sing	31	nmod	_	_
+34	Garcia	Garcia	PROPN	_	Number=Sing	33	flat:name	_	_
 35	e	e	CCONJ	_	_	37	cc	_	_
 36	de	de	ADP	_	_	37	case	_	_
-37	Daise	Daise	PROPN	_	Gender=Masc|Number=Sing	31	conj	_	_
+37	Daise	Daise	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	31	conj	_	_
 38	Rodrigues	Rodrigues	PROPN	_	Number=Sing	37	flat:name	_	_
 39	Garcia	Garcia	PROPN	_	Number=Sing	37	flat:name	_	SpaceAfter=No
 40	.	.	PUNCT	_	_	13	punct	_	SpacesAfter=\n
 
-# text = Cursou a Academia Militar das Agulhas Negras (AMAN) em Resende (RJ), entre 1974 e 1977, tendo seguido a carreira militar e, inclusive, chegado a coronel do Exército, recebeu várias condecorações em sua carreira, como a Medalha do Pacificador (Ministério do Exército), medalhas de mérito da polícia militar e da Justiça Criminal e Medalha Tiradentes (Assembléia Legislativa do Estado do Rio de Janeiro).
 # sent_id = 2
-1	Cursou	Cursar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+# text = Cursou a Academia Militar das Agulhas Negras (AMAN) em Resende (RJ), entre 1974 e 1977, tendo seguido a carreira militar e, inclusive, chegado a coronel do Exército, recebeu várias condecorações em sua carreira, como a Medalha do Pacificador (Ministério do Exército), medalhas de mérito da polícia militar e da Justiça Criminal e Medalha Tiradentes (Assembléia Legislativa do Estado do Rio de Janeiro).
+1	Cursou	cursar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	3	det	_	_
-3	Academia	Academia	PROPN	_	Gender=Fem|Number=Sing	1	obj	_	_
+3	Academia	Academia	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	1	obj	_	_
 4	Militar	Militar	PROPN	_	Number=Sing	3	flat:name	_	_
 5-6	das	_	_	_	_	_	_	_	_
 5	de	de	ADP	_	_	7	case	_	_
 6	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	7	det	_	_
-7	Agulhas	Agulhas	PROPN	_	Number=Sing	3	nmod	_	_
-8	Negras	negras	PROPN	_	Number=Sing	7	flat:name	_	_
+7	Agulhas	Agulhas	PROPN	_	ExtPos=PROPN|Number=Sing	3	nmod	_	_
+8	Negras	Negras	PROPN	_	Number=Sing	7	flat:name	_	_
 9	(	(	PUNCT	_	_	10	punct	_	SpaceAfter=No
 10	AMAN	AMAN	PROPN	_	Gender=Fem|Number=Sing	3	appos	_	SpaceAfter=No
 11	)	)	PUNCT	_	_	10	punct	_	_
 12	em	em	ADP	_	_	13	case	_	_
-13	Resende	Resende	PROPN	_	Gender=Masc|Number=Sing	3	nmod	_	_
+13	Resende	Resende	PROPN	_	Gender=Masc|Number=Sing	1	obl	_	_
 14	(	(	PUNCT	_	_	15	punct	_	SpaceAfter=No
-15	RJ	RJ	PROPN	_	Gender=Masc|Number=Sing	13	appos	_	SpaceAfter=No
+15	RJ	RJ	PROPN	_	Gender=Masc|Number=Sing	13	parataxis	_	SpaceAfter=No
 16	)	)	PUNCT	_	_	15	punct	_	SpaceAfter=No
 17	,	,	PUNCT	_	_	19	punct	_	_
 18	entre	entre	ADP	_	_	19	case	_	_
-19	1974	1974	NUM	_	NumType=Card	3	nmod	_	_
+19	1974	1974	NUM	_	NumType=Card	1	obl	_	_
 20	e	e	CCONJ	_	_	21	cc	_	_
 21	1977	1977	NUM	_	NumType=Card	19	conj	_	SpaceAfter=No
 22	,	,	PUNCT	_	_	24	punct	_	_
@@ -75,13 +78,13 @@
 25	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	26	det	_	_
 26	carreira	carreira	NOUN	_	Gender=Fem|Number=Sing	24	obj	_	_
 27	militar	militar	ADJ	_	Gender=Fem|Number=Sing	26	amod	_	_
-28	e	e	CCONJ	_	_	32	cc	_	SpaceAfter=No
+28	e	e	CCONJ	_	_	39	cc	_	SpaceAfter=No
 29	,	,	PUNCT	_	_	30	punct	_	_
 30	inclusive	inclusive	ADV	_	_	32	advmod	_	SpaceAfter=No
 31	,	,	PUNCT	_	_	30	punct	_	_
-32	chegado	chegar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	26	conj	_	_
+32	chegado	chegar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	24	conj	_	_
 33	a	a	ADP	_	_	34	case	_	_
-34	coronel	coronel	NOUN	_	Gender=Masc|Number=Sing	32	obj	_	_
+34	coronel	coronel	NOUN	_	Gender=Masc|Number=Sing	32	obl	_	_
 35-36	do	_	_	_	_	_	_	_	_
 35	de	de	ADP	_	_	37	case	_	_
 36	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	37	det	_	_
@@ -96,7 +99,7 @@
 45	,	,	PUNCT	_	_	48	punct	_	_
 46	como	como	ADP	_	_	48	case	_	_
 47	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	48	det	_	_
-48	Medalha	medalha	PROPN	_	Gender=Fem|Number=Sing	1	conj	_	_
+48	Medalha	Medalha	PROPN	_	Gender=Fem|Number=Sing	41	nmod	_	_
 49-50	do	_	_	_	_	_	_	_	_
 49	de	de	ADP	_	_	51	case	_	_
 50	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	51	det	_	_
@@ -106,7 +109,7 @@
 54-55	do	_	_	_	_	_	_	_	_
 54	de	de	ADP	_	_	56	case	_	_
 55	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	56	det	_	_
-56	Exército	exército	NOUN	_	Gender=Masc|Number=Sing	53	nmod	_	SpaceAfter=No
+56	Exército	Exército	PROPN	_	Number=Sing	53	nmod	_	SpaceAfter=No
 57	)	)	PUNCT	_	_	53	punct	_	SpaceAfter=No
 58	,	,	PUNCT	_	_	59	punct	_	_
 59	medalhas	medalha	NOUN	_	Gender=Fem|Number=Plur	48	conj	_	_
@@ -115,24 +118,24 @@
 62-63	da	_	_	_	_	_	_	_	_
 62	de	de	ADP	_	_	64	case	_	_
 63	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	64	det	_	_
-64	polícia	polícia	NOUN	_	Gender=Fem|Number=Sing	59	nmod	_	_
+64	polícia	polícia	NOUN	_	Gender=Fem|Number=Sing	61	nmod	_	_
 65	militar	militar	ADJ	_	Gender=Fem|Number=Sing	64	amod	_	_
 66	e	e	CCONJ	_	_	69	cc	_	_
 67-68	da	_	_	_	_	_	_	_	_
 67	de	de	ADP	_	_	69	case	_	_
 68	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	69	det	_	_
-69	Justiça	Justiça	PROPN	_	Gender=Fem|Number=Sing	64	conj	_	_
-70	Criminal	criminal	PROPN	_	Number=Sing	69	flat:name	_	_
+69	Justiça	Justiça	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	64	conj	_	_
+70	Criminal	Criminal	PROPN	_	Number=Sing	69	flat:name	_	_
 71	e	e	CCONJ	_	_	72	cc	_	_
-72	Medalha	medalha	PROPN	_	Gender=Masc|Number=Sing	48	conj	_	_
+72	Medalha	Medalha	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	48	conj	_	_
 73	Tiradentes	Tiradentes	PROPN	_	Number=Sing	72	flat:name	_	_
 74	(	(	PUNCT	_	_	75	punct	_	SpaceAfter=No
-75	Assembléia	Assembléia	PROPN	_	Gender=Fem|Number=Sing	72	appos	_	_
-76	Legislativa	Legislativa	PROPN	_	Number=Sing	75	flat:name	_	_
+75	Assembléia	assembléia	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	72	parataxis	_	_
+76	Legislativa	Legislativa	PROPN	_	Number=Sing	75	amod	_	_
 77-78	do	_	_	_	_	_	_	_	_
 77	de	de	ADP	_	_	79	case	_	_
 78	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	79	det	_	_
-79	Estado	estado	NOUN	_	Gender=Masc|Number=Sing	75	nmod	_	_
+79	Estado	Estado	PROPN	_	Number=Sing	75	nmod	_	_
 80-81	do	_	_	_	_	_	_	_	_
 80	de	de	ADP	_	_	82	case	_	_
 81	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	82	det	_	_
@@ -142,8 +145,8 @@
 85	)	)	PUNCT	_	_	75	punct	_	SpaceAfter=No
 86	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
 
-# text = Entre 1995 e 1998, presidiu o Departamento de Trânsito do Rio de Janeiro (DETRAN-RJ), durante o governo de Marcelo Alencar.
 # sent_id = 3
+# text = Entre 1995 e 1998, presidiu o Departamento de Trânsito do Rio de Janeiro (DETRAN-RJ), durante o governo de Marcelo Alencar.
 1	Entre	entre	ADP	_	_	2	case	_	_
 2	1995	1995	NUM	_	NumType=Card	6	obl	_	_
 3	e	e	CCONJ	_	_	4	cc	_	_
@@ -151,7 +154,7 @@
 5	,	,	PUNCT	_	_	2	punct	_	_
 6	presidiu	presidir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 7	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	8	det	_	_
-8	Departamento	Departamento	PROPN	_	Gender=Masc|Number=Sing	6	nsubj	_	_
+8	Departamento	Departamento	PROPN	_	Gender=Masc|Number=Sing	6	obj	_	_
 9	de	de	ADP	_	_	10	case	_	_
 10	Trânsito	Trânsito	PROPN	_	Number=Sing	8	nmod	_	_
 11-12	do	_	_	_	_	_	_	_	_
@@ -161,19 +164,19 @@
 14	de	de	ADP	_	_	15	case	_	_
 15	Janeiro	Janeiro	PROPN	_	Number=Sing	13	nmod	_	_
 16	(	(	PUNCT	_	_	17	punct	_	SpaceAfter=No
-17	DETRAN-RJ	DETRAN-RJ	PROPN	_	Gender=Masc|Number=Sing	8	appos	_	SpaceAfter=No
+17	DETRAN-RJ	DETRAN-RJ	PROPN	_	Gender=Masc|Number=Sing	13	appos	_	SpaceAfter=No
 18	)	)	PUNCT	_	_	17	punct	_	SpaceAfter=No
-19	,	,	PUNCT	_	_	22	punct	_	_
+19	,	,	PUNCT	_	_	6	punct	_	_
 20	durante	durante	ADP	_	_	22	case	_	_
 21	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	22	det	_	_
-22	governo	governo	NOUN	_	Gender=Masc|Number=Sing	8	nmod	_	_
+22	governo	governo	NOUN	_	Gender=Masc|Number=Sing	6	obl	_	_
 23	de	de	ADP	_	_	24	case	_	_
-24	Marcelo	Marcelo	PROPN	_	Gender=Masc|Number=Sing	22	nmod	_	_
+24	Marcelo	Marcelo	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	22	nmod	_	_
 25	Alencar	Alencar	PROPN	_	Number=Sing	24	flat:name	_	SpaceAfter=No
-26	.	.	PUNCT	_	_	6	punct	_	SpacesAfter=\n
+26	.	.	PUNCT	_	_	6	punct	_	_
 
-# text = Sua gestão foi marcada pelo combate às fraudes no órgão.
 # sent_id = 4
+# text = Sua gestão foi marcada pelo combate às fraudes no órgão.
 1	Sua	seu	DET	_	Gender=Fem|Number=Sing|PronType=Prs	2	det	_	_
 2	gestão	gestão	NOUN	_	Gender=Fem|Number=Sing	4	nsubj:pass	_	_
 3	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	aux:pass	_	_
@@ -185,15 +188,15 @@
 8-9	às	_	_	_	_	_	_	_	_
 8	a	a	ADP	_	_	10	case	_	_
 9	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	10	det	_	_
-10	fraudes	fraude	NOUN	_	Gender=Fem|Number=Plur	4	obl	_	_
+10	fraudes	fraude	NOUN	_	Gender=Fem|Number=Plur	7	nmod	_	_
 11-12	no	_	_	_	_	_	_	_	_
 11	em	em	ADP	_	_	13	case	_	_
 12	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	13	det	_	_
 13	órgão	órgão	NOUN	_	Gender=Masc|Number=Sing	10	nmod	_	SpaceAfter=No
 14	.	.	PUNCT	_	_	4	punct	_	SpacesAfter=\n
 
-# text = Nas eleições de outubro de 1998, foi eleito deputado federal pelo estado do Rio de Janeiro na legenda do Partido da Social Democracia Brasileira (PSDB).
 # sent_id = 5
+# text = Nas eleições de outubro de 1998, foi eleito deputado federal pelo estado do Rio de Janeiro na legenda do Partido da Social Democracia Brasileira (PSDB).
 1-2	Nas	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	3	case	_	_
 2	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	3	det	_	_
@@ -210,13 +213,13 @@
 13-14	pelo	_	_	_	_	_	_	_	_
 13	por	por	ADP	_	_	15	case	_	_
 14	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	15	det	_	_
-15	estado	estado	NOUN	_	Gender=Masc|Number=Sing	11	nmod	_	_
+15	estado	estado	NOUN	_	Gender=Masc|Number=Sing	10	obl:agent	_	_
 16-17	do	_	_	_	_	_	_	_	_
 16	de	de	ADP	_	_	18	case	_	_
 17	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	18	det	_	_
 18	Rio	Rio	PROPN	_	Gender=Masc|Number=Sing	15	nmod	_	_
 19	de	de	ADP	_	_	20	case	_	_
-20	Janeiro	janeiro	PROPN	_	Number=Sing	18	nmod	_	_
+20	Janeiro	Janeiro	PROPN	_	Number=Sing	18	nmod	_	_
 21-22	na	_	_	_	_	_	_	_	_
 21	em	em	ADP	_	_	23	case	_	_
 22	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	23	det	_	_
@@ -228,16 +231,16 @@
 27-28	da	_	_	_	_	_	_	_	_
 27	de	de	ADP	_	_	29	case	_	_
 28	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	29	det	_	_
-29	Social	Social	PROPN	_	Gender=Fem|Number=Sing	26	nmod	_	_
+29	Social	Social	PROPN	_	ExtPos=PROPN|Number=Sing	26	nmod	_	_
 30	Democracia	Democracia	PROPN	_	Number=Sing	29	flat:name	_	_
-31	Brasileira	brasileira	PROPN	_	Number=Sing	29	flat:name	_	_
+31	Brasileira	Brasileira	PROPN	_	Number=Sing	29	flat:name	_	_
 32	(	(	PUNCT	_	_	33	punct	_	SpaceAfter=No
-33	PSDB	PSDB	PROPN	_	Gender=Masc|Number=Sing	29	appos	_	SpaceAfter=No
+33	PSDB	PSDB	PROPN	_	Gender=Masc|Number=Sing	26	appos	_	SpaceAfter=No
 34	)	)	PUNCT	_	_	33	punct	_	SpaceAfter=No
-35	.	.	PUNCT	_	_	10	punct	_	SpacesAfter=\n
+35	.	.	PUNCT	_	_	10	punct	_	_
 
-# text = Assumiu o mandato em fevereiro de 1999 e participou como membro titular na Comissão de Relações Exteriores e de Defesa Nacional.
 # sent_id = 6
+# text = Assumiu o mandato em fevereiro de 1999 e participou como membro titular na Comissão de Relações Exteriores e de Defesa Nacional.
 1	Assumiu	assumir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
 3	mandato	mandato	NOUN	_	Gender=Masc|Number=Sing	1	obj	_	_
@@ -255,16 +258,16 @@
 14	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	15	det	_	_
 15	Comissão	Comissão	PROPN	_	Gender=Fem|Number=Sing	9	obl	_	_
 16	de	de	ADP	_	_	17	case	_	_
-17	Relações	Relações	PROPN	_	Number=Sing	15	nmod	_	_
-18	Exteriores	exteriores	PROPN	_	Number=Sing	17	flat:name	_	_
+17	Relações	Relações	PROPN	_	ExtPos=PROPN|Number=Sing	15	nmod	_	_
+18	Exteriores	Exteriores	PROPN	_	Number=Sing	17	flat:name	_	_
 19	e	e	CCONJ	_	_	21	cc	_	_
 20	de	de	ADP	_	_	21	case	_	_
-21	Defesa	Defesa	PROPN	_	Gender=Fem|Number=Sing	17	conj	_	_
+21	Defesa	Defesa	PROPN	_	ExtPos=PROPN|Number=Sing	17	nmod	_	_
 22	Nacional	Nacional	PROPN	_	Number=Sing	21	flat:name	_	SpaceAfter=No
 23	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
 
-# text = Faleceu aos 44 anos, no dia 15 de novembro de 2000, em virtude de um derrame cerebral.
 # sent_id = 7
+# text = Faleceu aos 44 anos, no dia 15 de novembro de 2000, em virtude de um derrame cerebral.
 1	Faleceu	falecer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2-3	aos	_	_	_	_	_	_	_	_
 2	a	a	ADP	_	_	5	case	_	_

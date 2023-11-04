@@ -1,9 +1,12 @@
-# text = Partido político do Rio de Janeiro (então Distrito Federal) fundado em 29 de novembro de 1932.
-# sent_id = 1
-# newpar
+# generator = UDPipe 2, https://lindat.mff.cuni.cz/services/udpipe
+# udpipe_model = portuguese-bosque-ud-2.12-230717
+# udpipe_model_licence = CC BY-NC-SA
 # newdoc
-1	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	0	root	_	_
-2	político	político	PROPN	_	Number=Sing	1	flat:name	_	_
+# newpar
+# sent_id = 1
+# text = Partido político do Rio de Janeiro (então Distrito Federal) fundado em 29 de novembro de 1932.
+1	Partido	partido	NOUN	_	Gender=Masc|Number=Sing	0	root	_	_
+2	político	político	ADJ	_	Gender=Masc|Number=Sing	1	amod	_	_
 3-4	do	_	_	_	_	_	_	_	_
 3	de	de	ADP	_	_	5	case	_	_
 4	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	5	det	_	_
@@ -12,7 +15,7 @@
 7	Janeiro	Janeiro	PROPN	_	Number=Sing	5	nmod	_	_
 8	(	(	PUNCT	_	_	10	punct	_	SpaceAfter=No
 9	então	então	ADV	_	_	10	advmod	_	_
-10	Distrito	Distrito	PROPN	_	Gender=Masc|Number=Sing	1	appos	_	_
+10	Distrito	Distrito	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	5	appos	_	_
 11	Federal	Federal	PROPN	_	Number=Sing	10	flat:name	_	SpaceAfter=No
 12	)	)	PUNCT	_	_	10	punct	_	_
 13	fundado	fundar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	1	acl	_	_
@@ -22,11 +25,11 @@
 17	novembro	novembro	NOUN	_	Gender=Masc|Number=Sing	15	nmod	_	_
 18	de	de	ADP	_	_	19	case	_	_
 19	1932	1932	NUM	_	NumType=Card	17	nmod	_	SpaceAfter=No
-20	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
+20	.	.	PUNCT	_	_	1	punct	_	_
 
-# text = Era ligado à União dos Empregados do Comércio, e pretendia representar os interesses dessa categoria profissional na Assembléia Nacional Constituinte.
 # sent_id = 2
-1	Era	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	2	cop	_	_
+# text = Era ligado à União dos Empregados do Comércio, e pretendia representar os interesses dessa categoria profissional na Assembléia Nacional Constituinte.
+1	Era	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	2	aux:pass	_	_
 2	ligado	ligar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	0	root	_	_
 3-4	à	_	_	_	_	_	_	_	_
 3	a	a	ADP	_	_	5	case	_	_
@@ -35,7 +38,7 @@
 6-7	dos	_	_	_	_	_	_	_	_
 6	de	de	ADP	_	_	8	case	_	_
 7	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	8	det	_	_
-8	Empregados	empregado	NOUN	_	Gender=Masc|Number=Plur	5	nmod	_	_
+8	Empregados	Empregados	PROPN	_	Number=Sing	5	nmod	_	_
 9-10	do	_	_	_	_	_	_	_	_
 9	de	de	ADP	_	_	11	case	_	_
 10	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	_	_
@@ -45,7 +48,7 @@
 14	pretendia	pretender	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	2	conj	_	_
 15	representar	representar	VERB	_	VerbForm=Inf	14	xcomp	_	_
 16	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	17	det	_	_
-17	interesses	interesse	NOUN	_	Gender=Masc|Number=Plur	15	obj	_	_
+17	interesses	interess	NOUN	_	Gender=Masc|Number=Plur	15	obj	_	_
 18-19	dessa	_	_	_	_	_	_	_	_
 18	de	de	ADP	_	_	20	case	_	_
 19	essa	esse	DET	_	Gender=Fem|Number=Sing|PronType=Dem	20	det	_	_
@@ -54,18 +57,18 @@
 22-23	na	_	_	_	_	_	_	_	_
 22	em	em	ADP	_	_	24	case	_	_
 23	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	24	det	_	_
-24	Assembléia	Assembléia	PROPN	_	Gender=Fem|Number=Sing	17	nmod	_	_
+24	Assembléia	assembléia	PROPN	_	Gender=Fem|Number=Sing	15	obl	_	_
 25	Nacional	Nacional	PROPN	_	Number=Sing	24	flat:name	_	_
 26	Constituinte	Constituinte	PROPN	_	Number=Sing	24	flat:name	_	SpaceAfter=No
 27	.	.	PUNCT	_	_	2	punct	_	SpacesAfter=\n
 
-# text = De sua diretoria participavam Eugênio Monteiro de Barros (presidente), Amílcar Cordoni (secretário-geral), Luís Debize (sub-secretário) e Américo Correia (tesoureiro).
 # sent_id = 3
+# text = De sua diretoria participavam Eugênio Monteiro de Barros (presidente), Amílcar Cordoni (secretário-geral), Luís Debize (sub-secretário) e Américo Correia (tesoureiro).
 1	De	de	ADP	_	_	3	case	_	_
 2	sua	seu	DET	_	Gender=Fem|Number=Sing|PronType=Prs	3	det	_	_
 3	diretoria	diretoria	NOUN	_	Gender=Fem|Number=Sing	4	obl	_	_
-4	participavam	participar	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	0	root	_	_
-5	Eugênio	Eugênio	PROPN	_	Gender=Masc|Number=Sing	4	nsubj	_	_
+4	participavam	participar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	0	root	_	_
+5	Eugênio	Eugênio	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	4	nsubj	_	_
 6	Monteiro	Monteiro	PROPN	_	Number=Sing	5	flat:name	_	_
 7	de	de	ADP	_	_	8	case	_	_
 8	Barros	Barros	PROPN	_	Number=Sing	5	nmod	_	_
@@ -73,33 +76,33 @@
 10	presidente	presidente	NOUN	_	Gender=Masc|Number=Sing	5	appos	_	SpaceAfter=No
 11	)	)	PUNCT	_	_	10	punct	_	SpaceAfter=No
 12	,	,	PUNCT	_	_	13	punct	_	_
-13	Amílcar	Amílcar	PROPN	_	Gender=Masc|Number=Sing	5	conj	_	_
+13	Amílcar	Amílcar	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	5	conj	_	_
 14	Cordoni	Cordoni	PROPN	_	Number=Sing	13	flat:name	_	_
 15	(	(	PUNCT	_	_	16	punct	_	SpaceAfter=No
 16	secretário-geral	secretário-geral	NOUN	_	Gender=Masc|Number=Sing	13	parataxis	_	SpaceAfter=No
 17	)	)	PUNCT	_	_	16	punct	_	SpaceAfter=No
 18	,	,	PUNCT	_	_	19	punct	_	_
-19	Luís	Luís	PROPN	_	Gender=Masc|Number=Sing	5	conj	_	_
+19	Luís	Luís	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	5	conj	_	_
 20	Debize	Debize	PROPN	_	Number=Sing	19	flat:name	_	_
 21	(	(	PUNCT	_	_	22	punct	_	SpaceAfter=No
 22	sub-secretário	sub-secretário	NOUN	_	Gender=Masc|Number=Sing	19	parataxis	_	SpaceAfter=No
 23	)	)	PUNCT	_	_	22	punct	_	_
 24	e	e	CCONJ	_	_	25	cc	_	_
-25	Américo	Américo	PROPN	_	Gender=Masc|Number=Sing	5	conj	_	_
+25	Américo	Américo	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	5	conj	_	_
 26	Correia	Correia	PROPN	_	Number=Sing	25	flat:name	_	_
 27	(	(	PUNCT	_	_	28	punct	_	SpaceAfter=No
 28	tesoureiro	tesoureiro	NOUN	_	Gender=Masc|Number=Sing	25	parataxis	_	SpaceAfter=No
 29	)	)	PUNCT	_	_	28	punct	_	SpaceAfter=No
 30	.	.	PUNCT	_	_	4	punct	_	SpacesAfter=\n
 
-# text = O partido se propunha a “congregar os prepostos comerciais em um organismo, alistando-os como eleitores... e promovendo sua unidade espiritual em torno de idéias e princípios trabalhistas”, e a determinar a representação da mesma classe no Parlamento do país e nas câmaras municipais, “a fim de defender conscientemente seus interesses morais e materias na elaboração das leis de caráter social, não os deixando exclusivamente à mercê de legisladores que jamais exerceram a profissão”.
 # sent_id = 4
+# text = O partido se propunha a “congregar os prepostos comerciais em um organismo, alistando-os como eleitores.
 1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	_	_
 2	partido	partido	NOUN	_	Gender=Masc|Number=Sing	4	nsubj	_	_
 3	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	4	expl	_	_
 4	propunha	propor	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	0	root	_	_
 5	a	a	SCONJ	_	_	7	mark	_	_
-6	“	“	PUNCT	_	_	7	punct	_	SpaceAfter=No
+6	“	"	PUNCT	_	_	7	punct	_	SpaceAfter=No
 7	congregar	congregar	VERB	_	VerbForm=Inf	4	xcomp	_	_
 8	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	9	det	_	_
 9	prepostos	preposto	NOUN	_	Gender=Masc|Number=Plur	7	obj	_	_
@@ -113,89 +116,93 @@
 16	os	eles	PRON	_	Case=Acc|Gender=Masc|Number=Plur|Person=3|PronType=Prs	15	obj	_	_
 17	como	como	ADP	_	_	18	case	_	_
 18	eleitores	eleitor	NOUN	_	Gender=Masc|Number=Plur	15	xcomp	_	SpaceAfter=No
-19	...	...	PUNCT	_	_	21	punct	_	_
-20	e	e	CCONJ	_	_	21	cc	_	_
-21	promovendo	promover	VERB	_	VerbForm=Ger	4	conj	_	_
-22	sua	seu	DET	_	Gender=Fem|Number=Sing|PronType=Prs	23	det	_	_
-23	unidade	unidade	NOUN	_	Gender=Fem|Number=Sing	21	obj	_	_
-24	espiritual	espiritual	ADJ	_	Gender=Fem|Number=Sing	23	amod	_	_
-25	em	em	ADP	_	_	26	case	_	_
-26	torno	torno	NOUN	_	Gender=Masc|Number=Sing	21	obl	_	_
-27	de	de	ADP	_	_	28	case	_	_
-28	idéias	idéia	NOUN	_	Gender=Fem|Number=Plur	26	nmod	_	_
-29	e	e	CCONJ	_	_	30	cc	_	_
-30	princípios	princípio	NOUN	_	Gender=Masc|Number=Plur	28	conj	_	_
-31	trabalhistas	trabalhista	ADJ	_	Gender=Masc|Number=Plur	30	amod	_	SpaceAfter=No
-32	”	”	PUNCT	_	_	36	punct	_	SpaceAfter=No
-33	,	,	PUNCT	_	_	36	punct	_	_
-34	e	e	CCONJ	_	_	36	cc	_	_
-35	a	a	SCONJ	_	_	36	mark	_	_
-36	determinar	determinar	VERB	_	VerbForm=Inf	28	conj	_	_
-37	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	38	det	_	_
-38	representação	representação	NOUN	_	Gender=Fem|Number=Sing	36	obj	_	_
-39-40	da	_	_	_	_	_	_	_	_
-39	de	de	ADP	_	_	42	case	_	_
-40	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	42	det	_	_
-41	mesma	mesmo	ADJ	_	Gender=Fem|Number=Sing	42	amod	_	_
-42	classe	classe	NOUN	_	Gender=Fem|Number=Sing	38	nmod	_	_
-43-44	no	_	_	_	_	_	_	_	_
-43	em	em	ADP	_	_	45	case	_	_
-44	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	45	det	_	_
-45	Parlamento	parlamento	NOUN	_	Gender=Masc|Number=Sing	36	obl	_	_
-46-47	do	_	_	_	_	_	_	_	_
-46	de	de	ADP	_	_	48	case	_	_
-47	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	48	det	_	_
-48	país	país	NOUN	_	Gender=Masc|Number=Sing	45	nmod	_	_
-49	e	e	CCONJ	_	_	52	cc	_	_
-50-51	nas	_	_	_	_	_	_	_	_
-50	em	em	ADP	_	_	52	case	_	_
-51	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	52	det	_	_
-52	câmaras	câmaro	NOUN	_	Gender=Fem|Number=Plur	48	conj	_	_
-53	municipais	municipal	ADJ	_	Gender=Fem|Number=Plur	52	amod	_	SpaceAfter=No
-54	,	,	PUNCT	_	_	59	punct	_	_
-55	“	“	PUNCT	_	_	59	punct	_	SpaceAfter=No
-56	a	a	ADP	_	_	59	mark	_	_
-57	fim	fim	NOUN	_	Gender=Masc|Number=Sing	56	fixed	_	_
-58	de	de	ADP	_	_	56	fixed	_	_
-59	defender	defender	VERB	_	VerbForm=Inf	21	advcl	_	_
-60	conscientemente	conscientemente	ADV	_	_	59	advmod	_	_
-61	seus	seu	DET	_	Gender=Masc|Number=Plur|PronType=Prs	62	det	_	_
-62	interesses	interesse	NOUN	_	Gender=Masc|Number=Plur	59	obj	_	_
-63	morais	moral	ADJ	_	Gender=Masc|Number=Plur	62	amod	_	_
-64	e	e	CCONJ	_	_	65	cc	_	_
-65	materias	materia	NOUN	_	Gender=Fem|Number=Plur	59	conj	_	_
-66-67	na	_	_	_	_	_	_	_	_
-66	em	em	ADP	_	_	68	case	_	_
-67	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	68	det	_	_
-68	elaboração	elaboração	NOUN	_	Gender=Fem|Number=Sing	65	nmod	_	_
-69-70	das	_	_	_	_	_	_	_	_
-69	de	de	ADP	_	_	71	case	_	_
-70	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	71	det	_	_
-71	leis	lel	NOUN	_	Gender=Fem|Number=Plur	68	nmod	_	_
-72	de	de	ADP	_	_	73	case	_	_
-73	caráter	caráter	NOUN	_	Gender=Masc|Number=Sing	71	nmod	_	_
-74	social	social	ADJ	_	Gender=Masc|Number=Sing	73	amod	_	SpaceAfter=No
-75	,	,	PUNCT	_	_	59	punct	_	_
-76	não	não	ADV	_	Polarity=Neg	78	advmod	_	_
-77	os	eles	PRON	_	Case=Acc|Gender=Masc|Number=Plur|Person=3|PronType=Prs	78	obj	_	_
-78	deixando	deixar	VERB	_	VerbForm=Ger	59	advcl	_	_
-79	exclusivamente	exclusivamente	ADV	_	_	78	advmod	_	_
-80-81	à	_	_	_	_	_	_	_	_
-80	a	a	ADP	_	_	82	case	_	_
-81	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	82	det	_	_
-82	mercê	mercê	PRON	_	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	79	obl	_	_
-83	de	de	ADP	_	_	84	case	_	_
-84	legisladores	legislador	NOUN	_	Gender=Masc|Number=Plur	82	nmod	_	_
-85	que	que	PRON	_	Gender=Masc|Number=Plur|PronType=Rel	87	nsubj	_	_
-86	jamais	jamais	ADV	_	_	87	advmod	_	_
-87	exerceram	exercer	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	84	acl:relcl	_	_
-88	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	89	det	_	_
-89	profissão	profissão	NOUN	_	Gender=Fem|Number=Sing	87	obj	_	SpaceAfter=No
-90	”	”	PUNCT	_	_	59	punct	_	SpaceAfter=No
-91	.	.	PUNCT	_	_	4	punct	_	SpacesAfter=\n
+19	.	.	PUNCT	_	_	4	punct	_	SpaceAfter=No
 
-# text = Não conseguiu eleger nenhum representante.
 # sent_id = 5
+# text = .. e promovendo sua unidade espiritual em torno de idéias e princípios trabalhistas”, e a determinar a representação da mesma classe no Parlamento do país e nas câmaras municipais, “a fim de defender conscientemente seus interesses morais e materias na elaboração das leis de caráter social, não os deixando exclusivamente à mercê de legisladores que jamais exerceram a profissão”.
+1	..	..	PUNCT	_	_	3	punct	_	_
+2	e	e	CCONJ	_	_	3	cc	_	_
+3	promovendo	promover	VERB	_	VerbForm=Ger	0	root	_	_
+4	sua	seu	DET	_	Gender=Fem|Number=Sing|PronType=Prs	5	det	_	_
+5	unidade	unidade	NOUN	_	Gender=Fem|Number=Sing	3	obj	_	_
+6	espiritual	espiritual	ADJ	_	Gender=Fem|Number=Sing	5	amod	_	_
+7	em	em	ADP	_	ExtPos=ADP	10	case	_	_
+8	torno	torno	NOUN	_	Gender=Masc|Number=Sing	7	fixed	_	_
+9	de	de	ADP	_	_	7	fixed	_	_
+10	idéias	idéia	NOUN	_	Gender=Fem|Number=Plur	3	obl	_	_
+11	e	e	CCONJ	_	_	12	cc	_	_
+12	princípios	princípio	NOUN	_	Gender=Masc|Number=Plur	10	conj	_	_
+13	trabalhistas	trabalhista	ADJ	_	Gender=Masc|Number=Plur	12	amod	_	SpaceAfter=No
+14	”	"	PUNCT	_	_	18	punct	_	SpaceAfter=No
+15	,	,	PUNCT	_	_	18	punct	_	_
+16	e	e	CCONJ	_	_	18	cc	_	_
+17	a	a	SCONJ	_	_	18	mark	_	_
+18	determinar	determinar	VERB	_	VerbForm=Inf	3	conj	_	_
+19	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	20	det	_	_
+20	representação	representação	NOUN	_	Gender=Fem|Number=Sing	18	obj	_	_
+21-22	da	_	_	_	_	_	_	_	_
+21	de	de	ADP	_	_	24	case	_	_
+22	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	24	det	_	_
+23	mesma	mesmo	ADJ	_	Gender=Fem|Number=Sing	24	amod	_	_
+24	classe	classe	NOUN	_	Gender=Fem|Number=Sing	20	nmod	_	_
+25-26	no	_	_	_	_	_	_	_	_
+25	em	em	ADP	_	_	27	case	_	_
+26	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	27	det	_	_
+27	Parlamento	parlamento	NOUN	_	Gender=Masc|Number=Sing	20	nmod	_	_
+28-29	do	_	_	_	_	_	_	_	_
+28	de	de	ADP	_	_	30	case	_	_
+29	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	30	det	_	_
+30	país	país	NOUN	_	Gender=Masc|Number=Sing	27	nmod	_	_
+31	e	e	CCONJ	_	_	34	cc	_	_
+32-33	nas	_	_	_	_	_	_	_	_
+32	em	em	ADP	_	_	34	case	_	_
+33	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	34	det	_	_
+34	câmaras	câmara	NOUN	_	Gender=Fem|Number=Plur	27	conj	_	_
+35	municipais	municipal	ADJ	_	Gender=Fem|Number=Plur	34	amod	_	SpaceAfter=No
+36	,	,	PUNCT	_	_	41	punct	_	_
+37	“	“	PUNCT	_	_	41	punct	_	SpaceAfter=No
+38	a	a	ADP	_	ExtPos=SCONJ	41	mark	_	_
+39	fim	fim	NOUN	_	Gender=Masc|Number=Sing	38	fixed	_	_
+40	de	de	ADP	_	_	38	fixed	_	_
+41	defender	defender	VERB	_	VerbForm=Inf	18	advcl	_	_
+42	conscientemente	conscientemente	ADV	_	_	41	advmod	_	_
+43	seus	seu	DET	_	Gender=Masc|Number=Plur|PronType=Prs	44	det	_	_
+44	interesses	interess	NOUN	_	Gender=Masc|Number=Plur	41	obj	_	_
+45	morais	moral	ADJ	_	Gender=Masc|Number=Plur	44	amod	_	_
+46	e	e	CCONJ	_	_	47	cc	_	_
+47	materias	materia	NOUN	_	Gender=Fem|Number=Plur	44	conj	_	_
+48-49	na	_	_	_	_	_	_	_	_
+48	em	em	ADP	_	_	50	case	_	_
+49	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	50	det	_	_
+50	elaboração	elaboração	NOUN	_	Gender=Fem|Number=Sing	41	obl	_	_
+51-52	das	_	_	_	_	_	_	_	_
+51	de	de	ADP	_	_	53	case	_	_
+52	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	53	det	_	_
+53	leis	lei	NOUN	_	Gender=Fem|Number=Plur	50	nmod	_	_
+54	de	de	ADP	_	_	55	case	_	_
+55	caráter	caráter	NOUN	_	Gender=Masc|Number=Sing	53	nmod	_	_
+56	social	social	ADJ	_	Gender=Masc|Number=Sing	55	amod	_	SpaceAfter=No
+57	,	,	PUNCT	_	_	60	punct	_	_
+58	não	não	ADV	_	Polarity=Neg	60	advmod	_	_
+59	os	eles	PRON	_	Case=Acc|Gender=Masc|Number=Plur|Person=3|PronType=Prs	60	obj	_	_
+60	deixando	deixar	VERB	_	VerbForm=Ger	3	advcl	_	_
+61	exclusivamente	exclusivamente	ADV	_	_	60	advmod	_	_
+62-63	à	_	_	_	_	_	_	_	_
+62	a	a	ADP	_	_	64	case	_	_
+63	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	64	det	_	_
+64	mercê	mercê	NOUN	_	Gender=Fem|Number=Sing	60	obl	_	_
+65	de	de	ADP	_	_	66	case	_	_
+66	legisladores	legislador	NOUN	_	Gender=Masc|Number=Plur	64	nmod	_	_
+67	que	que	PRON	_	Gender=Masc|Number=Plur|PronType=Rel	69	nsubj	_	_
+68	jamais	jamais	ADV	_	_	69	advmod	_	_
+69	exerceram	exercer	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	66	acl:relcl	_	_
+70	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	71	det	_	_
+71	profissão	profissão	NOUN	_	Gender=Fem|Number=Sing	69	obj	_	SpaceAfter=No
+72	”	"	PUNCT	_	_	60	punct	_	SpaceAfter=No
+73	.	.	PUNCT	_	_	3	punct	_	SpacesAfter=\n
+
+# sent_id = 6
+# text = Não conseguiu eleger nenhum representante.
 1	Não	não	ADV	_	Polarity=Neg	2	advmod	_	_
 2	conseguiu	conseguir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 3	eleger	eleger	VERB	_	VerbForm=Inf	2	xcomp	_	_

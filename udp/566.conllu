@@ -1,9 +1,12 @@
-# text = «Sílvio Magalhães Barros» nasceu em Aiuruoca (MG) no dia 2 de setembro de 1927, filho de José Magalhães Barros e de Olga Gif- foni C. Barros.
-# sent_id = 1
-# newpar
+# generator = UDPipe 2, https://lindat.mff.cuni.cz/services/udpipe
+# udpipe_model = portuguese-bosque-ud-2.12-230717
+# udpipe_model_licence = CC BY-NC-SA
 # newdoc
+# newpar
+# sent_id = 1
+# text = «Sílvio Magalhães Barros» nasceu em Aiuruoca (MG) no dia 2 de setembro de 1927, filho de José Magalhães Barros e de Olga Gif- foni C. Barros.
 1	«	«	PUNCT	_	_	2	punct	_	SpaceAfter=No
-2	Sílvio	Sílvio	PROPN	_	Gender=Masc|Number=Sing	6	nsubj	_	_
+2	Sílvio	Sílvio	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	6	nsubj	_	_
 3	Magalhães	Magalhães	PROPN	_	Number=Sing	2	flat:name	_	_
 4	Barros	Barros	PROPN	_	Number=Sing	2	flat:name	_	SpaceAfter=No
 5	»	»	PUNCT	_	_	2	punct	_	_
@@ -11,7 +14,7 @@
 7	em	em	ADP	_	_	8	case	_	_
 8	Aiuruoca	Aiuruoca	PROPN	_	Gender=Masc|Number=Sing	6	obl	_	_
 9	(	(	PUNCT	_	_	10	punct	_	SpaceAfter=No
-10	MG	MG	PROPN	_	Gender=Masc|Number=Sing	8	appos	_	SpaceAfter=No
+10	MG	MG	PROPN	_	Gender=Masc|Number=Sing	8	parataxis	_	SpaceAfter=No
 11	)	)	PUNCT	_	_	10	punct	_	_
 12-13	no	_	_	_	_	_	_	_	_
 12	em	em	ADP	_	_	14	case	_	_
@@ -23,24 +26,23 @@
 18	de	de	ADP	_	_	19	case	_	_
 19	1927	1927	NUM	_	NumType=Card	17	nmod	_	SpaceAfter=No
 20	,	,	PUNCT	_	_	21	punct	_	_
-21	filho	filho	NOUN	_	Gender=Masc|Number=Sing	2	appos	_	_
+21	filho	filho	NOUN	_	Gender=Masc|Number=Sing	6	appos	_	_
 22	de	de	ADP	_	_	23	case	_	_
-23	José	José	PROPN	_	Gender=Masc|Number=Sing	21	nmod	_	_
+23	José	José	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	21	nmod	_	_
 24	Magalhães	Magalhães	PROPN	_	Number=Sing	23	flat:name	_	_
 25	Barros	Barros	PROPN	_	Number=Sing	23	flat:name	_	_
 26	e	e	CCONJ	_	_	28	cc	_	_
 27	de	de	ADP	_	_	28	case	_	_
-28	Olga	Olga	PROPN	_	Gender=Fem|Number=Sing	23	conj	_	_
-29	Gif-	Gif-	PUNCT	_	_	30	punct	_	_
-30	foni	foni	PROPN	_	Gender=Masc|Number=Sing	23	conj	_	_
-31	C	C	PROPN	_	Number=Sing	30	flat:name	_	SpaceAfter=No
-32	.	.	PUNCT	_	_	6	punct	_	_
-33	Barros	Barros	PROPN	_	Gender=Masc|Number=Plur	6	obj	_	SpaceAfter=No
-34	.	.	PUNCT	_	_	6	punct	_	SpacesAfter=\n
+28	Olga	Olga	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	23	conj	_	_
+29	Gif-	Gif-	PROPN	_	Number=Sing	28	flat:name	_	_
+30	foni	foni	PROPN	_	Number=Sing	28	flat:name	_	_
+31	C.	C.	PROPN	_	Abbr=Yes|Gender=Masc|Number=Sing	28	appos	_	_
+32	Barros	Barros	PROPN	_	Number=Sing	31	flat:name	_	SpaceAfter=No
+33	.	.	PUNCT	_	_	6	punct	_	SpacesAfter=\n
 
-# text = Radicado em Maringá (PR), cursou a Faculdade de Sociologia da Universidade Estadual da cidade, além de ter-se dedicado a atividades empresariais: foi empreiteiro de construções, proprietário de uma concessionária de automóveis e piloto de táxi aéreo, tendo sido um dos fundadores do Aeroclube de Maringá.
 # sent_id = 2
-1	Radicado	radicar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	8	acl	_	_
+# text = Radicado em Maringá (PR), cursou a Faculdade de Sociologia da Universidade Estadual da cidade, além de ter-se dedicado a atividades empresariais: foi empreiteiro de construções, proprietário de uma concessionária de automóveis e piloto de táxi aéreo, tendo sido um dos fundadores do Aeroclube de Maringá.
+1	Radicado	radicar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	8	advcl	_	_
 2	em	em	ADP	_	_	3	case	_	_
 3	Maringá	Maringá	PROPN	_	Gender=Masc|Number=Sing	1	obl	_	_
 4	(	(	PUNCT	_	_	5	punct	_	SpaceAfter=No
@@ -55,43 +57,43 @@
 13-14	da	_	_	_	_	_	_	_	_
 13	de	de	ADP	_	_	15	case	_	_
 14	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	15	det	_	_
-15	Universidade	Universidade	PROPN	_	Gender=Fem|Number=Sing	12	nmod	_	_
+15	Universidade	Universidade	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	10	nmod	_	_
 16	Estadual	Estadual	PROPN	_	Number=Sing	15	flat:name	_	_
 17-18	da	_	_	_	_	_	_	_	_
 17	de	de	ADP	_	_	19	case	_	_
 18	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	19	det	_	_
 19	cidade	cidade	NOUN	_	Gender=Fem|Number=Sing	15	nmod	_	SpaceAfter=No
-20	,	,	PUNCT	_	_	23	punct	_	_
-21	além	além	ADV	_	_	23	cc	_	_
+20	,	,	PUNCT	_	_	25	punct	_	_
+21	além	além	ADV	_	ExtPos=SCONJ	25	mark	_	_
 22	de	de	ADP	_	_	21	fixed	_	_
 23-24	ter-se	_	_	_	_	_	_	_	_
-23	ter	ter	VERB	_	VerbForm=Inf	10	acl	_	_
-24	se	se	SCONJ	_	_	25	mark	_	_
-25	dedicado	dedicar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	23	xcomp	_	_
+23	ter	ter	AUX	_	VerbForm=Inf	25	aux	_	_
+24	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	25	expl	_	_
+25	dedicado	dedicar	VERB	_	VerbForm=Part	8	conj	_	_
 26	a	a	ADP	_	_	27	case	_	_
-27	atividades	atividade	NOUN	_	Gender=Fem|Number=Plur	25	obl	_	_
+27	atividades	atividade	NOUN	_	Gender=Fem|Number=Plur	25	obj	_	_
 28	empresariais	empresarial	ADJ	_	Gender=Fem|Number=Plur	27	amod	_	SpaceAfter=No
 29	:	:	PUNCT	_	_	31	punct	_	_
 30	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	31	cop	_	_
-31	empreiteiro	empreiteiro	NOUN	_	Gender=Masc|Number=Sing	23	conj	_	_
+31	empreiteiro	empreiteiro	NOUN	_	Gender=Masc|Number=Sing	27	acl:relcl	_	_
 32	de	de	ADP	_	_	33	case	_	_
-33	construções	construções	NOUN	_	Gender=Fem|Number=Plur	31	nmod	_	SpaceAfter=No
+33	construções	construção	NOUN	_	Gender=Fem|Number=Plur	31	nmod	_	SpaceAfter=No
 34	,	,	PUNCT	_	_	35	punct	_	_
-35	proprietário	proprietário	NOUN	_	Gender=Masc|Number=Sing	23	conj	_	_
+35	proprietário	proprietário	NOUN	_	Gender=Masc|Number=Sing	31	conj	_	_
 36	de	de	ADP	_	_	38	case	_	_
 37	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	38	det	_	_
-38	concessionária	concessionário	NOUN	_	Gender=Fem|Number=Sing	35	nmod	_	_
+38	concessionária	concessionária	NOUN	_	Gender=Fem|Number=Sing	35	nmod	_	_
 39	de	de	ADP	_	_	40	case	_	_
 40	automóveis	automóvel	NOUN	_	Gender=Masc|Number=Plur	38	nmod	_	_
 41	e	e	CCONJ	_	_	42	cc	_	_
-42	piloto	piloto	NOUN	_	Gender=Masc|Number=Plur	40	conj	_	_
+42	piloto	piloto	NOUN	_	Gender=Masc|Number=Sing	31	conj	_	_
 43	de	de	ADP	_	_	44	case	_	_
 44	táxi	táxi	NOUN	_	Gender=Masc|Number=Sing	42	nmod	_	_
 45	aéreo	aéreo	ADJ	_	Gender=Masc|Number=Sing	44	amod	_	SpaceAfter=No
 46	,	,	PUNCT	_	_	49	punct	_	_
 47	tendo	ter	AUX	_	VerbForm=Ger	49	aux	_	_
 48	sido	ser	AUX	_	VerbForm=Part	49	cop	_	_
-49	um	um	NUM	_	NumType=Card	23	conj	_	_
+49	um	um	NUM	_	NumType=Card	8	advcl	_	_
 50-51	dos	_	_	_	_	_	_	_	_
 50	de	de	ADP	_	_	52	case	_	_
 51	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	52	det	_	_
@@ -99,30 +101,30 @@
 53-54	do	_	_	_	_	_	_	_	_
 53	de	de	ADP	_	_	55	case	_	_
 54	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	55	det	_	_
-55	Aeroclube	aeroclube	PROPN	_	Gender=Masc|Number=Sing	52	nmod	_	_
+55	Aeroclube	Aeroclube	PROPN	_	Gender=Masc|Number=Sing	52	nmod	_	_
 56	de	de	ADP	_	_	57	case	_	_
 57	Maringá	Maringá	PROPN	_	Number=Sing	55	nmod	_	SpaceAfter=No
 58	.	.	PUNCT	_	_	8	punct	_	SpacesAfter=\n
 
-# text = Ingressando na política, em 1960 elegeu-se vereador à Câmara Municipal na legenda da União Democrática Nacional (UDN).
 # sent_id = 3
-1	Ingressando	Ingressar	VERB	_	VerbForm=Ger	8	advcl	_	_
+# text = Ingressando na política, em 1960 elegeu-se vereador à Câmara Municipal na legenda da União Democrática Nacional (UDN).
+1	Ingressando	ingressar	VERB	_	VerbForm=Ger	8	advcl	_	_
 2-3	na	_	_	_	_	_	_	_	_
 2	em	em	ADP	_	_	4	case	_	_
 3	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	4	det	_	_
-4	política	política	NOUN	_	Gender=Fem|Number=Sing	1	obl	_	SpaceAfter=No
+4	política	política	NOUN	_	Gender=Fem|Number=Sing	1	obj	_	SpaceAfter=No
 5	,	,	PUNCT	_	_	1	punct	_	_
 6	em	em	ADP	_	_	7	case	_	_
-7	1960	1960	NUM	_	NumType=Card	1	obl	_	_
+7	1960	1960	NUM	_	NumType=Card	8	obl	_	_
 8-9	elegeu-se	_	_	_	_	_	_	_	_
 8	elegeu	eleger	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 9	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	8	expl	_	_
-10	vereador	vereador	NOUN	_	Gender=Masc|Number=Sing	8	nsubj	_	_
+10	vereador	vereador	NOUN	_	Gender=Masc|Number=Sing	8	xcomp	_	_
 11-12	à	_	_	_	_	_	_	_	_
 11	a	a	ADP	_	_	13	case	_	_
 12	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	13	det	_	_
-13	Câmara	Câmara	PROPN	_	Gender=Fem|Number=Sing	10	nmod	_	_
-14	Municipal	Municipal	PROPN	_	Number=Sing	13	flat:name	_	_
+13	Câmara	câmara	NOUN	_	ExtPos=NOUN|Gender=Fem|Number=Sing	10	nmod	_	_
+14	Municipal	Municipal	ADJ	_	Number=Sing	13	amod	_	_
 15-16	na	_	_	_	_	_	_	_	_
 15	em	em	ADP	_	_	17	case	_	_
 16	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	17	det	_	_
@@ -130,16 +132,16 @@
 18-19	da	_	_	_	_	_	_	_	_
 18	de	de	ADP	_	_	20	case	_	_
 19	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	20	det	_	_
-20	União	União	PROPN	_	Gender=Fem|Number=Sing	17	nmod	_	_
+20	União	União	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	17	nmod	_	_
 21	Democrática	Democrática	PROPN	_	Number=Sing	20	flat:name	_	_
 22	Nacional	Nacional	PROPN	_	Number=Sing	20	flat:name	_	_
 23	(	(	PUNCT	_	_	24	punct	_	SpaceAfter=No
 24	UDN	UDN	PROPN	_	Gender=Fem|Number=Sing	20	appos	_	SpaceAfter=No
 25	)	)	PUNCT	_	_	24	punct	_	SpaceAfter=No
-26	.	.	PUNCT	_	_	8	punct	_	SpacesAfter=\n
+26	.	.	PUNCT	_	_	8	punct	_	_
 
-# text = Assumindo o mandato em 1961, reelegeu-se no pleito seguinte.
 # sent_id = 4
+# text = Assumindo o mandato em 1961, reelegeu-se no pleito seguinte.
 1	Assumindo	assumir	VERB	_	VerbForm=Ger	7	advcl	_	_
 2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
 3	mandato	mandato	NOUN	_	Gender=Masc|Number=Sing	1	obj	_	_
@@ -156,8 +158,8 @@
 12	seguinte	seguinte	ADJ	_	Gender=Masc|Number=Sing	11	amod	_	SpaceAfter=No
 13	.	.	PUNCT	_	_	7	punct	_	SpacesAfter=\n
 
-# text = Com a extinção dos partidos políticos pelo Ato Institucional nº 2 (27/10/1965) e a posterior instauração do bipartidarismo, ingressou no Movimento Democrático Brasileiro (MDB), sendo um dos fundadores do partido em Maringá.
 # sent_id = 5
+# text = Com a extinção dos partidos políticos pelo Ato Institucional nº 2 (27/10/1965) e a posterior instauração do bipartidarismo, ingressou no Movimento Democrático Brasileiro (MDB), sendo um dos fundadores do partido em Maringá.
 1	Com	com	ADP	_	_	3	case	_	_
 2	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	3	det	_	_
 3	extinção	extinção	NOUN	_	Gender=Fem|Number=Sing	25	obl	_	_
@@ -169,17 +171,17 @@
 8-9	pelo	_	_	_	_	_	_	_	_
 8	por	por	ADP	_	_	10	case	_	_
 9	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	10	det	_	_
-10	Ato	ato	PROPN	_	Gender=Masc|Number=Sing	3	nmod	_	_
+10	Ato	Ato	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	3	nmod	_	_
 11	Institucional	Institucional	PROPN	_	Number=Sing	10	flat:name	_	_
-12	nº	nº	NOUN	_	Gender=Masc|Number=Sing	10	nmod	_	_
-13	2	2	NUM	_	NumType=Card	12	nummod	_	_
+12	nº	número	PROPN	_	Abbr=Yes|Gender=Masc|Number=Sing	10	flat:name	_	_
+13	2	2	PROPN	_	Number=Sing	10	flat:name	_	_
 14	(	(	PUNCT	_	_	15	punct	_	SpaceAfter=No
 15	27/10/1965	27/10/1965	NUM	_	NumType=Card	10	appos	_	SpaceAfter=No
 16	)	)	PUNCT	_	_	15	punct	_	_
 17	e	e	CCONJ	_	_	20	cc	_	_
 18	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	20	det	_	_
 19	posterior	posterior	ADJ	_	Gender=Fem|Number=Sing	20	amod	_	_
-20	instauração	instauração	NOUN	_	Gender=Fem|Number=Sing	10	conj	_	_
+20	instauração	instauração	NOUN	_	Gender=Fem|Number=Sing	3	conj	_	_
 21-22	do	_	_	_	_	_	_	_	_
 21	de	de	ADP	_	_	23	case	_	_
 22	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	23	det	_	_
@@ -189,15 +191,15 @@
 26-27	no	_	_	_	_	_	_	_	_
 26	em	em	ADP	_	_	28	case	_	_
 27	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	28	det	_	_
-28	Movimento	Movimento	PROPN	_	Gender=Masc|Number=Sing	36	nmod	_	_
+28	Movimento	Movimento	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	25	obl	_	_
 29	Democrático	Democrático	PROPN	_	Number=Sing	28	flat:name	_	_
-30	Brasileiro	brasileiro	PROPN	_	Number=Sing	28	flat:name	_	_
+30	Brasileiro	Brasileiro	PROPN	_	Number=Sing	28	flat:name	_	_
 31	(	(	PUNCT	_	_	32	punct	_	SpaceAfter=No
 32	MDB	MDB	PROPN	_	Gender=Masc|Number=Sing	28	appos	_	SpaceAfter=No
 33	)	)	PUNCT	_	_	32	punct	_	SpaceAfter=No
 34	,	,	PUNCT	_	_	36	punct	_	_
 35	sendo	ser	AUX	_	VerbForm=Ger	36	cop	_	_
-36	um	um	NUM	_	NumType=Card	25	obj	_	_
+36	um	um	NUM	_	NumType=Card	25	advcl	_	_
 37-38	dos	_	_	_	_	_	_	_	_
 37	de	de	ADP	_	_	39	case	_	_
 38	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	39	det	_	_
@@ -210,8 +212,8 @@
 44	Maringá	Maringá	PROPN	_	Gender=Masc|Number=Sing	42	nmod	_	SpaceAfter=No
 45	.	.	PUNCT	_	_	25	punct	_	SpacesAfter=\n
 
-# text = No pleito de novembro de 1966, elegeu-se deputado à Assembléia Legislativa do Paraná na legenda do MDB, deixando a Câmara Municipal para assumir, em fevereiro do ano seguinte, a cadeira de deputado estadual.
 # sent_id = 6
+# text = No pleito de novembro de 1966, elegeu-se deputado à Assembléia Legislativa do Paraná na legenda do MDB, deixando a Câmara Municipal para assumir, em fevereiro do ano seguinte, a cadeira de deputado estadual.
 1-2	No	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	3	case	_	_
 2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
@@ -224,31 +226,31 @@
 9-10	elegeu-se	_	_	_	_	_	_	_	_
 9	elegeu	eleger	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 10	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	9	expl	_	_
-11	deputado	deputar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	9	xcomp	_	_
+11	deputado	deputado	NOUN	_	Gender=Masc|Number=Sing	9	xcomp	_	_
 12-13	à	_	_	_	_	_	_	_	_
 12	a	a	ADP	_	_	14	case	_	_
 13	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	14	det	_	_
-14	Assembléia	Assembléia	PROPN	_	Gender=Fem|Number=Sing	11	obl	_	_
-15	Legislativa	Legislativa	PROPN	_	Number=Sing	14	flat:name	_	_
+14	Assembléia	assembléia	PROPN	_	Gender=Fem|Number=Sing	11	nmod	_	_
+15	Legislativa	Legislativa	PROPN	_	Gender=Fem|Number=Sing	14	amod	_	_
 16-17	do	_	_	_	_	_	_	_	_
 16	de	de	ADP	_	_	18	case	_	_
 17	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	18	det	_	_
-18	Paraná	Paraná	PROPN	_	Gender=Masc|Number=Sing	14	nmod	_	_
+18	Paraná	Paraná	PROPN	_	Number=Sing	14	nmod	_	_
 19-20	na	_	_	_	_	_	_	_	_
 19	em	em	ADP	_	_	21	case	_	_
 20	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	21	det	_	_
-21	legenda	legenda	NOUN	_	Gender=Fem|Number=Sing	11	obl	_	_
+21	legenda	legenda	NOUN	_	Gender=Fem|Number=Sing	9	obl	_	_
 22-23	do	_	_	_	_	_	_	_	_
 22	de	de	ADP	_	_	24	case	_	_
 23	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	24	det	_	_
 24	MDB	MDB	PROPN	_	Gender=Masc|Number=Sing	21	nmod	_	SpaceAfter=No
 25	,	,	PUNCT	_	_	26	punct	_	_
-26	deixando	deixar	VERB	_	VerbForm=Ger	11	advcl	_	_
+26	deixando	deixar	VERB	_	VerbForm=Ger	9	advcl	_	_
 27	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	28	det	_	_
-28	Câmara	câmara	NOUN	_	Gender=Fem|Number=Sing	26	obj	_	_
-29	Municipal	Municipal	ADJ	_	Gender=Fem|Number=Sing	28	amod	_	_
+28	Câmara	câmara	NOUN	_	ExtPos=NOUN|Gender=Fem|Number=Sing	26	obj	_	_
+29	Municipal	municipal	ADJ	_	Gender=Fem|Number=Sing	28	amod	_	_
 30	para	para	SCONJ	_	_	31	mark	_	_
-31	assumir	assumir	VERB	_	VerbForm=Inf	28	acl	_	SpaceAfter=No
+31	assumir	assumir	VERB	_	VerbForm=Inf	26	advcl	_	SpaceAfter=No
 32	,	,	PUNCT	_	_	31	punct	_	_
 33	em	em	ADP	_	_	34	case	_	_
 34	fevereiro	fevereiro	NOUN	_	Gender=Masc|Number=Sing	31	obl	_	_
@@ -263,52 +265,52 @@
 42	de	de	ADP	_	_	43	case	_	_
 43	deputado	deputado	NOUN	_	Gender=Masc|Number=Sing	41	nmod	_	_
 44	estadual	estadual	ADJ	_	Gender=Masc|Number=Sing	43	amod	_	SpaceAfter=No
-45	.	.	PUNCT	_	_	9	punct	_	SpacesAfter=\n
+45	.	.	PUNCT	_	_	9	punct	_	_
 
-# text = Na Assembléia paranaense, integrou as comissões de Justiça e de Finanças, além de ter sido vice-presidente da Comissão de Orçamento.
 # sent_id = 7
+# text = Na Assembléia paranaense, integrou as comissões de Justiça e de Finanças, além de ter sido vice-presidente da Comissão de Orçamento.
 1-2	Na	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	3	case	_	_
 2	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	3	det	_	_
-3	Assembléia	Assembléia	PROPN	_	Gender=Fem|Number=Sing	6	obl	_	_
-4	paranaense	paranaense	PROPN	_	Number=Sing	3	flat:name	_	SpaceAfter=No
+3	Assembléia	assembléia	NOUN	_	Gender=Fem|Number=Sing	6	obl	_	_
+4	paranaense	paranaense	ADJ	_	Gender=Fem|Number=Sing	3	amod	_	SpaceAfter=No
 5	,	,	PUNCT	_	_	3	punct	_	_
 6	integrou	integrar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 7	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	8	det	_	_
-8	comissões	comissão	NOUN	_	Gender=Fem|Number=Plur	6	nsubj	_	_
+8	comissões	comissão	NOUN	_	Gender=Fem|Number=Plur	6	obj	_	_
 9	de	de	ADP	_	_	10	case	_	_
-10	Justiça	Justiça	NOUN	_	Gender=Fem|Number=Sing	8	nmod	_	_
+10	Justiça	Justiça	PROPN	_	Gender=Fem|Number=Sing	8	nmod	_	_
 11	e	e	CCONJ	_	_	13	cc	_	_
 12	de	de	ADP	_	_	13	case	_	_
-13	Finanças	finanças	PROPN	_	Gender=Fem|Number=Sing	10	conj	_	SpaceAfter=No
+13	Finanças	Finanças	PROPN	_	Gender=Fem|Number=Sing	10	conj	_	SpaceAfter=No
 14	,	,	PUNCT	_	_	19	punct	_	_
-15	além	além	ADV	_	_	19	mark	_	_
+15	além	além	ADV	_	ExtPos=SCONJ	19	cc	_	_
 16	de	de	ADP	_	_	15	fixed	_	_
 17	ter	ter	AUX	_	VerbForm=Inf	19	aux	_	_
 18	sido	ser	AUX	_	VerbForm=Part	19	cop	_	_
-19	vice-presidente	vice-presidente	NOUN	_	Gender=Masc|Number=Sing	8	conj	_	_
+19	vice-presidente	vice-presidente	NOUN	_	Gender=Masc|Number=Sing	6	conj	_	_
 20-21	da	_	_	_	_	_	_	_	_
 20	de	de	ADP	_	_	22	case	_	_
 21	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	22	det	_	_
-22	Comissão	Comissão	PROPN	_	Gender=Fem|Number=Sing	19	nmod	_	_
+22	Comissão	comissão	NOUN	_	Gender=Fem|Number=Sing	19	nmod	_	_
 23	de	de	ADP	_	_	24	case	_	_
-24	Orçamento	Orçamento	PROPN	_	Number=Sing	22	nmod	_	SpaceAfter=No
+24	Orçamento	orçamento	NOUN	_	Gender=Masc|Number=Sing	22	nmod	_	SpaceAfter=No
 25	.	.	PUNCT	_	_	6	punct	_	SpacesAfter=\n
 
-# text = Eleito deputado federal pelo Paraná em novembro de 1970, ainda na legenda do MDB, encerrou seu mandato de deputado estadual em janeiro de 1971 e, no mês seguinte, assumiu uma cadeira na Câmara Federal.
 # sent_id = 8
-1	Eleito	eleger	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	20	acl	_	_
+# text = Eleito deputado federal pelo Paraná em novembro de 1970, ainda na legenda do MDB, encerrou seu mandato de deputado estadual em janeiro de 1971 e, no mês seguinte, assumiu uma cadeira na Câmara Federal.
+1	Eleito	eleger	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	20	advcl	_	_
 2	deputado	deputado	NOUN	_	Gender=Masc|Number=Sing	1	obj	_	_
 3	federal	federal	ADJ	_	Gender=Masc|Number=Sing	2	amod	_	_
 4-5	pelo	_	_	_	_	_	_	_	_
 4	por	por	ADP	_	_	6	case	_	_
 5	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	6	det	_	_
-6	Paraná	Paraná	PROPN	_	Gender=Masc|Number=Sing	2	nmod	_	_
+6	Paraná	Paraná	PROPN	_	Gender=Masc|Number=Sing	1	obl	_	_
 7	em	em	ADP	_	_	8	case	_	_
 8	novembro	novembro	NOUN	_	Gender=Masc|Number=Sing	1	obl	_	_
 9	de	de	ADP	_	_	10	case	_	_
 10	1970	1970	NUM	_	NumType=Card	8	nmod	_	SpaceAfter=No
-11	,	,	PUNCT	_	_	1	punct	_	_
+11	,	,	PUNCT	_	_	15	punct	_	_
 12	ainda	ainda	ADV	_	_	15	advmod	_	_
 13-14	na	_	_	_	_	_	_	_	_
 13	em	em	ADP	_	_	15	case	_	_
@@ -318,7 +320,7 @@
 16	de	de	ADP	_	_	18	case	_	_
 17	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	18	det	_	_
 18	MDB	MDB	PROPN	_	Gender=Masc|Number=Sing	15	nmod	_	SpaceAfter=No
-19	,	,	PUNCT	_	_	1	punct	_	_
+19	,	,	PUNCT	_	_	15	punct	_	_
 20	encerrou	encerrar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 21	seu	seu	DET	_	Gender=Masc|Number=Sing|PronType=Prs	22	det	_	_
 22	mandato	mandato	NOUN	_	Gender=Masc|Number=Sing	20	obj	_	_
@@ -326,7 +328,7 @@
 24	deputado	deputado	NOUN	_	Gender=Masc|Number=Sing	22	nmod	_	_
 25	estadual	estadual	ADJ	_	Gender=Masc|Number=Sing	24	amod	_	_
 26	em	em	ADP	_	_	27	case	_	_
-27	janeiro	janeiro	NOUN	_	Gender=Masc|Number=Sing	22	nmod	_	_
+27	janeiro	janeiro	NOUN	_	Gender=Masc|Number=Sing	20	obl	_	_
 28	de	de	ADP	_	_	29	case	_	_
 29	1971	1971	NUM	_	NumType=Card	27	nmod	_	_
 30	e	e	CCONJ	_	_	37	cc	_	SpaceAfter=No
@@ -343,20 +345,20 @@
 40-41	na	_	_	_	_	_	_	_	_
 40	em	em	ADP	_	_	42	case	_	_
 41	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	42	det	_	_
-42	Câmara	Câmara	PROPN	_	Gender=Fem|Number=Sing	37	obl	_	_
+42	Câmara	Câmara	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	37	obl	_	_
 43	Federal	Federal	PROPN	_	Number=Sing	42	flat:name	_	SpaceAfter=No
-44	.	.	PUNCT	_	_	20	punct	_	SpacesAfter=\n
+44	.	.	PUNCT	_	_	20	punct	_	_
 
-# text = Ainda em 1971, tornou-se suplente da Comissão de Orçamento, membro efetivo da Comissão de Economia e vice-presidente das comissões de desenvolvimento da Região Sul e de Relações Exteriores da Câmara dos Deputados.
 # sent_id = 9
+# text = Ainda em 1971, tornou-se suplente da Comissão de Orçamento, membro efetivo da Comissão de Economia e vice-presidente das comissões de desenvolvimento da Região Sul e de Relações Exteriores da Câmara dos Deputados.
 1	Ainda	ainda	ADV	_	_	3	advmod	_	_
-2	em	em	ADP	_	_	1	fixed	_	_
+2	em	em	ADP	_	_	3	case	_	_
 3	1971	1971	NUM	_	NumType=Card	5	obl	_	SpaceAfter=No
 4	,	,	PUNCT	_	_	3	punct	_	_
 5-6	tornou-se	_	_	_	_	_	_	_	_
 5	tornou	tornar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
-6	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	3	nsubj	_	_
-7	suplente	suplente	ADV	_	_	6	advmod	_	_
+6	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	5	expl	_	_
+7	suplente	suplente	ADJ	_	Gender=Masc|Number=Sing	5	xcomp	_	_
 8-9	da	_	_	_	_	_	_	_	_
 8	de	de	ADP	_	_	10	case	_	_
 9	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	10	det	_	_
@@ -364,7 +366,7 @@
 11	de	de	ADP	_	_	12	case	_	_
 12	Orçamento	Orçamento	PROPN	_	Number=Sing	10	nmod	_	SpaceAfter=No
 13	,	,	PUNCT	_	_	14	punct	_	_
-14	membro	membro	NOUN	_	Gender=Masc|Number=Sing	10	appos	_	_
+14	membro	membro	NOUN	_	Gender=Masc|Number=Sing	10	conj	_	_
 15	efetivo	efetivo	ADJ	_	Gender=Masc|Number=Sing	14	amod	_	_
 16-17	da	_	_	_	_	_	_	_	_
 16	de	de	ADP	_	_	18	case	_	_
@@ -373,7 +375,7 @@
 19	de	de	ADP	_	_	20	case	_	_
 20	Economia	Economia	PROPN	_	Number=Sing	18	nmod	_	_
 21	e	e	CCONJ	_	_	22	cc	_	_
-22	vice-presidente	vice-presidente	NOUN	_	Gender=Masc|Number=Sing	14	conj	_	_
+22	vice-presidente	vice-presidente	NOUN	_	Gender=Masc|Number=Sing	7	conj	_	_
 23-24	das	_	_	_	_	_	_	_	_
 23	de	de	ADP	_	_	25	case	_	_
 24	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	25	det	_	_
@@ -382,25 +384,25 @@
 27	desenvolvimento	desenvolvimento	NOUN	_	Gender=Masc|Number=Sing	25	nmod	_	_
 28-29	da	_	_	_	_	_	_	_	_
 28	de	de	ADP	_	_	30	case	_	_
-29	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	30	det	_	_
-30	Região	Região	PROPN	_	Gender=Fem|Number=Sing	27	nmod	_	_
+29	a	o	DET	_	Definite=Def|PronType=Art	30	det	_	_
+30	Região	Região	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	27	nmod	_	_
 31	Sul	Sul	PROPN	_	Number=Sing	30	flat:name	_	_
 32	e	e	CCONJ	_	_	34	cc	_	_
 33	de	de	ADP	_	_	34	case	_	_
-34	Relações	Relações	PROPN	_	Gender=Fem|Number=Plur	30	conj	_	_
+34	Relações	Relações	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	30	conj	_	_
 35	Exteriores	Exteriores	PROPN	_	Number=Sing	34	flat:name	_	_
 36-37	da	_	_	_	_	_	_	_	_
 36	de	de	ADP	_	_	38	case	_	_
 37	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	38	det	_	_
-38	Câmara	câmara	NOUN	_	Gender=Fem|Number=Sing	34	nmod	_	_
+38	Câmara	Câmara	PROPN	_	Gender=Fem|Number=Sing	27	nmod	_	_
 39-40	dos	_	_	_	_	_	_	_	_
 39	de	de	ADP	_	_	41	case	_	_
 40	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	41	det	_	_
 41	Deputados	Deputados	PROPN	_	Number=Sing	38	nmod	_	SpaceAfter=No
-42	.	.	PUNCT	_	_	3	punct	_	SpacesAfter=\n
+42	.	.	PUNCT	_	_	5	punct	_	SpacesAfter=\n
 
-# text = Em 30 de janeiro de 1973, deixou o mandato de deputado federal para assumir no dia seguinte a prefeitura de Maringá, para a qual havia sido eleito no ano anterior.
 # sent_id = 10
+# text = Em 30 de janeiro de 1973, deixou o mandato de deputado federal para assumir no dia seguinte a prefeitura de Maringá, para a qual havia sido eleito no ano anterior.
 1	Em	em	ADP	_	_	2	case	_	_
 2	30	30	NUM	_	NumType=Card	8	obl	_	_
 3	de	de	ADP	_	_	4	case	_	_
@@ -415,7 +417,7 @@
 12	deputado	deputado	NOUN	_	Gender=Masc|Number=Sing	10	nmod	_	_
 13	federal	federal	ADJ	_	Gender=Masc|Number=Sing	12	amod	_	_
 14	para	para	SCONJ	_	_	15	mark	_	_
-15	assumir	assumir	VERB	_	VerbForm=Inf	10	acl	_	_
+15	assumir	assumir	VERB	_	VerbForm=Inf	8	advcl	_	_
 16-17	no	_	_	_	_	_	_	_	_
 16	em	em	ADP	_	_	18	case	_	_
 17	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	18	det	_	_
@@ -424,37 +426,37 @@
 20	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	21	det	_	_
 21	prefeitura	prefeitura	NOUN	_	Gender=Fem|Number=Sing	15	obj	_	_
 22	de	de	ADP	_	_	23	case	_	_
-23	Maringá	Maringá	PROPN	_	Gender=Masc|Number=Sing	21	nmod	_	SpaceAfter=No
+23	Maringá	Maringá	PROPN	_	Number=Sing	21	nmod	_	SpaceAfter=No
 24	,	,	PUNCT	_	_	30	punct	_	_
 25	para	para	ADP	_	_	27	case	_	_
-26	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	27	det	_	_
-27	qual	qual	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	30	obl	_	_
+26	a	o	DET	_	Gender=Fem|Number=Sing|PronType=Art	27	det	_	_
+27	qual	qual	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	30	obl	_	_
 28	havia	haver	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	30	aux	_	_
-29	sido	ser	AUX	_	Gender=Masc|Number=Sing|VerbForm=Part	30	aux:pass	_	_
-30	eleito	eleger	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	23	acl:relcl	_	_
+29	sido	ser	AUX	_	VerbForm=Part	30	aux:pass	_	_
+30	eleito	eleger	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	21	acl:relcl	_	_
 31-32	no	_	_	_	_	_	_	_	_
 31	em	em	ADP	_	_	33	case	_	_
 32	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	33	det	_	_
 33	ano	ano	NOUN	_	Gender=Masc|Number=Sing	30	obl	_	_
 34	anterior	anterior	ADJ	_	Gender=Masc|Number=Sing	33	amod	_	SpaceAfter=No
-35	.	.	PUNCT	_	_	8	punct	_	SpacesAfter=\n
+35	.	.	PUNCT	_	_	8	punct	_	_
 
-# text = Nesse cargo, realizou diversas obras, entre as quais a reforma do estádio regional, a construção de um ginásio de esportes e a edificação de um viaduto.
 # sent_id = 11
+# text = Nesse cargo, realizou diversas obras, entre as quais a reforma do estádio regional, a construção de um ginásio de esportes e a edificação de um viaduto.
 1-2	Nesse	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	3	case	_	_
 2	esse	esse	DET	_	Gender=Masc|Number=Sing|PronType=Dem	3	det	_	_
 3	cargo	cargo	NOUN	_	Gender=Masc|Number=Sing	5	obl	_	SpaceAfter=No
 4	,	,	PUNCT	_	_	3	punct	_	_
 5	realizou	realizar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
-6	diversas	diversos	DET	_	Gender=Fem|Number=Plur|PronType=Ind	7	det	_	_
-7	obras	obra	NOUN	_	Gender=Fem|Number=Plur	5	nsubj	_	SpaceAfter=No
-8	,	,	PUNCT	_	_	5	punct	_	_
+6	diversas	diverso	DET	_	Gender=Fem|Number=Plur|PronType=Ind	7	det	_	_
+7	obras	obra	NOUN	_	Gender=Fem|Number=Plur	5	obj	_	SpaceAfter=No
+8	,	,	PUNCT	_	_	13	punct	_	_
 9	entre	entre	ADP	_	_	11	case	_	_
-10	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	11	det	_	_
-11	quais	qual	PRON	_	Gender=Masc|Number=Plur|PronType=Rel	5	obl	_	_
+10	as	o	DET	_	Gender=Fem|Number=Plur|PronType=Art	11	det	_	_
+11	quais	qual	PRON	_	Gender=Fem|Number=Plur|PronType=Rel	13	nmod	_	_
 12	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	13	det	_	_
-13	reforma	reforma	NOUN	_	Gender=Fem|Number=Sing	5	obj	_	_
+13	reforma	reforma	NOUN	_	Gender=Fem|Number=Sing	7	appos	_	_
 14-15	do	_	_	_	_	_	_	_	_
 14	de	de	ADP	_	_	16	case	_	_
 15	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	16	det	_	_
@@ -474,10 +476,10 @@
 29	de	de	ADP	_	_	31	case	_	_
 30	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	31	det	_	_
 31	viaduto	viaduto	NOUN	_	Gender=Masc|Number=Sing	28	nmod	_	SpaceAfter=No
-32	.	.	PUNCT	_	_	5	punct	_	SpacesAfter=\n
+32	.	.	PUNCT	_	_	5	punct	_	_
 
-# text = Ainda na qualidade de prefeito de Maringá, cargo que deixou em 1977, participou do I Congresso Nacional do Café, onde apresentou as teses «Financiamento e qualificação ecológica, ao nível da propriedade» e «Limitações de cotas de produção por estado».
 # sent_id = 12
+# text = Ainda na qualidade de prefeito de Maringá, cargo que deixou em 1977, participou do I Congresso Nacional do Café, onde apresentou as teses
 1	Ainda	ainda	ADV	_	_	4	advmod	_	_
 2-3	na	_	_	_	_	_	_	_	_
 2	em	em	ADP	_	_	4	case	_	_
@@ -487,58 +489,61 @@
 6	prefeito	prefeito	NOUN	_	Gender=Masc|Number=Sing	4	nmod	_	_
 7	de	de	ADP	_	_	8	case	_	_
 8	Maringá	Maringá	PROPN	_	Gender=Masc|Number=Sing	6	nmod	_	SpaceAfter=No
-9	,	,	PUNCT	_	_	4	punct	_	_
+9	,	,	PUNCT	_	_	10	punct	_	_
 10	cargo	cargo	NOUN	_	Gender=Masc|Number=Sing	4	appos	_	_
-11	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	12	nsubj	_	_
+11	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	12	obj	_	_
 12	deixou	deixar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	10	acl:relcl	_	_
 13	em	em	ADP	_	_	14	case	_	_
-14	1977	1977	NUM	_	NumType=Card	12	obj	_	SpaceAfter=No
-15	,	,	PUNCT	_	_	4	punct	_	_
+14	1977	1977	NUM	_	NumType=Card	12	obl	_	SpaceAfter=No
+15	,	,	PUNCT	_	_	12	punct	_	_
 16	participou	participar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 17-18	do	_	_	_	_	_	_	_	_
 17	de	de	ADP	_	_	19	case	_	_
 18	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	19	det	_	_
-19	I	I	PROPN	_	Gender=Masc|Number=Sing	16	obj	_	_
+19	I	I	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	16	obj	_	_
 20	Congresso	Congresso	PROPN	_	Number=Sing	19	flat:name	_	_
 21	Nacional	Nacional	PROPN	_	Number=Sing	19	flat:name	_	_
 22-23	do	_	_	_	_	_	_	_	_
 22	de	de	ADP	_	_	24	case	_	_
 23	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	24	det	_	_
 24	Café	Café	PROPN	_	Number=Sing	19	nmod	_	SpaceAfter=No
-25	,	,	PUNCT	_	_	16	punct	_	_
+25	,	,	PUNCT	_	_	27	punct	_	_
 26	onde	onde	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	27	obl	_	_
 27	apresentou	apresentar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	19	acl:relcl	_	_
 28	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	29	det	_	_
 29	teses	tese	NOUN	_	Gender=Fem|Number=Plur	27	obj	_	_
-30	«	«	PUNCT	_	_	31	punct	_	SpaceAfter=No
-31	Financiamento	financiamento	NOUN	_	Gender=Masc|Number=Sing	29	appos	_	_
-32	e	e	CCONJ	_	_	33	cc	_	_
-33	qualificação	qualificação	NOUN	_	Gender=Fem|Number=Sing	31	conj	_	_
-34	ecológica	ecológico	ADJ	_	Gender=Fem|Number=Sing	33	amod	_	SpaceAfter=No
-35	,	,	PUNCT	_	_	38	punct	_	_
-36-37	ao	_	_	_	_	_	_	_	_
-36	a	a	ADP	_	_	38	case	_	_
-37	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	38	det	_	_
-38	nível	nível	NOUN	_	Gender=Masc|Number=Sing	31	conj	_	_
-39-40	da	_	_	_	_	_	_	_	_
-39	de	de	ADP	_	_	41	case	_	_
-40	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	41	det	_	_
-41	propriedade	propriedade	NOUN	_	Gender=Fem|Number=Sing	38	nmod	_	SpaceAfter=No
-42	»	»	PUNCT	_	_	45	punct	_	_
-43	e	e	CCONJ	_	_	45	cc	_	_
-44	«	«	PUNCT	_	_	45	punct	_	SpaceAfter=No
-45	Limitações	Limitação	NOUN	_	Gender=Fem|Number=Plur	31	conj	_	_
-46	de	de	ADP	_	_	47	case	_	_
-47	cotas	cota	NOUN	_	Gender=Fem|Number=Plur	45	nmod	_	_
-48	de	de	ADP	_	_	49	case	_	_
-49	produção	produção	NOUN	_	Gender=Fem|Number=Sing	47	nmod	_	_
-50	por	por	ADP	_	_	51	case	_	_
-51	estado	estado	NOUN	_	Gender=Masc|Number=Sing	47	nmod	_	SpaceAfter=No
-52	»	»	PUNCT	_	_	45	punct	_	SpaceAfter=No
-53	.	.	PUNCT	_	_	16	punct	_	SpacesAfter=\n
 
-# text = Faleceu em Maringá no dia 29 (ou 30) de janeiro de 1979.
 # sent_id = 13
+# text = «Financiamento e qualificação ecológica, ao nível da propriedade» e «Limitações de cotas de produção por estado».
+1	«	«	PUNCT	_	_	2	punct	_	SpaceAfter=No
+2	Financiamento	financiamento	NOUN	_	Gender=Masc|Number=Sing	0	root	_	_
+3	e	e	CCONJ	_	_	4	cc	_	_
+4	qualificação	qualificação	NOUN	_	Gender=Fem|Number=Sing	2	conj	_	_
+5	ecológica	ecológico	ADJ	_	Gender=Fem|Number=Sing	4	amod	_	SpaceAfter=No
+6	,	,	PUNCT	_	_	9	punct	_	_
+7-8	ao	_	_	_	_	_	_	_	_
+7	a	a	ADP	_	_	9	case	_	_
+8	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	9	det	_	_
+9	nível	nível	NOUN	_	Gender=Masc|Number=Sing	2	nmod	_	_
+10-11	da	_	_	_	_	_	_	_	_
+10	de	de	ADP	_	_	12	case	_	_
+11	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	12	det	_	_
+12	propriedade	propriedade	NOUN	_	Gender=Fem|Number=Sing	9	nmod	_	SpaceAfter=No
+13	»	»	PUNCT	_	_	9	punct	_	_
+14	e	e	CCONJ	_	_	16	cc	_	_
+15	«	«	PUNCT	_	_	16	punct	_	SpaceAfter=No
+16	Limitações	limitação	NOUN	_	Gender=Fem|Number=Plur	2	conj	_	_
+17	de	de	ADP	_	_	18	case	_	_
+18	cotas	cota	NOUN	_	Gender=Fem|Number=Plur	16	nmod	_	_
+19	de	de	ADP	_	_	20	case	_	_
+20	produção	produção	NOUN	_	Gender=Fem|Number=Sing	18	nmod	_	_
+21	por	por	ADP	_	_	22	case	_	_
+22	estado	estado	NOUN	_	Gender=Masc|Number=Sing	18	nmod	_	SpaceAfter=No
+23	»	»	PUNCT	_	_	16	punct	_	SpaceAfter=No
+24	.	.	PUNCT	_	_	2	punct	_	SpacesAfter=\n
+
+# sent_id = 14
+# text = Faleceu em Maringá no dia 29 (ou 30) de janeiro de 1979.
 1	Faleceu	falecer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2	em	em	ADP	_	_	3	case	_	_
 3	Maringá	Maringá	PROPN	_	Gender=Masc|Number=Sing	1	obl	_	_
@@ -549,40 +554,40 @@
 7	29	29	NUM	_	NumType=Card	6	nummod	_	_
 8	(	(	PUNCT	_	_	10	punct	_	SpaceAfter=No
 9	ou	ou	CCONJ	_	_	10	cc	_	_
-10	30	30	NUM	_	NumType=Card	1	conj	_	SpaceAfter=No
+10	30	30	NUM	_	NumType=Card	7	conj	_	SpaceAfter=No
 11	)	)	PUNCT	_	_	10	punct	_	_
 12	de	de	ADP	_	_	13	case	_	_
-13	janeiro	janeiro	NOUN	_	Gender=Masc|Number=Sing	10	nmod	_	_
+13	janeiro	janeiro	NOUN	_	Gender=Masc|Number=Sing	6	nmod	_	_
 14	de	de	ADP	_	_	15	case	_	_
 15	1979	1979	NUM	_	NumType=Card	13	nmod	_	SpaceAfter=No
-16	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
+16	.	.	PUNCT	_	_	1	punct	_	_
 
+# sent_id = 15
 # text = Era casado com Bárbara Cecily Neto Barros, com quem teve cinco filhos.
-# sent_id = 14
 1	Era	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	2	cop	_	_
 2	casado	casado	ADJ	_	Gender=Masc|Number=Sing	0	root	_	_
 3	com	com	ADP	_	_	4	case	_	_
-4	Bárbara	Bárbara	PROPN	_	Gender=Masc|Number=Sing	2	obl	_	_
+4	Bárbara	Bárbara	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	2	obl	_	_
 5	Cecily	Cecily	PROPN	_	Number=Sing	4	flat:name	_	_
 6	Neto	Neto	PROPN	_	Number=Sing	4	flat:name	_	_
 7	Barros	Barros	PROPN	_	Number=Sing	4	flat:name	_	SpaceAfter=No
 8	,	,	PUNCT	_	_	11	punct	_	_
 9	com	com	ADP	_	_	10	case	_	_
-10	quem	quem	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	11	obl	_	_
+10	quem	quem	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	11	obl	_	_
 11	teve	ter	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	acl:relcl	_	_
 12	cinco	cinco	NUM	_	NumType=Card	13	nummod	_	_
-13	filhos	filho	NOUN	_	Gender=Masc|Number=Plur	11	nsubj	_	SpaceAfter=No
+13	filhos	filho	NOUN	_	Gender=Masc|Number=Plur	11	obj	_	SpaceAfter=No
 14	.	.	PUNCT	_	_	2	punct	_	SpacesAfter=\n
 
+# sent_id = 16
 # text = Deixou publicados diversos artigos sobre economia e educação.
-# sent_id = 15
 1	Deixou	deixar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
-2	publicados	publicado	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part	1	xcomp	_	_
-3	diversos	diverso	ADJ	_	Gender=Masc|Number=Plur	4	amod	_	_
-4	artigos	artigo	NOUN	_	Gender=Masc|Number=Plur	2	obj	_	_
+2	publicados	publicar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part	1	xcomp	_	_
+3	diversos	diverso	DET	_	Gender=Masc|Number=Plur|PronType=Ind	4	det	_	_
+4	artigos	artigo	NOUN	_	Gender=Masc|Number=Plur	1	obj	_	_
 5	sobre	sobre	ADP	_	_	6	case	_	_
 6	economia	economia	NOUN	_	Gender=Fem|Number=Sing	4	nmod	_	_
 7	e	e	CCONJ	_	_	8	cc	_	_
 8	educação	educação	NOUN	_	Gender=Fem|Number=Sing	6	conj	_	SpaceAfter=No
-9	.	.	PUNCT	_	_	2	punct	_	SpacesAfter=\n
+9	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
 

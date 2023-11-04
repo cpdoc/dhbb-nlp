@@ -1,9 +1,12 @@
-# text = «Manuel Pio Correia Júnior» nasceu no Rio de Janeiro, então Distrito Federal, no dia 8 de fevereiro de 1918, filho de Manuel Pio Correia e de Mercedes Veloso Pio Correia.
-# sent_id = 1
+# generator = UDPipe 2, https://lindat.mff.cuni.cz/services/udpipe
+# udpipe_model = portuguese-bosque-ud-2.12-230717
+# udpipe_model_licence = CC BY-NC-SA
+# newdoc
 # newpar
-# newdoc id = ../raw/1465.raw
-1	«	«	PUNCT	_	_	2	punct	_	SpaceAfter=No|SpacesBefore=\n
-2	Manuel	Manuel	PROPN	_	Gender=Masc|Number=Sing	7	nsubj	_	_
+# sent_id = 1
+# text = «Manuel Pio Correia Júnior» nasceu no Rio de Janeiro, então Distrito Federal, no dia 8 de fevereiro de 1918, filho de Manuel Pio Correia e de Mercedes Veloso Pio Correia.
+1	«	«	PUNCT	_	_	2	punct	_	SpaceAfter=No
+2	Manuel	Manuel	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	7	nsubj	_	_
 3	Pio	Pio	PROPN	_	Number=Sing	2	flat:name	_	_
 4	Correia	Correia	PROPN	_	Number=Sing	2	flat:name	_	_
 5	Júnior	Júnior	PROPN	_	Number=Sing	2	flat:name	_	SpaceAfter=No
@@ -17,7 +20,7 @@
 12	Janeiro	Janeiro	PROPN	_	Number=Sing	10	nmod	_	SpaceAfter=No
 13	,	,	PUNCT	_	_	15	punct	_	_
 14	então	então	ADV	_	_	15	advmod	_	_
-15	Distrito	Distrito	PROPN	_	Number=Sing	10	flat:name	_	_
+15	Distrito	Distrito	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	10	appos	_	_
 16	Federal	Federal	PROPN	_	Number=Sing	15	flat:name	_	SpaceAfter=No
 17	,	,	PUNCT	_	_	15	punct	_	_
 18-19	no	_	_	_	_	_	_	_	_
@@ -30,21 +33,21 @@
 24	de	de	ADP	_	_	25	case	_	_
 25	1918	1918	NUM	_	NumType=Card	23	nmod	_	SpaceAfter=No
 26	,	,	PUNCT	_	_	27	punct	_	_
-27	filho	filho	NOUN	_	Gender=Masc|Number=Sing	23	conj	_	_
+27	filho	filho	NOUN	_	Gender=Masc|Number=Sing	7	appos	_	_
 28	de	de	ADP	_	_	29	case	_	_
-29	Manuel	Manuel	PROPN	_	Gender=Masc|Number=Sing	27	nmod	_	_
+29	Manuel	Manuel	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	27	nmod	_	_
 30	Pio	Pio	PROPN	_	Number=Sing	29	flat:name	_	_
 31	Correia	Correia	PROPN	_	Number=Sing	29	flat:name	_	_
 32	e	e	CCONJ	_	_	34	cc	_	_
 33	de	de	ADP	_	_	34	case	_	_
-34	Mercedes	Mercedes	PROPN	_	Gender=Masc|Number=Sing	23	conj	_	_
+34	Mercedes	Mercedes	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	29	conj	_	_
 35	Veloso	Veloso	PROPN	_	Number=Sing	34	flat:name	_	_
 36	Pio	Pio	PROPN	_	Number=Sing	34	flat:name	_	_
 37	Correia	Correia	PROPN	_	Number=Sing	34	flat:name	_	SpaceAfter=No
 38	.	.	PUNCT	_	_	7	punct	_	_
 
-# text = Seu pai foi autor do «Dicionário das plantas úteis do Brasil e das exóticas cultivadas», a mais extensa obra sobre o assunto publicada no país.
 # sent_id = 2
+# text = Seu pai foi autor do «Dicionário das plantas úteis do Brasil e das exóticas cultivadas», a mais extensa obra sobre o assunto publicada no país.
 1	Seu	seu	DET	_	Gender=Masc|Number=Sing|PronType=Prs	2	det	_	_
 2	pai	pai	NOUN	_	Gender=Masc|Number=Sing	4	nsubj	_	_
 3	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	cop	_	_
@@ -53,24 +56,24 @@
 5	de	de	ADP	_	_	8	case	_	_
 6	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	8	det	_	_
 7	«	«	PUNCT	_	_	8	punct	_	SpaceAfter=No
-8	Dicionário	dicionário	PROPN	_	Gender=Masc|Number=Sing	4	nmod	_	_
+8	Dicionário	dicionário	NOUN	_	Gender=Masc|Number=Sing	4	nmod	_	_
 9-10	das	_	_	_	_	_	_	_	_
 9	de	de	ADP	_	_	11	case	_	_
 10	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	11	det	_	_
-11	plantas	plantas	NOUN	_	Gender=Fem|Number=Plur	8	nmod	_	_
+11	plantas	planta	NOUN	_	Number=Sing	8	nmod	_	_
 12	úteis	útil	ADJ	_	Gender=Fem|Number=Plur	11	amod	_	_
 13-14	do	_	_	_	_	_	_	_	_
 13	de	de	ADP	_	_	15	case	_	_
 14	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	15	det	_	_
 15	Brasil	Brasil	PROPN	_	Gender=Masc|Number=Sing	11	nmod	_	_
-16	e	e	CCONJ	_	_	20	cc	_	_
+16	e	e	CCONJ	_	_	19	cc	_	_
 17-18	das	_	_	_	_	_	_	_	_
-17	de	de	ADP	_	_	20	case	_	_
-18	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	20	det	_	_
-19	exóticas	exótico	ADJ	_	Gender=Fem|Number=Plur	20	amod	_	_
-20	cultivadas	cultivada	NOUN	_	Gender=Fem|Number=Plur|VerbForm=Part	15	conj	_	SpaceAfter=No
-21	»	»	PUNCT	_	_	8	punct	_	SpaceAfter=No
-22	,	,	PUNCT	_	_	4	punct	_	_
+17	de	de	ADP	_	_	19	case	_	_
+18	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	19	det	_	_
+19	exóticas	exótica	NOUN	_	Gender=Fem|Number=Plur	15	conj	_	_
+20	cultivadas	cultivar	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part	19	acl	_	SpaceAfter=No
+21	»	»	PUNCT	_	_	26	punct	_	SpaceAfter=No
+22	,	,	PUNCT	_	_	26	punct	_	_
 23	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	26	det	_	_
 24	mais	mais	ADV	_	_	25	advmod	_	_
 25	extensa	extenso	ADJ	_	Gender=Fem|Number=Sing	26	amod	_	_
@@ -78,29 +81,28 @@
 27	sobre	sobre	ADP	_	_	29	case	_	_
 28	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	29	det	_	_
 29	assunto	assunto	NOUN	_	Gender=Masc|Number=Sing	26	nmod	_	_
-30	publicada	publicar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	29	acl	_	_
+30	publicada	publicar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	26	acl	_	_
 31-32	no	_	_	_	_	_	_	_	_
 31	em	em	ADP	_	_	33	case	_	_
 32	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	33	det	_	_
 33	país	país	NOUN	_	Gender=Masc|Number=Sing	30	obl	_	SpaceAfter=No
-34	.	.	PUNCT	_	_	4	punct	_	_
+34	.	.	PUNCT	_	_	4	punct	_	SpacesAfter=\n
 
-# text = Bacharelou-se pela Faculdade de Direito da Universidade do Rio de Janeiro e ingressou no Itamarati, mediante concurso, em dezembro de 1937, ocupando o cargo de cônsul de terceira classe.
 # sent_id = 3
-# newpar
+# text = Bacharelou-se pela Faculdade de Direito da Universidade do Rio de Janeiro e ingressou no Itamarati, mediante concurso, em dezembro de 1937, ocupando o cargo de cônsul de terceira classe.
 1-2	Bacharelou-se	_	_	_	_	_	_	_	_
-1	Bacharelou	Bacharelar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
-2	se	se	PRON	_	Case=Acc|Gender=Unsp|PronType=Prs	1	nsubj	_	_
+1	Bacharelou	bacharelar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+2	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	1	expl	_	_
 3-4	pela	_	_	_	_	_	_	_	_
 3	por	por	ADP	_	_	5	case	_	_
-4	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	5	det	_	_
+4	a	o	DET	_	Definite=Def|PronType=Art	5	det	_	_
 5	Faculdade	Faculdade	PROPN	_	Gender=Fem|Number=Sing	1	obl	_	_
 6	de	de	ADP	_	_	7	case	_	_
 7	Direito	Direito	PROPN	_	Number=Sing	5	nmod	_	_
 8-9	da	_	_	_	_	_	_	_	_
 8	de	de	ADP	_	_	10	case	_	_
 9	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	10	det	_	_
-10	Universidade	Universidade	PROPN	_	Number=Sing	7	nmod	_	_
+10	Universidade	Universidade	PROPN	_	Number=Sing	5	nmod	_	_
 11-12	do	_	_	_	_	_	_	_	_
 11	de	de	ADP	_	_	13	case	_	_
 12	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	13	det	_	_
@@ -108,15 +110,15 @@
 14	de	de	ADP	_	_	15	case	_	_
 15	Janeiro	Janeiro	PROPN	_	Number=Sing	13	nmod	_	_
 16	e	e	CCONJ	_	_	17	cc	_	_
-17	ingressou	ingresser	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	1	conj	_	_
+17	ingressou	ingressar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	1	conj	_	_
 18-19	no	_	_	_	_	_	_	_	_
 18	em	em	ADP	_	_	20	case	_	_
 19	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	20	det	_	_
 20	Itamarati	Itamarati	PROPN	_	Gender=Masc|Number=Sing	17	obl	_	SpaceAfter=No
-21	,	,	PUNCT	_	_	23	punct	_	_
+21	,	,	PUNCT	_	_	17	punct	_	_
 22	mediante	mediante	ADP	_	_	23	case	_	_
-23	concurso	concurso	NOUN	_	Gender=Masc|Number=Sing	20	nmod	_	SpaceAfter=No
-24	,	,	PUNCT	_	_	23	punct	_	_
+23	concurso	concurso	NOUN	_	Gender=Masc|Number=Sing	17	obl	_	SpaceAfter=No
+24	,	,	PUNCT	_	_	17	punct	_	_
 25	em	em	ADP	_	_	26	case	_	_
 26	dezembro	dezembro	NOUN	_	Gender=Masc|Number=Sing	17	obl	_	_
 27	de	de	ADP	_	_	28	case	_	_
@@ -132,8 +134,8 @@
 37	classe	classe	NOUN	_	Gender=Fem|Number=Sing	34	nmod	_	SpaceAfter=No
 38	.	.	PUNCT	_	_	1	punct	_	_
 
-# text = Em março de 1938 foi designado secretário do presidente do Conselho Federal do Serviço Público Civil, órgão que em agosto seguinte foi transformado no Departamento Administrativo do Serviço Público (DASP), com o objetivo de promover o estudo, a formulação de diretrizes, a coordenação e o controle dos assuntos relativos ao pessoal civil da administração federal.
 # sent_id = 4
+# text = Em março de 1938 foi designado secretário do presidente do Conselho Federal do Serviço Público Civil, órgão que em agosto seguinte foi transformado no Departamento Administrativo do Serviço Público (DASP), com o objetivo de promover o estudo, a formulação de diretrizes, a coordenação e o controle dos assuntos relativos ao pessoal civil da administração federal.
 1	Em	em	ADP	_	_	2	case	_	_
 2	março	março	NOUN	_	Gender=Masc|Number=Sing	6	obl	_	_
 3	de	de	ADP	_	_	4	case	_	_
@@ -148,16 +150,16 @@
 11-12	do	_	_	_	_	_	_	_	_
 11	de	de	ADP	_	_	13	case	_	_
 12	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	13	det	_	_
-13	Conselho	Conselho	PROPN	_	Gender=Masc|Number=Sing	10	nmod	_	_
-14	Federal	Federal	PROPN	_	Number=Sing	13	flat:name	_	_
+13	Conselho	conselho	NOUN	_	Gender=Masc|Number=Sing	10	nmod	_	_
+14	Federal	federal	ADJ	_	Gender=Masc|Number=Sing	13	amod	_	_
 15-16	do	_	_	_	_	_	_	_	_
 15	de	de	ADP	_	_	17	case	_	_
 16	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	17	det	_	_
-17	Serviço	Serviço	PROPN	_	Gender=Masc|Number=Sing	13	nmod	_	_
-18	Público	Público	PROPN	_	Number=Sing	17	flat:name	_	_
-19	Civil	Civil	PROPN	_	Number=Sing	17	flat:name	_	SpaceAfter=No
+17	Serviço	serviço	NOUN	_	Gender=Masc|Number=Sing	13	nmod	_	_
+18	Público	público	ADJ	_	Gender=Masc|Number=Sing	17	amod	_	_
+19	Civil	civil	ADJ	_	Gender=Masc|Number=Sing	17	amod	_	SpaceAfter=No
 20	,	,	PUNCT	_	_	21	punct	_	_
-21	órgão	órgão	NOUN	_	Gender=Masc|Number=Sing	7	appos	_	_
+21	órgão	órgão	NOUN	_	Gender=Masc|Number=Sing	13	appos	_	_
 22	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	27	nsubj:pass	_	_
 23	em	em	ADP	_	_	24	case	_	_
 24	agosto	agosto	NOUN	_	Gender=Masc|Number=Sing	27	obl	_	_
@@ -172,30 +174,30 @@
 32-33	do	_	_	_	_	_	_	_	_
 32	de	de	ADP	_	_	34	case	_	_
 33	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	34	det	_	_
-34	Serviço	Serviço	PROPN	_	Gender=Masc|Number=Sing	30	nmod	_	_
+34	Serviço	Serviço	PROPN	_	ExtPos=PROPN|Number=Sing	30	nmod	_	_
 35	Público	Público	PROPN	_	Number=Sing	34	flat:name	_	_
 36	(	(	PUNCT	_	_	37	punct	_	SpaceAfter=No
-37	DASP	DASP	PROPN	_	Gender=Fem|Number=Sing	30	appos	_	SpaceAfter=No
+37	DASP	DASP	PROPN	_	Gender=Masc|Number=Sing	30	appos	_	SpaceAfter=No
 38	)	)	PUNCT	_	_	37	punct	_	SpaceAfter=No
-39	,	,	PUNCT	_	_	27	punct	_	_
+39	,	,	PUNCT	_	_	42	punct	_	_
 40	com	com	ADP	_	_	42	case	_	_
 41	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	42	det	_	_
 42	objetivo	objetivo	NOUN	_	Gender=Masc|Number=Sing	27	obl	_	_
-43	de	de	ADP	_	_	44	mark	_	_
+43	de	de	SCONJ	_	_	44	mark	_	_
 44	promover	promover	VERB	_	VerbForm=Inf	42	acl	_	_
 45	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	46	det	_	_
-46	estudo	estudo	NOUN	_	_	44	obj	_	SpaceAfter=No
-47	,	,	PUNCT	_	_	44	punct	_	_
+46	estudo	estudo	NOUN	_	Gender=Masc|Number=Sing	44	obj	_	SpaceAfter=No
+47	,	,	PUNCT	_	_	49	punct	_	_
 48	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	49	det	_	_
-49	formulação	formulação	NOUN	_	Gender=Fem|Number=Sing	42	appos	_	_
+49	formulação	formulação	NOUN	_	Gender=Fem|Number=Sing	46	conj	_	_
 50	de	de	ADP	_	_	51	case	_	_
 51	diretrizes	diretriz	NOUN	_	Gender=Fem|Number=Plur	49	nmod	_	SpaceAfter=No
 52	,	,	PUNCT	_	_	54	punct	_	_
 53	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	54	det	_	_
-54	coordenação	coordenação	NOUN	_	Gender=Fem|Number=Sing	49	conj	_	_
+54	coordenação	coordenação	NOUN	_	Gender=Fem|Number=Sing	46	conj	_	_
 55	e	e	CCONJ	_	_	57	cc	_	_
 56	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	57	det	_	_
-57	controle	controle	NOUN	_	Gender=Masc|Number=Sing	49	conj	_	_
+57	controle	controle	NOUN	_	Gender=Masc|Number=Sing	46	conj	_	_
 58-59	dos	_	_	_	_	_	_	_	_
 58	de	de	ADP	_	_	60	case	_	_
 59	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	60	det	_	_
@@ -204,7 +206,7 @@
 62-63	ao	_	_	_	_	_	_	_	_
 62	a	a	ADP	_	_	64	case	_	_
 63	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	64	det	_	_
-64	pessoal	pessoal	NOUN	_	Gender=Masc|Number=Sing	60	nmod	_	_
+64	pessoal	pessoal	NOUN	_	Gender=Masc|Number=Sing	61	obl	_	_
 65	civil	civil	ADJ	_	Gender=Masc|Number=Sing	64	amod	_	_
 66-67	da	_	_	_	_	_	_	_	_
 66	de	de	ADP	_	_	68	case	_	_
@@ -213,66 +215,65 @@
 69	federal	federal	ADJ	_	Gender=Fem|Number=Sing	68	amod	_	SpaceAfter=No
 70	.	.	PUNCT	_	_	6	punct	_	_
 
-# text = No DASP, Pio Correia continuou a desempenhar as mesmas funções que exercia no antigo conselho.
 # sent_id = 5
+# text = No DASP, Pio Correia continuou a desempenhar as mesmas funções que exercia no antigo conselho.
 1-2	No	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	3	case	_	_
 2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
 3	DASP	DASP	PROPN	_	Gender=Masc|Number=Sing	9	obl	_	SpaceAfter=No
 4	,	,	PUNCT	_	_	3	punct	_	_
-5	Pio	Pio	PROPN	_	Gender=Masc|Number=Sing	9	nsubj	_	_
+5	Pio	Pio	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	7	nsubj	_	_
 6	Correia	Correia	PROPN	_	Number=Sing	5	flat:name	_	_
-7	continuou	continuar	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	9	aux	_	_
-8	a	a	ADP	_	_	9	obl	_	_
-9	desempenhar	desempenhar	VERB	_	VerbForm=Inf	0	root	_	_
+7	continuou	continuar	VERB	_	ExtPos=AUX|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+8	a	a	SCONJ	_	_	9	mark	_	_
+9	desempenhar	desempenhar	VERB	_	VerbForm=Inf	7	xcomp	_	_
 10	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	12	det	_	_
 11	mesmas	mesmo	ADJ	_	Gender=Fem|Number=Plur	12	amod	_	_
 12	funções	função	NOUN	_	Gender=Fem|Number=Plur	9	obj	_	_
-13	que	que	PRON	_	_	14	mark	_	_
-14	exercia	exercer	VERB	_	Gender=Masc|Number=Sing	12	acl	_	_
+13	que	que	PRON	_	Gender=Fem|Number=Plur|PronType=Rel	14	obj	_	_
+14	exercia	exercer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	12	acl:relcl	_	_
 15-16	no	_	_	_	_	_	_	_	_
 15	em	em	ADP	_	_	18	case	_	_
 16	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	18	det	_	_
 17	antigo	antigo	ADJ	_	Gender=Masc|Number=Sing	18	amod	_	_
 18	conselho	conselho	NOUN	_	Gender=Masc|Number=Sing	14	obl	_	SpaceAfter=No
-19	.	.	PUNCT	_	_	9	punct	_	_
+19	.	.	PUNCT	_	_	9	punct	_	SpacesAfter=\n
 
-# text = Entre setembro de 1938 e novembro de 1939, cursou a Universidade de Washington, nos Estados Unidos, como membro do Hall of Nations.
 # sent_id = 6
-# newpar
+# text = Entre setembro de 1938 e novembro de 1939, cursou a Universidade de Washington, nos Estados Unidos, como membro do Hall of Nations.
 1	Entre	entre	ADP	_	_	2	case	_	_
 2	setembro	setembro	NOUN	_	Gender=Masc|Number=Sing	10	obl	_	_
 3	de	de	ADP	_	_	4	case	_	_
 4	1938	1938	NUM	_	NumType=Card	2	nmod	_	_
 5	e	e	CCONJ	_	_	6	cc	_	_
-6	novembro	novembro	NOUN	_	Gender=Masc|Number=Sing	4	conj	_	_
+6	novembro	novembro	NOUN	_	Gender=Masc|Number=Sing	2	conj	_	_
 7	de	de	ADP	_	_	8	case	_	_
 8	1939	1939	NUM	_	NumType=Card	6	nmod	_	SpaceAfter=No
 9	,	,	PUNCT	_	_	2	punct	_	_
 10	cursou	cursar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 11	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	12	det	_	_
-12	Universidade	universidade	PROPN	_	Gender=Fem|Number=Sing	10	nsubj	_	_
+12	Universidade	Universidade	PROPN	_	Gender=Fem|Number=Sing	10	obj	_	_
 13	de	de	ADP	_	_	14	case	_	_
-14	Washington	Washington	PROPN	_	Gender=Masc|Number=Sing	12	nmod	_	SpaceAfter=No
-15	,	,	PUNCT	_	_	10	punct	_	_
+14	Washington	Washington	PROPN	_	Number=Sing	12	nmod	_	SpaceAfter=No
+15	,	,	PUNCT	_	_	18	punct	_	_
 16-17	nos	_	_	_	_	_	_	_	_
 16	em	em	ADP	_	_	18	case	_	_
 17	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	18	det	_	_
 18	Estados	Estados	PROPN	_	Gender=Masc|Number=Plur	10	obl	_	_
 19	Unidos	Unidos	PROPN	_	Number=Sing	18	flat:name	_	SpaceAfter=No
-20	,	,	PUNCT	_	_	10	punct	_	_
+20	,	,	PUNCT	_	_	18	punct	_	_
 21	como	como	ADP	_	_	22	case	_	_
-22	membro	membro	NOUN	_	Gender=Masc|Number=Sing	10	obl	_	_
+22	membro	membro	NOUN	_	Gender=Masc|Number=Sing	10	xcomp	_	_
 23-24	do	_	_	_	_	_	_	_	_
 23	de	de	ADP	_	_	25	case	_	_
 24	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	25	det	_	_
-25	Hall	hall	PROPN	_	Gender=Masc|Number=Sing	22	nmod	_	_
+25	Hall	Hall	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	22	nmod	_	_
 26	of	of	PROPN	_	Number=Sing	25	flat:name	_	_
 27	Nations	Nations	PROPN	_	Number=Sing	25	flat:name	_	SpaceAfter=No
 28	.	.	PUNCT	_	_	10	punct	_	_
 
-# text = De volta ao Brasil, assumiu em março de 1940 a chefia do Serviço de Documentação do DASP.
 # sent_id = 7
+# text = De volta ao Brasil, assumiu em março de 1940 a chefia do Serviço de Documentação do DASP.
 1	De	de	ADP	_	_	2	case	_	_
 2	volta	volta	NOUN	_	Gender=Fem|Number=Sing	7	obl	_	_
 3-4	ao	_	_	_	_	_	_	_	_
@@ -285,22 +286,22 @@
 9	março	março	NOUN	_	Gender=Masc|Number=Sing	7	obl	_	_
 10	de	de	ADP	_	_	11	case	_	_
 11	1940	1940	NUM	_	NumType=Card	9	nmod	_	_
-12	a	o	ADP	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	13	case	_	_
-13	chefia	chefia	NOUN	_	Gender=Fem|Number=Sing	11	nmod	_	_
+12	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	13	det	_	_
+13	chefia	chefia	NOUN	_	Gender=Fem|Number=Sing	7	obj	_	_
 14-15	do	_	_	_	_	_	_	_	_
 14	de	de	ADP	_	_	16	case	_	_
 15	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	16	det	_	_
 16	Serviço	Serviço	PROPN	_	Gender=Masc|Number=Sing	13	nmod	_	_
 17	de	de	ADP	_	_	18	case	_	_
-18	Documentação	documentação	PROPN	_	Gender=Fem|Number=Sing	16	nmod	_	_
+18	Documentação	Documentação	PROPN	_	Number=Sing	16	nmod	_	_
 19-20	do	_	_	_	_	_	_	_	_
 19	de	de	ADP	_	_	21	case	_	_
 20	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	21	det	_	_
-21	DASP	DASP	PROPN	_	Gender=Masc|Number=Sing	18	nmod	_	SpaceAfter=No
+21	DASP	DASP	PROPN	_	Gender=Masc|Number=Sing	16	nmod	_	SpaceAfter=No
 22	.	.	PUNCT	_	_	7	punct	_	_
 
-# text = Em janeiro do ano seguinte, pediu dispensa do cargo para integrar o gabinete do ministro da Aeronáutica Joaquim Pedro Salgado Filho, primeiro titular desta pasta.
 # sent_id = 8
+# text = Em janeiro do ano seguinte, pediu dispensa do cargo para integrar o gabinete do ministro da Aeronáutica Joaquim Pedro Salgado Filho, primeiro titular desta pasta.
 1	Em	em	ADP	_	_	2	case	_	_
 2	janeiro	janeiro	NOUN	_	Gender=Masc|Number=Sing	8	obl	_	_
 3-4	do	_	_	_	_	_	_	_	_
@@ -310,13 +311,13 @@
 6	seguinte	seguinte	ADJ	_	Gender=Masc|Number=Sing	5	amod	_	SpaceAfter=No
 7	,	,	PUNCT	_	_	2	punct	_	_
 8	pediu	pedir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
-9	dispensa	dispensa	NOUN	_	Gender=Fem|Number=Sing|VerbForm=Part	8	obj	_	_
+9	dispensa	dispensa	NOUN	_	Gender=Fem|Number=Sing	8	obj	_	_
 10-11	do	_	_	_	_	_	_	_	_
 10	de	de	ADP	_	_	12	case	_	_
 11	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	12	det	_	_
 12	cargo	cargo	NOUN	_	Gender=Masc|Number=Sing	9	nmod	_	_
-13	para	para	ADP	_	_	14	mark	_	_
-14	integrar	integrar	VERB	_	VerbForm=Inf	12	acl	_	_
+13	para	para	SCONJ	_	_	14	mark	_	_
+14	integrar	integrar	VERB	_	VerbForm=Inf	8	advcl	_	_
 15	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	16	det	_	_
 16	gabinete	gabinete	NOUN	_	Gender=Masc|Number=Sing	14	obj	_	_
 17-18	do	_	_	_	_	_	_	_	_
@@ -326,22 +327,22 @@
 20-21	da	_	_	_	_	_	_	_	_
 20	de	de	ADP	_	_	22	case	_	_
 21	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	22	det	_	_
-22	Aeronáutica	Aeronáutica	PROPN	_	Gender=Fem|Number=Sing	19	nmod	_	_
-23	Joaquim	Joaquim	PROPN	_	Gender=Masc|Number=Sing	22	appos	_	_
-24	Pedro	Pedro	PROPN	_	Gender=Masc|Number=Sing	23	flat:name	_	_
+22	Aeronáutica	aeronáutica	NOUN	_	Gender=Fem|Number=Sing	19	nmod	_	_
+23	Joaquim	Joaquim	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	19	appos	_	_
+24	Pedro	Pedro	PROPN	_	Number=Sing	23	flat:name	_	_
 25	Salgado	Salgado	PROPN	_	Number=Sing	23	flat:name	_	_
 26	Filho	Filho	PROPN	_	Number=Sing	23	flat:name	_	SpaceAfter=No
 27	,	,	PUNCT	_	_	29	punct	_	_
 28	primeiro	primeiro	ADJ	_	Gender=Masc|Number=Sing|NumType=Ord	29	amod	_	_
-29	titular	titular	NOUN	_	Gender=Masc|Number=Sing	23	appos	_	_
+29	titular	titular	NOUN	_	Gender=Masc|Number=Sing	19	appos	_	_
 30-31	desta	_	_	_	_	_	_	_	_
 30	de	de	ADP	_	_	32	case	_	_
 31	esta	este	DET	_	Gender=Fem|Number=Sing|PronType=Dem	32	det	_	_
 32	pasta	pasta	NOUN	_	Gender=Fem|Number=Sing	29	nmod	_	SpaceAfter=No
 33	.	.	PUNCT	_	_	8	punct	_	_
 
-# text = No desempenho da função, atuou a partir de outubro de 1941 como representante do Ministério da Aeronáutica junto à Divisão de Cooperação Intelectual do Itamarati.
 # sent_id = 9
+# text = No desempenho da função, atuou a partir de outubro de 1941 como representante do Ministério da Aeronáutica junto à Divisão de Cooperação Intelectual do Itamarati.
 1-2	No	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	3	case	_	_
 2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
@@ -352,14 +353,14 @@
 6	função	função	NOUN	_	Gender=Fem|Number=Sing	3	nmod	_	SpaceAfter=No
 7	,	,	PUNCT	_	_	3	punct	_	_
 8	atuou	atuar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
-9	a	a	ADP	_	_	10	case	_	_
-10	partir	partir	NOUN	_	_	8	obl	_	_
-11	de	de	ADP	_	_	12	case	_	_
-12	outubro	outubro	NOUN	_	Gender=Masc|Number=Sing	10	nmod:tmod	_	_
+9	a	a	ADP	_	ExtPos=ADP	12	case	_	_
+10	partir	partir	NOUN	_	_	9	fixed	_	_
+11	de	de	ADP	_	_	9	fixed	_	_
+12	outubro	outubro	NOUN	_	Gender=Masc|Number=Sing	8	obl	_	_
 13	de	de	ADP	_	_	14	case	_	_
 14	1941	1941	NUM	_	NumType=Card	12	nmod	_	_
 15	como	como	ADP	_	_	16	case	_	_
-16	representante	representante	NOUN	_	Gender=Masc|Number=Sing	14	nmod	_	_
+16	representante	representante	NOUN	_	Gender=Masc|Number=Sing	8	xcomp	_	_
 17-18	do	_	_	_	_	_	_	_	_
 17	de	de	ADP	_	_	19	case	_	_
 18	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	19	det	_	_
@@ -368,22 +369,22 @@
 20	de	de	ADP	_	_	22	case	_	_
 21	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	22	det	_	_
 22	Aeronáutica	Aeronáutica	PROPN	_	Number=Sing	19	nmod	_	_
-23	junto	junto	ADV	_	_	16	advmod	_	_
+23	junto	junto	ADV	_	_	8	advmod	_	_
 24-25	à	_	_	_	_	_	_	_	_
 24	a	a	ADP	_	_	26	case	_	_
 25	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	26	det	_	_
 26	Divisão	Divisão	PROPN	_	Gender=Fem|Number=Sing	23	obl	_	_
 27	de	de	ADP	_	_	28	case	_	_
-28	Cooperação	Cooperação	PROPN	_	Number=Sing	26	nmod	_	_
-29	Intelectual	intelectual	PROPN	_	Gender=Masc|Number=Sing	26	appos	_	_
+28	Cooperação	Cooperação	PROPN	_	ExtPos=PROPN|Number=Sing	26	nmod	_	_
+29	Intelectual	Intelectual	PROPN	_	Number=Sing	28	flat:name	_	_
 30-31	do	_	_	_	_	_	_	_	_
 30	de	de	ADP	_	_	32	case	_	_
 31	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	32	det	_	_
-32	Itamarati	Itamarati	PROPN	_	Gender=Masc|Number=Sing	29	nmod	_	SpaceAfter=No
+32	Itamarati	Itamarati	PROPN	_	Gender=Masc|Number=Sing	26	nmod	_	SpaceAfter=No
 33	.	.	PUNCT	_	_	8	punct	_	_
 
-# text = Em dezembro do mesmo ano, foi designado coordenador do projeto de organização do Arquivo e Serviço de Correspondência do Ministério da Aeronáutica.
 # sent_id = 10
+# text = Em dezembro do mesmo ano, foi designado coordenador do projeto de organização do Arquivo e Serviço de Correspondência do Ministério da Aeronáutica.
 1	Em	em	ADP	_	_	2	case	_	_
 2	dezembro	dezembro	NOUN	_	Gender=Masc|Number=Sing	9	obl	_	_
 3-4	do	_	_	_	_	_	_	_	_
@@ -404,42 +405,41 @@
 16-17	do	_	_	_	_	_	_	_	_
 16	de	de	ADP	_	_	18	case	_	_
 17	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	18	det	_	_
-18	Arquivo	arquivo	PROPN	_	Number=Sing	15	nmod	_	_
-19	e	e	CCONJ	_	_	20	cc	_	_
-20	Serviço	Serviço	PROPN	_	Gender=Masc|Number=Sing	15	conj	_	_
+18	Arquivo	Arquivo	PROPN	_	Gender=Masc|Number=Sing	15	nmod	_	_
+19	e	e	CCONJ	_	_	18	flat:name	_	_
+20	Serviço	Serviço	PROPN	_	Number=Sing	18	conj	_	_
 21	de	de	ADP	_	_	22	case	_	_
-22	Correspondência	correspondência	PROPN	_	Gender=Fem|Number=Sing	20	nmod	_	_
+22	Correspondência	Correspondência	PROPN	_	Number=Sing	18	nmod	_	_
 23-24	do	_	_	_	_	_	_	_	_
 23	de	de	ADP	_	_	25	case	_	_
 24	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	25	det	_	_
-25	Ministério	Ministério	PROPN	_	Gender=Masc|Number=Sing	22	nmod	_	_
+25	Ministério	Ministério	PROPN	_	Gender=Masc|Number=Sing	18	nmod	_	_
 26-27	da	_	_	_	_	_	_	_	_
 26	de	de	ADP	_	_	28	case	_	_
 27	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	28	det	_	_
 28	Aeronáutica	Aeronáutica	PROPN	_	Number=Sing	25	nmod	_	SpaceAfter=No
-29	.	.	PUNCT	_	_	9	punct	_	_
+29	.	.	PUNCT	_	_	9	punct	_	SpacesAfter=\n
 
-# text = Retornando ao Itamarati, foi promovido a segundo-secretário em dezembro de 1942.
 # sent_id = 11
-# newpar
-1	Retornando	Retornar	VERB	_	VerbForm=Ger	7	dep	_	_
+# text = Retornando ao Itamarati, foi promovido a segundo-secretário em dezembro de 1942.
+1	Retornando	retornar	VERB	_	VerbForm=Ger	7	advcl	_	_
 2-3	ao	_	_	_	_	_	_	_	_
 2	a	a	ADP	_	_	4	case	_	_
 3	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	4	det	_	_
-4	Itamarati	Itamarati	PROPN	_	Gender=Masc|Number=Sing	1	obl	_	SpaceAfter=No
+4	Itamarati	Itamarati	PROPN	_	Gender=Masc|Number=Sing	1	obj	_	SpaceAfter=No
 5	,	,	PUNCT	_	_	1	punct	_	_
 6	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	7	aux:pass	_	_
 7	promovido	promover	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
-8	a	o	DET	_	_	9	case	_	_
-9	segundo-secretário	segundo-secretário	NOUN	_	Gender=Masc|Number=Sing	7	obl	_	_
+8	a	a	ADP	_	_	9	case	_	_
+9	segundo-secretário	segundo-secretário	NOUN	_	Gender=Masc|Number=Sing	7	obj	_	_
 10	em	em	ADP	_	_	11	case	_	_
 11	dezembro	dezembro	NOUN	_	Gender=Masc|Number=Sing	7	obl	_	_
 12	de	de	ADP	_	_	13	case	_	_
 13	1942	1942	NUM	_	NumType=Card	11	nmod	_	SpaceAfter=No
 14	.	.	PUNCT	_	_	7	punct	_	_
 
-# text = Nesse posto, serviu junto à embaixada do Brasil na Venezuela, de março de 1943 a março de 1944, sendo transferido para Montevidéu, onde atuou como secretário da delegação brasileira à Comissão Consultiva de Emergência para a Defesa Política do Continente, organismo do sistema interamericano de segurança coletiva, criado durante a Segunda Guerra Mundial sob o patrocínio norte-americano.
 # sent_id = 12
+# text = Nesse posto, serviu junto à embaixada do Brasil na Venezuela, de março de 1943 a março de 1944, sendo transferido para Montevidéu, onde atuou como secretário da delegação brasileira à Comissão Consultiva de Emergência para a Defesa Política do Continente, organismo do sistema interamericano de segurança coletiva, criado durante a Segunda Guerra Mundial sob o patrocínio norte-americano.
 1-2	Nesse	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	3	case	_	_
 2	esse	esse	DET	_	Gender=Masc|Number=Sing|PronType=Dem	3	det	_	_
@@ -458,23 +458,23 @@
 13-14	na	_	_	_	_	_	_	_	_
 13	em	em	ADP	_	_	15	case	_	_
 14	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	15	det	_	_
-15	Venezuela	Venezuela	PROPN	_	Gender=Fem|Number=Sing	12	nmod	_	SpaceAfter=No
+15	Venezuela	Venezuela	PROPN	_	Gender=Fem|Number=Sing	9	nmod	_	SpaceAfter=No
 16	,	,	PUNCT	_	_	18	punct	_	_
 17	de	de	ADP	_	_	18	case	_	_
-18	março	março	NOUN	_	Gender=Masc|Number=Sing	12	nmod	_	_
+18	março	março	NOUN	_	Gender=Masc|Number=Sing	9	nmod	_	_
 19	de	de	ADP	_	_	20	case	_	_
 20	1943	1943	NUM	_	NumType=Card	18	nmod	_	_
-21	a	o	ADP	_	_	22	case	_	_
-22	março	março	NOUN	_	Gender=Masc|Number=Sing	20	nmod:tmod	_	_
+21	a	a	ADP	_	_	22	case	_	_
+22	março	março	NOUN	_	Gender=Masc|Number=Sing	18	nmod	_	_
 23	de	de	ADP	_	_	24	case	_	_
 24	1944	1944	NUM	_	NumType=Card	22	nmod	_	SpaceAfter=No
-25	,	,	PUNCT	_	_	18	punct	_	_
+25	,	,	PUNCT	_	_	27	punct	_	_
 26	sendo	ser	AUX	_	VerbForm=Ger	27	aux:pass	_	_
-27	transferido	transferir	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	5	xcomp	_	_
+27	transferido	transferir	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	5	advcl	_	_
 28	para	para	ADP	_	_	29	case	_	_
 29	Montevidéu	Montevidéu	PROPN	_	Gender=Masc|Number=Sing	27	obl	_	SpaceAfter=No
-30	,	,	PUNCT	_	_	27	punct	_	_
-31	onde	onde	ADV	_	_	32	advmod	_	_
+30	,	,	PUNCT	_	_	32	punct	_	_
+31	onde	onde	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	32	obl	_	_
 32	atuou	atuar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	29	acl:relcl	_	_
 33	como	como	ADP	_	_	34	case	_	_
 34	secretário	secretário	NOUN	_	Gender=Masc|Number=Sing	32	xcomp	_	_
@@ -486,20 +486,20 @@
 39-40	à	_	_	_	_	_	_	_	_
 39	a	a	ADP	_	_	41	case	_	_
 40	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	41	det	_	_
-41	Comissão	Comissão	PROPN	_	Gender=Fem|Number=Sing	37	nmod	_	_
+41	Comissão	Comissão	PROPN	_	Gender=Fem|Number=Sing	32	obl	_	_
 42	Consultiva	Consultiva	PROPN	_	Number=Sing	41	flat:name	_	_
 43	de	de	ADP	_	_	44	case	_	_
 44	Emergência	Emergência	PROPN	_	Number=Sing	41	nmod	_	_
-45	para	para	ADP	_	_	47	case	_	_
-46	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	47	det	_	_
-47	Defesa	Defesa	PROPN	_	Gender=Fem|Number=Sing	41	nmod	_	_
-48	Política	Política	PROPN	_	Number=Sing	47	flat:name	_	_
+45	para	para	ADP	_	_	46	case	_	_
+46	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	41	nmod	_	_
+47	Defesa	Defesa	PROPN	_	Number=Sing	41	flat:name	_	_
+48	Política	Política	PROPN	_	Number=Sing	41	flat:name	_	_
 49-50	do	_	_	_	_	_	_	_	_
 49	de	de	ADP	_	_	51	case	_	_
 50	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	51	det	_	_
-51	Continente	continente	PROPN	_	Gender=Masc|Number=Sing	47	nmod	_	SpaceAfter=No
+51	Continente	Continente	PROPN	_	Number=Sing	41	nmod	_	SpaceAfter=No
 52	,	,	PUNCT	_	_	53	punct	_	_
-53	organismo	organismo	NOUN	_	Gender=Masc|Number=Sing	37	appos	_	_
+53	organismo	organismo	NOUN	_	Gender=Masc|Number=Sing	41	appos	_	_
 54-55	do	_	_	_	_	_	_	_	_
 54	de	de	ADP	_	_	56	case	_	_
 55	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	56	det	_	_
@@ -508,11 +508,11 @@
 58	de	de	ADP	_	_	59	case	_	_
 59	segurança	segurança	NOUN	_	Gender=Fem|Number=Sing	56	nmod	_	_
 60	coletiva	coletivo	ADJ	_	Gender=Fem|Number=Sing	59	amod	_	SpaceAfter=No
-61	,	,	PUNCT	_	_	53	punct	_	_
-62	criado	criar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	37	acl	_	_
+61	,	,	PUNCT	_	_	62	punct	_	_
+62	criado	criar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	56	acl	_	_
 63	durante	durante	ADP	_	_	65	case	_	_
 64	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	65	det	_	_
-65	Segunda	Segunda	PROPN	_	Gender=Fem|Number=Sing	62	obl	_	_
+65	Segunda	Segunda	PROPN	_	Gender=Fem|Number=Sing|NumType=Ord	62	obl	_	_
 66	Guerra	Guerra	PROPN	_	Number=Sing	65	flat:name	_	_
 67	Mundial	Mundial	PROPN	_	Number=Sing	65	flat:name	_	_
 68	sob	sob	ADP	_	_	70	case	_	_
@@ -521,8 +521,8 @@
 71	norte-americano	norte-americano	ADJ	_	Gender=Masc|Number=Sing	70	amod	_	SpaceAfter=No
 72	.	.	PUNCT	_	_	5	punct	_	_
 
-# text = Na oportunidade, integrou o comitê preparatório do segundo relatório anual da referida comissão, voltando a assessorar a delegação brasileira em fevereiro de 1945, junto à nova conferência daquele órgão.
 # sent_id = 13
+# text = Na oportunidade, integrou o comitê preparatório do segundo relatório anual da referida comissão, voltando a assessorar a delegação brasileira em fevereiro de 1945, junto à nova conferência daquele órgão.
 1-2	Na	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	3	case	_	_
 2	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	3	det	_	_
@@ -543,10 +543,10 @@
 15	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	17	det	_	_
 16	referida	referir	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	17	acl	_	_
 17	comissão	comissão	NOUN	_	Gender=Fem|Number=Sing	12	nmod	_	SpaceAfter=No
-18	,	,	PUNCT	_	_	21	punct	_	_
-19	voltando	voltar	AUX	_	VerbForm=Ger	21	aux	_	_
-20	a	a	ADP	_	_	21	obl	_	_
-21	assessorar	assessorar	VERB	_	VerbForm=Inf	5	advcl	_	_
+18	,	,	PUNCT	_	_	19	punct	_	_
+19	voltando	voltar	VERB	_	ExtPos=AUX|VerbForm=Ger	5	advcl	_	_
+20	a	a	SCONJ	_	_	21	mark	_	_
+21	assessorar	assessorar	VERB	_	VerbForm=Inf	19	xcomp	_	_
 22	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	23	det	_	_
 23	delegação	delegação	NOUN	_	Gender=Fem|Number=Sing	21	obj	_	_
 24	brasileira	brasileiro	ADJ	_	Gender=Fem|Number=Sing	23	amod	_	_
@@ -567,8 +567,8 @@
 37	órgão	órgão	NOUN	_	Gender=Masc|Number=Sing	34	nmod	_	SpaceAfter=No
 38	.	.	PUNCT	_	_	5	punct	_	_
 
-# text = Em maio do mesmo ano, representou o Brasil no Comitê de Defesa Política, reunido na capital uruguaia.
 # sent_id = 14
+# text = Em maio do mesmo ano, representou o Brasil no Comitê de Defesa Política, reunido na capital uruguaia.
 1	Em	em	ADP	_	_	2	case	_	_
 2	maio	maio	NOUN	_	Gender=Masc|Number=Sing	8	obl	_	_
 3-4	do	_	_	_	_	_	_	_	_
@@ -583,9 +583,9 @@
 11-12	no	_	_	_	_	_	_	_	_
 11	em	em	ADP	_	_	13	case	_	_
 12	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	13	det	_	_
-13	Comitê	comitê	PROPN	_	Gender=Masc|Number=Sing	8	obl	_	_
+13	Comitê	Comitê	PROPN	_	Gender=Masc|Number=Sing	8	obl	_	_
 14	de	de	ADP	_	_	15	case	_	_
-15	Defesa	Defesa	PROPN	_	Number=Sing	13	nmod	_	_
+15	Defesa	Defesa	PROPN	_	ExtPos=PROPN|Number=Sing	13	nmod	_	_
 16	Política	Política	PROPN	_	Number=Sing	15	flat:name	_	SpaceAfter=No
 17	,	,	PUNCT	_	_	18	punct	_	_
 18	reunido	reunir	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	13	acl	_	_
@@ -593,11 +593,11 @@
 19	em	em	ADP	_	_	21	case	_	_
 20	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	21	det	_	_
 21	capital	capital	NOUN	_	Gender=Fem|Number=Sing	18	obl	_	_
-22	uruguaia	uruguaio	ADJ	_	Mood=Sub|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	21	amod	_	SpaceAfter=No
+22	uruguaia	uruguaio	ADJ	_	Gender=Fem|Number=Sing	21	amod	_	SpaceAfter=No
 23	.	.	PUNCT	_	_	8	punct	_	_
 
-# text = Em fevereiro de 1947, ainda na condição de segundo-secretário da embaixada do Brasil em Montevidéu, integrou a missão especial presente às solenidades da posse do presidente da República.
 # sent_id = 15
+# text = Em fevereiro de 1947, ainda na condição de segundo-secretário da embaixada do Brasil em Montevidéu, integrou a missão especial presente às solenidades da posse do presidente da República.
 1	Em	em	ADP	_	_	2	case	_	_
 2	fevereiro	fevereiro	NOUN	_	Gender=Masc|Number=Sing	21	obl	_	_
 3	de	de	ADP	_	_	4	case	_	_
@@ -629,7 +629,7 @@
 26-27	às	_	_	_	_	_	_	_	_
 26	a	a	ADP	_	_	28	case	_	_
 27	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	28	det	_	_
-28	solenidades	solenidade	NOUN	_	Gender=Fem|Number=Plur	21	obl	_	_
+28	solenidades	solenidade	NOUN	_	Gender=Fem|Number=Plur	25	obl	_	_
 29-30	da	_	_	_	_	_	_	_	_
 29	de	de	ADP	_	_	31	case	_	_
 30	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	31	det	_	_
@@ -641,11 +641,11 @@
 35-36	da	_	_	_	_	_	_	_	_
 35	de	de	ADP	_	_	37	case	_	_
 36	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	37	det	_	_
-37	República	República	PROPN	_	Number=Sing	34	nmod	_	SpaceAfter=No
+37	República	república	NOUN	_	Gender=Fem|Number=Sing	34	nmod	_	SpaceAfter=No
 38	.	.	PUNCT	_	_	21	punct	_	_
 
-# text = Deixando o Uruguai em março de 1947, foi removido inicialmente para Moscou e, em seguida, para Londres, onde serviu de dezembro de 1947 a setembro de 1948.
 # sent_id = 16
+# text = Deixando o Uruguai em março de 1947, foi removido inicialmente para Moscou e, em seguida, para Londres, onde serviu de dezembro de 1947 a setembro de 1948.
 1	Deixando	deixar	VERB	_	VerbForm=Ger	10	advcl	_	_
 2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
 3	Uruguai	Uruguai	PROPN	_	Gender=Masc|Number=Sing	1	obj	_	_
@@ -659,78 +659,74 @@
 11	inicialmente	inicialmente	ADV	_	_	10	advmod	_	_
 12	para	para	ADP	_	_	13	case	_	_
 13	Moscou	Moscou	PROPN	_	Gender=Masc|Number=Sing	10	obl	_	_
-14	e	e	CCONJ	_	_	17	cc	_	SpaceAfter=No
-15	,	,	PUNCT	_	_	20	punct	_	_
+14	e	e	CCONJ	_	_	20	cc	_	SpaceAfter=No
+15	,	,	PUNCT	_	_	17	punct	_	_
 16	em	em	ADP	_	_	17	case	_	_
-17	seguida	seguida	NOUN	_	Gender=Fem|Number=Sing	13	conj	_	SpaceAfter=No
-18	,	,	PUNCT	_	_	20	punct	_	_
+17	seguida	seguida	NOUN	_	Gender=Fem|Number=Sing	20	nmod	_	SpaceAfter=No
+18	,	,	PUNCT	_	_	17	punct	_	_
 19	para	para	ADP	_	_	20	case	_	_
-20	Londres	Londres	PROPN	_	Gender=Masc|Number=Sing	17	appos	_	SpaceAfter=No
-21	,	,	PUNCT	_	_	20	punct	_	_
-22	onde	onde	ADV	_	_	23	advmod	_	_
+20	Londres	Londres	PROPN	_	Gender=Fem|Number=Sing	10	conj	_	SpaceAfter=No
+21	,	,	PUNCT	_	_	23	punct	_	_
+22	onde	onde	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	23	obl	_	_
 23	serviu	servir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	20	acl:relcl	_	_
 24	de	de	ADP	_	_	25	case	_	_
 25	dezembro	dezembro	NOUN	_	Gender=Masc|Number=Sing	23	obl	_	_
 26	de	de	ADP	_	_	27	case	_	_
 27	1947	1947	NUM	_	NumType=Card	25	nmod	_	_
-28	a	o	ADP	_	_	29	case	_	_
+28	a	a	ADP	_	_	29	case	_	_
 29	setembro	setembro	NOUN	_	Gender=Masc|Number=Sing	23	obl	_	_
 30	de	de	ADP	_	_	31	case	_	_
 31	1948	1948	NUM	_	NumType=Card	29	nmod	_	SpaceAfter=No
 32	.	.	PUNCT	_	_	10	punct	_	_
 
-# text = Neste último mês, já promovido a primeiro-secretário, participou da delegação brasileira à III
 # sent_id = 17
+# text = Neste último mês, já promovido a primeiro-secretário, participou da delegação brasileira à III Sessão da Assembléia Geral da Organização das Nações Unidas (ONU), em Paris.
 1-2	Neste	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	4	case	_	_
 2	este	este	DET	_	Gender=Masc|Number=Sing|PronType=Dem	4	det	_	_
 3	último	último	ADJ	_	Gender=Masc|Number=Sing|NumType=Ord	4	amod	_	_
-4	mês	mês	NOUN	_	Gender=Masc|Number=Sing	7	obl	_	SpaceAfter=No
+4	mês	mês	NOUN	_	Gender=Masc|Number=Sing	11	obl	_	SpaceAfter=No
 5	,	,	PUNCT	_	_	4	punct	_	_
 6	já	já	ADV	_	_	7	advmod	_	_
-7	promovido	promover	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	11	dep	_	_
-8	a	o	DET	_	_	9	det	_	_
-9	primeiro-secretário	primeiro-secretário	NOUN	_	Gender=Masc|Number=Sing	7	nsubj	_	SpaceAfter=No
+7	promovido	promover	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	4	acl	_	_
+8	a	a	ADP	_	_	9	case	_	_
+9	primeiro-secretário	primeiro-secretário	NOUN	_	Gender=Masc|Number=Sing	7	obj	_	SpaceAfter=No
 10	,	,	PUNCT	_	_	7	punct	_	_
 11	participou	participar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 12-13	da	_	_	_	_	_	_	_	_
 12	de	de	ADP	_	_	14	case	_	_
 13	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	14	det	_	_
-14	delegação	delegação	NOUN	_	Gender=Fem|Number=Sing	11	obl	_	_
+14	delegação	delegação	NOUN	_	Gender=Fem|Number=Sing	11	obj	_	_
 15	brasileira	brasileiro	ADJ	_	Gender=Fem|Number=Sing	14	amod	_	_
 16-17	à	_	_	_	_	_	_	_	_
 16	a	a	ADP	_	_	18	case	_	_
 17	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	18	det	_	_
-18	III	iii	ADJ	_	Gender=Masc|Number=Sing|NumType=Ord	11	obl	_	_
+18	III	iii	ADJ	_	Gender=Fem|Number=Sing|NumType=Ord	14	amod	_	_
+19	Sessão	sessão	PROPN	_	Number=Sing	18	flat:name	_	_
+20-21	da	_	_	_	_	_	_	_	_
+20	de	de	ADP	_	_	22	case	_	_
+21	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	22	det	_	_
+22	Assembléia	Assembléia	PROPN	_	Number=Sing	18	nmod	_	_
+23	Geral	Geral	PROPN	_	Number=Sing	22	flat:name	_	_
+24-25	da	_	_	_	_	_	_	_	_
+24	de	de	ADP	_	_	26	case	_	_
+25	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	26	det	_	_
+26	Organização	Organização	PROPN	_	Number=Sing	22	nmod	_	_
+27-28	das	_	_	_	_	_	_	_	_
+27	de	de	ADP	_	_	29	case	_	_
+28	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	29	det	_	_
+29	Nações	Nações	PROPN	_	ExtPos=PROPN|Number=Sing	26	nmod	_	_
+30	Unidas	Unidas	PROPN	_	Number=Sing	29	flat:name	_	_
+31	(	(	PUNCT	_	_	32	punct	_	SpaceAfter=No
+32	ONU	ONU	PROPN	_	Gender=Fem|Number=Sing	26	appos	_	SpaceAfter=No
+33	)	)	PUNCT	_	_	32	punct	_	SpaceAfter=No
+34	,	,	PUNCT	_	_	36	punct	_	_
+35	em	em	ADP	_	_	36	case	_	_
+36	Paris	Paris	PROPN	_	Gender=Masc|Number=Sing	11	obl	_	SpaceAfter=No
+37	.	.	PUNCT	_	_	11	punct	_	SpacesAfter=\n
 
-# text = Sessão da Assembléia Geral da Organização das Nações Unidas (ONU), em Paris.
 # sent_id = 18
-1	Sessão	sessão	NOUN	_	Gender=Fem|Number=Sing	0	root	_	_
-2-3	da	_	_	_	_	_	_	_	_
-2	de	de	ADP	_	_	4	case	_	_
-3	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	4	det	_	_
-4	Assembléia	Assembléia	PROPN	_	Gender=Fem|Number=Sing	1	nmod	_	_
-5	Geral	Geral	PROPN	_	Number=Sing	4	flat:name	_	_
-6-7	da	_	_	_	_	_	_	_	_
-6	de	de	ADP	_	_	8	case	_	_
-7	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	8	det	_	_
-8	Organização	Organização	PROPN	_	Number=Sing	4	nmod	_	_
-9-10	das	_	_	_	_	_	_	_	_
-9	de	de	ADP	_	_	11	case	_	_
-10	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	11	det	_	_
-11	Nações	Nações	PROPN	_	Number=Sing	8	nmod	_	_
-12	Unidas	Unidas	PROPN	_	Number=Sing	11	flat:name	_	_
-13	(	(	PUNCT	_	_	14	punct	_	SpaceAfter=No
-14	ONU	ONU	PROPN	_	Gender=Fem|Number=Sing	4	appos	_	SpaceAfter=No
-15	)	)	PUNCT	_	_	14	punct	_	SpaceAfter=No
-16	,	,	PUNCT	_	_	1	punct	_	_
-17	em	em	ADP	_	_	18	case	_	_
-18	Paris	Paris	PROPN	_	Gender=Masc|Number=Sing	1	nmod	_	SpaceAfter=No
-19	.	.	PUNCT	_	_	1	punct	_	_
-
 # text = Voltando ao Brasil, em março de 1950 foi colocado à disposição do Estado-Maior das Forças Armadas (EMFA) para cursar a Escola Superior de Guerra (ESG).
-# sent_id = 19
-# newpar
 1	Voltando	voltar	VERB	_	VerbForm=Ger	11	advcl	_	_
 2-3	ao	_	_	_	_	_	_	_	_
 2	a	a	ADP	_	_	4	case	_	_
@@ -738,7 +734,7 @@
 4	Brasil	Brasil	PROPN	_	Gender=Masc|Number=Sing	1	obl	_	SpaceAfter=No
 5	,	,	PUNCT	_	_	1	punct	_	_
 6	em	em	ADP	_	_	7	case	_	_
-7	março	março	NOUN	_	Gender=Masc|Number=Sing	1	obl	_	_
+7	março	março	NOUN	_	Gender=Masc|Number=Sing	11	obl	_	_
 8	de	de	ADP	_	_	9	case	_	_
 9	1950	1950	NUM	_	NumType=Card	7	nmod	_	_
 10	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	11	aux:pass	_	_
@@ -750,19 +746,19 @@
 15-16	do	_	_	_	_	_	_	_	_
 15	de	de	ADP	_	_	17	case	_	_
 16	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	17	det	_	_
-17	Estado-Maior	Estado-Maior	PROPN	_	Gender=Masc|Number=Sing	14	nmod	_	_
+17	Estado-Maior	Estado-maior	PROPN	_	Gender=Masc|Number=Sing	14	nmod	_	_
 18-19	das	_	_	_	_	_	_	_	_
 18	de	de	ADP	_	_	20	case	_	_
 19	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	20	det	_	_
-20	Forças	Forças	PROPN	_	Number=Sing	17	nmod	_	_
+20	Forças	Forças	PROPN	_	ExtPos=PROPN|Number=Sing	17	nmod	_	_
 21	Armadas	Armadas	PROPN	_	Number=Sing	20	flat:name	_	_
 22	(	(	PUNCT	_	_	23	punct	_	SpaceAfter=No
 23	EMFA	EMFA	PROPN	_	Gender=Masc|Number=Sing	17	appos	_	SpaceAfter=No
 24	)	)	PUNCT	_	_	23	punct	_	_
-25	para	para	ADP	_	_	26	mark	_	_
+25	para	para	SCONJ	_	_	26	mark	_	_
 26	cursar	cursar	VERB	_	VerbForm=Inf	11	advcl	_	_
 27	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	28	det	_	_
-28	Escola	Escola	PROPN	_	Gender=Fem|Number=Sing	26	obj	_	_
+28	Escola	Escola	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	26	obj	_	_
 29	Superior	Superior	PROPN	_	Number=Sing	28	flat:name	_	_
 30	de	de	ADP	_	_	31	case	_	_
 31	Guerra	Guerra	PROPN	_	Number=Sing	28	nmod	_	_
@@ -771,16 +767,16 @@
 34	)	)	PUNCT	_	_	33	punct	_	SpaceAfter=No
 35	.	.	PUNCT	_	_	11	punct	_	_
 
+# sent_id = 19
 # text = Passou a conselheiro em setembro de 1951 e em janeiro do ano seguinte foi enviado a Bonn na Alemanha Ocidental, como representante do Brasil na Comissão Mista Germano-Brasileira.
-# sent_id = 20
 1	Passou	passar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
-2	a	o	DET	_	_	3	case	_	_
-3	conselheiro	conselheiro	NOUN	_	Gender=Masc|Number=Sing	1	obl	_	_
+2	a	a	ADP	_	_	3	case	_	_
+3	conselheiro	conselheiro	NOUN	_	Gender=Masc|Number=Sing	1	obj	_	_
 4	em	em	ADP	_	_	5	case	_	_
 5	setembro	setembro	NOUN	_	Gender=Masc|Number=Sing	1	obl	_	_
 6	de	de	ADP	_	_	7	case	_	_
 7	1951	1951	NUM	_	NumType=Card	5	nmod	_	_
-8	e	e	CCONJ	_	Gender=Fem|Number=Sing	16	cc	_	_
+8	e	e	CCONJ	_	_	16	cc	_	_
 9	em	em	ADP	_	_	10	case	_	_
 10	janeiro	janeiro	NOUN	_	Gender=Masc|Number=Sing	16	obl	_	_
 11-12	do	_	_	_	_	_	_	_	_
@@ -790,12 +786,12 @@
 14	seguinte	seguinte	ADJ	_	Gender=Masc|Number=Sing	13	amod	_	_
 15	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	16	aux:pass	_	_
 16	enviado	enviar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	1	conj	_	_
-17	a	o	ADP	_	_	18	case	_	_
+17	a	a	ADP	_	_	18	case	_	_
 18	Bonn	Bonn	PROPN	_	Gender=Masc|Number=Sing	16	obl	_	_
 19-20	na	_	_	_	_	_	_	_	_
 19	em	em	ADP	_	_	21	case	_	_
 20	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	21	det	_	_
-21	Alemanha	Alemanha	PROPN	_	Gender=Fem|Number=Sing	16	obl	_	_
+21	Alemanha	Alemanha	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	16	obl	_	_
 22	Ocidental	Ocidental	PROPN	_	Number=Sing	21	flat:name	_	SpaceAfter=No
 23	,	,	PUNCT	_	_	16	punct	_	_
 24	como	como	ADP	_	_	25	case	_	_
@@ -807,13 +803,13 @@
 29-30	na	_	_	_	_	_	_	_	_
 29	em	em	ADP	_	_	31	case	_	_
 30	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	31	det	_	_
-31	Comissão	Comissão	PROPN	_	Gender=Fem|Number=Sing	25	nmod	_	_
+31	Comissão	Comissão	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	25	nmod	_	_
 32	Mista	Mista	PROPN	_	Number=Sing	31	flat:name	_	_
-33	Germano-Brasileira	Germano-Brasileira	PROPN	_	Number=Sing	31	flat:name	_	SpaceAfter=No
+33	Germano-Brasileira	Germano-brasIleira	PROPN	_	Number=Sing	31	flat:name	_	SpaceAfter=No
 34	.	.	PUNCT	_	_	1	punct	_	_
 
+# sent_id = 20
 # text = Entre fevereiro e maio de 1952, no segundo governo de Getúlio Vargas, serviu como secretário do Gabinete Civil da Presidência da República.
-# sent_id = 21
 1	Entre	entre	ADP	_	_	2	case	_	_
 2	fevereiro	fevereiro	NOUN	_	Gender=Masc|Number=Sing	16	obl	_	_
 3	e	e	CCONJ	_	_	4	cc	_	_
@@ -827,7 +823,7 @@
 10	segundo	segundo	ADJ	_	Gender=Masc|Number=Sing|NumType=Ord	11	amod	_	_
 11	governo	governo	NOUN	_	Gender=Masc|Number=Sing	16	obl	_	_
 12	de	de	ADP	_	_	13	case	_	_
-13	Getúlio	Getúlio	PROPN	_	Gender=Masc|Number=Sing	11	nmod	_	_
+13	Getúlio	Getúlio	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	11	nmod	_	_
 14	Vargas	Vargas	PROPN	_	Number=Sing	13	flat:name	_	SpaceAfter=No
 15	,	,	PUNCT	_	_	11	punct	_	_
 16	serviu	servir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
@@ -836,31 +832,31 @@
 19-20	do	_	_	_	_	_	_	_	_
 19	de	de	ADP	_	_	21	case	_	_
 20	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	21	det	_	_
-21	Gabinete	Gabinete	PROPN	_	Gender=Masc|Number=Sing	18	nmod	_	_
+21	Gabinete	Gabinete	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	18	nmod	_	_
 22	Civil	Civil	PROPN	_	Number=Sing	21	flat:name	_	_
 23-24	da	_	_	_	_	_	_	_	_
 23	de	de	ADP	_	_	25	case	_	_
 24	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	25	det	_	_
-25	Presidência	presidência	NOUN	_	Gender=Fem|Number=Sing	21	nmod	_	_
+25	Presidência	Presidência	PROPN	_	Gender=Fem|Number=Sing	21	nmod	_	_
 26-27	da	_	_	_	_	_	_	_	_
 26	de	de	ADP	_	_	28	case	_	_
 27	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	28	det	_	_
 28	República	República	PROPN	_	Number=Sing	25	nmod	_	SpaceAfter=No
 29	.	.	PUNCT	_	_	16	punct	_	_
 
+# sent_id = 21
 # text = Regressando ao Itamarati para lecionar no Instituto Rio Branco, assumiu a cadeira de orientação profissional do primeiro e do segundo anos do curso de preparação para a carreira diplomática, tendo atuado ainda como examinador nas bancas de inglês, prática diplomática e consular, tratados e política econômica do Brasil.
-# sent_id = 22
-1	Regressando	Regressar	VERB	_	VerbForm=Ger	13	advcl	_	_
+1	Regressando	regressar	VERB	_	VerbForm=Ger	13	advcl	_	_
 2-3	ao	_	_	_	_	_	_	_	_
 2	a	a	ADP	_	_	4	case	_	_
 3	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	4	det	_	_
-4	Itamarati	Itamarati	PROPN	_	Gender=Masc|Number=Sing	1	obl	_	_
-5	para	para	ADP	_	_	6	mark	_	_
+4	Itamarati	Itamarati	PROPN	_	Gender=Masc|Number=Sing	1	obj	_	_
+5	para	para	SCONJ	_	_	6	mark	_	_
 6	lecionar	lecionar	VERB	_	VerbForm=Inf	1	advcl	_	_
 7-8	no	_	_	_	_	_	_	_	_
 7	em	em	ADP	_	_	9	case	_	_
 8	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	9	det	_	_
-9	Instituto	Instituto	PROPN	_	Gender=Masc|Number=Sing	6	obl	_	_
+9	Instituto	Instituto	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	6	obl	_	_
 10	Rio	Rio	PROPN	_	Number=Sing	9	flat:name	_	_
 11	Branco	Branco	PROPN	_	Number=Sing	9	flat:name	_	SpaceAfter=No
 12	,	,	PUNCT	_	_	6	punct	_	_
@@ -888,11 +884,11 @@
 31	preparação	preparação	NOUN	_	Gender=Fem|Number=Sing	29	nmod	_	_
 32	para	para	ADP	_	_	34	case	_	_
 33	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	34	det	_	_
-34	carreira	carreira	NOUN	_	Gender=Fem|Number=Sing	29	nmod	_	_
+34	carreira	carreira	NOUN	_	Gender=Fem|Number=Sing	31	nmod	_	_
 35	diplomática	diplomático	ADJ	_	Gender=Fem|Number=Sing	34	amod	_	SpaceAfter=No
 36	,	,	PUNCT	_	_	38	punct	_	_
 37	tendo	ter	AUX	_	VerbForm=Ger	38	aux	_	_
-38	atuado	atuar	VERB	_	VerbForm=Part	13	conj	_	_
+38	atuado	atuar	VERB	_	VerbForm=Part	13	advcl	_	_
 39	ainda	ainda	ADV	_	_	38	advmod	_	_
 40	como	como	ADP	_	_	41	case	_	_
 41	examinador	examinador	NOUN	_	Gender=Masc|Number=Sing	38	xcomp	_	_
@@ -903,34 +899,33 @@
 45	de	de	ADP	_	_	46	case	_	_
 46	inglês	inglês	NOUN	_	Gender=Masc|Number=Sing	44	nmod	_	SpaceAfter=No
 47	,	,	PUNCT	_	_	48	punct	_	_
-48	prática	prática	NOUN	_	Gender=Fem|Number=Sing	44	conj	_	_
+48	prática	prática	NOUN	_	Gender=Fem|Number=Sing	46	conj	_	_
 49	diplomática	diplomático	ADJ	_	Gender=Fem|Number=Sing	48	amod	_	_
 50	e	e	CCONJ	_	_	51	cc	_	_
 51	consular	consular	ADJ	_	Gender=Fem|Number=Sing	49	conj	_	SpaceAfter=No
 52	,	,	PUNCT	_	_	53	punct	_	_
-53	tratados	tratar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part	48	conj	_	_
+53	tratados	tratado	NOUN	_	Gender=Masc|Number=Plur	44	conj	_	_
 54	e	e	CCONJ	_	_	55	cc	_	_
-55	política	política	NOUN	_	Gender=Fem|Number=Sing	44	conj	_	_
+55	política	política	NOUN	_	Gender=Fem|Number=Sing	46	conj	_	_
 56	econômica	econômico	ADJ	_	Gender=Fem|Number=Sing	55	amod	_	_
 57-58	do	_	_	_	_	_	_	_	_
 57	de	de	ADP	_	_	59	case	_	_
 58	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	59	det	_	_
 59	Brasil	Brasil	PROPN	_	Gender=Masc|Number=Sing	55	nmod	_	SpaceAfter=No
-60	.	.	PUNCT	_	_	13	punct	_	_
+60	.	.	PUNCT	_	_	13	punct	_	SpacesAfter=\n
 
+# sent_id = 22
 # text = Em dezembro de 1952 foi promovido a ministro-conselheiro e designado para a embaixada do Brasil em Bonn, onde, na qualidade de delegado-suplente, integrou uma missão encarregada de travar negociações com a República Federal da Alemanha.
-# sent_id = 23
-# newpar
 1	Em	em	ADP	_	_	2	case	_	_
 2	dezembro	dezembro	NOUN	_	Gender=Masc|Number=Sing	6	obl	_	_
 3	de	de	ADP	_	_	4	case	_	_
 4	1952	1952	NUM	_	NumType=Card	2	nmod	_	_
 5	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	aux:pass	_	_
 6	promovido	promover	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
-7	a	o	DET	_	_	8	det	_	_
-8	ministro-conselheiro	ministro-conselheiro	NOUN	_	Gender=Masc|Number=Sing	6	nsubj:pass	_	_
+7	a	a	ADP	_	_	8	case	_	_
+8	ministro-conselheiro	ministro-conselheiro	NOUN	_	Gender=Masc|Number=Sing	6	obj	_	_
 9	e	e	CCONJ	_	_	10	cc	_	_
-10	designado	designar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	8	acl	_	_
+10	designado	designar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	6	conj	_	_
 11	para	para	ADP	_	_	13	case	_	_
 12	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	13	det	_	_
 13	embaixada	embaixada	NOUN	_	Gender=Fem|Number=Sing	10	obl	_	_
@@ -939,10 +934,10 @@
 15	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	16	det	_	_
 16	Brasil	Brasil	PROPN	_	Gender=Masc|Number=Sing	13	nmod	_	_
 17	em	em	ADP	_	_	18	case	_	_
-18	Bonn	Bonn	PROPN	_	Gender=Masc|Number=Sing	10	obl	_	SpaceAfter=No
-19	,	,	PUNCT	_	_	10	punct	_	_
-20	onde	onde	ADV	_	_	28	advmod	_	SpaceAfter=No
-21	,	,	PUNCT	_	_	20	punct	_	_
+18	Bonn	Bonn	PROPN	_	Gender=Masc|Number=Sing	13	nmod	_	SpaceAfter=No
+19	,	,	PUNCT	_	_	28	punct	_	_
+20	onde	onde	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	28	obl	_	SpaceAfter=No
+21	,	,	PUNCT	_	_	24	punct	_	_
 22-23	na	_	_	_	_	_	_	_	_
 22	em	em	ADP	_	_	24	case	_	_
 23	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	24	det	_	_
@@ -954,21 +949,21 @@
 29	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	30	det	_	_
 30	missão	missão	NOUN	_	Gender=Fem|Number=Sing	28	obj	_	_
 31	encarregada	encarregar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	30	acl	_	_
-32	de	de	ADP	_	_	33	mark	_	_
-33	travar	travar	VERB	_	VerbForm=Inf	30	acl	_	_
+32	de	de	SCONJ	_	_	33	mark	_	_
+33	travar	travar	VERB	_	VerbForm=Inf	31	xcomp	_	_
 34	negociações	negociação	NOUN	_	Gender=Fem|Number=Plur	33	obj	_	_
 35	com	com	ADP	_	_	37	case	_	_
 36	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	37	det	_	_
-37	República	República	PROPN	_	Gender=Fem|Number=Sing	34	nmod	_	_
+37	República	República	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	34	nmod	_	_
 38	Federal	Federal	PROPN	_	Number=Sing	37	flat:name	_	_
 39-40	da	_	_	_	_	_	_	_	_
 39	de	de	ADP	_	_	41	case	_	_
 40	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	41	det	_	_
-41	Alemanha	Alemanha	PROPN	_	Gender=Fem|Number=Sing	37	nmod	_	SpaceAfter=No
+41	Alemanha	Alemanha	PROPN	_	Number=Sing	37	nmod	_	SpaceAfter=No
 42	.	.	PUNCT	_	_	6	punct	_	_
 
+# sent_id = 23
 # text = Interrompeu temporariamente suas atividades na capital alemã para atuar como secretário-geral da reunião dos países-membros do Sistema Brasileiro de Pagamentos Multilaterais, em outubro de 1956.
-# sent_id = 24
 1	Interrompeu	interromper	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2	temporariamente	temporariamente	ADV	_	_	1	advmod	_	_
 3	suas	seu	DET	_	Gender=Fem|Number=Plur|PronType=Prs	4	det	_	_
@@ -978,8 +973,8 @@
 6	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	7	det	_	_
 7	capital	capital	NOUN	_	Gender=Fem|Number=Sing	1	obl	_	_
 8	alemã	alemão	ADJ	_	Gender=Fem|Number=Sing	7	amod	_	_
-9	para	para	ADP	_	_	10	mark	_	_
-10	atuar	atuar	VERB	_	VerbForm=Inf	7	acl	_	_
+9	para	para	SCONJ	_	_	10	mark	_	_
+10	atuar	atuar	VERB	_	VerbForm=Inf	1	advcl	_	_
 11	como	como	ADP	_	_	12	case	_	_
 12	secretário-geral	secretário-geral	NOUN	_	Gender=Masc|Number=Sing	10	xcomp	_	_
 13-14	da	_	_	_	_	_	_	_	_
@@ -993,20 +988,20 @@
 19-20	do	_	_	_	_	_	_	_	_
 19	de	de	ADP	_	_	21	case	_	_
 20	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	21	det	_	_
-21	Sistema	Sistema	PROPN	_	Gender=Masc|Number=Sing	18	nmod	_	_
+21	Sistema	Sistema	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	18	nmod	_	_
 22	Brasileiro	Brasileiro	PROPN	_	Number=Sing	21	flat:name	_	_
 23	de	de	ADP	_	_	24	case	_	_
 24	Pagamentos	Pagamentos	PROPN	_	Number=Sing	21	nmod	_	_
 25	Multilaterais	Multilaterais	PROPN	_	Number=Sing	24	flat:name	_	SpaceAfter=No
-26	,	,	PUNCT	_	_	28	punct	_	_
+26	,	,	PUNCT	_	_	10	punct	_	_
 27	em	em	ADP	_	_	28	case	_	_
-28	outubro	outubro	NOUN	_	Gender=Masc|Number=Sing	21	conj	_	_
+28	outubro	outubro	NOUN	_	Gender=Masc|Number=Sing	10	obl	_	_
 29	de	de	ADP	_	_	30	case	_	_
 30	1956	1956	NUM	_	NumType=Card	28	nmod	_	SpaceAfter=No
 31	.	.	PUNCT	_	_	1	punct	_	_
 
+# sent_id = 24
 # text = Permaneceu em Bonn até fevereiro de 1957 e em novembro seguinte foi promovido a ministro plenipotenciário e removido para Teerã, no Irã.
-# sent_id = 25
 1	Permaneceu	permanecer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2	em	em	ADP	_	_	3	case	_	_
 3	Bonn	Bonn	PROPN	_	Gender=Masc|Number=Sing	1	obl	_	_
@@ -1014,30 +1009,30 @@
 5	fevereiro	fevereiro	NOUN	_	Gender=Masc|Number=Sing	1	obl	_	_
 6	de	de	ADP	_	_	7	case	_	_
 7	1957	1957	NUM	_	NumType=Card	5	nmod	_	_
-8	e	e	CCONJ	_	Gender=Fem|Number=Sing	13	cc	_	_
+8	e	e	CCONJ	_	_	13	cc	_	_
 9	em	em	ADP	_	_	10	case	_	_
 10	novembro	novembro	NOUN	_	Gender=Masc|Number=Sing	13	obl	_	_
 11	seguinte	seguinte	ADJ	_	Gender=Masc|Number=Sing	10	amod	_	_
 12	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	13	aux:pass	_	_
 13	promovido	promover	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	1	conj	_	_
-14	a	o	DET	_	_	15	case	_	_
-15	ministro	ministro	NOUN	_	Gender=Masc|Number=Sing	13	obl	_	_
+14	a	a	ADP	_	_	15	case	_	_
+15	ministro	ministro	NOUN	_	Gender=Masc|Number=Sing	13	obj	_	_
 16	plenipotenciário	plenipotenciário	ADJ	_	Gender=Masc|Number=Sing	15	amod	_	_
 17	e	e	CCONJ	_	_	18	cc	_	_
-18	removido	remover	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	15	acl	_	_
+18	removido	remover	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	13	conj	_	_
 19	para	para	ADP	_	_	20	case	_	_
 20	Teerã	Teerã	PROPN	_	Gender=Masc|Number=Sing	18	obl	_	SpaceAfter=No
-21	,	,	PUNCT	_	_	18	punct	_	_
+21	,	,	PUNCT	_	_	24	punct	_	_
 22-23	no	_	_	_	_	_	_	_	_
 22	em	em	ADP	_	_	24	case	_	_
 23	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	24	det	_	_
-24	Irã	Irã	PROPN	_	Gender=Masc|Number=Sing	18	obl	_	SpaceAfter=No
+24	Irã	Irã	PROPN	_	Gender=Masc|Number=Sing	20	nmod	_	SpaceAfter=No
 25	.	.	PUNCT	_	_	1	punct	_	_
 
+# sent_id = 25
 # text = Após servir na capital iraniana entre janeiro de 1958 e junho de 1959, voltou ao Itamarati, sendo destacado para integrar a comissão de organização da visita oficial do primeiro-ministro japonês Nobosuke Kishi ao Brasil.
-# sent_id = 26
-1	Após	após	ADP	_	_	2	mark	_	_
-2	servir	servir	VERB	_	VerbForm=Inf	22	advcl	_	_
+1	Após	após	SCONJ	_	_	2	mark	_	_
+2	servir	servir	VERB	_	VerbForm=Inf	16	advcl	_	_
 3-4	na	_	_	_	_	_	_	_	_
 3	em	em	ADP	_	_	5	case	_	_
 4	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	5	det	_	_
@@ -1048,19 +1043,19 @@
 9	de	de	ADP	_	_	10	case	_	_
 10	1958	1958	NUM	_	NumType=Card	8	nmod	_	_
 11	e	e	CCONJ	_	_	12	cc	_	_
-12	junho	junho	NOUN	_	Gender=Masc|Number=Sing	8	conj	_	_
+12	junho	junho	NOUN	_	Gender=Masc|Number=Sing	10	conj	_	_
 13	de	de	ADP	_	_	14	case	_	_
 14	1959	1959	NUM	_	NumType=Card	12	nmod	_	SpaceAfter=No
 15	,	,	PUNCT	_	_	2	punct	_	_
-16	voltou	voltar	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	19	cop	_	_
+16	voltou	voltar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 17-18	ao	_	_	_	_	_	_	_	_
 17	a	a	ADP	_	_	19	case	_	_
 18	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	19	det	_	_
-19	Itamarati	Itamarati	PROPN	_	Gender=Masc|Number=Sing	2	obl	_	SpaceAfter=No
+19	Itamarati	Itamarati	PROPN	_	Gender=Masc|Number=Sing	16	obl	_	SpaceAfter=No
 20	,	,	PUNCT	_	_	22	punct	_	_
 21	sendo	ser	AUX	_	VerbForm=Ger	22	aux:pass	_	_
-22	destacado	destacar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
-23	para	para	ADP	_	_	24	mark	_	_
+22	destacado	destacar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	16	advcl	_	_
+23	para	para	SCONJ	_	_	24	mark	_	_
 24	integrar	integrar	VERB	_	VerbForm=Inf	22	advcl	_	_
 25	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	26	det	_	_
 26	comissão	comissão	NOUN	_	Gender=Fem|Number=Sing	24	obj	_	_
@@ -1069,27 +1064,26 @@
 29-30	da	_	_	_	_	_	_	_	_
 29	de	de	ADP	_	_	31	case	_	_
 30	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	31	det	_	_
-31	visita	visita	NOUN	_	Gender=Fem|Number=Sing	26	nmod	_	_
+31	visita	visita	NOUN	_	Gender=Fem|Number=Sing	28	nmod	_	_
 32	oficial	oficial	ADJ	_	Gender=Fem|Number=Sing	31	amod	_	_
 33-34	do	_	_	_	_	_	_	_	_
 33	de	de	ADP	_	_	35	case	_	_
 34	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	35	det	_	_
 35	primeiro-ministro	primeiro-ministro	NOUN	_	Gender=Masc|Number=Sing	31	nmod	_	_
 36	japonês	japonês	ADJ	_	Gender=Masc|Number=Sing	35	amod	_	_
-37	Nobosuke	Nobosuke	PROPN	_	Gender=Masc|Number=Sing	35	appos	_	_
+37	Nobosuke	Nobosuke	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	35	appos	_	_
 38	Kishi	Kishi	PROPN	_	Number=Sing	37	flat:name	_	_
 39-40	ao	_	_	_	_	_	_	_	_
 39	a	a	ADP	_	_	41	case	_	_
 40	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	41	det	_	_
 41	Brasil	Brasil	PROPN	_	Gender=Masc|Number=Sing	31	nmod	_	SpaceAfter=No
-42	.	.	PUNCT	_	_	22	punct	_	_
+42	.	.	PUNCT	_	_	16	punct	_	SpacesAfter=\n
 
+# sent_id = 26
 # text = Promovido a ministro plenipotenciário de primeira classe em outubro de 1959, no mês seguinte representou o ministro das Relações Exteriores, Horácio Lafer, junto à Comissão Permanente para Aplicação do Tratado de Amizade e Consulta com Portugal.
-# sent_id = 27
-# newpar
-1	Promovido	promover	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	17	dep	_	_
-2	a	o	DET	_	_	3	case	_	_
-3	ministro	ministro	NOUN	_	Gender=Masc|Number=Sing	1	obl	_	_
+1	Promovido	promover	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	17	advcl	_	_
+2	a	a	ADP	_	_	3	case	_	_
+3	ministro	ministro	NOUN	_	Gender=Masc|Number=Sing	1	obj	_	_
 4	plenipotenciário	plenipotenciário	ADJ	_	Gender=Masc|Number=Sing	3	amod	_	_
 5	de	de	ADP	_	_	7	case	_	_
 6	primeira	primeiro	ADJ	_	Gender=Fem|Number=Sing|NumType=Ord	7	amod	_	_
@@ -1110,10 +1104,10 @@
 20-21	das	_	_	_	_	_	_	_	_
 20	de	de	ADP	_	_	22	case	_	_
 21	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	22	det	_	_
-22	Relações	Relações	PROPN	_	Gender=Fem|Number=Plur	19	nmod	_	_
+22	Relações	Relações	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Plur	19	nmod	_	_
 23	Exteriores	Exteriores	PROPN	_	Number=Sing	22	flat:name	_	SpaceAfter=No
 24	,	,	PUNCT	_	_	25	punct	_	_
-25	Horácio	Horácio	PROPN	_	Gender=Masc|Number=Sing	19	appos	_	_
+25	Horácio	Horácio	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	19	appos	_	_
 26	Lafer	Lafer	PROPN	_	Number=Sing	25	flat:name	_	SpaceAfter=No
 27	,	,	PUNCT	_	_	25	punct	_	_
 28	junto	junto	ADV	_	_	17	advmod	_	_
@@ -1123,41 +1117,41 @@
 31	Comissão	Comissão	PROPN	_	Gender=Fem|Number=Sing	28	obl	_	_
 32	Permanente	Permanente	PROPN	_	Number=Sing	31	flat:name	_	_
 33	para	para	ADP	_	_	34	case	_	_
-34	Aplicação	aplicação	PROPN	_	Number=Sing	31	nmod	_	_
+34	Aplicação	Aplicação	PROPN	_	Number=Sing	31	nmod	_	_
 35-36	do	_	_	_	_	_	_	_	_
 35	de	de	ADP	_	_	37	case	_	_
 36	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	37	det	_	_
-37	Tratado	Tratado	PROPN	_	Gender=Masc|Number=Sing	34	nmod	_	_
+37	Tratado	Tratado	PROPN	_	Number=Sing	34	nmod	_	_
 38	de	de	ADP	_	_	39	case	_	_
-39	Amizade	amizade	PROPN	_	Gender=Fem|Number=Sing	37	nmod	_	_
-40	e	e	CCONJ	_	_	41	cc	_	_
-41	Consulta	consulta	PROPN	_	Gender=Fem|Number=Sing	39	conj	_	_
+39	Amizade	Amizade	PROPN	_	ExtPos=PROPN|Number=Sing	37	nmod	_	_
+40	e	e	CCONJ	_	_	39	flat:name	_	_
+41	Consulta	Consulta	PROPN	_	Number=Sing	39	flat:name	_	_
 42	com	com	ADP	_	_	43	case	_	_
-43	Portugal	Portugal	PROPN	_	Gender=Masc|Number=Sing	17	obl	_	SpaceAfter=No
+43	Portugal	Portugal	PROPN	_	Gender=Masc|Number=Sing	37	nmod	_	SpaceAfter=No
 44	.	.	PUNCT	_	_	17	punct	_	_
 
+# sent_id = 27
 # text = Participou também da comitiva do chanceler Lafer em sua visita à Argentina (novembro de 1959) e ao Paraguai (março de 1960).
-# sent_id = 28
 1	Participou	participar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2	também	também	ADV	_	_	1	advmod	_	_
 3-4	da	_	_	_	_	_	_	_	_
 3	de	de	ADP	_	_	5	case	_	_
 4	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	5	det	_	_
-5	comitiva	comitiva	NOUN	_	Gender=Fem|Number=Sing	1	obl	_	_
+5	comitiva	comitiva	NOUN	_	Gender=Fem|Number=Sing	1	obj	_	_
 6-7	do	_	_	_	_	_	_	_	_
-6	de	de	ADP	_	_	8	mark	_	_
+6	de	de	ADP	_	_	8	case	_	_
 7	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	8	det	_	_
-8	chanceler	chanceler	VERB	_	Gender=Masc|Number=Sing	5	acl	_	_
-9	Lafer	Lafer	PROPN	_	Number=Sing	8	flat:name	_	_
+8	chanceler	chanceler	NOUN	_	Gender=Masc|Number=Sing	5	nmod	_	_
+9	Lafer	Lafer	PROPN	_	Gender=Masc|Number=Sing	8	appos	_	_
 10	em	em	ADP	_	_	12	case	_	_
 11	sua	seu	DET	_	Gender=Fem|Number=Sing|PronType=Prs	12	det	_	_
-12	visita	visita	NOUN	_	Gender=Fem|Number=Sing	8	obl	_	_
+12	visita	visita	NOUN	_	Gender=Fem|Number=Sing	1	obl	_	_
 13-14	à	_	_	_	_	_	_	_	_
 13	a	a	ADP	_	_	15	case	_	_
 14	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	15	det	_	_
 15	Argentina	Argentina	PROPN	_	Gender=Fem|Number=Sing	12	nmod	_	_
 16	(	(	PUNCT	_	_	17	punct	_	SpaceAfter=No
-17	novembro	novembro	NOUN	_	Gender=Masc|Number=Sing	15	appos	_	_
+17	novembro	novembro	NOUN	_	Gender=Masc|Number=Sing	15	parataxis	_	_
 18	de	de	ADP	_	_	19	case	_	_
 19	1959	1959	NUM	_	NumType=Card	17	nmod	_	SpaceAfter=No
 20	)	)	PUNCT	_	_	17	punct	_	_
@@ -1167,14 +1161,14 @@
 23	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	24	det	_	_
 24	Paraguai	Paraguai	PROPN	_	Gender=Masc|Number=Sing	15	conj	_	_
 25	(	(	PUNCT	_	_	26	punct	_	SpaceAfter=No
-26	março	março	NOUN	_	Gender=Masc|Number=Sing	24	appos	_	_
+26	março	março	NOUN	_	Gender=Masc|Number=Sing	24	parataxis	_	_
 27	de	de	ADP	_	_	28	case	_	_
 28	1960	1960	NUM	_	NumType=Card	26	nmod	_	SpaceAfter=No
 29	)	)	PUNCT	_	_	26	punct	_	SpaceAfter=No
 30	.	.	PUNCT	_	_	1	punct	_	_
 
+# sent_id = 28
 # text = Entre maio e junho de 1960, chefiou a delegação brasileira na Comissão Mista Brasil-Portugal, reunida em Lisboa.
-# sent_id = 29
 1	Entre	entre	ADP	_	_	2	case	_	_
 2	maio	maio	NOUN	_	Gender=Masc|Number=Sing	8	obl	_	_
 3	e	e	CCONJ	_	_	4	cc	_	_
@@ -1189,18 +1183,18 @@
 12-13	na	_	_	_	_	_	_	_	_
 12	em	em	ADP	_	_	14	case	_	_
 13	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	14	det	_	_
-14	Comissão	Comissão	PROPN	_	Gender=Fem|Number=Sing	8	obl	_	_
+14	Comissão	Comissão	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	8	obl	_	_
 15	Mista	Mista	PROPN	_	Number=Sing	14	flat:name	_	_
-16	Brasil-Portugal	Brasil-Portugal	PROPN	_	Number=Sing	14	flat:name	_	SpaceAfter=No
+16	Brasil-Portugal	Brasil-portUgal	PROPN	_	Number=Sing	14	flat:name	_	SpaceAfter=No
 17	,	,	PUNCT	_	_	18	punct	_	_
 18	reunida	reunir	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	14	acl	_	_
 19	em	em	ADP	_	_	20	case	_	_
 20	Lisboa	Lisboa	PROPN	_	Gender=Fem|Number=Sing	18	obl	_	SpaceAfter=No
 21	.	.	PUNCT	_	_	8	punct	_	_
 
-# text = Ainda em junho desse ano, viajou para Dacar, no Senegal, integrando uma missão oficial junto à Federação do Mali — efêmera tentativa de fusão entre o Senegal e a República Sudanesa do Mali, dissolvida depois de fortes divergências políticas entre os dois Estados.
-# sent_id = 30
-1	Ainda	ainda	ADV	_	Gender=Masc|Number=Sing	3	advmod	_	_
+# sent_id = 29
+# text = Ainda em junho desse ano, viajou para Dacar, no Senegal, integrando uma missão oficial junto à Federação do Mali - efêmera tentativa de fusão entre o Senegal e a República Sudanesa do Mali, dissolvida depois de fortes divergências políticas entre os dois Estados.
+1	Ainda	ainda	ADV	_	_	3	advmod	_	_
 2	em	em	ADP	_	_	3	case	_	_
 3	junho	junho	NOUN	_	Gender=Masc|Number=Sing	8	obl	_	_
 4-5	desse	_	_	_	_	_	_	_	_
@@ -1208,31 +1202,31 @@
 5	esse	esse	DET	_	Gender=Masc|Number=Sing|PronType=Dem	6	det	_	_
 6	ano	ano	NOUN	_	Gender=Masc|Number=Sing	3	nmod	_	SpaceAfter=No
 7	,	,	PUNCT	_	_	3	punct	_	_
-8	viajou	viajar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	28	ccomp	_	_
+8	viajou	viajar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 9	para	para	ADP	_	_	10	case	_	_
-10	Dacar	Dacar	PROPN	_	VerbForm=Inf	8	obl	_	SpaceAfter=No
-11	,	,	PUNCT	_	_	8	punct	_	_
+10	Dacar	Dacar	PROPN	_	Gender=Masc|Number=Sing	8	obl	_	SpaceAfter=No
+11	,	,	PUNCT	_	_	14	punct	_	_
 12-13	no	_	_	_	_	_	_	_	_
 12	em	em	ADP	_	_	14	case	_	_
 13	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	14	det	_	_
-14	Senegal	Senegal	PROPN	_	Gender=Masc|Number=Sing	8	obl	_	SpaceAfter=No
-15	,	,	PUNCT	_	_	16	punct	_	_
+14	Senegal	Senegal	PROPN	_	Gender=Masc|Number=Sing	10	nmod	_	SpaceAfter=No
+15	,	,	PUNCT	_	_	14	punct	_	_
 16	integrando	integrar	VERB	_	VerbForm=Ger	8	advcl	_	_
 17	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	18	det	_	_
 18	missão	missão	NOUN	_	Gender=Fem|Number=Sing	16	obj	_	_
 19	oficial	oficial	ADJ	_	Gender=Fem|Number=Sing	18	amod	_	_
-20	junto	junto	ADV	_	_	18	advmod	_	_
+20	junto	junto	ADV	_	_	16	advmod	_	_
 21-22	à	_	_	_	_	_	_	_	_
 21	a	a	ADP	_	_	23	case	_	_
 22	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	23	det	_	_
-23	Federação	federação	PROPN	_	Gender=Fem|Number=Sing	20	obl	_	_
+23	Federação	Federação	PROPN	_	Gender=Fem|Number=Sing	20	obl	_	_
 24-25	do	_	_	_	_	_	_	_	_
 24	de	de	ADP	_	_	26	case	_	_
 25	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	26	det	_	_
-26	Mali	Mali	PROPN	_	Gender=Masc|Number=Sing	23	nmod	_	_
-27	—	—	PUNCT	_	_	16	punct	_	_
-28	efêmera	efêmerar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pqp|VerbForm=Fin	0	root	_	_
-29	tentativa	tentativa	NOUN	_	Gender=Fem|Number=Sing	28	nsubj	_	_
+26	Mali	Mali	PROPN	_	Number=Sing	23	nmod	_	_
+27	-	-	PUNCT	_	_	29	punct	_	_
+28	efêmera	efêmero	ADJ	_	Gender=Fem|Number=Sing	29	amod	_	_
+29	tentativa	tentativa	NOUN	_	Gender=Fem|Number=Sing	23	appos	_	_
 30	de	de	ADP	_	_	31	case	_	_
 31	fusão	fusão	NOUN	_	Gender=Fem|Number=Sing	29	nmod	_	_
 32	entre	entre	ADP	_	_	34	case	_	_
@@ -1240,14 +1234,14 @@
 34	Senegal	Senegal	PROPN	_	Gender=Masc|Number=Sing	31	nmod	_	_
 35	e	e	CCONJ	_	_	37	cc	_	_
 36	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	37	det	_	_
-37	República	república	PROPN	_	Gender=Fem|Number=Sing	34	conj	_	_
-38	Sudanesa	sudanesa	PROPN	_	Number=Sing	37	flat:name	_	_
+37	República	República	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	34	conj	_	_
+38	Sudanesa	Sudanesa	PROPN	_	Number=Sing	37	flat:name	_	_
 39-40	do	_	_	_	_	_	_	_	_
 39	de	de	ADP	_	_	41	case	_	_
 40	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	41	det	_	_
-41	Mali	Mali	PROPN	_	Gender=Masc|Number=Sing	37	nmod	_	SpaceAfter=No
+41	Mali	Mali	PROPN	_	Number=Sing	37	nmod	_	SpaceAfter=No
 42	,	,	PUNCT	_	_	43	punct	_	_
-43	dissolvida	dissolver	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	29	acl	_	_
+43	dissolvida	dissolver	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	31	acl	_	_
 44	depois	depois	ADV	_	_	43	advmod	_	_
 45	de	de	ADP	_	_	47	case	_	_
 46	fortes	forte	ADJ	_	Gender=Fem|Number=Plur	47	amod	_	_
@@ -1257,10 +1251,10 @@
 50	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	52	det	_	_
 51	dois	dois	NUM	_	NumType=Card	52	nummod	_	_
 52	Estados	estado	NOUN	_	Gender=Masc|Number=Plur	47	nmod	_	SpaceAfter=No
-53	.	.	PUNCT	_	_	28	punct	_	_
+53	.	.	PUNCT	_	_	8	punct	_	_
 
+# sent_id = 30
 # text = Em agosto de 1960, encabeçou a delegação do Brasil à VI e VII reuniões de Consulta dos Ministros de Estado das Relações Exteriores dos Estados Americanos, realizadas em San José, Costa Rica.
-# sent_id = 31
 1	Em	em	ADP	_	_	2	case	_	_
 2	agosto	agosto	NOUN	_	Gender=Masc|Number=Sing	6	obl	_	_
 3	de	de	ADP	_	_	4	case	_	_
@@ -1274,14 +1268,14 @@
 10	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	_	_
 11	Brasil	Brasil	PROPN	_	Gender=Masc|Number=Sing	8	nmod	_	_
 12-13	à	_	_	_	_	_	_	_	_
-12	a	a	ADP	_	_	14	case	_	_
-13	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	14	det	_	_
-14	VI	VI	PROPN	_	Gender=Fem|Number=Sing	6	obl	_	_
+12	a	a	ADP	_	_	17	case	_	_
+13	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	17	det	_	_
+14	VI	vi	ADJ	_	Gender=Fem|Number=Sing|NumType=Ord	17	amod	_	_
 15	e	e	CCONJ	_	_	16	cc	_	_
-16	VII	VII	PROPN	_	Gender=Fem|Number=Sing	14	conj	_	_
-17	reuniões	reunião	NOUN	_	Gender=Fem|Number=Plur	6	nsubj	_	_
+16	VII	VII	ADJ	_	Gender=Fem|Number=Sing|NumType=Ord	14	conj	_	_
+17	reuniões	reunião	NOUN	_	Gender=Fem|Number=Plur	6	obl	_	_
 18	de	de	ADP	_	_	19	case	_	_
-19	Consulta	consulta	PROPN	_	Gender=Fem|Number=Sing	17	nmod	_	_
+19	Consulta	Consulta	PROPN	_	Gender=Fem|Number=Sing	17	nmod	_	_
 20-21	dos	_	_	_	_	_	_	_	_
 20	de	de	ADP	_	_	22	case	_	_
 21	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	22	det	_	_
@@ -1291,7 +1285,7 @@
 25-26	das	_	_	_	_	_	_	_	_
 25	de	de	ADP	_	_	27	case	_	_
 26	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	27	det	_	_
-27	Relações	Relações	PROPN	_	Gender=Fem|Number=Plur	24	nmod	_	_
+27	Relações	Relações	PROPN	_	ExtPos=PROPN|Number=Sing	22	nmod	_	_
 28	Exteriores	Exteriores	PROPN	_	Number=Sing	27	flat:name	_	_
 29-30	dos	_	_	_	_	_	_	_	_
 29	de	de	ADP	_	_	31	case	_	_
@@ -1301,16 +1295,15 @@
 33	,	,	PUNCT	_	_	34	punct	_	_
 34	realizadas	realizar	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part	17	acl	_	_
 35	em	em	ADP	_	_	36	case	_	_
-36	San	San	PROPN	_	Gender=Masc|Number=Sing	34	obl	_	_
+36	San	San	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	34	obl	_	_
 37	José	José	PROPN	_	Number=Sing	36	flat:name	_	SpaceAfter=No
 38	,	,	PUNCT	_	_	39	punct	_	_
-39	Costa	Costa	PROPN	_	Gender=Masc|Number=Sing	36	appos	_	_
-40	Rica	rica	PROPN	_	Number=Sing	39	flat:name	_	SpaceAfter=No
-41	.	.	PUNCT	_	_	6	punct	_	_
+39	Costa	Costa	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	36	appos	_	_
+40	Rica	Rica	PROPN	_	Number=Sing	39	flat:name	_	SpaceAfter=No
+41	.	.	PUNCT	_	_	6	punct	_	SpacesAfter=\n
 
+# sent_id = 31
 # text = Em dezembro de 1960, assumiu o cargo de embaixador do Brasil no México, diplomando-se, no ano seguinte, pela Academia Mexicana de Derecho Internacional.
-# sent_id = 32
-# newpar
 1	Em	em	ADP	_	_	2	case	_	_
 2	dezembro	dezembro	NOUN	_	Gender=Masc|Number=Sing	6	obl	_	_
 3	de	de	ADP	_	_	4	case	_	_
@@ -1343,59 +1336,59 @@
 26-27	pela	_	_	_	_	_	_	_	_
 26	por	por	ADP	_	_	28	case	_	_
 27	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	28	det	_	_
-28	Academia	Academia	PROPN	_	Gender=Fem|Number=Sing	6	obl	_	_
-29	Mexicana	mexicana	PROPN	_	Number=Sing	28	flat:name	_	_
+28	Academia	Academia	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	18	obl	_	_
+29	Mexicana	Mexicana	PROPN	_	Number=Sing	28	flat:name	_	_
 30	de	de	ADP	_	_	31	case	_	_
-31	Derecho	Derecho	PROPN	_	Number=Sing	28	nmod	_	_
+31	Derecho	Derecho	PROPN	_	ExtPos=PROPN|Number=Sing	28	nmod	_	_
 32	Internacional	Internacional	PROPN	_	Number=Sing	31	flat:name	_	SpaceAfter=No
 33	.	.	PUNCT	_	_	6	punct	_	_
 
+# sent_id = 32
 # text = Integrou a comitiva do presidente João Goulart em visita a esse país, em abril de 1962, chefiou a delegação brasileira no Grupo Misto Cooperação Internacional Brasil-México, em outubro seguinte, e em novembro a missão encarregada de negociar a conclusão de um acordo aéreo junto ao governo mexicano.
-# sent_id = 33
-1	Integrou	integrar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	20	advcl	_	_
+1	Integrou	integrar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	3	det	_	_
 3	comitiva	comitiva	NOUN	_	Gender=Fem|Number=Sing	1	obj	_	_
 4-5	do	_	_	_	_	_	_	_	_
 4	de	de	ADP	_	_	6	case	_	_
 5	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	6	det	_	_
 6	presidente	presidente	NOUN	_	Gender=Masc|Number=Sing	3	nmod	_	_
-7	João	João	PROPN	_	Gender=Masc|Number=Sing	6	appos	_	_
+7	João	João	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	6	appos	_	_
 8	Goulart	Goulart	PROPN	_	Number=Sing	7	flat:name	_	_
 9	em	em	ADP	_	_	10	case	_	_
-10	visita	visita	NOUN	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	1	obl	_	_
+10	visita	visita	NOUN	_	Gender=Fem|Number=Sing	1	obl	_	_
 11	a	a	ADP	_	_	13	case	_	_
 12	esse	esse	DET	_	Gender=Masc|Number=Sing|PronType=Dem	13	det	_	_
-13	país	país	NOUN	_	Gender=Masc|Number=Sing	1	obl	_	SpaceAfter=No
-14	,	,	PUNCT	_	_	1	punct	_	_
+13	país	país	NOUN	_	Gender=Masc|Number=Sing	10	nmod	_	SpaceAfter=No
+14	,	,	PUNCT	_	_	16	punct	_	_
 15	em	em	ADP	_	_	16	case	_	_
 16	abril	abril	NOUN	_	Gender=Masc|Number=Sing	1	obl	_	_
 17	de	de	ADP	_	_	18	case	_	_
 18	1962	1962	NUM	_	NumType=Card	16	nmod	_	SpaceAfter=No
-19	,	,	PUNCT	_	_	1	punct	_	_
-20	chefiou	chefiar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+19	,	,	PUNCT	_	_	16	punct	_	_
+20	chefiou	chefiar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	1	conj	_	_
 21	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	22	det	_	_
 22	delegação	delegação	NOUN	_	Gender=Fem|Number=Sing	20	obj	_	_
 23	brasileira	brasileiro	ADJ	_	Gender=Fem|Number=Sing	22	amod	_	_
 24-25	no	_	_	_	_	_	_	_	_
 24	em	em	ADP	_	_	26	case	_	_
 25	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	26	det	_	_
-26	Grupo	Grupo	PROPN	_	Gender=Masc|Number=Sing	20	obl	_	_
-27	Misto	mer	PROPN	_	Gender=Masc|Number=Sing	26	appos	_	_
-28	Cooperação	Cooperação	PROPN	_	Number=Sing	27	flat:name	_	_
-29	Internacional	Internacional	PROPN	_	Number=Sing	27	flat:name	_	_
-30	Brasil-México	Brasil-México	PROPN	_	Number=Sing	27	flat:name	_	SpaceAfter=No
-31	,	,	PUNCT	_	_	20	punct	_	_
+26	Grupo	Grupo	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	20	obl	_	_
+27	Misto	Misto	PROPN	_	Number=Sing	26	flat:name	_	_
+28	Cooperação	Cooperação	PROPN	_	Number=Sing	26	flat:name	_	_
+29	Internacional	Internacional	PROPN	_	Number=Sing	26	flat:name	_	_
+30	Brasil-México	Brasil-méxico	PROPN	_	Number=Sing	26	flat:name	_	SpaceAfter=No
+31	,	,	PUNCT	_	_	33	punct	_	_
 32	em	em	ADP	_	_	33	case	_	_
 33	outubro	outubro	NOUN	_	Gender=Masc|Number=Sing	20	obl	_	_
 34	seguinte	seguinte	ADJ	_	Gender=Masc|Number=Sing	33	amod	_	SpaceAfter=No
-35	,	,	PUNCT	_	_	40	punct	_	_
+35	,	,	PUNCT	_	_	33	punct	_	_
 36	e	e	CCONJ	_	_	40	cc	_	_
 37	em	em	ADP	_	_	38	case	_	_
-38	novembro	novembro	NOUN	_	Gender=Masc|Number=Sing	40	nmod	_	_
+38	novembro	novembro	NOUN	_	Gender=Masc|Number=Sing	26	conj	_	_
 39	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	40	det	_	_
 40	missão	missão	NOUN	_	Gender=Fem|Number=Sing	20	conj	_	_
 41	encarregada	encarregar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	40	acl	_	_
-42	de	de	ADP	_	_	43	mark	_	_
+42	de	de	SCONJ	_	_	43	mark	_	_
 43	negociar	negociar	VERB	_	VerbForm=Inf	41	xcomp	_	_
 44	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	45	det	_	_
 45	conclusão	conclusão	NOUN	_	Gender=Fem|Number=Sing	43	obj	_	_
@@ -1403,16 +1396,16 @@
 47	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	48	det	_	_
 48	acordo	acordo	NOUN	_	Gender=Masc|Number=Sing	45	nmod	_	_
 49	aéreo	aéreo	ADJ	_	Gender=Masc|Number=Sing	48	amod	_	_
-50	junto	junto	ADV	_	_	48	advmod	_	_
+50	junto	junto	ADV	_	_	43	advmod	_	_
 51-52	ao	_	_	_	_	_	_	_	_
 51	a	a	ADP	_	_	53	case	_	_
 52	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	53	det	_	_
 53	governo	governo	NOUN	_	Gender=Masc|Number=Sing	50	obl	_	_
 54	mexicano	mexicano	ADJ	_	Gender=Masc|Number=Sing	53	amod	_	SpaceAfter=No
-55	.	.	PUNCT	_	_	20	punct	_	_
+55	.	.	PUNCT	_	_	1	punct	_	_
 
+# sent_id = 33
 # text = Em junho de 1964, representou o Brasil na comissão criada pela ONU para examinar a situação do Camboja, cuja neutralidade via-se cada vez mais ameaçada com a intensificação da guerra no Vietnã.
-# sent_id = 34
 1	Em	em	ADP	_	_	2	case	_	_
 2	junho	junho	NOUN	_	Gender=Masc|Number=Sing	6	obl	_	_
 3	de	de	ADP	_	_	4	case	_	_
@@ -1430,24 +1423,24 @@
 13	por	por	ADP	_	_	15	case	_	_
 14	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	15	det	_	_
 15	ONU	ONU	PROPN	_	Gender=Fem|Number=Sing	12	obl:agent	_	_
-16	para	para	ADP	_	_	17	mark	_	_
+16	para	para	SCONJ	_	_	17	mark	_	_
 17	examinar	examinar	VERB	_	VerbForm=Inf	12	advcl	_	_
 18	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	19	det	_	_
 19	situação	situação	NOUN	_	Gender=Fem|Number=Sing	17	obj	_	_
 20-21	do	_	_	_	_	_	_	_	_
 20	de	de	ADP	_	_	22	case	_	_
 21	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	22	det	_	_
-22	Camboja	Camboja	PROPN	_	Gender=Fem|Number=Sing	19	nmod	_	SpaceAfter=No
+22	Camboja	Camboja	PROPN	_	Gender=Masc|Number=Sing	19	nmod	_	SpaceAfter=No
 23	,	,	PUNCT	_	_	26	punct	_	_
 24	cuja	cujo	DET	_	Gender=Fem|Number=Sing|PronType=Rel	25	det	_	_
-25	neutralidade	neutralidade	NOUN	_	Gender=Fem|Number=Sing	22	appos	_	_
+25	neutralidade	neutralidade	NOUN	_	Gender=Fem|Number=Sing	26	nsubj	_	_
 26-27	via-se	_	_	_	_	_	_	_	_
-26	via	ver	VERB	_	_	25	acl	_	_
-27	se	se	PRON	_	_	31	mark	_	_
-28	cada	cada	NOUN	_	Gender=Fem|Number=Sing|PronType=Tot	31	nmod:npmod	_	_
-29	vez	vez	ADP	_	Gender=Fem|Number=Sing	30	case	_	_
-30	mais	mais	NOUN	_	_	28	nmod	_	_
-31	ameaçada	ameaçar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	26	advcl	_	_
+26	via	ver	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	22	acl:relcl	_	_
+27	se	se	PRON	_	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	26	expl	_	_
+28	cada	cada	NOUN	_	Gender=Masc|Number=Sing	31	obl	_	_
+29	vez	vez	ADP	_	_	30	case	_	_
+30	mais	mais	NOUN	_	Gender=Masc|Number=Sing	28	nmod	_	_
+31	ameaçada	ameaçar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	26	xcomp	_	_
 32	com	com	ADP	_	_	34	case	_	_
 33	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	34	det	_	_
 34	intensificação	intensificação	NOUN	_	Gender=Fem|Number=Sing	31	obl	_	_
@@ -1459,11 +1452,10 @@
 38	em	em	ADP	_	_	40	case	_	_
 39	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	40	det	_	_
 40	Vietnã	Vietnã	PROPN	_	Gender=Masc|Number=Sing	37	nmod	_	SpaceAfter=No
-41	.	.	PUNCT	_	_	31	punct	_	_
+41	.	.	PUNCT	_	_	6	punct	_	SpacesAfter=\n
 
+# sent_id = 34
 # text = Deixando o México, assumiu a chefia da embaixada brasileira em Montevidéu em setembro de 1964.
-# sent_id = 35
-# newpar
 1	Deixando	deixar	VERB	_	VerbForm=Ger	5	advcl	_	_
 2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
 3	México	México	PROPN	_	Gender=Masc|Number=Sing	1	obj	_	SpaceAfter=No
@@ -1484,10 +1476,10 @@
 17	1964	1964	NUM	_	NumType=Card	15	nmod	_	SpaceAfter=No
 18	.	.	PUNCT	_	_	5	punct	_	_
 
+# sent_id = 35
 # text = Segundo Luís Viana Filho, os meses que se seguiram ao movimento político-militar de 31 de março de 1964, que depôs o presidente João Goulart, foram marcados por um clima tenso nas relações entre o Brasil e o Uruguai, que concedeu asilo a numerosos elementos ligados ao governo deposto, a começar pelo ex-presidente, permitindo que os asilados se manifestassem livremente contra o recém-instaurado regime militar brasileiro.
-# sent_id = 36
 1	Segundo	segundo	ADP	_	_	2	case	_	_
-2	Luís	Luís	PROPN	_	Gender=Masc|Number=Sing	30	obl	_	_
+2	Luís	Luís	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	30	obl	_	_
 3	Viana	Viana	PROPN	_	Number=Sing	2	flat:name	_	_
 4	Filho	Filho	PROPN	_	Number=Sing	2	flat:name	_	SpaceAfter=No
 5	,	,	PUNCT	_	_	2	punct	_	_
@@ -1499,20 +1491,20 @@
 11-12	ao	_	_	_	_	_	_	_	_
 11	a	a	ADP	_	_	13	case	_	_
 12	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	13	det	_	_
-13	movimento	movimento	NOUN	_	Gender=Masc|Number=Sing	7	nmod	_	_
-14	político-militar	político-militar	ADJ	_	VerbForm=Inf	13	amod	_	_
+13	movimento	movimento	NOUN	_	Gender=Masc|Number=Sing	10	obj	_	_
+14	político-militar	político-militar	ADJ	_	Gender=Masc|Number=Sing	13	amod	_	_
 15	de	de	ADP	_	_	16	case	_	_
 16	31	31	NUM	_	NumType=Card	13	nmod	_	_
 17	de	de	ADP	_	_	18	case	_	_
-18	março	março	NOUN	_	Gender=Masc|Number=Sing	16	nmod:tmod	_	_
+18	março	março	NOUN	_	Gender=Masc|Number=Sing	16	nmod	_	_
 19	de	de	ADP	_	_	20	case	_	_
 20	1964	1964	NUM	_	NumType=Card	18	nmod	_	SpaceAfter=No
-21	,	,	PUNCT	_	_	10	punct	_	_
+21	,	,	PUNCT	_	_	23	punct	_	_
 22	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	23	nsubj	_	_
 23	depôs	depor	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	13	acl:relcl	_	_
 24	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	25	det	_	_
 25	presidente	presidente	NOUN	_	Gender=Masc|Number=Sing	23	obj	_	_
-26	João	João	PROPN	_	Gender=Masc|Number=Sing	25	appos	_	_
+26	João	João	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	25	appos	_	_
 27	Goulart	Goulart	PROPN	_	Number=Sing	26	flat:name	_	SpaceAfter=No
 28	,	,	PUNCT	_	_	23	punct	_	_
 29	foram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	30	aux:pass	_	_
@@ -1520,66 +1512,66 @@
 31	por	por	ADP	_	_	33	case	_	_
 32	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	33	det	_	_
 33	clima	clima	NOUN	_	Gender=Masc|Number=Sing	30	obl:agent	_	_
-34	tenso	tenso	ADJ	_	Gender=Masc|Number=Sing|VerbForm=Part	33	amod	_	_
+34	tenso	tenso	ADJ	_	Gender=Masc|Number=Sing	33	amod	_	_
 35-36	nas	_	_	_	_	_	_	_	_
 35	em	em	ADP	_	_	37	case	_	_
 36	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	37	det	_	_
-37	relações	relação	NOUN	_	Gender=Fem|Number=Plur	34	obl	_	_
+37	relações	relação	NOUN	_	Gender=Fem|Number=Plur	33	nmod	_	_
 38	entre	entre	ADP	_	_	40	case	_	_
 39	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	40	det	_	_
 40	Brasil	Brasil	PROPN	_	Gender=Masc|Number=Sing	37	nmod	_	_
 41	e	e	CCONJ	_	_	43	cc	_	_
 42	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	43	det	_	_
 43	Uruguai	Uruguai	PROPN	_	Gender=Masc|Number=Sing	40	conj	_	SpaceAfter=No
-44	,	,	PUNCT	_	_	30	punct	_	_
+44	,	,	PUNCT	_	_	46	punct	_	_
 45	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	46	nsubj	_	_
 46	concedeu	conceder	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	40	acl:relcl	_	_
 47	asilo	asilo	NOUN	_	Gender=Masc|Number=Sing	46	obj	_	_
 48	a	a	ADP	_	_	50	case	_	_
-49	numerosos	numeroso	ADJ	_	Gender=Masc|Number=Plur	50	amod	_	_
-50	elementos	elemento	NOUN	_	Gender=Masc|Number=Plur	46	obl	_	_
+49	numerosos	numeroso	DET	_	Gender=Masc|Number=Plur|PronType=Ind	50	det	_	_
+50	elementos	elemento	NOUN	_	Gender=Masc|Number=Plur	46	iobj	_	_
 51	ligados	ligar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part	50	acl	_	_
 52-53	ao	_	_	_	_	_	_	_	_
 52	a	a	ADP	_	_	54	case	_	_
 53	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	54	det	_	_
-54	governo	governo	NOUN	_	Gender=Masc|Number=Sing	51	obl	_	_
-55	deposto	deposto	ADJ	_	Gender=Masc|Number=Sing|VerbForm=Part	54	amod	_	SpaceAfter=No
+54	governo	governo	NOUN	_	Gender=Masc|Number=Sing	51	obj	_	_
+55	deposto	depor	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	54	acl	_	SpaceAfter=No
 56	,	,	PUNCT	_	_	58	punct	_	_
-57	a	a	ADP	_	_	58	mark	_	_
+57	a	a	SCONJ	_	_	58	mark	_	_
 58	começar	começar	VERB	_	VerbForm=Inf	46	advcl	_	_
 59-60	pelo	_	_	_	_	_	_	_	_
 59	por	por	ADP	_	_	61	case	_	_
 60	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	61	det	_	_
-61	ex-presidente	ex-presidente	NOUN	_	Gender=Masc|Number=Sing	58	obl	_	SpaceAfter=No
-62	,	,	PUNCT	_	_	58	punct	_	_
-63	permitindo	permitir	VERB	_	VerbForm=Ger	58	advcl	_	_
+61	ex-presidente	ex-presidente	NOUN	_	Gender=Masc|Number=Sing	58	obl:agent	_	SpaceAfter=No
+62	,	,	PUNCT	_	_	63	punct	_	_
+63	permitindo	permitir	VERB	_	VerbForm=Ger	46	advcl	_	_
 64	que	que	SCONJ	_	_	68	mark	_	_
 65	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	66	det	_	_
 66	asilados	asilado	NOUN	_	Gender=Masc|Number=Plur	68	nsubj	_	_
 67	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Plur|Person=3|PronType=Prs	68	expl	_	_
 68	manifestassem	manifestar	VERB	_	Mood=Sub|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	63	ccomp	_	_
 69	livremente	livremente	ADV	_	_	68	advmod	_	_
-70	contra	contra	ADP	_	_	72	mark	_	_
-71	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	72	det	_	_
-72	recém-instaurado	recém-instaurar	VERB	_	Gender=Masc|Number=Sing	68	advcl	_	_
-73	regime	regime	NOUN	_	Gender=Masc|Number=Sing	72	obj	_	_
+70	contra	contra	ADP	_	_	73	case	_	_
+71	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	73	det	_	_
+72	recém-instaurado	recém-instaurado	ADJ	_	Gender=Masc|Number=Sing	73	amod	_	_
+73	regime	regime	NOUN	_	Gender=Masc|Number=Sing	68	obl	_	_
 74	militar	militar	ADJ	_	Gender=Masc|Number=Sing	73	amod	_	_
 75	brasileiro	brasileiro	ADJ	_	Gender=Masc|Number=Sing	73	amod	_	SpaceAfter=No
 76	.	.	PUNCT	_	_	30	punct	_	_
 
+# sent_id = 36
 # text = Caracterizando tais manifestações como tentativas de desestabilizar o poder revolucionário, os setores mais radicais das forças armadas exigiram que o presidente da República, marechal Humberto Castelo Branco, pressionasse o governo uruguaio para coibi-las.
-# sent_id = 37
-1	Caracterizando	Caracterizar	VERB	_	VerbForm=Ger	20	advcl	_	_
+1	Caracterizando	caracterizar	VERB	_	VerbForm=Ger	20	advcl	_	_
 2	tais	tal	DET	_	Gender=Fem|Number=Plur|PronType=Dem	3	det	_	_
 3	manifestações	manifestação	NOUN	_	Gender=Fem|Number=Plur	1	obj	_	_
 4	como	como	ADP	_	_	5	case	_	_
-5	tentativas	tentativa	NOUN	_	Gender=Fem|Number=Plur	1	obl	_	_
-6	de	de	ADP	_	_	7	mark	_	_
+5	tentativas	tentativa	NOUN	_	Gender=Fem|Number=Plur	1	xcomp	_	_
+6	de	de	SCONJ	_	_	7	mark	_	_
 7	desestabilizar	desestabilizar	VERB	_	VerbForm=Inf	5	acl	_	_
 8	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	9	det	_	_
 9	poder	poder	NOUN	_	Gender=Masc|Number=Sing	7	obj	_	_
 10	revolucionário	revolucionário	ADJ	_	Gender=Masc|Number=Sing	9	amod	_	SpaceAfter=No
-11	,	,	PUNCT	_	_	7	punct	_	_
+11	,	,	PUNCT	_	_	1	punct	_	_
 12	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	13	det	_	_
 13	setores	setor	NOUN	_	Gender=Masc|Number=Plur	20	nsubj	_	_
 14	mais	mais	ADV	_	_	15	advmod	_	_
@@ -1596,41 +1588,41 @@
 24-25	da	_	_	_	_	_	_	_	_
 24	de	de	ADP	_	_	26	case	_	_
 25	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	26	det	_	_
-26	República	República	PROPN	_	Number=Sing	23	nmod	_	SpaceAfter=No
+26	República	república	NOUN	_	Gender=Fem|Number=Sing	23	nmod	_	SpaceAfter=No
 27	,	,	PUNCT	_	_	28	punct	_	_
 28	marechal	marechal	NOUN	_	Gender=Masc|Number=Sing	23	appos	_	_
-29	Humberto	Humberto	PROPN	_	Number=Sing	28	flat:name	_	_
-30	Castelo	castelo	PROPN	_	Number=Sing	28	flat:name	_	_
-31	Branco	Branco	PROPN	_	Number=Sing	28	flat:name	_	SpaceAfter=No
+29	Humberto	Humberto	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	28	appos	_	_
+30	Castelo	Castelo	PROPN	_	Number=Sing	29	flat:name	_	_
+31	Branco	Branco	PROPN	_	Number=Sing	29	flat:name	_	SpaceAfter=No
 32	,	,	PUNCT	_	_	28	punct	_	_
 33	pressionasse	pressionar	VERB	_	Mood=Sub|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	20	ccomp	_	_
 34	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	35	det	_	_
 35	governo	governo	NOUN	_	Gender=Masc|Number=Sing	33	obj	_	_
 36	uruguaio	uruguaio	ADJ	_	Gender=Masc|Number=Sing	35	amod	_	_
-37	para	para	ADP	_	_	38	mark	_	_
+37	para	para	SCONJ	_	_	38	mark	_	_
 38-39	coibi-las	_	_	_	_	_	_	_	SpaceAfter=No
-38	coibi	coiber	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	33	advcl	_	_
-39	las	ela	PRON	_	Gender=Fem|Number=Plur	38	obj	_	_
+38	coibi	coibir	VERB	_	VerbForm=Inf	33	advcl	_	_
+39	las	elas	PRON	_	Case=Acc|Gender=Fem|Number=Plur|Person=3|PronType=Prs	38	obj	_	_
 40	.	.	PUNCT	_	_	20	punct	_	_
 
+# sent_id = 37
 # text = Incumbido de contornar a crise, Pio Correia conseguiu persuadir as autoridades uruguaias a se aterem às normas do direito de asilo em relação aos brasileiros, mas, conforme recomendação do próprio Castelo Branco, “sem pôr em risco a paz e a amizade” entre os dois países, cujas relações se normalizaram a partir de então.
-# sent_id = 38
-1	Incumbido	Incumbir	AUX	_	Gender=Masc|Number=Sing|VerbForm=Part	3	aux	_	_
-2	de	de	ADP	_	_	3	obl	_	_
-3	contornar	contornar	VERB	_	VerbForm=Inf	9	dep	_	_
+1	Incumbido	incumbir	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	7	acl	_	_
+2	de	de	SCONJ	_	_	3	mark	_	_
+3	contornar	contornar	VERB	_	VerbForm=Inf	1	xcomp	_	_
 4	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	5	det	_	_
 5	crise	crise	NOUN	_	Gender=Fem|Number=Sing	3	obj	_	SpaceAfter=No
-6	,	,	PUNCT	_	_	3	punct	_	_
-7	Pio	Pio	PROPN	_	Gender=Masc|Number=Sing	9	nsubj	_	_
+6	,	,	PUNCT	_	_	1	punct	_	_
+7	Pio	Pio	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	9	nsubj	_	_
 8	Correia	Correia	PROPN	_	Number=Sing	7	flat:name	_	_
 9	conseguiu	conseguir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 10	persuadir	persuadir	VERB	_	VerbForm=Inf	9	xcomp	_	_
 11	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	12	det	_	_
 12	autoridades	autoridade	NOUN	_	Gender=Fem|Number=Plur	10	obj	_	_
 13	uruguaias	uruguaio	ADJ	_	Gender=Fem|Number=Plur	12	amod	_	_
-14	a	a	ADP	_	_	16	mark	_	_
-15	se	se	PRON	_	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	16	expl	_	_
-16	aterem	ater	VERB	_	Mood=Sub|Number=Plur|Person=3|Tense=Fut|VerbForm=Fin	10	advcl	_	_
+14	a	a	SCONJ	_	_	16	mark	_	_
+15	se	se	PRON	_	Case=Acc|Gender=Fem|Number=Plur|Person=3|PronType=Prs	16	expl	_	_
+16	aterem	ater	VERB	_	Number=Plur|Person=3|VerbForm=Inf	10	xcomp	_	_
 17-18	às	_	_	_	_	_	_	_	_
 17	a	a	ADP	_	_	19	case	_	_
 18	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	19	det	_	_
@@ -1641,87 +1633,87 @@
 22	direito	direito	NOUN	_	Gender=Masc|Number=Sing	19	nmod	_	_
 23	de	de	ADP	_	_	24	case	_	_
 24	asilo	asilo	NOUN	_	Gender=Masc|Number=Sing	22	nmod	_	_
-25	em	em	ADP	_	_	26	case	_	_
-26	relação	relação	NOUN	_	_	16	obl	_	_
+25	em	em	ADP	_	ExtPos=ADP	29	case	_	_
+26	relação	relação	NOUN	_	Gender=Fem|Number=Sing	25	fixed	_	_
 27-28	aos	_	_	_	_	_	_	_	_
-27	a	a	ADP	_	_	29	case	_	_
+27	a	a	ADP	_	_	25	fixed	_	_
 28	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	29	det	_	_
-29	brasileiros	brasileiro	NOUN	_	Gender=Masc|Number=Plur	26	nmod	_	SpaceAfter=No
-30	,	,	PUNCT	_	_	60	punct	_	_
-31	mas	mas	CCONJ	_	_	60	cc	_	SpaceAfter=No
-32	,	,	PUNCT	_	_	60	punct	_	_
+29	brasileiros	brasileiro	NOUN	_	Gender=Masc|Number=Plur	22	nmod	_	SpaceAfter=No
+30	,	,	PUNCT	_	_	43	punct	_	_
+31	mas	mas	CCONJ	_	_	43	cc	_	SpaceAfter=No
+32	,	,	PUNCT	_	_	34	punct	_	_
 33	conforme	conforme	ADP	_	_	34	case	_	_
-34	recomendação	recomendação	NOUN	_	Gender=Fem|Number=Sing	60	obl	_	_
+34	recomendação	recomendação	NOUN	_	Gender=Fem|Number=Sing	43	obl	_	_
 35-36	do	_	_	_	_	_	_	_	_
 35	de	de	ADP	_	_	38	case	_	_
 36	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	38	det	_	_
 37	próprio	próprio	DET	_	Gender=Masc|Number=Sing|PronType=Emp	38	det	_	_
-38	Castelo	Castelo	PROPN	_	Gender=Masc|Number=Sing	34	nmod	_	_
+38	Castelo	Castelo	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	34	nmod	_	_
 39	Branco	Branco	PROPN	_	Number=Sing	38	flat:name	_	SpaceAfter=No
-40	,	,	PUNCT	_	_	60	punct	_	_
-41	“	“	PUNCT	_	_	60	punct	_	SpaceAfter=No
-42	sem	sem	ADP	_	_	43	case	_	_
-43	pôr	pôr	NOUN	_	VerbForm=Inf	60	obl	_	_
+40	,	,	PUNCT	_	_	34	punct	_	_
+41	“	"	PUNCT	_	_	43	punct	_	SpaceAfter=No
+42	sem	sem	SCONJ	_	_	43	mark	_	_
+43	pôr	pôr	VERB	_	VerbForm=Inf	9	advcl	_	_
 44	em	em	ADP	_	_	45	case	_	_
-45	risco	risco	NOUN	_	Gender=Masc|Number=Sing	43	nmod	_	_
+45	risco	risco	NOUN	_	Gender=Masc|Number=Sing	43	obl	_	_
 46	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	47	det	_	_
-47	paz	paz	NOUN	_	Gender=Fem|Number=Sing	45	conj	_	_
+47	paz	paz	NOUN	_	Gender=Fem|Number=Sing	43	obj	_	_
 48	e	e	CCONJ	_	_	50	cc	_	_
 49	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	50	det	_	_
-50	amizade	amizade	NOUN	_	Gender=Fem|Number=Sing	43	conj	_	SpaceAfter=No
-51	”	”	PUNCT	_	_	43	punct	_	_
+50	amizade	amizade	NOUN	_	Gender=Fem|Number=Sing	47	conj	_	SpaceAfter=No
+51	”	"	PUNCT	_	_	55	punct	_	_
 52	entre	entre	ADP	_	_	55	case	_	_
 53	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	55	det	_	_
 54	dois	dois	NUM	_	NumType=Card	55	nummod	_	_
-55	países	país	NOUN	_	Gender=Masc|Number=Plur	50	nmod	_	SpaceAfter=No
-56	,	,	PUNCT	_	_	43	punct	_	_
+55	países	país	NOUN	_	Gender=Masc|Number=Plur	47	nmod	_	SpaceAfter=No
+56	,	,	PUNCT	_	_	60	punct	_	_
 57	cujas	cujo	DET	_	Gender=Fem|Number=Plur|PronType=Rel	58	det	_	_
 58	relações	relação	NOUN	_	Gender=Fem|Number=Plur	60	nsubj	_	_
-59	se	se	PRON	_	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	60	expl	_	_
-60	normalizaram	normalizar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	29	conj	_	_
-61	a	a	ADP	_	_	62	case	_	_
-62	partir	partir	NOUN	_	_	60	obl	_	_
-63	de	de	ADP	_	_	64	case	_	_
-64	então	então	ADV	_	_	62	advmod	_	SpaceAfter=No
+59	se	se	PRON	_	Case=Acc|Gender=Fem|Number=Plur|Person=3|PronType=Prs	60	expl	_	_
+60	normalizaram	normalizar	VERB	_	Mood=Ind|Number=Plur|Person=3|VerbForm=Fin	55	acl:relcl	_	_
+61	a	a	ADP	_	ExtPos=ADP	64	case	_	_
+62	partir	partir	NOUN	_	_	61	fixed	_	_
+63	de	de	ADP	_	_	61	fixed	_	_
+64	então	então	ADV	_	_	60	advmod	_	SpaceAfter=No
 65	.	.	PUNCT	_	_	9	punct	_	_
 
+# sent_id = 38
 # text = De acordo com Philip Agee, porém, Pio Correia participou diretamente das ações da Central Intelligence Agency (CIA) no Uruguai, relacionadas à vigilância dos exilados brasileiros.
-# sent_id = 39
 1	De	de	ADP	_	_	2	case	_	_
 2	acordo	acordo	NOUN	_	Gender=Masc|Number=Sing	11	obl	_	_
 3	com	com	ADP	_	_	4	case	_	_
-4	Philip	Philip	PROPN	_	Gender=Masc|Number=Sing	2	nmod	_	_
+4	Philip	Philip	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	2	nmod	_	_
 5	Agee	Agee	PROPN	_	Number=Sing	4	flat:name	_	SpaceAfter=No
 6	,	,	PUNCT	_	_	2	punct	_	_
-7	porém	porém	ADV	_	_	11	advmod	_	SpaceAfter=No
+7	porém	porém	CCONJ	_	_	11	cc	_	SpaceAfter=No
 8	,	,	PUNCT	_	_	7	punct	_	_
-9	Pio	Pio	PROPN	_	Gender=Masc|Number=Sing	11	nsubj	_	_
+9	Pio	Pio	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	11	nsubj	_	_
 10	Correia	Correia	PROPN	_	Number=Sing	9	flat:name	_	_
 11	participou	participar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 12	diretamente	diretamente	ADV	_	_	11	advmod	_	_
 13-14	das	_	_	_	_	_	_	_	_
 13	de	de	ADP	_	_	15	case	_	_
 14	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	15	det	_	_
-15	ações	ação	NOUN	_	Gender=Fem|Number=Plur	12	obl	_	_
+15	ações	ação	NOUN	_	Gender=Fem|Number=Plur	11	obj	_	_
 16-17	da	_	_	_	_	_	_	_	_
 16	de	de	ADP	_	_	18	case	_	_
 17	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	18	det	_	_
-18	Central	Central	PROPN	_	Gender=Fem|Number=Sing	15	nmod	_	_
+18	Central	Central	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	15	nmod	_	_
 19	Intelligence	Intelligence	PROPN	_	Number=Sing	18	flat:name	_	_
 20	Agency	Agency	PROPN	_	Number=Sing	18	flat:name	_	_
 21	(	(	PUNCT	_	_	22	punct	_	SpaceAfter=No
-22	CIA	CIA	PROPN	_	Gender=Masc|Number=Sing	18	appos	_	SpaceAfter=No
+22	CIA	CIA	PROPN	_	Gender=Fem|Number=Sing	18	appos	_	SpaceAfter=No
 23	)	)	PUNCT	_	_	22	punct	_	_
 24-25	no	_	_	_	_	_	_	_	_
 24	em	em	ADP	_	_	26	case	_	_
 25	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	26	det	_	_
-26	Uruguai	Uruguai	PROPN	_	Gender=Masc|Number=Sing	11	obl	_	SpaceAfter=No
+26	Uruguai	Uruguai	PROPN	_	Gender=Masc|Number=Sing	15	nmod	_	SpaceAfter=No
 27	,	,	PUNCT	_	_	28	punct	_	_
-28	relacionadas	relacionar	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part	26	acl	_	_
+28	relacionadas	relacionar	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part	15	acl	_	_
 29-30	à	_	_	_	_	_	_	_	_
 29	a	a	ADP	_	_	31	case	_	_
 30	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	31	det	_	_
-31	vigilância	vigilância	NOUN	_	Gender=Fem|Number=Sing	28	obl	_	_
+31	vigilância	vigilância	NOUN	_	Gender=Fem|Number=Sing	28	obj	_	_
 32-33	dos	_	_	_	_	_	_	_	_
 32	de	de	ADP	_	_	34	case	_	_
 33	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	34	det	_	_
@@ -1729,30 +1721,30 @@
 35	brasileiros	brasileiro	ADJ	_	Gender=Masc|Number=Plur	34	amod	_	SpaceAfter=No
 36	.	.	PUNCT	_	_	11	punct	_	_
 
+# sent_id = 39
 # text = Segundo Agee, “Pio Correia já trabalhava para a CIA antes de seguir para Montevidéu e dele se esperava a pressão política sobre o governo uruguaio.
-# sent_id = 40
 1	Segundo	segundo	ADP	_	_	2	case	_	_
 2	Agee	Agee	PROPN	_	Gender=Masc|Number=Sing	8	obl	_	SpaceAfter=No
 3	,	,	PUNCT	_	_	2	punct	_	_
-4	“	“	PUNCT	_	_	2	punct	_	SpaceAfter=No
-5	Pio	Pio	PROPN	_	Gender=Masc|Number=Sing	8	nsubj	_	_
+4	“	"	PUNCT	_	_	8	punct	_	SpaceAfter=No
+5	Pio	Pio	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	8	nsubj	_	_
 6	Correia	Correia	PROPN	_	Number=Sing	5	flat:name	_	_
 7	já	já	ADV	_	_	8	advmod	_	_
 8	trabalhava	trabalhar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	0	root	_	_
 9	para	para	ADP	_	_	11	case	_	_
 10	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	11	det	_	_
-11	CIA	cia	NOUN	_	Gender=Masc|Number=Sing	8	obl	_	_
-12	antes	antes	ADV	_	_	8	advmod	_	_
-13	de	de	ADP	_	_	14	mark	_	_
-14	seguir	seguir	VERB	_	VerbForm=Inf	12	advcl	_	_
+11	CIA	CIA	PROPN	_	Gender=Fem|Number=Sing	8	obl	_	_
+12	antes	antes	ADV	_	ExtPos=SCONJ	14	mark	_	_
+13	de	de	ADP	_	_	12	fixed	_	_
+14	seguir	seguir	VERB	_	VerbForm=Inf	8	advcl	_	_
 15	para	para	ADP	_	_	16	case	_	_
 16	Montevidéu	Montevidéu	PROPN	_	Gender=Masc|Number=Sing	14	obl	_	_
-17	e	e	CCONJ	_	_	19	cc	_	_
+17	e	e	CCONJ	_	_	21	cc	_	_
 18-19	dele	_	_	_	_	_	_	_	_
 18	de	de	ADP	_	_	19	case	_	_
-19	ele	ele	PRON	_	Gender=Masc|Number=Sing|Person=3|PronType=Prs	16	conj	_	_
-20	se	se	PRON	_	Case=Acc|Gender=Unsp|PronType=Prs	8	nsubj	_	_
-21	esperava	esperar	VERB	_	Mood=Ind|Number=Sing|Person=1|Tense=Imp|VerbForm=Fin	8	xcomp	_	_
+19	ele	ele	PRON	_	Gender=Masc|Number=Sing|Person=3|PronType=Prs	21	obl	_	_
+20	se	se	PRON	_	Case=Acc|PronType=Prs	21	nsubj	_	_
+21	esperava	esperar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	8	conj	_	_
 22	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	23	det	_	_
 23	pressão	pressão	NOUN	_	Gender=Fem|Number=Sing	21	obj	_	_
 24	política	político	ADJ	_	Gender=Fem|Number=Sing	23	amod	_	_
@@ -1762,11 +1754,11 @@
 28	uruguaio	uruguaio	ADJ	_	Gender=Masc|Number=Sing	27	amod	_	SpaceAfter=No
 29	.	.	PUNCT	_	_	8	punct	_	_
 
+# sent_id = 40
 # text = Logo ao chegar, ele visitou unidades militares na fronteira com o Brasil”.
-# sent_id = 41
-1	Logo	logo	ADV	_	_	7	advmod	_	_
+1	Logo	logo	ADV	_	_	4	advmod	_	_
 2-3	ao	_	_	_	_	_	_	_	_
-2	a	a	ADP	_	_	4	mark	_	_
+2	a	a	SCONJ	_	_	4	mark	_	_
 3	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	4	det	_	_
 4	chegar	chegar	VERB	_	VerbForm=Inf	7	advcl	_	SpaceAfter=No
 5	,	,	PUNCT	_	_	4	punct	_	_
@@ -1781,12 +1773,11 @@
 13	com	com	ADP	_	_	15	case	_	_
 14	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	15	det	_	_
 15	Brasil	Brasil	PROPN	_	Gender=Masc|Number=Sing	12	nmod	_	SpaceAfter=No
-16	”	”	PUNCT	_	_	7	punct	_	SpaceAfter=No
-17	.	.	PUNCT	_	_	7	punct	_	_
+16	”	"	PUNCT	_	_	7	punct	_	SpaceAfter=No
+17	.	.	PUNCT	_	_	7	punct	_	SpacesAfter=\n
 
+# sent_id = 41
 # text = De volta ao Brasil em 1966, foi nomeado secretário-geral do Itamarati, e chegou a assumir interinamente a função de ministro das Relações Exteriores do governo Castelo Branco, durante os impedimentos do chanceler Juraci Magalhães, em 1966 e 1967.
-# sent_id = 42
-# newpar
 1	De	de	ADP	_	_	2	case	_	_
 2	volta	volta	NOUN	_	Gender=Fem|Number=Sing	10	obl	_	_
 3-4	ao	_	_	_	_	_	_	_	_
@@ -1803,11 +1794,11 @@
 12	de	de	ADP	_	_	14	case	_	_
 13	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	14	det	_	_
 14	Itamarati	Itamarati	PROPN	_	Gender=Masc|Number=Sing	11	nmod	_	SpaceAfter=No
-15	,	,	PUNCT	_	_	19	punct	_	_
-16	e	e	CCONJ	_	_	19	cc	_	_
-17	chegou	chegar	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	19	aux	_	_
-18	a	a	ADP	_	_	19	obl	_	_
-19	assumir	assumir	VERB	_	VerbForm=Inf	10	conj	_	_
+15	,	,	PUNCT	_	_	17	punct	_	_
+16	e	e	CCONJ	_	_	17	cc	_	_
+17	chegou	chegar	VERB	_	ExtPos=AUX|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	10	conj	_	_
+18	a	a	SCONJ	_	_	19	mark	_	_
+19	assumir	assumir	VERB	_	VerbForm=Inf	17	xcomp	_	_
 20	interinamente	interinamente	ADV	_	_	19	advmod	_	_
 21	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	22	det	_	_
 22	função	função	NOUN	_	Gender=Fem|Number=Sing	19	obj	_	_
@@ -1816,33 +1807,33 @@
 25-26	das	_	_	_	_	_	_	_	_
 25	de	de	ADP	_	_	27	case	_	_
 26	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	27	det	_	_
-27	Relações	Relações	PROPN	_	Gender=Fem|Number=Plur	24	nmod	_	_
+27	Relações	Relações	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Plur	24	nmod	_	_
 28	Exteriores	Exteriores	PROPN	_	Number=Sing	27	flat:name	_	_
 29-30	do	_	_	_	_	_	_	_	_
 29	de	de	ADP	_	_	31	case	_	_
 30	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	31	det	_	_
-31	governo	governo	NOUN	_	Gender=Masc|Number=Sing	27	nmod	_	_
-32	Castelo	Castelo	PROPN	_	Gender=Masc|Number=Sing	31	appos	_	_
+31	governo	governo	NOUN	_	Gender=Masc|Number=Sing	24	nmod	_	_
+32	Castelo	Castelo	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	31	appos	_	_
 33	Branco	Branco	PROPN	_	Number=Sing	32	flat:name	_	SpaceAfter=No
 34	,	,	PUNCT	_	_	19	punct	_	_
 35	durante	durante	ADP	_	_	37	case	_	_
 36	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	37	det	_	_
-37	impedimentos	impedimento	NOUN	_	Gender=Masc|Number=Plur	10	obl	_	_
+37	impedimentos	impedimento	NOUN	_	Gender=Masc|Number=Plur	19	obl	_	_
 38-39	do	_	_	_	_	_	_	_	_
 38	de	de	ADP	_	_	40	case	_	_
 39	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	40	det	_	_
 40	chanceler	chanceler	NOUN	_	Gender=Masc|Number=Sing	37	nmod	_	_
-41	Juraci	Juraci	PROPN	_	Number=Sing	40	flat:name	_	_
-42	Magalhães	Magalhães	PROPN	_	Number=Sing	40	flat:name	_	SpaceAfter=No
+41	Juraci	Juraci	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	40	appos	_	_
+42	Magalhães	Magalhães	PROPN	_	Number=Sing	41	flat:name	_	SpaceAfter=No
 43	,	,	PUNCT	_	_	45	punct	_	_
 44	em	em	ADP	_	_	45	case	_	_
-45	1966	1966	NUM	_	NumType=Card	40	nmod	_	_
+45	1966	1966	NUM	_	NumType=Card	19	obl	_	_
 46	e	e	CCONJ	_	_	47	cc	_	_
 47	1967	1967	NUM	_	NumType=Card	45	conj	_	SpaceAfter=No
 48	.	.	PUNCT	_	_	10	punct	_	_
 
+# sent_id = 42
 # text = Em outubro deste último ano, foi nomeado embaixador em Buenos Aires.
-# sent_id = 43
 1	Em	em	ADP	_	_	2	case	_	_
 2	outubro	outubro	NOUN	_	Gender=Masc|Number=Sing	9	obl	_	_
 3-4	deste	_	_	_	_	_	_	_	_
@@ -1850,20 +1841,20 @@
 4	este	este	DET	_	Gender=Masc|Number=Sing|PronType=Dem	6	det	_	_
 5	último	último	ADJ	_	Gender=Masc|Number=Sing|NumType=Ord	6	amod	_	_
 6	ano	ano	NOUN	_	Gender=Masc|Number=Sing	2	nmod	_	SpaceAfter=No
-7	,	,	PUNCT	_	_	6	punct	_	_
+7	,	,	PUNCT	_	_	2	punct	_	_
 8	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	9	aux:pass	_	_
 9	nomeado	nomear	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
 10	embaixador	embaixador	NOUN	_	Gender=Masc|Number=Sing	9	nsubj:pass	_	_
 11	em	em	ADP	_	_	12	case	_	_
-12	Buenos	Buenos	PROPN	_	Gender=Masc|Number=Sing	10	nmod	_	_
+12	Buenos	Buenos	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	9	obl	_	_
 13	Aires	Aires	PROPN	_	Number=Sing	12	flat:name	_	SpaceAfter=No
 14	.	.	PUNCT	_	_	9	punct	_	_
 
+# sent_id = 43
 # text = Atuou como chefe da delegação do Brasil à reunião de técnicos do Comitê Intergovernamental Coordenador dos Países da Bacia do Prata, realizada naquela capital em 1968.
-# sent_id = 44
 1	Atuou	atuar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2	como	como	ADP	_	_	3	case	_	_
-3	chefe	chefe	NOUN	_	Gender=Fem|Number=Sing	1	xcomp	_	_
+3	chefe	chefe	NOUN	_	Gender=Masc|Number=Sing	1	xcomp	_	_
 4-5	da	_	_	_	_	_	_	_	_
 4	de	de	ADP	_	_	6	case	_	_
 5	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	6	det	_	_
@@ -1875,39 +1866,39 @@
 10-11	à	_	_	_	_	_	_	_	_
 10	a	a	ADP	_	_	12	case	_	_
 11	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	12	det	_	_
-12	reunião	reunião	NOUN	_	Gender=Fem|Number=Sing	6	nmod	_	_
+12	reunião	reunião	NOUN	_	Gender=Fem|Number=Sing	1	obl	_	_
 13	de	de	ADP	_	_	14	case	_	_
 14	técnicos	técnico	NOUN	_	Gender=Masc|Number=Plur	12	nmod	_	_
 15-16	do	_	_	_	_	_	_	_	_
 15	de	de	ADP	_	_	17	case	_	_
 16	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	17	det	_	_
-17	Comitê	comitê	PROPN	_	Gender=Masc|Number=Sing	14	nmod	_	_
+17	Comitê	Comitê	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	14	nmod	_	_
 18	Intergovernamental	Intergovernamental	PROPN	_	Number=Sing	17	flat:name	_	_
-19	Coordenador	Coordenador	PROPN	_	Gender=Masc|Number=Sing	17	appos	_	_
+19	Coordenador	Coordenador	PROPN	_	Number=Sing	17	flat:name	_	_
 20-21	dos	_	_	_	_	_	_	_	_
 20	de	de	ADP	_	_	22	case	_	_
 21	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	22	det	_	_
-22	Países	Países	PROPN	_	Number=Sing	19	nmod	_	_
+22	Países	Países	PROPN	_	Number=Sing	17	nmod	_	_
 23-24	da	_	_	_	_	_	_	_	_
 23	de	de	ADP	_	_	25	case	_	_
 24	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	25	det	_	_
-25	Bacia	Bacia	PROPN	_	Gender=Fem|Number=Sing	19	nmod	_	_
+25	Bacia	Bacia	PROPN	_	Gender=Fem|Number=Sing	22	nmod	_	_
 26-27	do	_	_	_	_	_	_	_	_
 26	de	de	ADP	_	_	28	case	_	_
 27	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	28	det	_	_
-28	Prata	prata	NOUN	_	Number=Sing	25	nmod	_	SpaceAfter=No
+28	Prata	Prata	PROPN	_	Number=Sing	25	nmod	_	SpaceAfter=No
 29	,	,	PUNCT	_	_	30	punct	_	_
-30	realizada	realizar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	17	acl	_	_
+30	realizada	realizar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	12	acl	_	_
 31-32	naquela	_	_	_	_	_	_	_	_
 31	em	em	ADP	_	_	33	case	_	_
 32	aquela	aquele	DET	_	Gender=Fem|Number=Sing|PronType=Dem	33	det	_	_
 33	capital	capital	NOUN	_	Gender=Fem|Number=Sing	30	obl	_	_
 34	em	em	ADP	_	_	35	case	_	_
-35	1968	1968	NUM	_	NumType=Card	33	nmod	_	SpaceAfter=No
+35	1968	1968	NUM	_	NumType=Card	30	obl	_	SpaceAfter=No
 36	.	.	PUNCT	_	_	1	punct	_	_
 
+# sent_id = 44
 # text = Nesse ano, desempenhou ainda outras missões, como as de delegado à II Conferência de Chanceleres dos Países da Bacia do Prata, em Santa Cruz de la Sierra, Bolívia, e de membro da reunião de prefeitos do norte do estado do Rio Grande do Sul sobre problemas de integração econômica na fronteira.
-# sent_id = 45
 1-2	Nesse	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	3	case	_	_
 2	esse	esse	DET	_	Gender=Masc|Number=Sing|PronType=Dem	3	det	_	_
@@ -1919,16 +1910,16 @@
 8	missões	missão	NOUN	_	Gender=Fem|Number=Plur	5	obj	_	SpaceAfter=No
 9	,	,	PUNCT	_	_	11	punct	_	_
 10	como	como	ADP	_	_	11	case	_	_
-11	as	o	PRON	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	8	nmod	_	_
+11	as	o	PRON	_	Gender=Fem|Number=Plur|PronType=Dem	8	nmod	_	_
 12	de	de	ADP	_	_	13	case	_	_
 13	delegado	delegado	NOUN	_	Gender=Masc|Number=Sing	11	nmod	_	_
 14-15	à	_	_	_	_	_	_	_	_
 14	a	a	ADP	_	_	16	case	_	_
-15	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	16	det	_	_
-16	II	II	PROPN	_	Gender=Fem|Number=Sing	13	nmod	_	_
-17	Conferência	Conferência	PROPN	_	Gender=Fem|Number=Sing	16	appos	_	_
+15	a	o	DET	_	Definite=Def|PronType=Art	16	det	_	_
+16	II	II	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	13	nmod	_	_
+17	Conferência	Conferência	PROPN	_	Number=Sing	16	flat:name	_	_
 18	de	de	ADP	_	_	19	case	_	_
-19	Chanceleres	Chanceleres	PROPN	_	Number=Sing	17	nmod	_	_
+19	Chanceleres	Chanceleres	PROPN	_	Number=Sing	16	nmod	_	_
 20-21	dos	_	_	_	_	_	_	_	_
 20	de	de	ADP	_	_	22	case	_	_
 21	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	22	det	_	_
@@ -1936,24 +1927,24 @@
 23-24	da	_	_	_	_	_	_	_	_
 23	de	de	ADP	_	_	25	case	_	_
 24	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	25	det	_	_
-25	Bacia	Bacia	PROPN	_	Gender=Fem|Number=Sing	22	nmod	_	_
+25	Bacia	Bacia	PROPN	_	Number=Sing	16	nmod	_	_
 26-27	do	_	_	_	_	_	_	_	_
 26	de	de	ADP	_	_	28	case	_	_
 27	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	28	det	_	_
-28	Prata	prata	PROPN	_	Number=Sing	25	nmod	_	SpaceAfter=No
+28	Prata	Prata	PROPN	_	Number=Sing	25	nmod	_	SpaceAfter=No
 29	,	,	PUNCT	_	_	31	punct	_	_
 30	em	em	ADP	_	_	31	case	_	_
-31	Santa	Santa	PROPN	_	Gender=Masc|Number=Sing	25	nmod	_	_
+31	Santa	Santa	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	16	nmod	_	_
 32	Cruz	Cruz	PROPN	_	Number=Sing	31	flat:name	_	_
 33	de	de	ADP	_	_	34	case	_	_
-34	la	la	PROPN	_	Number=Sing	31	nmod	_	_
+34	la	La	PROPN	_	ExtPos=PROPN|Number=Sing	31	nmod	_	_
 35	Sierra	Sierra	PROPN	_	Number=Sing	34	flat:name	_	SpaceAfter=No
-36	,	,	PUNCT	_	_	31	punct	_	_
+36	,	,	PUNCT	_	_	37	punct	_	_
 37	Bolívia	Bolívia	PROPN	_	Gender=Fem|Number=Sing	31	appos	_	SpaceAfter=No
-38	,	,	PUNCT	_	_	41	punct	_	_
+38	,	,	PUNCT	_	_	37	punct	_	_
 39	e	e	CCONJ	_	_	41	cc	_	_
 40	de	de	ADP	_	_	41	case	_	_
-41	membro	membro	NOUN	_	Gender=Masc|Number=Sing	37	conj	_	_
+41	membro	membro	NOUN	_	Gender=Masc|Number=Sing	11	conj	_	_
 42-43	da	_	_	_	_	_	_	_	_
 42	de	de	ADP	_	_	44	case	_	_
 43	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	44	det	_	_
@@ -1971,14 +1962,14 @@
 53-54	do	_	_	_	_	_	_	_	_
 53	de	de	ADP	_	_	55	case	_	_
 54	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	55	det	_	_
-55	Rio	Rio	PROPN	_	Gender=Masc|Number=Sing	52	nmod	_	_
+55	Rio	Rio	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	52	nmod	_	_
 56	Grande	Grande	PROPN	_	Number=Sing	55	flat:name	_	_
 57-58	do	_	_	_	_	_	_	_	_
 57	de	de	ADP	_	_	59	case	_	_
 58	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	59	det	_	_
 59	Sul	Sul	PROPN	_	Number=Sing	55	nmod	_	_
 60	sobre	sobre	ADP	_	_	61	case	_	_
-61	problemas	problema	NOUN	_	Gender=Masc|Number=Plur	52	nmod	_	_
+61	problemas	problema	NOUN	_	Gender=Masc|Number=Plur	44	nmod	_	_
 62	de	de	ADP	_	_	63	case	_	_
 63	integração	integração	NOUN	_	Gender=Fem|Number=Sing	61	nmod	_	_
 64	econômica	econômico	ADJ	_	Gender=Fem|Number=Sing	63	amod	_	_
@@ -1986,12 +1977,11 @@
 65	em	em	ADP	_	_	67	case	_	_
 66	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	67	det	_	_
 67	fronteira	fronteira	NOUN	_	Gender=Fem|Number=Sing	63	nmod	_	SpaceAfter=No
-68	.	.	PUNCT	_	_	5	punct	_	_
+68	.	.	PUNCT	_	_	5	punct	_	SpacesAfter=\n
 
+# sent_id = 45
 # text = Retornou da Argentina em janeiro de 1969 e solicitou licença do serviço público por prazo de dez anos, graças a decreto especialmente editado pelo presidente, general Artur da Costa e Silva.
-# sent_id = 46
-# newpar
-1	Retornou	Retornar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+1	Retornou	retornar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2-3	da	_	_	_	_	_	_	_	_
 2	de	de	ADP	_	_	4	case	_	_
 3	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	4	det	_	_
@@ -2014,9 +2004,9 @@
 19	dez	dez	NUM	_	NumType=Card	20	nummod	_	_
 20	anos	ano	NOUN	_	Gender=Masc|Number=Plur	17	nmod	_	SpaceAfter=No
 21	,	,	PUNCT	_	_	10	punct	_	_
-22	graças	graças	ADV	_	Gender=Fem|Number=Plur	10	advmod	_	_
-23	a	o	DET	_	_	24	case	_	_
-24	decreto	decreto	NOUN	_	Gender=Masc|Number=Sing	22	obl	_	_
+22	graças	graças	ADV	_	ExtPos=ADP	24	case	_	_
+23	a	a	ADP	_	_	22	fixed	_	_
+24	decreto	decreto	NOUN	_	Gender=Masc|Number=Sing	10	obl	_	_
 25	especialmente	especialmente	ADV	_	_	26	advmod	_	_
 26	editado	editar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	24	acl	_	_
 27-28	pelo	_	_	_	_	_	_	_	_
@@ -2024,66 +2014,65 @@
 28	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	29	det	_	_
 29	presidente	presidente	NOUN	_	Gender=Masc|Number=Sing	26	obl:agent	_	SpaceAfter=No
 30	,	,	PUNCT	_	_	31	punct	_	_
-31	general	general	NOUN	_	Gender=Masc|Number=Sing	29	conj	_	_
+31	general	general	NOUN	_	Gender=Masc|Number=Sing	29	appos	_	_
 32	Artur	Artur	PROPN	_	Gender=Masc|Number=Sing	31	appos	_	_
 33-34	da	_	_	_	_	_	_	_	_
 33	de	de	ADP	_	_	35	case	_	_
 34	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	35	det	_	_
 35	Costa	Costa	PROPN	_	Number=Sing	32	nmod	_	_
-36	e	e	CCONJ	_	_	37	cc	_	_
-37	Silva	Silva	PROPN	_	Gender=Fem|Number=Sing	29	conj	_	SpaceAfter=No
+36	e	e	CCONJ	_	_	35	flat:name	_	_
+37	Silva	Silva	PROPN	_	Number=Sing	35	flat:name	_	SpaceAfter=No
 38	.	.	PUNCT	_	_	1	punct	_	_
 
+# sent_id = 46
 # text = Expirado o prazo, aposentou-se.
-# sent_id = 47
-1	Expirado	Expirar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	5	dep	_	_
+1	Expirado	expirar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	5	advcl	_	_
 2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
-3	prazo	prazo	NOUN	_	Gender=Masc|Number=Sing	1	obj	_	SpaceAfter=No
+3	prazo	prazo	NOUN	_	Gender=Masc|Number=Sing	1	nsubj	_	SpaceAfter=No
 4	,	,	PUNCT	_	_	1	punct	_	_
 5-6	aposentou-se	_	_	_	_	_	_	_	SpaceAfter=No
 5	aposentou	aposentar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
-6	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	5	obj	_	_
-7	.	.	PUNCT	_	_	5	punct	_	_
+6	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	5	expl	_	_
+7	.	.	PUNCT	_	_	5	punct	_	SpacesAfter=\n
 
+# sent_id = 47
 # text = Desde 1969 dedicou-se a atividades empresariais.
-# sent_id = 48
-# newpar
 1	Desde	desde	ADP	_	_	2	case	_	_
 2	1969	1969	NUM	_	NumType=Card	3	obl	_	_
 3-4	dedicou-se	_	_	_	_	_	_	_	_
 3	dedicou	dedicar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 4	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	3	expl	_	_
-5	a	o	DET	_	_	6	det	_	_
-6	atividades	atividade	NOUN	_	Gender=Fem|Number=Plur	3	nsubj	_	_
+5	a	a	ADP	_	_	6	case	_	_
+6	atividades	atividade	NOUN	_	Gender=Fem|Number=Plur	3	obj	_	_
 7	empresariais	empresarial	ADJ	_	Gender=Fem|Number=Plur	6	amod	_	SpaceAfter=No
 8	.	.	PUNCT	_	_	3	punct	_	_
 
+# sent_id = 48
 # text = Diretor-presidente da Siemens S.A., empresa alemã fabricante de equipamento elétrico pesado e sistemas de telecomunicações, e da Icotron S.A., empresa do grupo Siemens especializada em equipamento eletrônico daquele ano até 1983, nos 11 anos seguintes foi diretor-presidente da Ishikawajima do Brasil Estaleiros S.A.
-# sent_id = 49
-1	Diretor-presidente	Diretor-presidente	NOUN	_	_	46	nsubj	_	_
+1	Diretor-presidente	diretor-presidente	NOUN	_	Gender=Masc|Number=Sing	0	root	_	_
 2-3	da	_	_	_	_	_	_	_	_
 2	de	de	ADP	_	_	4	case	_	_
 3	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	4	det	_	_
-4	Siemens	Siemens	PROPN	_	Gender=Masc|Number=Sing	1	nmod	_	_
-5	S.A.	S.A.	PROPN	_	Gender=Fem|Number=Sing	4	appos	_	SpaceAfter=No
+4	Siemens	Siemens	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	1	nmod	_	_
+5	S.A.	S.A.	PROPN	_	Number=Sing	4	flat:name	_	SpaceAfter=No
 6	,	,	PUNCT	_	_	7	punct	_	_
 7	empresa	empresa	NOUN	_	Gender=Fem|Number=Sing	4	appos	_	_
-8	alemã	alemã	ADJ	_	Gender=Fem|Number=Sing	7	amod	_	_
-9	fabricante	fabricante	ADJ	_	Gender=Masc|Number=Sing	7	amod	_	_
+8	alemã	alemão	ADJ	_	Gender=Fem|Number=Sing	7	amod	_	_
+9	fabricante	fabricante	ADJ	_	Gender=Fem|Number=Sing	7	amod	_	_
 10	de	de	ADP	_	_	11	case	_	_
-11	equipamento	equipamento	NOUN	_	Gender=Masc|Number=Sing	7	nmod	_	_
+11	equipamento	equipamento	NOUN	_	Gender=Masc|Number=Sing	9	obl	_	_
 12	elétrico	elétrico	ADJ	_	Gender=Masc|Number=Sing	11	amod	_	_
-13	pesado	pesar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	11	acl	_	_
+13	pesado	pesado	ADJ	_	Gender=Masc|Number=Sing	11	amod	_	_
 14	e	e	CCONJ	_	_	15	cc	_	_
-15	sistemas	sistema	NOUN	_	Gender=Masc|Number=Plur	13	conj	_	_
+15	sistemas	sistema	NOUN	_	Gender=Masc|Number=Plur	11	conj	_	_
 16	de	de	ADP	_	_	17	case	_	_
-17	telecomunicações	telecomunicação	NOUN	_	Gender=Fem|Number=Plur	15	nmod	_	SpaceAfter=No
+17	telecomunicações	telecomunicações	NOUN	_	Gender=Fem|Number=Plur	15	nmod	_	SpaceAfter=No
 18	,	,	PUNCT	_	_	22	punct	_	_
 19	e	e	CCONJ	_	_	22	cc	_	_
 20-21	da	_	_	_	_	_	_	_	_
 20	de	de	ADP	_	_	22	case	_	_
 21	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	22	det	_	_
-22	Icotron	Icotron	PROPN	_	Gender=Fem|Number=Sing	13	conj	_	_
+22	Icotron	Icotron	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	4	conj	_	_
 23	S.A.	S.A.	PROPN	_	Number=Sing	22	flat:name	_	SpaceAfter=No
 24	,	,	PUNCT	_	_	25	punct	_	_
 25	empresa	empresa	NOUN	_	Gender=Fem|Number=Sing	22	appos	_	_
@@ -2091,8 +2080,8 @@
 26	de	de	ADP	_	_	28	case	_	_
 27	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	28	det	_	_
 28	grupo	grupo	NOUN	_	Gender=Masc|Number=Sing	25	nmod	_	_
-29	Siemens	Siemem	ADJ	_	Gender=Masc|Number=Plur	28	amod	_	_
-30	especializada	especializar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	28	acl	_	_
+29	Siemens	Siemens	PROPN	_	Gender=Masc|Number=Sing	28	appos	_	_
+30	especializada	especializar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	25	acl	_	_
 31	em	em	ADP	_	_	32	case	_	_
 32	equipamento	equipamento	NOUN	_	Gender=Masc|Number=Sing	30	obl	_	_
 33	eletrônico	eletrônico	ADJ	_	Gender=Masc|Number=Sing	32	amod	_	_
@@ -2107,10 +2096,10 @@
 40	em	em	ADP	_	_	43	case	_	_
 41	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	43	det	_	_
 42	11	11	NUM	_	NumType=Card	43	nummod	_	_
-43	anos	ano	NOUN	_	Gender=Masc|Number=Plur	22	nmod	_	_
+43	anos	ano	NOUN	_	Gender=Masc|Number=Plur	46	nmod	_	_
 44	seguintes	seguinte	ADJ	_	Gender=Masc|Number=Plur	43	amod	_	_
 45	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	46	cop	_	_
-46	diretor-presidente	diretor-presidente	NOUN	_	Gender=Masc|Number=Sing	0	root	_	_
+46	diretor-presidente	diretor-presidente	NOUN	_	Gender=Masc|Number=Sing	1	parataxis	_	_
 47-48	da	_	_	_	_	_	_	_	_
 47	de	de	ADP	_	_	49	case	_	_
 48	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	49	det	_	_
@@ -2119,12 +2108,12 @@
 50	de	de	ADP	_	_	52	case	_	_
 51	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	52	det	_	_
 52	Brasil	Brasil	PROPN	_	Number=Sing	49	nmod	_	_
-53	Estaleiros	estaleiros	PROPN	_	Number=Sing	52	flat:name	_	_
+53	Estaleiros	Estaleiros	PROPN	_	Gender=Masc|Number=Plur	52	flat:name	_	_
 54	S.A	S.A	PROPN	_	Number=Sing	52	flat:name	_	SpaceAfter=No
 55	.	.	PUNCT	_	_	46	punct	_	_
 
-# text = Simultaneamente, foi membro dos conselhos da Poligran e da Brasilit S.A., filial do grupo Saint-Gobain, membro do conselho diretor da Ciba-Geigy Química S.A., membro da diretoria da General Accidents, companhia de seguros britânica; membro dos conselhos de administração da Eutectic Indústrias Metalúrgicas Ltda. e da Rio de Janeiro Refrescos S.A., afiliada do grupo Coca-Cola, e membro do comitê internacional da União de Bancos Brasileiros S.A.(Unibanco).
-# sent_id = 50
+# sent_id = 49
+# text = Simultaneamente, foi membro dos conselhos da Poligran e da Brasilit S.A., filial do grupo Saint-Gobain, membro do conselho diretor da Ciba-Geigy Química S.A., membro da diretoria da General Accidents, companhia de seguros britânica; membro dos conselhos de administração da Eutectic Indústrias Metalúrgicas Ltda.
 1	Simultaneamente	simultaneamente	ADV	_	_	4	advmod	_	SpaceAfter=No
 2	,	,	PUNCT	_	_	1	punct	_	_
 3	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	cop	_	_
@@ -2141,30 +2130,30 @@
 12-13	da	_	_	_	_	_	_	_	_
 12	de	de	ADP	_	_	14	case	_	_
 13	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	14	det	_	_
-14	Brasilit	Brasilit	PROPN	_	Gender=Fem|Number=Sing	10	conj	_	_
+14	Brasilit	Brasilit	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	10	conj	_	_
 15	S.A.	S.A.	PROPN	_	Number=Sing	14	flat:name	_	SpaceAfter=No
 16	,	,	PUNCT	_	_	17	punct	_	_
-17	filial	filial	NOUN	_	Gender=Fem|Number=Sing	10	conj	_	_
+17	filial	filial	NOUN	_	Gender=Fem|Number=Sing	14	appos	_	_
 18-19	do	_	_	_	_	_	_	_	_
 18	de	de	ADP	_	_	20	case	_	_
 19	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	20	det	_	_
 20	grupo	grupo	NOUN	_	Gender=Masc|Number=Sing	17	nmod	_	_
-21	Saint-Gobain	Saint-Gobain	PROPN	_	Gender=Masc|Number=Sing	20	appos	_	SpaceAfter=No
-22	,	,	PUNCT	_	_	17	punct	_	_
-23	membro	membro	NOUN	_	Gender=Masc|Number=Sing	7	appos	_	_
+21	Saint-Gobain	Saint-gobain	PROPN	_	Gender=Masc|Number=Sing	20	appos	_	SpaceAfter=No
+22	,	,	PUNCT	_	_	23	punct	_	_
+23	membro	membro	NOUN	_	Gender=Masc|Number=Sing	10	conj	_	_
 24-25	do	_	_	_	_	_	_	_	_
-24	de	de	ADP	_	_	27	case	_	_
-25	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	27	det	_	_
-26	conselho	conselho	ADJ	_	Gender=Masc|Number=Sing	27	amod	_	_
-27	diretor	diretor	NOUN	_	Gender=Masc|Number=Sing	23	nmod	_	_
+24	de	de	ADP	_	_	26	case	_	_
+25	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	26	det	_	_
+26	conselho	conselho	NOUN	_	Gender=Masc|Number=Sing	23	nmod	_	_
+27	diretor	diretor	ADJ	_	Gender=Masc|Number=Sing	26	amod	_	_
 28-29	da	_	_	_	_	_	_	_	_
 28	de	de	ADP	_	_	30	case	_	_
 29	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	30	det	_	_
-30	Ciba-Geigy	Ciba-Geigy	PROPN	_	Gender=Fem|Number=Sing	27	nmod	_	_
-31	Química	química	PROPN	_	Number=Sing	30	flat:name	_	_
+30	Ciba-Geigy	Ciba-Geigy	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	26	nmod	_	_
+31	Química	Química	PROPN	_	Number=Sing	30	flat:name	_	_
 32	S.A.	S.A.	PROPN	_	Number=Sing	30	flat:name	_	SpaceAfter=No
 33	,	,	PUNCT	_	_	34	punct	_	_
-34	membro	membro	NOUN	_	Gender=Masc|Number=Sing	30	appos	_	_
+34	membro	membro	NOUN	_	Gender=Masc|Number=Sing	10	conj	_	_
 35-36	da	_	_	_	_	_	_	_	_
 35	de	de	ADP	_	_	37	case	_	_
 36	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	37	det	_	_
@@ -2172,15 +2161,15 @@
 38-39	da	_	_	_	_	_	_	_	_
 38	de	de	ADP	_	_	40	case	_	_
 39	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	40	det	_	_
-40	General	general	PROPN	_	Number=Sing	37	nmod	_	_
+40	General	General	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	37	nmod	_	_
 41	Accidents	Accidents	PROPN	_	Number=Sing	40	flat:name	_	SpaceAfter=No
-42	,	,	PUNCT	_	_	34	punct	_	_
-43	companhia	companhia	NOUN	_	Gender=Fem|Number=Sing	30	appos	_	_
+42	,	,	PUNCT	_	_	43	punct	_	_
+43	companhia	companhia	NOUN	_	Gender=Fem|Number=Sing	40	appos	_	_
 44	de	de	ADP	_	_	45	case	_	_
 45	seguros	seguro	NOUN	_	Gender=Masc|Number=Plur	43	nmod	_	_
 46	britânica	britânico	ADJ	_	Gender=Fem|Number=Sing	45	amod	_	SpaceAfter=No
 47	;	;	PUNCT	_	_	48	punct	_	_
-48	membro	membro	NOUN	_	Gender=Masc|Number=Sing	27	appos	_	_
+48	membro	membro	NOUN	_	Gender=Masc|Number=Sing	4	conj	_	_
 49-50	dos	_	_	_	_	_	_	_	_
 49	de	de	ADP	_	_	51	case	_	_
 50	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	51	det	_	_
@@ -2190,64 +2179,66 @@
 54-55	da	_	_	_	_	_	_	_	_
 54	de	de	ADP	_	_	56	case	_	_
 55	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	56	det	_	_
-56	Eutectic	Eutectic	PROPN	_	Gender=Fem|Number=Sing	51	nmod	_	_
-57	Indústrias	indústrias	PROPN	_	Gender=Fem|Number=Plur	56	appos	_	_
-58	Metalúrgicas	Metalúrgicas	PROPN	_	Number=Sing	57	flat:name	_	_
-59	Ltda	Ltda	PROPN	_	Number=Sing	57	flat:name	_	SpaceAfter=No
+56	Eutectic	Eutectic	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	53	nmod	_	_
+57	Indústrias	Indústrias	PROPN	_	Number=Sing	56	flat:name	_	_
+58	Metalúrgicas	Metalúrgicas	PROPN	_	Number=Sing	56	flat:name	_	_
+59	Ltda	Ltda	PROPN	_	Number=Sing	56	flat:name	_	SpaceAfter=No
 60	.	.	PUNCT	_	_	4	punct	_	_
-61	e	e	CCONJ	_	_	64	cc	_	_
-62-63	da	_	_	_	_	_	_	_	_
-62	de	de	ADP	_	_	64	case	_	_
-63	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	64	det	_	_
-64	Rio	Rio	PROPN	_	Gender=Masc|Number=Sing	27	conj	_	_
-65	de	de	ADP	_	_	66	case	_	_
-66	Janeiro	Janeiro	PROPN	_	Number=Sing	64	nmod	_	_
-67	Refrescos	Refrescos	PROPN	_	Number=Sing	66	flat:name	_	_
-68	S.A.	S.A.	PROPN	_	Number=Sing	66	flat:name	_	SpaceAfter=No
-69	,	,	PUNCT	_	_	70	punct	_	_
-70	afiliada	afiliar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	27	acl	_	_
-71-72	do	_	_	_	_	_	_	_	_
-71	de	de	ADP	_	_	73	case	_	_
-72	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	73	det	_	_
-73	grupo	grupo	NOUN	_	Gender=Masc|Number=Sing	70	obl	_	_
-74	Coca-Cola	Coca-Cola	PROPN	_	Gender=Masc|Number=Sing	73	appos	_	SpaceAfter=No
-75	,	,	PUNCT	_	_	77	punct	_	_
-76	e	e	CCONJ	_	_	77	cc	_	_
-77	membro	membro	NOUN	_	Gender=Masc|Number=Sing	70	conj	_	_
-78-79	do	_	_	_	_	_	_	_	_
-78	de	de	ADP	_	_	80	case	_	_
-79	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	80	det	_	_
-80	comitê	comitê	NOUN	_	Gender=Masc|Number=Sing	77	nmod	_	_
-81	internacional	internacional	ADJ	_	Gender=Masc|Number=Sing	80	amod	_	_
-82-83	da	_	_	_	_	_	_	_	_
-82	de	de	ADP	_	_	84	case	_	_
-83	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	84	det	_	_
-84	União	União	PROPN	_	Gender=Fem|Number=Sing	80	nmod	_	_
-85	de	de	ADP	_	_	86	case	_	_
-86	Bancos	bancos	PROPN	_	Gender=Masc|Number=Plur	84	nmod	_	_
-87	Brasileiros	brasileiros	PROPN	_	Gender=Masc|Number=Plur	86	appos	_	_
-88	S.A.	S.A.	PROPN	_	Gender=Masc|Number=Sing	87	appos	_	SpaceAfter=No
-89	(	(	PUNCT	_	_	90	punct	_	SpaceAfter=No
-90	Unibanco	Unibanco	PROPN	_	Gender=Masc|Number=Sing	87	appos	_	SpaceAfter=No
-91	)	)	PUNCT	_	_	90	punct	_	SpaceAfter=No
-92	.	.	PUNCT	_	_	4	punct	_	_
 
-# text = Membro vitalício do conselho geral da Siemens S.A., posteriormente, tornou-se vice-presidente do Comitê do Meio Ambiente e da Comissão de Transportes Marítimos da Câmara Internacional do Comércio, sediada em Paris, e membro do Comitê do American Bureau of Shipping, do conselho técnico da Confederação Nacional do Comércio e da Câmara de Comércio Franco-Brasileira.
+# sent_id = 50
+# text = e da Rio de Janeiro Refrescos S.A., afiliada do grupo Coca-Cola, e membro do comitê internacional da União de Bancos Brasileiros S.A.(Unibanco).
+1	e	e	CCONJ	_	_	4	cc	_	_
+2-3	da	_	_	_	_	_	_	_	_
+2	de	de	ADP	_	_	4	case	_	_
+3	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	4	det	_	_
+4	Rio	Rio	PROPN	_	Gender=Fem|Number=Sing	0	root	_	_
+5	de	de	ADP	_	_	6	case	_	_
+6	Janeiro	Janeiro	PROPN	_	ExtPos=PROPN|Number=Sing	4	nmod	_	_
+7	Refrescos	Refrescos	PROPN	_	Number=Sing	6	flat:name	_	_
+8	S.A.	S.A.	PROPN	_	Number=Sing	6	flat:name	_	SpaceAfter=No
+9	,	,	PUNCT	_	_	10	punct	_	_
+10	afiliada	afiliar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	4	acl	_	_
+11-12	do	_	_	_	_	_	_	_	_
+11	de	de	ADP	_	_	13	case	_	_
+12	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	13	det	_	_
+13	grupo	grupo	NOUN	_	Gender=Masc|Number=Sing	10	nmod	_	_
+14	Coca-Cola	Coca-Cola	PROPN	_	Gender=Masc|Number=Sing	13	appos	_	SpaceAfter=No
+15	,	,	PUNCT	_	_	10	punct	_	_
+16	e	e	CCONJ	_	_	17	cc	_	_
+17	membro	membro	NOUN	_	Gender=Masc|Number=Sing	4	conj	_	_
+18-19	do	_	_	_	_	_	_	_	_
+18	de	de	ADP	_	_	20	case	_	_
+19	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	20	det	_	_
+20	comitê	comitê	NOUN	_	Gender=Masc|Number=Sing	17	nmod	_	_
+21	internacional	internacional	ADJ	_	Gender=Masc|Number=Sing	20	amod	_	_
+22-23	da	_	_	_	_	_	_	_	_
+22	de	de	ADP	_	_	24	case	_	_
+23	a	o	DET	_	Definite=Def|PronType=Art	24	det	_	_
+24	União	União	PROPN	_	Gender=Fem|Number=Sing	20	nmod	_	_
+25	de	de	ADP	_	_	26	case	_	_
+26	Bancos	Bancos	PROPN	_	ExtPos=PROPN|Number=Sing	24	nmod	_	_
+27	Brasileiros	Brasileiros	PROPN	_	Number=Sing	26	flat:name	_	_
+28	S.A.	S.A.	PROPN	_	Number=Sing	26	flat:name	_	SpaceAfter=No
+29	(	(	PUNCT	_	_	30	punct	_	SpaceAfter=No
+30	Unibanco	Unibanco	PROPN	_	Gender=Fem|Number=Sing	24	appos	_	SpaceAfter=No
+31	)	)	PUNCT	_	_	30	punct	_	SpaceAfter=No
+32	.	.	PUNCT	_	_	4	punct	_	SpacesAfter=\n
+
 # sent_id = 51
-# newpar
-1	Membro	Membro	NOUN	_	Gender=Masc|Number=Sing	14	nsubj	_	_
+# text = Membro vitalício do conselho geral da Siemens S.A., posteriormente, tornou-se vice-presidente do Comitê do Meio Ambiente e da Comissão de Transportes Marítimos da Câmara Internacional do Comércio, sediada em Paris, e membro do Comitê do American Bureau of Shipping, do conselho técnico da Confederação Nacional do Comércio e da Câmara de Comércio Franco-Brasileira.
+1	Membro	membro	NOUN	_	Gender=Masc|Number=Sing	14	nsubj	_	_
 2	vitalício	vitalício	ADJ	_	Gender=Masc|Number=Sing	1	amod	_	_
 3-4	do	_	_	_	_	_	_	_	_
 3	de	de	ADP	_	_	5	case	_	_
 4	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	5	det	_	_
-5	conselho	conselho	NOUN	_	_	1	nmod	_	_
-6	geral	geral	ADJ	_	_	5	amod	_	_
+5	conselho	conselho	NOUN	_	Gender=Masc|Number=Sing	1	nmod	_	_
+6	geral	geral	ADJ	_	Gender=Masc|Number=Sing	5	amod	_	_
 7-8	da	_	_	_	_	_	_	_	_
 7	de	de	ADP	_	_	9	case	_	_
 8	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	9	det	_	_
-9	Siemens	Siemens	PROPN	_	Gender=Masc|Number=Plur	5	nmod	_	_
-10	S.A.	S.A.	PROPN	_	Gender=Fem|Number=Sing	9	amod	_	SpaceAfter=No
-11	,	,	PUNCT	_	_	1	punct	_	_
+9	Siemens	Siemens	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	5	nmod	_	_
+10	S.A.	S.A.	PROPN	_	Number=Sing	9	flat:name	_	SpaceAfter=No
+11	,	,	PUNCT	_	_	12	punct	_	_
 12	posteriormente	posteriormente	ADV	_	_	14	advmod	_	SpaceAfter=No
 13	,	,	PUNCT	_	_	12	punct	_	_
 14-15	tornou-se	_	_	_	_	_	_	_	_
@@ -2261,40 +2252,40 @@
 20-21	do	_	_	_	_	_	_	_	_
 20	de	de	ADP	_	_	22	case	_	_
 21	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	22	det	_	_
-22	Meio	Meio	PROPN	_	_	19	nmod	_	_
-23	Ambiente	ambiente	PROPN	_	Gender=Masc|Number=Sing	22	appos	_	_
+22	Meio	Meio	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	19	nmod	_	_
+23	Ambiente	Ambiente	PROPN	_	Number=Sing	22	flat:name	_	_
 24	e	e	CCONJ	_	_	27	cc	_	_
 25-26	da	_	_	_	_	_	_	_	_
 25	de	de	ADP	_	_	27	case	_	_
 26	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	27	det	_	_
-27	Comissão	Comissão	PROPN	_	Gender=Fem|Number=Sing	23	conj	_	_
+27	Comissão	Comissão	PROPN	_	Gender=Fem|Number=Sing	19	conj	_	_
 28	de	de	ADP	_	_	29	case	_	_
-29	Transportes	Transportes	PROPN	_	Number=Sing	27	nmod	_	_
-30	Marítimos	Marítimo	ADV	_	Number=Sing	29	flat:name	_	_
+29	Transportes	Transportes	PROPN	_	ExtPos=PROPN|Number=Sing	27	nmod	_	_
+30	Marítimos	Marítimos	PROPN	_	Number=Sing	29	flat:name	_	_
 31-32	da	_	_	_	_	_	_	_	_
 31	de	de	ADP	_	_	33	case	_	_
 32	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	33	det	_	_
-33	Câmara	câmara	PROPN	_	_	27	nmod	_	_
-34	Internacional	Internacional	PROPN	_	_	33	flat:name	_	_
+33	Câmara	Câmara	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	19	nmod	_	_
+34	Internacional	Internacional	PROPN	_	Number=Sing	33	flat:name	_	_
 35-36	do	_	_	_	_	_	_	_	_
 35	de	de	ADP	_	_	37	case	_	_
 36	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	37	det	_	_
 37	Comércio	Comércio	PROPN	_	Number=Sing	33	nmod	_	SpaceAfter=No
 38	,	,	PUNCT	_	_	39	punct	_	_
-39	sediada	sediadar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	27	acl:relcl	_	_
+39	sediada	sediar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	33	acl	_	_
 40	em	em	ADP	_	_	41	case	_	_
 41	Paris	Paris	PROPN	_	Gender=Masc|Number=Sing	39	obl	_	SpaceAfter=No
-42	,	,	PUNCT	_	_	44	punct	_	_
+42	,	,	PUNCT	_	_	39	punct	_	_
 43	e	e	CCONJ	_	_	44	cc	_	_
-44	membro	membro	NOUN	_	Gender=Masc|Number=Sing	39	conj	_	_
+44	membro	membro	NOUN	_	Gender=Masc|Number=Sing	16	conj	_	_
 45-46	do	_	_	_	_	_	_	_	_
 45	de	de	ADP	_	_	47	case	_	_
 46	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	47	det	_	_
-47	Comitê	comitê	PROPN	_	Gender=Masc|Number=Sing	44	nmod	_	_
+47	Comitê	comitê	NOUN	_	Gender=Masc|Number=Sing	44	nmod	_	_
 48-49	do	_	_	_	_	_	_	_	_
 48	de	de	ADP	_	_	50	case	_	_
 49	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	50	det	_	_
-50	American	American	PROPN	_	Gender=Masc|Number=Sing	47	nmod	_	_
+50	American	American	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	47	nmod	_	_
 51	Bureau	Bureau	PROPN	_	Number=Sing	50	flat:name	_	_
 52	of	of	PROPN	_	Number=Sing	50	flat:name	_	_
 53	Shipping	Shipping	PROPN	_	Number=Sing	50	flat:name	_	SpaceAfter=No
@@ -2302,7 +2293,7 @@
 55-56	do	_	_	_	_	_	_	_	_
 55	de	de	ADP	_	_	57	case	_	_
 56	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	57	det	_	_
-57	conselho	conselho	NOUN	_	Gender=Masc|Number=Sing	47	nmod	_	_
+57	conselho	conselho	NOUN	_	Gender=Masc|Number=Sing	47	conj	_	_
 58	técnico	técnico	ADJ	_	Gender=Masc|Number=Sing	57	amod	_	_
 59-60	da	_	_	_	_	_	_	_	_
 59	de	de	ADP	_	_	61	case	_	_
@@ -2317,26 +2308,25 @@
 67-68	da	_	_	_	_	_	_	_	_
 67	de	de	ADP	_	_	69	case	_	_
 68	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	69	det	_	_
-69	Câmara	câmara	PROPN	_	Gender=Fem|Number=Sing	61	conj	_	_
+69	Câmara	Câmara	PROPN	_	Gender=Fem|Number=Sing	47	conj	_	_
 70	de	de	ADP	_	_	71	case	_	_
-71	Comércio	Comércio	PROPN	_	Number=Sing	69	nmod	_	_
-72	Franco-Brasileira	Franco-Brasileira	PROPN	_	Number=Sing	71	flat:name	_	SpaceAfter=No
-73	.	.	PUNCT	_	_	14	punct	_	_
+71	Comércio	Comércio	PROPN	_	ExtPos=PROPN|Number=Sing	69	nmod	_	_
+72	Franco-Brasileira	franco-brasileira	PROPN	_	Number=Sing	71	flat:name	_	SpaceAfter=No
+73	.	.	PUNCT	_	_	14	punct	_	SpacesAfter=\n
 
-# text = Articulista do jornal «O Globo», Pio Correia residia no Rio de Janeiro em setembro de 2009.
 # sent_id = 52
-# newpar
+# text = Articulista do jornal «O Globo», Pio Correia residia no Rio de Janeiro em setembro de 2009.
 1	Articulista	articulista	NOUN	_	Gender=Masc|Number=Sing	12	obl	_	_
 2-3	do	_	_	_	_	_	_	_	_
 2	de	de	ADP	_	_	4	case	_	_
 3	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	4	det	_	_
 4	jornal	jornal	NOUN	_	Gender=Masc|Number=Sing	1	nmod	_	_
 5	«	«	PUNCT	_	_	6	punct	_	SpaceAfter=No
-6	O	O	DET	_	Gender=Masc|Number=Sing|PronType=Art	4	appos	_	_
+6	O	O	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing|PronType=Art	4	appos	_	_
 7	Globo	Globo	PROPN	_	Number=Sing	6	flat:name	_	SpaceAfter=No
 8	»	»	PUNCT	_	_	6	punct	_	SpaceAfter=No
 9	,	,	PUNCT	_	_	1	punct	_	_
-10	Pio	Pio	PROPN	_	Gender=Masc|Number=Sing	12	nsubj	_	_
+10	Pio	Pio	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	12	nsubj	_	_
 11	Correia	Correia	PROPN	_	Number=Sing	10	flat:name	_	_
 12	residia	residir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	0	root	_	_
 13-14	no	_	_	_	_	_	_	_	_
@@ -2344,52 +2334,50 @@
 14	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	15	det	_	_
 15	Rio	Rio	PROPN	_	Gender=Masc|Number=Sing	12	obl	_	_
 16	de	de	ADP	_	_	17	case	_	_
-17	Janeiro	Janeiro	NOUN	_	Number=Sing	15	nmod	_	_
+17	Janeiro	Janeiro	PROPN	_	Number=Sing	15	nmod	_	_
 18	em	em	ADP	_	_	19	case	_	_
 19	setembro	setembro	NOUN	_	Gender=Masc|Number=Sing	12	obl	_	_
 20	de	de	ADP	_	_	21	case	_	_
 21	2009	2009	NUM	_	NumType=Card	19	nmod	_	SpaceAfter=No
-22	.	.	PUNCT	_	_	12	punct	_	_
+22	.	.	PUNCT	_	_	12	punct	_	SpacesAfter=\n
 
-# text = Casou-se com Teresa Maria Graça Aranha Pio Correia, com quem teve dois filhos.
 # sent_id = 53
-# newpar
+# text = Casou-se com Teresa Maria Graça Aranha Pio Correia, com quem teve dois filhos.
 1-2	Casou-se	_	_	_	_	_	_	_	_
-1	Casou	Casar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
-2	se	se	PRON	_	Case=Acc|Gender=Unsp|PronType=Prs	1	expl	_	_
+1	Casou	casar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+2	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	1	expl	_	_
 3	com	com	ADP	_	_	4	case	_	_
-4	Teresa	Teresa	PROPN	_	Gender=Fem|Number=Sing	1	obl	_	_
+4	Teresa	Teresa	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	1	obl	_	_
 5	Maria	Maria	PROPN	_	Number=Sing	4	flat:name	_	_
 6	Graça	Graça	PROPN	_	Number=Sing	4	flat:name	_	_
 7	Aranha	Aranha	PROPN	_	Number=Sing	4	flat:name	_	_
 8	Pio	Pio	PROPN	_	Number=Sing	4	flat:name	_	_
 9	Correia	Correia	PROPN	_	Number=Sing	4	flat:name	_	SpaceAfter=No
-10	,	,	PUNCT	_	_	1	punct	_	_
+10	,	,	PUNCT	_	_	13	punct	_	_
 11	com	com	ADP	_	_	12	case	_	_
-12	quem	quem	PRON	_	Gender=Masc|Number=Plur|PronType=Rel	13	obl	_	_
+12	quem	quem	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	13	obl	_	_
 13	teve	ter	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	acl:relcl	_	_
 14	dois	dois	NUM	_	NumType=Card	15	nummod	_	_
 15	filhos	filho	NOUN	_	Gender=Masc|Number=Plur	13	obj	_	SpaceAfter=No
-16	.	.	PUNCT	_	_	1	punct	_	_
+16	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
 
-# text = Publicou
 # sent_id = 54
-# newpar
+# text = Publicou
 1	Publicou	publicar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 
-# text = «O mundo em que vivi» (biografia, 1995).
 # sent_id = 55
+# text = «O mundo em que vivi» (biografia, 1995).
 1	«	«	PUNCT	_	_	3	punct	_	SpaceAfter=No
 2	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
 3	mundo	mundo	NOUN	_	Gender=Masc|Number=Sing	0	root	_	_
 4	em	em	ADP	_	_	5	case	_	_
 5	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	6	obl	_	_
 6	vivi	viver	VERB	_	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	3	acl:relcl	_	SpaceAfter=No
-7	»	»	PUNCT	_	_	6	punct	_	_
+7	»	»	PUNCT	_	_	3	punct	_	_
 8	(	(	PUNCT	_	_	9	punct	_	SpaceAfter=No
-9	biografia	biografia	NOUN	_	Gender=Fem|Number=Sing	6	appos	_	SpaceAfter=No
+9	biografia	biografia	NOUN	_	Gender=Fem|Number=Sing	3	parataxis	_	SpaceAfter=No
 10	,	,	PUNCT	_	_	11	punct	_	_
-11	1995	1995	NUM	_	NumType=Card	9	appos	_	SpaceAfter=No
+11	1995	1995	NUM	_	NumType=Card	9	nmod	_	SpaceAfter=No
 12	)	)	PUNCT	_	_	9	punct	_	SpaceAfter=No
-13	.	.	PUNCT	_	_	3	punct	_	_
+13	.	.	PUNCT	_	_	3	punct	_	SpacesAfter=\n
 

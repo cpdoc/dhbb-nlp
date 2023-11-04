@@ -1,21 +1,24 @@
-# text = Partido político paraense, também chamado Partido Constitucionalista do Pará, fundado em 24 de maio de 1932 para concorrer às eleições para a Assembléia Nacional Constituinte de 1933.
-# sent_id = 1
-# newpar
+# generator = UDPipe 2, https://lindat.mff.cuni.cz/services/udpipe
+# udpipe_model = portuguese-bosque-ud-2.12-230717
+# udpipe_model_licence = CC BY-NC-SA
 # newdoc
-1	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	0	root	_	_
-2	político	político	PROPN	_	Number=Sing	1	flat:name	_	_
-3	paraense	paraense	PROPN	_	Number=Sing	1	flat:name	_	SpaceAfter=No
+# newpar
+# sent_id = 1
+# text = Partido político paraense, também chamado Partido Constitucionalista do Pará, fundado em 24 de maio de 1932 para concorrer às eleições para a Assembléia Nacional Constituinte de 1933.
+1	Partido	partido	NOUN	_	Gender=Masc|Number=Sing	0	root	_	_
+2	político	político	ADJ	_	Gender=Masc|Number=Sing	1	amod	_	_
+3	paraense	paraense	ADJ	_	Gender=Masc|Number=Sing	1	amod	_	SpaceAfter=No
 4	,	,	PUNCT	_	_	6	punct	_	_
 5	também	também	ADV	_	_	6	advmod	_	_
-6	chamado	chamar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	1	acl	_	_
-7	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	6	obj	_	_
+6	chamado	chamar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	1	acl	_	_
+7	Partido	Partido	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	6	obj	_	_
 8	Constitucionalista	Constitucionalista	PROPN	_	Number=Sing	7	flat:name	_	_
 9-10	do	_	_	_	_	_	_	_	_
 9	de	de	ADP	_	_	11	case	_	_
 10	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	_	_
-11	Pará	Pará	PROPN	_	Gender=Masc|Number=Sing	7	nmod	_	SpaceAfter=No
+11	Pará	Pará	PROPN	_	Number=Sing	7	nmod	_	SpaceAfter=No
 12	,	,	PUNCT	_	_	13	punct	_	_
-13	fundado	fundar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	7	acl	_	_
+13	fundado	fundar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	1	acl	_	_
 14	em	em	ADP	_	_	15	case	_	_
 15	24	24	NUM	_	NumType=Card	13	obl	_	_
 16	de	de	ADP	_	_	17	case	_	_
@@ -23,41 +26,41 @@
 18	de	de	ADP	_	_	19	case	_	_
 19	1932	1932	NUM	_	NumType=Card	17	nmod	_	_
 20	para	para	SCONJ	_	_	21	mark	_	_
-21	concorrer	concorrer	VERB	_	VerbForm=Inf	19	acl	_	_
+21	concorrer	concorrer	VERB	_	VerbForm=Inf	13	advcl	_	_
 22-23	às	_	_	_	_	_	_	_	_
 22	a	a	ADP	_	_	24	case	_	_
 23	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	24	det	_	_
-24	eleições	eleição	NOUN	_	Gender=Fem|Number=Plur	21	obl	_	_
+24	eleições	eleição	NOUN	_	Gender=Fem|Number=Plur	21	obj	_	_
 25	para	para	ADP	_	_	27	case	_	_
 26	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	27	det	_	_
-27	Assembléia	Assembléia	PROPN	_	Gender=Fem|Number=Sing	21	obl	_	_
+27	Assembléia	assembléia	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	24	nmod	_	_
 28	Nacional	Nacional	PROPN	_	Number=Sing	27	flat:name	_	_
 29	Constituinte	Constituinte	PROPN	_	Number=Sing	27	flat:name	_	_
 30	de	de	ADP	_	_	31	case	_	_
 31	1933	1933	NUM	_	NumType=Card	27	nmod	_	SpaceAfter=No
-32	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
+32	.	.	PUNCT	_	_	1	punct	_	_
 
-# text = Foi extinto provavelmente em 1933, tendo seu presidente, Renato Franco, aderido à Frente Única Paraense, organizada em 1934.
 # sent_id = 2
-1	Foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	cop	_	_
-2	extinto	extinguir	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	0	root	_	_
-3	provavelmente	provavelmente	ADV	_	_	5	advmod	_	_
+# text = Foi extinto provavelmente em 1933, tendo seu presidente, Renato Franco, aderido à Frente Única Paraense, organizada em 1934.
+1	Foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	aux:pass	_	_
+2	extinto	extinguir	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
+3	provavelmente	provavelmente	ADV	_	_	2	advmod	_	_
 4	em	em	ADP	_	_	5	case	_	_
 5	1933	1933	NUM	_	NumType=Card	2	obl	_	SpaceAfter=No
-6	,	,	PUNCT	_	_	9	punct	_	_
-7	tendo	ter	AUX	_	VerbForm=Ger	9	cop	_	_
+6	,	,	PUNCT	_	_	7	punct	_	_
+7	tendo	ter	AUX	_	VerbForm=Ger	2	aux	_	_
 8	seu	seu	DET	_	Gender=Masc|Number=Sing|PronType=Prs	9	det	_	_
-9	presidente	presidente	NOUN	_	Gender=Masc|Number=Sing	2	appos	_	SpaceAfter=No
+9	presidente	presidente	NOUN	_	Gender=Masc|Number=Sing	14	nsubj	_	SpaceAfter=No
 10	,	,	PUNCT	_	_	11	punct	_	_
-11	Renato	Renato	PROPN	_	Gender=Masc|Number=Sing	9	appos	_	_
+11	Renato	Renato	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	9	appos	_	_
 12	Franco	Franco	PROPN	_	Number=Sing	11	flat:name	_	SpaceAfter=No
 13	,	,	PUNCT	_	_	11	punct	_	_
-14	aderido	aderir	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	9	acl	_	_
+14	aderido	aderir	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	2	advcl	_	_
 15-16	à	_	_	_	_	_	_	_	_
 15	a	a	ADP	_	_	17	case	_	_
 16	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	17	det	_	_
-17	Frente	Frente	PROPN	_	Gender=Fem|Number=Sing	14	obl	_	_
-18	Única	única	PROPN	_	Number=Sing	17	flat:name	_	_
+17	Frente	Frente	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	14	obj	_	_
+18	Única	Única	PROPN	_	Number=Sing	17	flat:name	_	_
 19	Paraense	Paraense	PROPN	_	Number=Sing	17	flat:name	_	SpaceAfter=No
 20	,	,	PUNCT	_	_	21	punct	_	_
 21	organizada	organizar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	17	acl	_	_
@@ -65,15 +68,15 @@
 23	1934	1934	NUM	_	NumType=Card	21	obl	_	SpaceAfter=No
 24	.	.	PUNCT	_	_	2	punct	_	SpacesAfter=\n
 
-# text = Os pontos principais de seu programa eram: lutar pela constitucionalização imediata do país, defender a ordem constitucional da República e lutar pela prosperidade, a autonomia política, a moralidade administrativa e a independência econômica do estado do Pará.
 # sent_id = 3
+# text = Os pontos principais de seu programa eram: lutar pela constitucionalização imediata do país, defender a ordem constitucional da República e lutar pela prosperidade, a autonomia política, a moralidade administrativa e a independência econômica do estado do Pará.
 1	Os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	2	det	_	_
 2	pontos	ponto	NOUN	_	Gender=Masc|Number=Plur	9	nsubj	_	_
 3	principais	principal	ADJ	_	Gender=Masc|Number=Plur	2	amod	_	_
 4	de	de	ADP	_	_	6	case	_	_
 5	seu	seu	DET	_	Gender=Masc|Number=Sing|PronType=Prs	6	det	_	_
 6	programa	programa	NOUN	_	Gender=Masc|Number=Sing	2	nmod	_	_
-7	eram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	9	aux	_	SpaceAfter=No
+7	eram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	9	cop	_	SpaceAfter=No
 8	:	:	PUNCT	_	_	9	punct	_	_
 9	lutar	lutar	VERB	_	VerbForm=Inf	0	root	_	_
 10-11	pela	_	_	_	_	_	_	_	_
@@ -86,31 +89,31 @@
 15	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	16	det	_	_
 16	país	país	NOUN	_	Gender=Masc|Number=Sing	12	nmod	_	SpaceAfter=No
 17	,	,	PUNCT	_	_	18	punct	_	_
-18	defender	defender	VERB	_	VerbForm=Inf	12	acl	_	_
+18	defender	defender	VERB	_	VerbForm=Inf	9	conj	_	_
 19	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	20	det	_	_
 20	ordem	ordem	NOUN	_	Gender=Fem|Number=Sing	18	obj	_	_
 21	constitucional	constitucional	ADJ	_	Gender=Fem|Number=Sing	20	amod	_	_
 22-23	da	_	_	_	_	_	_	_	_
 22	de	de	ADP	_	_	24	case	_	_
 23	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	24	det	_	_
-24	República	República	PROPN	_	Number=Sing	20	nmod	_	_
+24	República	república	NOUN	_	Gender=Fem|Number=Sing	20	nmod	_	_
 25	e	e	CCONJ	_	_	26	cc	_	_
-26	lutar	lutar	VERB	_	VerbForm=Inf	18	conj	_	_
+26	lutar	lutar	VERB	_	VerbForm=Inf	9	conj	_	_
 27-28	pela	_	_	_	_	_	_	_	_
 27	por	por	ADP	_	_	29	case	_	_
 28	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	29	det	_	_
-29	prosperidade	prosperidade	NOUN	_	Gender=Fem|Number=Sing	26	obl	_	SpaceAfter=No
-30	,	,	PUNCT	_	_	26	punct	_	_
+29	prosperidade	prosperidade	NOUN	_	Gender=Fem|Number=Sing	26	obj	_	SpaceAfter=No
+30	,	,	PUNCT	_	_	32	punct	_	_
 31	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	32	det	_	_
-32	autonomia	autonomia	NOUN	_	Gender=Fem|Number=Sing	26	obj	_	_
+32	autonomia	autonomia	NOUN	_	Gender=Fem|Number=Sing	29	conj	_	_
 33	política	político	ADJ	_	Gender=Fem|Number=Sing	32	amod	_	SpaceAfter=No
 34	,	,	PUNCT	_	_	36	punct	_	_
 35	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	36	det	_	_
-36	moralidade	moralidade	NOUN	_	Gender=Fem|Number=Sing	32	conj	_	_
+36	moralidade	moralidade	NOUN	_	Gender=Fem|Number=Sing	29	conj	_	_
 37	administrativa	administrativo	ADJ	_	Gender=Fem|Number=Sing	36	amod	_	_
 38	e	e	CCONJ	_	_	40	cc	_	_
 39	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	40	det	_	_
-40	independência	independência	NOUN	_	Gender=Fem|Number=Sing	32	conj	_	_
+40	independência	independência	NOUN	_	Gender=Fem|Number=Sing	29	conj	_	_
 41	econômica	econômico	ADJ	_	Gender=Fem|Number=Sing	40	amod	_	_
 42-43	do	_	_	_	_	_	_	_	_
 42	de	de	ADP	_	_	44	case	_	_
@@ -122,20 +125,20 @@
 47	Pará	Pará	PROPN	_	Gender=Masc|Number=Sing	44	nmod	_	SpaceAfter=No
 48	.	.	PUNCT	_	_	9	punct	_	SpacesAfter=\n
 
-# text = O partido não chegou a apresentar candidatos à Assembléia Nacional Constituinte.
 # sent_id = 4
+# text = O partido não chegou a apresentar candidatos à Assembléia Nacional Constituinte.
 1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	_	_
-2	partido	partido	NOUN	_	Gender=Masc|Number=Sing	6	nsubj	_	_
+2	partido	partido	NOUN	_	Gender=Masc|Number=Sing	4	nsubj	_	_
 3	não	não	ADV	_	Polarity=Neg	6	advmod	_	_
-4	chegou	chegar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+4	chegou	chegar	VERB	_	ExtPos=AUX|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 5	a	a	SCONJ	_	_	6	mark	_	_
 6	apresentar	apresentar	VERB	_	VerbForm=Inf	4	xcomp	_	_
 7	candidatos	candidato	NOUN	_	Gender=Masc|Number=Plur	6	obj	_	_
 8-9	à	_	_	_	_	_	_	_	_
 8	a	a	ADP	_	_	10	case	_	_
 9	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	10	det	_	_
-10	Assembléia	Assembléia	PROPN	_	Gender=Fem|Number=Sing	7	nmod	_	_
-11	Nacional	Nacional	PROPN	_	Number=Sing	10	flat:name	_	_
+10	Assembléia	assembléia	NOUN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	7	nmod	_	_
+11	Nacional	Nacional	ADJ	_	Number=Sing	10	amod	_	_
 12	Constituinte	Constituinte	PROPN	_	Number=Sing	10	flat:name	_	SpaceAfter=No
 13	.	.	PUNCT	_	_	6	punct	_	SpacesAfter=\n
 

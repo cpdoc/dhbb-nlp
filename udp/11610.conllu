@@ -1,9 +1,12 @@
-# text = Partido político de inspiração trotskista fundado em 1996, originado da corrente Causa Operária, ala da esquerda do Partido dos Trabalhadores (PT) e que dele foi expulsa em 1990.
-# sent_id = 1
-# newpar
+# generator = UDPipe 2, https://lindat.mff.cuni.cz/services/udpipe
+# udpipe_model = portuguese-bosque-ud-2.12-230717
+# udpipe_model_licence = CC BY-NC-SA
 # newdoc
-1	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	17	nsubj	_	_
-2	político	político	PROPN	_	Number=Sing	1	flat:name	_	_
+# newpar
+# sent_id = 1
+# text = Partido político de inspiração trotskista fundado em 1996, originado da corrente Causa Operária, ala da esquerda do Partido dos Trabalhadores (PT) e que dele foi expulsa em 1990.
+1	Partido	partido	NOUN	_	Gender=Masc|Number=Sing	0	root	_	_
+2	político	político	ADJ	_	Gender=Masc|Number=Sing	1	amod	_	_
 3	de	de	ADP	_	_	4	case	_	_
 4	inspiração	inspiração	NOUN	_	Gender=Fem|Number=Sing	1	nmod	_	_
 5	trotskista	trotskista	ADJ	_	Gender=Fem|Number=Sing	4	amod	_	_
@@ -16,14 +19,14 @@
 11	de	de	ADP	_	_	13	case	_	_
 12	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	13	det	_	_
 13	corrente	corrente	NOUN	_	Gender=Fem|Number=Sing	10	obj	_	_
-14	Causa	Causa	PROPN	_	Gender=Fem|Number=Sing	13	appos	_	_
+14	Causa	Causa	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	13	appos	_	_
 15	Operária	Operária	PROPN	_	Number=Sing	14	flat:name	_	SpaceAfter=No
-16	,	,	PUNCT	_	_	10	punct	_	_
-17	ala	alar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+16	,	,	PUNCT	_	_	17	punct	_	_
+17	ala	ala	NOUN	_	Gender=Fem|Number=Sing	13	appos	_	_
 18-19	da	_	_	_	_	_	_	_	_
 18	de	de	ADP	_	_	20	case	_	_
 19	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	20	det	_	_
-20	esquerda	esquerda	NOUN	_	Gender=Fem|Number=Sing	17	obj	_	_
+20	esquerda	esquerda	NOUN	_	Gender=Fem|Number=Sing	17	nmod	_	_
 21-22	do	_	_	_	_	_	_	_	_
 21	de	de	ADP	_	_	23	case	_	_
 22	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	23	det	_	_
@@ -36,18 +39,18 @@
 28	PT	PT	PROPN	_	Gender=Masc|Number=Sing	23	appos	_	SpaceAfter=No
 29	)	)	PUNCT	_	_	28	punct	_	_
 30	e	e	CCONJ	_	_	35	cc	_	_
-31	que	que	SCONJ	_	_	35	mark	_	_
+31	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	35	nsubj:pass	_	_
 32-33	dele	_	_	_	_	_	_	_	_
 32	de	de	ADP	_	_	33	case	_	_
-33	ele	ele	PRON	_	Gender=Masc|Number=Sing|Person=3|PronType=Prs	35	nsubj	_	_
-34	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	35	cop	_	_
-35	expulsa	expulso	ADJ	_	Gender=Fem|Number=Sing	17	conj	_	_
+33	ele	ele	PRON	_	Gender=Masc|Number=Sing|Person=3|PronType=Prs	35	obl	_	_
+34	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	35	aux:pass	_	_
+35	expulsa	expulr	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	10	conj	_	_
 36	em	em	ADP	_	_	37	case	_	_
 37	1990	1990	NUM	_	NumType=Card	35	obl	_	SpaceAfter=No
-38	.	.	PUNCT	_	_	17	punct	_	SpacesAfter=\n
+38	.	.	PUNCT	_	_	1	punct	_	_
 
-# text = Na fundação do Partido dos Trabalhadores, em 10 de fevereiro de 1980, militantes trotskistas se filiaram à nova legenda e, ao participar de seus quadros passaram a publicar um jornal, «Causa Operária», que viria a denominar a corrente.
 # sent_id = 2
+# text = Na fundação do Partido dos Trabalhadores, em 10 de fevereiro de 1980, militantes trotskistas se filiaram à nova legenda e, ao participar de seus quadros passaram a publicar um jornal, «Causa Operária», que viria a denominar a corrente.
 1-2	Na	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	3	case	_	_
 2	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	3	det	_	_
@@ -60,7 +63,7 @@
 7	de	de	ADP	_	_	9	case	_	_
 8	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	9	det	_	_
 9	Trabalhadores	Trabalhadores	PROPN	_	Number=Sing	6	nmod	_	SpaceAfter=No
-10	,	,	PUNCT	_	_	12	punct	_	_
+10	,	,	PUNCT	_	_	3	punct	_	_
 11	em	em	ADP	_	_	12	case	_	_
 12	10	10	NUM	_	NumType=Card	3	nmod	_	_
 13	de	de	ADP	_	_	14	case	_	_
@@ -71,61 +74,61 @@
 18	militantes	militante	NOUN	_	Gender=Masc|Number=Plur	21	nsubj	_	_
 19	trotskistas	trotskista	ADJ	_	Gender=Masc|Number=Plur	18	amod	_	_
 20	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Plur|Person=3|PronType=Prs	21	expl	_	_
-21	filiaram	filiar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+21	filiaram	filiar	VERB	_	Mood=Ind|Number=Plur|Person=3|VerbForm=Fin	0	root	_	_
 22-23	à	_	_	_	_	_	_	_	_
 22	a	a	ADP	_	_	25	case	_	_
 23	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	25	det	_	_
 24	nova	novo	ADJ	_	Gender=Fem|Number=Sing	25	amod	_	_
 25	legenda	legenda	NOUN	_	Gender=Fem|Number=Sing	21	obj	_	_
-26	e	e	CCONJ	_	_	36	cc	_	SpaceAfter=No
+26	e	e	CCONJ	_	_	34	cc	_	SpaceAfter=No
 27	,	,	PUNCT	_	_	30	punct	_	_
 28-29	ao	_	_	_	_	_	_	_	_
 28	a	a	SCONJ	_	_	30	mark	_	_
 29	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	30	det	_	_
-30	participar	participar	VERB	_	VerbForm=Inf	36	advcl	_	_
+30	participar	participar	VERB	_	VerbForm=Inf	34	advcl	_	_
 31	de	de	ADP	_	_	33	case	_	_
 32	seus	seu	DET	_	Gender=Masc|Number=Plur|PronType=Prs	33	det	_	_
 33	quadros	quadro	NOUN	_	Gender=Masc|Number=Plur	30	obj	_	_
-34	passaram	passar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	21	conj	_	_
+34	passaram	passar	VERB	_	ExtPos=AUX|Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	21	conj	_	_
 35	a	a	SCONJ	_	_	36	mark	_	_
 36	publicar	publicar	VERB	_	VerbForm=Inf	34	xcomp	_	_
 37	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	38	det	_	_
 38	jornal	jornal	NOUN	_	Gender=Masc|Number=Sing	36	obj	_	SpaceAfter=No
 39	,	,	PUNCT	_	_	41	punct	_	_
 40	«	«	PUNCT	_	_	41	punct	_	SpaceAfter=No
-41	Causa	Causa	PROPN	_	Gender=Fem|Number=Sing	38	appos	_	_
+41	Causa	Causa	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	38	appos	_	_
 42	Operária	Operária	PROPN	_	Number=Sing	41	flat:name	_	SpaceAfter=No
 43	»	»	PUNCT	_	_	41	punct	_	SpaceAfter=No
 44	,	,	PUNCT	_	_	46	punct	_	_
 45	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	46	nsubj	_	_
-46	viria	vir	VERB	_	Mood=Cnd|Number=Sing|Person=3|VerbForm=Fin	38	acl:relcl	_	_
+46	viria	vir	VERB	_	ExtPos=AUX|Mood=Cnd|Number=Sing|Person=3|VerbForm=Fin	38	acl:relcl	_	_
 47	a	a	SCONJ	_	_	48	mark	_	_
 48	denominar	denominar	VERB	_	VerbForm=Inf	46	xcomp	_	_
 49	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	50	det	_	_
 50	corrente	corrente	NOUN	_	Gender=Fem|Number=Sing	48	obj	_	SpaceAfter=No
 51	.	.	PUNCT	_	_	21	punct	_	SpacesAfter=\n
 
-# text = De orientação estritamente classista, ou seja, vinculada à identidade de classe trabalhadora, a Causa Operária ocupou um lugar de oposição ao campo majoritário do PT, inclusive fazendo forte oposição à Assembléia Nacional Constituinte (1987-1988) formada por deputados e senadores eleitos em 1986.
 # sent_id = 3
+# text = De orientação estritamente classista, ou seja, vinculada à identidade de classe trabalhadora, a Causa Operária ocupou um lugar de oposição ao campo majoritário do PT, inclusive fazendo forte oposição à Assembléia Nacional Constituinte (1987-1988) formada por deputados e senadores eleitos em 1986.
 1	De	de	ADP	_	_	2	case	_	_
 2	orientação	orientação	NOUN	_	Gender=Fem|Number=Sing	20	obl	_	_
 3	estritamente	estritamente	ADV	_	_	4	advmod	_	_
 4	classista	classista	ADJ	_	Gender=Fem|Number=Sing	2	amod	_	SpaceAfter=No
-5	,	,	PUNCT	_	_	2	punct	_	_
-6	ou	ou	CCONJ	_	_	9	cc	_	_
-7	seja	ser	VERB	_	Mood=Sub|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	2	conj	_	SpaceAfter=No
-8	,	,	PUNCT	_	_	9	punct	_	_
-9	vinculada	vincular	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	7	xcomp	_	_
+5	,	,	PUNCT	_	_	6	punct	_	_
+6	ou	ou	CCONJ	_	ExtPos=CCONJ	9	cc	_	_
+7	seja	ser	VERB	_	Mood=Sub|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	fixed	_	SpaceAfter=No
+8	,	,	PUNCT	_	_	6	punct	_	_
+9	vinculada	vincular	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	2	acl	_	_
 10-11	à	_	_	_	_	_	_	_	_
 10	a	a	ADP	_	_	12	case	_	_
 11	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	12	det	_	_
-12	identidade	identidade	NOUN	_	Gender=Fem|Number=Sing	9	obl	_	_
+12	identidade	identidade	NOUN	_	Gender=Fem|Number=Sing	9	obj	_	_
 13	de	de	ADP	_	_	14	case	_	_
 14	classe	classe	NOUN	_	Gender=Fem|Number=Sing	12	nmod	_	_
-15	trabalhadora	trabalhadora	ADJ	_	Gender=Fem|Number=Sing	14	amod	_	SpaceAfter=No
+15	trabalhadora	trabalhador	ADJ	_	Gender=Fem|Number=Sing	14	amod	_	SpaceAfter=No
 16	,	,	PUNCT	_	_	9	punct	_	_
 17	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	18	det	_	_
-18	Causa	causa	PROPN	_	Gender=Fem|Number=Sing	20	nsubj	_	_
+18	Causa	Causa	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	20	nsubj	_	_
 19	Operária	Operária	PROPN	_	Number=Sing	18	flat:name	_	_
 20	ocupou	ocupar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 21	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	22	det	_	_
@@ -135,7 +138,7 @@
 25-26	ao	_	_	_	_	_	_	_	_
 25	a	a	ADP	_	_	27	case	_	_
 26	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	27	det	_	_
-27	campo	campo	NOUN	_	Gender=Masc|Number=Sing	20	iobj	_	_
+27	campo	campo	NOUN	_	Gender=Masc|Number=Sing	24	nmod	_	_
 28	majoritário	majoritário	ADJ	_	Gender=Masc|Number=Sing	27	amod	_	_
 29-30	do	_	_	_	_	_	_	_	_
 29	de	de	ADP	_	_	31	case	_	_
@@ -149,24 +152,24 @@
 37-38	à	_	_	_	_	_	_	_	_
 37	a	a	ADP	_	_	39	case	_	_
 38	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	39	det	_	_
-39	Assembléia	Assembléia	PROPN	_	Gender=Fem|Number=Sing	34	obl	_	_
+39	Assembléia	Assembléia	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	36	nmod	_	_
 40	Nacional	Nacional	PROPN	_	Number=Sing	39	flat:name	_	_
 41	Constituinte	Constituinte	PROPN	_	Number=Sing	39	flat:name	_	_
 42	(	(	PUNCT	_	_	43	punct	_	SpaceAfter=No
 43	1987-1988	1987-1988	NUM	_	NumType=Card	39	appos	_	SpaceAfter=No
 44	)	)	PUNCT	_	_	43	punct	_	_
-45	formada	formar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	34	acl	_	_
+45	formada	formar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	39	acl	_	_
 46	por	por	ADP	_	_	47	case	_	_
 47	deputados	deputado	NOUN	_	Gender=Masc|Number=Plur	45	obl:agent	_	_
 48	e	e	CCONJ	_	_	49	cc	_	_
 49	senadores	senador	NOUN	_	Gender=Masc|Number=Plur	47	conj	_	_
-50	eleitos	eleever	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part	49	acl	_	_
+50	eleitos	eleger,eleito	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part	47	acl	_	_
 51	em	em	ADP	_	_	52	case	_	_
 52	1986	1986	NUM	_	NumType=Card	50	obl	_	SpaceAfter=No
-53	.	.	PUNCT	_	_	20	punct	_	SpacesAfter=\n
+53	.	.	PUNCT	_	_	20	punct	_	_
 
-# text = A sucessão de embates travados pela corrente dentro do PT acirrou-se quando da candidatura de Luís Inácio Lula da Silva à presidência em 1989, marcadamente devido às alianças políticas engendradas naquele momento.
 # sent_id = 4
+# text = A sucessão de embates travados pela corrente dentro do PT acirrou-se quando da candidatura de Luís Inácio Lula da Silva à presidência em 1989, marcadamente devido às alianças políticas engendradas naquele momento.
 1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
 2	sucessão	sucessão	NOUN	_	Gender=Fem|Number=Sing	13	nsubj	_	_
 3	de	de	ADP	_	_	4	case	_	_
@@ -176,7 +179,7 @@
 6	por	por	ADP	_	_	8	case	_	_
 7	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	8	det	_	_
 8	corrente	corrente	NOUN	_	Gender=Fem|Number=Sing	5	obl:agent	_	_
-9	dentro	dentro	ADV	_	_	13	advmod	_	_
+9	dentro	dentro	ADV	_	_	5	advmod	_	_
 10-11	do	_	_	_	_	_	_	_	_
 10	de	de	ADP	_	_	12	case	_	_
 11	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	12	det	_	_
@@ -190,7 +193,7 @@
 17	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	18	det	_	_
 18	candidatura	candidatura	NOUN	_	Gender=Fem|Number=Sing	15	obl	_	_
 19	de	de	ADP	_	_	20	case	_	_
-20	Luís	Luís	PROPN	_	Gender=Masc|Number=Sing	18	nmod	_	_
+20	Luís	Luís	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	18	nmod	_	_
 21	Inácio	Inácio	PROPN	_	Number=Sing	20	flat:name	_	_
 22	Lula	Lula	PROPN	_	Number=Sing	20	flat:name	_	_
 23-24	da	_	_	_	_	_	_	_	_
@@ -203,9 +206,9 @@
 28	presidência	presidência	NOUN	_	Gender=Fem|Number=Sing	18	nmod	_	_
 29	em	em	ADP	_	_	30	case	_	_
 30	1989	1989	NUM	_	NumType=Card	28	nmod	_	SpaceAfter=No
-31	,	,	PUNCT	_	_	32	punct	_	_
-32	marcadamente	marcadamente	ADV	_	_	13	advmod	_	_
-33	devido	devido	ADV	_	_	32	advmod	_	_
+31	,	,	PUNCT	_	_	33	punct	_	_
+32	marcadamente	marcadamente	ADV	_	_	33	advmod	_	_
+33	devido	devido	ADV	_	_	13	advmod	_	_
 34-35	às	_	_	_	_	_	_	_	_
 34	a	a	ADP	_	_	36	case	_	_
 35	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	36	det	_	_
@@ -216,10 +219,10 @@
 39	em	em	ADP	_	_	41	case	_	_
 40	aquele	aquele	DET	_	Gender=Masc|Number=Sing|PronType=Dem	41	det	_	_
 41	momento	momento	NOUN	_	Gender=Masc|Number=Sing	38	obl	_	SpaceAfter=No
-42	.	.	PUNCT	_	_	13	punct	_	SpacesAfter=\n
+42	.	.	PUNCT	_	_	13	punct	_	_
 
-# text = Com o conflito os diretórios municipais do PT sob direção da Causa Operária foram destituídos, culminando na expulsão da corrente em 1990.
 # sent_id = 5
+# text = Com o conflito os diretórios municipais do PT sob direção da Causa Operária foram destituídos, culminando na expulsão da corrente em 1990.
 1	Com	com	ADP	_	_	3	case	_	_
 2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
 3	conflito	conflito	NOUN	_	Gender=Masc|Number=Sing	17	obl	_	_
@@ -231,36 +234,36 @@
 8	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	9	det	_	_
 9	PT	PT	PROPN	_	Gender=Masc|Number=Sing	5	nmod	_	_
 10	sob	sob	ADP	_	_	11	case	_	_
-11	direção	direção	NOUN	_	Gender=Fem|Number=Sing	9	nmod	_	_
+11	direção	direção	NOUN	_	Gender=Fem|Number=Sing	5	nmod	_	_
 12-13	da	_	_	_	_	_	_	_	_
 12	de	de	ADP	_	_	14	case	_	_
 13	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	14	det	_	_
-14	Causa	causa	PROPN	_	Gender=Fem|Number=Sing	11	nmod	_	_
+14	Causa	Causa	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	11	nmod	_	_
 15	Operária	Operária	PROPN	_	Number=Sing	14	flat:name	_	_
-16	foram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	17	aux:pass	_	_
+16	foram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|VerbForm=Fin	17	aux:pass	_	_
 17	destituídos	destituir	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	0	root	_	SpaceAfter=No
 18	,	,	PUNCT	_	_	19	punct	_	_
 19	culminando	culminar	VERB	_	VerbForm=Ger	17	advcl	_	_
 20-21	na	_	_	_	_	_	_	_	_
 20	em	em	ADP	_	_	22	case	_	_
 21	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	22	det	_	_
-22	expulsão	expulsão	NOUN	_	Gender=Fem|Number=Sing	19	obl	_	_
+22	expulsão	expulsão	NOUN	_	Gender=Fem|Number=Sing	19	obj	_	_
 23-24	da	_	_	_	_	_	_	_	_
 23	de	de	ADP	_	_	25	case	_	_
 24	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	25	det	_	_
 25	corrente	corrente	NOUN	_	Gender=Fem|Number=Sing	22	nmod	_	_
 26	em	em	ADP	_	_	27	case	_	_
-27	1990	1990	NUM	_	NumType=Card	19	obl	_	SpaceAfter=No
-28	.	.	PUNCT	_	_	17	punct	_	SpacesAfter=\n
+27	1990	1990	NUM	_	NumType=Card	22	nmod	_	SpaceAfter=No
+28	.	.	PUNCT	_	_	17	punct	_	_
 
-# text = Não obstante a expulsão os conflitos entre a corrente e a direção do partido se seguiram nas campanhas daquele ano para os cargos de deputado federal no Distrito Federal e no Rio Grande do Sul, o que culminou em outras expulsões de militantes articulados junto à corrente e a interdição judicial de atividade panfletária anti-PT da parte da Causa Operária.
 # sent_id = 6
+# text = Não obstante a expulsão os conflitos entre a corrente e a direção do partido se seguiram nas campanhas daquele ano para os cargos de deputado federal no Distrito Federal e no Rio Grande do Sul, o que culminou em outras expulsões de militantes articulados junto à corrente e a interdição judicial de atividade panfletária anti-PT da parte da Causa Operária.
 1	Não	não	ADV	_	Polarity=Neg	2	advmod	_	_
-2	obstante	obstante	ADV	_	_	0	root	_	_
+2	obstante	obstante	ADJ	_	Gender=Masc|Number=Sing	17	obl	_	_
 3	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	4	det	_	_
-4	expulsão	expulsão	NOUN	_	Gender=Fem|Number=Sing	2	nsubj	_	_
+4	expulsão	expulsão	NOUN	_	Gender=Fem|Number=Sing	17	nsubj	_	_
 5	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	6	det	_	_
-6	conflitos	conflito	NOUN	_	Gender=Masc|Number=Plur	4	conj	_	_
+6	conflitos	conflito	NOUN	_	Gender=Masc|Number=Plur	17	nsubj	_	_
 7	entre	entre	ADP	_	_	9	case	_	_
 8	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	9	det	_	_
 9	corrente	corrente	NOUN	_	Gender=Fem|Number=Sing	6	nmod	_	_
@@ -272,11 +275,11 @@
 14	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	15	det	_	_
 15	partido	partido	NOUN	_	Gender=Masc|Number=Sing	12	nmod	_	_
 16	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Plur|Person=3|PronType=Prs	17	expl	_	_
-17	seguiram	seguir	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	15	acl:relcl	_	_
+17	seguiram	seguir	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 18-19	nas	_	_	_	_	_	_	_	_
 18	em	em	ADP	_	_	20	case	_	_
 19	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	20	det	_	_
-20	campanhas	campanha	NOUN	_	Gender=Fem|Number=Plur	17	obj	_	_
+20	campanhas	campanha	NOUN	_	Gender=Fem|Number=Plur	17	obl	_	_
 21-22	daquele	_	_	_	_	_	_	_	_
 21	de	de	ADP	_	_	23	case	_	_
 22	aquele	aquele	DET	_	Gender=Masc|Number=Sing|PronType=Dem	23	det	_	_
@@ -290,111 +293,111 @@
 30-31	no	_	_	_	_	_	_	_	_
 30	em	em	ADP	_	_	32	case	_	_
 31	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	32	det	_	_
-32	Distrito	Distrito	PROPN	_	Gender=Masc|Number=Sing	26	nmod	_	_
+32	Distrito	Distrito	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	28	nmod	_	_
 33	Federal	Federal	PROPN	_	Number=Sing	32	flat:name	_	_
 34	e	e	CCONJ	_	_	37	cc	_	_
 35-36	no	_	_	_	_	_	_	_	_
 35	em	em	ADP	_	_	37	case	_	_
 36	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	37	det	_	_
-37	Rio	Rio	PROPN	_	Gender=Masc|Number=Sing	32	conj	_	_
+37	Rio	Rio	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	32	conj	_	_
 38	Grande	Grande	PROPN	_	Number=Sing	37	flat:name	_	_
 39-40	do	_	_	_	_	_	_	_	_
 39	de	de	ADP	_	_	41	case	_	_
 40	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	41	det	_	_
 41	Sul	Sul	PROPN	_	Number=Sing	37	nmod	_	SpaceAfter=No
-42	,	,	PUNCT	_	_	32	punct	_	_
-43	o	o	PRON	_	Gender=Masc|Number=Sing|PronType=Dem	20	appos	_	_
+42	,	,	PUNCT	_	_	17	punct	_	_
+43	o	o	PRON	_	Gender=Masc|Number=Sing|PronType=Dem	17	appos	_	_
 44	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	45	nsubj	_	_
 45	culminou	culminar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	43	acl:relcl	_	_
 46	em	em	ADP	_	_	48	case	_	_
 47	outras	outro	DET	_	Gender=Fem|Number=Plur|PronType=Ind	48	det	_	_
-48	expulsões	expulsão	NOUN	_	Gender=Fem|Number=Plur	45	obl	_	_
+48	expulsões	expulsão	NOUN	_	Gender=Fem|Number=Plur	45	obj	_	_
 49	de	de	ADP	_	_	50	case	_	_
 50	militantes	militante	NOUN	_	Gender=Masc|Number=Plur	48	nmod	_	_
 51	articulados	articular	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part	50	acl	_	_
-52	junto	junto	ADV	_	_	45	advmod	_	_
+52	junto	junto	ADV	_	_	51	advmod	_	_
 53-54	à	_	_	_	_	_	_	_	_
 53	a	a	ADP	_	_	55	case	_	_
 54	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	55	det	_	_
 55	corrente	corrente	NOUN	_	Gender=Fem|Number=Sing	52	obl	_	_
 56	e	e	CCONJ	_	_	58	cc	_	_
 57	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	58	det	_	_
-58	interdição	interdição	NOUN	_	Gender=Fem|Number=Sing	43	conj	_	_
+58	interdição	interdição	NOUN	_	Gender=Fem|Number=Sing	48	conj	_	_
 59	judicial	judicial	ADJ	_	Gender=Fem|Number=Sing	58	amod	_	_
 60	de	de	ADP	_	_	61	case	_	_
 61	atividade	atividade	NOUN	_	Gender=Fem|Number=Sing	58	nmod	_	_
 62	panfletária	panfletário	ADJ	_	Gender=Fem|Number=Sing	61	amod	_	_
-63	anti-PT	anti-pt	NOUN	_	Gender=Fem|Number=Sing	58	appos	_	_
+63	anti-PT	anti-pt	ADJ	_	Gender=Fem|Number=Sing	61	amod	_	_
 64-65	da	_	_	_	_	_	_	_	_
 64	de	de	ADP	_	_	66	case	_	_
 65	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	66	det	_	_
-66	parte	parte	NOUN	_	Gender=Fem|Number=Sing	63	nmod	_	_
+66	parte	parte	NOUN	_	Gender=Fem|Number=Sing	61	nmod	_	_
 67-68	da	_	_	_	_	_	_	_	_
 67	de	de	ADP	_	_	69	case	_	_
 68	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	69	det	_	_
-69	Causa	causa	PROPN	_	Gender=Fem|Number=Sing	66	nmod	_	_
+69	Causa	Causa	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	66	nmod	_	_
 70	Operária	Operária	PROPN	_	Number=Sing	69	flat:name	_	SpaceAfter=No
-71	.	.	PUNCT	_	_	2	punct	_	SpacesAfter=\n
+71	.	.	PUNCT	_	_	17	punct	_	SpacesAfter=\n
 
-# text = Foi em apoio à formação da Aliança da Juventude Revolucionária (AJR) que as atividades da Causa Operária se estabeleceram junto ao movimento estudantil, vindo a compor quadros da União Nacional dos Estudantes, ainda em 1990.
 # sent_id = 7
-1	Foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	cop	_	_
+# text = Foi em apoio à formação da Aliança da Juventude Revolucionária (AJR) que as atividades da Causa Operária se estabeleceram junto ao movimento estudantil, vindo a compor quadros da União Nacional dos Estudantes, ainda em 1990.
+1	Foi	foi	SCONJ	_	_	25	mark	_	_
 2	em	em	ADP	_	_	3	case	_	_
-3	apoio	apoio	NOUN	_	Gender=Masc|Number=Sing	0	root	_	_
+3	apoio	apoio	NOUN	_	Gender=Masc|Number=Sing	25	obl	_	_
 4-5	à	_	_	_	_	_	_	_	_
 4	a	a	ADP	_	_	6	case	_	_
 5	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	6	det	_	_
 6	formação	formação	NOUN	_	Gender=Fem|Number=Sing	3	nmod	_	_
 7-8	da	_	_	_	_	_	_	_	_
 7	de	de	ADP	_	_	9	case	_	_
-8	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	9	det	_	_
+8	a	o	DET	_	Definite=Def|PronType=Art	9	det	_	_
 9	Aliança	Aliança	PROPN	_	Gender=Fem|Number=Sing	6	nmod	_	_
 10-11	da	_	_	_	_	_	_	_	_
 10	de	de	ADP	_	_	12	case	_	_
 11	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	12	det	_	_
-12	Juventude	Juventude	PROPN	_	Gender=Fem|Number=Sing	9	nmod	_	_
-13	Revolucionária	revolucionária	PROPN	_	Number=Sing	12	flat:name	_	_
+12	Juventude	Juventude	PROPN	_	ExtPos=PROPN|Number=Sing	9	nmod	_	_
+13	Revolucionária	Revolucionária	PROPN	_	Number=Sing	12	flat:name	_	_
 14	(	(	PUNCT	_	_	15	punct	_	SpaceAfter=No
-15	AJR	AJR	PROPN	_	Gender=Fem|Number=Sing	12	appos	_	SpaceAfter=No
+15	AJR	AJR	PROPN	_	Gender=Fem|Number=Sing	9	appos	_	SpaceAfter=No
 16	)	)	PUNCT	_	_	15	punct	_	_
-17	que	que	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	25	obj	_	_
+17	que	que	SCONJ	_	_	25	mark	_	_
 18	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	19	det	_	_
 19	atividades	atividade	NOUN	_	Gender=Fem|Number=Plur	25	nsubj	_	_
 20-21	da	_	_	_	_	_	_	_	_
 20	de	de	ADP	_	_	22	case	_	_
 21	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	22	det	_	_
-22	Causa	causa	PROPN	_	Gender=Fem|Number=Sing	19	nmod	_	_
+22	Causa	Causa	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	19	nmod	_	_
 23	Operária	Operária	PROPN	_	Number=Sing	22	flat:name	_	_
-24	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Plur|Person=3|PronType=Prs	25	expl	_	_
-25	estabeleceram	estabelecer	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	12	acl:relcl	_	_
+24	se	se	PRON	_	Case=Acc|Gender=Fem|Number=Plur|Person=3|PronType=Prs	25	expl	_	_
+25	estabeleceram	estabelecer	VERB	_	Mood=Ind|Number=Plur|Person=3|VerbForm=Fin	0	root	_	_
 26	junto	junto	ADV	_	_	25	advmod	_	_
 27-28	ao	_	_	_	_	_	_	_	_
 27	a	a	ADP	_	_	29	case	_	_
 28	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	29	det	_	_
 29	movimento	movimento	NOUN	_	Gender=Masc|Number=Sing	26	obl	_	_
 30	estudantil	estudantil	ADJ	_	Gender=Masc|Number=Sing	29	amod	_	SpaceAfter=No
-31	,	,	PUNCT	_	_	34	punct	_	_
-32	vindo	vir	VERB	_	VerbForm=Ger	25	advcl	_	_
+31	,	,	PUNCT	_	_	32	punct	_	_
+32	vindo	vir	VERB	_	ExtPos=AUX|VerbForm=Ger	25	advcl	_	_
 33	a	a	SCONJ	_	_	34	mark	_	_
 34	compor	compor	VERB	_	VerbForm=Inf	32	xcomp	_	_
 35	quadros	quadro	NOUN	_	Gender=Masc|Number=Plur	34	obj	_	_
 36-37	da	_	_	_	_	_	_	_	_
 36	de	de	ADP	_	_	38	case	_	_
 37	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	38	det	_	_
-38	União	União	PROPN	_	Gender=Fem|Number=Sing	35	nmod	_	_
+38	União	União	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	35	nmod	_	_
 39	Nacional	Nacional	PROPN	_	Number=Sing	38	flat:name	_	_
 40-41	dos	_	_	_	_	_	_	_	_
 40	de	de	ADP	_	_	42	case	_	_
 41	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	42	det	_	_
 42	Estudantes	Estudantes	PROPN	_	Number=Sing	38	nmod	_	SpaceAfter=No
-43	,	,	PUNCT	_	_	46	punct	_	_
+43	,	,	PUNCT	_	_	34	punct	_	_
 44	ainda	ainda	ADV	_	_	46	advmod	_	_
 45	em	em	ADP	_	_	46	case	_	_
-46	1990	1990	NUM	_	NumType=Card	35	nmod	_	SpaceAfter=No
-47	.	.	PUNCT	_	_	3	punct	_	SpacesAfter=\n
+46	1990	1990	NUM	_	NumType=Card	34	obl	_	SpaceAfter=No
+47	.	.	PUNCT	_	_	25	punct	_	_
 
-# text = Em 1991, todos os militantes que mantinham ligações extra-oficiais com a corrente da Causa Operária foram expulsos do PT.
 # sent_id = 8
+# text = Em 1991, todos os militantes que mantinham ligações extra-oficiais com a corrente da Causa Operária foram expulsos do PT.
 1	Em	em	ADP	_	_	2	case	_	_
 2	1991	1991	NUM	_	NumType=Card	19	obl	_	SpaceAfter=No
 3	,	,	PUNCT	_	_	2	punct	_	_
@@ -402,45 +405,45 @@
 5	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	6	det	_	_
 6	militantes	militante	NOUN	_	Gender=Masc|Number=Plur	19	nsubj:pass	_	_
 7	que	que	PRON	_	Gender=Masc|Number=Plur|PronType=Rel	8	nsubj	_	_
-8	mantinham	mantinhar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	6	acl:relcl	_	_
+8	mantinham	manter	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	6	acl:relcl	_	_
 9	ligações	ligação	NOUN	_	Gender=Fem|Number=Plur	8	obj	_	_
 10	extra-oficiais	extra-oficial	ADJ	_	Gender=Fem|Number=Plur	9	amod	_	_
 11	com	com	ADP	_	_	13	case	_	_
 12	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	13	det	_	_
-13	corrente	corrente	NOUN	_	Gender=Fem|Number=Sing	8	obl	_	_
+13	corrente	corrente	NOUN	_	Gender=Fem|Number=Sing	9	nmod	_	_
 14-15	da	_	_	_	_	_	_	_	_
 14	de	de	ADP	_	_	16	case	_	_
 15	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	16	det	_	_
-16	Causa	causa	PROPN	_	Gender=Fem|Number=Sing	13	nmod	_	_
+16	Causa	Causa	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	13	nmod	_	_
 17	Operária	Operária	PROPN	_	Number=Sing	16	flat:name	_	_
 18	foram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|VerbForm=Fin	19	aux:pass	_	_
-19	expulsos	expulnder	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	0	root	_	_
+19	expulsos	expulr	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	0	root	_	_
 20-21	do	_	_	_	_	_	_	_	_
 20	de	de	ADP	_	_	22	case	_	_
 21	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	22	det	_	_
-22	PT	PT	PROPN	_	Gender=Masc|Number=Sing	19	obl	_	SpaceAfter=No
+22	PT	PT	PROPN	_	Gender=Masc|Number=Sing	19	obj	_	SpaceAfter=No
 23	.	.	PUNCT	_	_	19	punct	_	SpacesAfter=\n
 
-# text = Ainda sem se consolidar como partido, a Causa Operária apoiou com ressalvas a nova candidatura de Luís Inácio Lula da Silva (PT) à presidência da república em 1994.
 # sent_id = 9
+# text = Ainda sem se consolidar como partido, a Causa Operária apoiou com ressalvas a nova candidatura de Luís Inácio Lula da Silva (PT) à presidência da república em 1994.
 1	Ainda	ainda	ADV	_	_	4	advmod	_	_
 2	sem	sem	SCONJ	_	_	4	mark	_	_
 3	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	4	expl	_	_
-4	consolidar	consolidar	VERB	_	Number=Sing|Person=3|VerbForm=Inf	11	advcl	_	_
+4	consolidar	consolidar	VERB	_	VerbForm=Inf	11	advcl	_	_
 5	como	como	ADP	_	_	6	case	_	_
 6	partido	partido	NOUN	_	Gender=Masc|Number=Sing	4	xcomp	_	SpaceAfter=No
 7	,	,	PUNCT	_	_	4	punct	_	_
 8	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	9	det	_	_
-9	Causa	causa	PROPN	_	Gender=Fem|Number=Sing	11	nsubj	_	_
+9	Causa	Causa	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	11	nsubj	_	_
 10	Operária	Operária	PROPN	_	Number=Sing	9	flat:name	_	_
 11	apoiou	apoiar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 12	com	com	ADP	_	_	13	case	_	_
-13	ressalvas	ressalvo	NOUN	_	Gender=Fem|Number=Plur	11	obl	_	_
+13	ressalvas	ressalva	NOUN	_	Gender=Fem|Number=Plur	11	obl	_	_
 14	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	16	det	_	_
 15	nova	novo	ADJ	_	Gender=Fem|Number=Sing	16	amod	_	_
 16	candidatura	candidatura	NOUN	_	Gender=Fem|Number=Sing	11	obj	_	_
 17	de	de	ADP	_	_	18	case	_	_
-18	Luís	Luís	PROPN	_	Gender=Masc|Number=Sing	16	nmod	_	_
+18	Luís	Luís	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	16	nmod	_	_
 19	Inácio	Inácio	PROPN	_	Number=Sing	18	flat:name	_	_
 20	Lula	Lula	PROPN	_	Number=Sing	18	flat:name	_	_
 21-22	da	_	_	_	_	_	_	_	_
@@ -453,22 +456,22 @@
 27-28	à	_	_	_	_	_	_	_	_
 27	a	a	ADP	_	_	29	case	_	_
 28	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	29	det	_	_
-29	presidência	presidência	NOUN	_	Gender=Fem|Number=Sing	18	nmod	_	_
+29	presidência	presidência	NOUN	_	Gender=Fem|Number=Sing	16	nmod	_	_
 30-31	da	_	_	_	_	_	_	_	_
 30	de	de	ADP	_	_	32	case	_	_
 31	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	32	det	_	_
 32	república	república	NOUN	_	Gender=Fem|Number=Sing	29	nmod	_	_
 33	em	em	ADP	_	_	34	case	_	_
-34	1994	1994	NUM	_	NumType=Card	11	obl	_	SpaceAfter=No
+34	1994	1994	NUM	_	NumType=Card	29	nmod	_	SpaceAfter=No
 35	.	.	PUNCT	_	_	11	punct	_	SpacesAfter=\n
 
-# text = Foi somente em 1995 que o registro temporário do Partido da Causa Operária (PCO) foi emitido, com a mesma data da ata de convenção editada em 4 de dezembro do mesmo ano, o que permitiu que em 1996 fossem lançadas candidaturas da legenda às prefeituras de Salvador (BA; obteve 0,089% dos votos), João Pessoa (PB; 0,071% dos votos), São Bernardo (SP; 0,220 % dos votos) e Bauru (SP; 0,448% dos votos), além de candidatos a vereador em São Paulo (SP; 0,018 % dos votos), Belo Horizonte (MG; 0,134% dos votos) e Aracajú (SE, 0,123% dos votos).
 # sent_id = 10
-1	Foi	ser	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	20	mark	_	_
+# text = Foi somente em 1995 que o registro temporário do Partido da Causa Operária (PCO) foi emitido, com a mesma data da ata de convenção editada em 4 de dezembro do mesmo ano, o que permitiu que em 1996 fossem lançadas candidaturas da legenda às prefeituras de Salvador (BA; obteve 0,089% dos votos), João Pessoa (PB; 0,071% dos votos), São Bernardo (SP; 0,220 % dos votos) e Bauru (SP; 0,448% dos votos), além de candidatos a vereador em São Paulo (SP; 0,018 % dos votos), Belo Horizonte (MG; 0,134% dos votos) e Aracajú (SE, 0,123% dos votos).
+1	Foi	foi	SCONJ	_	_	20	mark	_	_
 2	somente	somente	ADV	_	_	4	advmod	_	_
 3	em	em	ADP	_	_	4	case	_	_
 4	1995	1995	NUM	_	NumType=Card	20	obl	_	_
-5	que	que	PRON	_	PronType=Rel	20	obj	_	_
+5	que	que	SCONJ	_	_	20	mark	_	_
 6	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	7	det	_	_
 7	registro	registro	NOUN	_	Gender=Masc|Number=Sing	20	nsubj:pass	_	_
 8	temporário	temporário	ADJ	_	Gender=Masc|Number=Sing	7	amod	_	_
@@ -479,14 +482,14 @@
 12-13	da	_	_	_	_	_	_	_	_
 12	de	de	ADP	_	_	14	case	_	_
 13	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	14	det	_	_
-14	Causa	causa	PROPN	_	Gender=Fem|Number=Sing	11	nmod	_	_
+14	Causa	Causa	PROPN	_	ExtPos=PROPN|Number=Sing	11	nmod	_	_
 15	Operária	Operária	PROPN	_	Number=Sing	14	flat:name	_	_
 16	(	(	PUNCT	_	_	17	punct	_	SpaceAfter=No
 17	PCO	PCO	PROPN	_	Gender=Masc|Number=Sing	11	appos	_	SpaceAfter=No
 18	)	)	PUNCT	_	_	17	punct	_	_
 19	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	20	aux:pass	_	_
 20	emitido	emitir	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	SpaceAfter=No
-21	,	,	PUNCT	_	_	20	punct	_	_
+21	,	,	PUNCT	_	_	25	punct	_	_
 22	com	com	ADP	_	_	25	case	_	_
 23	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	25	det	_	_
 24	mesma	mesmo	ADJ	_	Gender=Fem|Number=Sing	25	amod	_	_
@@ -497,7 +500,7 @@
 28	ata	ata	NOUN	_	Gender=Fem|Number=Sing	25	nmod	_	_
 29	de	de	ADP	_	_	30	case	_	_
 30	convenção	convenção	NOUN	_	Gender=Fem|Number=Sing	28	nmod	_	_
-31	editada	editado	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	30	acl	_	_
+31	editada	editar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	28	acl	_	_
 32	em	em	ADP	_	_	33	case	_	_
 33	4	4	NUM	_	NumType=Card	31	obl	_	_
 34	de	de	ADP	_	_	35	case	_	_
@@ -508,15 +511,15 @@
 38	mesmo	mesmo	ADJ	_	Gender=Masc|Number=Sing	39	amod	_	_
 39	ano	ano	NOUN	_	Gender=Masc|Number=Sing	35	nmod	_	SpaceAfter=No
 40	,	,	PUNCT	_	_	31	punct	_	_
-41	o	o	PRON	_	Gender=Masc|Number=Sing|PronType=Dem	20	nsubj	_	_
+41	o	o	PRON	_	Gender=Masc|Number=Sing|PronType=Dem	20	appos	_	_
 42	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	43	nsubj	_	_
 43	permitiu	permitir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	41	acl:relcl	_	_
 44	que	que	SCONJ	_	_	48	mark	_	_
 45	em	em	ADP	_	_	46	case	_	_
 46	1996	1996	NUM	_	NumType=Card	48	obl	_	_
-47	fossem	ser	AUX	_	Mood=Sub|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	48	aux	_	_
-48	lançadas	lançar	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part	43	ccomp	_	_
-49	candidaturas	candidatura	NOUN	_	Gender=Fem|Number=Plur	48	obj	_	_
+47	fossem	ser	AUX	_	Mood=Sub|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	48	aux:pass	_	_
+48	lançadas	lançar	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part|Voice=Pass	43	ccomp	_	_
+49	candidaturas	candidatura	NOUN	_	Gender=Fem|Number=Plur	48	nsubj:pass	_	_
 50-51	da	_	_	_	_	_	_	_	_
 50	de	de	ADP	_	_	52	case	_	_
 51	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	52	det	_	_
@@ -524,113 +527,112 @@
 53-54	às	_	_	_	_	_	_	_	_
 53	a	a	ADP	_	_	55	case	_	_
 54	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	55	det	_	_
-55	prefeituras	prefeitura	NOUN	_	Gender=Fem|Number=Plur	52	nmod	_	_
+55	prefeituras	prefeitura	NOUN	_	Gender=Fem|Number=Plur	48	obl	_	_
 56	de	de	ADP	_	_	57	case	_	_
-57	Salvador	Salvador	PROPN	_	Gender=Masc|Number=Sing	59	nmod	_	_
+57	Salvador	Salvador	PROPN	_	Gender=Masc|Number=Sing	55	nmod	_	_
 58	(	(	PUNCT	_	_	59	punct	_	SpaceAfter=No
-59	BA	BA	PROPN	_	Gender=Masc|Number=Sing	55	appos	_	SpaceAfter=No
+59	BA	BA	PROPN	_	Gender=Fem|Number=Sing	57	parataxis	_	SpaceAfter=No
 60	;	;	PUNCT	_	_	61	punct	_	_
-61	obteve	obter	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	59	conj	_	_
+61	obteve	obter	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	59	parataxis	_	_
 62	0,089	0,089	NUM	_	NumType=Card	63	nummod	_	SpaceAfter=No
 63	%	%	SYM	_	_	61	obj	_	_
 64-65	dos	_	_	_	_	_	_	_	_
 64	de	de	ADP	_	_	66	case	_	_
 65	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	66	det	_	_
 66	votos	voto	NOUN	_	Gender=Masc|Number=Plur	63	nmod	_	SpaceAfter=No
-67	)	)	PUNCT	_	_	61	punct	_	SpaceAfter=No
+67	)	)	PUNCT	_	_	59	punct	_	SpaceAfter=No
 68	,	,	PUNCT	_	_	69	punct	_	_
-69	João	João	PROPN	_	Gender=Masc|Number=Sing	59	conj	_	_
+69	João	João	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	57	conj	_	_
 70	Pessoa	Pessoa	PROPN	_	Number=Sing	69	flat:name	_	_
 71	(	(	PUNCT	_	_	72	punct	_	SpaceAfter=No
-72	PB	PB	PROPN	_	Gender=Masc|Number=Sing	69	parataxis	_	SpaceAfter=No
-73	;	;	PUNCT	_	_	75	punct	_	_
-74	0,071	0,071	NUM	_	NumType=Card	75	nummod	_	SpaceAfter=No
-75	%	%	SYM	_	_	72	conj	_	_
-76-77	dos	_	_	_	_	_	_	_	_
-76	de	de	ADP	_	_	78	case	_	_
-77	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	78	det	_	_
-78	votos	voto	NOUN	_	Gender=Masc|Number=Plur	75	nmod	_	SpaceAfter=No
-79	)	)	PUNCT	_	_	72	punct	_	SpaceAfter=No
-80	,	,	PUNCT	_	_	81	punct	_	_
-81	São	São	PROPN	_	Gender=Masc|Number=Sing	59	conj	_	_
-82	Bernardo	Bernardo	PROPN	_	Number=Sing	81	flat:name	_	_
-83	(	(	PUNCT	_	_	84	punct	_	SpaceAfter=No
-84	SP	SP	PROPN	_	Gender=Masc|Number=Sing	81	parataxis	_	SpaceAfter=No
-85	;	;	PUNCT	_	_	87	punct	_	_
-86	0,220	0,220	NUM	_	NumType=Card	87	nummod	_	_
-87	%	%	SYM	_	_	84	conj	_	_
-88-89	dos	_	_	_	_	_	_	_	_
-88	de	de	ADP	_	_	90	case	_	_
-89	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	90	det	_	_
-90	votos	voto	NOUN	_	Gender=Masc|Number=Plur	87	nmod	_	SpaceAfter=No
-91	)	)	PUNCT	_	_	84	punct	_	_
-92	e	e	CCONJ	_	_	93	cc	_	_
-93	Bauru	Bauru	PROPN	_	Gender=Masc|Number=Sing	59	conj	_	_
-94	(	(	PUNCT	_	_	95	punct	_	SpaceAfter=No
-95	SP	SP	PROPN	_	Gender=Masc|Number=Sing	93	appos	_	SpaceAfter=No
-96	;	;	PUNCT	_	_	98	punct	_	_
-97	0,448	0,448	NUM	_	NumType=Card	98	nummod	_	SpaceAfter=No
-98	%	%	SYM	_	_	95	appos	_	_
-99-100	dos	_	_	_	_	_	_	_	_
-99	de	de	ADP	_	_	101	case	_	_
-100	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	101	det	_	_
-101	votos	voto	NOUN	_	Gender=Masc|Number=Plur	98	nmod	_	SpaceAfter=No
-102	)	)	PUNCT	_	_	95	punct	_	SpaceAfter=No
-103	,	,	PUNCT	_	_	106	punct	_	_
-104	além	além	ADV	_	_	106	cc	_	_
-105	de	de	ADP	_	_	104	fixed	_	_
-106	candidatos	candidato	NOUN	_	Gender=Masc|Number=Plur	59	conj	_	_
-107	a	a	ADP	_	_	108	case	_	_
-108	vereador	vereador	NOUN	_	Gender=Masc|Number=Sing	106	nmod	_	_
-109	em	em	ADP	_	_	110	case	_	_
-110	São	São	PROPN	_	Gender=Masc|Number=Sing	108	nmod	_	_
-111	Paulo	Paulo	PROPN	_	Number=Sing	110	flat:name	_	_
-112	(	(	PUNCT	_	_	113	punct	_	SpaceAfter=No
-113	SP	SP	PROPN	_	Gender=Masc|Number=Sing	110	appos	_	SpaceAfter=No
-114	;	;	PUNCT	_	_	116	punct	_	_
-115	0,018	0,018	NUM	_	NumType=Card	116	nummod	_	_
-116	%	%	SYM	_	_	113	conj	_	_
-117-118	dos	_	_	_	_	_	_	_	_
-117	de	de	ADP	_	_	119	case	_	_
-118	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	119	det	_	_
-119	votos	voto	NOUN	_	Gender=Masc|Number=Plur	116	nmod	_	SpaceAfter=No
-120	)	)	PUNCT	_	_	113	punct	_	SpaceAfter=No
-121	,	,	PUNCT	_	_	122	punct	_	_
-122	Belo	Belo	PROPN	_	Gender=Masc|Number=Sing	106	appos	_	_
-123	Horizonte	Horizonte	PROPN	_	Number=Sing	122	flat:name	_	_
-124	(	(	PUNCT	_	_	125	punct	_	SpaceAfter=No
-125	MG	MG	PROPN	_	Gender=Masc|Number=Sing	122	appos	_	SpaceAfter=No
-126	;	;	PUNCT	_	_	128	punct	_	_
-127	0,134	0,134	NUM	_	NumType=Card	128	nummod	_	SpaceAfter=No
-128	%	%	SYM	_	_	125	conj	_	_
-129-130	dos	_	_	_	_	_	_	_	_
-129	de	de	ADP	_	_	131	case	_	_
-130	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	131	det	_	_
-131	votos	voto	NOUN	_	Gender=Masc|Number=Plur	128	nmod	_	SpaceAfter=No
-132	)	)	PUNCT	_	_	125	punct	_	_
-133	e	e	CCONJ	_	_	134	cc	_	_
-134	Aracajú	aracajú	PROPN	_	Number=Sing	122	conj	_	_
-135	(	(	PUNCT	_	_	136	punct	_	SpaceAfter=No
-136	SE	se	PROPN	_	Gender=Masc|Number=Sing	134	appos	_	SpaceAfter=No
-137	,	,	PUNCT	_	_	139	punct	_	_
-138	0,123	0,123	NUM	_	NumType=Card	139	nummod	_	SpaceAfter=No
-139	%	%	SYM	_	_	136	appos	_	_
-140-141	dos	_	_	_	_	_	_	_	_
-140	de	de	ADP	_	_	142	case	_	_
-141	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	142	det	_	_
-142	votos	voto	NOUN	_	Gender=Masc|Number=Plur	139	nmod	_	SpaceAfter=No
-143	)	)	PUNCT	_	_	136	punct	_	SpaceAfter=No
-144	.	.	PUNCT	_	_	59	punct	_	SpacesAfter=\n
+72	PB;	PB;	PROPN	_	Gender=Masc|Number=Sing	69	parataxis	_	_
+73	0,071	0,071	NUM	_	NumType=Card	74	nummod	_	SpaceAfter=No
+74	%	%	SYM	_	_	72	nmod	_	_
+75-76	dos	_	_	_	_	_	_	_	_
+75	de	de	ADP	_	_	77	case	_	_
+76	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	77	det	_	_
+77	votos	voto	NOUN	_	Gender=Masc|Number=Plur	74	nmod	_	SpaceAfter=No
+78	)	)	PUNCT	_	_	72	punct	_	SpaceAfter=No
+79	,	,	PUNCT	_	_	80	punct	_	_
+80	São	São	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	57	conj	_	_
+81	Bernardo	Bernardo	PROPN	_	Number=Sing	80	flat:name	_	_
+82	(	(	PUNCT	_	_	83	punct	_	SpaceAfter=No
+83	SP	SP	PROPN	_	Gender=Masc|Number=Sing	80	parataxis	_	SpaceAfter=No
+84	;	;	PUNCT	_	_	86	punct	_	_
+85	0,220	0,220	NUM	_	NumType=Card	86	nummod	_	_
+86	%	%	SYM	_	_	83	conj	_	_
+87-88	dos	_	_	_	_	_	_	_	_
+87	de	de	ADP	_	_	89	case	_	_
+88	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	89	det	_	_
+89	votos	voto	NOUN	_	Gender=Masc|Number=Plur	86	nmod	_	SpaceAfter=No
+90	)	)	PUNCT	_	_	83	punct	_	_
+91	e	e	CCONJ	_	_	92	cc	_	_
+92	Bauru	Bauru	PROPN	_	Gender=Masc|Number=Sing	57	conj	_	_
+93	(	(	PUNCT	_	_	94	punct	_	SpaceAfter=No
+94	SP	SP	PROPN	_	Gender=Masc|Number=Sing	92	parataxis	_	SpaceAfter=No
+95	;	;	PUNCT	_	_	97	punct	_	_
+96	0,448	0,448	NUM	_	NumType=Card	97	nummod	_	SpaceAfter=No
+97	%	%	SYM	_	_	83	conj	_	_
+98-99	dos	_	_	_	_	_	_	_	_
+98	de	de	ADP	_	_	100	case	_	_
+99	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	100	det	_	_
+100	votos	voto	NOUN	_	Gender=Masc|Number=Plur	97	nmod	_	SpaceAfter=No
+101	)	)	PUNCT	_	_	94	punct	_	SpaceAfter=No
+102	,	,	PUNCT	_	_	105	punct	_	_
+103	além	além	ADV	_	_	105	cc	_	_
+104	de	de	ADP	_	_	103	fixed	_	_
+105	candidatos	candidato	NOUN	_	Gender=Masc|Number=Plur	25	conj	_	_
+106	a	a	ADP	_	_	107	case	_	_
+107	vereador	vereador	NOUN	_	Gender=Masc|Number=Sing	105	nmod	_	_
+108	em	em	ADP	_	_	109	case	_	_
+109	São	São	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	107	nmod	_	_
+110	Paulo	Paulo	PROPN	_	Number=Sing	109	flat:name	_	_
+111	(	(	PUNCT	_	_	112	punct	_	SpaceAfter=No
+112	SP	SP	PROPN	_	Gender=Masc|Number=Sing	109	parataxis	_	SpaceAfter=No
+113	;	;	PUNCT	_	_	115	punct	_	_
+114	0,018	0,018	NUM	_	NumType=Card	115	nummod	_	_
+115	%	%	SYM	_	_	112	conj	_	_
+116-117	dos	_	_	_	_	_	_	_	_
+116	de	de	ADP	_	_	118	case	_	_
+117	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	118	det	_	_
+118	votos	voto	NOUN	_	Gender=Masc|Number=Plur	115	nmod	_	SpaceAfter=No
+119	)	)	PUNCT	_	_	112	punct	_	SpaceAfter=No
+120	,	,	PUNCT	_	_	121	punct	_	_
+121	Belo	Belo	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	109	conj	_	_
+122	Horizonte	Horizonte	PROPN	_	Number=Sing	121	flat:name	_	_
+123	(	(	PUNCT	_	_	124	punct	_	SpaceAfter=No
+124	MG	MG	PROPN	_	Gender=Masc|Number=Sing	121	parataxis	_	SpaceAfter=No
+125	;	;	PUNCT	_	_	127	punct	_	_
+126	0,134	0,134	NUM	_	NumType=Card	127	nummod	_	SpaceAfter=No
+127	%	%	SYM	_	_	124	conj	_	_
+128-129	dos	_	_	_	_	_	_	_	_
+128	de	de	ADP	_	_	130	case	_	_
+129	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	130	det	_	_
+130	votos	voto	NOUN	_	Gender=Masc|Number=Plur	127	nmod	_	SpaceAfter=No
+131	)	)	PUNCT	_	_	124	punct	_	_
+132	e	e	CCONJ	_	_	133	cc	_	_
+133	Aracajú	Aracajú	PROPN	_	Gender=Masc|Number=Sing	109	conj	_	_
+134	(	(	PUNCT	_	_	135	punct	_	SpaceAfter=No
+135	SE	SE	PROPN	_	Gender=Masc|Number=Sing	133	parataxis	_	SpaceAfter=No
+136	,	,	PUNCT	_	_	138	punct	_	_
+137	0,123	0,123	NUM	_	NumType=Card	138	nummod	_	SpaceAfter=No
+138	%	%	SYM	_	_	135	appos	_	_
+139-140	dos	_	_	_	_	_	_	_	_
+139	de	de	ADP	_	_	141	case	_	_
+140	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	141	det	_	_
+141	votos	voto	NOUN	_	Gender=Masc|Number=Plur	138	nmod	_	SpaceAfter=No
+142	)	)	PUNCT	_	_	135	punct	_	SpaceAfter=No
+143	.	.	PUNCT	_	_	20	punct	_	SpacesAfter=\n
 
-# text = Em 1997 o PCO conseguiu o registro efetivo de partido político tendo lançado em 1998 um único candidato a um governo estadual, no Distrito Federal: Renan Rosa, último colocado com 231 votos, 0,123% dos votos válidos.
 # sent_id = 11
+# text = Em 1997 o PCO conseguiu o registro efetivo de partido político tendo lançado em 1998 um único candidato a um governo estadual, no Distrito Federal: Renan Rosa, último colocado com 231 votos, 0,123% dos votos válidos.
 1	Em	em	ADP	_	_	2	case	_	_
 2	1997	1997	NUM	_	NumType=Card	5	obl	_	_
 3	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	4	det	_	_
 4	PCO	PCO	PROPN	_	Gender=Masc|Number=Sing	5	nsubj	_	_
 5	conseguiu	conseguir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 6	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	7	det	_	_
-7	registro	registro	NOUN	_	Gender=Masc|Number=Sing	13	nsubj	_	_
+7	registro	registro	NOUN	_	Gender=Masc|Number=Sing	5	obj	_	_
 8	efetivo	efetivo	ADJ	_	Gender=Masc|Number=Sing	7	amod	_	_
 9	de	de	ADP	_	_	10	case	_	_
 10	partido	partido	NOUN	_	Gender=Masc|Number=Sing	7	nmod	_	_
@@ -650,10 +652,10 @@
 24-25	no	_	_	_	_	_	_	_	_
 24	em	em	ADP	_	_	26	case	_	_
 25	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	26	det	_	_
-26	Distrito	Distrito	PROPN	_	Gender=Masc|Number=Sing	21	nmod	_	_
+26	Distrito	Distrito	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	13	obl	_	_
 27	Federal	Federal	PROPN	_	Number=Sing	26	flat:name	_	SpaceAfter=No
-28	:	:	PUNCT	_	_	5	punct	_	_
-29	Renan	Renan	PROPN	_	Gender=Masc|Number=Sing	26	appos	_	_
+28	:	:	PUNCT	_	_	29	punct	_	_
+29	Renan	Renan	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	26	appos	_	_
 30	Rosa	Rosa	PROPN	_	Number=Sing	29	flat:name	_	SpaceAfter=No
 31	,	,	PUNCT	_	_	33	punct	_	_
 32	último	último	ADJ	_	Gender=Masc|Number=Sing|NumType=Ord	33	amod	_	_
@@ -661,18 +663,18 @@
 34	com	com	ADP	_	_	36	case	_	_
 35	231	231	NUM	_	NumType=Card	36	nummod	_	_
 36	votos	voto	NOUN	_	Gender=Masc|Number=Plur	33	nmod	_	SpaceAfter=No
-37	,	,	PUNCT	_	_	33	punct	_	_
+37	,	,	PUNCT	_	_	39	punct	_	_
 38	0,123	0,123	NUM	_	NumType=Card	39	nummod	_	SpaceAfter=No
-39	%	%	SYM	_	_	29	appos	_	_
+39	%	%	SYM	_	_	36	appos	_	_
 40-41	dos	_	_	_	_	_	_	_	_
 40	de	de	ADP	_	_	42	case	_	_
 41	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	42	det	_	_
 42	votos	voto	NOUN	_	Gender=Masc|Number=Plur	39	nmod	_	_
-43	válidos	váler	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part	42	acl	_	SpaceAfter=No
+43	válidos	válido	ADJ	_	Gender=Masc|Number=Plur	42	amod	_	SpaceAfter=No
 44	.	.	PUNCT	_	_	5	punct	_	SpacesAfter=\n
 
-# text = Já em 2002 o PCO apresentou 300 candidaturas nas eleições federais e estaduais lançando o nome de Rui Costa Pimenta, presidente do partido, à Presidência da República.
 # sent_id = 12
+# text = Já em 2002 o PCO apresentou 300 candidaturas nas eleições federais e estaduais lançando o nome de Rui Costa Pimenta, presidente do partido, à Presidência da República.
 1	Já	já	ADV	_	_	3	advmod	_	_
 2	em	em	ADP	_	_	3	case	_	_
 3	2002	2002	NUM	_	NumType=Card	6	obl	_	_
@@ -692,7 +694,7 @@
 16	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	17	det	_	_
 17	nome	nome	NOUN	_	Gender=Masc|Number=Sing	15	obj	_	_
 18	de	de	ADP	_	_	19	case	_	_
-19	Rui	Rui	PROPN	_	Gender=Masc|Number=Sing	17	nmod	_	_
+19	Rui	Rui	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	17	nmod	_	_
 20	Costa	Costa	PROPN	_	Number=Sing	19	flat:name	_	_
 21	Pimenta	Pimenta	PROPN	_	Number=Sing	19	flat:name	_	SpaceAfter=No
 22	,	,	PUNCT	_	_	23	punct	_	_
@@ -705,27 +707,26 @@
 28-29	à	_	_	_	_	_	_	_	_
 28	a	a	ADP	_	_	30	case	_	_
 29	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	30	det	_	_
-30	Presidência	presidência	NOUN	_	Gender=Fem|Number=Sing	17	nmod	_	_
+30	Presidência	presidência	PROPN	_	Gender=Fem|Number=Sing	19	nmod	_	_
 31-32	da	_	_	_	_	_	_	_	_
 31	de	de	ADP	_	_	33	case	_	_
 32	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	33	det	_	_
 33	República	República	PROPN	_	Number=Sing	30	nmod	_	SpaceAfter=No
-34	.	.	PUNCT	_	_	6	punct	_	SpacesAfter=\n
+34	.	.	PUNCT	_	_	6	punct	_	_
 
-# text = Pimenta recebeu 38.616 votos (0,045%).
 # sent_id = 13
-1	Pimenta	Pimenta	PROPN	_	Gender=Fem|Number=Sing	2	nsubj	_	_
+# text = Pimenta recebeu 38.616 votos (0,045%).
+1	Pimenta	Pimenta	PROPN	_	Gender=Masc|Number=Sing	2	nsubj	_	_
 2	recebeu	receber	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 3	38.616	38.616	NUM	_	NumType=Card	4	nummod	_	_
 4	votos	voto	NOUN	_	Gender=Masc|Number=Plur	2	obj	_	_
-5	(	(	PUNCT	_	_	7	punct	_	SpaceAfter=No
-6	0,045	0,045	NUM	_	NumType=Card	7	nummod	_	SpaceAfter=No
-7	%	%	SYM	_	_	4	appos	_	SpaceAfter=No
-8	)	)	PUNCT	_	_	7	punct	_	SpaceAfter=No
-9	.	.	PUNCT	_	_	2	punct	_	SpacesAfter=\n
+5	(0,045	(0,045	NUM	_	NumType=Card	6	nummod	_	SpaceAfter=No
+6	%	%	SYM	_	_	4	nmod	_	SpaceAfter=No
+7	)	)	PUNCT	_	_	2	punct	_	SpaceAfter=No
+8	.	.	PUNCT	_	_	2	punct	_	SpacesAfter=\n
 
-# text = Em 2004, o PCO apresentou 36 candidatos a prefeito e 277 candidatos a vereador sem eleger nenhum representante.
 # sent_id = 14
+# text = Em 2004, o PCO apresentou 36 candidatos a prefeito e 277 candidatos a vereador sem eleger nenhum representante.
 1	Em	em	ADP	_	_	2	case	_	_
 2	2004	2004	NUM	_	NumType=Card	6	obl	_	SpaceAfter=No
 3	,	,	PUNCT	_	_	2	punct	_	_
@@ -742,13 +743,13 @@
 14	a	a	ADP	_	_	15	case	_	_
 15	vereador	vereador	NOUN	_	Gender=Masc|Number=Sing	13	nmod	_	_
 16	sem	sem	SCONJ	_	_	17	mark	_	_
-17	eleger	eleger	VERB	_	VerbForm=Inf	13	acl	_	_
+17	eleger	eleger	VERB	_	VerbForm=Inf	6	advcl	_	_
 18	nenhum	nenhum	DET	_	Gender=Masc|Number=Sing|PronType=Neg	19	det	_	_
 19	representante	representante	NOUN	_	Gender=Masc|Number=Sing	17	obj	_	SpaceAfter=No
 20	.	.	PUNCT	_	_	6	punct	_	SpacesAfter=\n
 
-# text = Nas eleições gerais de 2006, o PCO apresentou 42 candidatos a deputado estadual, 30 a deputado federal, 14 candidatos a governos de estado e nove candidatos para o Senado Federal.
 # sent_id = 15
+# text = Nas eleições gerais de 2006, o PCO apresentou 42 candidatos a deputado estadual, 30 a deputado federal, 14 candidatos a governos de estado e nove candidatos para o Senado Federal.
 1-2	Nas	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	3	case	_	_
 2	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	3	det	_	_
@@ -766,34 +767,34 @@
 14	deputado	deputado	NOUN	_	Gender=Masc|Number=Sing	12	nmod	_	_
 15	estadual	estadual	ADJ	_	Gender=Masc|Number=Sing	14	amod	_	SpaceAfter=No
 16	,	,	PUNCT	_	_	17	punct	_	_
-17	30	30	NUM	_	NumType=Card	12	conj	_	_
+17	30	30	NUM	_	NumType=Card	14	conj	_	_
 18	a	a	ADP	_	_	19	case	_	_
 19	deputado	deputado	NOUN	_	Gender=Masc|Number=Sing	17	nmod	_	_
 20	federal	federal	ADJ	_	Gender=Masc|Number=Sing	19	amod	_	SpaceAfter=No
-21	,	,	PUNCT	_	_	17	punct	_	_
+21	,	,	PUNCT	_	_	23	punct	_	_
 22	14	14	NUM	_	NumType=Card	23	nummod	_	_
-23	candidatos	candidato	NOUN	_	Gender=Masc|Number=Plur	17	appos	_	_
+23	candidatos	candidato	NOUN	_	Gender=Masc|Number=Plur	12	conj	_	_
 24	a	a	ADP	_	_	25	case	_	_
-25	governos	governos	NOUN	_	Gender=Masc|Number=Plur	23	nmod	_	_
+25	governos	governo	NOUN	_	Gender=Masc|Number=Plur	23	nmod	_	_
 26	de	de	ADP	_	_	27	case	_	_
 27	estado	estado	NOUN	_	Gender=Masc|Number=Sing	25	nmod	_	_
 28	e	e	CCONJ	_	_	30	cc	_	_
 29	nove	nove	NUM	_	NumType=Card	30	nummod	_	_
-30	candidatos	candidato	NOUN	_	Gender=Masc|Number=Plur	23	conj	_	_
+30	candidatos	candidato	NOUN	_	Gender=Masc|Number=Plur	12	conj	_	_
 31	para	para	ADP	_	_	33	case	_	_
 32	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	33	det	_	_
-33	Senado	senado	NOUN	_	Gender=Masc|Number=Sing	30	nmod	_	_
-34	Federal	federal	PROPN	_	Gender=Masc|Number=Sing	33	appos	_	SpaceAfter=No
-35	.	.	PUNCT	_	_	10	punct	_	SpacesAfter=\n
+33	Senado	Senado	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	30	nmod	_	_
+34	Federal	Federal	PROPN	_	Number=Sing	33	flat:name	_	SpaceAfter=No
+35	.	.	PUNCT	_	_	10	punct	_	_
 
-# text = Mais uma vez não elegeu nenhum de seus candidatos.
 # sent_id = 16
-1	Mais	mais	CCONJ	_	_	5	cc	_	_
-2	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	3	det	_	_
-3	vez	vez	NOUN	_	Gender=Fem|Number=Sing	5	nsubj	_	_
+# text = Mais uma vez não elegeu nenhum de seus candidatos.
+1	Mais	mais	NOUN	_	Gender=Masc|Number=Sing	5	obl	_	_
+2	uma	uma	ADP	_	_	3	case	_	_
+3	vez	vez	NOUN	_	Gender=Masc|Number=Sing	1	nmod	_	_
 4	não	não	ADV	_	Polarity=Neg	5	advmod	_	_
 5	elegeu	eleger	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
-6	nenhum	nenhum	PRON	_	Gender=Masc|Number=Sing|PronType=Neg	5	obj	_	_
+6	nenhum	nenhum	PRON	_	Gender=Masc|Number=Sing|PronType=Ind	5	obj	_	_
 7	de	de	ADP	_	_	9	case	_	_
 8	seus	seu	DET	_	Gender=Masc|Number=Plur|PronType=Prs	9	det	_	_
 9	candidatos	candidato	NOUN	_	Gender=Masc|Number=Plur	6	nmod	_	SpaceAfter=No

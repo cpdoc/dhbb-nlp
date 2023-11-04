@@ -1,21 +1,24 @@
-# text = «Antonio Fernandes dos Santos Neto» nasceu em Sorocaba (SP) no dia 19 de dezembro de 1952.
-# sent_id = 1
-# newpar
+# generator = UDPipe 2, https://lindat.mff.cuni.cz/services/udpipe
+# udpipe_model = portuguese-bosque-ud-2.12-230717
+# udpipe_model_licence = CC BY-NC-SA
 # newdoc
+# newpar
+# sent_id = 1
+# text = «Antonio Fernandes dos Santos Neto» nasceu em Sorocaba (SP) no dia 19 de dezembro de 1952.
 1	«	«	PUNCT	_	_	2	punct	_	SpaceAfter=No
-2	Antonio	Antonio	PROPN	_	Gender=Masc|Number=Sing	9	nsubj	_	_
+2	Antonio	Antonio	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	9	nsubj	_	_
 3	Fernandes	Fernandes	PROPN	_	Number=Sing	2	flat:name	_	_
 4-5	dos	_	_	_	_	_	_	_	_
 4	de	de	ADP	_	_	6	case	_	_
 5	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	6	det	_	_
-6	Santos	Santos	PROPN	_	Number=Sing	2	flat:name	_	_
-7	Neto	Neto	PROPN	_	Number=Sing	2	flat:name	_	SpaceAfter=No
+6	Santos	Santos	PROPN	_	ExtPos=PROPN|Number=Sing	2	nmod	_	_
+7	Neto	Neto	PROPN	_	Number=Sing	6	flat:name	_	SpaceAfter=No
 8	»	»	PUNCT	_	_	2	punct	_	_
 9	nasceu	nascer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 10	em	em	ADP	_	_	11	case	_	_
 11	Sorocaba	Sorocaba	PROPN	_	Gender=Masc|Number=Sing	9	obl	_	_
 12	(	(	PUNCT	_	_	13	punct	_	SpaceAfter=No
-13	SP	SP	PROPN	_	Gender=Masc|Number=Sing	11	appos	_	SpaceAfter=No
+13	SP	SP	PROPN	_	Gender=Masc|Number=Sing	11	parataxis	_	SpaceAfter=No
 14	)	)	PUNCT	_	_	13	punct	_	_
 15-16	no	_	_	_	_	_	_	_	_
 15	em	em	ADP	_	_	17	case	_	_
@@ -26,11 +29,11 @@
 20	dezembro	dezembro	NOUN	_	Gender=Masc|Number=Sing	17	nmod	_	_
 21	de	de	ADP	_	_	22	case	_	_
 22	1952	1952	NUM	_	NumType=Card	20	nmod	_	SpaceAfter=No
-23	.	.	PUNCT	_	_	9	punct	_	SpacesAfter=\n
+23	.	.	PUNCT	_	_	9	punct	_	_
 
-# text = Filho e neto de ferroviários, seu avô foi um dos fundadores do Sindicato dos Ferroviários de Sorocaba e seu pai, Guarino Fernandes dos Santos, era um dirigente comunista e líder dos ferroviários em Sorocaba que foi várias vezes preso durante o regime militar de 1964.
 # sent_id = 2
-1	Filho	Filho	NOUN	_	Gender=Masc|Number=Sing	10	nmod	_	_
+# text = Filho e neto de ferroviários, seu avô foi um dos fundadores do Sindicato dos Ferroviários de Sorocaba e seu pai, Guarino Fernandes dos Santos, era um dirigente comunista e líder dos ferroviários em Sorocaba que foi várias vezes preso durante o regime militar de 1964.
+1	Filho	filho	NOUN	_	Gender=Masc|Number=Sing	10	nmod	_	_
 2	e	e	CCONJ	_	_	3	cc	_	_
 3	neto	neto	NOUN	_	Gender=Masc|Number=Sing	1	conj	_	_
 4	de	de	ADP	_	_	5	case	_	_
@@ -39,7 +42,7 @@
 7	seu	seu	DET	_	Gender=Masc|Number=Sing|PronType=Prs	8	det	_	_
 8	avô	avô	NOUN	_	Gender=Masc|Number=Sing	10	nsubj	_	_
 9	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	10	cop	_	_
-10	um	um	NUM	_	NumType=Card	34	nsubj	_	_
+10	um	um	NUM	_	NumType=Card	0	root	_	_
 11-12	dos	_	_	_	_	_	_	_	_
 11	de	de	ADP	_	_	13	case	_	_
 12	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	13	det	_	_
@@ -53,12 +56,12 @@
 18	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	19	det	_	_
 19	Ferroviários	Ferroviários	PROPN	_	Number=Sing	16	nmod	_	_
 20	de	de	ADP	_	_	21	case	_	_
-21	Sorocaba	Sorocaba	PROPN	_	Number=Sing	19	nmod	_	_
-22	e	e	CCONJ	_	_	24	cc	_	_
+21	Sorocaba	Sorocaba	PROPN	_	Number=Sing	16	nmod	_	_
+22	e	e	CCONJ	_	_	34	cc	_	_
 23	seu	seu	DET	_	Gender=Masc|Number=Sing|PronType=Prs	24	det	_	_
-24	pai	pai	NOUN	_	Gender=Masc|Number=Sing	10	conj	_	SpaceAfter=No
+24	pai	pai	NOUN	_	Gender=Masc|Number=Sing	34	nsubj	_	SpaceAfter=No
 25	,	,	PUNCT	_	_	26	punct	_	_
-26	Guarino	Guarino	PROPN	_	Gender=Masc|Number=Sing	24	appos	_	_
+26	Guarino	Guarino	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	24	appos	_	_
 27	Fernandes	Fernandes	PROPN	_	Number=Sing	26	flat:name	_	_
 28-29	dos	_	_	_	_	_	_	_	_
 28	de	de	ADP	_	_	30	case	_	_
@@ -67,31 +70,31 @@
 31	,	,	PUNCT	_	_	26	punct	_	_
 32	era	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	34	cop	_	_
 33	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	34	det	_	_
-34	dirigente	dirigente	NOUN	_	Gender=Masc|Number=Sing	0	root	_	_
+34	dirigente	dirigente	NOUN	_	Gender=Masc|Number=Sing	10	conj	_	_
 35	comunista	comunista	ADJ	_	Gender=Masc|Number=Sing	34	amod	_	_
 36	e	e	CCONJ	_	_	37	cc	_	_
-37	líder	líder	NOUN	_	Gender=Masc|Number=Sing	35	conj	_	_
+37	líder	líder	NOUN	_	Gender=Masc|Number=Sing	34	conj	_	_
 38-39	dos	_	_	_	_	_	_	_	_
 38	de	de	ADP	_	_	40	case	_	_
 39	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	40	det	_	_
-40	ferroviários	ferroviário	NOUN	_	Gender=Masc|Number=Plur	34	nmod	_	_
+40	ferroviários	ferroviário	NOUN	_	Gender=Masc|Number=Plur	37	nmod	_	_
 41	em	em	ADP	_	_	42	case	_	_
-42	Sorocaba	Sorocaba	NOUN	_	Gender=Fem|Number=Sing	40	nmod	_	_
-43	que	que	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	44	nsubj	_	_
-44	foi	foi	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	40	acl:relcl	_	_
-45	várias	vários	DET	_	Gender=Fem|Number=Plur|PronType=Ind	46	det	_	_
-46	vezes	vez	NOUN	_	Gender=Fem|Number=Plur	44	obj	_	_
-47	preso	prender	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	46	acl	_	_
+42	Sorocaba	Sorocaba	PROPN	_	Gender=Masc|Number=Sing	37	nmod	_	_
+43	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	47	nsubj:pass	_	_
+44	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	47	aux:pass	_	_
+45	várias	várias	DET	_	Gender=Fem|Number=Plur|PronType=Ind	46	det	_	_
+46	vezes	vez	NOUN	_	Gender=Fem|Number=Plur	47	obl	_	_
+47	preso	prender	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	42	acl:relcl	_	_
 48	durante	durante	ADP	_	_	50	case	_	_
 49	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	50	det	_	_
 50	regime	regime	NOUN	_	Gender=Masc|Number=Sing	47	obl	_	_
 51	militar	militar	ADJ	_	Gender=Masc|Number=Sing	50	amod	_	_
 52	de	de	ADP	_	_	53	case	_	_
 53	1964	1964	NUM	_	NumType=Card	50	nmod	_	SpaceAfter=No
-54	.	.	PUNCT	_	_	34	punct	_	SpacesAfter=\n
+54	.	.	PUNCT	_	_	10	punct	_	SpacesAfter=\n
 
-# text = Em 1963, aos 11 anos de idade, acompanhou com atenção os movimentos grevistas comandados pelo pai, em especial a greve na Sorocabana.
 # sent_id = 3
+# text = Em 1963, aos 11 anos de idade, acompanhou com atenção os movimentos grevistas comandados pelo pai, em especial a greve na Sorocabana.
 1	Em	em	ADP	_	_	2	case	_	_
 2	1963	1963	NUM	_	NumType=Card	11	obl	_	SpaceAfter=No
 3	,	,	PUNCT	_	_	2	punct	_	_
@@ -107,27 +110,27 @@
 12	com	com	ADP	_	_	13	case	_	_
 13	atenção	atenção	NOUN	_	Gender=Fem|Number=Sing	11	obl	_	_
 14	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	15	det	_	_
-15	movimentos	movimento	NOUN	_	Gender=Masc|Number=Plur	11	nsubj	_	_
+15	movimentos	movimento	NOUN	_	Gender=Masc|Number=Plur	11	obj	_	_
 16	grevistas	grevista	ADJ	_	Gender=Masc|Number=Plur	15	amod	_	_
 17	comandados	comandar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	15	acl	_	_
 18-19	pelo	_	_	_	_	_	_	_	_
 18	por	por	ADP	_	_	20	case	_	_
 19	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	20	det	_	_
 20	pai	pai	NOUN	_	Gender=Masc|Number=Sing	17	obl:agent	_	SpaceAfter=No
-21	,	,	PUNCT	_	_	23	punct	_	_
+21	,	,	PUNCT	_	_	25	punct	_	_
 22	em	em	ADP	_	_	23	case	_	_
-23	especial	especial	ADJ	_	Gender=Unsp|Number=Sing	15	nmod	_	_
+23	especial	especial	NOUN	_	Gender=Masc|Number=Sing	25	nmod	_	_
 24	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	25	det	_	_
-25	greve	greve	NOUN	_	Gender=Fem|Number=Sing	23	nmod	_	_
+25	greve	greve	NOUN	_	Gender=Fem|Number=Sing	15	appos	_	_
 26-27	na	_	_	_	_	_	_	_	_
 26	em	em	ADP	_	_	28	case	_	_
 27	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	28	det	_	_
 28	Sorocabana	Sorocabana	PROPN	_	Gender=Fem|Number=Sing	25	nmod	_	SpaceAfter=No
-29	.	.	PUNCT	_	_	11	punct	_	SpacesAfter=\n
+29	.	.	PUNCT	_	_	11	punct	_	_
 
-# text = Militante da juventude do Partido Comunista do Brasil (PCB), com o bipartidarismo, em 1965, filiou-se ao Movimento Democrático Brasileiro (MDB), partido de oposição ao regime militar.
 # sent_id = 4
-1	Militante	militante	NOUN	_	Gender=Masc|Number=Sing	23	nsubj	_	_
+# text = Militante da juventude do Partido Comunista do Brasil (PCB), com o bipartidarismo, em 1965, filiou-se ao Movimento Democrático Brasileiro (MDB), partido de oposição ao regime militar.
+1	Militante	militante	NOUN	_	Gender=Masc|Number=Sing	23	obl	_	_
 2-3	da	_	_	_	_	_	_	_	_
 2	de	de	ADP	_	_	4	case	_	_
 3	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	4	det	_	_
@@ -135,32 +138,32 @@
 5-6	do	_	_	_	_	_	_	_	_
 5	de	de	ADP	_	_	7	case	_	_
 6	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	7	det	_	_
-7	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	4	nmod	_	_
+7	Partido	Partido	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	4	nmod	_	_
 8	Comunista	Comunista	PROPN	_	Number=Sing	7	flat:name	_	_
 9-10	do	_	_	_	_	_	_	_	_
 9	de	de	ADP	_	_	11	case	_	_
 10	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	_	_
-11	Brasil	Brasil	PROPN	_	Gender=Masc|Number=Sing	7	nmod	_	_
+11	Brasil	Brasil	PROPN	_	Number=Sing	7	nmod	_	_
 12	(	(	PUNCT	_	_	13	punct	_	SpaceAfter=No
 13	PCB	PCB	PROPN	_	Gender=Masc|Number=Sing	7	appos	_	SpaceAfter=No
 14	)	)	PUNCT	_	_	13	punct	_	SpaceAfter=No
-15	,	,	PUNCT	_	_	18	punct	_	_
+15	,	,	PUNCT	_	_	1	punct	_	_
 16	com	com	ADP	_	_	18	case	_	_
 17	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	18	det	_	_
-18	bipartidarismo	bipartidarismo	NOUN	_	Gender=Masc|Number=Sing	7	nmod	_	SpaceAfter=No
-19	,	,	PUNCT	_	_	18	punct	_	_
+18	bipartidarismo	bipartidarismo	NOUN	_	Gender=Masc|Number=Sing	23	obl	_	SpaceAfter=No
+19	,	,	PUNCT	_	_	21	punct	_	_
 20	em	em	ADP	_	_	21	case	_	_
-21	1965	1965	NUM	_	NumType=Card	18	nmod	_	SpaceAfter=No
-22	,	,	PUNCT	_	_	18	punct	_	_
+21	1965	1965	NUM	_	NumType=Card	23	obl	_	SpaceAfter=No
+22	,	,	PUNCT	_	_	21	punct	_	_
 23-24	filiou-se	_	_	_	_	_	_	_	_
 23	filiou	filiar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 24	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	23	expl	_	_
 25-26	ao	_	_	_	_	_	_	_	_
 25	a	a	ADP	_	_	27	case	_	_
 26	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	27	det	_	_
-27	Movimento	Movimento	PROPN	_	Gender=Masc|Number=Sing	23	obj	_	_
+27	Movimento	Movimento	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	23	obl	_	_
 28	Democrático	Democrático	PROPN	_	Number=Sing	27	flat:name	_	_
-29	Brasileiro	brasileiro	PROPN	_	Number=Sing	27	flat:name	_	_
+29	Brasileiro	Brasileiro	PROPN	_	Number=Sing	27	flat:name	_	_
 30	(	(	PUNCT	_	_	31	punct	_	SpaceAfter=No
 31	MDB	MDB	PROPN	_	Gender=Masc|Number=Sing	27	appos	_	SpaceAfter=No
 32	)	)	PUNCT	_	_	31	punct	_	SpaceAfter=No
@@ -171,17 +174,17 @@
 37-38	ao	_	_	_	_	_	_	_	_
 37	a	a	ADP	_	_	39	case	_	_
 38	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	39	det	_	_
-39	regime	regime	NOUN	_	Gender=Masc|Number=Sing	34	nmod	_	_
+39	regime	regime	NOUN	_	Gender=Masc|Number=Sing	36	nmod	_	_
 40	militar	militar	ADJ	_	Gender=Masc|Number=Sing	39	amod	_	SpaceAfter=No
 41	.	.	PUNCT	_	_	23	punct	_	SpacesAfter=\n
 
-# text = Mudou-se para São Paulo em 1971 e foi trabalhar no Banco do Comércio da Indústria de Minas Gerais.
 # sent_id = 5
+# text = Mudou-se para São Paulo em 1971 e foi trabalhar no Banco do Comércio da Indústria de Minas Gerais.
 1-2	Mudou-se	_	_	_	_	_	_	_	_
 1	Mudou	mudar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	1	expl	_	_
 3	para	para	ADP	_	_	4	case	_	_
-4	São	São	PROPN	_	Gender=Masc|Number=Sing	1	obl	_	_
+4	São	São	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	1	obl	_	_
 5	Paulo	Paulo	PROPN	_	Number=Sing	4	flat:name	_	_
 6	em	em	ADP	_	_	7	case	_	_
 7	1971	1971	NUM	_	NumType=Card	1	obl	_	_
@@ -199,25 +202,25 @@
 17-18	da	_	_	_	_	_	_	_	_
 17	de	de	ADP	_	_	19	case	_	_
 18	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	19	det	_	_
-19	Indústria	indústria	PROPN	_	Number=Sing	16	nmod	_	_
+19	Indústria	Indústria	PROPN	_	Number=Sing	16	nmod	_	_
 20	de	de	ADP	_	_	21	case	_	_
-21	Minas	Minas	PROPN	_	Number=Sing	19	nmod	_	_
+21	Minas	Minas	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	19	nmod	_	_
 22	Gerais	Gerais	PROPN	_	Number=Sing	21	flat:name	_	SpaceAfter=No
-23	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
+23	.	.	PUNCT	_	_	1	punct	_	_
 
-# text = Mudou inúmeras vezes de emprego até chegar à Ferrovia Paulista SA (Fepasa).
 # sent_id = 6
+# text = Mudou inúmeras vezes de emprego até chegar à Ferrovia Paulista SA (Fepasa).
 1	Mudou	mudar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2	inúmeras	inúmero	ADJ	_	Gender=Fem|Number=Plur	3	amod	_	_
-3	vezes	vez	NOUN	_	Gender=Fem|Number=Plur	1	obj	_	_
+3	vezes	vez	NOUN	_	Gender=Fem|Number=Plur	1	obl	_	_
 4	de	de	ADP	_	_	5	case	_	_
 5	emprego	emprego	NOUN	_	Gender=Masc|Number=Sing	3	nmod	_	_
 6	até	até	SCONJ	_	_	7	mark	_	_
-7	chegar	chegar	VERB	_	VerbForm=Inf	3	acl	_	_
+7	chegar	chegar	VERB	_	VerbForm=Inf	1	advcl	_	_
 8-9	à	_	_	_	_	_	_	_	_
 8	a	a	ADP	_	_	10	case	_	_
 9	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	10	det	_	_
-10	Ferrovia	ferrovia	PROPN	_	Gender=Fem|Number=Sing	7	obl	_	_
+10	Ferrovia	Ferrovia	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	7	obl	_	_
 11	Paulista	Paulista	PROPN	_	Number=Sing	10	flat:name	_	_
 12	SA	SA	PROPN	_	Number=Sing	10	flat:name	_	_
 13	(	(	PUNCT	_	_	14	punct	_	SpaceAfter=No
@@ -225,34 +228,34 @@
 15	)	)	PUNCT	_	_	14	punct	_	SpaceAfter=No
 16	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
 
-# text = Ajudou a fundar o Sindicato dos Trabalhadores em Processamento de dados de São Paulo (SINDPD), em 1984.
 # sent_id = 7
-1	Ajudou	ajudar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+# text = Ajudou a fundar o Sindicato dos Trabalhadores em Processamento de dados de São Paulo (SINDPD), em 1984.
+1	Ajudou	ajudar	VERB	_	ExtPos=AUX|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2	a	a	SCONJ	_	_	3	mark	_	_
 3	fundar	fundar	VERB	_	VerbForm=Inf	1	xcomp	_	_
 4	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	5	det	_	_
-5	Sindicato	Sindicato	PROPN	_	Gender=Masc|Number=Sing	3	obj	_	_
+5	Sindicato	sindicato	NOUN	_	Gender=Masc|Number=Sing	3	obj	_	_
 6-7	dos	_	_	_	_	_	_	_	_
 6	de	de	ADP	_	_	8	case	_	_
 7	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	8	det	_	_
-8	Trabalhadores	trabalhador	NOUN	_	Gender=Masc|Number=Plur	5	nmod	_	_
+8	Trabalhadores	Trabalhadores	PROPN	_	Number=Sing	5	nmod	_	_
 9	em	em	ADP	_	_	10	case	_	_
 10	Processamento	Processamento	NOUN	_	Gender=Masc|Number=Sing	5	nmod	_	_
 11	de	de	ADP	_	_	12	case	_	_
 12	dados	dado	NOUN	_	Gender=Masc|Number=Plur	10	nmod	_	_
 13	de	de	ADP	_	_	14	case	_	_
-14	São	São	PROPN	_	Gender=Masc|Number=Sing	12	nmod	_	_
+14	São	São	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	12	nmod	_	_
 15	Paulo	Paulo	PROPN	_	Number=Sing	14	flat:name	_	_
 16	(	(	PUNCT	_	_	17	punct	_	SpaceAfter=No
-17	SINDPD	SINDPD	PROPN	_	Gender=Fem|Number=Sing	10	appos	_	SpaceAfter=No
+17	SINDPD	SINDPD	PROPN	_	Gender=Masc|Number=Sing	14	appos	_	SpaceAfter=No
 18	)	)	PUNCT	_	_	17	punct	_	SpaceAfter=No
-19	,	,	PUNCT	_	_	21	punct	_	_
+19	,	,	PUNCT	_	_	3	punct	_	_
 20	em	em	ADP	_	_	21	case	_	_
-21	1984	1984	NUM	_	NumType=Card	10	nmod	_	SpaceAfter=No
-22	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
+21	1984	1984	NUM	_	NumType=Card	3	obl	_	SpaceAfter=No
+22	.	.	PUNCT	_	_	3	punct	_	_
 
-# text = Com atuação ativa, encabeçou a chapa para diretoria do sindicato em 1989.
 # sent_id = 8
+# text = Com atuação ativa, encabeçou a chapa para diretoria do sindicato em 1989.
 1	Com	com	ADP	_	_	2	case	_	_
 2	atuação	atuação	NOUN	_	Gender=Fem|Number=Sing	5	obl	_	_
 3	ativa	ativo	ADJ	_	Gender=Fem|Number=Sing	2	amod	_	SpaceAfter=No
@@ -261,18 +264,18 @@
 6	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	7	det	_	_
 7	chapa	chapa	NOUN	_	Gender=Fem|Number=Sing	5	obj	_	_
 8	para	para	ADP	_	_	9	case	_	_
-9	diretoria	diretoria	NOUN	_	Gender=Fem|Number=Sing	5	obl	_	_
+9	diretoria	diretoria	NOUN	_	Gender=Fem|Number=Sing	7	nmod	_	_
 10-11	do	_	_	_	_	_	_	_	_
 10	de	de	ADP	_	_	12	case	_	_
 11	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	12	det	_	_
 12	sindicato	sindicato	NOUN	_	Gender=Masc|Number=Sing	9	nmod	_	_
 13	em	em	ADP	_	_	14	case	_	_
-14	1989	1989	NUM	_	NumType=Card	12	nmod	_	SpaceAfter=No
-15	.	.	PUNCT	_	_	5	punct	_	SpacesAfter=\n
+14	1989	1989	NUM	_	NumType=Card	5	obl	_	SpaceAfter=No
+15	.	.	PUNCT	_	_	5	punct	_	_
 
-# text = Concomitantemente à atuação no SINDPD, começou a participar das lutas nacionais na Central Geral dos Trabalhadores (CGT), que era presidida pelo líder metalúrgico Joaquim dos Santos Andrade, conhecido como Joaquinzão.
 # sent_id = 9
-1	Concomitantemente	Concomitantemente	ADV	_	_	11	advmod	_	_
+# text = Concomitantemente à atuação no SINDPD, começou a participar das lutas nacionais na Central Geral dos Trabalhadores (CGT), que era presidida pelo líder metalúrgico Joaquim dos Santos Andrade, conhecido como Joaquinzão.
+1	Concomitantemente	concomitantemente	ADV	_	_	11	advmod	_	_
 2-3	à	_	_	_	_	_	_	_	_
 2	a	a	ADP	_	_	4	case	_	_
 3	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	4	det	_	_
@@ -280,9 +283,9 @@
 5-6	no	_	_	_	_	_	_	_	_
 5	em	em	ADP	_	_	7	case	_	_
 6	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	7	det	_	_
-7	SINDPD	SINDPD	PROPN	_	Gender=Masc|Number=Sing	1	obl	_	SpaceAfter=No
+7	SINDPD	SINDPD	PROPN	_	Gender=Masc|Number=Sing	4	nmod	_	SpaceAfter=No
 8	,	,	PUNCT	_	_	1	punct	_	_
-9	começou	começar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+9	começou	começar	VERB	_	ExtPos=AUX|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 10	a	a	SCONJ	_	_	11	mark	_	_
 11	participar	participar	VERB	_	VerbForm=Inf	9	xcomp	_	_
 12-13	das	_	_	_	_	_	_	_	_
@@ -293,7 +296,7 @@
 16-17	na	_	_	_	_	_	_	_	_
 16	em	em	ADP	_	_	18	case	_	_
 17	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	18	det	_	_
-18	Central	Central	PROPN	_	Gender=Fem|Number=Sing	14	nmod	_	_
+18	Central	Central	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	14	nmod	_	_
 19	Geral	Geral	PROPN	_	Number=Sing	18	flat:name	_	_
 20-21	dos	_	_	_	_	_	_	_	_
 20	de	de	ADP	_	_	22	case	_	_
@@ -303,9 +306,9 @@
 24	CGT	CGT	PROPN	_	Gender=Fem|Number=Sing	18	appos	_	SpaceAfter=No
 25	)	)	PUNCT	_	_	24	punct	_	SpaceAfter=No
 26	,	,	PUNCT	_	_	29	punct	_	_
-27	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	29	nsubj:pass	_	_
+27	que	que	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	29	nsubj:pass	_	_
 28	era	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	29	aux:pass	_	_
-29	presidida	presidir	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	14	acl:relcl	_	_
+29	presidida	presidir	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	18	acl:relcl	_	_
 30-31	pelo	_	_	_	_	_	_	_	_
 30	por	por	ADP	_	_	32	case	_	_
 31	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	32	det	_	_
@@ -315,18 +318,18 @@
 35-36	dos	_	_	_	_	_	_	_	_
 35	de	de	ADP	_	_	37	case	_	_
 36	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	37	det	_	_
-37	Santos	Santos	PROPN	_	Number=Sing	34	nmod	_	_
+37	Santos	Santos	PROPN	_	ExtPos=PROPN|Number=Sing	34	nmod	_	_
 38	Andrade	Andrade	PROPN	_	Number=Sing	37	flat:name	_	SpaceAfter=No
 39	,	,	PUNCT	_	_	40	punct	_	_
 40	conhecido	conhecer	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	32	acl	_	_
 41	como	como	ADP	_	_	42	case	_	_
-42	Joaquinzão	Joaquinzão	PROPN	_	Gender=Masc|Number=Sing	40	obl	_	SpaceAfter=No
-43	.	.	PUNCT	_	_	11	punct	_	SpacesAfter=\n
+42	Joaquinzão	Joaquinzão	PROPN	_	Gender=Masc|Number=Sing	40	xcomp	_	SpaceAfter=No
+43	.	.	PUNCT	_	_	11	punct	_	_
 
-# text = Ao lado de Joaquinzão e das demais lideranças da CGT, Antônio Fernandes Santos Neto participou ativamente junto aos constituintes de 1987-1988 em defesa da unicidade sindical e da contribuição compulsória.
 # sent_id = 10
+# text = Ao lado de Joaquinzão e das demais lideranças da CGT, Antônio Fernandes Santos Neto participou ativamente junto aos constituintes de 1987-1988 em defesa da unicidade sindical e da contribuição compulsória.
 1-2	Ao	_	_	_	_	_	_	_	_
-1	A	a	DET	_	Gender=Masc|Number=Sing	3	case	_	_
+1	A	a	ADP	_	_	3	case	_	_
 2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
 3	lado	lado	NOUN	_	Gender=Masc|Number=Sing	19	obl	_	_
 4	de	de	ADP	_	_	5	case	_	_
@@ -342,21 +345,21 @@
 12	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	13	det	_	_
 13	CGT	CGT	PROPN	_	Gender=Fem|Number=Sing	10	nmod	_	SpaceAfter=No
 14	,	,	PUNCT	_	_	3	punct	_	_
-15	Antônio	Antônio	PROPN	_	Gender=Masc|Number=Sing	19	nsubj	_	_
+15	Antônio	Antônio	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	19	nsubj	_	_
 16	Fernandes	Fernandes	PROPN	_	Number=Sing	15	flat:name	_	_
 17	Santos	Santos	PROPN	_	Number=Sing	15	flat:name	_	_
 18	Neto	Neto	PROPN	_	Number=Sing	15	flat:name	_	_
 19	participou	participar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
-20	ativamente	ativamente	ADV	_	_	21	advmod	_	_
+20	ativamente	ativamente	ADV	_	_	19	advmod	_	_
 21	junto	junto	ADV	_	_	19	advmod	_	_
 22-23	aos	_	_	_	_	_	_	_	_
 22	a	a	ADP	_	_	24	case	_	_
 23	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	24	det	_	_
-24	constituintes	constituinte	NOUN	_	Gender=Masc|Number=Plur	19	obj	_	_
+24	constituintes	constituinte	NOUN	_	Gender=Masc|Number=Plur	21	obl	_	_
 25	de	de	ADP	_	_	26	case	_	_
 26	1987-1988	1987-1988	NUM	_	NumType=Card	24	nmod	_	_
 27	em	em	ADP	_	_	28	case	_	_
-28	defesa	defesa	NOUN	_	Gender=Fem|Number=Sing	26	nmod	_	_
+28	defesa	defesa	NOUN	_	Gender=Fem|Number=Sing	19	obl	_	_
 29-30	da	_	_	_	_	_	_	_	_
 29	de	de	ADP	_	_	31	case	_	_
 30	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	31	det	_	_
@@ -370,8 +373,8 @@
 37	compulsória	compulsório	ADJ	_	Gender=Fem|Number=Sing	36	amod	_	SpaceAfter=No
 38	.	.	PUNCT	_	_	19	punct	_	SpacesAfter=\n
 
-# text = Seu primeiro cargo na central foi o de secretário de Relações Internacionais, tendo a responsabilidade de representar a entidade nos fóruns externos.
 # sent_id = 11
+# text = Seu primeiro cargo na central foi o de secretário de Relações Internacionais, tendo a responsabilidade de representar a entidade nos fóruns externos.
 1	Seu	seu	DET	_	Gender=Masc|Number=Sing|PronType=Prs	3	det	_	_
 2	primeiro	primeiro	ADJ	_	Gender=Masc|Number=Sing|NumType=Ord	3	amod	_	_
 3	cargo	cargo	NOUN	_	Gender=Masc|Number=Sing	8	nsubj	_	_
@@ -384,50 +387,50 @@
 9	de	de	ADP	_	_	10	case	_	_
 10	secretário	secretário	NOUN	_	Gender=Masc|Number=Sing	8	nmod	_	_
 11	de	de	ADP	_	_	12	case	_	_
-12	Relações	Relações	PROPN	_	Gender=Masc|Number=Sing	10	nmod	_	_
+12	Relações	Relações	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Plur	10	nmod	_	_
 13	Internacionais	Internacionais	PROPN	_	Number=Sing	12	flat:name	_	SpaceAfter=No
 14	,	,	PUNCT	_	_	15	punct	_	_
 15	tendo	ter	VERB	_	VerbForm=Ger	8	advcl	_	_
-16	a	a	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	17	det	_	_
-17	responsabilidade	responsabilidade	NOUN	_	Gender=Fem|Number=Sing	19	nsubj	_	_
+16	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	17	det	_	_
+17	responsabilidade	responsabilidade	NOUN	_	Gender=Fem|Number=Sing	15	obj	_	_
 18	de	de	SCONJ	_	_	19	mark	_	_
-19	representar	representar	VERB	_	VerbForm=Inf	15	xcomp	_	_
+19	representar	representar	VERB	_	VerbForm=Inf	17	acl	_	_
 20	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	21	det	_	_
 21	entidade	entidade	NOUN	_	Gender=Fem|Number=Sing	19	obj	_	_
 22-23	nos	_	_	_	_	_	_	_	_
 22	em	em	ADP	_	_	24	case	_	_
 23	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	24	det	_	_
-24	fóruns	fórun	NOUN	_	Gender=Masc|Number=Plur	21	nmod	_	_
+24	fóruns	fórum	NOUN	_	Gender=Masc|Number=Plur	19	obl	_	_
 25	externos	externo	ADJ	_	Gender=Masc|Number=Plur	24	amod	_	SpaceAfter=No
-26	.	.	PUNCT	_	_	8	punct	_	SpacesAfter=\n
+26	.	.	PUNCT	_	_	8	punct	_	_
 
-# text = Presidiu a Federação Sindical Mundial (FSM) entre 1996 e 1999, entidade da qual foi também vice-presidente.
 # sent_id = 12
+# text = Presidiu a Federação Sindical Mundial (FSM) entre 1996 e 1999, entidade da qual foi também vice-presidente.
 1	Presidiu	presidir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	3	det	_	_
-3	Federação	Federação	PROPN	_	Gender=Fem|Number=Sing	20	nsubj	_	_
+3	Federação	Federação	PROPN	_	Gender=Fem|Number=Sing	1	obj	_	_
 4	Sindical	Sindical	PROPN	_	Number=Sing	3	flat:name	_	_
 5	Mundial	Mundial	PROPN	_	Number=Sing	3	flat:name	_	_
 6	(	(	PUNCT	_	_	7	punct	_	SpaceAfter=No
-7	FSM	FSM	PROPN	_	Gender=Masc|Number=Sing	3	appos	_	SpaceAfter=No
+7	FSM	FSM	PROPN	_	Gender=Fem|Number=Sing	3	appos	_	SpaceAfter=No
 8	)	)	PUNCT	_	_	7	punct	_	_
 9	entre	entre	ADP	_	_	10	case	_	_
-10	1996	1996	NUM	_	NumType=Card	3	nmod	_	_
+10	1996	1996	NUM	_	NumType=Card	1	obl	_	_
 11	e	e	CCONJ	_	_	12	cc	_	_
 12	1999	1999	NUM	_	NumType=Card	10	conj	_	SpaceAfter=No
 13	,	,	PUNCT	_	_	14	punct	_	_
-14	entidade	entidade	NOUN	_	Gender=Fem|Number=Sing	20	nmod	_	_
+14	entidade	entidade	NOUN	_	Gender=Fem|Number=Sing	3	appos	_	_
 15-16	da	_	_	_	_	_	_	_	_
 15	de	de	ADP	_	_	17	case	_	_
 16	a	o	DET	_	Gender=Fem|Number=Sing|PronType=Art	17	det	_	_
 17	qual	qual	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	20	nmod	_	_
 18	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	20	cop	_	_
 19	também	também	ADV	_	_	20	advmod	_	_
-20	vice-presidente	vice-presidente	NOUN	_	Gender=Masc|Number=Sing	1	obj	_	SpaceAfter=No
-21	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
+20	vice-presidente	vice-presidente	NOUN	_	Gender=Masc|Number=Sing	14	acl:relcl	_	SpaceAfter=No
+21	.	.	PUNCT	_	_	1	punct	_	_
 
-# text = Assumiu a presidência da CGT, hoje Central Geral dos Trabalhadores do Brasil (CGTB) em 1992.
 # sent_id = 13
+# text = Assumiu a presidência da CGT, hoje Central Geral dos Trabalhadores do Brasil (CGTB) em 1992.
 1	Assumiu	assumir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	3	det	_	_
 3	presidência	presidência	NOUN	_	Gender=Fem|Number=Sing	1	obj	_	_
@@ -435,9 +438,9 @@
 4	de	de	ADP	_	_	6	case	_	_
 5	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	6	det	_	_
 6	CGT	CGT	PROPN	_	Gender=Fem|Number=Sing	3	nmod	_	SpaceAfter=No
-7	,	,	PUNCT	_	_	1	punct	_	_
-8	hoje	hoje	ADV	_	_	1	advmod	_	_
-9	Central	Central	PROPN	_	Gender=Masc|Number=Sing	1	obj	_	_
+7	,	,	PUNCT	_	_	9	punct	_	_
+8	hoje	hoje	ADV	_	_	9	advmod	_	_
+9	Central	Central	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	6	appos	_	_
 10	Geral	Geral	PROPN	_	Number=Sing	9	flat:name	_	_
 11-12	dos	_	_	_	_	_	_	_	_
 11	de	de	ADP	_	_	13	case	_	_
@@ -446,30 +449,30 @@
 14-15	do	_	_	_	_	_	_	_	_
 14	de	de	ADP	_	_	16	case	_	_
 15	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	16	det	_	_
-16	Brasil	Brasil	PROPN	_	Gender=Masc|Number=Sing	9	nmod	_	_
+16	Brasil	Brasil	PROPN	_	Number=Sing	13	nmod	_	_
 17	(	(	PUNCT	_	_	18	punct	_	SpaceAfter=No
-18	CGTB	CGTB	PROPN	_	Gender=Masc|Number=Sing	16	appos	_	SpaceAfter=No
+18	CGTB	CGTB	PROPN	_	Gender=Fem|Number=Sing	9	appos	_	SpaceAfter=No
 19	)	)	PUNCT	_	_	18	punct	_	_
 20	em	em	ADP	_	_	21	case	_	_
 21	1992	1992	NUM	_	NumType=Card	1	obl	_	SpaceAfter=No
 22	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
 
-# text = Em 2007 lançou o livro «Trabalhadores do Brasil», que conta a história do movimento sindical.
 # sent_id = 14
+# text = Em 2007 lançou o livro «Trabalhadores do Brasil», que conta a história do movimento sindical.
 1	Em	em	ADP	_	_	2	case	_	_
 2	2007	2007	NUM	_	NumType=Card	3	obl	_	_
 3	lançou	lançar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 4	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	5	det	_	_
 5	livro	livro	NOUN	_	Gender=Masc|Number=Sing	3	obj	_	_
 6	«	«	PUNCT	_	_	7	punct	_	SpaceAfter=No
-7	Trabalhadores	trabalhador	NOUN	_	Gender=Masc|Number=Plur	5	appos	_	_
+7	Trabalhadores	Trabalhadores	PROPN	_	Gender=Masc|Number=Sing	5	appos	_	_
 8-9	do	_	_	_	_	_	_	_	_
 8	de	de	ADP	_	_	10	case	_	_
 9	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	10	det	_	_
 10	Brasil	Brasil	PROPN	_	Number=Sing	7	nmod	_	SpaceAfter=No
 11	»	»	PUNCT	_	_	7	punct	_	SpaceAfter=No
 12	,	,	PUNCT	_	_	14	punct	_	_
-13	que	que	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	14	nsubj	_	_
+13	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	14	nsubj	_	_
 14	conta	contar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	acl:relcl	_	_
 15	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	16	det	_	_
 16	história	história	NOUN	_	Gender=Fem|Number=Sing	14	obj	_	_

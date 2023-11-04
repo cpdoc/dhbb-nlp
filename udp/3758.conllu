@@ -1,9 +1,12 @@
-# text = «Marco César Meira Naslausky» nasceu no Rio de Janeiro, então Distrito Federal, no dia 18 de dezembro de 1940, filho de Jaime Naslausky e Danaiá Meira Naslausky.
-# sent_id = 1
-# newpar
+# generator = UDPipe 2, https://lindat.mff.cuni.cz/services/udpipe
+# udpipe_model = portuguese-bosque-ud-2.12-230717
+# udpipe_model_licence = CC BY-NC-SA
 # newdoc
+# newpar
+# sent_id = 1
+# text = «Marco César Meira Naslausky» nasceu no Rio de Janeiro, então Distrito Federal, no dia 18 de dezembro de 1940, filho de Jaime Naslausky e Danaiá Meira Naslausky.
 1	«	«	PUNCT	_	_	2	punct	_	SpaceAfter=No
-2	Marco	Marco	PROPN	_	Gender=Masc|Number=Sing	7	nsubj	_	_
+2	Marco	Marco	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	7	nsubj	_	_
 3	César	César	PROPN	_	Number=Sing	2	flat:name	_	_
 4	Meira	Meira	PROPN	_	Number=Sing	2	flat:name	_	_
 5	Naslausky	Naslausky	PROPN	_	Number=Sing	2	flat:name	_	SpaceAfter=No
@@ -14,10 +17,10 @@
 9	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	10	det	_	_
 10	Rio	Rio	PROPN	_	Gender=Masc|Number=Sing	7	obl	_	_
 11	de	de	ADP	_	_	12	case	_	_
-12	Janeiro	Janeiro	PROPN	_	Number=Sing	10	flat:name	_	SpaceAfter=No
+12	Janeiro	Janeiro	PROPN	_	Number=Sing	10	nmod	_	SpaceAfter=No
 13	,	,	PUNCT	_	_	15	punct	_	_
-14	então	então	ADV	_	_	13	advmod	_	_
-15	Distrito	Distrito	PROPN	_	Gender=Masc|Number=Sing	10	acl	_	_
+14	então	então	ADV	_	_	15	advmod	_	_
+15	Distrito	Distrito	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	10	appos	_	_
 16	Federal	Federal	PROPN	_	Number=Sing	15	flat:name	_	SpaceAfter=No
 17	,	,	PUNCT	_	_	15	punct	_	_
 18-19	no	_	_	_	_	_	_	_	_
@@ -30,56 +33,56 @@
 24	de	de	ADP	_	_	25	case	_	_
 25	1940	1940	NUM	_	NumType=Card	23	nmod	_	SpaceAfter=No
 26	,	,	PUNCT	_	_	27	punct	_	_
-27	filho	filho	NOUN	_	Gender=Masc|Number=Sing	2	appos	_	_
+27	filho	filho	NOUN	_	Gender=Masc|Number=Sing	7	appos	_	_
 28	de	de	ADP	_	_	29	case	_	_
-29	Jaime	Jaime	PROPN	_	Gender=Masc|Number=Sing	27	nmod	_	_
+29	Jaime	Jaime	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	27	nmod	_	_
 30	Naslausky	Naslausky	PROPN	_	Number=Sing	29	flat:name	_	_
 31	e	e	CCONJ	_	_	32	cc	_	_
-32	Danaiá	Danaiá	PROPN	_	Gender=Masc|Number=Sing	29	conj	_	_
+32	Danaiá	Danaiá	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	29	conj	_	_
 33	Meira	Meira	PROPN	_	Number=Sing	32	flat:name	_	_
 34	Naslausky	Naslausky	PROPN	_	Number=Sing	32	flat:name	_	SpaceAfter=No
 35	.	.	PUNCT	_	_	7	punct	_	SpacesAfter=\n
 
-# text = Bacharel em direito pela Faculdade de Direito da Universidade do Brasil, ingressou no Instituto Rio Branco em 1961.
 # sent_id = 2
-1	Bacharel	Bacharel	NOUN	_	Gender=Masc|Number=Sing	16	nsubj	_	_
+# text = Bacharel em direito pela Faculdade de Direito da Universidade do Brasil, ingressou no Instituto Rio Branco em 1961.
+1	Bacharel	bacharel	NOUN	_	Gender=Masc|Number=Sing	16	obl	_	_
 2	em	em	ADP	_	_	3	case	_	_
 3	direito	direito	NOUN	_	Gender=Masc|Number=Sing	1	nmod	_	_
 4-5	pela	_	_	_	_	_	_	_	_
 4	por	por	ADP	_	_	6	case	_	_
-5	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	6	det	_	_
+5	a	o	DET	_	Definite=Def|PronType=Art	6	det	_	_
 6	Faculdade	Faculdade	PROPN	_	Gender=Fem|Number=Sing	1	nmod	_	_
 7	de	de	ADP	_	_	8	case	_	_
 8	Direito	Direito	PROPN	_	Number=Sing	6	nmod	_	_
 9-10	da	_	_	_	_	_	_	_	_
 9	de	de	ADP	_	_	11	case	_	_
 10	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	11	det	_	_
-11	Universidade	universidade	PROPN	_	Gender=Fem|Number=Sing	6	nmod	_	_
+11	Universidade	Universidade	PROPN	_	Number=Sing	6	nmod	_	_
 12-13	do	_	_	_	_	_	_	_	_
 12	de	de	ADP	_	_	14	case	_	_
 13	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	14	det	_	_
-14	Brasil	Brasil	PROPN	_	Gender=Masc|Number=Sing	11	nmod	_	SpaceAfter=No
+14	Brasil	Brasil	PROPN	_	Number=Sing	11	nmod	_	SpaceAfter=No
 15	,	,	PUNCT	_	_	1	punct	_	_
 16	ingressou	ingressar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 17-18	no	_	_	_	_	_	_	_	_
 17	em	em	ADP	_	_	19	case	_	_
 18	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	19	det	_	_
-19	Instituto	Instituto	PROPN	_	Gender=Masc|Number=Sing	16	obl	_	_
+19	Instituto	Instituto	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	16	obl	_	_
 20	Rio	Rio	PROPN	_	Number=Sing	19	flat:name	_	_
 21	Branco	Branco	PROPN	_	Number=Sing	19	flat:name	_	_
 22	em	em	ADP	_	_	23	case	_	_
 23	1961	1961	NUM	_	NumType=Card	16	obl	_	SpaceAfter=No
-24	.	.	PUNCT	_	_	16	punct	_	SpacesAfter=\n
+24	.	.	PUNCT	_	_	16	punct	_	_
 
-# text = Nomeado terceiro-secretário em novembro de 1963 participou das negociações de bitributação com a Suécia, no Rio de Janeiro, em 1964 e com países da Europa Ocidental, com os EUA e com o Japão, entre 1965 e 1966.
 # sent_id = 3
-1	Nomeado	nomear	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	0	root	_	_
+# text = Nomeado terceiro-secretário em novembro de 1963 participou das negociações de bitributação com a Suécia, no Rio de Janeiro, em 1964 e com países da Europa Ocidental, com os EUA e com o Japão, entre 1965 e 1966.
+1	Nomeado	nomear	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	7	advcl	_	_
 2	terceiro-secretário	terceiro-secretário	NOUN	_	Gender=Masc|Number=Sing	1	obj	_	_
 3	em	em	ADP	_	_	4	case	_	_
 4	novembro	novembro	NOUN	_	Gender=Masc|Number=Sing	1	obl	_	_
 5	de	de	ADP	_	_	6	case	_	_
 6	1963	1963	NUM	_	NumType=Card	4	nmod	_	_
-7	participou	participar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	1	advcl	_	_
+7	participou	participar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 8-9	das	_	_	_	_	_	_	_	_
 8	de	de	ADP	_	_	10	case	_	_
 9	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	10	det	_	_
@@ -88,7 +91,7 @@
 12	bitributação	bitributação	NOUN	_	Gender=Fem|Number=Sing	10	nmod	_	_
 13	com	com	ADP	_	_	15	case	_	_
 14	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	15	det	_	_
-15	Suécia	Suécia	PROPN	_	Gender=Fem|Number=Sing	10	nmod	_	SpaceAfter=No
+15	Suécia	Suécia	PROPN	_	Gender=Fem|Number=Sing	12	nmod	_	SpaceAfter=No
 16	,	,	PUNCT	_	_	19	punct	_	_
 17-18	no	_	_	_	_	_	_	_	_
 17	em	em	ADP	_	_	19	case	_	_
@@ -96,34 +99,34 @@
 19	Rio	Rio	PROPN	_	Gender=Masc|Number=Sing	15	nmod	_	_
 20	de	de	ADP	_	_	21	case	_	_
 21	Janeiro	Janeiro	PROPN	_	Number=Sing	19	nmod	_	SpaceAfter=No
-22	,	,	PUNCT	_	_	24	punct	_	_
+22	,	,	PUNCT	_	_	19	punct	_	_
 23	em	em	ADP	_	_	24	case	_	_
-24	1964	1964	NUM	_	NumType=Card	19	nmod	_	_
+24	1964	1964	NUM	_	NumType=Card	10	nmod	_	_
 25	e	e	CCONJ	_	_	27	cc	_	_
 26	com	com	ADP	_	_	27	case	_	_
-27	países	país	NOUN	_	Gender=Masc|Number=Plur	24	conj	_	_
+27	países	país	NOUN	_	Gender=Masc|Number=Plur	10	conj	_	_
 28-29	da	_	_	_	_	_	_	_	_
 28	de	de	ADP	_	_	30	case	_	_
-29	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	30	det	_	_
-30	Europa	Europa	PROPN	_	Gender=Fem|Number=Sing	27	nmod	_	_
+29	a	o	DET	_	Definite=Def|PronType=Art	30	det	_	_
+30	Europa	Europa	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	27	nmod	_	_
 31	Ocidental	Ocidental	PROPN	_	Number=Sing	30	flat:name	_	SpaceAfter=No
 32	,	,	PUNCT	_	_	35	punct	_	_
 33	com	com	ADP	_	_	35	case	_	_
 34	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	35	det	_	_
-35	EUA	EUA	PROPN	_	Gender=Masc|Number=Plur	30	conj	_	_
+35	EUA	EUA	PROPN	_	Gender=Masc|Number=Plur	30	nmod	_	_
 36	e	e	CCONJ	_	_	39	cc	_	_
 37	com	com	ADP	_	_	39	case	_	_
 38	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	39	det	_	_
-39	Japão	Japão	PROPN	_	Gender=Masc|Number=Sing	30	conj	_	SpaceAfter=No
-40	,	,	PUNCT	_	_	24	punct	_	_
+39	Japão	Japão	PROPN	_	Gender=Masc|Number=Sing	35	conj	_	SpaceAfter=No
+40	,	,	PUNCT	_	_	42	punct	_	_
 41	entre	entre	ADP	_	_	42	case	_	_
-42	1965	1965	NUM	_	NumType=Card	24	nmod	_	_
+42	1965	1965	NUM	_	NumType=Card	27	nmod	_	_
 43	e	e	CCONJ	_	_	44	cc	_	_
 44	1966	1966	NUM	_	NumType=Card	42	conj	_	SpaceAfter=No
-45	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
+45	.	.	PUNCT	_	_	7	punct	_	_
 
-# text = Promovido em novembro deste último ano a segundo-secretário, foi transferido no ano seguinte para Paris, França, onde permaneceu até 1970.
 # sent_id = 4
+# text = Promovido em novembro deste último ano a segundo-secretário, foi transferido no ano seguinte para Paris, França, onde permaneceu até 1970.
 1	Promovido	promover	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	12	advcl	_	_
 2	em	em	ADP	_	_	3	case	_	_
 3	novembro	novembro	NOUN	_	Gender=Masc|Number=Sing	1	obl	_	_
@@ -133,7 +136,7 @@
 6	último	último	ADJ	_	Gender=Masc|Number=Sing|NumType=Ord	7	amod	_	_
 7	ano	ano	NOUN	_	Gender=Masc|Number=Sing	3	nmod	_	_
 8	a	a	ADP	_	_	9	case	_	_
-9	segundo-secretário	segundo-secretário	NOUN	_	Gender=Masc|Number=Sing	7	nmod	_	SpaceAfter=No
+9	segundo-secretário	segundo-secretário	NOUN	_	Gender=Masc|Number=Sing	1	obl	_	SpaceAfter=No
 10	,	,	PUNCT	_	_	1	punct	_	_
 11	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	12	aux:pass	_	_
 12	transferido	transferir	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
@@ -143,18 +146,18 @@
 15	ano	ano	NOUN	_	Gender=Masc|Number=Sing	12	obl	_	_
 16	seguinte	seguinte	ADJ	_	Gender=Masc|Number=Sing	15	amod	_	_
 17	para	para	ADP	_	_	18	case	_	_
-18	Paris	Paris	PROPN	_	Gender=Masc|Number=Sing	15	nmod	_	SpaceAfter=No
+18	Paris	Paris	PROPN	_	Gender=Masc|Number=Sing	12	obl	_	SpaceAfter=No
 19	,	,	PUNCT	_	_	20	punct	_	_
 20	França	França	PROPN	_	Gender=Fem|Number=Sing	18	appos	_	SpaceAfter=No
 21	,	,	PUNCT	_	_	20	punct	_	_
 22	onde	onde	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	23	obl	_	_
-23	permaneceu	permanecer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	15	acl:relcl	_	_
+23	permaneceu	permanecer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	18	acl:relcl	_	_
 24	até	até	ADP	_	_	25	case	_	_
 25	1970	1970	NUM	_	NumType=Card	23	obl	_	SpaceAfter=No
-26	.	.	PUNCT	_	_	12	punct	_	SpacesAfter=\n
+26	.	.	PUNCT	_	_	12	punct	_	_
 
-# text = Durante este período, foi encarregado dos assuntos relativos à Comunidade Econômica Européia (CEE) e representou o Brasil na Conferência Geral de Pesos e Medidas, em 1967.
 # sent_id = 5
+# text = Durante este período, foi encarregado dos assuntos relativos à Comunidade Econômica Européia (CEE) e representou o Brasil na Conferência Geral de Pesos e Medidas, em 1967.
 1	Durante	durante	ADP	_	_	3	case	_	_
 2	este	este	DET	_	Gender=Masc|Number=Sing|PronType=Dem	3	det	_	_
 3	período	período	NOUN	_	Gender=Masc|Number=Sing	6	obl	_	SpaceAfter=No
@@ -164,16 +167,16 @@
 7-8	dos	_	_	_	_	_	_	_	_
 7	de	de	ADP	_	_	9	case	_	_
 8	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	9	det	_	_
-9	assuntos	assunto	NOUN	_	Gender=Masc|Number=Plur	6	obl	_	_
+9	assuntos	assunto	NOUN	_	Gender=Masc|Number=Plur	6	obj	_	_
 10	relativos	relativo	ADJ	_	Gender=Masc|Number=Plur	9	amod	_	_
 11-12	à	_	_	_	_	_	_	_	_
 11	a	a	ADP	_	_	13	case	_	_
 12	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	13	det	_	_
-13	Comunidade	Comunidade	PROPN	_	Gender=Fem|Number=Sing	6	obl	_	_
+13	Comunidade	Comunidade	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	10	obl	_	_
 14	Econômica	Econômica	PROPN	_	Number=Sing	13	flat:name	_	_
 15	Européia	Européia	PROPN	_	Number=Sing	13	flat:name	_	_
 16	(	(	PUNCT	_	_	17	punct	_	SpaceAfter=No
-17	CEE	CEE	PROPN	_	Gender=Fem|Number=Sing	13	parataxis	_	SpaceAfter=No
+17	CEE	CEE	PROPN	_	Gender=Fem|Number=Sing	13	appos	_	SpaceAfter=No
 18	)	)	PUNCT	_	_	17	punct	_	_
 19	e	e	CCONJ	_	_	20	cc	_	_
 20	representou	representar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	conj	_	_
@@ -185,19 +188,19 @@
 25	Conferência	Conferência	PROPN	_	Gender=Fem|Number=Sing	20	obl	_	_
 26	Geral	Geral	PROPN	_	Number=Sing	25	flat:name	_	_
 27	de	de	ADP	_	_	28	case	_	_
-28	Pesos	pesos	PROPN	_	Number=Sing	25	nmod	_	_
-29	e	e	CCONJ	_	_	30	cc	_	_
-30	Medidas	medir	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part	28	conj	_	SpaceAfter=No
-31	,	,	PUNCT	_	_	33	punct	_	_
+28	Pesos	Pesos	PROPN	_	ExtPos=PROPN|Number=Sing	25	nmod	_	_
+29	e	e	CCONJ	_	_	28	flat:name	_	_
+30	Medidas	Medidas	PROPN	_	Number=Sing	28	flat:name	_	SpaceAfter=No
+31	,	,	PUNCT	_	_	20	punct	_	_
 32	em	em	ADP	_	_	33	case	_	_
-33	1967	1967	NUM	_	NumType=Card	25	nmod	_	SpaceAfter=No
+33	1967	1967	NUM	_	NumType=Card	20	obl	_	SpaceAfter=No
 34	.	.	PUNCT	_	_	6	punct	_	SpacesAfter=\n
 
-# text = Removido para Buenos Aires ainda naquele ano, foi promovido a primeiro-secretário em janeiro de 1973.
 # sent_id = 6
+# text = Removido para Buenos Aires ainda naquele ano, foi promovido a primeiro-secretário em janeiro de 1973.
 1	Removido	remover	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	11	advcl	_	_
 2	para	para	ADP	_	_	3	case	_	_
-3	Buenos	Buenos	PROPN	_	Gender=Masc|Number=Sing	1	obl	_	_
+3	Buenos	Buenos	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	1	obl	_	_
 4	Aires	Aires	PROPN	_	Number=Sing	3	flat:name	_	_
 5	ainda	ainda	ADV	_	_	8	advmod	_	_
 6-7	naquele	_	_	_	_	_	_	_	_
@@ -208,26 +211,26 @@
 10	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	11	aux:pass	_	_
 11	promovido	promover	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
 12	a	a	ADP	_	_	13	case	_	_
-13	primeiro-secretário	primeiro-secretário	NOUN	_	Gender=Masc|Number=Sing	11	obl	_	_
+13	primeiro-secretário	primeiro-secretário	NOUN	_	Gender=Masc|Number=Sing	11	obj	_	_
 14	em	em	ADP	_	_	15	case	_	_
 15	janeiro	janeiro	NOUN	_	Gender=Masc|Number=Sing	11	obl	_	_
 16	de	de	ADP	_	_	17	case	_	_
 17	1973	1973	NUM	_	NumType=Card	15	nmod	_	SpaceAfter=No
-18	.	.	PUNCT	_	_	11	punct	_	SpacesAfter=\n
+18	.	.	PUNCT	_	_	11	punct	_	_
 
-# text = Na capital argentina foi delegado da reunião do grupo de peritos do projeto A-4 de navegação e assessor na IV Conferência Interamericana de Ministros do Trabalho, ambas realizadas em 1972.
 # sent_id = 7
+# text = Na capital argentina foi delegado da reunião do grupo de peritos do projeto A-4 de navegação e assessor na IV Conferência Interamericana de Ministros do Trabalho, ambas realizadas em 1972.
 1-2	Na	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	3	case	_	_
 2	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	3	det	_	_
-3	capital	capital	NOUN	_	Gender=Fem|Number=Sing	6	obl	_	_
+3	capital	capital	NOUN	_	Gender=Fem|Number=Sing	6	nmod	_	_
 4	argentina	argentino	ADJ	_	Gender=Fem|Number=Sing	3	amod	_	_
-5	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	aux:pass	_	_
-6	delegado	delegar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
+5	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	cop	_	_
+6	delegado	delegado	NOUN	_	Gender=Masc|Number=Sing	0	root	_	_
 7-8	da	_	_	_	_	_	_	_	_
 7	de	de	ADP	_	_	9	case	_	_
 8	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	9	det	_	_
-9	reunião	reunião	NOUN	_	Gender=Fem|Number=Sing	6	obl	_	_
+9	reunião	reunião	NOUN	_	Gender=Fem|Number=Sing	6	nmod	_	_
 10-11	do	_	_	_	_	_	_	_	_
 10	de	de	ADP	_	_	12	case	_	_
 11	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	12	det	_	_
@@ -238,15 +241,15 @@
 15	de	de	ADP	_	_	17	case	_	_
 16	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	17	det	_	_
 17	projeto	projeto	NOUN	_	Gender=Masc|Number=Sing	14	nmod	_	_
-18	A-4	A-4	NUM	_	NumType=Card	17	nummod	_	_
+18	A-4	A-4	PROPN	_	Gender=Masc|Number=Sing	17	appos	_	_
 19	de	de	ADP	_	_	20	case	_	_
 20	navegação	navegação	NOUN	_	Gender=Fem|Number=Sing	17	nmod	_	_
 21	e	e	CCONJ	_	_	22	cc	_	_
-22	assessor	assessor	NOUN	_	Gender=Masc|Number=Sing	20	conj	_	_
+22	assessor	assessor	NOUN	_	Gender=Masc|Number=Sing	6	conj	_	_
 23-24	na	_	_	_	_	_	_	_	_
 23	em	em	ADP	_	_	25	case	_	_
 24	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	25	det	_	_
-25	IV	IV	PROPN	_	Gender=Fem|Number=Sing	6	obl	_	_
+25	IV	IV	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	22	nmod	_	_
 26	Conferência	Conferência	PROPN	_	Number=Sing	25	flat:name	_	_
 27	Interamericana	Interamericana	PROPN	_	Number=Sing	25	flat:name	_	_
 28	de	de	ADP	_	_	29	case	_	_
@@ -255,83 +258,83 @@
 30	de	de	ADP	_	_	32	case	_	_
 31	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	32	det	_	_
 32	Trabalho	Trabalho	PROPN	_	Number=Sing	29	nmod	_	SpaceAfter=No
-33	,	,	PUNCT	_	_	35	punct	_	_
-34	ambas	ambos	DET	_	Gender=Fem|Number=Plur|PronType=Tot	35	det	_	_
-35	realizadas	realizar	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part	25	acl	_	_
+33	,	,	PUNCT	_	_	34	punct	_	_
+34	ambas	ambos	PRON	_	Gender=Fem|Number=Plur|PronType=Tot	25	appos	_	_
+35	realizadas	realizar	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part	34	acl	_	_
 36	em	em	ADP	_	_	37	case	_	_
 37	1972	1972	NUM	_	NumType=Card	35	obl	_	SpaceAfter=No
-38	.	.	PUNCT	_	_	6	punct	_	SpacesAfter=\n
+38	.	.	PUNCT	_	_	6	punct	_	_
 
-# text = Foi ainda assessor nas V, VI, VII e VIII reuniões de Chanceleres da Bacia do Prata, em Punta del Este (Uruguai), em 1972, em Buenos Aires, em 1974 e em Cochabamba (Bolívia), em 1975.
 # sent_id = 8
+# text = Foi ainda assessor nas V, VI, VII e VIII reuniões de Chanceleres da Bacia do Prata, em Punta del Este (Uruguai), em 1972, em Buenos Aires, em 1974 e em Cochabamba (Bolívia), em 1975.
 1	Foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	cop	_	_
 2	ainda	ainda	ADV	_	_	3	advmod	_	_
 3	assessor	assessor	NOUN	_	Gender=Masc|Number=Sing	0	root	_	_
 4-5	nas	_	_	_	_	_	_	_	_
 4	em	em	ADP	_	_	6	case	_	_
 5	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	6	det	_	_
-6	V	V	PROPN	_	Gender=Fem|Number=Sing	3	obl	_	SpaceAfter=No
+6	V	V	PROPN	_	Gender=Fem|Number=Plur	3	nmod	_	SpaceAfter=No
 7	,	,	PUNCT	_	_	8	punct	_	_
-8	VI	VI	PROPN	_	Gender=Fem|Number=Sing	6	conj	_	SpaceAfter=No
+8	VI	vi	ADJ	_	Gender=Masc|Number=Sing	6	conj	_	SpaceAfter=No
 9	,	,	PUNCT	_	_	10	punct	_	_
-10	VII	VII	PROPN	_	Gender=Fem|Number=Sing	6	conj	_	_
+10	VII	vii	ADJ	_	Gender=Masc|Number=Sing|NumType=Ord	6	conj	_	_
 11	e	e	CCONJ	_	_	12	cc	_	_
-12	VIII	VIII	PROPN	_	Gender=Masc|Number=Sing	6	conj	_	_
-13	reuniões	reuniões	PROPN	_	Number=Sing	12	flat:name	_	_
+12	VIII	viii	ADJ	_	Gender=Masc|Number=Sing|NumType=Ord	6	conj	_	_
+13	reuniões	reunião	NOUN	_	Gender=Fem|Number=Plur	6	conj	_	_
 14	de	de	ADP	_	_	15	case	_	_
-15	Chanceleres	Chanceleres	PROPN	_	Number=Sing	12	flat:name	_	_
+15	Chanceleres	Chanceleres	PROPN	_	Number=Sing	13	nmod	_	_
 16-17	da	_	_	_	_	_	_	_	_
 16	de	de	ADP	_	_	18	case	_	_
 17	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	18	det	_	_
-18	Bacia	Bacia	PROPN	_	Gender=Fem|Number=Sing	12	nmod	_	_
+18	Bacia	Bacia	PROPN	_	Gender=Fem|Number=Sing	15	nmod	_	_
 19-20	do	_	_	_	_	_	_	_	_
 19	de	de	ADP	_	_	21	case	_	_
 20	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	21	det	_	_
 21	Prata	Prata	PROPN	_	Number=Sing	18	nmod	_	SpaceAfter=No
-22	,	,	PUNCT	_	_	3	punct	_	_
+22	,	,	PUNCT	_	_	24	punct	_	_
 23	em	em	ADP	_	_	24	case	_	_
-24	Punta	Punta	PROPN	_	Gender=Fem|Number=Sing	3	nmod	_	_
+24	Punta	Punta	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	13	nmod	_	_
 25	del	del	PROPN	_	Number=Sing	24	flat:name	_	_
 26	Este	Este	PROPN	_	Number=Sing	24	flat:name	_	_
 27	(	(	PUNCT	_	_	28	punct	_	SpaceAfter=No
-28	Uruguai	Uruguai	PROPN	_	Gender=Fem|Number=Sing	24	appos	_	SpaceAfter=No
+28	Uruguai	Uruguai	PROPN	_	Gender=Masc|Number=Sing	24	parataxis	_	SpaceAfter=No
 29	)	)	PUNCT	_	_	28	punct	_	SpaceAfter=No
 30	,	,	PUNCT	_	_	32	punct	_	_
 31	em	em	ADP	_	_	32	case	_	_
 32	1972	1972	NUM	_	NumType=Card	24	nmod	_	SpaceAfter=No
-33	,	,	PUNCT	_	_	32	punct	_	_
+33	,	,	PUNCT	_	_	35	punct	_	_
 34	em	em	ADP	_	_	35	case	_	_
-35	Buenos	Buenos	PROPN	_	Gender=Masc|Number=Sing	32	nmod	_	_
+35	Buenos	Buenos	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	6	conj	_	_
 36	Aires	Aires	PROPN	_	Number=Sing	35	flat:name	_	SpaceAfter=No
-37	,	,	PUNCT	_	_	32	punct	_	_
+37	,	,	PUNCT	_	_	39	punct	_	_
 38	em	em	ADP	_	_	39	case	_	_
-39	1974	1974	NUM	_	NumType=Card	32	nmod	_	_
+39	1974	1974	NUM	_	NumType=Card	35	nmod	_	_
 40	e	e	CCONJ	_	_	42	cc	_	_
 41	em	em	ADP	_	_	42	case	_	_
-42	Cochabamba	Cochabamba	PROPN	_	Gender=Fem|Number=Sing	39	conj	_	_
+42	Cochabamba	Cochabamba	PROPN	_	Gender=Masc|Number=Sing	6	conj	_	_
 43	(	(	PUNCT	_	_	44	punct	_	SpaceAfter=No
-44	Bolívia	Bolívia	PROPN	_	Gender=Fem|Number=Sing	42	appos	_	SpaceAfter=No
+44	Bolívia	Bolívia	PROPN	_	Gender=Fem|Number=Sing	42	parataxis	_	SpaceAfter=No
 45	)	)	PUNCT	_	_	44	punct	_	SpaceAfter=No
-46	,	,	PUNCT	_	_	32	punct	_	_
+46	,	,	PUNCT	_	_	48	punct	_	_
 47	em	em	ADP	_	_	48	case	_	_
-48	1975	1975	NUM	_	NumType=Card	32	nmod	_	SpaceAfter=No
+48	1975	1975	NUM	_	NumType=Card	42	nmod	_	SpaceAfter=No
 49	.	.	PUNCT	_	_	3	punct	_	SpacesAfter=\n
 
-# text = Diretor-secretário da Fundação Visconde de Cabo Frio em 1974, entidade previdenciária ligada ao Ministério das Relações Exteriores (MRE), foi promovido a conselheiro em maio de 1975 e atuou como coordenador de planejamento administrativo e de programação financeira do MRE entre 1976 e 1978, e como coordenador de assuntos diplomáticos da Secretaria Geral do mesmo ministério, entre 1978 e 1979.
 # sent_id = 9
-1	Diretor-secretário	Diretor-secretário	NOUN	_	Gender=Masc|Number=Sing	27	nsubj:pass	_	_
+# text = Diretor-secretário da Fundação Visconde de Cabo Frio em 1974, entidade previdenciária ligada ao Ministério das Relações Exteriores (MRE), foi promovido a conselheiro em maio de 1975 e atuou como coordenador de planejamento administrativo e de programação financeira do MRE entre 1976 e 1978, e como coordenador de assuntos diplomáticos da Secretaria Geral do mesmo ministério, entre 1978 e 1979.
+1	Diretor-secretário	diretor-secretário	NOUN	_	Gender=Masc|Number=Sing	27	nsubj:pass	_	_
 2-3	da	_	_	_	_	_	_	_	_
 2	de	de	ADP	_	_	4	case	_	_
 3	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	4	det	_	_
-4	Fundação	Fundação	PROPN	_	Gender=Fem|Number=Sing	1	nmod	_	_
+4	Fundação	Fundação	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	1	nmod	_	_
 5	Visconde	Visconde	PROPN	_	Number=Sing	4	flat:name	_	_
 6	de	de	ADP	_	_	7	case	_	_
-7	Cabo	Cabo	PROPN	_	Number=Sing	4	nmod	_	_
-8	Frio	frio	PROPN	_	Number=Sing	7	flat:name	_	_
+7	Cabo	Cabo	PROPN	_	ExtPos=PROPN|Number=Sing	4	nmod	_	_
+8	Frio	Frio	PROPN	_	Number=Sing	7	flat:name	_	_
 9	em	em	ADP	_	_	10	case	_	_
 10	1974	1974	NUM	_	NumType=Card	1	nmod	_	SpaceAfter=No
 11	,	,	PUNCT	_	_	12	punct	_	_
-12	entidade	entidade	NOUN	_	Gender=Fem|Number=Sing	1	appos	_	_
+12	entidade	entidade	NOUN	_	Gender=Fem|Number=Sing	10	appos	_	_
 13	previdenciária	previdenciário	ADJ	_	Gender=Fem|Number=Sing	12	amod	_	_
 14	ligada	ligar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	12	acl	_	_
 15-16	ao	_	_	_	_	_	_	_	_
@@ -341,16 +344,16 @@
 18-19	das	_	_	_	_	_	_	_	_
 18	de	de	ADP	_	_	20	case	_	_
 19	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	20	det	_	_
-20	Relações	Relações	PROPN	_	Gender=Fem|Number=Plur	17	nmod	_	_
+20	Relações	Relações	PROPN	_	ExtPos=PROPN|Number=Sing	17	nmod	_	_
 21	Exteriores	Exteriores	PROPN	_	Number=Sing	20	flat:name	_	_
 22	(	(	PUNCT	_	_	23	punct	_	SpaceAfter=No
-23	MRE	MRE	PROPN	_	Gender=Fem|Number=Sing	20	parataxis	_	SpaceAfter=No
+23	MRE	MRE	PROPN	_	Gender=Masc|Number=Sing	17	appos	_	SpaceAfter=No
 24	)	)	PUNCT	_	_	23	punct	_	SpaceAfter=No
 25	,	,	PUNCT	_	_	12	punct	_	_
 26	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	27	aux:pass	_	_
 27	promovido	promover	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
 28	a	a	ADP	_	_	29	case	_	_
-29	conselheiro	conselheiro	NOUN	_	Gender=Masc|Number=Sing	27	obl	_	_
+29	conselheiro	conselheiro	NOUN	_	Gender=Masc|Number=Sing	27	obj	_	_
 30	em	em	ADP	_	_	31	case	_	_
 31	maio	maio	NOUN	_	Gender=Masc|Number=Sing	27	obl	_	_
 32	de	de	ADP	_	_	33	case	_	_
@@ -371,13 +374,13 @@
 46	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	47	det	_	_
 47	MRE	MRE	PROPN	_	Gender=Masc|Number=Sing	43	nmod	_	_
 48	entre	entre	ADP	_	_	49	case	_	_
-49	1976	1976	NUM	_	NumType=Card	47	nmod	_	_
+49	1976	1976	NUM	_	NumType=Card	35	obl	_	_
 50	e	e	CCONJ	_	_	51	cc	_	_
 51	1978	1978	NUM	_	NumType=Card	49	conj	_	SpaceAfter=No
 52	,	,	PUNCT	_	_	55	punct	_	_
 53	e	e	CCONJ	_	_	55	cc	_	_
 54	como	como	ADP	_	_	55	case	_	_
-55	coordenador	coordenador	NOUN	_	Gender=Masc|Number=Sing	35	conj	_	_
+55	coordenador	coordenador	NOUN	_	Gender=Masc|Number=Sing	37	conj	_	_
 56	de	de	ADP	_	_	57	case	_	_
 57	assuntos	assunto	NOUN	_	Gender=Masc|Number=Plur	55	nmod	_	_
 58	diplomáticos	diplomático	ADJ	_	Gender=Masc|Number=Plur	57	amod	_	_
@@ -393,13 +396,13 @@
 66	ministério	ministério	NOUN	_	Gender=Masc|Number=Sing	61	nmod	_	SpaceAfter=No
 67	,	,	PUNCT	_	_	69	punct	_	_
 68	entre	entre	ADP	_	_	69	case	_	_
-69	1978	1978	NUM	_	NumType=Card	57	nmod	_	_
+69	1978	1978	NUM	_	NumType=Card	55	nmod	_	_
 70	e	e	CCONJ	_	_	71	cc	_	_
 71	1979	1979	NUM	_	NumType=Card	69	conj	_	SpaceAfter=No
 72	.	.	PUNCT	_	_	27	punct	_	SpacesAfter=\n
 
-# text = Ministro de segunda classe em junho de 1978, transferiu-se no ano seguinte para Nova Iorque, onde serviu na Organização dos Estados Americanos (OEA), e atuou diversas vezes como encarregado de negócios até 1983.
 # sent_id = 10
+# text = Ministro de segunda classe em junho de 1978, transferiu-se no ano seguinte para Nova Iorque, onde serviu na Organização dos Estados Americanos (OEA), e atuou diversas vezes como encarregado de negócios até 1983.
 1	Ministro	ministro	NOUN	_	Gender=Masc|Number=Sing	10	obl	_	_
 2	de	de	ADP	_	_	4	case	_	_
 3	segunda	segundo	ADJ	_	Gender=Fem|Number=Sing|NumType=Ord	4	amod	_	_
@@ -411,17 +414,17 @@
 9	,	,	PUNCT	_	_	1	punct	_	_
 10-11	transferiu-se	_	_	_	_	_	_	_	_
 10	transferiu	transferir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
-11	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	10	nsubj	_	_
+11	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	10	expl	_	_
 12-13	no	_	_	_	_	_	_	_	_
 12	em	em	ADP	_	_	14	case	_	_
 13	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	14	det	_	_
 14	ano	ano	NOUN	_	Gender=Masc|Number=Sing	10	obl	_	_
 15	seguinte	seguinte	ADJ	_	Gender=Masc|Number=Sing	14	amod	_	_
 16	para	para	ADP	_	_	17	case	_	_
-17	Nova	Nova	PROPN	_	Gender=Masc|Number=Sing	14	nmod	_	_
+17	Nova	Nova	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	10	obl	_	_
 18	Iorque	Iorque	PROPN	_	Number=Sing	17	flat:name	_	SpaceAfter=No
 19	,	,	PUNCT	_	_	21	punct	_	_
-20	onde	onde	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	21	obl	_	_
+20	onde	onde	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	21	obl	_	_
 21	serviu	servir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	17	acl:relcl	_	_
 22-23	na	_	_	_	_	_	_	_	_
 22	em	em	ADP	_	_	24	case	_	_
@@ -437,21 +440,21 @@
 31	)	)	PUNCT	_	_	30	punct	_	SpaceAfter=No
 32	,	,	PUNCT	_	_	34	punct	_	_
 33	e	e	CCONJ	_	_	34	cc	_	_
-34	atuou	atuar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	21	conj	_	_
-35	diversas	diversos	DET	_	Gender=Fem|Number=Plur|PronType=Ind	36	det	_	_
-36	vezes	vez	NOUN	_	Gender=Fem|Number=Plur	34	obj	_	_
+34	atuou	atuar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	10	conj	_	_
+35	diversas	diverso	DET	_	Gender=Fem|Number=Plur|PronType=Ind	36	det	_	_
+36	vezes	vez	NOUN	_	Gender=Fem|Number=Plur	34	obl	_	_
 37	como	como	ADP	_	_	38	case	_	_
 38	encarregado	encarregado	NOUN	_	Gender=Masc|Number=Sing	34	xcomp	_	_
 39	de	de	ADP	_	_	40	case	_	_
 40	negócios	negócio	NOUN	_	Gender=Masc|Number=Plur	38	nmod	_	_
 41	até	até	ADP	_	_	42	case	_	_
-42	1983	1983	NUM	_	NumType=Card	40	nmod	_	SpaceAfter=No
-43	.	.	PUNCT	_	_	10	punct	_	SpacesAfter=\n
+42	1983	1983	NUM	_	NumType=Card	34	obl	_	SpaceAfter=No
+43	.	.	PUNCT	_	_	10	punct	_	_
 
-# text = Tendo permanecido nesta instituição até 1984, participou dos VII, VIII e IX períodos extraordinários de sessões de suas assembléias gerais ordinárias e das XVII, XVIII e XX reuniões de consulta de ministros das relações exteriores dos países membros, todas entre 1979 e 1982.
 # sent_id = 11
+# text = Tendo permanecido nesta instituição até 1984, participou dos VII, VIII e IX períodos extraordinários de sessões de suas assembléias gerais ordinárias e das XVII, XVIII e XX reuniões de consulta de ministros das relações exteriores dos países membros, todas entre 1979 e 1982.
 1	Tendo	ter	AUX	_	VerbForm=Ger	2	aux	_	_
-2	permanecido	permanecer	VERB	_	VerbForm=Part	0	root	_	_
+2	permanecido	permanecer	VERB	_	VerbForm=Part	9	advcl	_	_
 3-4	nesta	_	_	_	_	_	_	_	_
 3	em	em	ADP	_	_	5	case	_	_
 4	esta	este	DET	_	Gender=Fem|Number=Sing|PronType=Dem	5	det	_	_
@@ -459,38 +462,38 @@
 6	até	até	ADP	_	_	7	case	_	_
 7	1984	1984	NUM	_	NumType=Card	2	obl	_	SpaceAfter=No
 8	,	,	PUNCT	_	_	2	punct	_	_
-9	participou	participar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	parataxis	_	_
+9	participou	participar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 10-11	dos	_	_	_	_	_	_	_	_
 10	de	de	ADP	_	_	12	case	_	_
 11	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	12	det	_	_
-12	VII	VII	PROPN	_	Number=Sing	9	obj	_	SpaceAfter=No
+12	VII	vii	ADJ	_	Gender=Masc|Number=Sing|NumType=Ord	9	obj	_	SpaceAfter=No
 13	,	,	PUNCT	_	_	14	punct	_	_
-14	VIII	VIII	PROPN	_	Gender=Masc|Number=Sing	12	conj	_	_
+14	VIII	viii	ADJ	_	Gender=Masc|Number=Sing|NumType=Ord	12	conj	_	_
 15	e	e	CCONJ	_	_	16	cc	_	_
-16	IX	IX	PROPN	_	Gender=Masc|Number=Sing	12	conj	_	_
-17	períodos	período	NOUN	_	Gender=Masc|Number=Plur	16	flat:name	_	_
-18	extraordinários	extraordinário	ADJ	_	Gender=Masc|Number=Plur	16	flat:name	_	_
-19	de	de	ADP	_	_	16	flat:name	_	_
-20	sessões	sessão	NOUN	_	Gender=Fem|Number=Plur	16	flat:name	_	_
+16	IX	ix	ADJ	_	Gender=Masc|Number=Sing|NumType=Ord	12	conj	_	_
+17	períodos	período	NOUN	_	Gender=Masc|Number=Plur	9	obj	_	_
+18	extraordinários	extraordinário	ADJ	_	Gender=Masc|Number=Plur	17	amod	_	_
+19	de	de	ADP	_	_	20	case	_	_
+20	sessões	sessão	NOUN	_	Gender=Fem|Number=Plur	17	nmod	_	_
 21	de	de	ADP	_	_	23	case	_	_
 22	suas	seu	DET	_	Gender=Fem|Number=Plur|PronType=Prs	23	det	_	_
-23	assembléias	assembléia	NOUN	_	Gender=Fem|Number=Plur	16	nmod	_	_
+23	assembléias	assembléia	NOUN	_	Gender=Fem|Number=Plur	20	nmod	_	_
 24	gerais	geral	ADJ	_	Gender=Fem|Number=Plur	23	amod	_	_
 25	ordinárias	ordinário	ADJ	_	Gender=Fem|Number=Plur	23	amod	_	_
 26	e	e	CCONJ	_	_	34	cc	_	_
 27-28	das	_	_	_	_	_	_	_	_
 27	de	de	ADP	_	_	34	case	_	_
 28	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	34	det	_	_
-29	XVII	Xvii	ADJ	_	Gender=Masc|Number=Sing|NumType=Ord	34	amod	_	SpaceAfter=No
+29	XVII	xvii	ADJ	_	Gender=Fem|Number=Plur	34	amod	_	SpaceAfter=No
 30	,	,	PUNCT	_	_	31	punct	_	_
 31	XVIII	xviii	ADJ	_	Gender=Masc|Number=Sing|NumType=Ord	29	conj	_	_
 32	e	e	CCONJ	_	_	33	cc	_	_
 33	XX	xx	ADJ	_	Gender=Masc|Number=Sing|NumType=Ord	29	conj	_	_
-34	reuniões	reunião	NOUN	_	Gender=Masc|Number=Sing	12	conj	_	_
+34	reuniões	reunião	NOUN	_	Gender=Fem|Number=Plur	17	conj	_	_
 35	de	de	ADP	_	_	36	case	_	_
 36	consulta	consulta	NOUN	_	Gender=Fem|Number=Sing	34	nmod	_	_
 37	de	de	ADP	_	_	38	case	_	_
-38	ministros	ministros	NOUN	_	Gender=Masc|Number=Plur	36	nmod	_	_
+38	ministros	ministro	NOUN	_	Gender=Masc|Number=Plur	36	nmod	_	_
 39-40	das	_	_	_	_	_	_	_	_
 39	de	de	ADP	_	_	41	case	_	_
 40	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	41	det	_	_
@@ -500,51 +503,51 @@
 43	de	de	ADP	_	_	45	case	_	_
 44	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	45	det	_	_
 45	países	país	NOUN	_	Gender=Masc|Number=Plur	41	nmod	_	_
-46	membros	membro	NOUN	_	Gender=Masc|Number=Plur	45	amod	_	SpaceAfter=No
+46	membros	membro	NOUN	_	Gender=Masc|Number=Plur	45	nmod	_	SpaceAfter=No
 47	,	,	PUNCT	_	_	48	punct	_	_
 48	todas	todo	DET	_	Gender=Fem|Number=Plur|PronType=Tot	34	appos	_	_
 49	entre	entre	ADP	_	_	50	case	_	_
 50	1979	1979	NUM	_	NumType=Card	48	nmod	_	_
 51	e	e	CCONJ	_	_	52	cc	_	_
 52	1982	1982	NUM	_	NumType=Card	50	conj	_	SpaceAfter=No
-53	.	.	PUNCT	_	_	2	punct	_	SpacesAfter=\n
+53	.	.	PUNCT	_	_	9	punct	_	_
 
-# text = Ainda naquela cidade norte-americana, foi delegado na XXXI reunião de comitê regional da Organização Mundial de Saúde (OMS), em 1979.
 # sent_id = 12
-1	Ainda	ainda	ADV	_	_	8	advmod	_	_
+# text = Ainda naquela cidade norte-americana, foi delegado na XXXI reunião de comitê regional da Organização Mundial de Saúde (OMS), em 1979.
+1	Ainda	ainda	ADV	_	_	4	advmod	_	_
 2-3	naquela	_	_	_	_	_	_	_	_
 2	em	em	ADP	_	_	4	case	_	_
 3	aquela	aquele	DET	_	Gender=Fem|Number=Sing|PronType=Dem	4	det	_	_
 4	cidade	cidade	NOUN	_	Gender=Fem|Number=Sing	8	obl	_	_
 5	norte-americana	norte-americano	ADJ	_	Gender=Fem|Number=Sing	4	amod	_	SpaceAfter=No
 6	,	,	PUNCT	_	_	4	punct	_	_
-7	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	8	aux:pass	_	_
-8	delegado	delegar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
+7	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	8	cop	_	_
+8	delegado	delegado	ADJ	_	Gender=Masc|Number=Sing	0	root	_	_
 9-10	na	_	_	_	_	_	_	_	_
 9	em	em	ADP	_	_	12	case	_	_
 10	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	12	det	_	_
-11	XXXI	Xxxi	ADJ	_	Gender=Masc|Number=Sing|NumType=Ord	12	amod	_	_
-12	reunião	reunião	NOUN	_	Gender=Masc|Number=Sing	8	obl	_	_
+11	XXXI	xxxi	ADJ	_	Gender=Fem|Number=Sing|NumType=Ord	12	amod	_	_
+12	reunião	reunião	NOUN	_	Gender=Fem|Number=Sing	8	obl	_	_
 13	de	de	ADP	_	_	14	case	_	_
-14	comitê	comitê	NOUN	_	Gender=Fem|Number=Sing	12	nmod	_	_
-15	regional	regional	ADJ	_	Gender=Fem|Number=Sing	14	amod	_	_
+14	comitê	comitê	NOUN	_	Gender=Masc|Number=Sing	12	nmod	_	_
+15	regional	regional	ADJ	_	Gender=Masc|Number=Sing	14	amod	_	_
 16-17	da	_	_	_	_	_	_	_	_
 16	de	de	ADP	_	_	18	case	_	_
 17	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	18	det	_	_
-18	Organização	Organização	PROPN	_	Gender=Fem|Number=Sing	14	nmod	_	_
+18	Organização	Organização	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	14	nmod	_	_
 19	Mundial	Mundial	PROPN	_	Number=Sing	18	flat:name	_	_
 20	de	de	ADP	_	_	21	case	_	_
 21	Saúde	Saúde	PROPN	_	Number=Sing	18	nmod	_	_
 22	(	(	PUNCT	_	_	23	punct	_	SpaceAfter=No
 23	OMS	OMS	PROPN	_	Gender=Fem|Number=Sing	18	appos	_	SpaceAfter=No
 24	)	)	PUNCT	_	_	23	punct	_	SpaceAfter=No
-25	,	,	PUNCT	_	_	8	punct	_	_
+25	,	,	PUNCT	_	_	27	punct	_	_
 26	em	em	ADP	_	_	27	case	_	_
 27	1979	1979	NUM	_	NumType=Card	8	obl	_	SpaceAfter=No
-28	.	.	PUNCT	_	_	8	punct	_	SpacesAfter=\n
+28	.	.	PUNCT	_	_	8	punct	_	_
 
-# text = Já em 1983, foi chefe das delegações brasileiras à XIV reunião ministerial do Conselho Interamericano para Educação, Ciência e Cultura (CIECC), em Kingston, Jamaica.
 # sent_id = 13
+# text = Já em 1983, foi chefe das delegações brasileiras à XIV reunião ministerial do Conselho Interamericano para Educação, Ciência e Cultura (CIECC), em Kingston, Jamaica.
 1	Já	já	ADV	_	_	3	advmod	_	_
 2	em	em	ADP	_	_	3	case	_	_
 3	1983	1983	NUM	_	NumType=Card	6	nmod	_	SpaceAfter=No
@@ -559,8 +562,8 @@
 11-12	à	_	_	_	_	_	_	_	_
 11	a	a	ADP	_	_	14	case	_	_
 12	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	14	det	_	_
-13	XIV	Xiv	ADJ	_	Gender=Masc|Number=Sing|NumType=Ord	14	amod	_	_
-14	reunião	reunião	NOUN	_	Gender=Fem|Number=Sing	9	nmod	_	_
+13	XIV	xiv	ADJ	_	Gender=Fem|Number=Sing|NumType=Ord	14	amod	_	_
+14	reunião	reunião	NOUN	_	Gender=Fem|Number=Sing	6	nmod	_	_
 15	ministerial	ministerial	ADJ	_	Gender=Fem|Number=Sing	14	amod	_	_
 16-17	do	_	_	_	_	_	_	_	_
 16	de	de	ADP	_	_	18	case	_	_
@@ -570,21 +573,21 @@
 20	para	para	ADP	_	_	21	case	_	_
 21	Educação	Educação	PROPN	_	Number=Sing	18	nmod	_	SpaceAfter=No
 22	,	,	PUNCT	_	_	23	punct	_	_
-23	Ciência	Ciência	PROPN	_	Gender=Fem|Number=Sing	21	conj	_	_
-24	e	e	CCONJ	_	_	25	cc	_	_
-25	Cultura	Cultura	PROPN	_	Number=Sing	21	conj	_	_
+23	Ciência	Ciência	PROPN	_	ExtPos=PROPN|Number=Sing	18	nmod	_	_
+24	e	e	CCONJ	_	_	23	flat:name	_	_
+25	Cultura	Cultura	PROPN	_	Number=Sing	23	flat:name	_	_
 26	(	(	PUNCT	_	_	27	punct	_	SpaceAfter=No
 27	CIECC	CIECC	PROPN	_	Gender=Masc|Number=Sing	18	appos	_	SpaceAfter=No
 28	)	)	PUNCT	_	_	27	punct	_	SpaceAfter=No
 29	,	,	PUNCT	_	_	31	punct	_	_
 30	em	em	ADP	_	_	31	case	_	_
-31	Kingston	Kingston	PROPN	_	Gender=Masc|Number=Sing	6	nmod	_	SpaceAfter=No
-32	,	,	PUNCT	_	_	31	punct	_	_
-33	Jamaica	Jamaica	PROPN	_	Gender=Unsp|Number=Sing	6	appos	_	SpaceAfter=No
+31	Kingston	Kingston	PROPN	_	Gender=Masc|Number=Sing	14	nmod	_	SpaceAfter=No
+32	,	,	PUNCT	_	_	33	punct	_	_
+33	Jamaica	Jamaica	PROPN	_	Gender=Fem|Number=Sing	31	appos	_	SpaceAfter=No
 34	.	.	PUNCT	_	_	6	punct	_	SpacesAfter=\n
 
-# text = De volta ao Brasil, foi chefe do Departamento de Cooperação Científica, Técnica e Tecnológica (1984-1987), representante do MRE no conselho consultivo da Legião Brasileira de Assistência (LBA), em 1986, chefe do Departamento do Serviço Exterior (1987) e subsecretário-geral de Administração e de Comunicações (1987-1989).
 # sent_id = 14
+# text = De volta ao Brasil, foi chefe do Departamento de Cooperação Científica, Técnica e Tecnológica (1984-1987), representante do MRE no conselho consultivo da Legião Brasileira de Assistência (LBA), em 1986, chefe do Departamento do Serviço Exterior (1987) e subsecretário-geral de Administração e de Comunicações (1987-1989).
 1	De	de	ADP	_	_	2	case	_	_
 2	volta	volta	NOUN	_	Gender=Fem|Number=Sing	8	nmod	_	_
 3-4	ao	_	_	_	_	_	_	_	_
@@ -599,17 +602,17 @@
 10	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	_	_
 11	Departamento	Departamento	PROPN	_	Gender=Masc|Number=Sing	8	nmod	_	_
 12	de	de	ADP	_	_	13	case	_	_
-13	Cooperação	Cooperação	PROPN	_	Number=Sing	11	nmod	_	_
-14	Científica	científica	PROPN	_	Number=Sing	13	flat:name	_	SpaceAfter=No
-15	,	,	PUNCT	_	_	16	punct	_	_
-16	Técnica	técnica	PROPN	_	Gender=Fem|Number=Sing	11	conj	_	_
-17	e	e	CCONJ	_	_	18	cc	_	_
-18	Tecnológica	Tecnológica	PROPN	_	Number=Sing	11	conj	_	_
+13	Cooperação	Cooperação	PROPN	_	ExtPos=PROPN|Number=Sing	11	nmod	_	_
+14	Científica	Científica	PROPN	_	Number=Sing	13	flat:name	_	SpaceAfter=No
+15	,	,	PUNCT	_	_	13	punct	_	_
+16	Técnica	Técnica	PROPN	_	Number=Sing	13	conj	_	_
+17	e	e	CCONJ	_	_	13	flat:name	_	_
+18	Tecnológica	Tecnológica	PROPN	_	Number=Sing	13	flat:name	_	_
 19	(	(	PUNCT	_	_	20	punct	_	SpaceAfter=No
-20	1984-1987	1984-1987	NUM	_	NumType=Card	11	appos	_	SpaceAfter=No
+20	1984-1987	1984-1987	NUM	_	NumType=Card	11	parataxis	_	SpaceAfter=No
 21	)	)	PUNCT	_	_	20	punct	_	SpaceAfter=No
 22	,	,	PUNCT	_	_	23	punct	_	_
-23	representante	representante	NOUN	_	Gender=Masc|Number=Sing	11	appos	_	_
+23	representante	representante	NOUN	_	Gender=Masc|Number=Sing	11	conj	_	_
 24-25	do	_	_	_	_	_	_	_	_
 24	de	de	ADP	_	_	26	case	_	_
 25	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	26	det	_	_
@@ -622,18 +625,18 @@
 31-32	da	_	_	_	_	_	_	_	_
 31	de	de	ADP	_	_	33	case	_	_
 32	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	33	det	_	_
-33	Legião	Legião	PROPN	_	Gender=Fem|Number=Sing	29	nmod	_	_
+33	Legião	Legião	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	29	nmod	_	_
 34	Brasileira	Brasileira	PROPN	_	Number=Sing	33	flat:name	_	_
 35	de	de	ADP	_	_	36	case	_	_
-36	Assistência	assistência	PROPN	_	Number=Sing	33	nmod	_	_
+36	Assistência	Assistência	PROPN	_	Number=Sing	33	nmod	_	_
 37	(	(	PUNCT	_	_	38	punct	_	SpaceAfter=No
 38	LBA	LBA	PROPN	_	Gender=Fem|Number=Sing	33	appos	_	SpaceAfter=No
 39	)	)	PUNCT	_	_	38	punct	_	SpaceAfter=No
 40	,	,	PUNCT	_	_	42	punct	_	_
 41	em	em	ADP	_	_	42	case	_	_
-42	1986	1986	NUM	_	NumType=Card	29	nmod	_	SpaceAfter=No
-43	,	,	PUNCT	_	_	42	punct	_	_
-44	chefe	chefe	NOUN	_	Gender=Masc|Number=Sing	29	appos	_	_
+42	1986	1986	NUM	_	NumType=Card	8	nmod	_	SpaceAfter=No
+43	,	,	PUNCT	_	_	44	punct	_	_
+44	chefe	chefe	NOUN	_	Gender=Masc|Number=Sing	8	conj	_	_
 45-46	do	_	_	_	_	_	_	_	_
 45	de	de	ADP	_	_	47	case	_	_
 46	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	47	det	_	_
@@ -641,53 +644,53 @@
 48-49	do	_	_	_	_	_	_	_	_
 48	de	de	ADP	_	_	50	case	_	_
 49	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	50	det	_	_
-50	Serviço	Serviço	PROPN	_	Gender=Masc|Number=Sing	47	nmod	_	_
-51	Exterior	exterior	PROPN	_	Number=Sing	50	flat:name	_	_
+50	Serviço	Serviço	PROPN	_	Number=Sing	47	nmod	_	_
+51	Exterior	Exterior	PROPN	_	Number=Sing	50	flat:name	_	_
 52	(	(	PUNCT	_	_	53	punct	_	SpaceAfter=No
-53	1987	1987	NUM	_	NumType=Card	47	parataxis	_	SpaceAfter=No
+53	1987	1987	NUM	_	NumType=Card	47	nmod	_	SpaceAfter=No
 54	)	)	PUNCT	_	_	53	punct	_	_
 55	e	e	CCONJ	_	_	56	cc	_	_
-56	subsecretário-geral	subsecretário-geral	NOUN	_	Gender=Masc|Number=Sing	47	conj	_	_
+56	subsecretário-geral	subsecretário-geral	NOUN	_	Gender=Masc|Number=Sing	8	conj	_	_
 57	de	de	ADP	_	_	58	case	_	_
-58	Administração	Administração	PROPN	_	Gender=Fem|Number=Sing	56	nmod	_	_
+58	Administração	administração	PROPN	_	Gender=Fem|Number=Sing	56	nmod	_	_
 59	e	e	CCONJ	_	_	61	cc	_	_
 60	de	de	ADP	_	_	61	case	_	_
-61	Comunicações	comunicação	NOUN	_	Gender=Fem|Number=Plur	47	conj	_	_
+61	Comunicações	Comunicações	PROPN	_	Number=Sing	58	conj	_	_
 62	(	(	PUNCT	_	_	63	punct	_	SpaceAfter=No
-63	1987-1989	1987-1989	NUM	_	NumType=Card	61	appos	_	SpaceAfter=No
+63	1987-1989	1987-1989	NUM	_	NumType=Card	56	nmod	_	SpaceAfter=No
 64	)	)	PUNCT	_	_	63	punct	_	SpaceAfter=No
 65	.	.	PUNCT	_	_	8	punct	_	SpacesAfter=\n
 
-# text = Em 1990, assumiu, cumulativamente, as embaixadas brasileiras em Bruxelas, Bélgica, e em Luxemburgo, ocupando o cargo até 1992.
 # sent_id = 15
+# text = Em 1990, assumiu, cumulativamente, as embaixadas brasileiras em Bruxelas, Bélgica, e em Luxemburgo, ocupando o cargo até 1992.
 1	Em	em	ADP	_	_	2	case	_	_
 2	1990	1990	NUM	_	NumType=Card	4	obl	_	SpaceAfter=No
 3	,	,	PUNCT	_	_	2	punct	_	_
 4	assumiu	assumir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	SpaceAfter=No
-5	,	,	PUNCT	_	_	6	punct	_	_
+5	,	,	PUNCT	_	_	4	punct	_	_
 6	cumulativamente	cumulativamente	ADV	_	_	4	advmod	_	SpaceAfter=No
-7	,	,	PUNCT	_	_	6	punct	_	_
+7	,	,	PUNCT	_	_	4	punct	_	_
 8	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	9	det	_	_
 9	embaixadas	embaixada	NOUN	_	Gender=Fem|Number=Plur	4	obj	_	_
 10	brasileiras	brasileiro	ADJ	_	Gender=Fem|Number=Plur	9	amod	_	_
 11	em	em	ADP	_	_	12	case	_	_
 12	Bruxelas	Bruxelas	PROPN	_	Gender=Fem|Number=Sing	9	nmod	_	SpaceAfter=No
 13	,	,	PUNCT	_	_	14	punct	_	_
-14	Bélgica	Bélgica	PROPN	_	Gender=Fem|Number=Sing	9	conj	_	SpaceAfter=No
+14	Bélgica	Bélgica	PROPN	_	Gender=Fem|Number=Sing	12	conj	_	SpaceAfter=No
 15	,	,	PUNCT	_	_	18	punct	_	_
 16	e	e	CCONJ	_	_	18	cc	_	_
 17	em	em	ADP	_	_	18	case	_	_
-18	Luxemburgo	Luxemburgo	PROPN	_	Gender=Masc|Number=Sing	9	conj	_	SpaceAfter=No
+18	Luxemburgo	Luxemburgo	PROPN	_	Gender=Masc|Number=Sing	12	conj	_	SpaceAfter=No
 19	,	,	PUNCT	_	_	20	punct	_	_
-20	ocupando	ocupar	VERB	_	VerbForm=Ger	9	advcl	_	_
+20	ocupando	ocupar	VERB	_	VerbForm=Ger	4	advcl	_	_
 21	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	22	det	_	_
 22	cargo	cargo	NOUN	_	Gender=Masc|Number=Sing	20	obj	_	_
 23	até	até	ADP	_	_	24	case	_	_
 24	1992	1992	NUM	_	NumType=Card	20	obl	_	SpaceAfter=No
-25	.	.	PUNCT	_	_	4	punct	_	SpacesAfter=\n
+25	.	.	PUNCT	_	_	4	punct	_	_
 
-# text = Assumiu então o cargo de cônsul-geral em Nova Iorque, onde permaneceu até 1995.
 # sent_id = 16
+# text = Assumiu então o cargo de cônsul-geral em Nova Iorque, onde permaneceu até 1995.
 1	Assumiu	assumir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2	então	então	ADV	_	_	1	advmod	_	_
 3	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	4	det	_	_
@@ -695,17 +698,17 @@
 5	de	de	ADP	_	_	6	case	_	_
 6	cônsul-geral	cônsul-geral	NOUN	_	Gender=Masc|Number=Sing	4	nmod	_	_
 7	em	em	ADP	_	_	8	case	_	_
-8	Nova	Nova	PROPN	_	Gender=Masc|Number=Sing	4	nmod	_	_
+8	Nova	Nova	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	4	nmod	_	_
 9	Iorque	Iorque	PROPN	_	Number=Sing	8	flat:name	_	SpaceAfter=No
 10	,	,	PUNCT	_	_	12	punct	_	_
 11	onde	onde	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	12	obl	_	_
-12	permaneceu	permanecer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	acl:relcl	_	_
+12	permaneceu	permanecer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	8	acl:relcl	_	_
 13	até	até	ADP	_	_	14	case	_	_
 14	1995	1995	NUM	_	NumType=Card	12	obl	_	SpaceAfter=No
-15	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
+15	.	.	PUNCT	_	_	1	punct	_	_
 
-# text = Em junho deste ano, tornou-se embaixador em La Paz, sucedendo a André Guimarães.
 # sent_id = 17
+# text = Em junho deste ano, tornou-se embaixador em La Paz, sucedendo a André Guimarães.
 1	Em	em	ADP	_	_	2	case	_	_
 2	junho	junho	NOUN	_	Gender=Masc|Number=Sing	7	obl	_	_
 3-4	deste	_	_	_	_	_	_	_	_
@@ -715,47 +718,47 @@
 6	,	,	PUNCT	_	_	2	punct	_	_
 7-8	tornou-se	_	_	_	_	_	_	_	_
 7	tornou	tornar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
-8	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	7	nsubj	_	_
+8	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	7	expl	_	_
 9	embaixador	embaixador	NOUN	_	Gender=Masc|Number=Sing	7	xcomp	_	_
 10	em	em	ADP	_	_	11	case	_	_
-11	La	La	PROPN	_	Gender=Masc|Number=Sing	9	nmod	_	_
+11	La	La	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	7	obl	_	_
 12	Paz	Paz	PROPN	_	Number=Sing	11	flat:name	_	SpaceAfter=No
 13	,	,	PUNCT	_	_	14	punct	_	_
 14	sucedendo	suceder	VERB	_	VerbForm=Ger	7	advcl	_	_
-15	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	16	det	_	_
-16	André	André	PROPN	_	Gender=Fem|Number=Sing	14	obj	_	_
+15	a	a	ADP	_	_	16	case	_	_
+16	André	André	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	14	obj	_	_
 17	Guimarães	Guimarães	PROPN	_	Number=Sing	16	flat:name	_	SpaceAfter=No
-18	.	.	PUNCT	_	_	7	punct	_	SpacesAfter=\n
+18	.	.	PUNCT	_	_	7	punct	_	_
 
-# text = Deixou a capital boliviana em agosto de 1998, tendo, em novembro seguinte, assumido a embaixada brasileira no Vaticano.
 # sent_id = 18
+# text = Deixou a capital boliviana em agosto de 1998, tendo, em novembro seguinte, assumido a embaixada brasileira no Vaticano.
 1	Deixou	deixar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	3	det	_	_
 3	capital	capital	NOUN	_	Gender=Fem|Number=Sing	1	obj	_	_
 4	boliviana	boliviano	ADJ	_	Gender=Fem|Number=Sing	3	amod	_	_
 5	em	em	ADP	_	_	6	case	_	_
-6	agosto	agosto	NOUN	_	Gender=Masc|Number=Sing	3	nmod	_	_
+6	agosto	agosto	NOUN	_	Gender=Masc|Number=Sing	1	obl	_	_
 7	de	de	ADP	_	_	8	case	_	_
 8	1998	1998	NUM	_	NumType=Card	6	nmod	_	SpaceAfter=No
-9	,	,	PUNCT	_	_	10	punct	_	_
-10	tendo	ter	VERB	_	VerbForm=Ger	1	advcl	_	SpaceAfter=No
-11	,	,	PUNCT	_	_	10	punct	_	_
+9	,	,	PUNCT	_	_	16	punct	_	_
+10	tendo	ter	AUX	_	VerbForm=Ger	16	aux	_	SpaceAfter=No
+11	,	,	PUNCT	_	_	13	punct	_	_
 12	em	em	ADP	_	_	13	case	_	_
-13	novembro	novembro	NOUN	_	Gender=Masc|Number=Sing	10	obl	_	_
+13	novembro	novembro	NOUN	_	Gender=Masc|Number=Sing	16	obl	_	_
 14	seguinte	seguinte	ADJ	_	Gender=Masc|Number=Sing	13	amod	_	SpaceAfter=No
-15	,	,	PUNCT	_	_	10	punct	_	_
-16	assumido	assumir	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	10	xcomp	_	_
+15	,	,	PUNCT	_	_	13	punct	_	_
+16	assumido	assumir	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	1	advcl	_	_
 17	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	18	det	_	_
 18	embaixada	embaixada	NOUN	_	Gender=Fem|Number=Sing	16	obj	_	_
 19	brasileira	brasileiro	ADJ	_	Gender=Fem|Number=Sing	18	amod	_	_
 20-21	no	_	_	_	_	_	_	_	_
 20	em	em	ADP	_	_	22	case	_	_
 21	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	22	det	_	_
-22	Vaticano	Vaticano	PROPN	_	Gender=Masc|Number=Sing	18	nmod	_	SpaceAfter=No
-23	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
+22	Vaticano	Vaticano	PROPN	_	Gender=Masc|Number=Sing	16	obl	_	SpaceAfter=No
+23	.	.	PUNCT	_	_	1	punct	_	_
 
-# text = Permaneceu como embaixador brasileiro no Vaticano até dezembro de 2000, sendo substituído por Agripino Maia Oto.
 # sent_id = 19
+# text = Permaneceu como embaixador brasileiro no Vaticano até dezembro de 2000, sendo substituído por Agripino Maia Oto.
 1	Permaneceu	permanecer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2	como	como	ADP	_	_	3	case	_	_
 3	embaixador	embaixador	NOUN	_	Gender=Masc|Number=Sing	1	xcomp	_	_
@@ -765,20 +768,20 @@
 6	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	7	det	_	_
 7	Vaticano	Vaticano	PROPN	_	Gender=Masc|Number=Sing	1	obl	_	_
 8	até	até	ADP	_	_	9	case	_	_
-9	dezembro	dezembro	NOUN	_	Gender=Masc|Number=Sing	7	nmod	_	_
+9	dezembro	dezembro	NOUN	_	Gender=Masc|Number=Sing	1	obl	_	_
 10	de	de	ADP	_	_	11	case	_	_
 11	2000	2000	NUM	_	NumType=Card	9	nmod	_	SpaceAfter=No
 12	,	,	PUNCT	_	_	14	punct	_	_
 13	sendo	ser	AUX	_	VerbForm=Ger	14	aux:pass	_	_
 14	substituído	substituir	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	1	advcl	_	_
 15	por	por	ADP	_	_	16	case	_	_
-16	Agripino	Agripino	PROPN	_	Gender=Masc|Number=Sing	14	obl:agent	_	_
+16	Agripino	Agripino	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	14	obl:agent	_	_
 17	Maia	Maia	PROPN	_	Number=Sing	16	flat:name	_	_
 18	Oto	Oto	PROPN	_	Number=Sing	16	flat:name	_	SpaceAfter=No
 19	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
 
-# text = Em 2001, assumiu o cargo de diretor-geral da Agência Brasileira de Cooperação, o qual deixou para suceder a embaixadora Vera Pedrosa Martins de Almeida no comando da embaixada do Brasil na Dinamarca, em dezembro de 2003.
 # sent_id = 20
+# text = Em 2001, assumiu o cargo de diretor-geral da Agência Brasileira de Cooperação, o qual deixou para suceder a embaixadora Vera Pedrosa Martins de Almeida no comando da embaixada do Brasil na Dinamarca, em dezembro de 2003.
 1	Em	em	ADP	_	_	2	case	_	_
 2	2001	2001	NUM	_	NumType=Card	4	obl	_	SpaceAfter=No
 3	,	,	PUNCT	_	_	2	punct	_	_
@@ -790,23 +793,23 @@
 9-10	da	_	_	_	_	_	_	_	_
 9	de	de	ADP	_	_	11	case	_	_
 10	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	11	det	_	_
-11	Agência	Agência	PROPN	_	Gender=Fem|Number=Sing	8	nmod	_	_
+11	Agência	Agência	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	8	nmod	_	_
 12	Brasileira	Brasileira	PROPN	_	Number=Sing	11	flat:name	_	_
 13	de	de	ADP	_	_	14	case	_	_
 14	Cooperação	Cooperação	PROPN	_	Number=Sing	11	nmod	_	SpaceAfter=No
 15	,	,	PUNCT	_	_	18	punct	_	_
 16	o	o	DET	_	Gender=Masc|Number=Sing|PronType=Art	17	det	_	_
 17	qual	qual	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	18	nsubj	_	_
-18	deixou	deixar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	acl:relcl	_	_
+18	deixou	deixar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	11	acl:relcl	_	_
 19	para	para	SCONJ	_	_	20	mark	_	_
-20	suceder	suceder	VERB	_	VerbForm=Inf	18	xcomp	_	_
+20	suceder	suceder	VERB	_	VerbForm=Inf	18	advcl	_	_
 21	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	22	det	_	_
 22	embaixadora	embaixadora	NOUN	_	Gender=Fem|Number=Sing	20	obj	_	_
-23	Vera	Vera	PROPN	_	Gender=Fem|Number=Sing	22	appos	_	_
+23	Vera	Vera	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	22	appos	_	_
 24	Pedrosa	Pedrosa	PROPN	_	Number=Sing	23	flat:name	_	_
 25	Martins	Martins	PROPN	_	Number=Sing	23	flat:name	_	_
 26	de	de	ADP	_	_	27	case	_	_
-27	Almeida	Almeida	PROPN	_	Number=Sing	22	nmod	_	_
+27	Almeida	Almeida	PROPN	_	Number=Sing	23	nmod	_	_
 28-29	no	_	_	_	_	_	_	_	_
 28	em	em	ADP	_	_	30	case	_	_
 29	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	30	det	_	_
@@ -823,23 +826,23 @@
 37	em	em	ADP	_	_	39	case	_	_
 38	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	39	det	_	_
 39	Dinamarca	Dinamarca	PROPN	_	Gender=Fem|Number=Sing	33	nmod	_	SpaceAfter=No
-40	,	,	PUNCT	_	_	42	punct	_	_
+40	,	,	PUNCT	_	_	20	punct	_	_
 41	em	em	ADP	_	_	42	case	_	_
 42	dezembro	dezembro	NOUN	_	Gender=Masc|Number=Sing	20	obl	_	_
 43	de	de	ADP	_	_	44	case	_	_
 44	2003	2003	NUM	_	NumType=Card	42	nmod	_	SpaceAfter=No
-45	.	.	PUNCT	_	_	4	punct	_	SpacesAfter=\n
+45	.	.	PUNCT	_	_	4	punct	_	_
 
-# text = Em junho de 2004, o Senado Federal aprovou o exercício cumulativo dos cargos de embaixador da Dinamarca e de embaixador junto à Lituânia.
 # sent_id = 21
+# text = Em junho de 2004, o Senado Federal aprovou o exercício cumulativo dos cargos de embaixador da Dinamarca e de embaixador junto à Lituânia.
 1	Em	em	ADP	_	_	2	case	_	_
 2	junho	junho	NOUN	_	Gender=Masc|Number=Sing	9	obl	_	_
 3	de	de	ADP	_	_	4	case	_	_
 4	2004	2004	NUM	_	NumType=Card	2	nmod	_	SpaceAfter=No
 5	,	,	PUNCT	_	_	2	punct	_	_
 6	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	7	det	_	_
-7	Senado	senado	NOUN	_	Gender=Masc|Number=Sing	9	nsubj	_	_
-8	Federal	federal	PROPN	_	Gender=Masc|Number=Sing	7	appos	_	_
+7	Senado	Senado	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	9	nsubj	_	_
+8	Federal	Federal	PROPN	_	Number=Sing	7	flat:name	_	_
 9	aprovou	aprovar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 10	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	_	_
 11	exercício	exercício	NOUN	_	Gender=Masc|Number=Sing	9	obj	_	_
@@ -856,30 +859,30 @@
 20	Dinamarca	Dinamarca	PROPN	_	Gender=Fem|Number=Sing	17	nmod	_	_
 21	e	e	CCONJ	_	_	23	cc	_	_
 22	de	de	ADP	_	_	23	case	_	_
-23	embaixador	embaixador	NOUN	_	Gender=Masc|Number=Sing	11	conj	_	_
+23	embaixador	embaixador	NOUN	_	Gender=Masc|Number=Sing	17	conj	_	_
 24	junto	junto	ADV	_	_	23	advmod	_	_
 25-26	à	_	_	_	_	_	_	_	_
 25	a	a	ADP	_	_	27	case	_	_
 26	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	27	det	_	_
 27	Lituânia	Lituânia	PROPN	_	Gender=Fem|Number=Sing	24	obl	_	SpaceAfter=No
-28	.	.	PUNCT	_	_	9	punct	_	SpacesAfter=\n
+28	.	.	PUNCT	_	_	9	punct	_	_
 
-# text = Foi substituído por Georges Lamazière, em julho de 2006.
 # sent_id = 22
+# text = Foi substituído por Georges Lamazière, em julho de 2006.
 1	Foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	aux:pass	_	_
 2	substituído	substituir	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
 3	por	por	ADP	_	_	4	case	_	_
-4	Georges	Georges	PROPN	_	Gender=Masc|Number=Sing	2	obl:agent	_	_
+4	Georges	Georges	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	2	obl:agent	_	_
 5	Lamazière	Lamazière	PROPN	_	Number=Sing	4	flat:name	_	SpaceAfter=No
 6	,	,	PUNCT	_	_	2	punct	_	_
 7	em	em	ADP	_	_	8	case	_	_
 8	julho	julho	NOUN	_	Gender=Masc|Number=Sing	2	obl	_	_
 9	de	de	ADP	_	_	10	case	_	_
 10	2006	2006	NUM	_	NumType=Card	8	nmod	_	SpaceAfter=No
-11	.	.	PUNCT	_	_	2	punct	_	SpacesAfter=\n
+11	.	.	PUNCT	_	_	2	punct	_	_
 
-# text = Em agosto do mesmo ano, assumiu a embaixada da Espanha.
 # sent_id = 23
+# text = Em agosto do mesmo ano, assumiu a embaixada da Espanha.
 1	Em	em	ADP	_	_	2	case	_	_
 2	agosto	agosto	NOUN	_	Gender=Masc|Number=Sing	8	obl	_	_
 3-4	do	_	_	_	_	_	_	_	_
@@ -893,12 +896,12 @@
 10	embaixada	embaixada	NOUN	_	Gender=Fem|Number=Sing	8	obj	_	_
 11-12	da	_	_	_	_	_	_	_	_
 11	de	de	ADP	_	_	13	case	_	_
-12	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	13	det	_	_
+12	a	o	DET	_	Definite=Def|PronType=Art	13	det	_	_
 13	Espanha	Espanha	PROPN	_	Gender=Fem|Number=Sing	10	nmod	_	SpaceAfter=No
 14	.	.	PUNCT	_	_	8	punct	_	SpacesAfter=\n
 
-# text = Foi ainda chefe do Departamento de Cooperação Científica, Técnica e Tecnológica (DCT) do Ministério das Relações Exteriores.
 # sent_id = 24
+# text = Foi ainda chefe do Departamento de Cooperação Científica, Técnica e Tecnológica (DCT) do Ministério das Relações Exteriores.
 1	Foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	cop	_	_
 2	ainda	ainda	ADV	_	_	3	advmod	_	_
 3	chefe	chefe	NOUN	_	Gender=Masc|Number=Sing	0	root	_	_
@@ -907,12 +910,12 @@
 5	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	6	det	_	_
 6	Departamento	Departamento	PROPN	_	Gender=Masc|Number=Sing	3	nmod	_	_
 7	de	de	ADP	_	_	8	case	_	_
-8	Cooperação	Cooperação	PROPN	_	Number=Sing	6	nmod	_	_
-9	Científica	científica	PROPN	_	Number=Sing	8	flat:name	_	SpaceAfter=No
-10	,	,	PUNCT	_	_	11	punct	_	_
-11	Técnica	técnica	PROPN	_	Gender=Fem|Number=Sing	6	conj	_	_
-12	e	e	CCONJ	_	_	13	cc	_	_
-13	Tecnológica	Tecnológica	PROPN	_	Number=Sing	6	conj	_	_
+8	Cooperação	Cooperação	PROPN	_	ExtPos=PROPN|Number=Sing	6	nmod	_	_
+9	Científica	Científica	PROPN	_	Number=Sing	8	flat:name	_	SpaceAfter=No
+10	,	,	PUNCT	_	_	8	punct	_	_
+11	Técnica	Técnica	PROPN	_	Number=Sing	8	flat:name	_	_
+12	e	e	CCONJ	_	_	8	flat:name	_	_
+13	Tecnológica	Tecnológica	PROPN	_	Number=Sing	8	flat:name	_	_
 14	(	(	PUNCT	_	_	15	punct	_	SpaceAfter=No
 15	DCT	DCT	PROPN	_	Gender=Masc|Number=Sing	6	appos	_	SpaceAfter=No
 16	)	)	PUNCT	_	_	15	punct	_	_
@@ -923,17 +926,17 @@
 20-21	das	_	_	_	_	_	_	_	_
 20	de	de	ADP	_	_	22	case	_	_
 21	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	22	det	_	_
-22	Relações	Relações	PROPN	_	Gender=Fem|Number=Plur	19	nmod	_	_
+22	Relações	Relações	PROPN	_	ExtPos=PROPN|Number=Sing	19	nmod	_	_
 23	Exteriores	Exteriores	PROPN	_	Number=Sing	22	flat:name	_	SpaceAfter=No
 24	.	.	PUNCT	_	_	3	punct	_	SpacesAfter=\n
 
-# text = Casou-se com Sandra Cattan Naslausky, com quem teve três filhos.
 # sent_id = 25
+# text = Casou-se com Sandra Cattan Naslausky, com quem teve três filhos.
 1-2	Casou-se	_	_	_	_	_	_	_	_
-1	Casou	Casar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+1	Casou	casar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	1	expl	_	_
 3	com	com	ADP	_	_	4	case	_	_
-4	Sandra	Sandra	PROPN	_	Gender=Fem|Number=Sing	1	obl	_	_
+4	Sandra	Sandra	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	1	obj	_	_
 5	Cattan	Cattan	PROPN	_	Number=Sing	4	flat:name	_	_
 6	Naslausky	Naslausky	PROPN	_	Number=Sing	4	flat:name	_	SpaceAfter=No
 7	,	,	PUNCT	_	_	10	punct	_	_
@@ -941,6 +944,6 @@
 9	quem	quem	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	10	obl	_	_
 10	teve	ter	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	acl:relcl	_	_
 11	três	três	NUM	_	NumType=Card	12	nummod	_	_
-12	filhos	filho	NOUN	_	Gender=Masc|Number=Plur	10	nsubj	_	SpaceAfter=No
+12	filhos	filho	NOUN	_	Gender=Masc|Number=Plur	10	obj	_	SpaceAfter=No
 13	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
 

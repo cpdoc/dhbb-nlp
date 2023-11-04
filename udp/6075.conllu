@@ -1,12 +1,15 @@
-# text = Partido político mato-grossense fundado provavelmente em 1932 para concorrer às eleições para a Assembléia Nacional Constituinte, de 1933.
-# sent_id = 1
-# newpar
+# generator = UDPipe 2, https://lindat.mff.cuni.cz/services/udpipe
+# udpipe_model = portuguese-bosque-ud-2.12-230717
+# udpipe_model_licence = CC BY-NC-SA
 # newdoc
-1	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	0	root	_	_
-2	político	político	PROPN	_	Number=Sing	1	flat:name	_	_
+# newpar
+# sent_id = 1
+# text = Partido político mato-grossense fundado provavelmente em 1932 para concorrer às eleições para a Assembléia Nacional Constituinte, de 1933.
+1	Partido	partido	NOUN	_	Gender=Masc|Number=Sing	0	root	_	_
+2	político	político	ADJ	_	Gender=Masc|Number=Sing	1	amod	_	_
 3	mato-grossense	mato-grossense	ADJ	_	Gender=Masc|Number=Sing	1	amod	_	_
-4	fundado	fundar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	1	acl	_	_
-5	provavelmente	provavelmente	ADV	_	_	7	advmod	_	_
+4	fundado	fundar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	1	acl	_	_
+5	provavelmente	provavelmente	ADV	_	_	4	advmod	_	_
 6	em	em	ADP	_	_	7	case	_	_
 7	1932	1932	NUM	_	NumType=Card	4	obl	_	_
 8	para	para	SCONJ	_	_	9	mark	_	_
@@ -14,22 +17,22 @@
 10-11	às	_	_	_	_	_	_	_	_
 10	a	a	ADP	_	_	12	case	_	_
 11	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	12	det	_	_
-12	eleições	eleição	NOUN	_	Gender=Fem|Number=Plur	9	obl	_	_
+12	eleições	eleição	NOUN	_	Gender=Fem|Number=Plur	9	obj	_	_
 13	para	para	ADP	_	_	15	case	_	_
 14	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	15	det	_	_
-15	Assembléia	Assembléia	PROPN	_	Gender=Fem|Number=Sing	9	obl	_	_
+15	Assembléia	Assembléia	PROPN	_	Gender=Fem|Number=Sing	12	nmod	_	_
 16	Nacional	Nacional	PROPN	_	Number=Sing	15	flat:name	_	_
 17	Constituinte	Constituinte	PROPN	_	Number=Sing	15	flat:name	_	SpaceAfter=No
 18	,	,	PUNCT	_	_	20	punct	_	_
 19	de	de	ADP	_	_	20	case	_	_
 20	1933	1933	NUM	_	NumType=Card	15	nmod	_	SpaceAfter=No
-21	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
+21	.	.	PUNCT	_	_	1	punct	_	_
 
-# text = Foi extinto possivelmente em 1933, passando a maioria de seus membros a integrar o Partido Evolucionista de Mato Grosso.
 # sent_id = 2
-1	Foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	cop	_	_
-2	extinto	extinguir	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	0	root	_	_
-3	possivelmente	possivelmente	ADV	_	_	5	advmod	_	_
+# text = Foi extinto possivelmente em 1933, passando a maioria de seus membros a integrar o Partido Evolucionista de Mato Grosso.
+1	Foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	aux:pass	_	_
+2	extinto	extinguir	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
+3	possivelmente	possivelmente	ADV	_	_	2	advmod	_	_
 4	em	em	ADP	_	_	5	case	_	_
 5	1933	1933	NUM	_	NumType=Card	2	obl	_	SpaceAfter=No
 6	,	,	PUNCT	_	_	7	punct	_	_
@@ -42,71 +45,71 @@
 13	a	a	SCONJ	_	_	14	mark	_	_
 14	integrar	integrar	VERB	_	VerbForm=Inf	7	xcomp	_	_
 15	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	16	det	_	_
-16	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	14	obj	_	_
+16	Partido	Partido	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	14	obj	_	_
 17	Evolucionista	Evolucionista	PROPN	_	Number=Sing	16	flat:name	_	_
 18	de	de	ADP	_	_	19	case	_	_
-19	Mato	Mato	PROPN	_	Gender=Masc|Number=Sing	16	nmod	_	_
+19	Mato	Mato	PROPN	_	ExtPos=PROPN|Number=Sing	16	nmod	_	_
 20	Grosso	Grosso	PROPN	_	Number=Sing	19	flat:name	_	SpaceAfter=No
 21	.	.	PUNCT	_	_	2	punct	_	SpacesAfter=\n
 
-# text = Seus candidatos à Assembléia eram Eduardo Olímpio Machado, Carlos Vandoni de Barros e Alberto Fernandes Trigo Loureiro.
 # sent_id = 3
+# text = Seus candidatos à Assembléia eram Eduardo Olímpio Machado, Carlos Vandoni de Barros e Alberto Fernandes Trigo Loureiro.
 1	Seus	seu	DET	_	Gender=Masc|Number=Plur|PronType=Prs	2	det	_	_
-2	candidatos	candidato	NOUN	_	Gender=Masc|Number=Plur	6	obl	_	_
+2	candidatos	candidato	NOUN	_	Gender=Masc|Number=Plur	7	nsubj	_	_
 3-4	à	_	_	_	_	_	_	_	_
 3	a	a	ADP	_	_	5	case	_	_
 4	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	5	det	_	_
-5	Assembléia	Assembléia	PROPN	_	Gender=Fem|Number=Sing	2	nmod	_	_
-6	eram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	0	root	_	_
-7	Eduardo	Eduardo	PROPN	_	Gender=Masc|Number=Sing	6	nsubj	_	_
+5	Assembléia	assembléia	NOUN	_	Gender=Fem|Number=Sing	2	nmod	_	_
+6	eram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	7	cop	_	_
+7	Eduardo	Eduardo	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	0	root	_	_
 8	Olímpio	Olímpio	PROPN	_	Number=Sing	7	flat:name	_	_
 9	Machado	Machado	PROPN	_	Number=Sing	7	flat:name	_	SpaceAfter=No
 10	,	,	PUNCT	_	_	11	punct	_	_
-11	Carlos	Carlos	PROPN	_	Gender=Masc|Number=Sing	7	conj	_	_
+11	Carlos	Carlos	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	7	conj	_	_
 12	Vandoni	Vandoni	PROPN	_	Number=Sing	11	flat:name	_	_
 13	de	de	ADP	_	_	14	case	_	_
 14	Barros	Barros	PROPN	_	Number=Sing	11	nmod	_	_
 15	e	e	CCONJ	_	_	16	cc	_	_
-16	Alberto	Alberto	PROPN	_	Gender=Masc|Number=Sing	7	conj	_	_
+16	Alberto	Alberto	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	7	conj	_	_
 17	Fernandes	Fernandes	PROPN	_	Number=Sing	16	flat:name	_	_
-18	Trigo	trigo	PROPN	_	Number=Sing	16	flat:name	_	_
+18	Trigo	Trigo	PROPN	_	Number=Sing	16	flat:name	_	_
 19	Loureiro	Loureiro	PROPN	_	Number=Sing	16	flat:name	_	SpaceAfter=No
-20	.	.	PUNCT	_	_	6	punct	_	SpacesAfter=\n
+20	.	.	PUNCT	_	_	7	punct	_	_
 
-# text = Após haver sido registrada, entretanto, esta chapa foi cassada pelo Tribunal Superior Eleitoral.
 # sent_id = 4
+# text = Após haver sido registrada, entretanto, esta chapa foi cassada pelo Tribunal Superior Eleitoral.
 1	Após	após	SCONJ	_	_	4	mark	_	_
 2	haver	haver	AUX	_	VerbForm=Inf	4	aux	_	_
 3	sido	ser	AUX	_	VerbForm=Part	4	aux:pass	_	_
-4	registrada	registrar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	SpaceAfter=No
-5	,	,	PUNCT	_	_	6	punct	_	_
+4	registrada	registrar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	11	advcl	_	SpaceAfter=No
+5	,	,	PUNCT	_	_	4	punct	_	_
 6	entretanto	entretanto	CCONJ	_	_	11	cc	_	SpaceAfter=No
 7	,	,	PUNCT	_	_	6	punct	_	_
 8	esta	este	DET	_	Gender=Fem|Number=Sing|PronType=Dem	9	det	_	_
 9	chapa	chapa	NOUN	_	Gender=Fem|Number=Sing	11	nsubj:pass	_	_
 10	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	11	aux:pass	_	_
-11	cassada	cassar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	4	conj	_	_
+11	cassada	cassar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
 12-13	pelo	_	_	_	_	_	_	_	_
 12	por	por	ADP	_	_	14	case	_	_
 13	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	14	det	_	_
-14	Tribunal	Tribunal	PROPN	_	Gender=Masc|Number=Sing	11	obl:agent	_	_
+14	Tribunal	Tribunal	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	11	obl:agent	_	_
 15	Superior	Superior	PROPN	_	Number=Sing	14	flat:name	_	_
 16	Eleitoral	Eleitoral	PROPN	_	Number=Sing	14	flat:name	_	SpaceAfter=No
-17	.	.	PUNCT	_	_	4	punct	_	SpacesAfter=\n
+17	.	.	PUNCT	_	_	11	punct	_	_
 
-# text = Desse modo, o partido não pôde eleger nenhum representante.
 # sent_id = 5
+# text = Desse modo, o partido não pôde eleger nenhum representante.
 1-2	Desse	_	_	_	_	_	_	_	_
 1	De	de	ADP	_	_	3	case	_	_
 2	esse	esse	DET	_	Gender=Masc|Number=Sing|PronType=Dem	3	det	_	_
-3	modo	modo	NOUN	_	Gender=Masc|Number=Sing	8	obl	_	SpaceAfter=No
+3	modo	modo	NOUN	_	Gender=Masc|Number=Sing	9	obl	_	SpaceAfter=No
 4	,	,	PUNCT	_	_	3	punct	_	_
 5	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	6	det	_	_
 6	partido	partido	NOUN	_	Gender=Masc|Number=Sing	8	nsubj	_	_
-7	não	não	ADV	_	Polarity=Neg	8	advmod	_	_
+7	não	não	ADV	_	Polarity=Neg	9	advmod	_	_
 8	pôde	poder	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 9	eleger	eleger	VERB	_	VerbForm=Inf	8	xcomp	_	_
 10	nenhum	nenhum	DET	_	Gender=Masc|Number=Sing|PronType=Neg	11	det	_	_
 11	representante	representante	NOUN	_	Gender=Masc|Number=Sing	9	obj	_	SpaceAfter=No
-12	.	.	PUNCT	_	_	8	punct	_	SpacesAfter=\n
+12	.	.	PUNCT	_	_	9	punct	_	SpacesAfter=\n
 

@@ -1,15 +1,18 @@
-# text = «João dos Reis Ferreira Machado» nasceu no Rio de Janeiro, então Distrito Federal, no dia 6 de fevereiro de 1898, filho de Cesário Pereira Machado, médico, intendente municipal e secretário da Câmara de Vereadores, e de Cristina Lardi Ferreira Machado.
-# sent_id = 1
-# newpar
+# generator = UDPipe 2, https://lindat.mff.cuni.cz/services/udpipe
+# udpipe_model = portuguese-bosque-ud-2.12-230717
+# udpipe_model_licence = CC BY-NC-SA
 # newdoc
+# newpar
+# sent_id = 1
+# text = «João dos Reis Ferreira Machado» nasceu no Rio de Janeiro, então Distrito Federal, no dia 6 de fevereiro de 1898, filho de Cesário Pereira Machado, médico, intendente municipal e secretário da Câmara de Vereadores, e de Cristina Lardi Ferreira Machado.
 1	«	«	PUNCT	_	_	2	punct	_	SpaceAfter=No
 2	João	João	PROPN	_	Gender=Masc|Number=Sing	9	nsubj	_	_
 3-4	dos	_	_	_	_	_	_	_	_
 3	de	de	ADP	_	_	5	case	_	_
 4	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	5	det	_	_
-5	Reis	Reis	PROPN	_	Number=Sing	2	flat:name	_	_
-6	Ferreira	Ferreira	PROPN	_	Number=Sing	2	flat:name	_	_
-7	Machado	Machado	PROPN	_	Number=Sing	2	flat:name	_	SpaceAfter=No
+5	Reis	Reis	PROPN	_	ExtPos=PROPN|Number=Sing	2	nmod	_	_
+6	Ferreira	Ferreira	PROPN	_	Number=Sing	5	flat:name	_	_
+7	Machado	Machado	PROPN	_	Number=Sing	5	flat:name	_	SpaceAfter=No
 8	»	»	PUNCT	_	_	2	punct	_	_
 9	nasceu	nascer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 10-11	no	_	_	_	_	_	_	_	_
@@ -17,10 +20,10 @@
 11	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	12	det	_	_
 12	Rio	Rio	PROPN	_	Gender=Masc|Number=Sing	9	obl	_	_
 13	de	de	ADP	_	_	14	case	_	_
-14	Janeiro	Janeiro	PROPN	_	Number=Sing	12	flat:name	_	SpaceAfter=No
+14	Janeiro	Janeiro	PROPN	_	Number=Sing	12	nmod	_	SpaceAfter=No
 15	,	,	PUNCT	_	_	17	punct	_	_
-16	então	então	ADV	_	_	15	advmod	_	_
-17	Distrito	Distrito	PROPN	_	Gender=Masc|Number=Sing	12	acl	_	_
+16	então	então	ADV	_	_	17	advmod	_	_
+17	Distrito	Distrito	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	12	appos	_	_
 18	Federal	Federal	PROPN	_	Number=Sing	17	flat:name	_	SpaceAfter=No
 19	,	,	PUNCT	_	_	17	punct	_	_
 20-21	no	_	_	_	_	_	_	_	_
@@ -33,35 +36,35 @@
 26	de	de	ADP	_	_	27	case	_	_
 27	1898	1898	NUM	_	NumType=Card	25	nmod	_	SpaceAfter=No
 28	,	,	PUNCT	_	_	29	punct	_	_
-29	filho	filho	NOUN	_	Gender=Masc|Number=Sing	2	appos	_	_
+29	filho	filho	NOUN	_	Gender=Masc|Number=Sing	9	appos	_	_
 30	de	de	ADP	_	_	31	case	_	_
-31	Cesário	Cesário	PROPN	_	Gender=Masc|Number=Sing	29	nmod	_	_
+31	Cesário	Cesário	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	29	nmod	_	_
 32	Pereira	Pereira	PROPN	_	Number=Sing	31	flat:name	_	_
 33	Machado	Machado	PROPN	_	Number=Sing	31	flat:name	_	SpaceAfter=No
 34	,	,	PUNCT	_	_	35	punct	_	_
-35	médico	médico	NOUN	_	Gender=Masc|Number=Sing	31	conj	_	SpaceAfter=No
+35	médico	médico	NOUN	_	Gender=Masc|Number=Sing	31	appos	_	SpaceAfter=No
 36	,	,	PUNCT	_	_	37	punct	_	_
-37	intendente	intendente	NOUN	_	Gender=Masc|Number=Sing	31	conj	_	_
+37	intendente	intendente	NOUN	_	Gender=Masc|Number=Sing	35	conj	_	_
 38	municipal	municipal	ADJ	_	Gender=Masc|Number=Sing	37	amod	_	_
 39	e	e	CCONJ	_	_	40	cc	_	_
-40	secretário	secretário	NOUN	_	Gender=Masc|Number=Sing	31	conj	_	_
+40	secretário	secretário	NOUN	_	Gender=Masc|Number=Sing	35	conj	_	_
 41-42	da	_	_	_	_	_	_	_	_
 41	de	de	ADP	_	_	43	case	_	_
 42	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	43	det	_	_
 43	Câmara	câmara	NOUN	_	Gender=Fem|Number=Sing	40	nmod	_	_
 44	de	de	ADP	_	_	45	case	_	_
-45	Vereadores	vereador	NOUN	_	Gender=Masc|Number=Plur	43	nmod	_	SpaceAfter=No
+45	Vereadores	vereador	PROPN	_	Number=Sing	43	nmod	_	SpaceAfter=No
 46	,	,	PUNCT	_	_	49	punct	_	_
 47	e	e	CCONJ	_	_	49	cc	_	_
 48	de	de	ADP	_	_	49	case	_	_
-49	Cristina	Cristina	PROPN	_	Gender=Fem|Number=Sing	31	conj	_	_
+49	Cristina	Cristina	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	31	conj	_	_
 50	Lardi	Lardi	PROPN	_	Number=Sing	49	flat:name	_	_
 51	Ferreira	Ferreira	PROPN	_	Number=Sing	49	flat:name	_	_
 52	Machado	Machado	PROPN	_	Number=Sing	49	flat:name	_	SpaceAfter=No
 53	.	.	PUNCT	_	_	9	punct	_	SpacesAfter=\n
 
-# text = Formou-se em medicina em 1924, no Rio de Janeiro.
 # sent_id = 2
+# text = Formou-se em medicina em 1924, no Rio de Janeiro.
 1-2	Formou-se	_	_	_	_	_	_	_	_
 1	Formou	formar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	1	expl	_	_
@@ -76,10 +79,10 @@
 10	Rio	Rio	PROPN	_	Gender=Masc|Number=Sing	1	obl	_	_
 11	de	de	ADP	_	_	12	case	_	_
 12	Janeiro	Janeiro	PROPN	_	Number=Sing	10	nmod	_	SpaceAfter=No
-13	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
+13	.	.	PUNCT	_	_	1	punct	_	_
 
-# text = Em 1933, filiou-se ao Partido Autonomista do Distrito Federal.
 # sent_id = 3
+# text = Em 1933, filiou-se ao Partido Autonomista do Distrito Federal.
 1	Em	em	ADP	_	_	2	case	_	_
 2	1933	1933	NUM	_	NumType=Card	4	obl	_	SpaceAfter=No
 3	,	,	PUNCT	_	_	2	punct	_	_
@@ -89,17 +92,17 @@
 6-7	ao	_	_	_	_	_	_	_	_
 6	a	a	ADP	_	_	8	case	_	_
 7	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	8	det	_	_
-8	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	4	obj	_	_
+8	Partido	Partido	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	4	obj	_	_
 9	Autonomista	Autonomista	PROPN	_	Number=Sing	8	flat:name	_	_
 10-11	do	_	_	_	_	_	_	_	_
 10	de	de	ADP	_	_	12	case	_	_
 11	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	12	det	_	_
-12	Distrito	Distrito	PROPN	_	Gender=Masc|Number=Sing	8	nmod	_	_
+12	Distrito	Distrito	PROPN	_	ExtPos=PROPN|Number=Sing	8	nmod	_	_
 13	Federal	Federal	PROPN	_	Number=Sing	12	flat:name	_	SpaceAfter=No
-14	.	.	PUNCT	_	_	4	punct	_	SpacesAfter=\n
+14	.	.	PUNCT	_	_	4	punct	_	_
 
-# text = No pleito de janeiro de 1947 elegeu-se vereador no Distrito Federal, pela legenda do Partido Trabalhista Brasileiro (PTB).
 # sent_id = 4
+# text = No pleito de janeiro de 1947 elegeu-se vereador no Distrito Federal, pela legenda do Partido Trabalhista Brasileiro (PTB).
 1-2	No	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	3	case	_	_
 2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
@@ -111,31 +114,31 @@
 8-9	elegeu-se	_	_	_	_	_	_	_	_
 8	elegeu	eleger	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 9	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	8	expl	_	_
-10	vereador	vereador	NOUN	_	Gender=Masc|Number=Sing	8	nsubj	_	_
+10	vereador	vereador	NOUN	_	Gender=Masc|Number=Sing	8	xcomp	_	_
 11-12	no	_	_	_	_	_	_	_	_
 11	em	em	ADP	_	_	13	case	_	_
 12	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	13	det	_	_
-13	Distrito	Distrito	PROPN	_	Gender=Masc|Number=Sing	10	nmod	_	_
+13	Distrito	Distrito	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	8	obl	_	_
 14	Federal	Federal	PROPN	_	Number=Sing	13	flat:name	_	SpaceAfter=No
-15	,	,	PUNCT	_	_	18	punct	_	_
+15	,	,	PUNCT	_	_	8	punct	_	_
 16-17	pela	_	_	_	_	_	_	_	_
 16	por	por	ADP	_	_	18	case	_	_
 17	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	18	det	_	_
-18	legenda	legenda	NOUN	_	Gender=Fem|Number=Sing	13	nmod	_	_
+18	legenda	legenda	NOUN	_	Gender=Fem|Number=Sing	8	obl	_	_
 19-20	do	_	_	_	_	_	_	_	_
 19	de	de	ADP	_	_	21	case	_	_
 20	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	21	det	_	_
-21	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	18	nmod	_	_
-22	Trabalhista	trabalhista	PROPN	_	Number=Sing	21	flat:name	_	_
-23	Brasileiro	brasileiro	PROPN	_	Number=Sing	21	flat:name	_	_
+21	Partido	Partido	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	18	nmod	_	_
+22	Trabalhista	Trabalhista	PROPN	_	Number=Sing	21	flat:name	_	_
+23	Brasileiro	Brasileiro	PROPN	_	Number=Sing	21	flat:name	_	_
 24	(	(	PUNCT	_	_	25	punct	_	SpaceAfter=No
 25	PTB	PTB	PROPN	_	Gender=Masc|Number=Sing	21	appos	_	SpaceAfter=No
 26	)	)	PUNCT	_	_	25	punct	_	SpaceAfter=No
-27	.	.	PUNCT	_	_	8	punct	_	SpacesAfter=\n
+27	.	.	PUNCT	_	_	8	punct	_	_
 
-# text = Reeleito em outubro de 1950, no ano seguinte, assumiu a Secretaria da Saúde do Distrito Federal, permanecendo no cargo até 1954, quando foi eleito deputado federal pelo Distrito Federal, na legenda do PTB, no pleito de outubro deste ano.
 # sent_id = 5
-1	Reeleito	reeleger	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	12	acl	_	_
+# text = Reeleito em outubro de 1950, no ano seguinte, assumiu a Secretaria da Saúde do Distrito Federal, permanecendo no cargo até 1954, quando foi eleito deputado federal pelo Distrito Federal, na legenda do PTB, no pleito de outubro deste ano.
+1	Reeleito	reeleger	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	12	advcl	_	_
 2	em	em	ADP	_	_	3	case	_	_
 3	outubro	outubro	NOUN	_	Gender=Masc|Number=Sing	1	obl	_	_
 4	de	de	ADP	_	_	5	case	_	_
@@ -144,20 +147,20 @@
 7-8	no	_	_	_	_	_	_	_	_
 7	em	em	ADP	_	_	9	case	_	_
 8	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	9	det	_	_
-9	ano	ano	NOUN	_	Gender=Masc|Number=Sing	1	obl	_	_
+9	ano	ano	NOUN	_	Gender=Masc|Number=Sing	12	obl	_	_
 10	seguinte	seguinte	ADJ	_	Gender=Masc|Number=Sing	9	amod	_	SpaceAfter=No
-11	,	,	PUNCT	_	_	1	punct	_	_
+11	,	,	PUNCT	_	_	9	punct	_	_
 12	assumiu	assumir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 13	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	14	det	_	_
 14	Secretaria	Secretaria	PROPN	_	Gender=Fem|Number=Sing	12	obj	_	_
 15-16	da	_	_	_	_	_	_	_	_
 15	de	de	ADP	_	_	17	case	_	_
 16	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	17	det	_	_
-17	Saúde	Saúde	PROPN	_	Gender=Fem|Number=Sing	14	nmod	_	_
+17	Saúde	Saúde	PROPN	_	Number=Sing	14	nmod	_	_
 18-19	do	_	_	_	_	_	_	_	_
 18	de	de	ADP	_	_	20	case	_	_
 19	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	20	det	_	_
-20	Distrito	Distrito	PROPN	_	Gender=Masc|Number=Sing	17	nmod	_	_
+20	Distrito	Distrito	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	14	nmod	_	_
 21	Federal	Federal	PROPN	_	Number=Sing	20	flat:name	_	SpaceAfter=No
 22	,	,	PUNCT	_	_	23	punct	_	_
 23	permanecendo	permanecer	VERB	_	VerbForm=Ger	12	advcl	_	_
@@ -168,26 +171,26 @@
 27	até	até	ADP	_	_	28	case	_	_
 28	1954	1954	NUM	_	NumType=Card	23	obl	_	SpaceAfter=No
 29	,	,	PUNCT	_	_	23	punct	_	_
-30	quando	quando	ADV	_	_	32	mark	_	_
+30	quando	quando	ADV	_	_	32	advmod	_	_
 31	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	32	aux:pass	_	_
-32	eleito	eleger	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	12	advcl	_	_
+32	eleito	eleger	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	23	advcl	_	_
 33	deputado	deputado	NOUN	_	Gender=Masc|Number=Sing	32	nsubj:pass	_	_
 34	federal	federal	ADJ	_	Gender=Masc|Number=Sing	33	amod	_	_
 35-36	pelo	_	_	_	_	_	_	_	_
 35	por	por	ADP	_	_	37	case	_	_
 36	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	37	det	_	_
-37	Distrito	Distrito	PROPN	_	Gender=Masc|Number=Sing	32	obl:agent	_	_
+37	Distrito	Distrito	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	32	obl:agent	_	_
 38	Federal	Federal	PROPN	_	Number=Sing	37	flat:name	_	SpaceAfter=No
-39	,	,	PUNCT	_	_	42	punct	_	_
+39	,	,	PUNCT	_	_	32	punct	_	_
 40-41	na	_	_	_	_	_	_	_	_
 40	em	em	ADP	_	_	42	case	_	_
 41	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	42	det	_	_
-42	legenda	legenda	NOUN	_	Gender=Fem|Number=Sing	37	nmod	_	_
+42	legenda	legenda	NOUN	_	Gender=Fem|Number=Sing	32	obl	_	_
 43-44	do	_	_	_	_	_	_	_	_
 43	de	de	ADP	_	_	45	case	_	_
 44	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	45	det	_	_
 45	PTB	PTB	PROPN	_	Gender=Masc|Number=Sing	42	nmod	_	SpaceAfter=No
-46	,	,	PUNCT	_	_	42	punct	_	_
+46	,	,	PUNCT	_	_	32	punct	_	_
 47-48	no	_	_	_	_	_	_	_	_
 47	em	em	ADP	_	_	49	case	_	_
 48	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	49	det	_	_
@@ -198,10 +201,10 @@
 52	de	de	ADP	_	_	54	case	_	_
 53	este	este	DET	_	Gender=Masc|Number=Sing|PronType=Dem	54	det	_	_
 54	ano	ano	NOUN	_	Gender=Masc|Number=Sing	51	nmod	_	SpaceAfter=No
-55	.	.	PUNCT	_	_	12	punct	_	SpacesAfter=\n
+55	.	.	PUNCT	_	_	12	punct	_	_
 
-# text = Deixando também a Câmara de Vereadores, assumiu o mandato na Câmara Federal em fevereiro de 1955, tornando-se em junho vice-líder de seu partido na Câmara, função que acumulou com a vice-liderança da minoria a partir de dezembro do mesmo ano.
 # sent_id = 6
+# text = Deixando também a Câmara de Vereadores, assumiu o mandato na Câmara Federal em fevereiro de 1955, tornando-se em junho vice-líder de seu partido na Câmara, função que acumulou com a vice-liderança da minoria a partir de dezembro do mesmo ano.
 1	Deixando	deixar	VERB	_	VerbForm=Ger	8	advcl	_	_
 2	também	também	ADV	_	_	1	advmod	_	_
 3	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	4	det	_	_
@@ -215,7 +218,7 @@
 11-12	na	_	_	_	_	_	_	_	_
 11	em	em	ADP	_	_	13	case	_	_
 12	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	13	det	_	_
-13	Câmara	Câmara	PROPN	_	Gender=Fem|Number=Sing	8	obl	_	_
+13	Câmara	Câmara	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	10	nmod	_	_
 14	Federal	Federal	PROPN	_	Number=Sing	13	flat:name	_	_
 15	em	em	ADP	_	_	16	case	_	_
 16	fevereiro	fevereiro	NOUN	_	Gender=Masc|Number=Sing	8	obl	_	_
@@ -224,10 +227,10 @@
 19	,	,	PUNCT	_	_	20	punct	_	_
 20-21	tornando-se	_	_	_	_	_	_	_	_
 20	tornando	tornar	VERB	_	VerbForm=Ger	8	advcl	_	_
-21	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	20	obj	_	_
-22	em	em	ADP	_	_	24	case	_	_
-23	junho	junho	ADJ	_	Gender=Masc|Number=Sing	24	amod	_	_
-24	vice-líder	vice-líder	NOUN	_	Gender=Masc|Number=Sing	20	obl	_	_
+21	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	20	expl	_	_
+22	em	em	ADP	_	_	23	case	_	_
+23	junho	junho	NOUN	_	Gender=Masc|Number=Sing	20	obl	_	_
+24	vice-líder	vice-líder	NOUN	_	Gender=Masc|Number=Sing	20	obj	_	_
 25	de	de	ADP	_	_	27	case	_	_
 26	seu	seu	DET	_	Gender=Masc|Number=Sing|PronType=Prs	27	det	_	_
 27	partido	partido	NOUN	_	Gender=Masc|Number=Sing	24	nmod	_	_
@@ -236,8 +239,8 @@
 29	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	30	det	_	_
 30	Câmara	câmara	NOUN	_	Gender=Fem|Number=Sing	27	nmod	_	SpaceAfter=No
 31	,	,	PUNCT	_	_	32	punct	_	_
-32	função	função	NOUN	_	Gender=Fem|Number=Sing	27	appos	_	_
-33	que	que	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	34	nsubj	_	_
+32	função	função	NOUN	_	Gender=Fem|Number=Sing	20	appos	_	_
+33	que	que	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	34	obj	_	_
 34	acumulou	acumular	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	32	acl:relcl	_	_
 35	com	com	ADP	_	_	37	case	_	_
 36	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	37	det	_	_
@@ -246,39 +249,39 @@
 38	de	de	ADP	_	_	40	case	_	_
 39	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	40	det	_	_
 40	minoria	minoria	NOUN	_	Gender=Fem|Number=Sing	37	nmod	_	_
-41	a	a	ADP	_	_	44	case	_	_
+41	a	a	ADP	_	ExtPos=ADP	44	case	_	_
 42	partir	partir	NOUN	_	_	41	fixed	_	_
 43	de	de	ADP	_	_	41	fixed	_	_
-44	dezembro	dezembro	NOUN	_	Gender=Masc|Number=Sing	34	obl	_	_
+44	dezembro	dezembro	NOUN	_	Gender=Masc|Number=Sing	37	nmod	_	_
 45-46	do	_	_	_	_	_	_	_	_
 45	de	de	ADP	_	_	48	case	_	_
 46	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	48	det	_	_
 47	mesmo	mesmo	ADJ	_	Gender=Masc|Number=Sing	48	amod	_	_
 48	ano	ano	NOUN	_	Gender=Masc|Number=Sing	44	nmod	_	SpaceAfter=No
-49	.	.	PUNCT	_	_	8	punct	_	SpacesAfter=\n
+49	.	.	PUNCT	_	_	8	punct	_	_
 
-# text = Em março de 1956 integrou a Comissão do Território do Rio Branco.
 # sent_id = 7
+# text = Em março de 1956 integrou a Comissão do Território do Rio Branco.
 1	Em	em	ADP	_	_	2	case	_	_
 2	março	março	NOUN	_	Gender=Masc|Number=Sing	5	obl	_	_
 3	de	de	ADP	_	_	4	case	_	_
 4	1956	1956	NUM	_	NumType=Card	2	nmod	_	_
 5	integrou	integrar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 6	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	7	det	_	_
-7	Comissão	Comissão	PROPN	_	Gender=Fem|Number=Sing	5	nsubj	_	_
+7	Comissão	Comissão	PROPN	_	Gender=Fem|Number=Sing	5	obj	_	_
 8-9	do	_	_	_	_	_	_	_	_
 8	de	de	ADP	_	_	10	case	_	_
 9	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	10	det	_	_
-10	Território	Território	NOUN	_	Gender=Masc|Number=Sing	7	nmod	_	_
+10	Território	Território	PROPN	_	Number=Sing	7	nmod	_	_
 11-12	do	_	_	_	_	_	_	_	_
 11	de	de	ADP	_	_	13	case	_	_
 12	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	13	det	_	_
-13	Rio	Rio	PROPN	_	Gender=Masc|Number=Sing	10	nmod	_	_
+13	Rio	Rio	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	10	nmod	_	_
 14	Branco	Branco	PROPN	_	Number=Sing	13	flat:name	_	SpaceAfter=No
-15	.	.	PUNCT	_	_	5	punct	_	SpacesAfter=\n
+15	.	.	PUNCT	_	_	5	punct	_	_
 
-# text = No ano seguinte foi presidente da Comissão de Saúde.
 # sent_id = 8
+# text = No ano seguinte foi presidente da Comissão de Saúde.
 1-2	No	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	3	case	_	_
 2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
@@ -289,13 +292,13 @@
 7-8	da	_	_	_	_	_	_	_	_
 7	de	de	ADP	_	_	9	case	_	_
 8	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	9	det	_	_
-9	Comissão	Comissão	PROPN	_	Gender=Fem|Number=Sing	6	nmod	_	_
+9	Comissão	comissão	NOUN	_	Gender=Fem|Number=Sing	6	nmod	_	_
 10	de	de	ADP	_	_	11	case	_	_
-11	Saúde	Saúde	PROPN	_	Number=Sing	9	nmod	_	SpaceAfter=No
-12	.	.	PUNCT	_	_	6	punct	_	SpacesAfter=\n
+11	Saúde	saúde	NOUN	_	Gender=Fem|Number=Sing	9	nmod	_	SpaceAfter=No
+12	.	.	PUNCT	_	_	6	punct	_	_
 
-# text = No pleito de outubro de 1958, tentou sem sucesso a reeleição, deixando a Câmara em janeiro de 1959, ao final da legislatura.
 # sent_id = 9
+# text = No pleito de outubro de 1958, tentou sem sucesso a reeleição, deixando a Câmara em janeiro de 1959, ao final da legislatura.
 1-2	No	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	3	case	_	_
 2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
@@ -315,7 +318,7 @@
 16	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	17	det	_	_
 17	Câmara	câmara	NOUN	_	Gender=Fem|Number=Sing	15	obj	_	_
 18	em	em	ADP	_	_	19	case	_	_
-19	janeiro	janeiro	NOUN	_	Gender=Masc|Number=Sing	17	nmod	_	_
+19	janeiro	janeiro	NOUN	_	Gender=Masc|Number=Sing	15	obl	_	_
 20	de	de	ADP	_	_	21	case	_	_
 21	1959	1959	NUM	_	NumType=Card	19	nmod	_	SpaceAfter=No
 22	,	,	PUNCT	_	_	15	punct	_	_
@@ -329,8 +332,8 @@
 28	legislatura	legislatura	NOUN	_	Gender=Fem|Number=Sing	25	nmod	_	SpaceAfter=No
 29	.	.	PUNCT	_	_	9	punct	_	SpacesAfter=\n
 
-# text = No pleito de outubro de 1962, elegeu-se deputado estadual pelo então estado da Guanabara, na legenda do Movimento Trabalhista Renovador (MTR), exercendo o mandato de fevereiro de 1963 a janeiro de 1967.
 # sent_id = 10
+# text = No pleito de outubro de 1962, elegeu-se deputado estadual pelo então estado da Guanabara, na legenda do Movimento Trabalhista Renovador (MTR), exercendo o mandato de fevereiro de 1963 a janeiro de 1967.
 1-2	No	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	3	case	_	_
 2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
@@ -343,30 +346,30 @@
 9-10	elegeu-se	_	_	_	_	_	_	_	_
 9	elegeu	eleger	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 10	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	9	expl	_	_
-11	deputado	deputado	NOUN	_	Gender=Masc|Number=Sing	9	nsubj	_	_
+11	deputado	deputado	NOUN	_	Gender=Masc|Number=Sing	9	obj	_	_
 12	estadual	estadual	ADJ	_	Gender=Masc|Number=Sing	11	amod	_	_
 13-14	pelo	_	_	_	_	_	_	_	_
-13	por	por	ADP	_	_	15	case	_	_
-14	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	15	det	_	_
-15	então	então	NOUN	_	Gender=Masc|Number=Sing	12	obl	_	_
-16	estado	estar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	15	acl	_	_
+13	por	por	ADP	_	_	16	case	_	_
+14	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	16	det	_	_
+15	então	então	ADJ	_	Gender=Masc|Number=Sing	16	amod	_	_
+16	estado	estado	NOUN	_	Gender=Masc|Number=Sing	9	obl	_	_
 17-18	da	_	_	_	_	_	_	_	_
 17	de	de	ADP	_	_	19	case	_	_
 18	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	19	det	_	_
-19	Guanabara	Guanabara	PROPN	_	Gender=Fem|Number=Sing	15	nmod	_	SpaceAfter=No
+19	Guanabara	Guanabara	PROPN	_	Gender=Fem|Number=Sing	16	nmod	_	SpaceAfter=No
 20	,	,	PUNCT	_	_	23	punct	_	_
 21-22	na	_	_	_	_	_	_	_	_
 21	em	em	ADP	_	_	23	case	_	_
 22	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	23	det	_	_
-23	legenda	legenda	NOUN	_	Gender=Fem|Number=Sing	11	nmod	_	_
+23	legenda	legenda	NOUN	_	Gender=Fem|Number=Sing	9	obl	_	_
 24-25	do	_	_	_	_	_	_	_	_
 24	de	de	ADP	_	_	26	case	_	_
 25	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	26	det	_	_
-26	Movimento	Movimento	PROPN	_	Number=Sing	23	nmod	_	_
-27	Trabalhista	trabalhista	PROPN	_	Number=Sing	26	flat:name	_	_
+26	Movimento	Movimento	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	23	nmod	_	_
+27	Trabalhista	Trabalhista	PROPN	_	Number=Sing	26	flat:name	_	_
 28	Renovador	Renovador	PROPN	_	Number=Sing	26	flat:name	_	_
 29	(	(	PUNCT	_	_	30	punct	_	SpaceAfter=No
-30	MTR	MTR	PROPN	_	Gender=Masc|Number=Sing	23	appos	_	SpaceAfter=No
+30	MTR	MTR	PROPN	_	Gender=Masc|Number=Sing	26	appos	_	SpaceAfter=No
 31	)	)	PUNCT	_	_	30	punct	_	SpaceAfter=No
 32	,	,	PUNCT	_	_	33	punct	_	_
 33	exercendo	exercer	VERB	_	VerbForm=Ger	9	advcl	_	_
@@ -377,78 +380,81 @@
 38	de	de	ADP	_	_	39	case	_	_
 39	1963	1963	NUM	_	NumType=Card	37	nmod	_	_
 40	a	a	ADP	_	_	41	case	_	_
-41	janeiro	janeiro	NOUN	_	Gender=Masc|Number=Sing	35	nmod	_	_
+41	janeiro	janeiro	NOUN	_	Gender=Masc|Number=Sing	37	nmod	_	_
 42	de	de	ADP	_	_	43	case	_	_
 43	1967	1967	NUM	_	NumType=Card	41	nmod	_	SpaceAfter=No
 44	.	.	PUNCT	_	_	9	punct	_	SpacesAfter=\n
 
-# text = Foi médico da Prefeitura do Distrito Federal.
 # sent_id = 11
+# text = Foi médico da Prefeitura do Distrito Federal.
 1	Foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	cop	_	_
 2	médico	médico	NOUN	_	Gender=Masc|Number=Sing	0	root	_	_
 3-4	da	_	_	_	_	_	_	_	_
 3	de	de	ADP	_	_	5	case	_	_
 4	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	5	det	_	_
-5	Prefeitura	Prefeitura	NOUN	_	Gender=Fem|Number=Sing	2	nmod	_	_
+5	Prefeitura	prefeitura	NOUN	_	Gender=Fem|Number=Sing	2	nmod	_	_
 6-7	do	_	_	_	_	_	_	_	_
 6	de	de	ADP	_	_	8	case	_	_
 7	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	8	det	_	_
-8	Distrito	Distrito	PROPN	_	Gender=Masc|Number=Sing	5	nmod	_	_
+8	Distrito	Distrito	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	5	nmod	_	_
 9	Federal	Federal	PROPN	_	Number=Sing	8	flat:name	_	SpaceAfter=No
 10	.	.	PUNCT	_	_	2	punct	_	SpacesAfter=\n
 
-# text = Autor dos trabalhos científicos «Diagnóstico da sífilis por função ganglionar», «Tratamento parafinado das infecções cutâneas», «Alergia e herança em medicina», «Helion Póvoa e os fenômenos de sensibilização» e «Alergia clínica em síntese».
 # sent_id = 12
+# text = Autor dos trabalhos científicos
 1	Autor	autor	NOUN	_	Gender=Masc|Number=Sing	0	root	_	_
 2-3	dos	_	_	_	_	_	_	_	_
 2	de	de	ADP	_	_	4	case	_	_
 3	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	4	det	_	_
 4	trabalhos	trabalho	NOUN	_	Gender=Masc|Number=Plur	1	nmod	_	_
-5	científicos	científicos	ADJ	_	Gender=Masc|Number=Plur	4	amod	_	_
-6	«	«	PUNCT	_	_	7	punct	_	SpaceAfter=No
-7	Diagnóstico	diagnóstico	PROPN	_	Gender=Masc|Number=Sing	4	appos	_	_
-8-9	da	_	_	_	_	_	_	_	_
-8	de	de	ADP	_	_	10	case	_	_
-9	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	10	det	_	_
-10	sífilis	sífill	NOUN	_	Gender=Fem|Number=Plur	7	nmod	_	_
-11	por	por	ADP	_	_	12	case	_	_
-12	função	função	NOUN	_	Gender=Fem|Number=Sing	7	nmod	_	_
-13	ganglionar	ganglionar	ADJ	_	Gender=Fem|Number=Sing	12	amod	_	SpaceAfter=No
-14	»	»	PUNCT	_	_	7	punct	_	SpaceAfter=No
-15	,	,	PUNCT	_	_	17	punct	_	_
-16	«	«	PUNCT	_	_	17	punct	_	SpaceAfter=No
-17	Tratamento	tratamento	NOUN	_	Gender=Masc|Number=Sing	1	conj	_	_
-18	parafinado	parafinar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	17	flat:name	_	_
-19-20	das	_	_	_	_	_	_	_	_
-19	de	de	ADP	_	_	21	case	_	_
-20	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	21	det	_	_
-21	infecções	infecção	NOUN	_	Gender=Fem|Number=Plur	17	nmod	_	_
-22	cutâneas	cutâneo	ADJ	_	Gender=Fem|Number=Plur	21	amod	_	SpaceAfter=No
-23	»	»	PUNCT	_	_	17	punct	_	SpaceAfter=No
-24	,	,	PUNCT	_	_	26	punct	_	_
-25	«	«	PUNCT	_	_	26	punct	_	SpaceAfter=No
-26	Alergia	Alergia	PROPN	_	Gender=Fem|Number=Sing	1	conj	_	_
-27	e	e	CCONJ	_	_	26	flat:name	_	_
-28	herança	herançar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	26	flat:name	_	_
-29	em	em	ADP	_	_	26	flat:name	_	_
-30	medicina	medicina	NOUN	_	Gender=Fem|Number=Sing	26	flat:name	_	SpaceAfter=No
-31	»	»	PUNCT	_	_	26	punct	_	SpaceAfter=No
-32	,	,	PUNCT	_	_	34	punct	_	_
-33	«	«	PUNCT	_	_	34	punct	_	SpaceAfter=No
-34	Helion	Helion	PROPN	_	Gender=Masc|Number=Sing	1	conj	_	_
-35	Póvoa	Póvoa	PROPN	_	Number=Sing	34	flat:name	_	_
-36	e	e	CCONJ	_	_	34	flat:name	_	_
-37	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	34	flat:name	_	_
-38	fenômenos	fenômeno	NOUN	_	Gender=Masc|Number=Plur	34	flat:name	_	_
-39	de	de	ADP	_	_	34	flat:name	_	_
-40	sensibilização	sensibilização	NOUN	_	Gender=Fem|Number=Sing	34	flat:name	_	SpaceAfter=No
-41	»	»	PUNCT	_	_	34	punct	_	_
-42	e	e	CCONJ	_	_	44	cc	_	_
-43	«	«	PUNCT	_	_	44	punct	_	SpaceAfter=No
-44	Alergia	Alergia	PROPN	_	Gender=Fem|Number=Sing	1	conj	_	_
-45	clínica	clínica	PROPN	_	Number=Sing	44	flat:name	_	_
-46	em	em	ADP	_	_	47	case	_	_
-47	síntese	síntese	NOUN	_	Gender=Masc|Number=Sing	44	nmod	_	SpaceAfter=No
-48	»	»	PUNCT	_	_	44	punct	_	SpaceAfter=No
-49	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
+5	científicos	científico	ADJ	_	Gender=Masc|Number=Plur	4	amod	_	_
+
+# sent_id = 13
+# text = «Diagnóstico da sífilis por função ganglionar», «Tratamento parafinado das infecções cutâneas», «Alergia e herança em medicina», «Helion Póvoa e os fenômenos de sensibilização» e «Alergia clínica em síntese».
+1	«	«	PUNCT	_	_	2	punct	_	SpaceAfter=No
+2	Diagnóstico	diagnóstico	NOUN	_	Gender=Masc|Number=Sing	0	root	_	_
+3-4	da	_	_	_	_	_	_	_	_
+3	de	de	ADP	_	_	5	case	_	_
+4	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	5	det	_	_
+5	sífilis	sífilis	NOUN	_	Gender=Fem|Number=Sing	2	nmod	_	_
+6	por	por	ADP	_	_	7	case	_	_
+7	função	função	NOUN	_	Gender=Fem|Number=Sing	2	nmod	_	_
+8	ganglionar	ganglionar	ADJ	_	Gender=Fem|Number=Sing	7	amod	_	SpaceAfter=No
+9	»	»	PUNCT	_	_	2	punct	_	SpaceAfter=No
+10	,	,	PUNCT	_	_	12	punct	_	_
+11	«	«	PUNCT	_	_	12	punct	_	SpaceAfter=No
+12	Tratamento	tratamento	NOUN	_	Gender=Masc|Number=Sing	2	conj	_	_
+13	parafinado	parafinar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	12	acl	_	_
+14-15	das	_	_	_	_	_	_	_	_
+14	de	de	ADP	_	_	16	case	_	_
+15	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	16	det	_	_
+16	infecções	infecção	NOUN	_	Gender=Fem|Number=Plur	12	nmod	_	_
+17	cutâneas	cutâneo	ADJ	_	Gender=Fem|Number=Plur	16	amod	_	SpaceAfter=No
+18	»	»	PUNCT	_	_	12	punct	_	SpaceAfter=No
+19	,	,	PUNCT	_	_	21	punct	_	_
+20	«	«	PUNCT	_	_	21	punct	_	SpaceAfter=No
+21	Alergia	Alergia	PROPN	_	Gender=Fem|Number=Sing	2	conj	_	_
+22	e	e	CCONJ	_	_	21	flat:name	_	_
+23	herança	herança	PROPN	_	Number=Sing	21	flat:name	_	_
+24	em	em	ADP	_	_	25	case	_	_
+25	medicina	medicina	NOUN	_	Gender=Fem|Number=Sing	21	nmod	_	SpaceAfter=No
+26	»	»	PUNCT	_	_	21	punct	_	SpaceAfter=No
+27	,	,	PUNCT	_	_	29	punct	_	_
+28	«	«	PUNCT	_	_	29	punct	_	SpaceAfter=No
+29	Helion	Helion	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	2	conj	_	_
+30	Póvoa	Póvoa	PROPN	_	Number=Sing	29	flat:name	_	_
+31	e	e	CCONJ	_	_	33	cc	_	_
+32	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	33	det	_	_
+33	fenômenos	fenômeno	PROPN	_	Number=Sing	29	conj	_	_
+34	de	de	ADP	_	_	35	case	_	_
+35	sensibilização	sensibilização	NOUN	_	Gender=Fem|Number=Sing	33	nmod	_	SpaceAfter=No
+36	»	»	PUNCT	_	_	29	punct	_	_
+37	e	e	CCONJ	_	_	39	cc	_	_
+38	«	«	PUNCT	_	_	39	punct	_	SpaceAfter=No
+39	Alergia	alergia	NOUN	_	Gender=Fem|Number=Sing	2	conj	_	_
+40	clínica	clínico	ADJ	_	Gender=Fem|Number=Sing	39	amod	_	_
+41	em	em	ADP	_	_	42	case	_	_
+42	síntese	síntese	NOUN	_	Gender=Fem|Number=Sing	39	nmod	_	SpaceAfter=No
+43	»	»	PUNCT	_	_	39	punct	_	SpaceAfter=No
+44	.	.	PUNCT	_	_	2	punct	_	SpacesAfter=\n
 

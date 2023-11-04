@@ -1,9 +1,12 @@
-# text = «João Miguel Vitaca» nasceu em Canguçu (RS) no dia 29 de setembro de 1900, filho de José Maria Vitaca e de Flora Eugênia Vitaca.
-# sent_id = 1
-# newpar
+# generator = UDPipe 2, https://lindat.mff.cuni.cz/services/udpipe
+# udpipe_model = portuguese-bosque-ud-2.12-230717
+# udpipe_model_licence = CC BY-NC-SA
 # newdoc
+# newpar
+# sent_id = 1
+# text = «João Miguel Vitaca» nasceu em Canguçu (RS) no dia 29 de setembro de 1900, filho de José Maria Vitaca e de Flora Eugênia Vitaca.
 1	«	«	PUNCT	_	_	2	punct	_	SpaceAfter=No
-2	João	João	PROPN	_	Gender=Masc|Number=Sing	6	nsubj	_	_
+2	João	João	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	6	nsubj	_	_
 3	Miguel	Miguel	PROPN	_	Number=Sing	2	flat:name	_	_
 4	Vitaca	Vitaca	PROPN	_	Number=Sing	2	flat:name	_	SpaceAfter=No
 5	»	»	PUNCT	_	_	2	punct	_	_
@@ -11,7 +14,7 @@
 7	em	em	ADP	_	_	8	case	_	_
 8	Canguçu	Canguçu	PROPN	_	Gender=Masc|Number=Sing	6	obl	_	_
 9	(	(	PUNCT	_	_	10	punct	_	SpaceAfter=No
-10	RS	RS	PROPN	_	Gender=Masc|Number=Sing	8	appos	_	SpaceAfter=No
+10	RS	RS	PROPN	_	Gender=Masc|Number=Sing	8	parataxis	_	SpaceAfter=No
 11	)	)	PUNCT	_	_	10	punct	_	_
 12-13	no	_	_	_	_	_	_	_	_
 12	em	em	ADP	_	_	14	case	_	_
@@ -23,20 +26,20 @@
 18	de	de	ADP	_	_	19	case	_	_
 19	1900	1900	NUM	_	NumType=Card	17	nmod	_	SpaceAfter=No
 20	,	,	PUNCT	_	_	21	punct	_	_
-21	filho	filho	NOUN	_	Gender=Masc|Number=Sing	2	appos	_	_
+21	filho	filho	NOUN	_	Gender=Masc|Number=Sing	6	appos	_	_
 22	de	de	ADP	_	_	23	case	_	_
-23	José	José	PROPN	_	Gender=Masc|Number=Sing	21	nmod	_	_
+23	José	José	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	21	nmod	_	_
 24	Maria	Maria	PROPN	_	Number=Sing	23	flat:name	_	_
 25	Vitaca	Vitaca	PROPN	_	Number=Sing	23	flat:name	_	_
 26	e	e	CCONJ	_	_	28	cc	_	_
 27	de	de	ADP	_	_	28	case	_	_
-28	Flora	Flora	PROPN	_	Number=Sing	23	conj	_	_
+28	Flora	Flora	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	23	conj	_	_
 29	Eugênia	Eugênia	PROPN	_	Number=Sing	28	flat:name	_	_
 30	Vitaca	Vitaca	PROPN	_	Number=Sing	28	flat:name	_	SpaceAfter=No
 31	.	.	PUNCT	_	_	6	punct	_	SpacesAfter=\n
 
-# text = Fez os estudos primários em sua cidade natal e depois começou a trabalhar como gráfico.
 # sent_id = 2
+# text = Fez os estudos primários em sua cidade natal e depois começou a trabalhar como gráfico.
 1	Fez	fazer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	3	det	_	_
 3	estudos	estudo	NOUN	_	Gender=Masc|Number=Plur	1	obj	_	_
@@ -47,37 +50,37 @@
 8	natal	natal	ADJ	_	Gender=Fem|Number=Sing	7	amod	_	_
 9	e	e	CCONJ	_	_	13	cc	_	_
 10	depois	depois	ADV	_	_	13	advmod	_	_
-11	começou	começar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	1	conj	_	_
+11	começou	começar	VERB	_	ExtPos=AUX|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	1	conj	_	_
 12	a	a	SCONJ	_	_	13	mark	_	_
 13	trabalhar	trabalhar	VERB	_	VerbForm=Inf	11	xcomp	_	_
 14	como	como	ADP	_	_	15	case	_	_
-15	gráfico	gráfico	NOUN	_	Gender=Masc|Number=Sing	13	obl	_	SpaceAfter=No
-16	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
+15	gráfico	gráfico	NOUN	_	Gender=Masc|Number=Sing	13	xcomp	_	SpaceAfter=No
+16	.	.	PUNCT	_	_	1	punct	_	_
 
-# text = Trabalhou nas livrarias Globo, Universal e Comercial e, nos jornais «Gaúcho», «Semana» e «Canguçuense», em sua cidade; «Opinião Pública», «Libertador» e «Correio Mercantil», em Pelotas (RS), e «O Tempo», de Rio Grande (RS).
 # sent_id = 3
+# text = Trabalhou nas livrarias Globo, Universal e Comercial e, nos jornais «Gaúcho», «Semana» e «Canguçuense», em sua cidade; «Opinião Pública», «Libertador» e «Correio Mercantil», em Pelotas (RS), e «O Tempo», de Rio Grande (RS).
 1	Trabalhou	trabalhar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2-3	nas	_	_	_	_	_	_	_	_
 2	em	em	ADP	_	_	4	case	_	_
 3	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	4	det	_	_
-4	livrarias	livrarias	PROPN	_	Gender=Fem|Number=Plur	1	obj	_	_
-5	Globo	Globo	PROPN	_	Number=Sing	4	flat:name	_	SpaceAfter=No
+4	livrarias	livraria	NOUN	_	Gender=Fem|Number=Plur	1	obl	_	_
+5	Globo	Globo	PROPN	_	Gender=Fem|Number=Sing	4	appos	_	SpaceAfter=No
 6	,	,	PUNCT	_	_	7	punct	_	_
-7	Universal	Universal	PROPN	_	Gender=Fem|Number=Sing	4	conj	_	_
+7	Universal	Universal	PROPN	_	Gender=Fem|Number=Sing	5	conj	_	_
 8	e	e	CCONJ	_	_	9	cc	_	_
-9	Comercial	Comercial	PROPN	_	Gender=Masc|Number=Sing	4	conj	_	_
+9	Comercial	Comercial	PROPN	_	Gender=Fem|Number=Sing	5	conj	_	_
 10	e	e	CCONJ	_	_	14	cc	_	SpaceAfter=No
 11	,	,	PUNCT	_	_	14	punct	_	_
 12-13	nos	_	_	_	_	_	_	_	_
 12	em	em	ADP	_	_	14	case	_	_
 13	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	14	det	_	_
-14	jornais	jornal	NOUN	_	Gender=Masc|Number=Plur	1	conj	_	_
+14	jornais	jornal	NOUN	_	Gender=Masc|Number=Plur	4	conj	_	_
 15	«	«	PUNCT	_	_	16	punct	_	SpaceAfter=No
 16	Gaúcho	Gaúcho	PROPN	_	Gender=Masc|Number=Sing	14	appos	_	SpaceAfter=No
-17	»	»	PUNCT	_	_	16	punct	_	SpaceAfter=No
+17	»	»	PUNCT	_	_	20	punct	_	SpaceAfter=No
 18	,	,	PUNCT	_	_	20	punct	_	_
 19	«	«	PUNCT	_	_	20	punct	_	SpaceAfter=No
-20	Semana	Semana	PROPN	_	Gender=Fem|Number=Sing	16	conj	_	SpaceAfter=No
+20	Semana	semana	NOUN	_	Gender=Fem|Number=Sing	16	conj	_	SpaceAfter=No
 21	»	»	PUNCT	_	_	20	punct	_	_
 22	e	e	CCONJ	_	_	24	cc	_	_
 23	«	«	PUNCT	_	_	24	punct	_	SpaceAfter=No
@@ -86,69 +89,69 @@
 26	,	,	PUNCT	_	_	29	punct	_	_
 27	em	em	ADP	_	_	29	case	_	_
 28	sua	seu	DET	_	Gender=Fem|Number=Sing|PronType=Prs	29	det	_	_
-29	cidade	cidade	NOUN	_	Gender=Fem|Number=Sing	24	nmod	_	SpaceAfter=No
-30	;	;	PUNCT	_	_	37	punct	_	_
+29	cidade	cidade	NOUN	_	Gender=Fem|Number=Sing	14	nmod	_	SpaceAfter=No
+30	;	;	PUNCT	_	_	32	punct	_	_
 31	«	«	PUNCT	_	_	32	punct	_	SpaceAfter=No
-32	Opinião	Opinião	PROPN	_	Gender=Masc|Number=Sing	14	appos	_	_
+32	Opinião	Opinião	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	16	conj	_	_
 33	Pública	Pública	PROPN	_	Number=Sing	32	flat:name	_	SpaceAfter=No
 34	»	»	PUNCT	_	_	32	punct	_	SpaceAfter=No
 35	,	,	PUNCT	_	_	37	punct	_	_
 36	«	«	PUNCT	_	_	37	punct	_	SpaceAfter=No
-37	Libertador	Libertador	PROPN	_	Gender=Masc|Number=Sing	32	conj	_	SpaceAfter=No
+37	Libertador	Libertador	PROPN	_	Gender=Fem|Number=Sing	32	conj	_	SpaceAfter=No
 38	»	»	PUNCT	_	_	37	punct	_	_
 39	e	e	CCONJ	_	_	41	cc	_	_
 40	«	«	PUNCT	_	_	41	punct	_	SpaceAfter=No
-41	Correio	Correio	PROPN	_	Gender=Masc|Number=Sing	32	conj	_	_
+41	Correio	Correio	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	32	conj	_	_
 42	Mercantil	Mercantil	PROPN	_	Number=Sing	41	flat:name	_	SpaceAfter=No
 43	»	»	PUNCT	_	_	41	punct	_	SpaceAfter=No
 44	,	,	PUNCT	_	_	46	punct	_	_
 45	em	em	ADP	_	_	46	case	_	_
-46	Pelotas	Pelotas	PROPN	_	Gender=Masc|Number=Sing	41	nmod	_	_
+46	Pelotas	Pelotas	PROPN	_	Gender=Masc|Number=Sing	32	nmod	_	_
 47	(	(	PUNCT	_	_	48	punct	_	SpaceAfter=No
 48	RS	RS	PROPN	_	Gender=Masc|Number=Sing	46	parataxis	_	SpaceAfter=No
 49	)	)	PUNCT	_	_	48	punct	_	SpaceAfter=No
 50	,	,	PUNCT	_	_	53	punct	_	_
 51	e	e	CCONJ	_	_	53	cc	_	_
 52	«	«	PUNCT	_	_	53	punct	_	SpaceAfter=No
-53	O	O	PROPN	_	Gender=Masc|Number=Sing|PronType=Art	46	conj	_	_
-54	Tempo	tempo	PROPN	_	Number=Sing	53	flat:name	_	SpaceAfter=No
+53	O	O	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing|PronType=Art	5	conj	_	_
+54	Tempo	Tempo	PROPN	_	Number=Sing	53	flat:name	_	SpaceAfter=No
 55	»	»	PUNCT	_	_	53	punct	_	SpaceAfter=No
 56	,	,	PUNCT	_	_	58	punct	_	_
 57	de	de	ADP	_	_	58	case	_	_
-58	Rio	Rio	PROPN	_	Gender=Masc|Number=Sing	46	conj	_	_
+58	Rio	Rio	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	53	nmod	_	_
 59	Grande	Grande	PROPN	_	Number=Sing	58	flat:name	_	_
 60	(	(	PUNCT	_	_	61	punct	_	SpaceAfter=No
-61	RS	RS	PROPN	_	Gender=Masc|Number=Sing	58	appos	_	SpaceAfter=No
+61	RS	RS	PROPN	_	Gender=Masc|Number=Sing	58	parataxis	_	SpaceAfter=No
 62	)	)	PUNCT	_	_	61	punct	_	SpaceAfter=No
-63	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
+63	.	.	PUNCT	_	_	1	punct	_	_
 
-# text = Fundou as organizações de classe União dos Trabalhadores Gráficos, União Tipográfica Gutenberg e Frente Sindicalista de Pelotas, no Rio Grande do Sul.
 # sent_id = 4
+# text = Fundou as organizações de classe União dos Trabalhadores Gráficos, União Tipográfica Gutenberg e Frente Sindicalista de Pelotas, no Rio Grande do Sul.
 1	Fundou	fundar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	3	det	_	_
-3	organizações	organização	NOUN	_	Gender=Fem|Number=Plur	1	nsubj	_	_
+3	organizações	organização	NOUN	_	Gender=Fem|Number=Plur	1	obj	_	_
 4	de	de	ADP	_	_	5	case	_	_
 5	classe	classe	NOUN	_	Gender=Fem|Number=Sing	3	nmod	_	_
-6	União	união	PROPN	_	Gender=Fem|Number=Sing	3	appos	_	_
+6	União	União	PROPN	_	Gender=Fem|Number=Sing	3	appos	_	_
 7-8	dos	_	_	_	_	_	_	_	_
 7	de	de	ADP	_	_	9	case	_	_
 8	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	9	det	_	_
-9	Trabalhadores	Trabalhadores	PROPN	_	Number=Sing	6	nmod	_	_
-10	Gráficos	gráficos	PROPN	_	Number=Sing	9	flat:name	_	SpaceAfter=No
+9	Trabalhadores	Trabalhadores	PROPN	_	ExtPos=PROPN|Number=Sing	6	nmod	_	_
+10	Gráficos	Gráficos	PROPN	_	Number=Sing	9	flat:name	_	SpaceAfter=No
 11	,	,	PUNCT	_	_	12	punct	_	_
-12	União	União	PROPN	_	Gender=Fem|Number=Sing	6	conj	_	_
+12	União	União	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	6	conj	_	_
 13	Tipográfica	Tipográfica	PROPN	_	Number=Sing	12	flat:name	_	_
 14	Gutenberg	Gutenberg	PROPN	_	Number=Sing	12	flat:name	_	_
 15	e	e	CCONJ	_	_	16	cc	_	_
-16	Frente	Frente	PROPN	_	Gender=Fem|Number=Sing	6	conj	_	_
+16	Frente	Frente	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	6	conj	_	_
 17	Sindicalista	Sindicalista	PROPN	_	Number=Sing	16	flat:name	_	_
 18	de	de	ADP	_	_	19	case	_	_
-19	Pelotas	Pelotas	PROPN	_	Gender=Masc|Number=Sing	16	nmod	_	SpaceAfter=No
+19	Pelotas	Pelotas	PROPN	_	Number=Sing	16	nmod	_	SpaceAfter=No
 20	,	,	PUNCT	_	_	23	punct	_	_
 21-22	no	_	_	_	_	_	_	_	_
 21	em	em	ADP	_	_	23	case	_	_
 22	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	23	det	_	_
-23	Rio	Rio	PROPN	_	Gender=Masc|Number=Sing	3	nmod	_	_
+23	Rio	Rio	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	1	obl	_	_
 24	Grande	Grande	PROPN	_	Number=Sing	23	flat:name	_	_
 25-26	do	_	_	_	_	_	_	_	_
 25	de	de	ADP	_	_	27	case	_	_
@@ -156,71 +159,71 @@
 27	Sul	Sul	PROPN	_	Number=Sing	23	nmod	_	SpaceAfter=No
 28	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
 
-# text = Membro do sindicato União dos Trabalhadores Gráficos de Pelotas, foi escolhido por essa organização delegado eleitor à Convenção dos Sindicatos Brasileiros de Empregados, reunida no Rio de Janeiro em julho de 1933, pela qual foi eleito deputado classista à Assembléia Nacional Constituinte.
 # sent_id = 5
-1	Membro	membro	NOUN	_	Gender=Masc|Number=Sing	14	nsubj:pass	_	_
+# text = Membro do sindicato União dos Trabalhadores Gráficos de Pelotas, foi escolhido por essa organização delegado eleitor à Convenção dos Sindicatos Brasileiros de Empregados, reunida no Rio de Janeiro em julho de 1933, pela qual foi eleito deputado classista à Assembléia Nacional Constituinte.
+1	Membro	membro	NOUN	_	Gender=Masc|Number=Sing	14	obl	_	_
 2-3	do	_	_	_	_	_	_	_	_
 2	de	de	ADP	_	_	4	case	_	_
 3	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	4	det	_	_
-4	sindicato	sindicato	PROPN	_	Gender=Masc|Number=Sing	1	nmod	_	_
-5	União	união	PROPN	_	Number=Sing	4	flat:name	_	_
+4	sindicato	sindicato	NOUN	_	Gender=Masc|Number=Sing	1	nmod	_	_
+5	União	União	PROPN	_	Gender=Masc|Number=Sing	4	appos	_	_
 6-7	dos	_	_	_	_	_	_	_	_
 6	de	de	ADP	_	_	8	case	_	_
 7	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	8	det	_	_
-8	Trabalhadores	trabalhador	NOUN	_	Gender=Masc|Number=Plur	4	nmod	_	_
-9	Gráficos	gráfico	ADJ	_	Gender=Masc|Number=Plur	8	amod	_	_
+8	Trabalhadores	Trabalhadores	PROPN	_	ExtPos=PROPN|Number=Sing	4	nmod	_	_
+9	Gráficos	Gráficos	PROPN	_	Number=Sing	8	flat:name	_	_
 10	de	de	ADP	_	_	11	case	_	_
-11	Pelotas	Pelota	NOUN	_	Gender=Fem|Number=Plur	8	nmod	_	SpaceAfter=No
+11	Pelotas	Pelotas	PROPN	_	Number=Sing	8	nmod	_	SpaceAfter=No
 12	,	,	PUNCT	_	_	1	punct	_	_
 13	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	14	aux:pass	_	_
 14	escolhido	escolher	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
 15	por	por	ADP	_	_	17	case	_	_
 16	essa	esse	DET	_	Gender=Fem|Number=Sing|PronType=Dem	17	det	_	_
 17	organização	organização	NOUN	_	Gender=Fem|Number=Sing	14	obl:agent	_	_
-18	delegado	delegado	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	17	acl	_	_
-19	eleitor	eleitor	NOUN	_	Gender=Masc|Number=Sing	17	appos	_	_
+18	delegado	delegado	NOUN	_	Gender=Masc|Number=Sing	14	xcomp	_	_
+19	eleitor	eleitor	ADJ	_	Gender=Masc|Number=Sing	18	amod	_	_
 20-21	à	_	_	_	_	_	_	_	_
 20	a	a	ADP	_	_	22	case	_	_
 21	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	22	det	_	_
-22	Convenção	convenção	NOUN	_	Gender=Fem|Number=Sing	19	nmod	_	_
+22	Convenção	Convenção	PROPN	_	Gender=Fem|Number=Sing	14	obl	_	_
 23-24	dos	_	_	_	_	_	_	_	_
 23	de	de	ADP	_	_	25	case	_	_
 24	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	25	det	_	_
-25	Sindicatos	Sindicatos	PROPN	_	Number=Sing	22	nmod	_	_
-26	Brasileiros	brasileiros	PROPN	_	Number=Sing	25	flat:name	_	_
+25	Sindicatos	Sindicatos	PROPN	_	ExtPos=PROPN|Number=Sing	22	nmod	_	_
+26	Brasileiros	Brasileiros	PROPN	_	Number=Sing	25	flat:name	_	_
 27	de	de	ADP	_	_	28	case	_	_
-28	Empregados	empregados	PROPN	_	Number=Sing	25	nmod	_	SpaceAfter=No
+28	Empregados	Empregados	PROPN	_	Number=Sing	25	nmod	_	SpaceAfter=No
 29	,	,	PUNCT	_	_	30	punct	_	_
-30	reunida	reunir	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	19	acl	_	_
+30	reunida	reunir	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	22	acl	_	_
 31-32	no	_	_	_	_	_	_	_	_
 31	em	em	ADP	_	_	33	case	_	_
 32	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	33	det	_	_
 33	Rio	Rio	PROPN	_	Gender=Masc|Number=Sing	30	obl	_	_
 34	de	de	ADP	_	_	35	case	_	_
-35	Janeiro	janeiro	PROPN	_	Number=Sing	33	nmod	_	_
+35	Janeiro	Janeiro	PROPN	_	Number=Sing	33	nmod	_	_
 36	em	em	ADP	_	_	37	case	_	_
-37	julho	julho	NOUN	_	Gender=Masc|Number=Sing	33	nmod	_	_
+37	julho	julho	NOUN	_	Gender=Masc|Number=Sing	30	obl	_	_
 38	de	de	ADP	_	_	39	case	_	_
 39	1933	1933	NUM	_	NumType=Card	37	nmod	_	SpaceAfter=No
-40	,	,	PUNCT	_	_	30	punct	_	_
+40	,	,	PUNCT	_	_	45	punct	_	_
 41-42	pela	_	_	_	_	_	_	_	_
 41	por	por	ADP	_	_	43	case	_	_
 42	a	o	DET	_	Gender=Fem|Number=Sing|PronType=Art	43	det	_	_
 43	qual	qual	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	45	obl	_	_
 44	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	45	aux:pass	_	_
-45	eleito	eleger	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	30	advcl	_	_
+45	eleito	eleger	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	22	acl:relcl	_	_
 46	deputado	deputado	NOUN	_	Gender=Masc|Number=Sing	45	nsubj:pass	_	_
 47	classista	classista	ADJ	_	Gender=Masc|Number=Sing	46	amod	_	_
 48-49	à	_	_	_	_	_	_	_	_
 48	a	a	ADP	_	_	50	case	_	_
 49	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	50	det	_	_
-50	Assembléia	Assembléia	PROPN	_	Gender=Fem|Number=Sing	47	obl	_	_
+50	Assembléia	Assembléia	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	45	obl	_	_
 51	Nacional	Nacional	PROPN	_	Number=Sing	50	flat:name	_	_
 52	Constituinte	Constituinte	PROPN	_	Number=Sing	50	flat:name	_	SpaceAfter=No
-53	.	.	PUNCT	_	_	14	punct	_	SpacesAfter=\n
+53	.	.	PUNCT	_	_	14	punct	_	_
 
-# text = Assumindo sua cadeira em novembro do mesmo ano, propôs várias emendas ao anteprojeto de Constituição, que versavam sobre a autonomia, a liberdade, a organização e a estrutura dos sindicatos.
 # sent_id = 6
+# text = Assumindo sua cadeira em novembro do mesmo ano, propôs várias emendas ao anteprojeto de Constituição, que versavam sobre a autonomia, a liberdade, a organização e a estrutura dos sindicatos.
 1	Assumindo	assumir	VERB	_	VerbForm=Ger	11	advcl	_	_
 2	sua	seu	DET	_	Gender=Fem|Number=Sing|PronType=Prs	3	det	_	_
 3	cadeira	cadeira	NOUN	_	Gender=Fem|Number=Sing	1	obj	_	_
@@ -233,16 +236,16 @@
 9	ano	ano	NOUN	_	Gender=Masc|Number=Sing	5	nmod	_	SpaceAfter=No
 10	,	,	PUNCT	_	_	1	punct	_	_
 11	propôs	propor	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
-12	várias	vários	DET	_	Gender=Fem|Number=Plur|PronType=Ind	13	det	_	_
+12	várias	várias	DET	_	Gender=Fem|Number=Plur|PronType=Ind	13	det	_	_
 13	emendas	emenda	NOUN	_	Gender=Fem|Number=Plur	11	obj	_	_
 14-15	ao	_	_	_	_	_	_	_	_
 14	a	a	ADP	_	_	16	case	_	_
 15	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	16	det	_	_
-16	anteprojeto	anteprojeto	PROPN	_	Gender=Masc|Number=Sing	13	nmod	_	_
+16	anteprojeto	anteprojeto	NOUN	_	Gender=Masc|Number=Sing	13	nmod	_	_
 17	de	de	ADP	_	_	18	case	_	_
-18	Constituição	constituição	PROPN	_	Number=Sing	16	nmod	_	SpaceAfter=No
+18	Constituição	constituição	NOUN	_	Gender=Fem|Number=Sing	16	nmod	_	SpaceAfter=No
 19	,	,	PUNCT	_	_	21	punct	_	_
-20	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	21	nsubj	_	_
+20	que	que	PRON	_	Gender=Fem|Number=Plur|PronType=Rel	21	nsubj	_	_
 21	versavam	versar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	16	acl:relcl	_	_
 22	sobre	sobre	ADP	_	_	24	case	_	_
 23	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	24	det	_	_
@@ -260,10 +263,10 @@
 34	de	de	ADP	_	_	36	case	_	_
 35	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	36	det	_	_
 36	sindicatos	sindicato	NOUN	_	Gender=Masc|Number=Plur	33	nmod	_	SpaceAfter=No
-37	.	.	PUNCT	_	_	11	punct	_	SpacesAfter=\n
+37	.	.	PUNCT	_	_	11	punct	_	_
 
-# text = Foi contrário à emenda de Ranulfo Lima, aprovada pela Assembléia, que estabelecia o pluralismo sindical.
 # sent_id = 7
+# text = Foi contrário à emenda de Ranulfo Lima, aprovada pela Assembléia, que estabelecia o pluralismo sindical.
 1	Foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	cop	_	_
 2	contrário	contrário	ADJ	_	Gender=Masc|Number=Sing	0	root	_	_
 3-4	à	_	_	_	_	_	_	_	_
@@ -271,34 +274,34 @@
 4	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	5	det	_	_
 5	emenda	emenda	NOUN	_	Gender=Fem|Number=Sing	2	obl	_	_
 6	de	de	ADP	_	_	7	case	_	_
-7	Ranulfo	Ranulfo	PROPN	_	Gender=Masc|Number=Sing	5	nmod	_	_
+7	Ranulfo	Ranulfo	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	5	nmod	_	_
 8	Lima	Lima	PROPN	_	Number=Sing	7	flat:name	_	SpaceAfter=No
 9	,	,	PUNCT	_	_	10	punct	_	_
-10	aprovada	aprovar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	2	advcl	_	_
+10	aprovada	aprovar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	5	acl	_	_
 11-12	pela	_	_	_	_	_	_	_	_
 11	por	por	ADP	_	_	13	case	_	_
 12	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	13	det	_	_
-13	Assembléia	Assembléia	PROPN	_	Gender=Fem|Number=Sing	10	obl:agent	_	SpaceAfter=No
-14	,	,	PUNCT	_	_	16	punct	_	_
+13	Assembléia	assembléia	NOUN	_	Gender=Fem|Number=Sing	10	obl:agent	_	SpaceAfter=No
+14	,	,	PUNCT	_	_	10	punct	_	_
 15	que	que	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	16	nsubj	_	_
-16	estabelecia	estabeleciar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	13	acl:relcl	_	_
+16	estabelecia	estabelecer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	5	acl:relcl	_	_
 17	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	18	det	_	_
 18	pluralismo	pluralismo	NOUN	_	Gender=Masc|Number=Sing	16	obj	_	_
 19	sindical	sindical	ADJ	_	Gender=Masc|Number=Sing	18	amod	_	SpaceAfter=No
-20	.	.	PUNCT	_	_	2	punct	_	SpacesAfter=\n
+20	.	.	PUNCT	_	_	2	punct	_	_
 
-# text = Propôs ainda emendas garantindo o ensino gratuito; o direito de voto a analfabetos, soldados e marinheiros; imunidades nos exercícios funcionais para o professorado e diretores de órgãos sindicais e emendas vinculadas a férias, jornada de oito horas, direito de greve e salário mínimo.
 # sent_id = 8
-1	Propôs	propôr	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
-2	ainda	ainda	ADV	_	_	3	advmod	_	_
+# text = Propôs ainda emendas garantindo o ensino gratuito; o direito de voto a analfabetos, soldados e marinheiros; imunidades nos exercícios funcionais para o professorado e diretores de órgãos sindicais e emendas vinculadas a férias, jornada de oito horas, direito de greve e salário mínimo.
+1	Propôs	propor	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+2	ainda	ainda	ADV	_	_	1	advmod	_	_
 3	emendas	emenda	NOUN	_	Gender=Fem|Number=Plur	1	obj	_	_
 4	garantindo	garantir	VERB	_	VerbForm=Ger	1	advcl	_	_
 5	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	6	det	_	_
 6	ensino	ensino	NOUN	_	Gender=Masc|Number=Sing	4	obj	_	_
 7	gratuito	gratuito	ADJ	_	Gender=Masc|Number=Sing	6	amod	_	SpaceAfter=No
-8	;	;	PUNCT	_	_	1	punct	_	_
+8	;	;	PUNCT	_	_	10	punct	_	_
 9	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	10	det	_	_
-10	direito	direito	NOUN	_	Gender=Masc|Number=Sing	1	obj	_	_
+10	direito	direito	NOUN	_	Gender=Masc|Number=Sing	3	conj	_	_
 11	de	de	ADP	_	_	12	case	_	_
 12	voto	voto	NOUN	_	Gender=Masc|Number=Sing	10	nmod	_	_
 13	a	a	ADP	_	_	14	case	_	_
@@ -308,12 +311,12 @@
 17	e	e	CCONJ	_	_	18	cc	_	_
 18	marinheiros	marinheiro	NOUN	_	Gender=Masc|Number=Plur	14	conj	_	SpaceAfter=No
 19	;	;	PUNCT	_	_	20	punct	_	_
-20	imunidades	imunidade	NOUN	_	Gender=Fem|Number=Plur	10	appos	_	_
+20	imunidades	imunidade	NOUN	_	Gender=Fem|Number=Plur	10	conj	_	_
 21-22	nos	_	_	_	_	_	_	_	_
 21	em	em	ADP	_	_	23	case	_	_
 22	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	23	det	_	_
 23	exercícios	exercício	NOUN	_	Gender=Masc|Number=Plur	20	nmod	_	_
-24	funcionais	funcioonal	ADJ	_	Gender=Masc|Number=Plur	23	amod	_	_
+24	funcionais	funcional	ADJ	_	Gender=Masc|Number=Plur	23	amod	_	_
 25	para	para	ADP	_	_	27	case	_	_
 26	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	27	det	_	_
 27	professorado	professorado	NOUN	_	Gender=Masc|Number=Sing	23	nmod	_	_
@@ -323,27 +326,27 @@
 31	órgãos	órgão	NOUN	_	Gender=Masc|Number=Plur	29	nmod	_	_
 32	sindicais	sindical	ADJ	_	Gender=Masc|Number=Plur	31	amod	_	_
 33	e	e	CCONJ	_	_	34	cc	_	_
-34	emendas	emenda	NOUN	_	Gender=Fem|Number=Plur	27	conj	_	_
+34	emendas	emenda	NOUN	_	Gender=Fem|Number=Plur	20	conj	_	_
 35	vinculadas	vincular	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part	34	acl	_	_
 36	a	a	ADP	_	_	37	case	_	_
 37	férias	férias	NOUN	_	Gender=Fem|Number=Plur	35	obj	_	SpaceAfter=No
 38	,	,	PUNCT	_	_	39	punct	_	_
-39	jornada	jornada	NOUN	_	Gender=Fem|Number=Sing	37	appos	_	_
+39	jornada	jornada	NOUN	_	Gender=Fem|Number=Sing	37	conj	_	_
 40	de	de	ADP	_	_	42	case	_	_
 41	oito	oito	NUM	_	NumType=Card	42	nummod	_	_
 42	horas	hora	NOUN	_	Gender=Fem|Number=Plur	39	nmod	_	SpaceAfter=No
 43	,	,	PUNCT	_	_	44	punct	_	_
-44	direito	direito	NOUN	_	Gender=Masc|Number=Sing	39	conj	_	_
+44	direito	direito	NOUN	_	Gender=Masc|Number=Sing	37	conj	_	_
 45	de	de	ADP	_	_	46	case	_	_
 46	greve	greve	NOUN	_	Gender=Fem|Number=Sing	44	nmod	_	_
 47	e	e	CCONJ	_	_	48	cc	_	_
-48	salário	salário	NOUN	_	Gender=Masc|Number=Sing	39	conj	_	_
+48	salário	salário	NOUN	_	Gender=Masc|Number=Sing	37	conj	_	_
 49	mínimo	mínimo	ADJ	_	Gender=Masc|Number=Sing	48	amod	_	SpaceAfter=No
-50	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
+50	.	.	PUNCT	_	_	1	punct	_	_
 
-# text = Defensor da liberdade de cátedra, foi ainda autor da emenda que estabelecia a representação de classes na proporção de 1/3 da Assembléia Constituinte.
 # sent_id = 9
-1	Defensor	Defensor	NOUN	_	Gender=Masc|Number=Sing	10	nsubj	_	_
+# text = Defensor da liberdade de cátedra, foi ainda autor da emenda que estabelecia a representação de classes na proporção de 1/3 da Assembléia Constituinte.
+1	Defensor	defensor	NOUN	_	Gender=Masc|Number=Sing	10	nmod	_	_
 2-3	da	_	_	_	_	_	_	_	_
 2	de	de	ADP	_	_	4	case	_	_
 3	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	4	det	_	_
@@ -363,7 +366,7 @@
 16	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	17	det	_	_
 17	representação	representação	NOUN	_	Gender=Fem|Number=Sing	15	obj	_	_
 18	de	de	ADP	_	_	19	case	_	_
-19	classes	classe	NOUN	_	Gender=Masc|Number=Plur	17	nmod	_	_
+19	classes	classe	NOUN	_	Gender=Fem|Number=Plur	17	nmod	_	_
 20-21	na	_	_	_	_	_	_	_	_
 20	em	em	ADP	_	_	22	case	_	_
 21	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	22	det	_	_
@@ -373,22 +376,22 @@
 25-26	da	_	_	_	_	_	_	_	_
 25	de	de	ADP	_	_	27	case	_	_
 26	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	27	det	_	_
-27	Assembléia	Assembléia	PROPN	_	Gender=Fem|Number=Sing	24	nmod	_	_
-28	Constituinte	Constituinte	PROPN	_	Number=Sing	27	flat:name	_	SpaceAfter=No
-29	.	.	PUNCT	_	_	10	punct	_	SpacesAfter=\n
+27	Assembléia	assembléia	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	24	nmod	_	_
+28	Constituinte	Constituinte	PROPN	_	Gender=Fem|Number=Sing	27	amod	_	SpaceAfter=No
+29	.	.	PUNCT	_	_	10	punct	_	_
 
-# text = Com a promulgação da nova Carta (16/7/1934), teve seu mandato estendido até maio de 1935, quando encerrou sua carreira política.
 # sent_id = 10
+# text = Com a promulgação da nova Carta (16/7/1934), teve seu mandato estendido até maio de 1935, quando encerrou sua carreira política.
 1	Com	com	ADP	_	_	3	case	_	_
 2	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	3	det	_	_
 3	promulgação	promulgação	NOUN	_	Gender=Fem|Number=Sing	12	obl	_	_
 4-5	da	_	_	_	_	_	_	_	_
-4	de	de	ADP	_	_	6	case	_	_
-5	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	6	det	_	_
-6	nova	nova	PROPN	_	Gender=Fem|Number=Sing	3	nmod	_	_
-7	Carta	carta	PROPN	_	Number=Sing	6	flat:name	_	_
+4	de	de	ADP	_	_	7	case	_	_
+5	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	7	det	_	_
+6	nova	novo	ADJ	_	Gender=Fem|Number=Sing	7	amod	_	_
+7	Carta	carta	NOUN	_	Gender=Fem|Number=Sing	3	nmod	_	_
 8	(	(	PUNCT	_	_	9	punct	_	SpaceAfter=No
-9	16/7/1934	16/7/1934	NUM	_	NumType=Card	6	parataxis	_	SpaceAfter=No
+9	16/7/1934	16/7/1934	NUM	_	NumType=Card	7	appos	_	SpaceAfter=No
 10	)	)	PUNCT	_	_	9	punct	_	SpaceAfter=No
 11	,	,	PUNCT	_	_	3	punct	_	_
 12	teve	ter	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
@@ -399,7 +402,7 @@
 17	maio	maio	NOUN	_	Gender=Masc|Number=Sing	15	obl	_	_
 18	de	de	ADP	_	_	19	case	_	_
 19	1935	1935	NUM	_	NumType=Card	17	nmod	_	SpaceAfter=No
-20	,	,	PUNCT	_	_	12	punct	_	_
+20	,	,	PUNCT	_	_	15	punct	_	_
 21	quando	quando	ADV	_	_	22	advmod	_	_
 22	encerrou	encerrar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	12	advcl	_	_
 23	sua	seu	DET	_	Gender=Fem|Number=Sing|PronType=Prs	24	det	_	_

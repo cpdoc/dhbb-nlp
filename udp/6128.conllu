@@ -1,31 +1,34 @@
-# text = Partido político amazonense fundado antes de 1930 e reorganizado em 1932 como partido de oposição.
-# sent_id = 1
-# newpar
+# generator = UDPipe 2, https://lindat.mff.cuni.cz/services/udpipe
+# udpipe_model = portuguese-bosque-ud-2.12-230717
+# udpipe_model_licence = CC BY-NC-SA
 # newdoc
-1	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	4	nsubj	_	_
-2	político	político	PROPN	_	Number=Sing	1	flat:name	_	_
+# newpar
+# sent_id = 1
+# text = Partido político amazonense fundado antes de 1930 e reorganizado em 1932 como partido de oposição.
+1	Partido	partido	NOUN	_	Gender=Masc|Number=Sing	0	root	_	_
+2	político	político	ADJ	_	Gender=Masc|Number=Sing	1	amod	_	_
 3	amazonense	amazonense	ADJ	_	Gender=Masc|Number=Sing	1	amod	_	_
-4	fundado	fundar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
-5	antes	antes	ADV	_	_	7	advmod	_	_
-6	de	de	ADP	_	_	5	fixed	_	_
-7	1930	1930	NUM	_	NumType=Card	4	obj	_	_
+4	fundado	fundar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	1	acl	_	_
+5	antes	antes	ADV	_	_	4	advmod	_	_
+6	de	de	ADP	_	_	7	case	_	_
+7	1930	1930	NUM	_	NumType=Card	5	obl	_	_
 8	e	e	CCONJ	_	_	9	cc	_	_
-9	reorganizado	reorganizar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	7	conj	_	_
+9	reorganizado	reorganizar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	4	conj	_	_
 10	em	em	ADP	_	_	11	case	_	_
-11	1932	1932	NUM	_	NumType=Card	4	obl	_	_
+11	1932	1932	NUM	_	NumType=Card	9	obl	_	_
 12	como	como	ADP	_	_	13	case	_	_
-13	partido	partido	NOUN	_	Gender=Masc|Number=Sing	11	nmod	_	_
+13	partido	partido	NOUN	_	Gender=Masc|Number=Sing	9	xcomp	_	_
 14	de	de	ADP	_	_	15	case	_	_
 15	oposição	oposição	NOUN	_	Gender=Fem|Number=Sing	13	nmod	_	SpaceAfter=No
-16	.	.	PUNCT	_	_	4	punct	_	SpacesAfter=\n
+16	.	.	PUNCT	_	_	1	punct	_	_
 
-# text = Apesar disso, em 1933, filiou-se à União Cívica Nacional, coligação política organizada para articular apoio nacional ao Governo Provisório de Getúlio Vargas.
 # sent_id = 2
-1	Apesar	apesar	ADV	_	_	8	advmod	_	_
+# text = Apesar disso, em 1933, filiou-se à União Cívica Nacional, coligação política organizada para articular apoio nacional ao Governo Provisório de Getúlio Vargas.
+1	Apesar	apesar	ADV	_	ExtPos=ADP	3	case	_	_
 2-3	disso	_	_	_	_	_	_	_	SpaceAfter=No
 2	de	de	ADP	_	_	1	fixed	_	_
-3	isso	isso	PRON	_	Gender=Masc|Number=Sing|PronType=Dem	1	fixed	_	_
-4	,	,	PUNCT	_	_	1	punct	_	_
+3	isso	isso	PRON	_	Gender=Masc|Number=Sing|PronType=Dem	8	obl	_	_
+4	,	,	PUNCT	_	_	3	punct	_	_
 5	em	em	ADP	_	_	6	case	_	_
 6	1933	1933	NUM	_	NumType=Card	8	obl	_	SpaceAfter=No
 7	,	,	PUNCT	_	_	6	punct	_	_
@@ -35,29 +38,29 @@
 10-11	à	_	_	_	_	_	_	_	_
 10	a	a	ADP	_	_	12	case	_	_
 11	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	12	det	_	_
-12	União	União	PROPN	_	Gender=Fem|Number=Sing	8	obl	_	_
-13	Cívica	cívica	PROPN	_	Number=Sing	12	flat:name	_	_
+12	União	União	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	8	obj	_	_
+13	Cívica	Cívica	PROPN	_	Number=Sing	12	flat:name	_	_
 14	Nacional	Nacional	PROPN	_	Number=Sing	12	flat:name	_	SpaceAfter=No
-15	,	,	PUNCT	_	_	8	punct	_	_
-16	coligação	coligação	NOUN	_	Gender=Fem|Number=Sing	8	obj	_	_
+15	,	,	PUNCT	_	_	16	punct	_	_
+16	coligação	coligação	NOUN	_	Gender=Fem|Number=Sing	12	appos	_	_
 17	política	político	ADJ	_	Gender=Fem|Number=Sing	16	amod	_	_
 18	organizada	organizar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	16	acl	_	_
-19	para	para	ADP	_	_	21	case	_	_
-20	articular	articular	ADJ	_	Gender=Masc|Number=Sing	21	amod	_	_
-21	apoio	apoio	NOUN	_	Gender=Masc|Number=Sing	18	obl	_	_
+19	para	para	SCONJ	_	_	20	mark	_	_
+20	articular	articular	VERB	_	VerbForm=Inf	18	advcl	_	_
+21	apoio	apoio	NOUN	_	Gender=Masc|Number=Sing	20	obj	_	_
 22	nacional	nacional	ADJ	_	Gender=Masc|Number=Sing	21	amod	_	_
 23-24	ao	_	_	_	_	_	_	_	_
 23	a	a	ADP	_	_	25	case	_	_
 24	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	25	det	_	_
 25	Governo	Governo	PROPN	_	Gender=Masc|Number=Sing	21	nmod	_	_
-26	Provisório	provisório	PROPN	_	Number=Sing	25	flat:name	_	_
+26	Provisório	Provisório	PROPN	_	Number=Sing	25	flat:name	_	_
 27	de	de	ADP	_	_	28	case	_	_
-28	Getúlio	Getúlio	PROPN	_	Number=Sing	25	nmod	_	_
+28	Getúlio	Getúlio	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	25	nmod	_	_
 29	Vargas	Vargas	PROPN	_	Number=Sing	28	flat:name	_	SpaceAfter=No
 30	.	.	PUNCT	_	_	8	punct	_	SpacesAfter=\n
 
-# text = Seu conselho deliberativo central, presidido por Marciano Armond, era integrado por Francisco Pereira, João de Freitas, Plácido Serrano e Jatir Pucu de Aguiar.
 # sent_id = 3
+# text = Seu conselho deliberativo central, presidido por Marciano Armond, era integrado por Francisco Pereira, João de Freitas, Plácido Serrano e Jatir Pucu de Aguiar.
 1	Seu	seu	DET	_	Gender=Masc|Number=Sing|PronType=Prs	2	det	_	_
 2	conselho	conselho	NOUN	_	Gender=Masc|Number=Sing	12	nsubj:pass	_	_
 3	deliberativo	deliberativo	ADJ	_	Gender=Masc|Number=Sing	2	amod	_	_
@@ -65,32 +68,32 @@
 5	,	,	PUNCT	_	_	6	punct	_	_
 6	presidido	presidir	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	2	acl	_	_
 7	por	por	ADP	_	_	8	case	_	_
-8	Marciano	Marciano	PROPN	_	Gender=Masc|Number=Sing	6	obl:agent	_	_
+8	Marciano	Marciano	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	6	obl:agent	_	_
 9	Armond	Armond	PROPN	_	Number=Sing	8	flat:name	_	SpaceAfter=No
 10	,	,	PUNCT	_	_	6	punct	_	_
 11	era	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	12	aux:pass	_	_
 12	integrado	integrar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
 13	por	por	ADP	_	_	14	case	_	_
-14	Francisco	Francisco	PROPN	_	Gender=Masc|Number=Sing	12	obl:agent	_	_
+14	Francisco	Francisco	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	12	obl:agent	_	_
 15	Pereira	Pereira	PROPN	_	Number=Sing	14	flat:name	_	SpaceAfter=No
 16	,	,	PUNCT	_	_	17	punct	_	_
-17	João	João	PROPN	_	Gender=Masc|Number=Sing	14	appos	_	_
+17	João	João	PROPN	_	Gender=Masc|Number=Sing	14	conj	_	_
 18	de	de	ADP	_	_	19	case	_	_
 19	Freitas	Freitas	PROPN	_	Number=Sing	17	nmod	_	SpaceAfter=No
-20	,	,	PUNCT	_	_	17	punct	_	_
-21	Plácido	Plácido	PROPN	_	Gender=Masc|Number=Sing	17	appos	_	_
+20	,	,	PUNCT	_	_	21	punct	_	_
+21	Plácido	Plácido	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	14	conj	_	_
 22	Serrano	Serrano	PROPN	_	Number=Sing	21	flat:name	_	_
 23	e	e	CCONJ	_	_	24	cc	_	_
-24	Jatir	Jatir	PROPN	_	Gender=Masc|Number=Sing	21	conj	_	_
+24	Jatir	Jatir	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	14	conj	_	_
 25	Pucu	Pucu	PROPN	_	Number=Sing	24	flat:name	_	_
 26	de	de	ADP	_	_	27	case	_	_
-27	Aguiar	Aguiar	PROPN	_	Number=Sing	24	flat:name	_	SpaceAfter=No
-28	.	.	PUNCT	_	_	12	punct	_	SpacesAfter=\n
+27	Aguiar	Aguiar	PROPN	_	Number=Sing	24	nmod	_	SpaceAfter=No
+28	.	.	PUNCT	_	_	12	punct	_	_
 
-# text = Seu órgão de divulgação oficial era o jornal «A Nação».
 # sent_id = 4
-1	Seu	seu	DET	_	Gender=Fem|Number=Sing|PronType=Prs	2	det	_	_
-2	órgão	órgão	NOUN	_	Gender=Fem|Number=Sing	8	nsubj	_	_
+# text = Seu órgão de divulgação oficial era o jornal «A Nação».
+1	Seu	seu	DET	_	Gender=Masc|Number=Sing|PronType=Prs	2	det	_	_
+2	órgão	órgão	NOUN	_	Gender=Masc|Number=Sing	8	nsubj	_	_
 3	de	de	ADP	_	_	4	case	_	_
 4	divulgação	divulgação	NOUN	_	Gender=Fem|Number=Sing	2	nmod	_	_
 5	oficial	oficial	ADJ	_	Gender=Fem|Number=Sing	4	amod	_	_
@@ -98,60 +101,60 @@
 7	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	8	det	_	_
 8	jornal	jornal	NOUN	_	Gender=Masc|Number=Sing	0	root	_	_
 9	«	«	PUNCT	_	_	10	punct	_	SpaceAfter=No
-10	A	A	PROPN	_	Gender=Fem|Number=Sing	8	appos	_	_
+10	A	A	PROPN	_	Gender=Masc|Number=Sing	8	appos	_	_
 11	Nação	Nação	PROPN	_	Number=Sing	10	flat:name	_	SpaceAfter=No
 12	»	»	PUNCT	_	_	10	punct	_	SpaceAfter=No
 13	.	.	PUNCT	_	_	8	punct	_	SpacesAfter=\n
 
-# text = Como candidatos à Assembléia Nacional Constituinte de 1933, o Partido Liberal chegou a lançar os nomes de Francisco Pereira, Jatir Pucu de Aguiar, João de Freitas e Alfredo Augusto Ribeiro Júnior.
 # sent_id = 5
+# text = Como candidatos à Assembléia Nacional Constituinte de 1933, o Partido Liberal chegou a lançar os nomes de Francisco Pereira, Jatir Pucu de Aguiar, João de Freitas e Alfredo Augusto Ribeiro Júnior.
 1	Como	como	ADP	_	_	2	case	_	_
 2	candidatos	candidato	NOUN	_	Gender=Masc|Number=Plur	16	obl	_	_
 3-4	à	_	_	_	_	_	_	_	_
 3	a	a	ADP	_	_	5	case	_	_
 4	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	5	det	_	_
-5	Assembléia	Assembléia	PROPN	_	Gender=Fem|Number=Sing	2	nmod	_	_
+5	Assembléia	Assembléia	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	2	nmod	_	_
 6	Nacional	Nacional	PROPN	_	Number=Sing	5	flat:name	_	_
 7	Constituinte	Constituinte	PROPN	_	Number=Sing	5	flat:name	_	_
 8	de	de	ADP	_	_	9	case	_	_
 9	1933	1933	NUM	_	NumType=Card	5	nmod	_	SpaceAfter=No
 10	,	,	PUNCT	_	_	2	punct	_	_
 11	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	12	det	_	_
-12	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	16	nsubj	_	_
-13	Liberal	liberal	PROPN	_	Number=Sing	12	flat:name	_	_
-14	chegou	chegar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+12	Partido	Partido	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	14	nsubj	_	_
+13	Liberal	Liberal	PROPN	_	Number=Sing	12	flat:name	_	_
+14	chegou	chegar	VERB	_	ExtPos=AUX|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 15	a	a	SCONJ	_	_	16	mark	_	_
 16	lançar	lançar	VERB	_	VerbForm=Inf	14	xcomp	_	_
 17	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	18	det	_	_
 18	nomes	nome	NOUN	_	Gender=Masc|Number=Plur	16	obj	_	_
 19	de	de	ADP	_	_	20	case	_	_
-20	Francisco	Francisco	PROPN	_	Gender=Masc|Number=Sing	18	nmod	_	_
+20	Francisco	Francisco	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	18	nmod	_	_
 21	Pereira	Pereira	PROPN	_	Number=Sing	20	flat:name	_	SpaceAfter=No
 22	,	,	PUNCT	_	_	23	punct	_	_
-23	Jatir	Jatir	PROPN	_	Gender=Masc|Number=Sing	20	appos	_	_
-24	Pucu	Pucr	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	16	advcl	_	_
+23	Jatir	Jatir	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	20	conj	_	_
+24	Pucu	Pucu	PROPN	_	Number=Sing	23	flat:name	_	_
 25	de	de	ADP	_	_	26	case	_	_
-26	Aguiar	Aguiar	PROPN	_	Gender=Masc|Number=Sing	24	obj	_	SpaceAfter=No
+26	Aguiar	Aguiar	PROPN	_	Number=Sing	23	nmod	_	SpaceAfter=No
 27	,	,	PUNCT	_	_	28	punct	_	_
-28	João	João	PROPN	_	Gender=Masc|Number=Sing	26	conj	_	_
+28	João	João	PROPN	_	Gender=Masc|Number=Sing	20	conj	_	_
 29	de	de	ADP	_	_	30	case	_	_
 30	Freitas	Freitas	PROPN	_	Number=Sing	28	nmod	_	_
 31	e	e	CCONJ	_	_	32	cc	_	_
-32	Alfredo	Alfredo	PROPN	_	Gender=Masc|Number=Sing	26	conj	_	_
+32	Alfredo	Alfredo	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	20	conj	_	_
 33	Augusto	Augusto	PROPN	_	Number=Sing	32	flat:name	_	_
 34	Ribeiro	Ribeiro	PROPN	_	Number=Sing	32	flat:name	_	_
 35	Júnior	Júnior	PROPN	_	Number=Sing	32	flat:name	_	SpaceAfter=No
-36	.	.	PUNCT	_	_	16	punct	_	SpacesAfter=\n
+36	.	.	PUNCT	_	_	16	punct	_	_
 
-# text = Por sugestão de Francisco Pereira, porém, retirou esta chapa e uniu-se aos partidos oposicionistas, o Trabalhista Amazonense e o Republicano do Amazonas, chefiados respectivamente por Silvério Néri e Durval Porto.
 # sent_id = 6
+# text = Por sugestão de Francisco Pereira, porém, retirou esta chapa e uniu-se aos partidos oposicionistas, o Trabalhista Amazonense e o Republicano do Amazonas, chefiados respectivamente por Silvério Néri e Durval Porto.
 1	Por	por	ADP	_	_	2	case	_	_
 2	sugestão	sugestão	NOUN	_	Gender=Fem|Number=Sing	9	obl	_	_
 3	de	de	ADP	_	_	4	case	_	_
-4	Francisco	Francisco	PROPN	_	Gender=Masc|Number=Sing	2	nmod	_	_
+4	Francisco	Francisco	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	2	nmod	_	_
 5	Pereira	Pereira	PROPN	_	Number=Sing	4	flat:name	_	SpaceAfter=No
-6	,	,	PUNCT	_	_	7	punct	_	_
-7	porém	porém	CCONJ	_	_	4	cc	_	SpaceAfter=No
+6	,	,	PUNCT	_	_	2	punct	_	_
+7	porém	porém	CCONJ	_	_	9	cc	_	SpaceAfter=No
 8	,	,	PUNCT	_	_	7	punct	_	_
 9	retirou	retirar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 10	esta	este	DET	_	Gender=Fem|Number=Sing|PronType=Dem	11	det	_	_
@@ -163,39 +166,39 @@
 15-16	aos	_	_	_	_	_	_	_	_
 15	a	a	ADP	_	_	17	case	_	_
 16	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	17	det	_	_
-17	partidos	partido	NOUN	_	Gender=Masc|Number=Plur	13	obl	_	_
+17	partidos	partido	NOUN	_	Gender=Masc|Number=Plur	13	obj	_	_
 18	oposicionistas	oposicionista	ADJ	_	Gender=Masc|Number=Plur	17	amod	_	SpaceAfter=No
-19	,	,	PUNCT	_	_	13	punct	_	_
+19	,	,	PUNCT	_	_	21	punct	_	_
 20	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	21	det	_	_
-21	Trabalhista	trabalhista	PROPN	_	Gender=Masc|Number=Sing	13	obj	_	_
+21	Trabalhista	Trabalhista	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	17	appos	_	_
 22	Amazonense	Amazonense	PROPN	_	Number=Sing	21	flat:name	_	_
 23	e	e	CCONJ	_	_	25	cc	_	_
 24	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	25	det	_	_
-25	Republicano	republicano	PROPN	_	Gender=Masc|Number=Sing	21	conj	_	_
+25	Republicano	Republicano	PROPN	_	Gender=Masc|Number=Sing	21	conj	_	_
 26-27	do	_	_	_	_	_	_	_	_
 26	de	de	ADP	_	_	28	case	_	_
 27	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	28	det	_	_
 28	Amazonas	Amazonas	PROPN	_	Number=Sing	25	nmod	_	SpaceAfter=No
 29	,	,	PUNCT	_	_	30	punct	_	_
-30	chefiados	chefiar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part	21	acl	_	_
-31	respectivamente	respectivamente	ADV	_	_	33	advmod	_	_
+30	chefiados	chefiar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	17	acl	_	_
+31	respectivamente	respectivamente	ADV	_	_	30	advmod	_	_
 32	por	por	ADP	_	_	33	case	_	_
-33	Silvério	Silvério	PROPN	_	Gender=Masc|Number=Sing	30	obl:agent	_	_
+33	Silvério	Silvério	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	30	obl:agent	_	_
 34	Néri	Néri	PROPN	_	Number=Sing	33	flat:name	_	_
 35	e	e	CCONJ	_	_	36	cc	_	_
-36	Durval	Durval	PROPN	_	Gender=Masc|Number=Sing	33	conj	_	_
+36	Durval	Durval	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	33	conj	_	_
 37	Porto	Porto	PROPN	_	Number=Sing	36	flat:name	_	SpaceAfter=No
-38	.	.	PUNCT	_	_	9	punct	_	SpacesAfter=\n
+38	.	.	PUNCT	_	_	9	punct	_	_
 
-# text = Esta aliança denominou-se Aliança Trabalhista-Liberal do Amazonas, e dela resultou uma chapa formada pelos candidatos Luís Tirelli, Leopoldo Néri da Fonseca e Alfredo Augusto Ribeiro Júnior.
 # sent_id = 7
-1	Esta	este	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
+# text = Esta aliança denominou-se Aliança Trabalhista-Liberal do Amazonas, e dela resultou uma chapa formada pelos candidatos Luís Tirelli, Leopoldo Néri da Fonseca e Alfredo Augusto Ribeiro Júnior.
+1	Esta	este	DET	_	Gender=Fem|Number=Sing|PronType=Dem	2	det	_	_
 2	aliança	aliança	NOUN	_	Gender=Fem|Number=Sing	3	nsubj	_	_
 3-4	denominou-se	_	_	_	_	_	_	_	_
 3	denominou	denominar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 4	se	se	PRON	_	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	3	expl	_	_
-5	Aliança	Aliança	PROPN	_	Gender=Fem|Number=Sing	3	xcomp	_	_
-6	Trabalhista-Liberal	Trabalhista-Liberal	PROPN	_	Number=Sing	5	flat:name	_	_
+5	Aliança	Aliança	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	3	xcomp	_	_
+6	Trabalhista-Liberal	Trabalhista-liBeral	PROPN	_	Number=Sing	5	flat:name	_	_
 7-8	do	_	_	_	_	_	_	_	_
 7	de	de	ADP	_	_	9	case	_	_
 8	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	9	det	_	_
@@ -204,8 +207,8 @@
 11	e	e	CCONJ	_	_	14	cc	_	_
 12-13	dela	_	_	_	_	_	_	_	_
 12	de	de	ADP	_	_	13	case	_	_
-13	ela	ela	PRON	_	Gender=Fem|Number=Sing|Person=3|PronType=Prs	14	iobj	_	_
-14	resultou	resultar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	conj	_	_
+13	ela	ela	PRON	_	Gender=Fem|Number=Sing|Person=3|PronType=Prs	14	obl	_	_
+14	resultou	resultar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	conj	_	_
 15	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	16	det	_	_
 16	chapa	chapa	NOUN	_	Gender=Fem|Number=Sing	14	obj	_	_
 17	formada	formar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	16	acl	_	_
@@ -213,31 +216,31 @@
 18	por	por	ADP	_	_	20	case	_	_
 19	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	20	det	_	_
 20	candidatos	candidato	NOUN	_	Gender=Masc|Number=Plur	17	obl:agent	_	_
-21	Luís	Luís	PROPN	_	Gender=Masc|Number=Sing	20	appos	_	_
+21	Luís	Luís	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	20	appos	_	_
 22	Tirelli	Tirelli	PROPN	_	Number=Sing	21	flat:name	_	SpaceAfter=No
 23	,	,	PUNCT	_	_	24	punct	_	_
-24	Leopoldo	Leopoldo	PROPN	_	Gender=Masc|Number=Sing	21	conj	_	_
+24	Leopoldo	Leopoldo	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	21	conj	_	_
 25	Néri	Néri	PROPN	_	Number=Sing	24	flat:name	_	_
 26-27	da	_	_	_	_	_	_	_	_
 26	de	de	ADP	_	_	28	case	_	_
 27	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	28	det	_	_
-28	Fonseca	Fonseca	PROPN	_	Gender=Fem|Number=Sing	24	nmod	_	_
+28	Fonseca	Fonseca	PROPN	_	Number=Sing	24	nmod	_	_
 29	e	e	CCONJ	_	_	30	cc	_	_
-30	Alfredo	Alfredo	PROPN	_	Gender=Masc|Number=Sing	21	conj	_	_
+30	Alfredo	Alfredo	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	21	conj	_	_
 31	Augusto	Augusto	PROPN	_	Number=Sing	30	flat:name	_	_
 32	Ribeiro	Ribeiro	PROPN	_	Number=Sing	30	flat:name	_	_
 33	Júnior	Júnior	PROPN	_	Number=Sing	30	flat:name	_	SpaceAfter=No
-34	.	.	PUNCT	_	_	3	punct	_	SpacesAfter=\n
+34	.	.	PUNCT	_	_	3	punct	_	_
 
-# text = Destes, apenas o primeiro foi eleito.
 # sent_id = 8
+# text = Destes, apenas o primeiro foi eleito.
 1-2	Destes	_	_	_	_	_	_	_	SpaceAfter=No
 1	De	de	ADP	_	_	2	case	_	_
 2	estes	este	PRON	_	Gender=Masc|Number=Plur|PronType=Dem	8	obl	_	_
 3	,	,	PUNCT	_	_	2	punct	_	_
 4	apenas	apenas	ADV	_	_	6	advmod	_	_
 5	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	6	det	_	_
-6	primeiro	primeiro	NOUN	_	Gender=Masc|Number=Sing	8	nsubj:pass	_	_
+6	primeiro	primeiro	ADJ	_	Gender=Masc|Number=Sing|NumType=Ord	8	nsubj:pass	_	_
 7	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	8	aux:pass	_	_
 8	eleito	eleger	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	SpaceAfter=No
 9	.	.	PUNCT	_	_	8	punct	_	SpacesAfter=\n

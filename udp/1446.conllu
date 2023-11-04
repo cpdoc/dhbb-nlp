@@ -1,11 +1,14 @@
-# text = «Jonas de Morais Correia Neto» nasceu no Rio de Janeiro, então Distrito Federal, no dia 22 de novembro de 1925, filho de Jonas de Morais Correia Filho e de Valdemerina Ramos Correia.
-# sent_id = 1
-# newpar
+# generator = UDPipe 2, https://lindat.mff.cuni.cz/services/udpipe
+# udpipe_model = portuguese-bosque-ud-2.12-230717
+# udpipe_model_licence = CC BY-NC-SA
 # newdoc
+# newpar
+# sent_id = 1
+# text = «Jonas de Morais Correia Neto» nasceu no Rio de Janeiro, então Distrito Federal, no dia 22 de novembro de 1925, filho de Jonas de Morais Correia Filho e de Valdemerina Ramos Correia.
 1	«	«	PUNCT	_	_	2	punct	_	SpaceAfter=No
 2	Jonas	Jonas	PROPN	_	Gender=Masc|Number=Sing	8	nsubj	_	_
 3	de	de	ADP	_	_	4	case	_	_
-4	Morais	Morais	PROPN	_	Number=Sing	2	nmod	_	_
+4	Morais	Morais	PROPN	_	ExtPos=PROPN|Number=Sing	2	nmod	_	_
 5	Correia	Correia	PROPN	_	Number=Sing	4	flat:name	_	_
 6	Neto	Neto	PROPN	_	Number=Sing	4	flat:name	_	SpaceAfter=No
 7	»	»	PUNCT	_	_	2	punct	_	_
@@ -15,10 +18,10 @@
 10	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	_	_
 11	Rio	Rio	PROPN	_	Gender=Masc|Number=Sing	8	obl	_	_
 12	de	de	ADP	_	_	13	case	_	_
-13	Janeiro	Janeiro	PROPN	_	Number=Sing	11	flat:name	_	SpaceAfter=No
+13	Janeiro	Janeiro	PROPN	_	Number=Sing	11	nmod	_	SpaceAfter=No
 14	,	,	PUNCT	_	_	16	punct	_	_
-15	então	então	ADV	_	_	14	advmod	_	_
-16	Distrito	Distrito	PROPN	_	Gender=Masc|Number=Sing	11	acl	_	_
+15	então	então	ADV	_	_	16	advmod	_	_
+16	Distrito	Distrito	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	11	appos	_	_
 17	Federal	Federal	PROPN	_	Number=Sing	16	flat:name	_	SpaceAfter=No
 18	,	,	PUNCT	_	_	16	punct	_	_
 19-20	no	_	_	_	_	_	_	_	_
@@ -31,41 +34,41 @@
 25	de	de	ADP	_	_	26	case	_	_
 26	1925	1925	NUM	_	NumType=Card	24	nmod	_	SpaceAfter=No
 27	,	,	PUNCT	_	_	28	punct	_	_
-28	filho	filho	NOUN	_	Gender=Masc|Number=Sing	2	appos	_	_
+28	filho	filho	NOUN	_	Gender=Masc|Number=Sing	8	appos	_	_
 29	de	de	ADP	_	_	30	case	_	_
 30	Jonas	Jonas	PROPN	_	Gender=Masc|Number=Sing	28	nmod	_	_
 31	de	de	ADP	_	_	32	case	_	_
-32	Morais	Morais	PROPN	_	Number=Sing	30	flat:name	_	_
-33	Correia	Correia	PROPN	_	Number=Sing	30	flat:name	_	_
-34	Filho	Filho	PROPN	_	Number=Sing	30	flat:name	_	_
+32	Morais	Morais	PROPN	_	ExtPos=PROPN|Number=Sing	30	nmod	_	_
+33	Correia	Correia	PROPN	_	Number=Sing	32	flat:name	_	_
+34	Filho	Filho	PROPN	_	Number=Sing	32	flat:name	_	_
 35	e	e	CCONJ	_	_	37	cc	_	_
 36	de	de	ADP	_	_	37	case	_	_
-37	Valdemerina	Valdemerina	PROPN	_	Gender=Fem|Number=Sing	30	conj	_	_
-38	Ramos	ramos	PROPN	_	Number=Sing	37	flat:name	_	_
+37	Valdemerina	Valdemerina	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	30	conj	_	_
+38	Ramos	Ramos	PROPN	_	Number=Sing	37	flat:name	_	_
 39	Correia	Correia	PROPN	_	Number=Sing	37	flat:name	_	SpaceAfter=No
-40	.	.	PUNCT	_	_	8	punct	_	SpacesAfter=\n
+40	.	.	PUNCT	_	_	8	punct	_	_
 
-# text = Seu pai foi militar (participou do levante tenentista de 1922) e político (foi constituinte de 1946 e deputado federal pelo Distrito Federal entre 1946 e 1951).
 # sent_id = 2
+# text = Seu pai foi militar (participou do levante tenentista de 1922) e político (foi constituinte de 1946 e deputado federal pelo Distrito Federal entre 1946 e 1951).
 1	Seu	seu	DET	_	Gender=Masc|Number=Sing|PronType=Prs	2	det	_	_
 2	pai	pai	NOUN	_	Gender=Masc|Number=Sing	4	nsubj	_	_
 3	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	cop	_	_
-4	militar	militar	ADJ	_	Gender=Fem|Number=Sing	0	root	_	_
+4	militar	militar	ADJ	_	Gender=Masc|Number=Sing	0	root	_	_
 5	(	(	PUNCT	_	_	6	punct	_	SpaceAfter=No
-6	participou	participar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	advcl	_	_
+6	participou	participar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	parataxis	_	_
 7-8	do	_	_	_	_	_	_	_	_
 7	de	de	ADP	_	_	9	case	_	_
 8	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	9	det	_	_
-9	levante	levante	NOUN	_	Gender=Masc|Number=Sing	6	obl	_	_
+9	levante	levante	NOUN	_	Gender=Masc|Number=Sing	6	obj	_	_
 10	tenentista	tenentista	ADJ	_	Gender=Masc|Number=Sing	9	amod	_	_
 11	de	de	ADP	_	_	12	case	_	_
 12	1922	1922	NUM	_	NumType=Card	9	nmod	_	SpaceAfter=No
 13	)	)	PUNCT	_	_	6	punct	_	_
 14	e	e	CCONJ	_	_	15	cc	_	_
-15	político	político	ADJ	_	Gender=Masc|Number=Sing	6	conj	_	_
+15	político	político	ADJ	_	Gender=Masc|Number=Sing	4	conj	_	_
 16	(	(	PUNCT	_	_	18	punct	_	SpaceAfter=No
 17	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	18	cop	_	_
-18	constituinte	constituinte	NUM	_	NumType=Card	6	parataxis	_	_
+18	constituinte	constituinte	NOUN	_	Gender=Masc|Number=Sing	15	parataxis	_	_
 19	de	de	ADP	_	_	20	case	_	_
 20	1946	1946	NUM	_	NumType=Card	18	nmod	_	_
 21	e	e	CCONJ	_	_	22	cc	_	_
@@ -74,58 +77,58 @@
 24-25	pelo	_	_	_	_	_	_	_	_
 24	por	por	ADP	_	_	26	case	_	_
 25	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	26	det	_	_
-26	Distrito	Distrito	PROPN	_	Gender=Masc|Number=Sing	22	nmod	_	_
+26	Distrito	Distrito	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	22	nmod	_	_
 27	Federal	Federal	PROPN	_	Number=Sing	26	flat:name	_	_
 28	entre	entre	ADP	_	_	29	case	_	_
-29	1946	1946	NUM	_	NumType=Card	26	nmod	_	_
+29	1946	1946	NUM	_	NumType=Card	18	nmod	_	_
 30	e	e	CCONJ	_	_	31	cc	_	_
 31	1951	1951	NUM	_	NumType=Card	29	conj	_	SpaceAfter=No
-32	)	)	PUNCT	_	_	6	punct	_	SpaceAfter=No
+32	)	)	PUNCT	_	_	18	punct	_	SpaceAfter=No
 33	.	.	PUNCT	_	_	4	punct	_	SpacesAfter=\n
 
-# text = Ingressou na Escola Militar de Realengo (RJ), procedente do Colégio Militar em março de 1943.
 # sent_id = 3
-1	Ingressou	Ingressar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+# text = Ingressou na Escola Militar de Realengo (RJ), procedente do Colégio Militar em março de 1943.
+1	Ingressou	ingressar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2-3	na	_	_	_	_	_	_	_	_
 2	em	em	ADP	_	_	4	case	_	_
 3	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	4	det	_	_
-4	Escola	Escola	PROPN	_	Gender=Fem|Number=Sing	1	obl	_	_
+4	Escola	Escola	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	1	obl	_	_
 5	Militar	Militar	PROPN	_	Number=Sing	4	flat:name	_	_
 6	de	de	ADP	_	_	7	case	_	_
 7	Realengo	Realengo	PROPN	_	Number=Sing	4	nmod	_	_
 8	(	(	PUNCT	_	_	9	punct	_	SpaceAfter=No
-9	RJ	RJ	PROPN	_	Gender=Masc|Number=Sing	4	appos	_	SpaceAfter=No
+9	RJ	RJ	PROPN	_	Gender=Masc|Number=Sing	4	parataxis	_	SpaceAfter=No
 10	)	)	PUNCT	_	_	9	punct	_	SpaceAfter=No
 11	,	,	PUNCT	_	_	12	punct	_	_
-12	procedente	procedente	NOUN	_	Gender=Masc|Number=Sing	4	appos	_	_
+12	procedente	procedente	ADJ	_	Gender=Fem|Number=Sing	4	amod	_	_
 13-14	do	_	_	_	_	_	_	_	_
 13	de	de	ADP	_	_	15	case	_	_
 14	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	15	det	_	_
-15	Colégio	colégio	PROPN	_	Gender=Masc|Number=Sing	12	nmod	_	_
-16	Militar	militar	PROPN	_	Number=Sing	15	flat:name	_	_
+15	Colégio	Colégio	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	12	obl	_	_
+16	Militar	Militar	PROPN	_	Number=Sing	15	flat:name	_	_
 17	em	em	ADP	_	_	18	case	_	_
-18	março	março	NOUN	_	Gender=Masc|Number=Sing	15	nmod	_	_
+18	março	março	NOUN	_	Gender=Masc|Number=Sing	12	obl	_	_
 19	de	de	ADP	_	_	20	case	_	_
 20	1943	1943	NUM	_	NumType=Card	18	nmod	_	SpaceAfter=No
-21	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
+21	.	.	PUNCT	_	_	1	punct	_	_
 
-# text = Em janeiro de 1945 foi para a Escola Militar de Resende (RJ), onde deu continuidade à sua formação.
 # sent_id = 4
+# text = Em janeiro de 1945 foi para a Escola Militar de Resende (RJ), onde deu continuidade à sua formação.
 1	Em	em	ADP	_	_	2	case	_	_
-2	janeiro	janeiro	NOUN	_	Gender=Masc|Number=Sing	8	nmod	_	_
+2	janeiro	janeiro	NOUN	_	Gender=Masc|Number=Sing	5	obl	_	_
 3	de	de	ADP	_	_	4	case	_	_
 4	1945	1945	NUM	_	NumType=Card	2	nmod	_	_
-5	foi	ir	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	8	cop	_	_
+5	foi	ir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 6	para	para	ADP	_	_	8	case	_	_
 7	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	8	det	_	_
-8	Escola	Escola	PROPN	_	Gender=Fem|Number=Sing	0	root	_	_
+8	Escola	Escola	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	5	obl	_	_
 9	Militar	Militar	PROPN	_	Number=Sing	8	flat:name	_	_
 10	de	de	ADP	_	_	11	case	_	_
-11	Resende	Resende	PROPN	_	Number=Sing	8	flat:name	_	_
+11	Resende	Resende	PROPN	_	Number=Sing	8	nmod	_	_
 12	(	(	PUNCT	_	_	13	punct	_	SpaceAfter=No
-13	RJ	RJ	PROPN	_	Gender=Fem|Number=Sing	8	appos	_	SpaceAfter=No
+13	RJ	RJ	PROPN	_	Gender=Masc|Number=Sing	8	parataxis	_	SpaceAfter=No
 14	)	)	PUNCT	_	_	13	punct	_	SpaceAfter=No
-15	,	,	PUNCT	_	_	8	punct	_	_
+15	,	,	PUNCT	_	_	17	punct	_	_
 16	onde	onde	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	17	obl	_	_
 17	deu	dar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	8	acl:relcl	_	_
 18	continuidade	continuidade	NOUN	_	Gender=Fem|Number=Sing	17	obj	_	_
@@ -133,11 +136,11 @@
 19	a	a	ADP	_	_	22	case	_	_
 20	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	22	det	_	_
 21	sua	seu	DET	_	Gender=Fem|Number=Sing|PronType=Prs	22	det	_	_
-22	formação	formação	NOUN	_	Gender=Fem|Number=Sing	18	nmod	_	SpaceAfter=No
-23	.	.	PUNCT	_	_	8	punct	_	SpacesAfter=\n
+22	formação	formação	NOUN	_	Gender=Fem|Number=Sing	17	iobj	_	SpaceAfter=No
+23	.	.	PUNCT	_	_	5	punct	_	_
 
-# text = Em dezembro de 1945 foi promovido a segundo-tenente e em janeiro de 1948 a primeiro-tenente.
 # sent_id = 5
+# text = Em dezembro de 1945 foi promovido a segundo-tenente e em janeiro de 1948 a primeiro-tenente.
 1	Em	em	ADP	_	_	2	case	_	_
 2	dezembro	dezembro	NOUN	_	Gender=Masc|Number=Sing	6	obl	_	_
 3	de	de	ADP	_	_	4	case	_	_
@@ -145,18 +148,18 @@
 5	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	aux:pass	_	_
 6	promovido	promover	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
 7	a	a	ADP	_	_	8	case	_	_
-8	segundo-tenente	segundo-tenente	NOUN	_	Gender=Masc|Number=Sing	6	obl	_	_
+8	segundo-tenente	segundo-tenente	NOUN	_	Gender=Masc|Number=Sing	6	obj	_	_
 9	e	e	CCONJ	_	_	11	cc	_	_
 10	em	em	ADP	_	_	11	case	_	_
-11	janeiro	janeiro	NOUN	_	Gender=Masc|Number=Sing	8	conj	_	_
+11	janeiro	janeiro	NOUN	_	Gender=Masc|Number=Sing	6	obl	_	_
 12	de	de	ADP	_	_	13	case	_	_
 13	1948	1948	NUM	_	NumType=Card	11	nmod	_	_
 14	a	a	ADP	_	_	15	case	_	_
-15	primeiro-tenente	primeiro-tenente	NOUN	_	Gender=Masc|Number=Sing	13	nmod	_	SpaceAfter=No
-16	.	.	PUNCT	_	_	6	punct	_	SpacesAfter=\n
+15	primeiro-tenente	primeiro-tenente	NOUN	_	Gender=Masc|Number=Sing	11	nmod	_	SpaceAfter=No
+16	.	.	PUNCT	_	_	6	punct	_	_
 
-# text = Em maio seguinte matriculou-se no curso de guerra química, nos Estados Unidos, concluindo-o em dezembro.
 # sent_id = 6
+# text = Em maio seguinte matriculou-se no curso de guerra química, nos Estados Unidos, concluindo-o em dezembro.
 1	Em	em	ADP	_	_	2	case	_	_
 2	maio	maio	NOUN	_	Gender=Masc|Number=Sing	4	obl	_	_
 3	seguinte	seguinte	ADJ	_	Gender=Masc|Number=Sing	2	amod	_	_
@@ -182,22 +185,22 @@
 19	o	ele	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	18	obj	_	_
 20	em	em	ADP	_	_	21	case	_	_
 21	dezembro	dezembro	NOUN	_	Gender=Masc|Number=Sing	18	obl	_	SpaceAfter=No
-22	.	.	PUNCT	_	_	4	punct	_	SpacesAfter=\n
+22	.	.	PUNCT	_	_	4	punct	_	_
 
-# text = Em abril de 1951, passou a capitão.
 # sent_id = 7
+# text = Em abril de 1951, passou a capitão.
 1	Em	em	ADP	_	_	2	case	_	_
 2	abril	abril	NOUN	_	Gender=Masc|Number=Sing	6	obl	_	_
 3	de	de	ADP	_	_	4	case	_	_
 4	1951	1951	NUM	_	NumType=Card	2	nmod	_	SpaceAfter=No
 5	,	,	PUNCT	_	_	2	punct	_	_
 6	passou	passar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
-7	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	8	det	_	_
-8	capitão	capitão	NOUN	_	Gender=Fem|Number=Sing	6	obj	_	SpaceAfter=No
-9	.	.	PUNCT	_	_	6	punct	_	SpacesAfter=\n
+7	a	a	ADP	_	_	8	case	_	_
+8	capitão	capitão	NOUN	_	Gender=Masc|Number=Sing	6	obj	_	SpaceAfter=No
+9	.	.	PUNCT	_	_	6	punct	_	_
 
-# text = Em janeiro do ano seguinte foi nomeado para servir no Colégio Militar, como comandante da 5ª Companhia de Artilharia.
 # sent_id = 8
+# text = Em janeiro do ano seguinte foi nomeado para servir no Colégio Militar, como comandante da 5ª Companhia de Artilharia.
 1	Em	em	ADP	_	_	2	case	_	_
 2	janeiro	janeiro	NOUN	_	Gender=Masc|Number=Sing	8	obl	_	_
 3-4	do	_	_	_	_	_	_	_	_
@@ -212,11 +215,11 @@
 11-12	no	_	_	_	_	_	_	_	_
 11	em	em	ADP	_	_	13	case	_	_
 12	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	13	det	_	_
-13	Colégio	colégio	PROPN	_	Gender=Masc|Number=Sing	10	obl	_	_
+13	Colégio	Colégio	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	10	obl	_	_
 14	Militar	Militar	PROPN	_	Number=Sing	13	flat:name	_	SpaceAfter=No
-15	,	,	PUNCT	_	_	17	punct	_	_
+15	,	,	PUNCT	_	_	10	punct	_	_
 16	como	como	ADP	_	_	17	case	_	_
-17	comandante	comandante	NOUN	_	Gender=Masc|Number=Sing	13	nmod	_	_
+17	comandante	comandante	NOUN	_	Gender=Masc|Number=Sing	8	obl	_	_
 18-19	da	_	_	_	_	_	_	_	_
 18	de	de	ADP	_	_	21	case	_	_
 19	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	21	det	_	_
@@ -224,29 +227,29 @@
 21	Companhia	Companhia	PROPN	_	Gender=Fem|Number=Sing	17	nmod	_	_
 22	de	de	ADP	_	_	23	case	_	_
 23	Artilharia	Artilharia	PROPN	_	Number=Sing	21	nmod	_	SpaceAfter=No
-24	.	.	PUNCT	_	_	8	punct	_	SpacesAfter=\n
+24	.	.	PUNCT	_	_	8	punct	_	_
 
-# text = Transferido para o Regimento Floriano (1º R. o 105 C.A) em agosto de 1954, em fevereiro iniciou o curso de artilharia da Escola de Aperfeiçoamento Para Oficiais (EsAO), concluindo-o em outubro.
 # sent_id = 9
+# text = Transferido para o Regimento Floriano (1º R. o 105 C.A) em agosto de 1954, em fevereiro iniciou o curso de artilharia da Escola de Aperfeiçoamento Para Oficiais (EsAO), concluindo-o em outubro.
 1	Transferido	transferir	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	20	advcl	_	_
 2	para	para	ADP	_	_	4	case	_	_
 3	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	4	det	_	_
-4	Regimento	Regimento	PROPN	_	Gender=Masc|Number=Sing	1	obl	_	_
+4	Regimento	Regimento	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	1	obl	_	_
 5	Floriano	Floriano	PROPN	_	Number=Sing	4	flat:name	_	_
-6	(	(	PUNCT	_	_	7	punct	_	SpaceAfter=No
-7	1º	1º	ADJ	_	Gender=Masc|Number=Sing|NumType=Ord	4	appos	_	_
-8	R.	R.	PROPN	_	Gender=Fem|Number=Sing	7	flat:name	_	_
+6	(	(	PUNCT	_	_	8	punct	_	SpaceAfter=No
+7	1º	1º	ADJ	_	Gender=Masc|Number=Sing|NumType=Ord	8	amod	_	_
+8	R.	resposta	NOUN	_	Abbr=Yes|Gender=Masc|Number=Sing	4	appos	_	_
 9	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	_	_
 10	105	105	NUM	_	NumType=Card	11	nummod	_	_
-11	C.A	C.A	PROPN	_	Gender=Masc|Number=Sing	7	appos	_	SpaceAfter=No
-12	)	)	PUNCT	_	_	7	punct	_	_
+11	C.A	c.a	PROPN	_	Gender=Masc|Number=Sing	8	appos	_	SpaceAfter=No
+12	)	)	PUNCT	_	_	8	punct	_	_
 13	em	em	ADP	_	_	14	case	_	_
 14	agosto	agosto	NOUN	_	Gender=Masc|Number=Sing	1	obl	_	_
 15	de	de	ADP	_	_	16	case	_	_
 16	1954	1954	NUM	_	NumType=Card	14	nmod	_	SpaceAfter=No
-17	,	,	PUNCT	_	_	16	punct	_	_
+17	,	,	PUNCT	_	_	1	punct	_	_
 18	em	em	ADP	_	_	19	case	_	_
-19	fevereiro	fevereiro	NOUN	_	Gender=Masc|Number=Sing	1	obl	_	_
+19	fevereiro	fevereiro	NOUN	_	Gender=Masc|Number=Sing	20	obl	_	_
 20	iniciou	iniciar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 21	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	22	det	_	_
 22	curso	curso	NOUN	_	Gender=Masc|Number=Sing	20	obj	_	_
@@ -254,14 +257,14 @@
 24	artilharia	artilharia	NOUN	_	Gender=Fem|Number=Sing	22	nmod	_	_
 25-26	da	_	_	_	_	_	_	_	_
 25	de	de	ADP	_	_	27	case	_	_
-26	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	27	det	_	_
-27	Escola	Escola	PROPN	_	Gender=Fem|Number=Sing	24	nmod	_	_
+26	a	o	DET	_	Definite=Def|PronType=Art	27	det	_	_
+27	Escola	Escola	PROPN	_	Gender=Fem|Number=Sing	22	nmod	_	_
 28	de	de	ADP	_	_	29	case	_	_
 29	Aperfeiçoamento	Aperfeiçoamento	PROPN	_	Number=Sing	27	nmod	_	_
 30	Para	para	ADP	_	_	31	case	_	_
-31	Oficiais	oficiais	PROPN	_	Number=Sing	29	nmod	_	_
+31	Oficiais	Oficiais	PROPN	_	Number=Sing	29	nmod	_	_
 32	(	(	PUNCT	_	_	33	punct	_	SpaceAfter=No
-33	EsAO	EsAO	PROPN	_	Gender=Fem|Number=Sing	27	appos	_	SpaceAfter=No
+33	EsAO	ESAO	PROPN	_	Gender=Fem|Number=Sing	27	appos	_	SpaceAfter=No
 34	)	)	PUNCT	_	_	33	punct	_	SpaceAfter=No
 35	,	,	PUNCT	_	_	36	punct	_	_
 36-37	concluindo-o	_	_	_	_	_	_	_	_
@@ -271,8 +274,8 @@
 39	outubro	outubro	NOUN	_	Gender=Masc|Number=Sing	36	obl	_	SpaceAfter=No
 40	.	.	PUNCT	_	_	20	punct	_	SpacesAfter=\n
 
-# text = Após fazer o curso da Escola Superior de Comando do Estado-Maior do Exército (ECEME), entre fevereiro de 1950 e dezembro de 1960, foi designado para estágio no Quartel Geral da guarnição de Uruguaiana (RS), onde permaneceu até maio de 1961.
 # sent_id = 10
+# text = Após fazer o curso da Escola Superior de Comando do Estado-Maior do Exército (ECEME), entre fevereiro de 1950 e dezembro de 1960, foi designado para estágio no Quartel Geral da guarnição de Uruguaiana (RS), onde permaneceu até maio de 1961.
 1	Após	após	SCONJ	_	_	2	mark	_	_
 2	fazer	fazer	VERB	_	VerbForm=Inf	31	advcl	_	_
 3	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	4	det	_	_
@@ -280,31 +283,31 @@
 5-6	da	_	_	_	_	_	_	_	_
 5	de	de	ADP	_	_	7	case	_	_
 6	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	7	det	_	_
-7	Escola	Escola	PROPN	_	Gender=Fem|Number=Sing	4	nmod	_	_
+7	Escola	Escola	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	4	nmod	_	_
 8	Superior	Superior	PROPN	_	Number=Sing	7	flat:name	_	_
 9	de	de	ADP	_	_	10	case	_	_
-10	Comando	comando	PROPN	_	Number=Sing	7	nmod	_	_
+10	Comando	Comando	PROPN	_	Number=Sing	7	nmod	_	_
 11-12	do	_	_	_	_	_	_	_	_
 11	de	de	ADP	_	_	13	case	_	_
 12	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	13	det	_	_
-13	Estado-Maior	Estado-Maior	PROPN	_	Gender=Masc|Number=Sing	10	nmod	_	_
+13	Estado-Maior	Estado-maior	PROPN	_	Number=Sing	10	nmod	_	_
 14-15	do	_	_	_	_	_	_	_	_
 14	de	de	ADP	_	_	16	case	_	_
 15	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	16	det	_	_
-16	Exército	exército	NOUN	_	Gender=Masc|Number=Sing	13	nmod	_	_
+16	Exército	Exército	PROPN	_	Number=Sing	13	nmod	_	_
 17	(	(	PUNCT	_	_	18	punct	_	SpaceAfter=No
-18	ECEME	ECEME	PROPN	_	Gender=Masc|Number=Sing	16	appos	_	SpaceAfter=No
+18	ECEME	ECEME	PROPN	_	Gender=Fem|Number=Sing	7	appos	_	SpaceAfter=No
 19	)	)	PUNCT	_	_	18	punct	_	SpaceAfter=No
-20	,	,	PUNCT	_	_	2	punct	_	_
+20	,	,	PUNCT	_	_	22	punct	_	_
 21	entre	entre	ADP	_	_	22	case	_	_
 22	fevereiro	fevereiro	NOUN	_	Gender=Masc|Number=Sing	2	obl	_	_
 23	de	de	ADP	_	_	24	case	_	_
 24	1950	1950	NUM	_	NumType=Card	22	nmod	_	_
 25	e	e	CCONJ	_	_	26	cc	_	_
-26	dezembro	dezembro	NOUN	_	Gender=Masc|Number=Sing	24	conj	_	_
+26	dezembro	dezembro	NOUN	_	Gender=Masc|Number=Sing	22	conj	_	_
 27	de	de	ADP	_	_	28	case	_	_
 28	1960	1960	NUM	_	NumType=Card	26	nmod	_	SpaceAfter=No
-29	,	,	PUNCT	_	_	2	punct	_	_
+29	,	,	PUNCT	_	_	22	punct	_	_
 30	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	31	aux:pass	_	_
 31	designado	designar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
 32	para	para	ADP	_	_	33	case	_	_
@@ -312,7 +315,7 @@
 34-35	no	_	_	_	_	_	_	_	_
 34	em	em	ADP	_	_	36	case	_	_
 35	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	36	det	_	_
-36	Quartel	Quartel	PROPN	_	Gender=Masc|Number=Sing	31	obl	_	_
+36	Quartel	Quartel	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	31	obl	_	_
 37	Geral	Geral	PROPN	_	Number=Sing	36	flat:name	_	_
 38-39	da	_	_	_	_	_	_	_	_
 38	de	de	ADP	_	_	40	case	_	_
@@ -321,7 +324,7 @@
 41	de	de	ADP	_	_	42	case	_	_
 42	Uruguaiana	Uruguaiana	PROPN	_	Gender=Masc|Number=Sing	40	nmod	_	_
 43	(	(	PUNCT	_	_	44	punct	_	SpaceAfter=No
-44	RS	RS	PROPN	_	Gender=Masc|Number=Sing	36	appos	_	SpaceAfter=No
+44	RS	RS	PROPN	_	Gender=Masc|Number=Sing	42	parataxis	_	SpaceAfter=No
 45	)	)	PUNCT	_	_	44	punct	_	SpaceAfter=No
 46	,	,	PUNCT	_	_	48	punct	_	_
 47	onde	onde	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	48	obl	_	_
@@ -330,11 +333,11 @@
 50	maio	maio	NOUN	_	Gender=Masc|Number=Sing	48	obl	_	_
 51	de	de	ADP	_	_	52	case	_	_
 52	1961	1961	NUM	_	NumType=Card	50	nmod	_	SpaceAfter=No
-53	.	.	PUNCT	_	_	31	punct	_	SpacesAfter=\n
+53	.	.	PUNCT	_	_	31	punct	_	_
 
-# text = Instrutor do curso de cooperação de armas e serviços da EsAO de janeiro a dezembro de 1963, em seguida tornou-se instrutor da Seção de Ensino da escola.
 # sent_id = 11
-1	Instrutor	Instrutor	NOUN	_	Gender=Masc|Number=Sing	23	nsubj	_	_
+# text = Instrutor do curso de cooperação de armas e serviços da EsAO de janeiro a dezembro de 1963, em seguida tornou-se instrutor da Seção de Ensino da escola.
+1	Instrutor	instrutor	NOUN	_	Gender=Masc|Number=Sing	23	obl	_	_
 2-3	do	_	_	_	_	_	_	_	_
 2	de	de	ADP	_	_	4	case	_	_
 3	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	4	det	_	_
@@ -344,13 +347,13 @@
 7	de	de	ADP	_	_	8	case	_	_
 8	armas	arma	NOUN	_	Gender=Fem|Number=Plur	6	nmod	_	_
 9	e	e	CCONJ	_	_	10	cc	_	_
-10	serviços	serviço	NOUN	_	Gender=Masc|Number=Plur	4	conj	_	_
+10	serviços	serviço	NOUN	_	Gender=Masc|Number=Plur	8	conj	_	_
 11-12	da	_	_	_	_	_	_	_	_
 11	de	de	ADP	_	_	13	case	_	_
 12	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	13	det	_	_
-13	EsAO	EsAO	PROPN	_	Gender=Fem|Number=Sing	10	nmod	_	_
+13	EsAO	ESAO	PROPN	_	Gender=Fem|Number=Sing	4	nmod	_	_
 14	de	de	ADP	_	_	15	case	_	_
-15	janeiro	janeiro	NOUN	_	Gender=Masc|Number=Sing	13	nmod	_	_
+15	janeiro	janeiro	NOUN	_	Gender=Masc|Number=Sing	4	nmod	_	_
 16	a	a	ADP	_	_	17	case	_	_
 17	dezembro	dezembro	NOUN	_	Gender=Masc|Number=Sing	15	nmod	_	_
 18	de	de	ADP	_	_	19	case	_	_
@@ -361,21 +364,21 @@
 23-24	tornou-se	_	_	_	_	_	_	_	_
 23	tornou	tornar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 24	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	23	expl	_	_
-25	instrutor	instrutor	NOUN	_	Gender=Masc|Number=Sing	23	nsubj	_	_
+25	instrutor	instrutor	NOUN	_	Gender=Masc|Number=Sing	23	xcomp	_	_
 26-27	da	_	_	_	_	_	_	_	_
 26	de	de	ADP	_	_	28	case	_	_
 27	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	28	det	_	_
-28	Seção	Seção	NOUN	_	Gender=Fem|Number=Sing	25	nmod	_	_
+28	Seção	seção	PROPN	_	Gender=Fem|Number=Sing	25	nmod	_	_
 29	de	de	ADP	_	_	30	case	_	_
-30	Ensino	ensino	PROPN	_	Gender=Masc|Number=Sing	28	nmod	_	_
+30	Ensino	Ensino	PROPN	_	Number=Sing	28	nmod	_	_
 31-32	da	_	_	_	_	_	_	_	_
 31	de	de	ADP	_	_	33	case	_	_
 32	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	33	det	_	_
-33	escola	escola	NOUN	_	Gender=Fem|Number=Sing	30	nmod	_	SpaceAfter=No
-34	.	.	PUNCT	_	_	23	punct	_	SpacesAfter=\n
+33	escola	escola	NOUN	_	Number=Sing	30	nmod	_	SpaceAfter=No
+34	.	.	PUNCT	_	_	23	punct	_	_
 
-# text = Permaneceu nesse cargo até fevereiro de 1965, quando foi designado para servir no EME.
 # sent_id = 12
+# text = Permaneceu nesse cargo até fevereiro de 1965, quando foi designado para servir no EME.
 1	Permaneceu	permanecer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2-3	nesse	_	_	_	_	_	_	_	_
 2	em	em	ADP	_	_	4	case	_	_
@@ -395,10 +398,10 @@
 15	em	em	ADP	_	_	17	case	_	_
 16	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	17	det	_	_
 17	EME	EME	PROPN	_	Gender=Masc|Number=Sing	14	obl	_	SpaceAfter=No
-18	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
+18	.	.	PUNCT	_	_	1	punct	_	_
 
-# text = Em agosto, foi promovido ao posto de tenente-coronel.
 # sent_id = 13
+# text = Em agosto, foi promovido ao posto de tenente-coronel.
 1	Em	em	ADP	_	_	2	case	_	_
 2	agosto	agosto	NOUN	_	Gender=Masc|Number=Sing	5	obl	_	SpaceAfter=No
 3	,	,	PUNCT	_	_	2	punct	_	_
@@ -407,13 +410,13 @@
 6-7	ao	_	_	_	_	_	_	_	_
 6	a	a	ADP	_	_	8	case	_	_
 7	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	8	det	_	_
-8	posto	posto	NOUN	_	Gender=Masc|Number=Sing	5	obl	_	_
+8	posto	posto	NOUN	_	Gender=Masc|Number=Sing	5	obj	_	_
 9	de	de	ADP	_	_	10	case	_	_
 10	tenente-coronel	tenente-coronel	NOUN	_	Gender=Masc|Number=Sing	8	nmod	_	SpaceAfter=No
 11	.	.	PUNCT	_	_	5	punct	_	SpacesAfter=\n
 
-# text = Em março de 1970 matriculou-se curso de estado-maior e comando das forças armadas, oferecido pela Escola Superior de Guerra (ESG), diplomando-se em dezembro.
 # sent_id = 14
+# text = Em março de 1970 matriculou-se curso de estado-maior e comando das forças armadas, oferecido pela Escola Superior de Guerra (ESG), diplomando-se em dezembro.
 1	Em	em	ADP	_	_	2	case	_	_
 2	março	março	NOUN	_	Gender=Masc|Number=Sing	5	obl	_	_
 3	de	de	ADP	_	_	4	case	_	_
@@ -421,38 +424,38 @@
 5-6	matriculou-se	_	_	_	_	_	_	_	_
 5	matriculou	matricular	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 6	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	5	expl	_	_
-7	curso	curso	NOUN	_	Gender=Masc|Number=Sing	5	xcomp	_	_
+7	curso	curso	NOUN	_	Gender=Masc|Number=Sing	5	obj	_	_
 8	de	de	ADP	_	_	9	case	_	_
-9	estado-maior	estado-maior	ADJ	_	Gender=Masc|Number=Sing	7	nmod	_	_
+9	estado-maior	estado-maior	NOUN	_	Gender=Masc|Number=Sing	7	nmod	_	_
 10	e	e	CCONJ	_	_	11	cc	_	_
-11	comando	comar	VERB	_	VerbForm=Ger	5	conj	_	_
+11	comando	comando	NOUN	_	Gender=Masc|Number=Sing	9	conj	_	_
 12-13	das	_	_	_	_	_	_	_	_
 12	de	de	ADP	_	_	14	case	_	_
 13	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	14	det	_	_
-14	forças	força	NOUN	_	Gender=Fem|Number=Plur	11	obj	_	_
-15	armadas	armar	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part	14	acl	_	SpaceAfter=No
+14	forças	força	NOUN	_	Gender=Fem|Number=Plur	11	nmod	_	_
+15	armadas	armar	ADJ	_	Gender=Fem|Number=Plur	14	amod	_	SpaceAfter=No
 16	,	,	PUNCT	_	_	17	punct	_	_
-17	oferecido	oferecer	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	5	conj	_	_
+17	oferecido	oferecer	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	7	acl	_	_
 18-19	pela	_	_	_	_	_	_	_	_
 18	por	por	ADP	_	_	20	case	_	_
 19	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	20	det	_	_
-20	Escola	Escola	PROPN	_	Gender=Fem|Number=Sing	17	obl:agent	_	_
+20	Escola	Escola	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	17	obl:agent	_	_
 21	Superior	Superior	PROPN	_	Number=Sing	20	flat:name	_	_
 22	de	de	ADP	_	_	23	case	_	_
-23	Guerra	guerra	PROPN	_	Number=Sing	20	nmod	_	_
+23	Guerra	Guerra	PROPN	_	Number=Sing	20	nmod	_	_
 24	(	(	PUNCT	_	_	25	punct	_	SpaceAfter=No
-25	ESG	ESG	PROPN	_	Gender=Masc|Number=Sing	20	appos	_	SpaceAfter=No
+25	ESG	ESG	PROPN	_	Gender=Fem|Number=Sing	20	appos	_	SpaceAfter=No
 26	)	)	PUNCT	_	_	25	punct	_	SpaceAfter=No
 27	,	,	PUNCT	_	_	28	punct	_	_
 28-29	diplomando-se	_	_	_	_	_	_	_	_
-28	diplomando	diplomar	VERB	_	VerbForm=Ger	17	advcl	_	_
-29	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	28	obj	_	_
+28	diplomando	diplomar	VERB	_	VerbForm=Ger	5	advcl	_	_
+29	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	28	expl	_	_
 30	em	em	ADP	_	_	31	case	_	_
 31	dezembro	dezembro	NOUN	_	Gender=Masc|Number=Sing	28	obl	_	SpaceAfter=No
-32	.	.	PUNCT	_	_	5	punct	_	SpacesAfter=\n
+32	.	.	PUNCT	_	_	5	punct	_	_
 
-# text = Em março de 1971, assumiu o comando do Colégio Militar de Porto Alegre, exercendo-o até março de 1973.
 # sent_id = 15
+# text = Em março de 1971, assumiu o comando do Colégio Militar de Porto Alegre, exercendo-o até março de 1973.
 1	Em	em	ADP	_	_	2	case	_	_
 2	março	março	NOUN	_	Gender=Masc|Number=Sing	6	obl	_	_
 3	de	de	ADP	_	_	4	case	_	_
@@ -460,14 +463,14 @@
 5	,	,	PUNCT	_	_	2	punct	_	_
 6	assumiu	assumir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 7	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	8	det	_	_
-8	comando	comando	NOUN	_	Gender=Masc|Number=Sing	6	nsubj	_	_
+8	comando	comando	NOUN	_	Gender=Masc|Number=Sing	6	obj	_	_
 9-10	do	_	_	_	_	_	_	_	_
 9	de	de	ADP	_	_	11	case	_	_
 10	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	_	_
-11	Colégio	colégio	PROPN	_	Gender=Masc|Number=Sing	8	nmod	_	_
-12	Militar	militar	PROPN	_	Number=Sing	11	flat:name	_	_
+11	Colégio	Colégio	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	8	nmod	_	_
+12	Militar	Militar	PROPN	_	Number=Sing	11	flat:name	_	_
 13	de	de	ADP	_	_	14	case	_	_
-14	Porto	Porto	PROPN	_	Number=Sing	11	nmod	_	_
+14	Porto	Porto	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	11	nmod	_	_
 15	Alegre	Alegre	PROPN	_	Number=Sing	14	flat:name	_	SpaceAfter=No
 16	,	,	PUNCT	_	_	17	punct	_	_
 17-18	exercendo-o	_	_	_	_	_	_	_	_
@@ -477,13 +480,13 @@
 20	março	março	NOUN	_	Gender=Masc|Number=Sing	17	obl	_	_
 21	de	de	ADP	_	_	22	case	_	_
 22	1973	1973	NUM	_	NumType=Card	20	nmod	_	SpaceAfter=No
-23	.	.	PUNCT	_	_	6	punct	_	SpacesAfter=\n
+23	.	.	PUNCT	_	_	6	punct	_	_
 
-# text = Promovido a coronel em outubro daquele ano, de março a dezembro de 1974 realizou o curso superior de guerra.
 # sent_id = 16
-1	Promovido	promover	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	0	root	_	_
+# text = Promovido a coronel em outubro daquele ano, de março a dezembro de 1974 realizou o curso superior de guerra.
+1	Promovido	promover	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	16	advcl	_	_
 2	a	a	ADP	_	_	3	case	_	_
-3	coronel	coronel	NOUN	_	Gender=Masc|Number=Sing	1	obl	_	_
+3	coronel	coronel	NOUN	_	Gender=Masc|Number=Sing	1	obj	_	_
 4	em	em	ADP	_	_	5	case	_	_
 5	outubro	outubro	NOUN	_	Gender=Masc|Number=Sing	1	obl	_	_
 6-7	daquele	_	_	_	_	_	_	_	_
@@ -492,55 +495,55 @@
 8	ano	ano	NOUN	_	Gender=Masc|Number=Sing	5	nmod	_	SpaceAfter=No
 9	,	,	PUNCT	_	_	1	punct	_	_
 10	de	de	ADP	_	_	11	case	_	_
-11	março	março	NOUN	_	Gender=Masc|Number=Sing	1	obl	_	_
+11	março	março	NOUN	_	Gender=Masc|Number=Sing	16	obl	_	_
 12	a	a	ADP	_	_	13	case	_	_
 13	dezembro	dezembro	NOUN	_	Gender=Masc|Number=Sing	11	nmod	_	_
 14	de	de	ADP	_	_	15	case	_	_
 15	1974	1974	NUM	_	NumType=Card	13	nmod	_	_
-16	realizou	realizar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	1	advcl	_	_
+16	realizou	realizar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 17	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	18	det	_	_
 18	curso	curso	NOUN	_	Gender=Masc|Number=Sing	16	obj	_	_
-19	superior	alto	ADJ	_	Gender=Masc|Number=Sing	18	amod	_	_
+19	superior	superior	ADJ	_	Gender=Masc|Number=Sing	18	amod	_	_
 20	de	de	ADP	_	_	21	case	_	_
 21	guerra	guerra	NOUN	_	Gender=Fem|Number=Sing	18	nmod	_	SpaceAfter=No
-22	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
+22	.	.	PUNCT	_	_	16	punct	_	SpacesAfter=\n
 
-# text = Assistente-secretário do Comando da ESG de maio de 1976 a dezembro de 1977, em fevereiro de 1978 foi nomeado assistente do secretário do general-de-exército Airton Pereira Tourinho, chefe do Departamento Geral de Pessoal (DGP), em Brasília.
 # sent_id = 17
-1	Assistente-secretário	Assistente-secretário	NOUN	_	Gender=Masc|Number=Sing	22	nsubj:pass	_	_
+# text = Assistente-secretário do Comando da ESG de maio de 1976 a dezembro de 1977, em fevereiro de 1978 foi nomeado assistente do secretário do general-de-exército Airton Pereira Tourinho, chefe do Departamento Geral de Pessoal (DGP), em Brasília.
+1	Assistente-secretário	assistente-secretário	NOUN	_	Gender=Masc|Number=Sing	22	obl	_	_
 2-3	do	_	_	_	_	_	_	_	_
 2	de	de	ADP	_	_	4	case	_	_
 3	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	4	det	_	_
-4	Comando	comando	PROPN	_	Gender=Masc|Number=Sing	1	obl	_	_
+4	Comando	Comando	PROPN	_	Gender=Masc|Number=Sing	1	nmod	_	_
 5-6	da	_	_	_	_	_	_	_	_
 5	de	de	ADP	_	_	7	case	_	_
 6	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	7	det	_	_
-7	ESG	Esg	NOUN	_	Gender=Fem|Number=Sing	4	nmod	_	_
+7	ESG	ESG	PROPN	_	Gender=Fem|Number=Sing	4	nmod	_	_
 8	de	de	ADP	_	_	9	case	_	_
-9	maio	maio	NOUN	_	Gender=Masc|Number=Sing	7	nmod	_	_
+9	maio	maio	NOUN	_	Gender=Masc|Number=Sing	1	nmod	_	_
 10	de	de	ADP	_	_	11	case	_	_
 11	1976	1976	NUM	_	NumType=Card	9	nmod	_	_
 12	a	a	ADP	_	_	13	case	_	_
-13	dezembro	dezembro	NOUN	_	Gender=Masc|Number=Sing	11	nmod	_	_
+13	dezembro	dezembro	NOUN	_	Gender=Masc|Number=Sing	9	nmod	_	_
 14	de	de	ADP	_	_	15	case	_	_
 15	1977	1977	NUM	_	NumType=Card	13	nmod	_	SpaceAfter=No
 16	,	,	PUNCT	_	_	1	punct	_	_
 17	em	em	ADP	_	_	18	case	_	_
-18	fevereiro	fevereiro	NOUN	_	Gender=Masc|Number=Sing	1	nmod	_	_
+18	fevereiro	fevereiro	NOUN	_	Gender=Masc|Number=Sing	22	obl	_	_
 19	de	de	ADP	_	_	20	case	_	_
 20	1978	1978	NUM	_	NumType=Card	18	nmod	_	_
 21	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	22	aux:pass	_	_
 22	nomeado	nomear	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
-23	assistente	assistente	ADV	_	_	22	advmod	_	_
+23	assistente	assistente	NOUN	_	Gender=Masc|Number=Sing	22	nsubj:pass	_	_
 24-25	do	_	_	_	_	_	_	_	_
 24	de	de	ADP	_	_	26	case	_	_
 25	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	26	det	_	_
-26	secretário	secretário	NOUN	_	Gender=Masc|Number=Sing	23	obl	_	_
+26	secretário	secretário	NOUN	_	Gender=Masc|Number=Sing	23	nmod	_	_
 27-28	do	_	_	_	_	_	_	_	_
 27	de	de	ADP	_	_	29	case	_	_
 28	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	29	det	_	_
 29	general-de-exército	general-de-exército	NOUN	_	Gender=Masc|Number=Sing	26	nmod	_	_
-30	Airton	Airton	PROPN	_	Gender=Masc|Number=Sing	29	appos	_	_
+30	Airton	Airton	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	29	appos	_	_
 31	Pereira	Pereira	PROPN	_	Number=Sing	30	flat:name	_	_
 32	Tourinho	Tourinho	PROPN	_	Number=Sing	30	flat:name	_	SpaceAfter=No
 33	,	,	PUNCT	_	_	34	punct	_	_
@@ -548,20 +551,20 @@
 35-36	do	_	_	_	_	_	_	_	_
 35	de	de	ADP	_	_	37	case	_	_
 36	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	37	det	_	_
-37	Departamento	departamento	PROPN	_	Gender=Masc|Number=Sing	34	nmod	_	_
+37	Departamento	Departamento	PROPN	_	Gender=Masc|Number=Sing	34	nmod	_	_
 38	Geral	Geral	PROPN	_	Number=Sing	37	flat:name	_	_
 39	de	de	ADP	_	_	40	case	_	_
-40	Pessoal	pessoal	PROPN	_	Number=Sing	37	nmod	_	_
+40	Pessoal	Pessoal	PROPN	_	Number=Sing	37	nmod	_	_
 41	(	(	PUNCT	_	_	42	punct	_	SpaceAfter=No
-42	DGP	DGP	PROPN	_	Gender=Fem|Number=Sing	37	appos	_	SpaceAfter=No
+42	DGP	DGP	PROPN	_	Gender=Masc|Number=Sing	37	appos	_	SpaceAfter=No
 43	)	)	PUNCT	_	_	42	punct	_	SpaceAfter=No
-44	,	,	PUNCT	_	_	34	punct	_	_
+44	,	,	PUNCT	_	_	46	punct	_	_
 45	em	em	ADP	_	_	46	case	_	_
 46	Brasília	Brasília	PROPN	_	Gender=Fem|Number=Sing	22	obl	_	SpaceAfter=No
-47	.	.	PUNCT	_	_	22	punct	_	SpacesAfter=\n
+47	.	.	PUNCT	_	_	22	punct	_	_
 
-# text = Em abril foi transferido para o Departamento de Engenharia e Comunicação (DEC), também em Brasília, como chefe de gabinete.
 # sent_id = 18
+# text = Em abril foi transferido para o Departamento de Engenharia e Comunicação (DEC), também em Brasília, como chefe de gabinete.
 1	Em	em	ADP	_	_	2	case	_	_
 2	abril	abril	NOUN	_	Gender=Masc|Number=Sing	4	obl	_	_
 3	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	aux:pass	_	_
@@ -570,75 +573,75 @@
 6	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	7	det	_	_
 7	Departamento	Departamento	PROPN	_	Gender=Masc|Number=Sing	4	obl	_	_
 8	de	de	ADP	_	_	9	case	_	_
-9	Engenharia	engenharia	PROPN	_	Number=Sing	7	nmod	_	_
+9	Engenharia	Engenharia	PROPN	_	ExtPos=PROPN|Number=Sing	7	nmod	_	_
 10	e	e	CCONJ	_	_	9	flat:name	_	_
-11	Comunicação	comunicação	PROPN	_	Number=Sing	9	flat:name	_	_
+11	Comunicação	Comunicação	PROPN	_	Number=Sing	9	flat:name	_	_
 12	(	(	PUNCT	_	_	13	punct	_	SpaceAfter=No
 13	DEC	DEC	PROPN	_	Gender=Masc|Number=Sing	7	appos	_	SpaceAfter=No
 14	)	)	PUNCT	_	_	13	punct	_	SpaceAfter=No
-15	,	,	PUNCT	_	_	18	punct	_	_
+15	,	,	PUNCT	_	_	4	punct	_	_
 16	também	também	ADV	_	_	18	advmod	_	_
 17	em	em	ADP	_	_	18	case	_	_
-18	Brasília	Brasília	PROPN	_	Gender=Fem|Number=Sing	7	appos	_	SpaceAfter=No
+18	Brasília	Brasília	PROPN	_	Gender=Fem|Number=Sing	4	obl	_	SpaceAfter=No
 19	,	,	PUNCT	_	_	18	punct	_	_
 20	como	como	ADP	_	_	21	case	_	_
-21	chefe	chefe	NOUN	_	Gender=Masc|Number=Sing	18	nmod	_	_
+21	chefe	chefe	NOUN	_	Gender=Masc|Number=Sing	4	xcomp	_	_
 22	de	de	ADP	_	_	23	case	_	_
 23	gabinete	gabinete	NOUN	_	Gender=Masc|Number=Sing	21	nmod	_	SpaceAfter=No
-24	.	.	PUNCT	_	_	4	punct	_	SpacesAfter=\n
+24	.	.	PUNCT	_	_	4	punct	_	_
 
-# text = Em dezembro foi designado para o Estado-Maior do Exército (EME).
 # sent_id = 19
+# text = Em dezembro foi designado para o Estado-Maior do Exército (EME).
 1	Em	em	ADP	_	_	2	case	_	_
 2	dezembro	dezembro	NOUN	_	Gender=Masc|Number=Sing	4	obl	_	_
 3	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	aux:pass	_	_
 4	designado	designar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
 5	para	para	ADP	_	_	7	case	_	_
 6	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	7	det	_	_
-7	Estado-Maior	Estado-Maior	PROPN	_	Gender=Masc|Number=Sing	4	obl	_	_
+7	Estado-Maior	Estado-maior	PROPN	_	Gender=Masc|Number=Sing	4	obl	_	_
 8-9	do	_	_	_	_	_	_	_	_
 8	de	de	ADP	_	_	10	case	_	_
 9	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	10	det	_	_
-10	Exército	exército	NOUN	_	Gender=Masc|Number=Sing	7	nmod	_	_
+10	Exército	Exército	PROPN	_	Number=Sing	7	nmod	_	_
 11	(	(	PUNCT	_	_	12	punct	_	SpaceAfter=No
-12	EME	EME	PROPN	_	Gender=Masc|Number=Sing	10	appos	_	SpaceAfter=No
+12	EME	EME	PROPN	_	Gender=Masc|Number=Sing	7	appos	_	SpaceAfter=No
 13	)	)	PUNCT	_	_	12	punct	_	SpaceAfter=No
-14	.	.	PUNCT	_	_	4	punct	_	SpacesAfter=\n
+14	.	.	PUNCT	_	_	4	punct	_	_
 
-# text = Em abril de 1979 assumiu o comando da Artilharia Divisionária da 3ª Divisão do Exército, em Cruz Alta (RS).
 # sent_id = 20
+# text = Em abril de 1979 assumiu o comando da Artilharia Divisionária da 3ª Divisão do Exército, em Cruz Alta (RS).
 1	Em	em	ADP	_	_	2	case	_	_
 2	abril	abril	NOUN	_	Gender=Masc|Number=Sing	5	obl	_	_
 3	de	de	ADP	_	_	4	case	_	_
 4	1979	1979	NUM	_	NumType=Card	2	nmod	_	_
 5	assumiu	assumir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 6	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	7	det	_	_
-7	comando	comando	NOUN	_	Gender=Masc|Number=Sing	5	nsubj	_	_
+7	comando	comando	NOUN	_	Gender=Masc|Number=Sing	5	obj	_	_
 8-9	da	_	_	_	_	_	_	_	_
 8	de	de	ADP	_	_	10	case	_	_
 9	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	10	det	_	_
-10	Artilharia	Artilharia	PROPN	_	Gender=Fem|Number=Sing	7	nmod	_	_
+10	Artilharia	Artilharia	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	7	nmod	_	_
 11	Divisionária	Divisionária	PROPN	_	Number=Sing	10	flat:name	_	_
 12-13	da	_	_	_	_	_	_	_	_
-12	de	de	ADP	_	_	15	case	_	_
-13	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	15	det	_	_
-14	3ª	3ª	ADJ	_	Gender=Fem|Number=Sing|NumType=Ord	15	amod	_	_
-15	Divisão	divisão	NOUN	_	Gender=Fem|Number=Sing	10	nmod	_	_
+12	de	de	ADP	_	_	14	case	_	_
+13	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	14	det	_	_
+14	3ª	3ª	ADJ	_	Gender=Fem|Number=Sing|NumType=Ord	10	amod	_	_
+15	Divisão	Divisão	PROPN	_	Number=Sing	10	flat:name	_	_
 16-17	do	_	_	_	_	_	_	_	_
 16	de	de	ADP	_	_	18	case	_	_
 17	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	18	det	_	_
-18	Exército	exército	NOUN	_	Gender=Masc|Number=Sing	15	nmod	_	SpaceAfter=No
+18	Exército	Exército	PROPN	_	Number=Sing	14	nmod	_	SpaceAfter=No
 19	,	,	PUNCT	_	_	21	punct	_	_
 20	em	em	ADP	_	_	21	case	_	_
-21	Cruz	Cruz	PROPN	_	Gender=Masc|Number=Sing	7	nmod	_	_
+21	Cruz	Cruz	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	5	obl	_	_
 22	Alta	Alta	PROPN	_	Number=Sing	21	flat:name	_	_
 23	(	(	PUNCT	_	_	24	punct	_	SpaceAfter=No
-24	RS	RS	PROPN	_	Gender=Masc|Number=Sing	21	appos	_	SpaceAfter=No
+24	RS	RS	PROPN	_	Gender=Masc|Number=Sing	21	parataxis	_	SpaceAfter=No
 25	)	)	PUNCT	_	_	24	punct	_	SpaceAfter=No
-26	.	.	PUNCT	_	_	5	punct	_	SpacesAfter=\n
+26	.	.	PUNCT	_	_	5	punct	_	_
 
-# text = Em março de 1980 recebeu a promoção de general-de-brigada.
 # sent_id = 21
+# text = Em março de 1980 recebeu a promoção de general-de-brigada.
 1	Em	em	ADP	_	_	2	case	_	_
 2	março	março	NOUN	_	Gender=Masc|Number=Sing	5	obl	_	_
 3	de	de	ADP	_	_	4	case	_	_
@@ -650,19 +653,19 @@
 9	general-de-brigada	general-de-brigada	NOUN	_	Gender=Fem|Number=Sing	7	nmod	_	SpaceAfter=No
 10	.	.	PUNCT	_	_	5	punct	_	SpacesAfter=\n
 
-# text = Diretor de Inativos e Pensionistas de julho de 1981 a março de 1983, neste último mês foi nomeado subchefe de operações do Estado-Maior das Forças Armadas (EMFA).
 # sent_id = 22
+# text = Diretor de Inativos e Pensionistas de julho de 1981 a março de 1983, neste último mês foi nomeado subchefe de operações do Estado-Maior das Forças Armadas (EMFA).
 1	Diretor	diretor	NOUN	_	Gender=Masc|Number=Sing	20	obl	_	_
 2	de	de	ADP	_	_	3	case	_	_
-3	Inativos	Inativo	NOUN	_	Gender=Masc|Number=Plur	1	nmod	_	_
+3	Inativos	Inativos	PROPN	_	Gender=Masc|Number=Plur	1	nmod	_	_
 4	e	e	CCONJ	_	_	5	cc	_	_
-5	Pensionistas	Pensionista	NOUN	_	Gender=Masc|Number=Plur	3	conj	_	_
+5	Pensionistas	Pensionistas	PROPN	_	Number=Sing	3	conj	_	_
 6	de	de	ADP	_	_	7	case	_	_
-7	julho	julho	NOUN	_	Gender=Masc|Number=Sing	5	nmod	_	_
+7	julho	julho	NOUN	_	Gender=Masc|Number=Sing	1	nmod	_	_
 8	de	de	ADP	_	_	9	case	_	_
-9	1981	1981	NUM	_	NumType=Card	3	nmod	_	_
+9	1981	1981	NUM	_	NumType=Card	7	nmod	_	_
 10	a	a	ADP	_	_	11	case	_	_
-11	março	março	NOUN	_	Gender=Masc|Number=Sing	9	nmod	_	_
+11	março	março	NOUN	_	Gender=Masc|Number=Sing	7	nmod	_	_
 12	de	de	ADP	_	_	13	case	_	_
 13	1983	1983	NUM	_	NumType=Card	11	nmod	_	SpaceAfter=No
 14	,	,	PUNCT	_	_	1	punct	_	_
@@ -673,25 +676,25 @@
 18	mês	mês	NOUN	_	Gender=Masc|Number=Sing	20	obl	_	_
 19	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	20	aux:pass	_	_
 20	nomeado	nomear	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
-21	subchefe	subchefe	NOUN	_	Gender=Masc|Number=Sing	20	nsubj	_	_
+21	subchefe	subchefe	NOUN	_	Gender=Masc|Number=Sing	20	nsubj:pass	_	_
 22	de	de	ADP	_	_	23	case	_	_
 23	operações	operação	NOUN	_	Gender=Fem|Number=Plur	21	nmod	_	_
 24-25	do	_	_	_	_	_	_	_	_
 24	de	de	ADP	_	_	26	case	_	_
 25	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	26	det	_	_
-26	Estado-Maior	Estado-Maior	PROPN	_	Gender=Masc|Number=Sing	23	nmod	_	_
+26	Estado-Maior	Estado-maior	PROPN	_	Gender=Masc|Number=Sing	23	nmod	_	_
 27-28	das	_	_	_	_	_	_	_	_
 27	de	de	ADP	_	_	29	case	_	_
 28	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	29	det	_	_
-29	Forças	Forças	PROPN	_	Gender=Fem|Number=Plur	26	nmod	_	_
+29	Forças	Forças	PROPN	_	ExtPos=PROPN|Number=Sing	26	nmod	_	_
 30	Armadas	Armadas	PROPN	_	Number=Sing	29	flat:name	_	_
 31	(	(	PUNCT	_	_	32	punct	_	SpaceAfter=No
-32	EMFA	EMFA	PROPN	_	Gender=Fem|Number=Sing	29	parataxis	_	SpaceAfter=No
+32	EMFA	EMFA	PROPN	_	Gender=Masc|Number=Sing	26	appos	_	SpaceAfter=No
 33	)	)	PUNCT	_	_	32	punct	_	SpaceAfter=No
-34	.	.	PUNCT	_	_	20	punct	_	SpacesAfter=\n
+34	.	.	PUNCT	_	_	20	punct	_	_
 
-# text = Em abril do ano seguinte foi promovido a general-de-divisão e em seguida nomeado diretor de Especialização e Extensão do Exército.
 # sent_id = 23
+# text = Em abril do ano seguinte foi promovido a general-de-divisão e em seguida nomeado diretor de Especialização e Extensão do Exército.
 1	Em	em	ADP	_	_	2	case	_	_
 2	abril	abril	NOUN	_	Gender=Masc|Number=Sing	8	obl	_	_
 3-4	do	_	_	_	_	_	_	_	_
@@ -701,25 +704,25 @@
 6	seguinte	seguinte	ADJ	_	Gender=Masc|Number=Sing	5	amod	_	_
 7	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	8	aux:pass	_	_
 8	promovido	promover	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
-9	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	10	det	_	_
-10	general-de-divisão	general-de-divisão	NOUN	_	Gender=Fem|Number=Sing	8	nsubj:pass	_	_
-11	e	e	CCONJ	_	_	13	cc	_	_
+9	a	a	ADP	_	_	10	case	_	_
+10	general-de-divisão	general-de-divisão	NOUN	_	Gender=Fem|Number=Sing	8	obj	_	_
+11	e	e	CCONJ	_	_	14	cc	_	_
 12	em	em	ADP	_	_	13	case	_	_
-13	seguida	seguida	NOUN	_	Gender=Fem|Number=Sing	10	conj	_	_
-14	nomeado	nomear	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	13	acl	_	_
+13	seguida	seguida	NOUN	_	Gender=Fem|Number=Sing	14	obl	_	_
+14	nomeado	nomear	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	8	conj	_	_
 15	diretor	diretor	NOUN	_	Gender=Masc|Number=Sing	14	obj	_	_
 16	de	de	ADP	_	_	17	case	_	_
-17	Especialização	especialização	NOUN	_	Gender=Fem|Number=Sing	15	nmod	_	_
-18	e	e	CCONJ	_	_	19	cc	_	_
-19	Extensão	extensão	NOUN	_	Gender=Fem|Number=Sing	17	conj	_	_
+17	Especialização	Especialização	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	15	nmod	_	_
+18	e	e	CCONJ	_	_	17	flat:name	_	_
+19	Extensão	Extensão	PROPN	_	Number=Sing	17	flat:name	_	_
 20-21	do	_	_	_	_	_	_	_	_
 20	de	de	ADP	_	_	22	case	_	_
 21	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	22	det	_	_
-22	Exército	exército	NOUN	_	Gender=Masc|Number=Sing	17	nmod	_	SpaceAfter=No
-23	.	.	PUNCT	_	_	8	punct	_	SpacesAfter=\n
+22	Exército	Exército	PROPN	_	Number=Sing	17	nmod	_	SpaceAfter=No
+23	.	.	PUNCT	_	_	8	punct	_	_
 
-# text = Em março de 1985 foi nomeado secretário-geral do Exército, permanecendo no exercício dessa função por um ano.
 # sent_id = 24
+# text = Em março de 1985 foi nomeado secretário-geral do Exército, permanecendo no exercício dessa função por um ano.
 1	Em	em	ADP	_	_	2	case	_	_
 2	março	março	NOUN	_	Gender=Masc|Number=Sing	6	obl	_	_
 3	de	de	ADP	_	_	4	case	_	_
@@ -744,10 +747,10 @@
 19	por	por	ADP	_	_	21	case	_	_
 20	um	um	NUM	_	NumType=Card	21	nummod	_	_
 21	ano	ano	NOUN	_	Gender=Masc|Number=Sing	12	obl	_	SpaceAfter=No
-22	.	.	PUNCT	_	_	6	punct	_	SpacesAfter=\n
+22	.	.	PUNCT	_	_	6	punct	_	_
 
-# text = Em março de 1988, o presidente da República José Sarney nomeou-o comandante Militar do Sudoeste.
 # sent_id = 25
+# text = Em março de 1988, o presidente da República José Sarney nomeou-o comandante Militar do Sudoeste.
 1	Em	em	ADP	_	_	2	case	_	_
 2	março	março	NOUN	_	Gender=Masc|Number=Sing	13	obl	_	_
 3	de	de	ADP	_	_	4	case	_	_
@@ -758,22 +761,22 @@
 8-9	da	_	_	_	_	_	_	_	_
 8	de	de	ADP	_	_	10	case	_	_
 9	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	10	det	_	_
-10	República	República	PROPN	_	Number=Sing	7	nmod	_	_
-11	José	José	PROPN	_	Gender=Masc|Number=Sing	7	appos	_	_
+10	República	república	NOUN	_	Gender=Fem|Number=Sing	7	nmod	_	_
+11	José	José	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	7	appos	_	_
 12	Sarney	Sarney	PROPN	_	Number=Sing	11	flat:name	_	_
 13-14	nomeou-o	_	_	_	_	_	_	_	_
 13	nomeou	nomear	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 14	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	15	det	_	_
 15	comandante	comandante	NOUN	_	Gender=Masc|Number=Sing	13	obj	_	_
-16	Militar	militar	ADJ	_	Gender=Masc|Number=Sing	15	amod	_	_
+16	Militar	Militar	PROPN	_	Gender=Masc|Number=Sing	15	appos	_	_
 17-18	do	_	_	_	_	_	_	_	_
 17	de	de	ADP	_	_	19	case	_	_
 18	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	19	det	_	_
 19	Sudoeste	sudoeste	NOUN	_	Gender=Masc|Number=Sing	15	nmod	_	SpaceAfter=No
-20	.	.	PUNCT	_	_	13	punct	_	SpacesAfter=\n
+20	.	.	PUNCT	_	_	13	punct	_	_
 
-# text = Nesse mesmo mês recebeu a patente de general-de-exército.
 # sent_id = 26
+# text = Nesse mesmo mês recebeu a patente de general-de-exército.
 1-2	Nesse	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	4	case	_	_
 2	esse	esse	DET	_	Gender=Masc|Number=Sing|PronType=Dem	4	det	_	_
@@ -786,8 +789,8 @@
 9	general-de-exército	general-de-exército	NOUN	_	Gender=Masc|Number=Sing	7	nmod	_	SpaceAfter=No
 10	.	.	PUNCT	_	_	5	punct	_	SpacesAfter=\n
 
-# text = Em dezembro de 1989, foi exonerado do Comando Militar do Sudeste, e nomeado, em janeiro de 1990, ministro de Estado chefe do EMFA.
 # sent_id = 27
+# text = Em dezembro de 1989, foi exonerado do Comando Militar do Sudeste, e nomeado, em janeiro de 1990, ministro de Estado chefe do EMFA.
 1	Em	em	ADP	_	_	2	case	_	_
 2	dezembro	dezembro	NOUN	_	Gender=Masc|Number=Sing	7	obl	_	_
 3	de	de	ADP	_	_	4	case	_	_
@@ -798,33 +801,33 @@
 8-9	do	_	_	_	_	_	_	_	_
 8	de	de	ADP	_	_	10	case	_	_
 9	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	10	det	_	_
-10	Comando	Comando	PROPN	_	Gender=Masc|Number=Sing	7	obl	_	_
-11	Militar	militar	PROPN	_	Number=Sing	10	flat:name	_	_
+10	Comando	Comando	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	7	obl	_	_
+11	Militar	Militar	PROPN	_	Number=Sing	10	flat:name	_	_
 12-13	do	_	_	_	_	_	_	_	_
 12	de	de	ADP	_	_	14	case	_	_
 13	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	14	det	_	_
-14	Sudeste	Sudeste	PROPN	_	Gender=Masc|Number=Sing	10	nmod	_	SpaceAfter=No
+14	Sudeste	Sudeste	PROPN	_	Number=Sing	10	nmod	_	SpaceAfter=No
 15	,	,	PUNCT	_	_	17	punct	_	_
 16	e	e	CCONJ	_	_	17	cc	_	_
-17	nomeado	nomear	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	10	conj	_	SpaceAfter=No
+17	nomeado	nomear	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	7	conj	_	SpaceAfter=No
 18	,	,	PUNCT	_	_	17	punct	_	_
 19	em	em	ADP	_	_	20	case	_	_
 20	janeiro	janeiro	NOUN	_	Gender=Masc|Number=Sing	17	obl	_	_
 21	de	de	ADP	_	_	22	case	_	_
 22	1990	1990	NUM	_	NumType=Card	20	nmod	_	SpaceAfter=No
-23	,	,	PUNCT	_	_	24	punct	_	_
-24	ministro	ministro	NOUN	_	Gender=Masc|Number=Sing	20	appos	_	_
+23	,	,	PUNCT	_	_	17	punct	_	_
+24	ministro	ministro	NOUN	_	Gender=Masc|Number=Sing	17	obj	_	_
 25	de	de	ADP	_	_	26	case	_	_
 26	Estado	estado	NOUN	_	Gender=Masc|Number=Sing	24	nmod	_	_
-27	chefe	chefe	NOUN	_	Gender=Masc|Number=Sing	24	appos	_	_
+27	chefe	chefe	NOUN	_	Gender=Masc|Number=Sing	24	nmod	_	_
 28-29	do	_	_	_	_	_	_	_	_
 28	de	de	ADP	_	_	30	case	_	_
 29	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	30	det	_	_
-30	EMFA	EMFA	PROPN	_	Gender=Masc|Number=Sing	27	nmod	_	SpaceAfter=No
-31	.	.	PUNCT	_	_	7	punct	_	SpacesAfter=\n
+30	EMFA	EMFA	PROPN	_	Gender=Masc|Number=Sing	24	nmod	_	SpaceAfter=No
+31	.	.	PUNCT	_	_	7	punct	_	_
 
-# text = Em janeiro de 1991, garantiu que o Brasil, a despeito do apoio incondicional dado pelo governo às resoluções tomadas pelo Conselho de Segurança da Organização das Nações Unidas (ONU), não mandaria tropas para o Oriente Médio, onde se travava a chamada guerra do Golfo, entre o Iraque e os Estados Unidos.
 # sent_id = 28
+# text = Em janeiro de 1991, garantiu que o Brasil, a despeito do apoio incondicional dado pelo governo às resoluções tomadas pelo Conselho de Segurança da Organização das Nações Unidas (ONU), não mandaria tropas para o Oriente Médio, onde se travava a chamada guerra do Golfo, entre o Iraque e os Estados Unidos.
 1	Em	em	ADP	_	_	2	case	_	_
 2	janeiro	janeiro	NOUN	_	Gender=Masc|Number=Sing	6	obl	_	_
 3	de	de	ADP	_	_	4	case	_	_
@@ -836,7 +839,7 @@
 9	Brasil	Brasil	PROPN	_	Gender=Masc|Number=Sing	42	nsubj	_	SpaceAfter=No
 10	,	,	PUNCT	_	_	12	punct	_	_
 11	a	a	ADP	_	_	12	case	_	_
-12	despeito	despeito	NOUN	_	Gender=Masc|Number=Sing	9	nmod	_	_
+12	despeito	despeito	NOUN	_	Gender=Masc|Number=Sing	42	obl	_	_
 13-14	do	_	_	_	_	_	_	_	_
 13	de	de	ADP	_	_	15	case	_	_
 14	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	15	det	_	_
@@ -857,7 +860,7 @@
 26	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	27	det	_	_
 27	Conselho	Conselho	PROPN	_	Gender=Masc|Number=Sing	24	obl:agent	_	_
 28	de	de	ADP	_	_	29	case	_	_
-29	Segurança	segurança	PROPN	_	Number=Sing	27	nmod	_	_
+29	Segurança	Segurança	PROPN	_	Number=Sing	27	nmod	_	_
 30-31	da	_	_	_	_	_	_	_	_
 30	de	de	ADP	_	_	32	case	_	_
 31	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	32	det	_	_
@@ -865,22 +868,22 @@
 33-34	das	_	_	_	_	_	_	_	_
 33	de	de	ADP	_	_	35	case	_	_
 34	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	35	det	_	_
-35	Nações	Nações	PROPN	_	Number=Sing	32	nmod	_	_
+35	Nações	Nações	PROPN	_	ExtPos=PROPN|Number=Sing	32	nmod	_	_
 36	Unidas	Unidas	PROPN	_	Number=Sing	35	flat:name	_	_
 37	(	(	PUNCT	_	_	38	punct	_	SpaceAfter=No
-38	ONU	ONU	PROPN	_	Gender=Fem|Number=Sing	27	appos	_	SpaceAfter=No
+38	ONU	ONU	PROPN	_	Gender=Fem|Number=Sing	32	appos	_	SpaceAfter=No
 39	)	)	PUNCT	_	_	38	punct	_	SpaceAfter=No
-40	,	,	PUNCT	_	_	12	punct	_	_
+40	,	,	PUNCT	_	_	42	punct	_	_
 41	não	não	ADV	_	Polarity=Neg	42	advmod	_	_
 42	mandaria	mandar	VERB	_	Mood=Cnd|Number=Sing|Person=3|VerbForm=Fin	6	ccomp	_	_
 43	tropas	tropa	NOUN	_	Gender=Fem|Number=Plur	42	obj	_	_
 44	para	para	ADP	_	_	46	case	_	_
 45	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	46	det	_	_
-46	Oriente	Oriente	PROPN	_	Gender=Masc|Number=Sing	43	nmod	_	_
+46	Oriente	Oriente	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	43	nmod	_	_
 47	Médio	Médio	PROPN	_	Number=Sing	46	flat:name	_	SpaceAfter=No
-48	,	,	PUNCT	_	_	42	punct	_	_
+48	,	,	PUNCT	_	_	51	punct	_	_
 49	onde	onde	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	51	obl	_	_
-50	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	51	expl	_	_
+50	se	se	PRON	_	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	51	expl	_	_
 51	travava	travar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	46	acl:relcl	_	_
 52	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	54	det	_	_
 53	chamada	chamado	ADJ	_	Gender=Fem|Number=Sing	54	amod	_	_
@@ -897,30 +900,30 @@
 63	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	64	det	_	_
 64	Estados	Estados	PROPN	_	Gender=Masc|Number=Plur	61	conj	_	_
 65	Unidos	Unidos	PROPN	_	Number=Sing	64	flat:name	_	SpaceAfter=No
-66	.	.	PUNCT	_	_	6	punct	_	SpacesAfter=\n
+66	.	.	PUNCT	_	_	6	punct	_	_
 
-# text = Ressaltando não haver razão para temores sobre atentados terroristas no país em razão do conflito, salientou que a única repercussão da guerra no Brasil era o racionamento de combustível.
 # sent_id = 29
-1	Ressaltando	Ressaltar	VERB	_	VerbForm=Ger	3	nsubj	_	_
+# text = Ressaltando não haver razão para temores sobre atentados terroristas no país em razão do conflito, salientou que a única repercussão da guerra no Brasil era o racionamento de combustível.
+1	Ressaltando	ressaltar	VERB	_	VerbForm=Ger	19	advcl	_	_
 2	não	não	ADV	_	Polarity=Neg	3	advmod	_	_
-3	haver	haver	VERB	_	VerbForm=Inf	19	advcl	_	_
+3	haver	haver	VERB	_	VerbForm=Inf	1	xcomp	_	_
 4	razão	razão	NOUN	_	Gender=Fem|Number=Sing	3	obj	_	_
 5	para	para	ADP	_	_	6	case	_	_
-6	temores	temor	NOUN	_	Gender=Masc|Number=Plur	3	obl	_	_
-7	sobre	sobre	ADP	_	_	9	case	_	_
-8	atentados	atentado	ADJ	_	Gender=Masc|Number=Plur	9	amod	_	_
-9	terroristas	terrorista	NOUN	_	Gender=Masc|Number=Plur	6	nmod	_	_
+6	temores	temor	NOUN	_	Gender=Masc|Number=Plur	4	nmod	_	_
+7	sobre	sobre	ADP	_	_	8	case	_	_
+8	atentados	atentado	NOUN	_	Gender=Masc|Number=Plur	6	nmod	_	_
+9	terroristas	terrorista	ADJ	_	Gender=Masc|Number=Plur	8	amod	_	_
 10-11	no	_	_	_	_	_	_	_	_
 10	em	em	ADP	_	_	12	case	_	_
 11	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	12	det	_	_
-12	país	país	NOUN	_	Gender=Masc|Number=Sing	3	obl	_	_
+12	país	país	NOUN	_	Gender=Masc|Number=Sing	8	nmod	_	_
 13	em	em	ADP	_	_	14	case	_	_
-14	razão	razão	NOUN	_	Gender=Fem|Number=Sing	12	nmod	_	_
+14	razão	razão	NOUN	_	Gender=Fem|Number=Sing	8	nmod	_	_
 15-16	do	_	_	_	_	_	_	_	_
 15	de	de	ADP	_	_	17	case	_	_
 16	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	17	det	_	_
-17	conflito	conflito	NOUN	_	Gender=Masc|Number=Sing	12	nmod	_	SpaceAfter=No
-18	,	,	PUNCT	_	_	3	punct	_	_
+17	conflito	conflito	NOUN	_	Gender=Masc|Number=Sing	14	nmod	_	SpaceAfter=No
+18	,	,	PUNCT	_	_	1	punct	_	_
 19	salientou	salientar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 20	que	que	SCONJ	_	_	32	mark	_	_
 21	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	23	det	_	_
@@ -941,8 +944,8 @@
 34	combustível	combustível	NOUN	_	Gender=Masc|Number=Sing	32	nmod	_	SpaceAfter=No
 35	.	.	PUNCT	_	_	19	punct	_	SpacesAfter=\n
 
-# text = Em abril de 1991, transmitiu a chefia do EMFA para o general Antônio Luís da Rocha Veneu.
 # sent_id = 30
+# text = Em abril de 1991, transmitiu a chefia do EMFA para o general Antônio Luís da Rocha Veneu.
 1	Em	em	ADP	_	_	2	case	_	_
 2	abril	abril	NOUN	_	Gender=Masc|Number=Sing	6	obl	_	_
 3	de	de	ADP	_	_	4	case	_	_
@@ -958,29 +961,29 @@
 12	para	para	ADP	_	_	14	case	_	_
 13	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	14	det	_	_
 14	general	general	NOUN	_	Gender=Masc|Number=Sing	6	obl	_	_
-15	Antônio	Antônio	PROPN	_	Gender=Masc|Number=Sing	14	appos	_	_
+15	Antônio	Antônio	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	14	appos	_	_
 16	Luís	Luís	PROPN	_	Number=Sing	15	flat:name	_	_
 17-18	da	_	_	_	_	_	_	_	_
 17	de	de	ADP	_	_	19	case	_	_
 18	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	19	det	_	_
-19	Rocha	Rocha	PROPN	_	Number=Sing	14	nmod	_	_
-20	Veneu	Vener	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	parataxis	_	SpaceAfter=No
-21	.	.	PUNCT	_	_	6	punct	_	SpacesAfter=\n
+19	Rocha	Rocha	PROPN	_	ExtPos=PROPN|Number=Sing	15	nmod	_	_
+20	Veneu	Veneu	PROPN	_	Number=Sing	19	flat:name	_	SpaceAfter=No
+21	.	.	PUNCT	_	_	6	punct	_	_
 
-# text = Ainda este mês, o Batalhão de Polícia do Exército (BPE) prendeu o presidente da Federação das Associações dos Militares da Reserva (Famir), o tenente Antônio Garcia, acusado de fazer “críticas desrespeitosas” a Jonas Morais Correia.
 # sent_id = 31
-1	Ainda	ainda	SCONJ	_	_	3	case	_	_
+# text = Ainda este mês, o Batalhão de Polícia do Exército (BPE) prendeu o presidente da Federação das Associações dos Militares da Reserva (Famir), o tenente Antônio Garcia, acusado de fazer “críticas desrespeitosas” a Jonas Morais Correia.
+1	Ainda	ainda	ADV	_	_	3	advmod	_	_
 2	este	este	DET	_	Gender=Masc|Number=Sing|PronType=Dem	3	det	_	_
 3	mês	mês	NOUN	_	Gender=Masc|Number=Sing	15	obl	_	SpaceAfter=No
 4	,	,	PUNCT	_	_	3	punct	_	_
 5	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	6	det	_	_
-6	Batalhão	batalhão	PROPN	_	Gender=Masc|Number=Sing	15	nsubj	_	_
+6	Batalhão	Batalhão	PROPN	_	Gender=Masc|Number=Sing	15	nsubj	_	_
 7	de	de	ADP	_	_	8	case	_	_
 8	Polícia	Polícia	PROPN	_	Number=Sing	6	nmod	_	_
 9-10	do	_	_	_	_	_	_	_	_
 9	de	de	ADP	_	_	11	case	_	_
 10	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	_	_
-11	Exército	exército	PROPN	_	Gender=Masc|Number=Sing	6	nmod	_	_
+11	Exército	Exército	PROPN	_	Number=Sing	8	nmod	_	_
 12	(	(	PUNCT	_	_	13	punct	_	SpaceAfter=No
 13	BPE	BPE	PROPN	_	Gender=Masc|Number=Sing	6	appos	_	SpaceAfter=No
 14	)	)	PUNCT	_	_	13	punct	_	_
@@ -990,51 +993,51 @@
 18-19	da	_	_	_	_	_	_	_	_
 18	de	de	ADP	_	_	20	case	_	_
 19	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	20	det	_	_
-20	Federação	Federação	NOUN	_	Gender=Fem|Number=Sing	17	nmod	_	_
+20	Federação	federação	NOUN	_	Gender=Fem|Number=Sing	17	nmod	_	_
 21-22	das	_	_	_	_	_	_	_	_
 21	de	de	ADP	_	_	23	case	_	_
 22	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	23	det	_	_
-23	Associações	Associação	NOUN	_	Gender=Fem|Number=Plur	20	nmod	_	_
+23	Associações	Associações	PROPN	_	Gender=Fem|Number=Plur	20	nmod	_	_
 24-25	dos	_	_	_	_	_	_	_	_
 24	de	de	ADP	_	_	26	case	_	_
 25	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	26	det	_	_
-26	Militares	Militares	PROPN	_	Number=Sing	23	nmod	_	_
+26	Militares	militar	NOUN	_	Gender=Masc|Number=Plur	23	nmod	_	_
 27-28	da	_	_	_	_	_	_	_	_
 27	de	de	ADP	_	_	29	case	_	_
 28	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	29	det	_	_
-29	Reserva	reserva	PROPN	_	Number=Sing	26	nmod	_	_
+29	Reserva	reserva	PROPN	_	Gender=Fem|Number=Sing	26	nmod	_	_
 30	(	(	PUNCT	_	_	31	punct	_	SpaceAfter=No
-31	Famir	Famir	PROPN	_	Gender=Masc|Number=Sing	20	appos	_	SpaceAfter=No
+31	Famir	Famir	PROPN	_	Gender=Fem|Number=Sing	23	appos	_	SpaceAfter=No
 32	)	)	PUNCT	_	_	31	punct	_	SpaceAfter=No
-33	,	,	PUNCT	_	_	15	punct	_	_
+33	,	,	PUNCT	_	_	35	punct	_	_
 34	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	35	det	_	_
-35	tenente	tenente	NOUN	_	Gender=Masc|Number=Sing	15	obl	_	_
-36	Antônio	Antônio	PROPN	_	Gender=Masc|Number=Sing	35	appos	_	_
+35	tenente	tenente	NOUN	_	Gender=Masc|Number=Sing	17	appos	_	_
+36	Antônio	Antônio	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	35	appos	_	_
 37	Garcia	Garcia	PROPN	_	Number=Sing	36	flat:name	_	SpaceAfter=No
 38	,	,	PUNCT	_	_	39	punct	_	_
 39	acusado	acusar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	35	acl	_	_
 40	de	de	SCONJ	_	_	41	mark	_	_
 41	fazer	fazer	VERB	_	VerbForm=Inf	39	xcomp	_	_
-42	“	“	PUNCT	_	_	39	punct	_	SpaceAfter=No
-43	críticas	crítica	NOUN	_	Gender=Fem|Number=Plur	39	nsubj	_	_
+42	“	"	PUNCT	_	_	43	punct	_	SpaceAfter=No
+43	críticas	crítica	NOUN	_	Gender=Fem|Number=Plur	41	obj	_	_
 44	desrespeitosas	desrespeitoso	ADJ	_	Gender=Fem|Number=Plur	43	amod	_	SpaceAfter=No
-45	”	”	PUNCT	_	_	47	punct	_	_
-46	a	a	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	47	det	_	_
-47	Jonas	Jonas	PROPN	_	Gender=Masc|Number=Sing	43	appos	_	_
+45	”	"	PUNCT	_	_	43	punct	_	_
+46	a	a	ADP	_	_	47	case	_	_
+47	Jonas	Jonas	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	43	nmod	_	_
 48	Morais	Morais	PROPN	_	Number=Sing	47	flat:name	_	_
 49	Correia	Correia	PROPN	_	Number=Sing	47	flat:name	_	SpaceAfter=No
-50	.	.	PUNCT	_	_	15	punct	_	SpacesAfter=\n
+50	.	.	PUNCT	_	_	15	punct	_	_
 
-# text = Em carta publicada no «Correio Brasiliense», do dia 14 de abril, Garcia chamara o general Jonas Morais de “incoerente”, “narcisista”, “insensível” e “pelego”.
 # sent_id = 32
+# text = Em carta publicada no «Correio Brasiliense», do dia 14 de abril, Garcia chamara o general Jonas Morais de “incoerente”, “narcisista”, “insensível” e “pelego”.
 1	Em	em	ADP	_	_	2	case	_	_
 2	carta	carta	NOUN	_	Gender=Fem|Number=Sing	19	obl	_	_
-3	publicada	publicar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	18	acl	_	_
+3	publicada	publicar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	2	acl	_	_
 4-5	no	_	_	_	_	_	_	_	_
 4	em	em	ADP	_	_	7	case	_	_
 5	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	7	det	_	_
 6	«	«	PUNCT	_	_	7	punct	_	SpaceAfter=No
-7	Correio	Correio	PROPN	_	Gender=Masc|Number=Sing	3	obl	_	_
+7	Correio	Correio	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	3	obl	_	_
 8	Brasiliense	Brasiliense	PROPN	_	Number=Sing	7	flat:name	_	SpaceAfter=No
 9	»	»	PUNCT	_	_	7	punct	_	SpaceAfter=No
 10	,	,	PUNCT	_	_	13	punct	_	_
@@ -1046,32 +1049,32 @@
 15	de	de	ADP	_	_	16	case	_	_
 16	abril	abril	NOUN	_	Gender=Masc|Number=Sing	13	nmod	_	SpaceAfter=No
 17	,	,	PUNCT	_	_	13	punct	_	_
-18	Garcia	Garcia	PROPN	_	Gender=Masc|Number=Sing	2	nmod	_	_
+18	Garcia	Garcia	PROPN	_	Gender=Masc|Number=Sing	19	nsubj	_	_
 19	chamara	chamar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pqp|VerbForm=Fin	0	root	_	_
 20	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	21	det	_	_
 21	general	general	NOUN	_	Gender=Masc|Number=Sing	19	obj	_	_
-22	Jonas	Jonas	PROPN	_	Gender=Masc|Number=Sing	21	appos	_	_
+22	Jonas	Jonas	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	21	appos	_	_
 23	Morais	Morais	PROPN	_	Number=Sing	22	flat:name	_	_
 24	de	de	ADP	_	_	26	case	_	_
-25	“	“	PUNCT	_	_	26	punct	_	SpaceAfter=No
-26	incoerente	incoerente	ADJ	_	Gender=Masc|Number=Sing	21	nmod	_	SpaceAfter=No
-27	”	”	PUNCT	_	_	26	punct	_	SpaceAfter=No
-28	,	,	PUNCT	_	_	26	punct	_	_
-29	“	“	PUNCT	_	_	30	punct	_	SpaceAfter=No
+25	“	"	PUNCT	_	_	26	punct	_	SpaceAfter=No
+26	incoerente	incoerente	ADJ	_	Gender=Masc|Number=Sing	19	xcomp	_	SpaceAfter=No
+27	”	"	PUNCT	_	_	26	punct	_	SpaceAfter=No
+28	,	,	PUNCT	_	_	30	punct	_	_
+29	“	"	PUNCT	_	_	30	punct	_	SpaceAfter=No
 30	narcisista	narcisista	ADJ	_	Gender=Masc|Number=Sing	26	conj	_	SpaceAfter=No
-31	”	”	PUNCT	_	_	26	punct	_	SpaceAfter=No
+31	”	"	PUNCT	_	_	30	punct	_	SpaceAfter=No
 32	,	,	PUNCT	_	_	34	punct	_	_
-33	“	“	PUNCT	_	_	38	punct	_	SpaceAfter=No
+33	“	"	PUNCT	_	_	34	punct	_	SpaceAfter=No
 34	insensível	insensível	ADJ	_	Gender=Masc|Number=Sing	26	conj	_	SpaceAfter=No
-35	”	”	PUNCT	_	_	19	punct	_	_
+35	”	"	PUNCT	_	_	34	punct	_	_
 36	e	e	CCONJ	_	_	38	cc	_	_
-37	“	“	PUNCT	_	_	38	punct	_	SpaceAfter=No
+37	“	"	PUNCT	_	_	38	punct	_	SpaceAfter=No
 38	pelego	pelego	NOUN	_	Gender=Masc|Number=Sing	26	conj	_	SpaceAfter=No
-39	”	”	PUNCT	_	_	19	punct	_	SpaceAfter=No
-40	.	.	PUNCT	_	_	19	punct	_	SpacesAfter=\n
+39	”	"	PUNCT	_	_	38	punct	_	SpaceAfter=No
+40	.	.	PUNCT	_	_	19	punct	_	_
 
-# text = A carta do tenente Garcia foi escrita em resposta a uma entrevista do general no mesmo jornal dois dias antes, na qual este afirmava que o salário dos militares estava baixíssimo.
 # sent_id = 33
+# text = A carta do tenente Garcia foi escrita em resposta a uma entrevista do general no mesmo jornal dois dias antes, na qual este afirmava que o salário dos militares estava baixíssimo.
 1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
 2	carta	carta	NOUN	_	Gender=Fem|Number=Sing	8	nsubj:pass	_	_
 3-4	do	_	_	_	_	_	_	_	_
@@ -1081,11 +1084,11 @@
 6	Garcia	Garcia	PROPN	_	Gender=Masc|Number=Sing	5	appos	_	_
 7	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	8	aux:pass	_	_
 8	escrita	escrever	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
-9	em	em	ADP	_	_	29	mark	_	_
-10	resposta	resposta	NOUN	_	Gender=Fem|Number=Sing	9	fixed	_	_
-11	a	a	ADP	_	_	9	fixed	_	_
+9	em	em	ADP	_	_	10	case	_	_
+10	resposta	resposta	NOUN	_	Gender=Fem|Number=Sing	8	obl	_	_
+11	a	a	ADP	_	_	13	case	_	_
 12	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	13	det	_	_
-13	entrevista	entrevista	NOUN	_	Gender=Fem|Number=Sing	29	nsubj	_	_
+13	entrevista	entrevista	NOUN	_	Gender=Fem|Number=Sing	10	nmod	_	_
 14-15	do	_	_	_	_	_	_	_	_
 14	de	de	ADP	_	_	16	case	_	_
 15	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	16	det	_	_
@@ -1094,17 +1097,17 @@
 17	em	em	ADP	_	_	20	case	_	_
 18	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	20	det	_	_
 19	mesmo	mesmo	ADJ	_	Gender=Masc|Number=Sing	20	amod	_	_
-20	jornal	jornal	NOUN	_	Gender=Masc|Number=Sing	29	obl	_	_
+20	jornal	jornal	NOUN	_	Gender=Masc|Number=Sing	13	nmod	_	_
 21	dois	dois	NUM	_	NumType=Card	22	nummod	_	_
 22	dias	dia	NOUN	_	Gender=Masc|Number=Plur	20	nmod	_	_
-23	antes	antes	ADV	_	_	29	advmod	_	SpaceAfter=No
+23	antes	antes	ADV	_	_	22	advmod	_	SpaceAfter=No
 24	,	,	PUNCT	_	_	29	punct	_	_
 25-26	na	_	_	_	_	_	_	_	_
 25	em	em	ADP	_	_	27	case	_	_
 26	a	o	DET	_	Gender=Fem|Number=Sing|PronType=Art	27	det	_	_
 27	qual	qual	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	29	obl	_	_
 28	este	este	PRON	_	Gender=Masc|Number=Sing|PronType=Dem	29	nsubj	_	_
-29	afirmava	afirmar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	8	advcl	_	_
+29	afirmava	afirmar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	13	acl:relcl	_	_
 30	que	que	SCONJ	_	_	37	mark	_	_
 31	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	32	det	_	_
 32	salário	salário	NOUN	_	Gender=Masc|Number=Sing	37	nsubj	_	_
@@ -1114,10 +1117,10 @@
 35	militares	militar	NOUN	_	Gender=Masc|Number=Plur	32	nmod	_	_
 36	estava	estar	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	37	cop	_	_
 37	baixíssimo	baixo	ADJ	_	Gender=Masc|Number=Sing	29	ccomp	_	SpaceAfter=No
-38	.	.	PUNCT	_	_	29	punct	_	SpacesAfter=\n
+38	.	.	PUNCT	_	_	8	punct	_	_
 
-# text = Garcia respondeu que esta declaração era uma “ironia” que o general tinha feito por estar deixando o EMFA.
 # sent_id = 34
+# text = Garcia respondeu que esta declaração era uma “ironia” que o general tinha feito por estar deixando o EMFA.
 1	Garcia	Garcia	PROPN	_	Gender=Masc|Number=Sing	2	nsubj	_	_
 2	respondeu	responder	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 3	que	que	SCONJ	_	_	9	mark	_	_
@@ -1125,25 +1128,25 @@
 5	declaração	declaração	NOUN	_	Gender=Fem|Number=Sing	9	nsubj	_	_
 6	era	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	9	cop	_	_
 7	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	9	det	_	_
-8	“	“	PUNCT	_	_	9	punct	_	SpaceAfter=No
+8	“	"	PUNCT	_	_	9	punct	_	SpaceAfter=No
 9	ironia	ironia	NOUN	_	Gender=Fem|Number=Sing	2	ccomp	_	SpaceAfter=No
-10	”	”	PUNCT	_	_	2	punct	_	_
-11	que	que	SCONJ	_	_	15	mark	_	_
+10	”	"	PUNCT	_	_	9	punct	_	_
+11	que	que	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	15	obj	_	_
 12	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	13	det	_	_
 13	general	general	NOUN	_	Gender=Masc|Number=Sing	15	nsubj	_	_
 14	tinha	ter	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	15	aux	_	_
-15	feito	fazer	VERB	_	VerbForm=Part	2	ccomp	_	_
+15	feito	fazer	VERB	_	VerbForm=Part	9	acl:relcl	_	_
 16	por	por	SCONJ	_	_	18	mark	_	_
 17	estar	estar	AUX	_	VerbForm=Inf	18	aux	_	_
 18	deixando	deixar	VERB	_	VerbForm=Ger	15	advcl	_	_
 19	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	20	det	_	_
 20	EMFA	EMFA	PROPN	_	Gender=Masc|Number=Sing	18	obj	_	SpaceAfter=No
-21	.	.	PUNCT	_	_	2	punct	_	SpacesAfter=\n
+21	.	.	PUNCT	_	_	2	punct	_	_
 
-# text = Antes de ser preso, o tenente respondeu a um ofício do Comando Militar do Planalto (CMP) confirmando as declarações.
 # sent_id = 35
-1	Antes	antes	ADV	_	_	4	advmod	_	_
-2	de	de	ADP	_	_	4	mark	_	_
+# text = Antes de ser preso, o tenente respondeu a um ofício do Comando Militar do Planalto (CMP) confirmando as declarações.
+1	Antes	antes	ADV	_	ExtPos=SCONJ	4	mark	_	_
+2	de	de	ADP	_	_	1	fixed	_	_
 3	ser	ser	AUX	_	VerbForm=Inf	4	aux:pass	_	_
 4	preso	prender	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	8	advcl	_	SpaceAfter=No
 5	,	,	PUNCT	_	_	4	punct	_	_
@@ -1156,22 +1159,22 @@
 12-13	do	_	_	_	_	_	_	_	_
 12	de	de	ADP	_	_	14	case	_	_
 13	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	14	det	_	_
-14	Comando	Comando	PROPN	_	Gender=Masc|Number=Sing	11	nmod	_	_
-15	Militar	militar	PROPN	_	Number=Sing	14	flat:name	_	_
+14	Comando	Comando	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	11	nmod	_	_
+15	Militar	Militar	PROPN	_	Number=Sing	14	flat:name	_	_
 16-17	do	_	_	_	_	_	_	_	_
 16	de	de	ADP	_	_	18	case	_	_
 17	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	18	det	_	_
-18	Planalto	planalto	NOUN	_	Gender=Masc|Number=Sing	14	nmod	_	_
+18	Planalto	Planalto	PROPN	_	Number=Sing	14	nmod	_	_
 19	(	(	PUNCT	_	_	20	punct	_	SpaceAfter=No
-20	CMP	CMP	PROPN	_	Gender=Masc|Number=Sing	18	appos	_	SpaceAfter=No
+20	CMP	CMP	PROPN	_	Gender=Masc|Number=Sing	14	appos	_	SpaceAfter=No
 21	)	)	PUNCT	_	_	20	punct	_	_
 22	confirmando	confirmar	VERB	_	VerbForm=Ger	8	advcl	_	_
 23	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	24	det	_	_
 24	declarações	declaração	NOUN	_	Gender=Fem|Number=Plur	22	obj	_	SpaceAfter=No
 25	.	.	PUNCT	_	_	8	punct	_	SpacesAfter=\n
 
-# text = Após entregar o cargo de chefe do EMFA, Jonas Correia de Morais foi transferido para reserva remunerada, não vindo a desenvolver nenhuma atividade profissional.
 # sent_id = 36
+# text = Após entregar o cargo de chefe do EMFA, Jonas Correia de Morais foi transferido para reserva remunerada, não vindo a desenvolver nenhuma atividade profissional.
 1	Após	após	SCONJ	_	_	2	mark	_	_
 2	entregar	entregar	VERB	_	VerbForm=Inf	16	advcl	_	_
 3	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	4	det	_	_
@@ -1183,7 +1186,7 @@
 8	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	9	det	_	_
 9	EMFA	EMFA	PROPN	_	Gender=Masc|Number=Sing	6	nmod	_	SpaceAfter=No
 10	,	,	PUNCT	_	_	2	punct	_	_
-11	Jonas	Jonas	PROPN	_	Gender=Masc|Number=Sing	16	nsubj:pass	_	_
+11	Jonas	Jonas	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	16	nsubj:pass	_	_
 12	Correia	Correia	PROPN	_	Number=Sing	11	flat:name	_	_
 13	de	de	ADP	_	_	14	case	_	_
 14	Morais	Morais	PROPN	_	Number=Sing	11	nmod	_	_
@@ -1192,9 +1195,9 @@
 17	para	para	ADP	_	_	18	case	_	_
 18	reserva	reserva	NOUN	_	Gender=Fem|Number=Sing	16	obl	_	_
 19	remunerada	remunerar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	18	acl	_	SpaceAfter=No
-20	,	,	PUNCT	_	_	19	punct	_	_
-21	não	não	ADV	_	Polarity=Neg	24	advmod	_	_
-22	vindo	vir	VERB	_	VerbForm=Ger	16	advcl	_	_
+20	,	,	PUNCT	_	_	22	punct	_	_
+21	não	não	ADV	_	Polarity=Neg	22	advmod	_	_
+22	vindo	vir	VERB	_	ExtPos=AUX|VerbForm=Ger	16	advcl	_	_
 23	a	a	SCONJ	_	_	24	mark	_	_
 24	desenvolver	desenvolver	VERB	_	VerbForm=Inf	22	xcomp	_	_
 25	nenhuma	nenhum	DET	_	Gender=Fem|Number=Sing|PronType=Neg	26	det	_	_
@@ -1202,70 +1205,72 @@
 27	profissional	profissional	ADJ	_	Gender=Fem|Number=Sing	26	amod	_	SpaceAfter=No
 28	.	.	PUNCT	_	_	16	punct	_	SpacesAfter=\n
 
-# text = Sócio do Instituto de Geografia e História Militar do Brasil, do qual foi presidente, e do Instituto Histórico-Geográfico Brasileiro, de cujo conselho fiscal tornou-se membro, veio a integrar ainda a Academia Carioca de Letras.
 # sent_id = 37
-1	Sócio	sócio	NOUN	_	Gender=Masc|Number=Sing	18	nsubj	_	_
+# text = Sócio do Instituto de Geografia e História Militar do Brasil, do qual foi presidente, e do Instituto Histórico-Geográfico Brasileiro, de cujo conselho fiscal tornou-se membro, veio a integrar ainda a Academia Carioca de Letras.
+1	Sócio	sócio	NOUN	_	Gender=Masc|Number=Sing	37	obl	_	_
 2-3	do	_	_	_	_	_	_	_	_
 2	de	de	ADP	_	_	4	case	_	_
 3	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	4	det	_	_
 4	Instituto	Instituto	PROPN	_	Gender=Masc|Number=Sing	1	nmod	_	_
 5	de	de	ADP	_	_	6	case	_	_
-6	Geografia	Geografia	PROPN	_	Number=Sing	4	nmod	_	_
-7	e	e	CCONJ	_	_	8	cc	_	_
-8	História	História	PROPN	_	Gender=Fem|Number=Sing	4	conj	_	_
-9	Militar	Militar	PROPN	_	Number=Sing	8	flat:name	_	_
+6	Geografia	Geografia	PROPN	_	ExtPos=PROPN|Number=Sing	4	nmod	_	_
+7	e	e	CCONJ	_	_	6	flat:name	_	_
+8	História	História	PROPN	_	Number=Sing	6	flat:name	_	_
+9	Militar	Militar	PROPN	_	Number=Sing	6	flat:name	_	_
 10-11	do	_	_	_	_	_	_	_	_
 10	de	de	ADP	_	_	12	case	_	_
 11	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	12	det	_	_
-12	Brasil	Brasil	PROPN	_	Gender=Masc|Number=Sing	8	nmod	_	SpaceAfter=No
-13	,	,	PUNCT	_	_	1	punct	_	_
+12	Brasil	Brasil	PROPN	_	Gender=Masc|Number=Sing	4	nmod	_	SpaceAfter=No
+13	,	,	PUNCT	_	_	18	punct	_	_
 14-15	do	_	_	_	_	_	_	_	_
 14	de	de	ADP	_	_	16	case	_	_
 15	o	o	DET	_	Gender=Masc|Number=Sing|PronType=Art	16	det	_	_
-16	qual	qual	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	4	nmod	_	_
+16	qual	qual	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	18	nmod	_	_
 17	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	18	cop	_	_
-18	presidente	presidente	NOUN	_	Gender=Masc|Number=Sing	0	root	_	SpaceAfter=No
+18	presidente	presidente	NOUN	_	Gender=Masc|Number=Sing	4	acl:relcl	_	SpaceAfter=No
 19	,	,	PUNCT	_	_	23	punct	_	_
 20	e	e	CCONJ	_	_	23	cc	_	_
 21-22	do	_	_	_	_	_	_	_	_
 21	de	de	ADP	_	_	23	case	_	_
 22	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	23	det	_	_
-23	Instituto	Instituto	PROPN	_	Gender=Masc|Number=Sing	18	conj	_	_
-24	Histórico-Geográfico	Histórico-Geográfico	PROPN	_	Number=Sing	23	flat:name	_	_
-25	Brasileiro	brasileiro	PROPN	_	Number=Sing	23	flat:name	_	SpaceAfter=No
-26	,	,	PUNCT	_	_	29	punct	_	_
-27	de	de	ADP	_	_	29	case	_	_
-28	cujo	cujo	DET	_	Gender=Masc|Number=Sing|PronType=Rel	29	det	_	_
-29	conselho	conselho	NOUN	_	Gender=Masc|Number=Sing	31	obl	_	_
-30	fiscal	fiscal	ADJ	_	Gender=Masc|Number=Sing	29	amod	_	_
-31-32	tornou-se	_	_	_	_	_	_	_	_
-31	tornou	tornar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	23	acl:relcl	_	_
-32	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	31	nsubj	_	_
-33	membro	membro	NOUN	_	Gender=Masc|Number=Sing	31	xcomp	_	SpaceAfter=No
-34	,	,	PUNCT	_	_	18	punct	_	_
-35	veio	vir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	18	advcl	_	_
-36	a	a	SCONJ	_	_	37	mark	_	_
-37	integrar	integrar	VERB	_	VerbForm=Inf	35	xcomp	_	_
-38	ainda	ainda	ADV	_	_	37	advmod	_	_
-39	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	40	det	_	_
-40	Academia	Academia	PROPN	_	Gender=Fem|Number=Sing	37	obj	_	_
-41	Carioca	carioca	PROPN	_	Number=Sing	40	flat:name	_	_
-42	de	de	ADP	_	_	43	case	_	_
-43	Letras	Letras	PROPN	_	Number=Sing	40	nmod	_	SpaceAfter=No
-44	.	.	PUNCT	_	_	18	punct	_	SpacesAfter=\n
+23	Instituto	Instituto	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	4	conj	_	_
+24	Histórico	Histórico	PROPN	_	Number=Sing	23	flat:name	_	SpaceAfter=No
+25	-	-	PUNCT	_	_	23	punct	_	SpaceAfter=No
+26	Geográfico	Geográfico	PROPN	_	Number=Sing	23	flat:name	_	_
+27	Brasileiro	Brasileiro	PROPN	_	Number=Sing	23	flat:name	_	SpaceAfter=No
+28	,	,	PUNCT	_	_	33	punct	_	_
+29	de	de	ADP	_	_	31	case	_	_
+30	cujo	cujo	DET	_	Gender=Masc|Number=Sing|PronType=Rel	31	det	_	_
+31	conselho	conselho	NOUN	_	Gender=Masc|Number=Sing	33	nsubj	_	_
+32	fiscal	fiscal	ADJ	_	Gender=Masc|Number=Sing	31	amod	_	_
+33-34	tornou-se	_	_	_	_	_	_	_	_
+33	tornou	tornar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	23	acl:relcl	_	_
+34	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	33	expl	_	_
+35	membro	membro	NOUN	_	Gender=Masc|Number=Sing	33	xcomp	_	SpaceAfter=No
+36	,	,	PUNCT	_	_	33	punct	_	_
+37	veio	vir	VERB	_	ExtPos=AUX|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+38	a	a	SCONJ	_	_	39	mark	_	_
+39	integrar	integrar	VERB	_	VerbForm=Inf	37	xcomp	_	_
+40	ainda	ainda	ADV	_	_	39	advmod	_	_
+41	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	42	det	_	_
+42	Academia	Academia	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	39	obj	_	_
+43	Carioca	Carioca	PROPN	_	Number=Sing	42	flat:name	_	_
+44	de	de	ADP	_	_	45	case	_	_
+45	Letras	Letras	PROPN	_	Number=Sing	42	nmod	_	SpaceAfter=No
+46	.	.	PUNCT	_	_	39	punct	_	SpacesAfter=\n
 
-# text = Casou-se com Ercília Goulart Pinto, com quem teve quatro filhos.
 # sent_id = 38
+# text = Casou-se com Ercília Goulart Pinto, com quem teve quatro filhos.
 1-2	Casou-se	_	_	_	_	_	_	_	_
-1	Casou	Casar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+1	Casou	casar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	1	expl	_	_
 3	com	com	ADP	_	_	4	case	_	_
-4	Ercília	Ercília	PROPN	_	Gender=Masc|Number=Sing	1	obl	_	_
+4	Ercília	Ercília	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	1	obj	_	_
 5	Goulart	Goulart	PROPN	_	Number=Sing	4	flat:name	_	_
 6	Pinto	Pinto	PROPN	_	Number=Sing	4	flat:name	_	SpaceAfter=No
 7	,	,	PUNCT	_	_	10	punct	_	_
 8	com	com	ADP	_	_	9	case	_	_
-9	quem	quem	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	10	obl	_	_
+9	quem	quem	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	10	obl	_	_
 10	teve	ter	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	acl:relcl	_	_
 11	quatro	quatro	NUM	_	NumType=Card	12	nummod	_	_
 12	filhos	filho	NOUN	_	Gender=Masc|Number=Plur	10	obj	_	SpaceAfter=No

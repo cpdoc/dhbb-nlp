@@ -1,11 +1,14 @@
-# text = Partido político fluminense fundado em 14 de dezembro de 1932, filiado ao Partido Socialista Brasileiro (PSB).
-# sent_id = 1
-# newpar
+# generator = UDPipe 2, https://lindat.mff.cuni.cz/services/udpipe
+# udpipe_model = portuguese-bosque-ud-2.12-230717
+# udpipe_model_licence = CC BY-NC-SA
 # newdoc
-1	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	0	root	_	_
-2	político	político	PROPN	_	Number=Sing	1	flat:name	_	_
+# newpar
+# sent_id = 1
+# text = Partido político fluminense fundado em 14 de dezembro de 1932, filiado ao Partido Socialista Brasileiro (PSB).
+1	Partido	partido	NOUN	_	Gender=Masc|Number=Sing	0	root	_	_
+2	político	político	ADJ	_	Gender=Masc|Number=Sing	1	amod	_	_
 3	fluminense	fluminense	ADJ	_	Gender=Masc|Number=Sing	1	amod	_	_
-4	fundado	fundar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	1	acl	_	_
+4	fundado	fundar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	1	acl	_	_
 5	em	em	ADP	_	_	6	case	_	_
 6	14	14	NUM	_	NumType=Card	4	obl	_	_
 7	de	de	ADP	_	_	8	case	_	_
@@ -17,61 +20,61 @@
 13-14	ao	_	_	_	_	_	_	_	_
 13	a	a	ADP	_	_	15	case	_	_
 14	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	15	det	_	_
-15	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	12	obl	_	_
+15	Partido	Partido	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	12	obl	_	_
 16	Socialista	Socialista	PROPN	_	Number=Sing	15	flat:name	_	_
-17	Brasileiro	brasileiro	PROPN	_	Number=Sing	15	flat:name	_	_
+17	Brasileiro	Brasileiro	PROPN	_	Number=Sing	15	flat:name	_	_
 18	(	(	PUNCT	_	_	19	punct	_	SpaceAfter=No
-19	PSB	PMB	PROPN	_	Gender=Masc|Number=Sing	15	appos	_	SpaceAfter=No
+19	PSB	PSB	PROPN	_	Gender=Masc|Number=Sing	15	appos	_	SpaceAfter=No
 20	)	)	PUNCT	_	_	19	punct	_	SpaceAfter=No
-21	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
+21	.	.	PUNCT	_	_	1	punct	_	_
 
-# text = Foi extinto junto com os demais partidos do país pelo Decreto nº 37, de 2 de dezembro de 1937, logo após a instauração do Estado Novo.
 # sent_id = 2
-1	Foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	aux	_	_
-2	extinto	extinguir	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	0	root	_	_
+# text = Foi extinto junto com os demais partidos do país pelo Decreto nº 37, de 2 de dezembro de 1937, logo após a instauração do Estado Novo.
+1	Foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	aux:pass	_	_
+2	extinto	extinguir	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
 3	junto	junto	ADV	_	_	2	advmod	_	_
 4	com	com	ADP	_	_	7	case	_	_
 5	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	7	det	_	_
 6	demais	demais	DET	_	Gender=Masc|Number=Plur|PronType=Ind	7	det	_	_
-7	partidos	partido	NOUN	_	Gender=Masc|Number=Plur	2	obl	_	_
+7	partidos	partido	NOUN	_	Gender=Masc|Number=Plur	3	obl	_	_
 8-9	do	_	_	_	_	_	_	_	_
 8	de	de	ADP	_	_	10	case	_	_
 9	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	10	det	_	_
 10	país	país	NOUN	_	Gender=Masc|Number=Sing	7	nmod	_	_
 11-12	pelo	_	_	_	_	_	_	_	_
-11	por	por	ADP	_	_	14	case	_	_
-12	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	14	det	_	_
-13	Decreto	Decreto	ADJ	_	Gender=Masc|Number=Sing	14	amod	_	_
-14	nº	nº	NOUN	_	Gender=Masc|Number=Sing	2	obl	_	_
-15	37	37	NUM	_	NumType=Card	14	nummod	_	SpaceAfter=No
+11	por	por	ADP	_	_	13	case	_	_
+12	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	13	det	_	_
+13	Decreto	decreto	NOUN	_	Gender=Masc|Number=Sing	2	obl:agent	_	_
+14	nº	número	NOUN	_	Abbr=Yes|Gender=Masc|Number=Sing	13	nmod	_	_
+15	37	37	NUM	_	NumType=Card	13	nummod	_	SpaceAfter=No
 16	,	,	PUNCT	_	_	18	punct	_	_
 17	de	de	ADP	_	_	18	case	_	_
-18	2	2	NUM	_	NumType=Card	14	nmod	_	_
+18	2	2	NUM	_	NumType=Card	13	nmod	_	_
 19	de	de	ADP	_	_	20	case	_	_
 20	dezembro	dezembro	NOUN	_	Gender=Masc|Number=Sing	18	nmod	_	_
 21	de	de	ADP	_	_	22	case	_	_
 22	1937	1937	NUM	_	NumType=Card	20	nmod	_	SpaceAfter=No
-23	,	,	PUNCT	_	_	18	punct	_	_
-24	logo	logo	ADV	_	_	27	advmod	_	_
+23	,	,	PUNCT	_	_	2	punct	_	_
+24	logo	logo	ADV	_	_	2	advmod	_	_
 25	após	após	ADP	_	_	27	case	_	_
 26	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	27	det	_	_
-27	instauração	instauração	NOUN	_	Gender=Fem|Number=Sing	2	obl	_	_
+27	instauração	instauração	NOUN	_	Gender=Fem|Number=Sing	24	obl	_	_
 28-29	do	_	_	_	_	_	_	_	_
 28	de	de	ADP	_	_	30	case	_	_
 29	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	30	det	_	_
-30	Estado	Estado	PROPN	_	Gender=Masc|Number=Sing	27	nmod	_	_
+30	Estado	Estado	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	27	nmod	_	_
 31	Novo	Novo	PROPN	_	Number=Sing	30	flat:name	_	SpaceAfter=No
 32	.	.	PUNCT	_	_	2	punct	_	SpacesAfter=\n
 
-# text = Com um programa idêntico ao do PSB, o PSF teve como principais organizadores César Tinoco, Vicente Ferreira de Morais, José Alípio Costallat, Eugênio de Macedo Torres, Altivo do Vale e Silva, Altivo Linhares, Carlos Alberto Nóbrega da Cunha, o general Cristóvão Barcelos e o capitão Asdrúbal Gwyer de Azevedo.
 # sent_id = 3
+# text = Com um programa idêntico ao do PSB, o PSF teve como principais organizadores César Tinoco, Vicente Ferreira de Morais, José Alípio Costallat, Eugênio de Macedo Torres, Altivo do Vale e Silva, Altivo Linhares, Carlos Alberto Nóbrega da Cunha, o general Cristóvão Barcelos e o capitão Asdrúbal Gwyer de Azevedo.
 1	Com	com	ADP	_	_	3	case	_	_
 2	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
 3	programa	programa	NOUN	_	Gender=Masc|Number=Sing	13	obl	_	_
 4	idêntico	idêntico	ADJ	_	Gender=Masc|Number=Sing	3	amod	_	_
 5-6	ao	_	_	_	_	_	_	_	_
 5	a	a	ADP	_	_	6	case	_	_
-6	o	o	PRON	_	Gender=Masc|Number=Sing|PronType=Dem	3	nmod	_	_
+6	o	o	PRON	_	Gender=Masc|Number=Sing|PronType=Dem	4	obl	_	_
 7-8	do	_	_	_	_	_	_	_	_
 7	de	de	ADP	_	_	9	case	_	_
 8	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	9	det	_	_
@@ -83,57 +86,57 @@
 14	como	como	ADP	_	_	16	case	_	_
 15	principais	principal	ADJ	_	Gender=Masc|Number=Plur	16	amod	_	_
 16	organizadores	organizador	NOUN	_	Gender=Masc|Number=Plur	13	xcomp	_	_
-17	César	César	PROPN	_	Gender=Masc|Number=Sing	16	appos	_	_
+17	César	César	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	13	obj	_	_
 18	Tinoco	Tinoco	PROPN	_	Number=Sing	17	flat:name	_	SpaceAfter=No
 19	,	,	PUNCT	_	_	20	punct	_	_
-20	Vicente	Vicente	PROPN	_	Gender=Masc|Number=Sing	17	conj	_	_
+20	Vicente	Vicente	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	17	conj	_	_
 21	Ferreira	Ferreira	PROPN	_	Number=Sing	20	flat:name	_	_
 22	de	de	ADP	_	_	23	case	_	_
 23	Morais	Morais	PROPN	_	Number=Sing	20	nmod	_	SpaceAfter=No
 24	,	,	PUNCT	_	_	25	punct	_	_
-25	José	José	PROPN	_	Gender=Masc|Number=Sing	17	conj	_	_
+25	José	José	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	17	conj	_	_
 26	Alípio	Alípio	PROPN	_	Number=Sing	25	flat:name	_	_
 27	Costallat	Costallat	PROPN	_	Number=Sing	25	flat:name	_	SpaceAfter=No
 28	,	,	PUNCT	_	_	29	punct	_	_
 29	Eugênio	Eugênio	PROPN	_	Gender=Masc|Number=Sing	17	conj	_	_
 30	de	de	ADP	_	_	31	case	_	_
-31	Macedo	Macedo	PROPN	_	Gender=Masc|Number=Sing	29	nmod	_	_
+31	Macedo	Macedo	PROPN	_	ExtPos=PROPN|Number=Sing	29	nmod	_	_
 32	Torres	Torres	PROPN	_	Number=Sing	31	flat:name	_	SpaceAfter=No
 33	,	,	PUNCT	_	_	34	punct	_	_
-34	Altivo	Altivo	PROPN	_	Gender=Masc|Number=Sing	16	conj	_	_
+34	Altivo	Altivo	PROPN	_	Gender=Masc|Number=Sing	17	conj	_	_
 35-36	do	_	_	_	_	_	_	_	_
 35	de	de	ADP	_	_	37	case	_	_
 36	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	37	det	_	_
-37	Vale	Vale	PROPN	_	Gender=Masc|Number=Sing	34	nmod	_	_
+37	Vale	Vale	PROPN	_	Number=Sing	34	nmod	_	_
 38	e	e	CCONJ	_	_	37	flat:name	_	_
 39	Silva	Silva	PROPN	_	Number=Sing	37	flat:name	_	SpaceAfter=No
 40	,	,	PUNCT	_	_	41	punct	_	_
-41	Altivo	Altivo	PROPN	_	Gender=Masc|Number=Sing	37	conj	_	_
+41	Altivo	Altivo	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	17	conj	_	_
 42	Linhares	Linhares	PROPN	_	Number=Sing	41	flat:name	_	SpaceAfter=No
 43	,	,	PUNCT	_	_	44	punct	_	_
-44	Carlos	Carlos	PROPN	_	Gender=Masc|Number=Sing	37	conj	_	_
+44	Carlos	Carlos	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	17	conj	_	_
 45	Alberto	Alberto	PROPN	_	Number=Sing	44	flat:name	_	_
-46	Nóbrega	nóbrega	PROPN	_	Number=Sing	44	flat:name	_	_
+46	Nóbrega	Nóbrega	PROPN	_	Number=Sing	44	flat:name	_	_
 47-48	da	_	_	_	_	_	_	_	_
 47	de	de	ADP	_	_	49	case	_	_
 48	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	49	det	_	_
-49	Cunha	Cunha	PROPN	_	Gender=Fem|Number=Sing	44	flat:name	_	SpaceAfter=No
+49	Cunha	Cunha	PROPN	_	Number=Sing	44	nmod	_	SpaceAfter=No
 50	,	,	PUNCT	_	_	52	punct	_	_
 51	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	52	det	_	_
-52	general	general	NOUN	_	Gender=Masc|Number=Sing	16	conj	_	_
-53	Cristóvão	Cristóvão	PROPN	_	Gender=Masc|Number=Sing	52	appos	_	_
-54	Barcelos	barcelos	PROPN	_	Number=Sing	53	flat:name	_	_
+52	general	general	NOUN	_	Gender=Masc|Number=Sing	17	conj	_	_
+53	Cristóvão	Cristóvão	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	52	appos	_	_
+54	Barcelos	Barcelos	PROPN	_	Number=Sing	53	flat:name	_	_
 55	e	e	CCONJ	_	_	57	cc	_	_
 56	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	57	det	_	_
-57	capitão	capitão	NOUN	_	Gender=Masc|Number=Sing	16	conj	_	_
-58	Asdrúbal	Asdrúbal	PROPN	_	Gender=Masc|Number=Sing	57	appos	_	_
+57	capitão	capitão	NOUN	_	Gender=Masc|Number=Sing	17	conj	_	_
+58	Asdrúbal	Asdrúbal	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	57	appos	_	_
 59	Gwyer	Gwyer	PROPN	_	Number=Sing	58	flat:name	_	_
 60	de	de	ADP	_	_	61	case	_	_
 61	Azevedo	Azevedo	PROPN	_	Number=Sing	58	nmod	_	SpaceAfter=No
-62	.	.	PUNCT	_	_	13	punct	_	SpacesAfter=\n
+62	.	.	PUNCT	_	_	13	punct	_	_
 
-# text = Os dois últimos, por discordarem das linhas expostas no programa, em pouco tempo desligaram-se da agremiação.
 # sent_id = 4
+# text = Os dois últimos, por discordarem das linhas expostas no programa, em pouco tempo desligaram-se da agremiação.
 1	Os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	3	det	_	_
 2	dois	dois	NUM	_	NumType=Card	3	nummod	_	_
 3	últimos	último	ADJ	_	Gender=Masc|Number=Plur|NumType=Ord	18	nsubj	_	SpaceAfter=No
@@ -149,21 +152,21 @@
 11	em	em	ADP	_	_	13	case	_	_
 12	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	13	det	_	_
 13	programa	programa	NOUN	_	Gender=Masc|Number=Sing	10	obl	_	SpaceAfter=No
-14	,	,	PUNCT	_	_	6	punct	_	_
+14	,	,	PUNCT	_	_	10	punct	_	_
 15	em	em	ADP	_	_	17	case	_	_
 16	pouco	pouco	DET	_	Gender=Masc|Number=Sing|PronType=Ind	17	det	_	_
 17	tempo	tempo	NOUN	_	Gender=Masc|Number=Sing	18	obl	_	_
 18-19	desligaram-se	_	_	_	_	_	_	_	_
-18	desligaram	desligar	VERB	_	Mood=Ind|Number=Plur|Person=3|VerbForm=Fin	0	root	_	_
-19	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	18	expl	_	_
+18	desligaram	desligar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+19	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Plur|Person=3|PronType=Prs	18	expl	_	_
 20-21	da	_	_	_	_	_	_	_	_
 20	de	de	ADP	_	_	22	case	_	_
 21	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	22	det	_	_
 22	agremiação	agremiação	NOUN	_	Gender=Fem|Number=Sing	18	obj	_	SpaceAfter=No
 23	.	.	PUNCT	_	_	18	punct	_	SpacesAfter=\n
 
-# text = Nas eleições de maio de 1933 para a Assembléia Nacional Constituinte, o PSF coligou-se com o Partido Proletário do Rio de Janeiro e conseguiu eleger dois representantes: José Alípio Costallat e César Tinoco.
 # sent_id = 5
+# text = Nas eleições de maio de 1933 para a Assembléia Nacional Constituinte, o PSF coligou-se com o Partido Proletário do Rio de Janeiro e conseguiu eleger dois representantes:
 1-2	Nas	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	3	case	_	_
 2	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	3	det	_	_
@@ -174,7 +177,7 @@
 7	1933	1933	NUM	_	NumType=Card	5	nmod	_	_
 8	para	para	ADP	_	_	10	case	_	_
 9	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	10	det	_	_
-10	Assembléia	Assembléia	PROPN	_	Gender=Fem|Number=Sing	5	nmod	_	_
+10	Assembléia	assembléia	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	3	nmod	_	_
 11	Nacional	Nacional	PROPN	_	Number=Sing	10	flat:name	_	_
 12	Constituinte	Constituinte	PROPN	_	Number=Sing	10	flat:name	_	SpaceAfter=No
 13	,	,	PUNCT	_	_	3	punct	_	_
@@ -185,62 +188,65 @@
 17	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	16	expl	_	_
 18	com	com	ADP	_	_	20	case	_	_
 19	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	20	det	_	_
-20	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	16	obl	_	_
+20	Partido	Partido	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	16	obl	_	_
 21	Proletário	Proletário	PROPN	_	Number=Sing	20	flat:name	_	_
 22-23	do	_	_	_	_	_	_	_	_
 22	de	de	ADP	_	_	24	case	_	_
 23	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	24	det	_	_
 24	Rio	Rio	PROPN	_	Gender=Masc|Number=Sing	20	nmod	_	_
 25	de	de	ADP	_	_	26	case	_	_
-26	Janeiro	janeiro	PROPN	_	Number=Sing	24	nmod	_	_
+26	Janeiro	Janeiro	PROPN	_	Number=Sing	24	nmod	_	_
 27	e	e	CCONJ	_	_	28	cc	_	_
 28	conseguiu	conseguir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	16	conj	_	_
 29	eleger	eleger	VERB	_	VerbForm=Inf	28	xcomp	_	_
 30	dois	dois	NUM	_	NumType=Card	31	nummod	_	_
 31	representantes	representante	NOUN	_	Gender=Masc|Number=Plur	29	obj	_	SpaceAfter=No
-32	:	:	PUNCT	_	_	33	punct	_	_
-33	José	José	PROPN	_	Gender=Masc|Number=Sing	31	appos	_	_
-34	Alípio	Alípio	PROPN	_	Number=Sing	33	flat:name	_	_
-35	Costallat	Costallat	PROPN	_	Number=Sing	33	flat:name	_	_
-36	e	e	CCONJ	_	_	37	cc	_	_
-37	César	César	PROPN	_	Gender=Masc|Number=Sing	33	conj	_	_
-38	Tinoco	Tinoco	PROPN	_	Number=Sing	37	flat:name	_	SpaceAfter=No
-39	.	.	PUNCT	_	_	16	punct	_	SpacesAfter=\n
+32	:	:	PUNCT	_	_	16	punct	_	_
 
-# text = Sua força eleitoral concentrava-se sobretudo em Rio Bonito, Itaboraí, Capivari, Barra de São João e Mangaratiba.
 # sent_id = 6
+# text = José Alípio Costallat e César Tinoco.
+1	José	José	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	0	root	_	_
+2	Alípio	Alípio	PROPN	_	Number=Sing	1	flat:name	_	_
+3	Costallat	Costallat	PROPN	_	Number=Sing	1	flat:name	_	_
+4	e	e	CCONJ	_	_	5	cc	_	_
+5	César	César	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	1	conj	_	_
+6	Tinoco	Tinoco	PROPN	_	Number=Sing	5	flat:name	_	SpaceAfter=No
+7	.	.	PUNCT	_	_	1	punct	_	_
+
+# sent_id = 7
+# text = Sua força eleitoral concentrava-se sobretudo em Rio Bonito, Itaboraí, Capivari, Barra de São João e Mangaratiba.
 1	Sua	seu	DET	_	Gender=Fem|Number=Sing|PronType=Prs	2	det	_	_
 2	força	força	NOUN	_	Gender=Fem|Number=Sing	4	nsubj	_	_
 3	eleitoral	eleitoral	ADJ	_	Gender=Fem|Number=Sing	2	amod	_	_
 4-5	concentrava-se	_	_	_	_	_	_	_	_
 4	concentrava	concentrar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	0	root	_	_
-5	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	4	expl	_	_
-6	sobretudo	sobretudo	ADV	_	_	8	advmod	_	_
+5	se	se	PRON	_	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	4	expl	_	_
+6	sobretudo	sobretudo	ADV	_	_	4	advmod	_	_
 7	em	em	ADP	_	_	8	case	_	_
-8	Rio	Rio	PROPN	_	Gender=Masc|Number=Sing	4	obl	_	_
-9	Bonito	bonito	PROPN	_	Number=Sing	8	flat:name	_	SpaceAfter=No
+8	Rio	Rio	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	4	obl	_	_
+9	Bonito	Bonito	PROPN	_	Number=Sing	8	flat:name	_	SpaceAfter=No
 10	,	,	PUNCT	_	_	11	punct	_	_
-11	Itaboraí	Itaboraí	PROPN	_	Gender=Fem|Number=Sing	8	conj	_	SpaceAfter=No
+11	Itaboraí	Itaboraí	PROPN	_	Gender=Masc|Number=Sing	8	conj	_	SpaceAfter=No
 12	,	,	PUNCT	_	_	13	punct	_	_
 13	Capivari	Capivari	PROPN	_	Gender=Masc|Number=Sing	8	conj	_	SpaceAfter=No
 14	,	,	PUNCT	_	_	15	punct	_	_
-15	Barra	Barra	NOUN	_	Gender=Masc|Number=Sing	8	conj	_	_
+15	Barra	Barra	PROPN	_	Gender=Masc|Number=Sing	8	conj	_	_
 16	de	de	ADP	_	_	17	case	_	_
-17	São	São	PROPN	_	Gender=Masc|Number=Sing	15	nmod	_	_
+17	São	São	PROPN	_	ExtPos=PROPN|Number=Sing	15	nmod	_	_
 18	João	João	PROPN	_	Number=Sing	17	flat:name	_	_
 19	e	e	CCONJ	_	_	20	cc	_	_
-20	Mangaratiba	Mangaratiba	PROPN	_	Number=Sing	8	conj	_	SpaceAfter=No
+20	Mangaratiba	Mangaratiba	PROPN	_	Gender=Fem|Number=Sing	8	conj	_	SpaceAfter=No
 21	.	.	PUNCT	_	_	4	punct	_	SpacesAfter=\n
 
+# sent_id = 8
 # text = Em 1934, na preparação das eleições de outubro para a Câmara Federal e a Assembléia Constituinte estadual - a qual, por sua vez, deveria eleger o governador do estado e dois senadores, a aliança com o Partido Proletário se rompeu.
-# sent_id = 7
 1	Em	em	ADP	_	_	2	case	_	_
-2	1934	1934	NUM	_	NumType=Card	0	root	_	SpaceAfter=No
+2	1934	1934	NUM	_	NumType=Card	47	obl	_	SpaceAfter=No
 3	,	,	PUNCT	_	_	2	punct	_	_
 4-5	na	_	_	_	_	_	_	_	_
 4	em	em	ADP	_	_	6	case	_	_
 5	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	6	det	_	_
-6	preparação	preparação	NOUN	_	Gender=Fem|Number=Sing	2	nmod	_	_
+6	preparação	preparação	NOUN	_	Gender=Fem|Number=Sing	47	obl	_	_
 7-8	das	_	_	_	_	_	_	_	_
 7	de	de	ADP	_	_	9	case	_	_
 8	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	9	det	_	_
@@ -249,22 +255,22 @@
 11	outubro	outubro	NOUN	_	Gender=Masc|Number=Sing	9	nmod	_	_
 12	para	para	ADP	_	_	14	case	_	_
 13	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	14	det	_	_
-14	Câmara	Câmara	PROPN	_	Gender=Fem|Number=Sing	11	nmod	_	_
+14	Câmara	Câmara	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	9	nmod	_	_
 15	Federal	Federal	PROPN	_	Number=Sing	14	flat:name	_	_
 16	e	e	CCONJ	_	_	18	cc	_	_
 17	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	18	det	_	_
-18	Assembléia	Assembléia	PROPN	_	Gender=Fem|Number=Sing	6	conj	_	_
+18	Assembléia	assembléia	NOUN	_	Gender=Fem|Number=Sing	14	conj	_	_
 19	Constituinte	Constituinte	PROPN	_	Number=Sing	18	flat:name	_	_
-20	estadual	estadual	ADJ	_	Gender=Masc|Number=Sing	18	flat:name	_	_
-21	-	-	PUNCT	_	_	23	punct	_	_
-22	a	a	ADP	_	_	23	case	_	_
-23	qual	qual	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	30	obl	_	SpaceAfter=No
-24	,	,	PUNCT	_	_	23	punct	_	_
-25	por	por	ADP	_	_	27	case	_	_
-26	sua	seu	DET	_	Gender=Fem|Number=Sing|PronType=Prs	27	det	_	_
-27	vez	vez	NOUN	_	Gender=Fem|Number=Sing	23	nmod	_	SpaceAfter=No
-28	,	,	PUNCT	_	_	23	punct	_	_
-29	deveria	dever	VERB	_	Mood=Cnd|Number=Sing|Person=3|VerbForm=Fin	6	acl:relcl	_	_
+20	estadual	estadual	ADJ	_	Gender=Fem|Number=Sing	18	amod	_	_
+21	-	-	PUNCT	_	_	29	punct	_	_
+22	a	o	DET	_	Gender=Fem|Number=Sing|PronType=Art	23	det	_	_
+23	qual	qual	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	29	nsubj	_	SpaceAfter=No
+24	,	,	PUNCT	_	_	25	punct	_	_
+25	por	por	NOUN	_	Gender=Masc|Number=Sing	29	obl	_	_
+26	sua	sua	ADP	_	_	27	case	_	_
+27	vez	vez	NOUN	_	Gender=Masc|Number=Sing	25	nmod	_	SpaceAfter=No
+28	,	,	PUNCT	_	_	25	punct	_	_
+29	deveria	dever	VERB	_	Mood=Cnd|Number=Sing|Person=3|VerbForm=Fin	18	acl:relcl	_	_
 30	eleger	eleger	VERB	_	VerbForm=Inf	29	xcomp	_	_
 31	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	32	det	_	_
 32	governador	governador	NOUN	_	Gender=Masc|Number=Sing	30	obj	_	_
@@ -275,22 +281,22 @@
 36	e	e	CCONJ	_	_	38	cc	_	_
 37	dois	dois	NUM	_	NumType=Card	38	nummod	_	_
 38	senadores	senador	NOUN	_	Gender=Masc|Number=Plur	32	conj	_	SpaceAfter=No
-39	,	,	PUNCT	_	_	41	punct	_	_
+39	,	,	PUNCT	_	_	30	punct	_	_
 40	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	41	det	_	_
 41	aliança	aliança	NOUN	_	Gender=Fem|Number=Sing	47	nsubj	_	_
 42	com	com	ADP	_	_	44	case	_	_
 43	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	44	det	_	_
-44	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	41	nmod	_	_
+44	Partido	Partido	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	41	nmod	_	_
 45	Proletário	Proletário	PROPN	_	Number=Sing	44	flat:name	_	_
-46	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	47	expl	_	_
-47	rompeu	romper	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	32	acl:relcl	_	SpaceAfter=No
-48	.	.	PUNCT	_	_	2	punct	_	SpacesAfter=\n
+46	se	se	PRON	_	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	47	expl	_	_
+47	rompeu	romper	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	SpaceAfter=No
+48	.	.	PUNCT	_	_	47	punct	_	_
 
+# sent_id = 9
 # text = Devido a divergências quanto à organização das chapas de candidatos, uma facção do Partido Proletário uniu-se ao Partido Liberdade e Trabalho, enquanto a comissão executiva mantinha o acordo com o PSF.
-# sent_id = 8
-1	Devido	devido	ADP	_	_	3	case	_	_
-2	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	3	det	_	_
-3	divergências	divergência	NOUN	_	Gender=Fem|Number=Plur	20	obl	_	_
+1	Devido	dever	ADV	_	_	20	advmod	_	_
+2	a	a	ADP	_	_	3	case	_	_
+3	divergências	divergência	NOUN	_	Gender=Fem|Number=Plur	1	obl	_	_
 4	quanto	quanto	ADV	_	_	3	advmod	_	_
 5-6	à	_	_	_	_	_	_	_	_
 5	a	a	ADP	_	_	7	case	_	_
@@ -302,24 +308,24 @@
 10	chapas	chapa	NOUN	_	Gender=Fem|Number=Plur	7	nmod	_	_
 11	de	de	ADP	_	_	12	case	_	_
 12	candidatos	candidato	NOUN	_	Gender=Masc|Number=Plur	10	nmod	_	SpaceAfter=No
-13	,	,	PUNCT	_	_	3	punct	_	_
+13	,	,	PUNCT	_	_	1	punct	_	_
 14	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	15	det	_	_
 15	facção	facção	NOUN	_	Gender=Fem|Number=Sing	20	nsubj	_	_
 16-17	do	_	_	_	_	_	_	_	_
 16	de	de	ADP	_	_	18	case	_	_
 17	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	18	det	_	_
-18	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	15	nmod	_	_
+18	Partido	Partido	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	15	nmod	_	_
 19	Proletário	Proletário	PROPN	_	Number=Sing	18	flat:name	_	_
 20-21	uniu-se	_	_	_	_	_	_	_	_
 20	uniu	unir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
-21	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	20	obj	_	_
+21	se	se	PRON	_	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	20	expl	_	_
 22-23	ao	_	_	_	_	_	_	_	_
 22	a	a	ADP	_	_	24	case	_	_
 23	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	24	det	_	_
-24	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	20	obl	_	_
-25	Liberdade	liberdade	PROPN	_	Number=Sing	24	flat:name	_	_
-26	e	e	CCONJ	_	_	27	cc	_	_
-27	Trabalho	trabalho	PROPN	_	Number=Sing	24	conj	_	SpaceAfter=No
+24	Partido	Partido	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	20	obl	_	_
+25	Liberdade	Liberdade	PROPN	_	Number=Sing	24	flat:name	_	_
+26	e	e	CCONJ	_	_	24	flat:name	_	_
+27	Trabalho	Trabalho	PROPN	_	Number=Sing	24	flat:name	_	SpaceAfter=No
 28	,	,	PUNCT	_	_	20	punct	_	_
 29	enquanto	enquanto	ADV	_	_	33	advmod	_	_
 30	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	31	det	_	_
@@ -330,17 +336,17 @@
 35	acordo	acordo	NOUN	_	Gender=Masc|Number=Sing	33	obj	_	_
 36	com	com	ADP	_	_	38	case	_	_
 37	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	38	det	_	_
-38	PSF	Psf	NOUN	_	Gender=Masc|Number=Sing	35	nmod	_	SpaceAfter=No
-39	.	.	PUNCT	_	_	20	punct	_	SpacesAfter=\n
+38	PSF	PSF	PROPN	_	Gender=Masc|Number=Sing	35	nmod	_	SpaceAfter=No
+39	.	.	PUNCT	_	_	20	punct	_	_
 
+# sent_id = 10
 # text = Realizado o pleito, o Partido Proletário não elegeu nenhum representante, mas o PSF reconduziu Alípio Costallat e César Tinoco à Câmara Federal e elegeu cinco deputados estaduais.
-# sent_id = 9
 1	Realizado	realizar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	9	advcl	_	_
 2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
 3	pleito	pleito	NOUN	_	Gender=Masc|Number=Sing	1	obj	_	SpaceAfter=No
 4	,	,	PUNCT	_	_	1	punct	_	_
 5	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	6	det	_	_
-6	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	9	nsubj	_	_
+6	Partido	Partido	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	9	nsubj	_	_
 7	Proletário	Proletário	PROPN	_	Number=Sing	6	flat:name	_	_
 8	não	não	ADV	_	Polarity=Neg	9	advmod	_	_
 9	elegeu	eleger	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
@@ -350,64 +356,64 @@
 13	mas	mas	CCONJ	_	_	16	cc	_	_
 14	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	15	det	_	_
 15	PSF	PSF	PROPN	_	Gender=Masc|Number=Sing	16	nsubj	_	_
-16	reconduziu	reconduzer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	9	conj	_	_
-17	Alípio	Alípio	PROPN	_	Gender=Masc|Number=Sing	16	obj	_	_
+16	reconduziu	reconduzir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	9	conj	_	_
+17	Alípio	Alípio	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	16	obj	_	_
 18	Costallat	Costallat	PROPN	_	Number=Sing	17	flat:name	_	_
 19	e	e	CCONJ	_	_	20	cc	_	_
-20	César	César	PROPN	_	Gender=Masc|Number=Sing	17	conj	_	_
+20	César	César	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	17	conj	_	_
 21	Tinoco	Tinoco	PROPN	_	Number=Sing	20	flat:name	_	_
 22-23	à	_	_	_	_	_	_	_	_
 22	a	a	ADP	_	_	24	case	_	_
 23	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	24	det	_	_
-24	Câmara	Câmara	PROPN	_	Gender=Fem|Number=Sing	17	conj	_	_
+24	Câmara	Câmara	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	16	obl	_	_
 25	Federal	Federal	PROPN	_	Number=Sing	24	flat:name	_	_
 26	e	e	CCONJ	_	_	27	cc	_	_
-27	elegeu	eleger	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	17	conj	_	_
+27	elegeu	eleger	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	16	conj	_	_
 28	cinco	cinco	NUM	_	NumType=Card	29	nummod	_	_
 29	deputados	deputado	NOUN	_	Gender=Masc|Number=Plur	27	obj	_	_
 30	estaduais	estadual	ADJ	_	Gender=Masc|Number=Plur	29	amod	_	SpaceAfter=No
 31	.	.	PUNCT	_	_	9	punct	_	SpacesAfter=\n
 
+# sent_id = 11
 # text = Por essa época, os partidos de maior força eleitoral no estado do Rio eram a União Progressista Fluminense (UPF) e o Partido Popular Radical (PPR).
-# sent_id = 10
 1	Por	por	ADP	_	_	3	case	_	_
 2	essa	esse	DET	_	Gender=Fem|Number=Sing|PronType=Dem	3	det	_	_
-3	época	época	NOUN	_	Gender=Fem|Number=Sing	19	obl	_	SpaceAfter=No
+3	época	época	NOUN	_	Gender=Fem|Number=Sing	19	nmod	_	SpaceAfter=No
 4	,	,	PUNCT	_	_	3	punct	_	_
 5	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	6	det	_	_
 6	partidos	partido	NOUN	_	Gender=Masc|Number=Plur	19	nsubj	_	_
 7	de	de	ADP	_	_	9	case	_	_
-8	maior	grande	ADJ	_	Gender=Fem|Number=Sing	9	amod	_	_
+8	maior	maior	ADJ	_	Gender=Fem|Number=Sing	9	amod	_	_
 9	força	força	NOUN	_	Gender=Fem|Number=Sing	6	nmod	_	_
 10	eleitoral	eleitoral	ADJ	_	Gender=Fem|Number=Sing	9	amod	_	_
 11-12	no	_	_	_	_	_	_	_	_
 11	em	em	ADP	_	_	13	case	_	_
 12	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	13	det	_	_
-13	estado	estado	NOUN	_	Gender=Masc|Number=Sing	6	nmod	_	_
+13	estado	estado	NOUN	_	Gender=Masc|Number=Sing	9	nmod	_	_
 14-15	do	_	_	_	_	_	_	_	_
 14	de	de	ADP	_	_	16	case	_	_
 15	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	16	det	_	_
 16	Rio	Rio	PROPN	_	Gender=Masc|Number=Sing	13	nmod	_	_
 17	eram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	19	cop	_	_
 18	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	19	det	_	_
-19	União	União	PROPN	_	Gender=Fem|Number=Sing	0	root	_	_
+19	União	União	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	0	root	_	_
 20	Progressista	Progressista	PROPN	_	Number=Sing	19	flat:name	_	_
-21	Fluminense	fluminense	PROPN	_	Number=Sing	19	flat:name	_	_
+21	Fluminense	Fluminense	PROPN	_	Number=Sing	19	flat:name	_	_
 22	(	(	PUNCT	_	_	23	punct	_	SpaceAfter=No
 23	UPF	UPF	PROPN	_	Gender=Fem|Number=Sing	19	appos	_	SpaceAfter=No
 24	)	)	PUNCT	_	_	23	punct	_	_
 25	e	e	CCONJ	_	_	27	cc	_	_
 26	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	27	det	_	_
-27	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	19	conj	_	_
+27	Partido	Partido	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	19	conj	_	_
 28	Popular	Popular	PROPN	_	Number=Sing	27	flat:name	_	_
 29	Radical	Radical	PROPN	_	Number=Sing	27	flat:name	_	_
 30	(	(	PUNCT	_	_	31	punct	_	SpaceAfter=No
 31	PPR	PPR	PROPN	_	Gender=Masc|Number=Sing	27	appos	_	SpaceAfter=No
 32	)	)	PUNCT	_	_	31	punct	_	SpaceAfter=No
-33	.	.	PUNCT	_	_	19	punct	_	SpacesAfter=\n
+33	.	.	PUNCT	_	_	19	punct	_	_
 
+# sent_id = 12
 # text = Para conquistar o governo do estado, ambos os partidos precisariam do apoio do PSF.
-# sent_id = 11
 1	Para	para	SCONJ	_	_	2	mark	_	_
 2	conquistar	conquistar	VERB	_	VerbForm=Inf	12	advcl	_	_
 3	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	4	det	_	_
@@ -420,7 +426,7 @@
 9	ambos	ambos	DET	_	Gender=Masc|Number=Plur|PronType=Tot	11	det	_	_
 10	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	11	det	_	_
 11	partidos	partido	NOUN	_	Gender=Masc|Number=Plur	12	nsubj	_	_
-12	precisariam	precisariar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+12	precisariam	precisar	VERB	_	Mood=Cnd|Number=Plur|Person=3|VerbForm=Fin	0	root	_	_
 13-14	do	_	_	_	_	_	_	_	_
 13	de	de	ADP	_	_	15	case	_	_
 14	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	15	det	_	_
@@ -428,42 +434,42 @@
 16-17	do	_	_	_	_	_	_	_	_
 16	de	de	ADP	_	_	18	case	_	_
 17	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	18	det	_	_
-18	PSF	Psf	NOUN	_	Gender=Masc|Number=Sing	15	nmod	_	SpaceAfter=No
-19	.	.	PUNCT	_	_	12	punct	_	SpacesAfter=\n
+18	PSF	PSF	PROPN	_	Gender=Masc|Number=Sing	15	nmod	_	SpaceAfter=No
+19	.	.	PUNCT	_	_	12	punct	_	_
 
+# sent_id = 13
 # text = Dos cinco deputados socialistas eleitos, três - Quinto Ferrari, Luís Frederico Carpenter e João Herdy Boechat - eram simpatizantes da UPF.
-# sent_id = 12
 1-2	Dos	_	_	_	_	_	_	_	_
 1	De	de	ADP	_	_	4	case	_	_
 2	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	4	det	_	_
 3	cinco	cinco	NUM	_	NumType=Card	4	nummod	_	_
 4	deputados	deputado	NOUN	_	Gender=Masc|Number=Plur	22	obl	_	_
 5	socialistas	socialista	ADJ	_	Gender=Masc|Number=Plur	4	amod	_	_
-6	eleitos	eleever	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part	4	acl	_	SpaceAfter=No
-7	,	,	PUNCT	_	_	8	punct	_	_
-8	três	três	NUM	_	NumType=Card	6	conj	_	_
+6	eleitos	eleger,eleito	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part	4	acl	_	SpaceAfter=No
+7	,	,	PUNCT	_	_	6	punct	_	_
+8	três	três	NUM	_	NumType=Card	22	nsubj	_	_
 9	-	-	PUNCT	_	_	10	punct	_	_
-10	Quinto	Quinto	PROPN	_	Gender=Masc|Number=Sing	6	conj	_	_
+10	Quinto	Quinto	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	8	appos	_	_
 11	Ferrari	Ferrari	PROPN	_	Number=Sing	10	flat:name	_	SpaceAfter=No
 12	,	,	PUNCT	_	_	13	punct	_	_
-13	Luís	Luís	PROPN	_	Gender=Masc|Number=Sing	6	conj	_	_
+13	Luís	Luís	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	10	conj	_	_
 14	Frederico	Frederico	PROPN	_	Number=Sing	13	flat:name	_	_
 15	Carpenter	Carpenter	PROPN	_	Number=Sing	13	flat:name	_	_
 16	e	e	CCONJ	_	_	17	cc	_	_
-17	João	João	PROPN	_	Gender=Masc|Number=Sing	6	conj	_	_
+17	João	João	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	10	conj	_	_
 18	Herdy	Herdy	PROPN	_	Number=Sing	17	flat:name	_	_
 19	Boechat	Boechat	PROPN	_	Number=Sing	17	flat:name	_	_
-20	-	-	PUNCT	_	_	6	punct	_	_
+20	-	-	PUNCT	_	_	10	punct	_	_
 21	eram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	22	cop	_	_
 22	simpatizantes	simpatizante	ADJ	_	Gender=Masc|Number=Plur	0	root	_	_
 23-24	da	_	_	_	_	_	_	_	_
 23	de	de	ADP	_	_	25	case	_	_
 24	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	25	det	_	_
 25	UPF	UPF	PROPN	_	Gender=Fem|Number=Sing	22	obl	_	SpaceAfter=No
-26	.	.	PUNCT	_	_	22	punct	_	SpacesAfter=\n
+26	.	.	PUNCT	_	_	22	punct	_	_
 
+# sent_id = 14
 # text = A comissão executiva do PSF, entretanto, iniciou entendimentos com o PPR, o que provocou atritos com outro deputado socialista eleito, Antero Manhães.
-# sent_id = 13
 1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
 2	comissão	comissão	NOUN	_	Gender=Fem|Number=Sing	10	nsubj	_	_
 3	executiva	executivo	ADJ	_	Gender=Fem|Number=Sing	2	amod	_	_
@@ -490,16 +496,16 @@
 23	socialista	socialista	ADJ	_	Gender=Masc|Number=Sing	22	amod	_	_
 24	eleito	eleger	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	22	acl	_	SpaceAfter=No
 25	,	,	PUNCT	_	_	26	punct	_	_
-26	Antero	Antero	PROPN	_	Gender=Masc|Number=Sing	24	appos	_	_
+26	Antero	Antero	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	22	appos	_	_
 27	Manhães	Manhães	PROPN	_	Number=Sing	26	flat:name	_	SpaceAfter=No
-28	.	.	PUNCT	_	_	10	punct	_	SpacesAfter=\n
+28	.	.	PUNCT	_	_	10	punct	_	_
 
+# sent_id = 15
 # text = Empenhados cada vez mais num acordo com o PPR, os dirigentes socialistas decidiram substituir esses quatro deputados por suplentes, a saber, José de Oliveira Campos Júnior, Modesto Vilela, Carlos Alberto Nóbrega da Cunha e Francisco Bittencourt Júnior.
-# sent_id = 14
-1	Empenhados	Empenhar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part	0	root	_	_
-2	cada	cada	ADV	_	_	1	advmod	_	_
-3	vez	vez	ADP	_	_	2	fixed	_	_
-4	mais	mais	NOUN	_	Gender=Masc|Number=Sing	2	fixed	_	_
+1	Empenhados	empenhado	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part	15	advcl	_	_
+2	cada	cada	NOUN	_	Gender=Masc|Number=Sing	1	obl	_	_
+3	vez	vez	ADP	_	_	4	case	_	_
+4	mais	mais	NOUN	_	Gender=Masc|Number=Sing	2	nmod	_	_
 5-6	num	_	_	_	_	_	_	_	_
 5	em	em	ADP	_	_	7	case	_	_
 6	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	7	det	_	_
@@ -507,45 +513,45 @@
 8	com	com	ADP	_	_	10	case	_	_
 9	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	10	det	_	_
 10	PPR	PPR	PROPN	_	Gender=Masc|Number=Sing	7	nmod	_	SpaceAfter=No
-11	,	,	PUNCT	_	_	15	punct	_	_
+11	,	,	PUNCT	_	_	1	punct	_	_
 12	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	13	det	_	_
 13	dirigentes	dirigente	NOUN	_	Gender=Masc|Number=Plur	15	nsubj	_	_
 14	socialistas	socialista	ADJ	_	Gender=Masc|Number=Plur	13	amod	_	_
-15	decidiram	decidir	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	10	acl:relcl	_	_
+15	decidiram	decidir	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 16	substituir	substituir	VERB	_	VerbForm=Inf	15	xcomp	_	_
 17	esses	esse	DET	_	Gender=Masc|Number=Plur|PronType=Dem	19	det	_	_
 18	quatro	quatro	NUM	_	NumType=Card	19	nummod	_	_
 19	deputados	deputado	NOUN	_	Gender=Masc|Number=Plur	16	obj	_	_
 20	por	por	ADP	_	_	21	case	_	_
-21	suplentes	suplente	NOUN	_	Gender=Unsp|Number=Plur	19	nmod	_	SpaceAfter=No
+21	suplentes	suplente	NOUN	_	Gender=Masc|Number=Plur	16	obl	_	SpaceAfter=No
 22	,	,	PUNCT	_	_	24	punct	_	_
 23	a	a	SCONJ	_	_	24	mark	_	_
-24	saber	saber	VERB	_	VerbForm=Inf	19	acl	_	SpaceAfter=No
-25	,	,	PUNCT	_	_	24	punct	_	_
-26	José	José	PROPN	_	Gender=Masc|Number=Sing	24	obj	_	_
+24	saber	saber	VERB	_	VerbForm=Inf	21	acl	_	SpaceAfter=No
+25	,	,	PUNCT	_	_	26	punct	_	_
+26	José	José	PROPN	_	Gender=Masc|Number=Sing	21	appos	_	_
 27	de	de	ADP	_	_	28	case	_	_
-28	Oliveira	Oliveira	PROPN	_	Number=Sing	26	nmod	_	_
+28	Oliveira	Oliveira	PROPN	_	ExtPos=PROPN|Number=Sing	26	nmod	_	_
 29	Campos	Campos	PROPN	_	Number=Sing	28	flat:name	_	_
 30	Júnior	Júnior	PROPN	_	Number=Sing	28	flat:name	_	SpaceAfter=No
-31	,	,	PUNCT	_	_	24	punct	_	_
-32	Modesto	modesto	PROPN	_	Gender=Masc|Number=Sing	28	appos	_	_
+31	,	,	PUNCT	_	_	32	punct	_	_
+32	Modesto	Modesto	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	26	conj	_	_
 33	Vilela	Vilela	PROPN	_	Number=Sing	32	flat:name	_	SpaceAfter=No
-34	,	,	PUNCT	_	_	42	punct	_	_
-35	Carlos	Carlos	PROPN	_	Gender=Masc|Number=Sing	28	conj	_	_
+34	,	,	PUNCT	_	_	35	punct	_	_
+35	Carlos	Carlos	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	26	conj	_	_
 36	Alberto	Alberto	PROPN	_	Number=Sing	35	flat:name	_	_
-37	Nóbrega	nóbrega	PROPN	_	Number=Sing	35	flat:name	_	_
+37	Nóbrega	Nóbrega	PROPN	_	Number=Sing	35	flat:name	_	_
 38-39	da	_	_	_	_	_	_	_	_
 38	de	de	ADP	_	_	40	case	_	_
 39	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	40	det	_	_
-40	Cunha	Cunha	PROPN	_	Gender=Fem|Number=Sing	35	flat:name	_	_
+40	Cunha	Cunha	PROPN	_	Number=Sing	35	nmod	_	_
 41	e	e	CCONJ	_	_	42	cc	_	_
-42	Francisco	Francisco	PROPN	_	Gender=Masc|Number=Sing	28	conj	_	_
+42	Francisco	Francisco	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	26	conj	_	_
 43	Bittencourt	Bittencourt	PROPN	_	Number=Sing	42	flat:name	_	_
 44	Júnior	Júnior	PROPN	_	Number=Sing	42	flat:name	_	SpaceAfter=No
-45	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
+45	.	.	PUNCT	_	_	15	punct	_	SpacesAfter=\n
 
+# sent_id = 16
 # text = Nesse momento, o PPR apresentou ao PSF uma lista com cinco nomes, entre os quais deveria ser escolhido o candidato a governador: Raul Fernandes, João Guimarães, Levi Carneiro, Oscar Weinschenck e José Eduardo de Macedo Soares.
-# sent_id = 15
 1-2	Nesse	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	3	case	_	_
 2	esse	esse	DET	_	Gender=Masc|Number=Sing|PronType=Dem	3	det	_	_
@@ -557,45 +563,45 @@
 8-9	ao	_	_	_	_	_	_	_	_
 8	a	a	ADP	_	_	10	case	_	_
 9	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	10	det	_	_
-10	PSF	Psf	NOUN	_	Gender=Masc|Number=Sing	7	iobj	_	_
+10	PSF	PSF	PROPN	_	Gender=Masc|Number=Sing	7	obl	_	_
 11	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	12	det	_	_
-12	lista	lista	NOUN	_	Gender=Fem|Number=Sing	22	nsubj:pass	_	_
+12	lista	lista	NOUN	_	Gender=Fem|Number=Sing	7	obj	_	_
 13	com	com	ADP	_	_	15	case	_	_
 14	cinco	cinco	NUM	_	NumType=Card	15	nummod	_	_
 15	nomes	nome	NOUN	_	Gender=Masc|Number=Plur	12	nmod	_	SpaceAfter=No
-16	,	,	PUNCT	_	_	22	punct	_	_
+16	,	,	PUNCT	_	_	20	punct	_	_
 17	entre	entre	ADP	_	_	19	case	_	_
 18	os	o	DET	_	Gender=Masc|Number=Plur|PronType=Art	19	det	_	_
-19	quais	qual	PRON	_	Gender=Masc|Number=Plur|PronType=Rel	22	obl	_	_
-20	deveria	dever	VERB	_	Mood=Cnd|Number=Sing|Person=3|VerbForm=Fin	7	ccomp	_	_
+19	quais	qual	PRON	_	Gender=Masc|Number=Plur|PronType=Rel	20	obl	_	_
+20	deveria	dever	VERB	_	Mood=Cnd|Number=Sing|Person=3|VerbForm=Fin	15	acl:relcl	_	_
 21	ser	ser	AUX	_	VerbForm=Inf	22	aux:pass	_	_
 22	escolhido	escolher	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	20	xcomp	_	_
 23	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	24	det	_	_
-24	candidato	candidato	NOUN	_	Gender=Masc|Number=Sing	22	nsubj:pass	_	_
+24	candidato	candidato	NOUN	_	Gender=Masc|Number=Sing	20	nsubj:pass	_	_
 25	a	a	ADP	_	_	26	case	_	_
 26	governador	governador	NOUN	_	Gender=Masc|Number=Sing	24	nmod	_	SpaceAfter=No
-27	:	:	PUNCT	_	_	22	punct	_	_
-28	Raul	Raul	PROPN	_	Gender=Masc|Number=Sing	22	nsubj:pass	_	_
+27	:	:	PUNCT	_	_	28	punct	_	_
+28	Raul	Raul	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	15	appos	_	_
 29	Fernandes	Fernandes	PROPN	_	Number=Sing	28	flat:name	_	SpaceAfter=No
 30	,	,	PUNCT	_	_	31	punct	_	_
-31	João	João	PROPN	_	Gender=Masc|Number=Sing	28	appos	_	_
+31	João	João	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	28	conj	_	_
 32	Guimarães	Guimarães	PROPN	_	Number=Sing	31	flat:name	_	SpaceAfter=No
-33	,	,	PUNCT	_	_	31	punct	_	_
-34	Levi	Levi	PROPN	_	Gender=Masc|Number=Sing	28	conj	_	_
+33	,	,	PUNCT	_	_	34	punct	_	_
+34	Levi	Levi	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	28	conj	_	_
 35	Carneiro	Carneiro	PROPN	_	Number=Sing	34	flat:name	_	SpaceAfter=No
 36	,	,	PUNCT	_	_	37	punct	_	_
-37	Oscar	Oscar	PROPN	_	Gender=Masc|Number=Sing	28	conj	_	_
+37	Oscar	Oscar	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	28	conj	_	_
 38	Weinschenck	Weinschenck	PROPN	_	Number=Sing	37	flat:name	_	_
 39	e	e	CCONJ	_	_	40	cc	_	_
-40	José	José	PROPN	_	Gender=Masc|Number=Sing	28	conj	_	_
+40	José	José	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	28	conj	_	_
 41	Eduardo	Eduardo	PROPN	_	Number=Sing	40	flat:name	_	_
 42	de	de	ADP	_	_	43	case	_	_
-43	Macedo	Macedo	PROPN	_	Gender=Masc|Number=Sing	40	nmod	_	_
+43	Macedo	Macedo	PROPN	_	ExtPos=PROPN|Number=Sing	40	nmod	_	_
 44	Soares	Soares	PROPN	_	Number=Sing	43	flat:name	_	SpaceAfter=No
-45	.	.	PUNCT	_	_	22	punct	_	SpacesAfter=\n
+45	.	.	PUNCT	_	_	7	punct	_	_
 
+# sent_id = 17
 # text = O PSF não aceitou a lista, alegando já ter um candidato: o deputado Pedro Luís Correia e Castro, o quinto membro de sua bancada estadual.
-# sent_id = 16
 1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	_	_
 2	PSF	PSF	PROPN	_	Gender=Masc|Number=Sing	4	nsubj	_	_
 3	não	não	ADV	_	Polarity=Neg	4	advmod	_	_
@@ -608,14 +614,14 @@
 10	ter	ter	VERB	_	VerbForm=Inf	8	xcomp	_	_
 11	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	12	det	_	_
 12	candidato	candidato	NOUN	_	Gender=Masc|Number=Sing	10	obj	_	SpaceAfter=No
-13	:	:	PUNCT	_	_	4	punct	_	_
+13	:	:	PUNCT	_	_	15	punct	_	_
 14	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	15	det	_	_
 15	deputado	deputado	NOUN	_	Gender=Masc|Number=Sing	12	appos	_	_
-16	Pedro	Pedro	PROPN	_	Gender=Masc|Number=Sing	15	appos	_	_
+16	Pedro	Pedro	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	15	appos	_	_
 17	Luís	Luís	PROPN	_	Number=Sing	16	flat:name	_	_
 18	Correia	Correia	PROPN	_	Number=Sing	16	flat:name	_	_
-19	e	e	CCONJ	_	_	20	cc	_	_
-20	Castro	Castro	PROPN	_	Gender=Masc|Number=Sing	15	conj	_	SpaceAfter=No
+19	e	e	CCONJ	_	_	16	flat:name	_	_
+20	Castro	Castro	PROPN	_	Number=Sing	16	flat:name	_	SpaceAfter=No
 21	,	,	PUNCT	_	_	24	punct	_	_
 22	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	24	det	_	_
 23	quinto	quinto	ADJ	_	Gender=Masc|Number=Sing|NumType=Ord	24	amod	_	_
@@ -624,53 +630,53 @@
 26	sua	seu	DET	_	Gender=Fem|Number=Sing|PronType=Prs	27	det	_	_
 27	bancada	bancada	NOUN	_	Gender=Fem|Number=Sing	24	nmod	_	_
 28	estadual	estadual	ADJ	_	Gender=Fem|Number=Sing	27	amod	_	SpaceAfter=No
-29	.	.	PUNCT	_	_	4	punct	_	SpacesAfter=\n
+29	.	.	PUNCT	_	_	4	punct	_	_
 
+# sent_id = 18
 # text = Correia e Castro, apoiado sobretudo por Alípio Costallat, Altivo do Vale e Silva e Luís Guarino, tampouco foi aceito pelo PPR.
-# sent_id = 17
-1	Correia	Correia	PROPN	_	Gender=Masc|Number=Sing	5	nsubj	_	_
-2	e	e	CCONJ	_	_	3	cc	_	_
-3	Castro	Castro	PROPN	_	Gender=Masc|Number=Sing	1	conj	_	SpaceAfter=No
+1	Correia	Correia	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	23	nsubj:pass	_	_
+2	e	e	CCONJ	_	_	1	flat:name	_	_
+3	Castro	Castro	PROPN	_	Number=Sing	1	flat:name	_	SpaceAfter=No
 4	,	,	PUNCT	_	_	5	punct	_	_
-5	apoiado	apoiar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
-6	sobretudo	sobretudo	ADV	_	_	23	advmod	_	_
+5	apoiado	apoiar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	1	acl	_	_
+6	sobretudo	sobretudo	ADV	_	_	8	advmod	_	_
 7	por	por	ADP	_	_	8	case	_	_
-8	Alípio	Alípio	PROPN	_	Gender=Masc|Number=Sing	23	obl	_	_
+8	Alípio	Alípio	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	5	obl:agent	_	_
 9	Costallat	Costallat	PROPN	_	Number=Sing	8	flat:name	_	SpaceAfter=No
 10	,	,	PUNCT	_	_	11	punct	_	_
-11	Altivo	Altivo	PROPN	_	Gender=Masc|Number=Sing	8	appos	_	_
+11	Altivo	Altivo	PROPN	_	Gender=Masc|Number=Sing	8	conj	_	_
 12-13	do	_	_	_	_	_	_	_	_
 12	de	de	ADP	_	_	14	case	_	_
 13	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	14	det	_	_
-14	Vale	Vale	PROPN	_	Gender=Masc|Number=Sing	11	nmod	_	_
+14	Vale	Vale	PROPN	_	ExtPos=PROPN|Number=Sing	11	nmod	_	_
 15	e	e	CCONJ	_	_	14	flat:name	_	_
 16	Silva	Silva	PROPN	_	Number=Sing	14	flat:name	_	_
 17	e	e	CCONJ	_	_	18	cc	_	_
-18	Luís	Luís	PROPN	_	Gender=Masc|Number=Sing	14	conj	_	_
+18	Luís	Luís	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	8	conj	_	_
 19	Guarino	Guarino	PROPN	_	Number=Sing	18	flat:name	_	SpaceAfter=No
-20	,	,	PUNCT	_	_	11	punct	_	_
-21	tampouco	tampouco	PRON	_	Gender=Masc|Number=Sing|PronType=Dem	23	nsubj:pass	_	_
+20	,	,	PUNCT	_	_	5	punct	_	_
+21	tampouco	tampouco	ADV	_	_	23	advmod	_	_
 22	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	23	aux:pass	_	_
-23	aceito	aceitar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	5	parataxis	_	_
+23	aceito	aceitar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
 24-25	pelo	_	_	_	_	_	_	_	_
 24	por	por	ADP	_	_	26	case	_	_
 25	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	26	det	_	_
 26	PPR	PPR	PROPN	_	Gender=Masc|Number=Sing	23	obl:agent	_	SpaceAfter=No
-27	.	.	PUNCT	_	_	5	punct	_	SpacesAfter=\n
+27	.	.	PUNCT	_	_	23	punct	_	SpacesAfter=\n
 
+# sent_id = 19
 # text = Em junho de 1935 ocorreu uma cisão na comissão executiva do PSF, no momento em que César Tinoco anunciou que seu candidato não seria mais Correia e Castro e sim Alfredo Backer, ex-membro do Partido Republicano Fluminense (PRF), fundador do Partido Liberal Social Fluminense e desde o ano anterior filiado ao PSF.
-# sent_id = 18
 1	Em	em	ADP	_	_	2	case	_	_
 2	junho	junho	NOUN	_	Gender=Masc|Number=Sing	5	obl	_	_
 3	de	de	ADP	_	_	4	case	_	_
 4	1935	1935	NUM	_	NumType=Card	2	nmod	_	_
 5	ocorreu	ocorrer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 6	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	7	det	_	_
-7	cisão	cisão	NOUN	_	Gender=Fem|Number=Sing	5	obj	_	_
+7	cisão	cisão	NOUN	_	Gender=Fem|Number=Sing	5	nsubj	_	_
 8-9	na	_	_	_	_	_	_	_	_
 8	em	em	ADP	_	_	10	case	_	_
 9	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	10	det	_	_
-10	comissão	comissão	NOUN	_	Gender=Fem|Number=Sing	7	nmod	_	_
+10	comissão	comissão	NOUN	_	Gender=Fem|Number=Sing	5	obl	_	_
 11	executiva	executivo	ADJ	_	Gender=Fem|Number=Sing	10	amod	_	_
 12-13	do	_	_	_	_	_	_	_	_
 12	de	de	ADP	_	_	14	case	_	_
@@ -680,10 +686,10 @@
 16-17	no	_	_	_	_	_	_	_	_
 16	em	em	ADP	_	_	18	case	_	_
 17	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	18	det	_	_
-18	momento	momento	NOUN	_	Gender=Masc|Number=Sing	7	nmod	_	_
+18	momento	momento	NOUN	_	Gender=Masc|Number=Sing	5	obl	_	_
 19	em	em	ADP	_	_	20	case	_	_
 20	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	23	obl	_	_
-21	César	César	PROPN	_	Gender=Masc|Number=Sing	23	nsubj	_	_
+21	César	César	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	23	nsubj	_	_
 22	Tinoco	Tinoco	PROPN	_	Number=Sing	21	flat:name	_	_
 23	anunciou	anunciar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	18	acl:relcl	_	_
 24	que	que	SCONJ	_	_	30	mark	_	_
@@ -692,21 +698,21 @@
 27	não	não	ADV	_	Polarity=Neg	30	advmod	_	_
 28	seria	ser	AUX	_	Mood=Cnd|Number=Sing|Person=3|VerbForm=Fin	30	cop	_	_
 29	mais	mais	ADV	_	_	30	advmod	_	_
-30	Correia	Correia	PROPN	_	Gender=Masc|Number=Sing	23	ccomp	_	_
-31	e	e	CCONJ	_	_	32	cc	_	_
-32	Castro	Castro	PROPN	_	Gender=Masc|Number=Sing	30	conj	_	_
+30	Correia	Correia	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	23	ccomp	_	_
+31	e	e	CCONJ	_	_	30	flat:name	_	_
+32	Castro	Castro	PROPN	_	Number=Sing	30	flat:name	_	_
 33	e	e	CCONJ	_	_	35	cc	_	_
 34	sim	sim	ADV	_	_	35	advmod	_	_
-35	Alfredo	Alfredo	PROPN	_	Gender=Masc|Number=Sing	30	conj	_	_
+35	Alfredo	Alfredo	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	30	conj	_	_
 36	Backer	Backer	PROPN	_	Number=Sing	35	flat:name	_	SpaceAfter=No
 37	,	,	PUNCT	_	_	38	punct	_	_
 38	ex-membro	ex-membro	NOUN	_	Gender=Masc|Number=Sing	35	appos	_	_
 39-40	do	_	_	_	_	_	_	_	_
 39	de	de	ADP	_	_	41	case	_	_
 40	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	41	det	_	_
-41	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	38	nmod	_	_
+41	Partido	Partido	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	38	nmod	_	_
 42	Republicano	Republicano	PROPN	_	Number=Sing	41	flat:name	_	_
-43	Fluminense	fluminense	PROPN	_	Number=Sing	41	flat:name	_	_
+43	Fluminense	Fluminense	PROPN	_	Number=Sing	41	flat:name	_	_
 44	(	(	PUNCT	_	_	45	punct	_	SpaceAfter=No
 45	PRF	PRF	PROPN	_	Gender=Masc|Number=Sing	41	appos	_	SpaceAfter=No
 46	)	)	PUNCT	_	_	45	punct	_	SpaceAfter=No
@@ -715,95 +721,95 @@
 49-50	do	_	_	_	_	_	_	_	_
 49	de	de	ADP	_	_	51	case	_	_
 50	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	51	det	_	_
-51	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	48	nmod	_	_
-52	Liberal	liberal	PROPN	_	Number=Sing	51	flat:name	_	_
+51	Partido	Partido	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	48	nmod	_	_
+52	Liberal	Liberal	PROPN	_	Number=Sing	51	flat:name	_	_
 53	Social	Social	PROPN	_	Number=Sing	51	flat:name	_	_
-54	Fluminense	fluminense	PROPN	_	Number=Sing	51	flat:name	_	_
+54	Fluminense	Fluminense	PROPN	_	Number=Sing	51	flat:name	_	_
 55	e	e	CCONJ	_	_	58	cc	_	_
 56	desde	desde	ADP	_	_	58	case	_	_
 57	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	58	det	_	_
-58	ano	ano	NOUN	_	Gender=Masc|Number=Sing	48	conj	_	_
+58	ano	ano	NOUN	_	Gender=Masc|Number=Sing	48	nmod	_	_
 59	anterior	anterior	ADJ	_	Gender=Masc|Number=Sing	58	amod	_	_
 60	filiado	filiar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	58	acl	_	_
 61-62	ao	_	_	_	_	_	_	_	_
 61	a	a	ADP	_	_	63	case	_	_
 62	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	63	det	_	_
 63	PSF	PSF	PROPN	_	Gender=Masc|Number=Sing	60	obj	_	SpaceAfter=No
-64	.	.	PUNCT	_	_	5	punct	_	SpacesAfter=\n
+64	.	.	PUNCT	_	_	5	punct	_	_
 
+# sent_id = 20
 # text = Por outro lado, os suplentes do PSF indicados para substituir os titulares passaram a apoiar uma terceira candidatura, a de Vicente Ferreira de Morais, ex-secretário de Finanças do estado.
-# sent_id = 19
-1	Por	por	ADP	_	_	12	cc	_	_
+1	Por	por	ADP	_	ExtPos=CCONJ	17	cc	_	_
 2	outro	outro	DET	_	Gender=Masc|Number=Sing|PronType=Ind	1	fixed	_	_
 3	lado	lado	NOUN	_	Gender=Masc|Number=Sing	1	fixed	_	SpaceAfter=No
 4	,	,	PUNCT	_	_	3	punct	_	_
 5	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	6	det	_	_
-6	suplentes	suplente	NOUN	_	Gender=Masc|Number=Plur	12	nsubj	_	_
+6	suplentes	suplente	NOUN	_	Gender=Masc|Number=Plur	15	nsubj	_	_
 7-8	do	_	_	_	_	_	_	_	_
 7	de	de	ADP	_	_	9	case	_	_
 8	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	9	det	_	_
-9	PSF	Psf	NOUN	_	Gender=Masc|Number=Sing	6	nmod	_	_
-10	indicados	indicar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part	9	acl	_	_
+9	PSF	PSF	PROPN	_	Gender=Masc|Number=Sing	6	nmod	_	_
+10	indicados	indicar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part	6	acl	_	_
 11	para	para	SCONJ	_	_	12	mark	_	_
-12	substituir	substituir	VERB	_	VerbForm=Inf	15	xcomp	_	_
+12	substituir	substituir	VERB	_	VerbForm=Inf	10	advcl	_	_
 13	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	14	det	_	_
 14	titulares	titular	NOUN	_	Gender=Masc|Number=Plur	12	obj	_	_
-15	passaram	passar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+15	passaram	passar	VERB	_	ExtPos=AUX|Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 16	a	a	SCONJ	_	_	17	mark	_	_
-17	apoiar	apoiar	VERB	_	VerbForm=Inf	14	acl	_	_
+17	apoiar	apoiar	VERB	_	VerbForm=Inf	15	xcomp	_	_
 18	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	20	det	_	_
-19	terceira	terceiro	ADJ	_	Gender=Fem|Number=Sing	20	amod	_	_
+19	terceira	terceiro	ADJ	_	Gender=Fem|Number=Sing|NumType=Ord	20	amod	_	_
 20	candidatura	candidatura	NOUN	_	Gender=Fem|Number=Sing	17	obj	_	SpaceAfter=No
 21	,	,	PUNCT	_	_	22	punct	_	_
-22	a	a	PRON	_	Gender=Fem|Number=Sing|PronType=Dem	20	appos	_	_
+22	a	o	PRON	_	Gender=Fem|Number=Sing|PronType=Dem	20	appos	_	_
 23	de	de	ADP	_	_	24	case	_	_
-24	Vicente	Vicente	PROPN	_	Gender=Masc|Number=Sing	22	nmod	_	_
+24	Vicente	Vicente	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	22	nmod	_	_
 25	Ferreira	Ferreira	PROPN	_	Number=Sing	24	flat:name	_	_
 26	de	de	ADP	_	_	27	case	_	_
 27	Morais	Morais	PROPN	_	Number=Sing	24	nmod	_	SpaceAfter=No
-28	,	,	PUNCT	_	_	22	punct	_	_
-29	ex-secretário	ex-secretário	NOUN	_	Gender=Masc|Number=Sing	20	appos	_	_
+28	,	,	PUNCT	_	_	29	punct	_	_
+29	ex-secretário	ex-secretário	NOUN	_	Gender=Masc|Number=Sing	24	appos	_	_
 30	de	de	ADP	_	_	31	case	_	_
-31	Finanças	Finanças	NOUN	_	Gender=Fem|Number=Plur	29	nmod	_	_
+31	Finanças	finanças	NOUN	_	Gender=Fem|Number=Sing	29	nmod	_	_
 32-33	do	_	_	_	_	_	_	_	_
 32	de	de	ADP	_	_	34	case	_	_
 33	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	34	det	_	_
 34	estado	estado	NOUN	_	Gender=Masc|Number=Sing	31	nmod	_	SpaceAfter=No
-35	.	.	PUNCT	_	_	12	punct	_	SpacesAfter=\n
+35	.	.	PUNCT	_	_	17	punct	_	SpacesAfter=\n
 
+# sent_id = 21
 # text = Dentro do PPR as divergências também se sucediam.
-# sent_id = 20
-1	Dentro	dentro	NOUN	_	Gender=Masc|Number=Sing	9	nsubj	_	_
+1	Dentro	dentro	ADV	_	_	9	advmod	_	_
 2-3	do	_	_	_	_	_	_	_	_
 2	de	de	ADP	_	_	4	case	_	_
 3	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	4	det	_	_
-4	PPR	PPR	PROPN	_	Gender=Masc|Number=Sing	1	nmod	_	_
+4	PPR	PPR	PROPN	_	Gender=Masc|Number=Sing	1	obl	_	_
 5	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	6	det	_	_
 6	divergências	divergência	NOUN	_	Gender=Fem|Number=Plur	9	nsubj	_	_
 7	também	também	ADV	_	_	9	advmod	_	_
-8	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Plur|Person=3|PronType=Prs	9	expl	_	_
+8	se	se	PRON	_	Case=Acc|Gender=Fem|Number=Plur|Person=3|PronType=Prs	9	expl	_	_
 9	sucediam	suceder	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	0	root	_	SpaceAfter=No
-10	.	.	PUNCT	_	_	9	punct	_	SpacesAfter=\n
+10	.	.	PUNCT	_	_	9	punct	_	_
 
+# sent_id = 22
 # text = As preferências polarizavam-se em torno de Macedo Soares e Raul Fernandes.
-# sent_id = 21
 1	As	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	2	det	_	_
 2	preferências	preferência	NOUN	_	Gender=Fem|Number=Plur	3	nsubj	_	_
 3-4	polarizavam-se	_	_	_	_	_	_	_	_
 3	polarizavam	polarizar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	0	root	_	_
 4	se	se	PRON	_	Case=Acc|Gender=Fem|Number=Plur|Person=3|PronType=Prs	3	expl	_	_
-5	em	em	ADP	_	_	6	case	_	_
-6	torno	torno	NOUN	_	Gender=Masc|Number=Sing	3	obl	_	_
-7	de	de	ADP	_	_	8	case	_	_
-8	Macedo	Macedo	PROPN	_	Gender=Masc|Number=Sing	6	nmod	_	_
+5	em	em	ADP	_	_	8	case	_	_
+6	torno	torno	NOUN	_	Gender=Masc|Number=Sing	5	fixed	_	_
+7	de	de	ADP	_	_	5	fixed	_	_
+8	Macedo	Macedo	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	3	obl	_	_
 9	Soares	Soares	PROPN	_	Number=Sing	8	flat:name	_	_
 10	e	e	CCONJ	_	_	11	cc	_	_
-11	Raul	Raul	PROPN	_	Gender=Masc|Number=Sing	8	conj	_	_
+11	Raul	Raul	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	8	conj	_	_
 12	Fernandes	Fernandes	PROPN	_	Number=Sing	11	flat:name	_	SpaceAfter=No
-13	.	.	PUNCT	_	_	3	punct	_	SpacesAfter=\n
+13	.	.	PUNCT	_	_	3	punct	_	_
 
+# sent_id = 23
 # text = A maioria decidiu-se por este último, mas não conseguiu a concordância do PSF.
-# sent_id = 22
 1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
 2	maioria	maioria	NOUN	_	Gender=Fem|Number=Sing	3	nsubj	_	_
 3-4	decidiu-se	_	_	_	_	_	_	_	_
@@ -811,7 +817,7 @@
 4	se	se	PRON	_	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	3	expl	_	_
 5	por	por	ADP	_	_	7	case	_	_
 6	este	este	DET	_	Gender=Masc|Number=Sing|PronType=Dem	7	det	_	_
-7	último	último	NOUN	_	Gender=Masc|Number=Sing	3	obl	_	SpaceAfter=No
+7	último	último	ADJ	_	Gender=Masc|Number=Sing|NumType=Ord	3	obl	_	SpaceAfter=No
 8	,	,	PUNCT	_	_	11	punct	_	_
 9	mas	mas	CCONJ	_	_	11	cc	_	_
 10	não	não	ADV	_	Polarity=Neg	11	advmod	_	_
@@ -821,13 +827,13 @@
 14-15	do	_	_	_	_	_	_	_	_
 14	de	de	ADP	_	_	16	case	_	_
 15	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	16	det	_	_
-16	PSF	Psf	NOUN	_	Gender=Masc|Number=Sing	13	nmod	_	SpaceAfter=No
-17	.	.	PUNCT	_	_	3	punct	_	SpacesAfter=\n
+16	PSF	PSF	PROPN	_	Gender=Masc|Number=Sing	13	nmod	_	SpaceAfter=No
+17	.	.	PUNCT	_	_	3	punct	_	_
 
+# sent_id = 24
 # text = Ao final, ficou assentado que o candidato dos dois partidos, unidos na Coligação Radical Socialista, seria o almirante Protógenes Guimarães.
-# sent_id = 23
 1-2	Ao	_	_	_	_	_	_	_	_
-1	A	a	DET	_	Gender=Masc|Number=Sing	3	case	_	_
+1	A	a	ADP	_	_	3	case	_	_
 2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
 3	final	final	NOUN	_	Gender=Masc|Number=Sing	5	obl	_	SpaceAfter=No
 4	,	,	PUNCT	_	_	3	punct	_	_
@@ -846,19 +852,19 @@
 16-17	na	_	_	_	_	_	_	_	_
 16	em	em	ADP	_	_	18	case	_	_
 17	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	18	det	_	_
-18	Coligação	coligação	PROPN	_	Gender=Fem|Number=Sing	15	obl	_	_
+18	Coligação	Coligação	PROPN	_	Gender=Fem|Number=Sing	15	obl	_	_
 19	Radical	Radical	PROPN	_	Number=Sing	18	flat:name	_	_
-20	Socialista	socialista	PROPN	_	Number=Sing	18	flat:name	_	SpaceAfter=No
+20	Socialista	Socialista	PROPN	_	Number=Sing	18	flat:name	_	SpaceAfter=No
 21	,	,	PUNCT	_	_	15	punct	_	_
 22	seria	ser	AUX	_	Mood=Cnd|Number=Sing|Person=3|VerbForm=Fin	24	cop	_	_
 23	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	24	det	_	_
-24	almirante	almirante	NOUN	_	Gender=Masc|Number=Sing	6	ccomp	_	_
-25	Protógenes	Protógenes	PROPN	_	Gender=Masc|Number=Sing	24	appos	_	_
+24	almirante	almirante	NOUN	_	Gender=Masc|Number=Sing	5	ccomp	_	_
+25	Protógenes	Protógenes	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	24	appos	_	_
 26	Guimarães	Guimarães	PROPN	_	Number=Sing	25	flat:name	_	SpaceAfter=No
-27	.	.	PUNCT	_	_	5	punct	_	SpacesAfter=\n
+27	.	.	PUNCT	_	_	5	punct	_	_
 
+# sent_id = 25
 # text = Seu adversário, lançado pela UPF, seria o general Cristóvão Barcelos.
-# sent_id = 24
 1	Seu	seu	DET	_	Gender=Masc|Number=Sing|PronType=Prs	2	det	_	_
 2	adversário	adversário	NOUN	_	Gender=Masc|Number=Sing	11	nsubj	_	SpaceAfter=No
 3	,	,	PUNCT	_	_	4	punct	_	_
@@ -871,12 +877,12 @@
 9	seria	ser	AUX	_	Mood=Cnd|Number=Sing|Person=3|VerbForm=Fin	11	cop	_	_
 10	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	_	_
 11	general	general	NOUN	_	Gender=Masc|Number=Sing	0	root	_	_
-12	Cristóvão	Cristóvão	PROPN	_	Gender=Masc|Number=Sing	11	appos	_	_
+12	Cristóvão	Cristóvão	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	11	appos	_	_
 13	Barcelos	Barcelos	PROPN	_	Number=Sing	12	flat:name	_	SpaceAfter=No
 14	.	.	PUNCT	_	_	11	punct	_	SpacesAfter=\n
 
+# sent_id = 26
 # text = O clima de tensão nas eleições fluminenses era agravado pelas tentativas de interferência tanto do governo federal como dos governos de Minas Gerais, São Paulo e Rio Grande do Sul, preocupados com o peso político que teria o estado do Rio na escolha do sucessor de Getúlio Vargas em 1938.
-# sent_id = 25
 1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	_	_
 2	clima	clima	NOUN	_	Gender=Masc|Number=Sing	10	nsubj:pass	_	_
 3	de	de	ADP	_	_	4	case	_	_
@@ -894,40 +900,40 @@
 13	tentativas	tentativa	NOUN	_	Gender=Fem|Number=Plur	10	obl:agent	_	_
 14	de	de	ADP	_	_	15	case	_	_
 15	interferência	interferência	NOUN	_	Gender=Fem|Number=Sing	13	nmod	_	_
-16	tanto	tanto	ADV	_	_	10	advmod	_	_
+16	tanto	tanto	ADV	_	_	19	advmod	_	_
 17-18	do	_	_	_	_	_	_	_	_
 17	de	de	ADP	_	_	19	case	_	_
 18	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	19	det	_	_
-19	governo	governo	NOUN	_	Gender=Masc|Number=Sing	16	obl	_	_
+19	governo	governo	NOUN	_	Gender=Masc|Number=Sing	15	nmod	_	_
 20	federal	federal	ADJ	_	Gender=Masc|Number=Sing	19	amod	_	_
-21	como	como	ADV	_	_	10	advmod	_	_
+21	como	como	ADV	_	_	24	cc	_	_
 22-23	dos	_	_	_	_	_	_	_	_
 22	de	de	ADP	_	_	24	case	_	_
 23	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	24	det	_	_
-24	governos	governo	NOUN	_	Gender=Masc|Number=Plur	21	obl	_	_
+24	governos	governo	NOUN	_	Gender=Masc|Number=Plur	19	conj	_	_
 25	de	de	ADP	_	_	26	case	_	_
-26	Minas	Minas	PROPN	_	Gender=Masc|Number=Sing	24	nmod	_	_
+26	Minas	Minas	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	24	nmod	_	_
 27	Gerais	Gerais	PROPN	_	Number=Sing	26	flat:name	_	SpaceAfter=No
 28	,	,	PUNCT	_	_	29	punct	_	_
-29	São	São	PROPN	_	Gender=Masc|Number=Sing	26	conj	_	_
+29	São	São	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	26	conj	_	_
 30	Paulo	Paulo	PROPN	_	Number=Sing	29	flat:name	_	_
 31	e	e	CCONJ	_	_	32	cc	_	_
-32	Rio	Rio	PROPN	_	Gender=Masc|Number=Sing	26	conj	_	_
+32	Rio	Rio	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	26	conj	_	_
 33	Grande	Grande	PROPN	_	Number=Sing	32	flat:name	_	_
 34-35	do	_	_	_	_	_	_	_	_
 34	de	de	ADP	_	_	36	case	_	_
 35	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	36	det	_	_
 36	Sul	Sul	PROPN	_	Number=Sing	32	nmod	_	SpaceAfter=No
 37	,	,	PUNCT	_	_	38	punct	_	_
-38	preocupados	preocupado	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part	26	acl	_	_
+38	preocupados	preocupar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part	24	acl	_	_
 39	com	com	ADP	_	_	41	case	_	_
 40	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	41	det	_	_
 41	peso	peso	NOUN	_	Gender=Masc|Number=Sing	38	obj	_	_
 42	político	político	ADJ	_	Gender=Masc|Number=Sing	41	amod	_	_
-43	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	46	nsubj	_	_
-44	teria	ter	AUX	_	Mood=Cnd|Number=Sing|Person=3|VerbForm=Fin	46	cop	_	_
+43	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	44	nsubj	_	_
+44	teria	ter	VERB	_	Mood=Cnd|Number=Sing|Person=3|VerbForm=Fin	41	acl:relcl	_	_
 45	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	46	det	_	_
-46	estado	estado	NOUN	_	Gender=Masc|Number=Sing	41	acl:relcl	_	_
+46	estado	estado	NOUN	_	Gender=Masc|Number=Sing	44	obj	_	_
 47-48	do	_	_	_	_	_	_	_	_
 47	de	de	ADP	_	_	49	case	_	_
 48	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	49	det	_	_
@@ -935,20 +941,20 @@
 50-51	na	_	_	_	_	_	_	_	_
 50	em	em	ADP	_	_	52	case	_	_
 51	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	52	det	_	_
-52	escolha	escolha	NOUN	_	Gender=Fem|Number=Sing	46	nmod	_	_
+52	escolha	escolha	NOUN	_	Gender=Fem|Number=Sing	44	obl	_	_
 53-54	do	_	_	_	_	_	_	_	_
 53	de	de	ADP	_	_	55	case	_	_
 54	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	55	det	_	_
 55	sucessor	sucessor	NOUN	_	Gender=Masc|Number=Sing	52	nmod	_	_
 56	de	de	ADP	_	_	57	case	_	_
-57	Getúlio	Getúlio	PROPN	_	Gender=Masc|Number=Sing	55	nmod	_	_
+57	Getúlio	Getúlio	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	55	nmod	_	_
 58	Vargas	Vargas	PROPN	_	Number=Sing	57	flat:name	_	_
 59	em	em	ADP	_	_	60	case	_	_
-60	1938	1938	NUM	_	NumType=Card	46	nmod	_	SpaceAfter=No
-61	.	.	PUNCT	_	_	10	punct	_	SpacesAfter=\n
+60	1938	1938	NUM	_	NumType=Card	55	nmod	_	SpaceAfter=No
+61	.	.	PUNCT	_	_	10	punct	_	_
 
+# sent_id = 27
 # text = Contra esse tipo de interferência externa, representantes de quase todos os partidos fluminenses, inclusive o PSF, tentaram organizar em setembro de 1935 um movimento denominado Aliança Autonomista Fluminense.
-# sent_id = 26
 1	Contra	contra	ADP	_	_	3	case	_	_
 2	esse	esse	DET	_	Gender=Masc|Number=Sing|PronType=Dem	3	det	_	_
 3	tipo	tipo	NOUN	_	Gender=Masc|Number=Sing	20	obl	_	_
@@ -958,7 +964,7 @@
 7	,	,	PUNCT	_	_	3	punct	_	_
 8	representantes	representante	NOUN	_	Gender=Masc|Number=Plur	20	nsubj	_	_
 9	de	de	ADP	_	_	13	case	_	_
-10	quase	quase	ADV	_	_	11	advmod	_	_
+10	quase	quase	ADV	_	_	13	advmod	_	_
 11	todos	todo	DET	_	Gender=Masc|Number=Plur|PronType=Tot	13	det	_	_
 12	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	11	fixed	_	_
 13	partidos	partido	NOUN	_	Gender=Masc|Number=Plur	8	nmod	_	_
@@ -966,7 +972,7 @@
 15	,	,	PUNCT	_	_	18	punct	_	_
 16	inclusive	inclusive	ADV	_	_	18	advmod	_	_
 17	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	18	det	_	_
-18	PSF	Psf	NOUN	_	Gender=Masc|Number=Sing	8	appos	_	SpaceAfter=No
+18	PSF	PSF	PROPN	_	Gender=Masc|Number=Sing	13	appos	_	SpaceAfter=No
 19	,	,	PUNCT	_	_	18	punct	_	_
 20	tentaram	tentar	VERB	_	Mood=Ind|Number=Plur|Person=3|VerbForm=Fin	0	root	_	_
 21	organizar	organizar	VERB	_	VerbForm=Inf	20	xcomp	_	_
@@ -977,13 +983,13 @@
 26	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	27	det	_	_
 27	movimento	movimento	NOUN	_	Gender=Masc|Number=Sing	21	obj	_	_
 28	denominado	denominar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	27	acl	_	_
-29	Aliança	Aliança	PROPN	_	Gender=Fem|Number=Sing	27	appos	_	_
+29	Aliança	Aliança	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	28	obj	_	_
 30	Autonomista	Autonomista	PROPN	_	Number=Sing	29	flat:name	_	_
-31	Fluminense	fluminense	PROPN	_	Number=Sing	29	flat:name	_	SpaceAfter=No
+31	Fluminense	Fluminense	PROPN	_	Number=Sing	29	flat:name	_	SpaceAfter=No
 32	.	.	PUNCT	_	_	20	punct	_	SpacesAfter=\n
 
+# sent_id = 28
 # text = Nesse mês, foi definida a bancada do PSF na Assembléia estadual.
-# sent_id = 27
 1-2	Nesse	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	3	case	_	_
 2	esse	esse	DET	_	Gender=Masc|Number=Sing|PronType=Dem	3	det	_	_
@@ -1000,24 +1006,24 @@
 12-13	na	_	_	_	_	_	_	_	_
 12	em	em	ADP	_	_	14	case	_	_
 13	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	14	det	_	_
-14	Assembléia	assembléia	PROPN	_	Gender=Fem|Number=Sing	6	obl	_	_
+14	Assembléia	assembléia	NOUN	_	Gender=Fem|Number=Sing	6	obl	_	_
 15	estadual	estadual	ADJ	_	Gender=Fem|Number=Sing	14	amod	_	SpaceAfter=No
-16	.	.	PUNCT	_	_	6	punct	_	SpacesAfter=\n
+16	.	.	PUNCT	_	_	6	punct	_	_
 
+# sent_id = 29
 # text = Além de Correia e Castro, dela faziam parte Antero Manhães, Capitulino dos Santos Júnior, Alfredo Backer e Luís Guarino.
-# sent_id = 28
-1	Além	além	PROPN	_	Gender=Masc|Number=Sing	0	root	_	_
+1	Além	além	ADV	_	_	9	advmod	_	_
 2	de	de	ADP	_	_	3	case	_	_
-3	Correia	Correia	PROPN	_	Number=Sing	1	nmod	_	_
-4	e	e	CCONJ	_	_	3	flat:name	_	_
-5	Castro	Castro	PROPN	_	Gender=Masc|Number=Sing	3	flat:name	_	SpaceAfter=No
-6	,	,	PUNCT	_	_	9	punct	_	_
+3	Correia	Correia	PROPN	_	Gender=Masc|Number=Sing	1	obl	_	_
+4	e	e	CCONJ	_	_	5	cc	_	_
+5	Castro	Castro	PROPN	_	Gender=Masc|Number=Sing	3	conj	_	SpaceAfter=No
+6	,	,	PUNCT	_	_	1	punct	_	_
 7-8	dela	_	_	_	_	_	_	_	_
 7	de	de	ADP	_	_	8	case	_	_
-8	ela	ela	PRON	_	Gender=Fem|Number=Sing|Person=3|PronType=Prs	9	obl	_	_
-9	faziam	fazer	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	3	acl:relcl	_	_
+8	ela	ela	PRON	_	Gender=Fem|Number=Sing|Person=3|PronType=Prs	9	nsubj	_	_
+9	faziam	fazer	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	0	root	_	_
 10	parte	parte	NOUN	_	Gender=Fem|Number=Sing	9	obj	_	_
-11	Antero	Antero	PROPN	_	Gender=Fem|Number=Sing	10	appos	_	_
+11	Antero	Antero	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	9	nsubj	_	_
 12	Manhães	Manhães	PROPN	_	Number=Sing	11	flat:name	_	SpaceAfter=No
 13	,	,	PUNCT	_	_	14	punct	_	_
 14	Capitulino	Capitulino	PROPN	_	Gender=Masc|Number=Sing	11	conj	_	_
@@ -1027,17 +1033,17 @@
 17	Santos	Santos	PROPN	_	Number=Sing	14	nmod	_	_
 18	Júnior	Júnior	PROPN	_	Number=Sing	17	flat:name	_	SpaceAfter=No
 19	,	,	PUNCT	_	_	20	punct	_	_
-20	Alfredo	Alfredo	PROPN	_	Gender=Masc|Number=Sing	11	conj	_	_
+20	Alfredo	Alfredo	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	11	conj	_	_
 21	Backer	Backer	PROPN	_	Number=Sing	20	flat:name	_	_
 22	e	e	CCONJ	_	_	23	cc	_	_
-23	Luís	Luís	PROPN	_	Gender=Masc|Number=Sing	11	conj	_	_
+23	Luís	Luís	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	11	conj	_	_
 24	Guarino	Guarino	PROPN	_	Number=Sing	23	flat:name	_	SpaceAfter=No
-25	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
+25	.	.	PUNCT	_	_	9	punct	_	_
 
+# sent_id = 30
 # text = Definiram-se igualmente os dois blocos adversários: a Coligação Radical-Socialista incluiu 18 deputados do PPR, quatro do PSF e um do PRF, num total de 23 representantes, enquanto a UPF, além de seus 19 deputados, recebeu o apoio de dois deputados do Partido Evolucionista do Rio de Janeiro e de Correia e Castro, dissidente do PSF, totalizando 22 votos.
-# sent_id = 29
 1-2	Definiram-se	_	_	_	_	_	_	_	_
-1	Definiram	Definer	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+1	Definiram	definir	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Plur|Person=3|PronType=Prs	1	expl	_	_
 3	igualmente	igualmente	ADV	_	_	1	advmod	_	_
 4	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	6	det	_	_
@@ -1046,9 +1052,9 @@
 7	adversários	adversário	ADJ	_	Gender=Masc|Number=Plur	6	amod	_	SpaceAfter=No
 8	:	:	PUNCT	_	_	12	punct	_	_
 9	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	10	det	_	_
-10	Coligação	coligação	PROPN	_	Gender=Fem|Number=Sing	12	nsubj	_	_
-11	Radical-Socialista	Radical-Socialista	PROPN	_	Number=Sing	10	flat:name	_	_
-12	incluiu	incluer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	acl:relcl	_	_
+10	Coligação	Coligação	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	12	nsubj	_	_
+11	Radical-Socialista	Radical-socialista	PROPN	_	Number=Sing	10	flat:name	_	_
+12	incluiu	incluir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	acl:relcl	_	_
 13	18	18	NUM	_	NumType=Card	14	nummod	_	_
 14	deputados	deputado	NOUN	_	Gender=Masc|Number=Plur	12	obj	_	_
 15-16	do	_	_	_	_	_	_	_	_
@@ -1056,18 +1062,18 @@
 16	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	17	det	_	_
 17	PPR	PPR	PROPN	_	Gender=Masc|Number=Sing	14	nmod	_	SpaceAfter=No
 18	,	,	PUNCT	_	_	19	punct	_	_
-19	quatro	quatro	NUM	_	NumType=Card	14	appos	_	_
+19	quatro	quatro	NUM	_	NumType=Card	14	conj	_	_
 20-21	do	_	_	_	_	_	_	_	_
 20	de	de	ADP	_	_	22	case	_	_
 21	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	22	det	_	_
 22	PSF	PSF	PROPN	_	Gender=Masc|Number=Sing	19	nmod	_	_
 23	e	e	CCONJ	_	_	24	cc	_	_
-24	um	um	NUM	_	NumType=Card	19	conj	_	_
+24	um	um	NUM	_	NumType=Card	14	conj	_	_
 25-26	do	_	_	_	_	_	_	_	_
 25	de	de	ADP	_	_	27	case	_	_
 26	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	27	det	_	_
 27	PRF	PRF	PROPN	_	Gender=Masc|Number=Sing	24	nmod	_	SpaceAfter=No
-28	,	,	PUNCT	_	_	19	punct	_	_
+28	,	,	PUNCT	_	_	31	punct	_	_
 29-30	num	_	_	_	_	_	_	_	_
 29	em	em	ADP	_	_	31	case	_	_
 30	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	31	det	_	_
@@ -1079,14 +1085,14 @@
 36	enquanto	enquanto	ADV	_	_	46	advmod	_	_
 37	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	38	det	_	_
 38	UPF	UPF	PROPN	_	Gender=Fem|Number=Sing	46	nsubj	_	SpaceAfter=No
-39	,	,	PUNCT	_	_	44	punct	_	_
-40	além	além	ADV	_	_	44	case	_	_
-41	de	de	ADP	_	_	40	fixed	_	_
+39	,	,	PUNCT	_	_	40	punct	_	_
+40	além	além	ADV	_	_	46	advmod	_	_
+41	de	de	ADP	_	_	44	case	_	_
 42	seus	seu	DET	_	Gender=Masc|Number=Plur|PronType=Prs	44	det	_	_
 43	19	19	NUM	_	NumType=Card	44	nummod	_	_
-44	deputados	deputado	NOUN	_	Gender=Masc|Number=Plur	38	nmod	_	SpaceAfter=No
-45	,	,	PUNCT	_	_	44	punct	_	_
-46	recebeu	receber	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	acl:relcl	_	_
+44	deputados	deputado	NOUN	_	Gender=Masc|Number=Plur	40	obl	_	SpaceAfter=No
+45	,	,	PUNCT	_	_	40	punct	_	_
+46	recebeu	receber	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	12	advcl	_	_
 47	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	48	det	_	_
 48	apoio	apoio	NOUN	_	Gender=Masc|Number=Sing	46	obj	_	_
 49	de	de	ADP	_	_	51	case	_	_
@@ -1095,33 +1101,33 @@
 52-53	do	_	_	_	_	_	_	_	_
 52	de	de	ADP	_	_	54	case	_	_
 53	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	54	det	_	_
-54	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	51	nmod	_	_
+54	Partido	Partido	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	51	nmod	_	_
 55	Evolucionista	Evolucionista	PROPN	_	Number=Sing	54	flat:name	_	_
 56-57	do	_	_	_	_	_	_	_	_
 56	de	de	ADP	_	_	58	case	_	_
 57	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	58	det	_	_
 58	Rio	Rio	PROPN	_	Gender=Masc|Number=Sing	54	nmod	_	_
 59	de	de	ADP	_	_	60	case	_	_
-60	Janeiro	janeiro	PROPN	_	Number=Sing	58	nmod	_	_
+60	Janeiro	Janeiro	PROPN	_	Number=Sing	58	nmod	_	_
 61	e	e	CCONJ	_	_	63	cc	_	_
 62	de	de	ADP	_	_	63	case	_	_
-63	Correia	Correia	PROPN	_	Gender=Masc|Number=Sing	54	conj	_	_
-64	e	e	CCONJ	_	_	65	cc	_	_
-65	Castro	Castro	PROPN	_	Gender=Masc|Number=Sing	63	conj	_	SpaceAfter=No
+63	Correia	Correia	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	54	conj	_	_
+64	e	e	CCONJ	_	_	63	flat:name	_	_
+65	Castro	Castro	PROPN	_	Number=Sing	63	flat:name	_	SpaceAfter=No
 66	,	,	PUNCT	_	_	67	punct	_	_
 67	dissidente	dissidente	NOUN	_	Gender=Masc|Number=Sing	63	appos	_	_
 68-69	do	_	_	_	_	_	_	_	_
 68	de	de	ADP	_	_	70	case	_	_
 69	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	70	det	_	_
-70	PSF	Psf	NOUN	_	Gender=Masc|Number=Sing	67	nmod	_	SpaceAfter=No
-71	,	,	PUNCT	_	_	67	punct	_	_
+70	PSF	PSF	PROPN	_	Gender=Masc|Number=Sing	67	nmod	_	SpaceAfter=No
+71	,	,	PUNCT	_	_	72	punct	_	_
 72	totalizando	totalizar	VERB	_	VerbForm=Ger	46	advcl	_	_
 73	22	22	NUM	_	NumType=Card	74	nummod	_	_
 74	votos	voto	NOUN	_	Gender=Masc|Number=Plur	72	obj	_	SpaceAfter=No
 75	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
 
+# sent_id = 31
 # text = No momento da votação o tumulto tomou conta da Assembléia.
-# sent_id = 30
 1-2	No	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	3	case	_	_
 2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
@@ -1137,17 +1143,17 @@
 11-12	da	_	_	_	_	_	_	_	_
 11	de	de	ADP	_	_	13	case	_	_
 12	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	13	det	_	_
-13	Assembléia	Assembléia	PROPN	_	Gender=Fem|Number=Sing	10	nmod	_	SpaceAfter=No
-14	.	.	PUNCT	_	_	9	punct	_	SpacesAfter=\n
+13	Assembléia	assembléia	NOUN	_	Gender=Fem|Number=Sing	10	nmod	_	SpaceAfter=No
+14	.	.	PUNCT	_	_	9	punct	_	_
 
+# sent_id = 32
 # text = Capitulino dos Santos, cuja adesão à UPF seria decisiva, foi ferido a bala ao depositar seu voto na urna.
-# sent_id = 31
 1	Capitulino	Capitulino	PROPN	_	Gender=Masc|Number=Sing	15	nsubj:pass	_	_
 2-3	dos	_	_	_	_	_	_	_	_
 2	de	de	ADP	_	_	4	case	_	_
 3	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	4	det	_	_
 4	Santos	Santos	PROPN	_	Number=Sing	1	nmod	_	SpaceAfter=No
-5	,	,	PUNCT	_	_	12	punct	_	_
+5	,	,	PUNCT	_	_	1	punct	_	_
 6	cuja	cujo	DET	_	Gender=Fem|Number=Sing|PronType=Rel	7	det	_	_
 7	adesão	adesão	NOUN	_	Gender=Fem|Number=Sing	12	nsubj	_	_
 8-9	à	_	_	_	_	_	_	_	_
@@ -1160,7 +1166,7 @@
 14	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	15	aux:pass	_	_
 15	ferido	ferir	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
 16	a	a	ADP	_	_	17	case	_	_
-17	bala	bala	NOUN	_	Gender=Masc|Number=Sing	15	obl	_	_
+17	bala	bala	NOUN	_	Gender=Fem|Number=Sing	15	obl	_	_
 18-19	ao	_	_	_	_	_	_	_	_
 18	a	a	SCONJ	_	_	20	mark	_	_
 19	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	20	det	_	_
@@ -1170,11 +1176,11 @@
 23-24	na	_	_	_	_	_	_	_	_
 23	em	em	ADP	_	_	25	case	_	_
 24	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	25	det	_	_
-25	urna	urna	NOUN	_	Gender=Fem|Number=Sing	22	nmod	_	SpaceAfter=No
-26	.	.	PUNCT	_	_	15	punct	_	SpacesAfter=\n
+25	urna	urna	NOUN	_	Gender=Fem|Number=Sing	20	obl	_	SpaceAfter=No
+26	.	.	PUNCT	_	_	15	punct	_	_
 
+# sent_id = 33
 # text = No tiroteio foi também alvejado o general Barcelos.
-# sent_id = 32
 1-2	No	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	3	case	_	_
 2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
@@ -1187,8 +1193,8 @@
 9	Barcelos	Barcelos	PROPN	_	Gender=Masc|Number=Sing	8	appos	_	SpaceAfter=No
 10	.	.	PUNCT	_	_	6	punct	_	SpacesAfter=\n
 
+# sent_id = 34
 # text = O vencedor do pleito foi Protógenes Guimarães, mas, alegando coação manifesta, tentativa de morte e quebra do sigilo do voto, a UPF interpôs recurso junto ao Tribunal Superior Eleitoral (TSE) contra esse resultado.
-# sent_id = 33
 1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	_	_
 2	vencedor	vencedor	NOUN	_	Gender=Masc|Number=Sing	7	nsubj	_	_
 3-4	do	_	_	_	_	_	_	_	_
@@ -1196,11 +1202,11 @@
 4	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	5	det	_	_
 5	pleito	pleito	NOUN	_	Gender=Masc|Number=Sing	2	nmod	_	_
 6	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	7	cop	_	_
-7	Protógenes	Protógenes	PROPN	_	Gender=Masc|Number=Sing	0	root	_	_
+7	Protógenes	Protógenes	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	0	root	_	_
 8	Guimarães	Guimarães	PROPN	_	Number=Sing	7	flat:name	_	SpaceAfter=No
-9	,	,	PUNCT	_	_	10	punct	_	_
+9	,	,	PUNCT	_	_	12	punct	_	_
 10	mas	mas	CCONJ	_	_	30	cc	_	SpaceAfter=No
-11	,	,	PUNCT	_	_	10	punct	_	_
+11	,	,	PUNCT	_	_	12	punct	_	_
 12	alegando	alegar	VERB	_	VerbForm=Ger	30	advcl	_	_
 13	coação	coação	NOUN	_	Gender=Fem|Number=Sing	12	obj	_	_
 14	manifesta	manifesto	ADJ	_	Gender=Fem|Number=Sing	13	amod	_	SpaceAfter=No
@@ -1218,16 +1224,16 @@
 24	de	de	ADP	_	_	26	case	_	_
 25	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	26	det	_	_
 26	voto	voto	NOUN	_	Gender=Masc|Number=Sing	23	nmod	_	SpaceAfter=No
-27	,	,	PUNCT	_	_	13	punct	_	_
+27	,	,	PUNCT	_	_	12	punct	_	_
 28	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	29	det	_	_
 29	UPF	UPF	PROPN	_	Gender=Fem|Number=Sing	30	nsubj	_	_
 30	interpôs	interpor	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	7	conj	_	_
-31	recurso	recurso	ADV	_	_	30	advmod	_	_
+31	recurso	recurso	NOUN	_	Gender=Masc|Number=Sing	30	obj	_	_
 32	junto	junto	ADV	_	_	30	advmod	_	_
 33-34	ao	_	_	_	_	_	_	_	_
 33	a	a	ADP	_	_	35	case	_	_
 34	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	35	det	_	_
-35	Tribunal	Tribunal	PROPN	_	Gender=Masc|Number=Sing	30	obl	_	_
+35	Tribunal	Tribunal	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	32	obl	_	_
 36	Superior	Superior	PROPN	_	Number=Sing	35	flat:name	_	_
 37	Eleitoral	Eleitoral	PROPN	_	Number=Sing	35	flat:name	_	_
 38	(	(	PUNCT	_	_	39	punct	_	SpaceAfter=No
@@ -1236,31 +1242,31 @@
 41	contra	contra	ADP	_	_	43	case	_	_
 42	esse	esse	DET	_	Gender=Masc|Number=Sing|PronType=Dem	43	det	_	_
 43	resultado	resultado	NOUN	_	Gender=Masc|Number=Sing	30	obl	_	SpaceAfter=No
-44	.	.	PUNCT	_	_	7	punct	_	SpacesAfter=\n
+44	.	.	PUNCT	_	_	7	punct	_	_
 
-# text = A ação foi aceita e novas eleições foram marcadas.
-# sent_id = 34
-1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
-2	ação	ação	NOUN	_	Gender=Fem|Number=Sing	4	nsubj	_	_
-3	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	cop	_	_
-4	aceita	aceger	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	9	advcl	_	_
-5	e	e	CCONJ	_	_	6	cc	_	_
-6	novas	novo	ADJ	_	Gender=Fem|Number=Plur	4	conj	_	_
-7	eleições	eleição	NOUN	_	Gender=Fem|Number=Plur	6	obj	_	_
-8	foram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	9	aux:pass	_	_
-9	marcadas	marcar	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part|Voice=Pass	0	root	_	SpaceAfter=No
-10	.	.	PUNCT	_	_	9	punct	_	SpacesAfter=\n
-
-# text = A Coligação Radical Socialista reapresentou Protógenes Guimarães, que foi afinal eleito em novembro seguinte.
 # sent_id = 35
+# text = A ação foi aceita e novas eleições foram marcadas.
 1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
-2	Coligação	coligação	PROPN	_	Gender=Fem|Number=Sing	5	nsubj	_	_
+2	ação	ação	NOUN	_	Gender=Fem|Number=Sing	4	nsubj:pass	_	_
+3	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	aux:pass	_	_
+4	aceita	aceitar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
+5	e	e	CCONJ	_	_	9	cc	_	_
+6	novas	novo	ADJ	_	Gender=Fem|Number=Plur	7	amod	_	_
+7	eleições	eleição	NOUN	_	Gender=Fem|Number=Plur	9	nsubj:pass	_	_
+8	foram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|VerbForm=Fin	9	aux:pass	_	_
+9	marcadas	marcar	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part|Voice=Pass	4	conj	_	SpaceAfter=No
+10	.	.	PUNCT	_	_	4	punct	_	_
+
+# sent_id = 36
+# text = A Coligação Radical Socialista reapresentou Protógenes Guimarães, que foi afinal eleito em novembro seguinte.
+1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
+2	Coligação	Coligação	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	5	nsubj	_	_
 3	Radical	Radical	PROPN	_	Number=Sing	2	flat:name	_	_
 4	Socialista	Socialista	PROPN	_	Number=Sing	2	flat:name	_	_
 5	reapresentou	reapresentar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
-6	Protógenes	Protógenes	PROPN	_	Gender=Masc|Number=Sing	5	obj	_	_
+6	Protógenes	Protógenes	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	5	obj	_	_
 7	Guimarães	Guimarães	PROPN	_	Number=Sing	6	flat:name	_	SpaceAfter=No
-8	,	,	PUNCT	_	_	5	punct	_	_
+8	,	,	PUNCT	_	_	12	punct	_	_
 9	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	12	nsubj:pass	_	_
 10	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	12	aux:pass	_	_
 11	afinal	afinal	ADV	_	_	12	advmod	_	_
@@ -1268,28 +1274,28 @@
 13	em	em	ADP	_	_	14	case	_	_
 14	novembro	novembro	NOUN	_	Gender=Masc|Number=Sing	12	obl	_	_
 15	seguinte	seguinte	ADJ	_	Gender=Masc|Number=Sing	14	amod	_	SpaceAfter=No
-16	.	.	PUNCT	_	_	5	punct	_	SpacesAfter=\n
+16	.	.	PUNCT	_	_	5	punct	_	_
 
+# sent_id = 37
 # text = Para o Senado elegeram-se José Eduardo de Macedo Soares e Alfredo Backer.
-# sent_id = 36
 1	Para	para	ADP	_	_	3	case	_	_
 2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
 3	Senado	senado	NOUN	_	Gender=Masc|Number=Sing	4	obl	_	_
 4-5	elegeram-se	_	_	_	_	_	_	_	_
 4	elegeram	eleger	VERB	_	Mood=Ind|Number=Plur|Person=3|VerbForm=Fin	0	root	_	_
-5	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	4	expl	_	_
-6	José	José	PROPN	_	Gender=Masc|Number=Sing	4	nsubj	_	_
+5	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Plur|Person=3|PronType=Prs	4	expl	_	_
+6	José	José	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	4	nsubj	_	_
 7	Eduardo	Eduardo	PROPN	_	Number=Sing	6	flat:name	_	_
 8	de	de	ADP	_	_	9	case	_	_
-9	Macedo	Macedo	PROPN	_	Gender=Masc|Number=Sing	6	nmod	_	_
+9	Macedo	Macedo	PROPN	_	ExtPos=PROPN|Number=Sing	6	nmod	_	_
 10	Soares	Soares	PROPN	_	Number=Sing	9	flat:name	_	_
 11	e	e	CCONJ	_	_	12	cc	_	_
-12	Alfredo	Alfredo	PROPN	_	Gender=Masc|Number=Sing	6	conj	_	_
+12	Alfredo	Alfredo	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	6	conj	_	_
 13	Backer	Backer	PROPN	_	Number=Sing	12	flat:name	_	SpaceAfter=No
 14	.	.	PUNCT	_	_	4	punct	_	SpacesAfter=\n
 
+# sent_id = 38
 # text = O almirante Protógenes começou sua administração tentando a pacificação política do estado através de um acordo entre a Coligação Radical Socialista e a UPF.
-# sent_id = 37
 1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	_	_
 2	almirante	almirante	NOUN	_	Gender=Masc|Number=Sing	4	nsubj	_	_
 3	Protógenes	Protógenes	PROPN	_	Gender=Masc|Number=Sing	2	appos	_	_
@@ -1310,16 +1316,16 @@
 17	acordo	acordo	NOUN	_	Gender=Masc|Number=Sing	14	obl	_	_
 18	entre	entre	ADP	_	_	20	case	_	_
 19	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	20	det	_	_
-20	Coligação	coligação	PROPN	_	Gender=Fem|Number=Sing	17	nmod	_	_
+20	Coligação	Coligação	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	17	nmod	_	_
 21	Radical	Radical	PROPN	_	Number=Sing	20	flat:name	_	_
 22	Socialista	Socialista	PROPN	_	Number=Sing	20	flat:name	_	_
 23	e	e	CCONJ	_	_	25	cc	_	_
 24	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	25	det	_	_
 25	UPF	UPF	PROPN	_	Gender=Fem|Number=Sing	20	conj	_	SpaceAfter=No
-26	.	.	PUNCT	_	_	4	punct	_	SpacesAfter=\n
+26	.	.	PUNCT	_	_	4	punct	_	_
 
+# sent_id = 39
 # text = As disputas dos dois grupos pelas prefeituras municipais neutralizavam, contudo, qualquer iniciativa conciliadora.
-# sent_id = 38
 1	As	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	2	det	_	_
 2	disputas	disputa	NOUN	_	Gender=Fem|Number=Plur	11	nsubj	_	_
 3-4	dos	_	_	_	_	_	_	_	_
@@ -1334,34 +1340,34 @@
 10	municipais	municipal	ADJ	_	Gender=Fem|Number=Plur	9	amod	_	_
 11	neutralizavam	neutralizar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	0	root	_	SpaceAfter=No
 12	,	,	PUNCT	_	_	11	punct	_	_
-13	contudo	contudo	CCONJ	_	_	16	cc	_	SpaceAfter=No
-14	,	,	PUNCT	_	_	16	punct	_	_
+13	contudo	contudo	CCONJ	_	_	11	cc	_	SpaceAfter=No
+14	,	,	PUNCT	_	_	11	punct	_	_
 15	qualquer	qualquer	DET	_	Gender=Fem|Number=Sing|PronType=Ind	16	det	_	_
-16	iniciativa	iniciativa	NOUN	_	Gender=Fem|Number=Sing	11	conj	_	_
+16	iniciativa	iniciativa	NOUN	_	Gender=Fem|Number=Sing	11	obj	_	_
 17	conciliadora	conciliador	ADJ	_	Gender=Fem|Number=Sing	16	amod	_	SpaceAfter=No
-18	.	.	PUNCT	_	_	11	punct	_	SpacesAfter=\n
+18	.	.	PUNCT	_	_	11	punct	_	_
 
+# sent_id = 40
 # text = Uma comissão da Coligação Radical Socialista manifestou ao governador sua desaprovação diante de sua política, o que o levou a pensar em renunciar.
-# sent_id = 39
-1	Uma	um	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
+1	Uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
 2	comissão	comissão	NOUN	_	Gender=Fem|Number=Sing	8	nsubj	_	_
 3-4	da	_	_	_	_	_	_	_	_
 3	de	de	ADP	_	_	5	case	_	_
 4	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	5	det	_	_
-5	Coligação	coligação	PROPN	_	Gender=Fem|Number=Sing	2	nmod	_	_
+5	Coligação	Coligação	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	2	nmod	_	_
 6	Radical	Radical	PROPN	_	Number=Sing	5	flat:name	_	_
 7	Socialista	Socialista	PROPN	_	Number=Sing	5	flat:name	_	_
 8	manifestou	manifestar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 9-10	ao	_	_	_	_	_	_	_	_
 9	a	a	ADP	_	_	11	case	_	_
 10	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	_	_
-11	governador	governador	NOUN	_	Gender=Masc|Number=Sing	8	obl	_	_
+11	governador	governador	NOUN	_	Gender=Masc|Number=Sing	8	iobj	_	_
 12	sua	seu	DET	_	Gender=Fem|Number=Sing|PronType=Prs	13	det	_	_
 13	desaprovação	desaprovação	NOUN	_	Gender=Fem|Number=Sing	8	obj	_	_
-14	diante	diante	ADV	_	_	17	case	_	_
+14	diante	diante	ADV	_	ExtPos=ADP	17	case	_	_
 15	de	de	ADP	_	_	14	fixed	_	_
 16	sua	seu	DET	_	Gender=Fem|Number=Sing|PronType=Prs	17	det	_	_
-17	política	político	NOUN	_	Gender=Fem|Number=Sing	13	nmod	_	SpaceAfter=No
+17	política	política	NOUN	_	Gender=Fem|Number=Sing	8	obl	_	SpaceAfter=No
 18	,	,	PUNCT	_	_	8	punct	_	_
 19	o	o	PRON	_	Gender=Masc|Number=Sing|PronType=Dem	8	appos	_	_
 20	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	22	nsubj	_	_
@@ -1370,17 +1376,17 @@
 23	a	a	SCONJ	_	_	24	mark	_	_
 24	pensar	pensar	VERB	_	VerbForm=Inf	22	xcomp	_	_
 25	em	em	SCONJ	_	_	26	mark	_	_
-26	renunciar	renunciar	VERB	_	VerbForm=Inf	24	advcl	_	SpaceAfter=No
-27	.	.	PUNCT	_	_	8	punct	_	SpacesAfter=\n
+26	renunciar	renunciar	VERB	_	VerbForm=Inf	24	xcomp	_	SpaceAfter=No
+27	.	.	PUNCT	_	_	8	punct	_	_
 
+# sent_id = 41
 # text = A UPF apresentou, porém, uma moção de solidariedade ao governo, que acabou sendo apoiada por 21 dos deputados da coligação.
-# sent_id = 40
 1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
 2	UPF	UPF	PROPN	_	Gender=Fem|Number=Sing	3	nsubj	_	_
 3	apresentou	apresentar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	SpaceAfter=No
 4	,	,	PUNCT	_	_	3	punct	_	_
-5	porém	porém	CCONJ	_	_	8	cc	_	SpaceAfter=No
-6	,	,	PUNCT	_	_	8	punct	_	_
+5	porém	porém	CCONJ	_	_	3	cc	_	SpaceAfter=No
+6	,	,	PUNCT	_	_	3	punct	_	_
 7	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	8	det	_	_
 8	moção	moção	NOUN	_	Gender=Fem|Number=Sing	3	obj	_	_
 9	de	de	ADP	_	_	10	case	_	_
@@ -1388,9 +1394,9 @@
 11-12	ao	_	_	_	_	_	_	_	_
 11	a	a	ADP	_	_	13	case	_	_
 12	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	13	det	_	_
-13	governo	governo	NOUN	_	Gender=Masc|Number=Sing	8	nmod	_	SpaceAfter=No
-14	,	,	PUNCT	_	_	8	punct	_	_
-15	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	18	nsubj:pass	_	_
+13	governo	governo	NOUN	_	Gender=Masc|Number=Sing	10	nmod	_	SpaceAfter=No
+14	,	,	PUNCT	_	_	16	punct	_	_
+15	que	que	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	16	nsubj:pass	_	_
 16	acabou	acabar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	8	acl:relcl	_	_
 17	sendo	ser	AUX	_	VerbForm=Ger	18	aux:pass	_	_
 18	apoiada	apoiar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	16	xcomp	_	_
@@ -1404,58 +1410,58 @@
 24	de	de	ADP	_	_	26	case	_	_
 25	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	26	det	_	_
 26	coligação	coligação	NOUN	_	Gender=Fem|Number=Sing	23	nmod	_	SpaceAfter=No
-27	.	.	PUNCT	_	_	8	punct	_	SpacesAfter=\n
+27	.	.	PUNCT	_	_	3	punct	_	SpacesAfter=\n
 
+# sent_id = 42
 # text = Sempre na tentativa de solucionar os conflitos partidários, o almirante Protógenes criou uma comissão política na Assembléia Legislativa, da qual participou César Tinoco.
-# sent_id = 41
 1	Sempre	sempre	ADV	_	_	4	advmod	_	_
 2-3	na	_	_	_	_	_	_	_	_
 2	em	em	ADP	_	_	4	case	_	_
 3	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	4	det	_	_
-4	tentativa	tentativa	NOUN	_	Gender=Fem|Number=Sing	0	root	_	_
+4	tentativa	tentativa	NOUN	_	Gender=Fem|Number=Sing	14	obl	_	_
 5	de	de	SCONJ	_	_	6	mark	_	_
 6	solucionar	solucionar	VERB	_	VerbForm=Inf	4	acl	_	_
 7	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	8	det	_	_
 8	conflitos	conflito	NOUN	_	Gender=Masc|Number=Plur	6	obj	_	_
 9	partidários	partidário	ADJ	_	Gender=Masc|Number=Plur	8	amod	_	SpaceAfter=No
-10	,	,	PUNCT	_	_	14	punct	_	_
+10	,	,	PUNCT	_	_	6	punct	_	_
 11	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	12	det	_	_
 12	almirante	almirante	NOUN	_	Gender=Masc|Number=Sing	14	nsubj	_	_
 13	Protógenes	Protógenes	PROPN	_	Gender=Masc|Number=Sing	12	appos	_	_
-14	criou	criar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	8	acl:relcl	_	_
+14	criou	criar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 15	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	16	det	_	_
 16	comissão	comissão	NOUN	_	Gender=Fem|Number=Sing	14	obj	_	_
 17	política	político	ADJ	_	Gender=Fem|Number=Sing	16	amod	_	_
 18-19	na	_	_	_	_	_	_	_	_
 18	em	em	ADP	_	_	20	case	_	_
 19	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	20	det	_	_
-20	Assembléia	Assembléia	PROPN	_	Gender=Fem|Number=Sing	14	obl	_	_
-21	Legislativa	Legislativa	PROPN	_	Number=Sing	20	flat:name	_	SpaceAfter=No
-22	,	,	PUNCT	_	_	14	punct	_	_
+20	Assembléia	assembléia	NOUN	_	Gender=Fem|Number=Sing	14	obl	_	_
+21	Legislativa	legislativo	ADJ	_	Gender=Fem|Number=Sing	20	amod	_	SpaceAfter=No
+22	,	,	PUNCT	_	_	26	punct	_	_
 23-24	da	_	_	_	_	_	_	_	_
 23	de	de	ADP	_	_	25	case	_	_
 24	a	o	DET	_	Gender=Fem|Number=Sing|PronType=Art	25	det	_	_
 25	qual	qual	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	26	obl	_	_
-26	participou	participar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	14	acl:relcl	_	_
-27	César	César	PROPN	_	Gender=Masc|Number=Sing	26	nsubj	_	_
+26	participou	participar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	20	acl:relcl	_	_
+27	César	César	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	26	nsubj	_	_
 28	Tinoco	Tinoco	PROPN	_	Number=Sing	27	flat:name	_	SpaceAfter=No
-29	.	.	PUNCT	_	_	4	punct	_	SpacesAfter=\n
+29	.	.	PUNCT	_	_	14	punct	_	_
 
+# sent_id = 43
 # text = As disputas se prolongaram, enquanto, por outro lado, era articulada a organização de um novo partido de apoio ao governo.
-# sent_id = 42
 1	As	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	2	det	_	_
 2	disputas	disputa	NOUN	_	Gender=Fem|Number=Plur	4	nsubj	_	_
 3	se	se	PRON	_	Case=Acc|Gender=Fem|Number=Plur|Person=3|PronType=Prs	4	expl	_	_
 4	prolongaram	prolongar	VERB	_	Mood=Ind|Number=Plur|Person=3|VerbForm=Fin	0	root	_	SpaceAfter=No
 5	,	,	PUNCT	_	_	4	punct	_	_
-6	enquanto	enquanto	ADV	_	_	4	advmod	_	SpaceAfter=No
-7	,	,	PUNCT	_	_	4	punct	_	_
-8	por	por	ADP	_	_	10	case	_	_
+6	enquanto	enquanto	ADV	_	_	13	advmod	_	SpaceAfter=No
+7	,	,	PUNCT	_	_	6	punct	_	_
+8	por	por	ADP	_	ExtPos=CCONJ	13	cc	_	_
 9	outro	outro	DET	_	Gender=Masc|Number=Sing|PronType=Ind	10	det	_	_
-10	lado	lado	NOUN	_	Gender=Masc|Number=Sing	4	obl	_	SpaceAfter=No
-11	,	,	PUNCT	_	_	4	punct	_	_
+10	lado	lado	NOUN	_	Gender=Masc|Number=Sing	13	obl	_	SpaceAfter=No
+11	,	,	PUNCT	_	_	10	punct	_	_
 12	era	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	13	aux:pass	_	_
-13	articulada	articular	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	4	parataxis	_	_
+13	articulada	articular	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	4	advcl	_	_
 14	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	15	det	_	_
 15	organização	organização	NOUN	_	Gender=Fem|Number=Sing	13	nsubj:pass	_	_
 16	de	de	ADP	_	_	19	case	_	_
@@ -1467,32 +1473,32 @@
 22-23	ao	_	_	_	_	_	_	_	_
 22	a	a	ADP	_	_	24	case	_	_
 23	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	24	det	_	_
-24	governo	governo	NOUN	_	Gender=Masc|Number=Sing	19	nmod	_	SpaceAfter=No
-25	.	.	PUNCT	_	_	4	punct	_	SpacesAfter=\n
+24	governo	governo	NOUN	_	Gender=Masc|Number=Sing	21	nmod	_	SpaceAfter=No
+25	.	.	PUNCT	_	_	4	punct	_	_
 
+# sent_id = 44
 # text = Os representantes do PSF nessas negociações eram César Tinoco e Correia e Castro.
-# sent_id = 43
 1	Os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	2	det	_	_
 2	representantes	representante	NOUN	_	Gender=Masc|Number=Plur	10	nsubj	_	_
 3-4	do	_	_	_	_	_	_	_	_
 3	de	de	ADP	_	_	5	case	_	_
 4	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	5	det	_	_
-5	PSF	Psf	NOUN	_	Gender=Masc|Number=Sing	2	nmod	_	_
+5	PSF	PSF	PROPN	_	Gender=Masc|Number=Sing	2	nmod	_	_
 6-7	nessas	_	_	_	_	_	_	_	_
 6	em	em	ADP	_	_	8	case	_	_
 7	essas	esse	DET	_	Gender=Fem|Number=Plur|PronType=Dem	8	det	_	_
 8	negociações	negociação	NOUN	_	Gender=Fem|Number=Plur	2	nmod	_	_
 9	eram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	10	cop	_	_
-10	César	César	PROPN	_	Gender=Masc|Number=Sing	0	root	_	_
+10	César	César	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	0	root	_	_
 11	Tinoco	Tinoco	PROPN	_	Number=Sing	10	flat:name	_	_
 12	e	e	CCONJ	_	_	13	cc	_	_
 13	Correia	Correia	PROPN	_	Gender=Masc|Number=Sing	10	conj	_	_
-14	e	e	CCONJ	_	_	15	cc	_	_
-15	Castro	Castro	PROPN	_	Gender=Masc|Number=Sing	10	conj	_	SpaceAfter=No
+14	e	e	CCONJ	_	_	13	flat:name	_	_
+15	Castro	Castro	PROPN	_	Gender=Masc|Number=Sing	13	flat:name	_	SpaceAfter=No
 16	.	.	PUNCT	_	_	10	punct	_	SpacesAfter=\n
 
+# sent_id = 45
 # text = Em 1937, a campanha pela sucessão presidencial acirrou a luta entre os políticos fluminenses.
-# sent_id = 44
 1	Em	em	ADP	_	_	2	case	_	_
 2	1937	1937	NUM	_	NumType=Card	10	obl	_	SpaceAfter=No
 3	,	,	PUNCT	_	_	2	punct	_	_
@@ -1510,31 +1516,31 @@
 14	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	15	det	_	_
 15	políticos	político	NOUN	_	Gender=Masc|Number=Plur	12	nmod	_	_
 16	fluminenses	fluminense	ADJ	_	Gender=Masc|Number=Plur	15	amod	_	SpaceAfter=No
-17	.	.	PUNCT	_	_	10	punct	_	SpacesAfter=\n
+17	.	.	PUNCT	_	_	10	punct	_	_
 
+# sent_id = 46
 # text = Os membros da Coligação Radical Socialista que apoiavam Protógenes aderiram à candidatura de José Américo de Almeida e, para intensificar esse apoio, César Tinoco, à frente de um grupo unido ao Partido Proletário, fundou a Coligação Democrática Fluminense.
-# sent_id = 45
 1	Os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	2	det	_	_
 2	membros	membro	NOUN	_	Gender=Masc|Number=Plur	11	nsubj	_	_
 3-4	da	_	_	_	_	_	_	_	_
 3	de	de	ADP	_	_	5	case	_	_
 4	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	5	det	_	_
-5	Coligação	coligação	PROPN	_	Gender=Fem|Number=Sing	2	nmod	_	_
+5	Coligação	Coligação	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	2	nmod	_	_
 6	Radical	Radical	PROPN	_	Number=Sing	5	flat:name	_	_
 7	Socialista	Socialista	PROPN	_	Number=Sing	5	flat:name	_	_
-8	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	9	nsubj	_	_
+8	que	que	PRON	_	Gender=Masc|Number=Plur|PronType=Rel	9	nsubj	_	_
 9	apoiavam	apoiar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	2	acl:relcl	_	_
-10	Protógenes	Protógene	NOUN	_	Gender=Masc|Number=Plur	9	obj	_	_
-11	aderiram	aderir	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+10	Protógenes	Protógenes	PROPN	_	Gender=Masc|Number=Sing	9	obj	_	_
+11	aderiram	aderir	VERB	_	Mood=Ind|Number=Plur|Person=3|VerbForm=Fin	0	root	_	_
 12-13	à	_	_	_	_	_	_	_	_
 12	a	a	ADP	_	_	14	case	_	_
 13	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	14	det	_	_
 14	candidatura	candidatura	NOUN	_	Gender=Fem|Number=Sing	11	obj	_	_
 15	de	de	ADP	_	_	16	case	_	_
-16	José	José	PROPN	_	Gender=Masc|Number=Sing	14	nmod	_	_
+16	José	José	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	14	nmod	_	_
 17	Américo	Américo	PROPN	_	Number=Sing	16	flat:name	_	_
 18	de	de	ADP	_	_	19	case	_	_
-19	Almeida	Almeida	PROPN	_	Gender=Masc|Number=Sing	16	nmod	_	_
+19	Almeida	Almeida	PROPN	_	Number=Sing	16	nmod	_	_
 20	e	e	CCONJ	_	_	42	cc	_	SpaceAfter=No
 21	,	,	PUNCT	_	_	23	punct	_	_
 22	para	para	SCONJ	_	_	23	mark	_	_
@@ -1542,7 +1548,7 @@
 24	esse	esse	DET	_	Gender=Masc|Number=Sing|PronType=Dem	25	det	_	_
 25	apoio	apoio	NOUN	_	Gender=Masc|Number=Sing	23	obj	_	SpaceAfter=No
 26	,	,	PUNCT	_	_	23	punct	_	_
-27	César	César	PROPN	_	Gender=Masc|Number=Sing	42	nsubj	_	_
+27	César	César	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	42	nsubj	_	_
 28	Tinoco	Tinoco	PROPN	_	Number=Sing	27	flat:name	_	SpaceAfter=No
 29	,	,	PUNCT	_	_	32	punct	_	_
 30-31	à	_	_	_	_	_	_	_	_
@@ -1552,42 +1558,42 @@
 33	de	de	ADP	_	_	35	case	_	_
 34	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	35	det	_	_
 35	grupo	grupo	NOUN	_	Gender=Masc|Number=Sing	32	nmod	_	_
-36	unido	uner	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	35	acl	_	_
+36	unido	unir	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	35	acl	_	_
 37-38	ao	_	_	_	_	_	_	_	_
 37	a	a	ADP	_	_	39	case	_	_
 38	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	39	det	_	_
-39	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	36	obj	_	_
+39	Partido	Partido	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	36	obl	_	_
 40	Proletário	Proletário	PROPN	_	Number=Sing	39	flat:name	_	SpaceAfter=No
 41	,	,	PUNCT	_	_	32	punct	_	_
-42	fundou	fundar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	16	conj	_	_
+42	fundou	fundar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	11	conj	_	_
 43	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	44	det	_	_
-44	Coligação	coligação	PROPN	_	Gender=Fem|Number=Sing	42	obj	_	_
+44	Coligação	Coligação	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	42	obj	_	_
 45	Democrática	Democrática	PROPN	_	Number=Sing	44	flat:name	_	_
-46	Fluminense	fluminense	PROPN	_	Number=Sing	44	flat:name	_	SpaceAfter=No
+46	Fluminense	Fluminense	PROPN	_	Number=Sing	44	flat:name	_	SpaceAfter=No
 47	.	.	PUNCT	_	_	11	punct	_	SpacesAfter=\n
 
+# sent_id = 47
 # text = Com a instalação do Estado Novo, o PSF e todos os partidos do país foram extintos.
-# sent_id = 46
 1	Com	com	ADP	_	_	3	case	_	_
 2	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	3	det	_	_
-3	instalação	instalação	NOUN	_	Gender=Fem|Number=Sing	0	root	_	_
+3	instalação	instalação	NOUN	_	Gender=Fem|Number=Sing	19	obl	_	_
 4-5	do	_	_	_	_	_	_	_	_
 4	de	de	ADP	_	_	6	case	_	_
 5	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	6	det	_	_
-6	Estado	Estado	PROPN	_	Gender=Masc|Number=Sing	3	nmod	_	_
+6	Estado	Estado	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	3	nmod	_	_
 7	Novo	Novo	PROPN	_	Number=Sing	6	flat:name	_	SpaceAfter=No
-8	,	,	PUNCT	_	_	10	punct	_	_
+8	,	,	PUNCT	_	_	3	punct	_	_
 9	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	10	det	_	_
-10	PSF	PSF	PROPN	_	Gender=Masc|Number=Sing	3	conj	_	_
-11	e	e	CCONJ	_	_	19	cc	_	_
+10	PSF	PSF	PROPN	_	Gender=Masc|Number=Sing	19	nsubj:pass	_	_
+11	e	e	CCONJ	_	_	14	cc	_	_
 12	todos	todo	DET	_	Gender=Masc|Number=Plur|PronType=Tot	14	det	_	_
-13	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	12	fixed	_	_
-14	partidos	partido	NOUN	_	Gender=Masc|Number=Plur	19	nsubj	_	_
+13	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	14	det	_	_
+14	partidos	partido	NOUN	_	Gender=Masc|Number=Plur	10	conj	_	_
 15-16	do	_	_	_	_	_	_	_	_
 15	de	de	ADP	_	_	17	case	_	_
 16	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	17	det	_	_
 17	país	país	NOUN	_	Gender=Masc|Number=Sing	14	nmod	_	_
-18	foram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	19	cop	_	_
-19	extintos	extinto	ADJ	_	Gender=Masc|Number=Plur	3	conj	_	SpaceAfter=No
-20	.	.	PUNCT	_	_	3	punct	_	SpacesAfter=\n
+18	foram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|VerbForm=Fin	19	aux:pass	_	_
+19	extintos	extintguir	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	0	root	_	SpaceAfter=No
+20	.	.	PUNCT	_	_	19	punct	_	SpacesAfter=\n
 

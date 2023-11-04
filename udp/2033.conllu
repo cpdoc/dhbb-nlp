@@ -1,9 +1,12 @@
-# text = «Pedro Firman Neto» nasceu em Dorizon, no município de Mallet (PR), no dia 15 de setembro de 1913, filho de Antônio Firman e de Miguelina Firman.
-# sent_id = 1
-# newpar
+# generator = UDPipe 2, https://lindat.mff.cuni.cz/services/udpipe
+# udpipe_model = portuguese-bosque-ud-2.12-230717
+# udpipe_model_licence = CC BY-NC-SA
 # newdoc
+# newpar
+# sent_id = 1
+# text = «Pedro Firman Neto» nasceu em Dorizon, no município de Mallet (PR), no dia 15 de setembro de 1913, filho de Antônio Firman e de Miguelina Firman.
 1	«	«	PUNCT	_	_	2	punct	_	SpaceAfter=No
-2	Pedro	Pedro	PROPN	_	Gender=Masc|Number=Sing	6	nsubj	_	_
+2	Pedro	Pedro	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	6	nsubj	_	_
 3	Firman	Firman	PROPN	_	Number=Sing	2	flat:name	_	_
 4	Neto	Neto	PROPN	_	Number=Sing	2	flat:name	_	SpaceAfter=No
 5	»	»	PUNCT	_	_	2	punct	_	_
@@ -18,7 +21,7 @@
 13	de	de	ADP	_	_	14	case	_	_
 14	Mallet	Mallet	PROPN	_	Gender=Masc|Number=Sing	12	nmod	_	_
 15	(	(	PUNCT	_	_	16	punct	_	SpaceAfter=No
-16	PR	PR	PROPN	_	Gender=Masc|Number=Sing	14	appos	_	SpaceAfter=No
+16	PR	PR	PROPN	_	Gender=Masc|Number=Sing	14	parataxis	_	SpaceAfter=No
 17	)	)	PUNCT	_	_	16	punct	_	SpaceAfter=No
 18	,	,	PUNCT	_	_	6	punct	_	_
 19-20	no	_	_	_	_	_	_	_	_
@@ -31,29 +34,29 @@
 25	de	de	ADP	_	_	26	case	_	_
 26	1913	1913	NUM	_	NumType=Card	24	nmod	_	SpaceAfter=No
 27	,	,	PUNCT	_	_	28	punct	_	_
-28	filho	filho	NOUN	_	Gender=Masc|Number=Sing	2	appos	_	_
+28	filho	filho	NOUN	_	Gender=Masc|Number=Sing	6	obj	_	_
 29	de	de	ADP	_	_	30	case	_	_
-30	Antônio	Antônio	PROPN	_	Gender=Masc|Number=Sing	28	nmod	_	_
+30	Antônio	Antônio	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	28	nmod	_	_
 31	Firman	Firman	PROPN	_	Number=Sing	30	flat:name	_	_
 32	e	e	CCONJ	_	_	34	cc	_	_
 33	de	de	ADP	_	_	34	case	_	_
-34	Miguelina	Miguelina	PROPN	_	Gender=Fem|Number=Sing	30	conj	_	_
+34	Miguelina	Miguelina	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	30	conj	_	_
 35	Firman	Firman	PROPN	_	Number=Sing	34	flat:name	_	SpaceAfter=No
 36	.	.	PUNCT	_	_	6	punct	_	SpacesAfter=\n
 
-# text = Cursou o secundário no Internato do Ginásio Paranaense, ingressando a seguir na Faculdade de Direito do Paraná.
 # sent_id = 2
-1	Cursou	Cursar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+# text = Cursou o secundário no Internato do Ginásio Paranaense, ingressando a seguir na Faculdade de Direito do Paraná.
+1	Cursou	cursar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
 3	secundário	secundário	NOUN	_	Gender=Masc|Number=Sing	1	obj	_	_
 4-5	no	_	_	_	_	_	_	_	_
 4	em	em	ADP	_	_	6	case	_	_
 5	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	6	det	_	_
-6	Internato	Internato	NOUN	_	Gender=Masc|Number=Sing	1	obl	_	_
+6	Internato	Internato	PROPN	_	Gender=Masc|Number=Sing	1	obl	_	_
 7-8	do	_	_	_	_	_	_	_	_
 7	de	de	ADP	_	_	9	case	_	_
 8	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	9	det	_	_
-9	Ginásio	Ginásio	PROPN	_	Gender=Masc|Number=Sing	6	nmod	_	_
+9	Ginásio	Ginásio	PROPN	_	ExtPos=PROPN|Number=Sing	6	nmod	_	_
 10	Paranaense	Paranaense	PROPN	_	Number=Sing	9	flat:name	_	SpaceAfter=No
 11	,	,	PUNCT	_	_	12	punct	_	_
 12	ingressando	ingressar	VERB	_	VerbForm=Ger	1	advcl	_	_
@@ -62,31 +65,31 @@
 15-16	na	_	_	_	_	_	_	_	_
 15	em	em	ADP	_	_	17	case	_	_
 16	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	17	det	_	_
-17	Faculdade	Faculdade	PROPN	_	Gender=Fem|Number=Sing	14	obl	_	_
+17	Faculdade	Faculdade	PROPN	_	Gender=Fem|Number=Sing	12	obl	_	_
 18	de	de	ADP	_	_	19	case	_	_
 19	Direito	Direito	PROPN	_	Number=Sing	17	nmod	_	_
 20-21	do	_	_	_	_	_	_	_	_
 20	de	de	ADP	_	_	22	case	_	_
 21	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	22	det	_	_
-22	Paraná	Paraná	PROPN	_	Gender=Masc|Number=Sing	17	nmod	_	SpaceAfter=No
-23	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
+22	Paraná	Paraná	PROPN	_	Number=Sing	17	nmod	_	SpaceAfter=No
+23	.	.	PUNCT	_	_	1	punct	_	_
 
-# text = Ainda acadêmico, foi nomeado promotor público de Reserva (PR), passando a exercer o cargo também nas comarcas de Mallet, Guarapuava, Apucarana e na da capital do estado.
 # sent_id = 3
+# text = Ainda acadêmico, foi nomeado promotor público de Reserva (PR), passando a exercer o cargo também nas comarcas de Mallet, Guarapuava, Apucarana e na da capital do estado.
 1	Ainda	ainda	ADV	_	_	2	advmod	_	_
-2	acadêmico	acadêmico	ADJ	_	Gender=Masc|Number=Sing	5	obl	_	SpaceAfter=No
+2	acadêmico	acadêmico	ADJ	_	Gender=Masc|Number=Sing	5	advcl	_	SpaceAfter=No
 3	,	,	PUNCT	_	_	2	punct	_	_
 4	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	aux:pass	_	_
 5	nomeado	nomear	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
-6	promotor	promotor	ADJ	_	Gender=Masc|Number=Sing	7	amod	_	_
-7	público	público	NOUN	_	Gender=Masc|Number=Sing	5	nsubj:pass	_	_
+6	promotor	promotor	NOUN	_	Gender=Masc|Number=Sing	5	xcomp	_	_
+7	público	público	ADJ	_	Gender=Masc|Number=Sing	6	amod	_	_
 8	de	de	ADP	_	_	9	case	_	_
-9	Reserva	reserva	PROPN	_	Gender=Fem|Number=Sing	7	nmod	_	_
+9	Reserva	Reserva	PROPN	_	Gender=Fem|Number=Sing	6	nmod	_	_
 10	(	(	PUNCT	_	_	11	punct	_	SpaceAfter=No
-11	PR	PR	PROPN	_	Gender=Fem|Number=Sing	9	parataxis	_	SpaceAfter=No
+11	PR	PR	PROPN	_	Gender=Masc|Number=Sing	9	appos	_	SpaceAfter=No
 12	)	)	PUNCT	_	_	11	punct	_	SpaceAfter=No
-13	,	,	PUNCT	_	_	16	punct	_	_
-14	passando	passar	VERB	_	VerbForm=Ger	5	advcl	_	_
+13	,	,	PUNCT	_	_	14	punct	_	_
+14	passando	passar	VERB	_	ExtPos=AUX|VerbForm=Ger	5	advcl	_	_
 15	a	a	SCONJ	_	_	16	mark	_	_
 16	exercer	exercer	VERB	_	VerbForm=Inf	14	xcomp	_	_
 17	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	18	det	_	_
@@ -95,13 +98,13 @@
 20-21	nas	_	_	_	_	_	_	_	_
 20	em	em	ADP	_	_	22	case	_	_
 21	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	22	det	_	_
-22	comarcas	comarca	NOUN	_	Gender=Fem|Number=Plur	18	nmod	_	_
+22	comarcas	comarca	NOUN	_	Gender=Fem|Number=Plur	16	obl	_	_
 23	de	de	ADP	_	_	24	case	_	_
 24	Mallet	Mallet	PROPN	_	Gender=Masc|Number=Sing	22	nmod	_	SpaceAfter=No
 25	,	,	PUNCT	_	_	26	punct	_	_
 26	Guarapuava	Guarapuava	PROPN	_	Gender=Masc|Number=Sing	24	conj	_	SpaceAfter=No
 27	,	,	PUNCT	_	_	28	punct	_	_
-28	Apucarana	Apucarana	PROPN	_	Gender=Fem|Number=Sing	24	conj	_	_
+28	Apucarana	Apucarana	PROPN	_	Gender=Masc|Number=Sing	24	conj	_	_
 29	e	e	CCONJ	_	_	31	cc	_	_
 30-31	na	_	_	_	_	_	_	_	_
 30	em	em	ADP	_	_	31	case	_	_
@@ -116,14 +119,14 @@
 37	estado	estado	NOUN	_	Gender=Masc|Number=Sing	34	nmod	_	SpaceAfter=No
 38	.	.	PUNCT	_	_	5	punct	_	SpacesAfter=\n
 
-# text = Bacharel em 1938, desempenhou diversas funções junto à administração do estado do Paraná, tendo sidodelegado regional de polícia em Ponta Grossa (PR), delegado auxiliar em Curitiba, chefe de gabinete da Secretaria do Interior, Justiça e Segurança Pública, e diretor do Departamento das Municipalidades.
 # sent_id = 4
-1	Bacharel	Bacharel	NOUN	_	Gender=Masc|Number=Sing	5	nsubj	_	_
+# text = Bacharel em 1938, desempenhou diversas funções junto à administração do estado do Paraná, tendo sidodelegado regional de polícia em Ponta Grossa (PR), delegado auxiliar em Curitiba, chefe de gabinete da Secretaria do Interior, Justiça e Segurança Pública, e diretor do Departamento das Municipalidades.
+1	Bacharel	bacharel	NOUN	_	Gender=Masc|Number=Sing	5	obl	_	_
 2	em	em	ADP	_	_	3	case	_	_
 3	1938	1938	NUM	_	NumType=Card	1	nmod	_	SpaceAfter=No
 4	,	,	PUNCT	_	_	1	punct	_	_
 5	desempenhou	desempenhar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
-6	diversas	diversos	DET	_	Gender=Fem|Number=Plur|PronType=Ind	7	det	_	_
+6	diversas	diverso	DET	_	Gender=Fem|Number=Plur|PronType=Ind	7	det	_	_
 7	funções	função	NOUN	_	Gender=Fem|Number=Plur	5	obj	_	_
 8	junto	junto	ADV	_	_	5	advmod	_	_
 9-10	à	_	_	_	_	_	_	_	_
@@ -139,42 +142,42 @@
 16	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	17	det	_	_
 17	Paraná	Paraná	PROPN	_	Gender=Masc|Number=Sing	14	nmod	_	SpaceAfter=No
 18	,	,	PUNCT	_	_	20	punct	_	_
-19	tendo	ter	AUX	_	VerbForm=Ger	20	aux	_	_
-20	sidodelegado	sidodelegar	VERB	_	VerbForm=Part	5	advcl	_	_
-21	regional	regional	NOUN	_	Gender=Fem|Number=Sing	20	obj	_	_
+19	tendo	ter	AUX	_	VerbForm=Ger	20	cop	_	_
+20	sidodelegado	sidodelegado	NOUN	_	Gender=Masc|Number=Sing	5	advcl	_	_
+21	regional	regional	ADJ	_	Gender=Masc|Number=Sing	20	amod	_	_
 22	de	de	ADP	_	_	23	case	_	_
-23	polícia	polícia	NOUN	_	Gender=Fem|Number=Sing	21	nmod	_	_
+23	polícia	polícia	NOUN	_	Gender=Fem|Number=Sing	20	nmod	_	_
 24	em	em	ADP	_	_	25	case	_	_
-25	Ponta	ponta	PROPN	_	Gender=Fem|Number=Sing	23	nmod	_	_
-26	Grossa	grossa	PROPN	_	Number=Sing	25	flat:name	_	_
+25	Ponta	Ponta	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	20	nmod	_	_
+26	Grossa	Grossa	PROPN	_	Number=Sing	25	flat:name	_	_
 27	(	(	PUNCT	_	_	28	punct	_	SpaceAfter=No
-28	PR	PR	PROPN	_	Gender=Masc|Number=Sing	25	appos	_	SpaceAfter=No
+28	PR	PR	PROPN	_	Gender=Masc|Number=Sing	25	parataxis	_	SpaceAfter=No
 29	)	)	PUNCT	_	_	28	punct	_	SpaceAfter=No
 30	,	,	PUNCT	_	_	31	punct	_	_
-31	delegado	delegado	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	20	advcl	_	_
-32	auxiliar	auxiliar	VERB	_	VerbForm=Inf	31	xcomp	_	_
+31	delegado	delegado	NOUN	_	Gender=Masc|Number=Sing	20	conj	_	_
+32	auxiliar	auxiliar	ADJ	_	Gender=Masc|Number=Sing	31	amod	_	_
 33	em	em	ADP	_	_	34	case	_	_
-34	Curitiba	Curitiba	PROPN	_	Gender=Masc|Number=Sing	32	obl	_	SpaceAfter=No
+34	Curitiba	Curitiba	PROPN	_	Gender=Masc|Number=Sing	31	nmod	_	SpaceAfter=No
 35	,	,	PUNCT	_	_	36	punct	_	_
-36	chefe	chefe	NOUN	_	Gender=Masc|Number=Sing	34	appos	_	_
+36	chefe	chefe	NOUN	_	Gender=Masc|Number=Sing	20	conj	_	_
 37	de	de	ADP	_	_	38	case	_	_
 38	gabinete	gabinete	NOUN	_	Gender=Masc|Number=Sing	36	nmod	_	_
 39-40	da	_	_	_	_	_	_	_	_
 39	de	de	ADP	_	_	41	case	_	_
 40	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	41	det	_	_
-41	Secretaria	Secretaria	PROPN	_	Gender=Fem|Number=Sing	36	nmod	_	_
+41	Secretaria	Secretaria	PROPN	_	Gender=Fem|Number=Sing	38	nmod	_	_
 42-43	do	_	_	_	_	_	_	_	_
 42	de	de	ADP	_	_	44	case	_	_
 43	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	44	det	_	_
 44	Interior	Interior	PROPN	_	Number=Sing	41	nmod	_	SpaceAfter=No
 45	,	,	PUNCT	_	_	46	punct	_	_
-46	Justiça	justiça	PROPN	_	Gender=Fem|Number=Sing	36	conj	_	_
-47	e	e	CCONJ	_	_	48	cc	_	_
-48	Segurança	Segurança	PROPN	_	Gender=Fem|Number=Sing	36	conj	_	_
-49	Pública	Pública	PROPN	_	Number=Sing	48	flat:name	_	SpaceAfter=No
-50	,	,	PUNCT	_	_	36	punct	_	_
+46	Justiça	Justiça	PROPN	_	ExtPos=PROPN|Number=Sing	41	conj	_	_
+47	e	e	CCONJ	_	_	46	flat:name	_	_
+48	Segurança	Segurança	PROPN	_	Number=Sing	46	flat:name	_	_
+49	Pública	Pública	PROPN	_	Number=Sing	46	flat:name	_	SpaceAfter=No
+50	,	,	PUNCT	_	_	52	punct	_	_
 51	e	e	CCONJ	_	_	52	cc	_	_
-52	diretor	diretor	NOUN	_	Gender=Masc|Number=Sing	34	conj	_	_
+52	diretor	diretor	NOUN	_	Gender=Masc|Number=Sing	20	conj	_	_
 53-54	do	_	_	_	_	_	_	_	_
 53	de	de	ADP	_	_	55	case	_	_
 54	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	55	det	_	_
@@ -182,14 +185,14 @@
 56-57	das	_	_	_	_	_	_	_	_
 56	de	de	ADP	_	_	58	case	_	_
 57	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	58	det	_	_
-58	Municipalidades	Municipalidade	NOUN	_	Gender=Fem|Number=Plur	55	nmod	_	SpaceAfter=No
-59	.	.	PUNCT	_	_	5	punct	_	SpacesAfter=\n
+58	Municipalidades	Municipalidades	PROPN	_	Number=Sing	55	nmod	_	SpaceAfter=No
+59	.	.	PUNCT	_	_	5	punct	_	_
 
-# text = Durante a Segunda Guerra Mundial presidiu a Comissão Estadual de Racionamento de Combustíveis e participou da Comissão de Serviço Público.
 # sent_id = 5
+# text = Durante a Segunda Guerra Mundial presidiu a Comissão Estadual de Racionamento de Combustíveis e participou da Comissão de Serviço Público.
 1	Durante	durante	ADP	_	_	3	case	_	_
 2	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	3	det	_	_
-3	Segunda	Segunda	PROPN	_	Gender=Fem|Number=Sing	6	obl	_	_
+3	Segunda	Segunda	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	6	obl	_	_
 4	Guerra	Guerra	PROPN	_	Number=Sing	3	flat:name	_	_
 5	Mundial	Mundial	PROPN	_	Number=Sing	3	flat:name	_	_
 6	presidiu	presidir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
@@ -199,20 +202,20 @@
 10	de	de	ADP	_	_	11	case	_	_
 11	Racionamento	Racionamento	PROPN	_	Number=Sing	8	nmod	_	_
 12	de	de	ADP	_	_	13	case	_	_
-13	Combustíveis	combustíveis	PROPN	_	Number=Sing	11	nmod	_	_
+13	Combustíveis	Combustíveis	PROPN	_	Number=Sing	11	nmod	_	_
 14	e	e	CCONJ	_	_	15	cc	_	_
-15	participou	participar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	8	conj	_	_
+15	participou	participar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	conj	_	_
 16-17	da	_	_	_	_	_	_	_	_
 16	de	de	ADP	_	_	18	case	_	_
 17	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	18	det	_	_
 18	Comissão	Comissão	PROPN	_	Gender=Fem|Number=Sing	15	obj	_	_
 19	de	de	ADP	_	_	20	case	_	_
-20	Serviço	Serviço	PROPN	_	Number=Sing	18	nmod	_	_
+20	Serviço	Serviço	PROPN	_	ExtPos=PROPN|Number=Sing	18	nmod	_	_
 21	Público	Público	PROPN	_	Number=Sing	20	flat:name	_	SpaceAfter=No
 22	.	.	PUNCT	_	_	6	punct	_	SpacesAfter=\n
 
-# text = Nas eleições de janeiro de 1947 elegeu-se deputado estadual na legenda do Partido Social Democrático (PSD).
 # sent_id = 6
+# text = Nas eleições de janeiro de 1947 elegeu-se deputado estadual na legenda do Partido Social Democrático (PSD).
 1-2	Nas	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	3	case	_	_
 2	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	3	det	_	_
@@ -224,32 +227,32 @@
 8-9	elegeu-se	_	_	_	_	_	_	_	_
 8	elegeu	eleger	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 9	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	8	expl	_	_
-10	deputado	deputado	NOUN	_	Gender=Masc|Number=Sing	8	nsubj	_	_
+10	deputado	deputado	NOUN	_	Gender=Masc|Number=Sing	8	obj	_	_
 11	estadual	estadual	ADJ	_	Gender=Masc|Number=Sing	10	amod	_	_
 12-13	na	_	_	_	_	_	_	_	_
 12	em	em	ADP	_	_	14	case	_	_
 13	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	14	det	_	_
-14	legenda	legenda	NOUN	_	Gender=Fem|Number=Sing	10	nmod	_	_
+14	legenda	legenda	NOUN	_	Gender=Fem|Number=Sing	8	obl	_	_
 15-16	do	_	_	_	_	_	_	_	_
 15	de	de	ADP	_	_	17	case	_	_
 16	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	17	det	_	_
-17	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	14	nmod	_	_
+17	Partido	Partido	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	14	nmod	_	_
 18	Social	Social	PROPN	_	Number=Sing	17	flat:name	_	_
-19	Democrático	democrático	PROPN	_	Number=Sing	17	flat:name	_	_
+19	Democrático	Democrático	PROPN	_	Number=Sing	17	flat:name	_	_
 20	(	(	PUNCT	_	_	21	punct	_	SpaceAfter=No
 21	PSD	PSD	PROPN	_	Gender=Masc|Number=Sing	17	appos	_	SpaceAfter=No
 22	)	)	PUNCT	_	_	21	punct	_	SpaceAfter=No
-23	.	.	PUNCT	_	_	8	punct	_	SpacesAfter=\n
+23	.	.	PUNCT	_	_	8	punct	_	_
 
-# text = Licenciado do mandato, assumiu a Secretaria de Agricultura no primeiro governo de Moisés Lupion (1947-1951), tendo sido responsável pela instituição da Fundação Paranaense de Imigração e Colonização, que promoveu a divisão em médios e pequenos lotes de terras devolutas, ensejando grandes levas migratórias de outras unidades da Federação para o norte, noroeste, oeste e sudoeste do Paraná.
 # sent_id = 7
-1	Licenciado	licenciado	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	0	root	_	_
+# text = Licenciado do mandato, assumiu a Secretaria de Agricultura no primeiro governo de Moisés Lupion (1947-1951), tendo sido responsável pela instituição da Fundação Paranaense de Imigração e Colonização, que promoveu a divisão em médios e pequenos lotes de terras devolutas, ensejando grandes levas migratórias de outras unidades da Federação para o norte, noroeste, oeste e sudoeste do Paraná.
+1	Licenciado	licenciar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	6	advcl	_	_
 2-3	do	_	_	_	_	_	_	_	_
 2	de	de	ADP	_	_	4	case	_	_
 3	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	4	det	_	_
 4	mandato	mandato	NOUN	_	Gender=Masc|Number=Sing	1	obj	_	SpaceAfter=No
 5	,	,	PUNCT	_	_	1	punct	_	_
-6	assumiu	assumir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	1	parataxis	_	_
+6	assumiu	assumir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 7	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	8	det	_	_
 8	Secretaria	Secretaria	PROPN	_	Gender=Fem|Number=Sing	6	obj	_	_
 9	de	de	ADP	_	_	10	case	_	_
@@ -260,10 +263,10 @@
 13	primeiro	primeiro	ADJ	_	Gender=Masc|Number=Sing|NumType=Ord	14	amod	_	_
 14	governo	governo	NOUN	_	Gender=Masc|Number=Sing	6	obl	_	_
 15	de	de	ADP	_	_	16	case	_	_
-16	Moisés	Moisés	PROPN	_	Gender=Masc|Number=Plur	14	nmod	_	_
+16	Moisés	Moisés	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	14	nmod	_	_
 17	Lupion	Lupion	PROPN	_	Number=Sing	16	flat:name	_	_
 18	(	(	PUNCT	_	_	19	punct	_	SpaceAfter=No
-19	1947-1951	1947-1951	NUM	_	NumType=Card	16	appos	_	SpaceAfter=No
+19	1947-1951	1947-1951	NUM	_	NumType=Card	16	parataxis	_	SpaceAfter=No
 20	)	)	PUNCT	_	_	19	punct	_	SpaceAfter=No
 21	,	,	PUNCT	_	_	24	punct	_	_
 22	tendo	ter	AUX	_	VerbForm=Ger	24	aux	_	_
@@ -275,23 +278,23 @@
 27	instituição	instituição	NOUN	_	Gender=Fem|Number=Sing	24	obl	_	_
 28-29	da	_	_	_	_	_	_	_	_
 28	de	de	ADP	_	_	30	case	_	_
-29	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	30	det	_	_
-30	Fundação	Fundação	PROPN	_	Gender=Fem|Number=Sing	27	nmod	_	_
+29	a	o	DET	_	Definite=Def|PronType=Art	30	det	_	_
+30	Fundação	Fundação	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	27	nmod	_	_
 31	Paranaense	Paranaense	PROPN	_	Number=Sing	30	flat:name	_	_
 32	de	de	ADP	_	_	33	case	_	_
-33	Imigração	imigração	PROPN	_	Number=Sing	30	nmod	_	_
-34	e	e	CCONJ	_	_	35	cc	_	_
-35	Colonização	Colonização	PROPN	_	Number=Sing	33	conj	_	SpaceAfter=No
+33	Imigração	Imigração	PROPN	_	ExtPos=PROPN|Number=Sing	30	nmod	_	_
+34	e	e	CCONJ	_	_	33	flat:name	_	_
+35	Colonização	Colonização	PROPN	_	Number=Sing	33	flat:name	_	SpaceAfter=No
 36	,	,	PUNCT	_	_	38	punct	_	_
-37	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	38	nsubj	_	_
-38	promoveu	promover	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	27	acl:relcl	_	_
+37	que	que	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	38	nsubj	_	_
+38	promoveu	promover	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	30	acl:relcl	_	_
 39	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	40	det	_	_
 40	divisão	divisão	NOUN	_	Gender=Fem|Number=Sing	38	obj	_	_
-41	em	em	ADP	_	_	42	case	_	_
-42	médios	médios	NOUN	_	Gender=Masc|Number=Plur	38	obl	_	_
-43	e	e	CCONJ	_	_	45	cc	_	_
-44	pequenos	pequeno	ADJ	_	Gender=Masc|Number=Plur	45	amod	_	_
-45	lotes	lote	NOUN	_	Gender=Masc|Number=Plur	42	conj	_	_
+41	em	em	ADP	_	_	45	case	_	_
+42	médios	médio	ADJ	_	Gender=Masc|Number=Plur	45	amod	_	_
+43	e	e	CCONJ	_	_	44	cc	_	_
+44	pequenos	pequeno	ADJ	_	Gender=Masc|Number=Plur	42	conj	_	_
+45	lotes	lote	NOUN	_	Gender=Masc|Number=Plur	40	nmod	_	_
 46	de	de	ADP	_	_	47	case	_	_
 47	terras	terra	NOUN	_	Gender=Fem|Number=Plur	45	nmod	_	_
 48	devolutas	devoluto	ADJ	_	Gender=Fem|Number=Plur	47	amod	_	SpaceAfter=No
@@ -306,7 +309,7 @@
 57-58	da	_	_	_	_	_	_	_	_
 57	de	de	ADP	_	_	59	case	_	_
 58	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	59	det	_	_
-59	Federação	Federação	NOUN	_	Gender=Fem|Number=Sing	56	nmod	_	_
+59	Federação	federação	NOUN	_	Gender=Fem|Number=Sing	56	nmod	_	_
 60	para	para	ADP	_	_	62	case	_	_
 61	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	62	det	_	_
 62	norte	norte	NOUN	_	Gender=Masc|Number=Sing	52	nmod	_	SpaceAfter=No
@@ -320,11 +323,11 @@
 69	de	de	ADP	_	_	71	case	_	_
 70	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	71	det	_	_
 71	Paraná	Paraná	PROPN	_	Gender=Masc|Number=Sing	68	nmod	_	SpaceAfter=No
-72	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
+72	.	.	PUNCT	_	_	6	punct	_	SpacesAfter=\n
 
-# text = Vice-presidente da seção paranaense do PSD, retornou à Assembléia Legislativa paranaense em 1948.
 # sent_id = 8
-1	Vice-presidente	vice-presidente	NOUN	_	Gender=Masc|Number=Sing	10	nsubj	_	_
+# text = Vice-presidente da seção paranaense do PSD, retornou à Assembléia Legislativa paranaense em 1948.
+1	Vice-presidente	vice-presidente	NOUN	_	Gender=Masc|Number=Sing	10	obl	_	_
 2-3	da	_	_	_	_	_	_	_	_
 2	de	de	ADP	_	_	4	case	_	_
 3	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	4	det	_	_
@@ -339,15 +342,15 @@
 11-12	à	_	_	_	_	_	_	_	_
 11	a	a	ADP	_	_	13	case	_	_
 12	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	13	det	_	_
-13	Assembléia	Assembléia	PROPN	_	Gender=Fem|Number=Sing	10	obl	_	_
-14	Legislativa	Legislativa	PROPN	_	Number=Sing	13	flat:name	_	_
-15	paranaense	paranaense	ADJ	_	Gender=Fem|Number=Sing	13	flat:name	_	_
+13	Assembléia	assembléia	NOUN	_	Gender=Fem|Number=Sing	10	obl	_	_
+14	Legislativa	legislativo	ADJ	_	Gender=Fem|Number=Sing	13	amod	_	_
+15	paranaense	paranaense	ADJ	_	Gender=Fem|Number=Sing	13	amod	_	_
 16	em	em	ADP	_	_	17	case	_	_
 17	1948	1948	NUM	_	NumType=Card	10	obl	_	SpaceAfter=No
-18	.	.	PUNCT	_	_	10	punct	_	SpacesAfter=\n
+18	.	.	PUNCT	_	_	10	punct	_	_
 
-# text = No pleito de outubro de 1950, sempre pela mesma legenda, elegeu-se deputado federal.
 # sent_id = 9
+# text = No pleito de outubro de 1950, sempre pela mesma legenda, elegeu-se deputado federal.
 1-2	No	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	3	case	_	_
 2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
@@ -366,13 +369,13 @@
 14	,	,	PUNCT	_	_	13	punct	_	_
 15-16	elegeu-se	_	_	_	_	_	_	_	_
 15	elegeu	eleger	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
-16	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	15	nsubj	_	_
-17	deputado	deputado	NOUN	_	Gender=Masc|Number=Sing	15	obj	_	_
+16	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	15	expl	_	_
+17	deputado	deputado	NOUN	_	Gender=Masc|Number=Sing	15	xcomp	_	_
 18	federal	federal	ADJ	_	Gender=Masc|Number=Sing	17	amod	_	SpaceAfter=No
-19	.	.	PUNCT	_	_	15	punct	_	SpacesAfter=\n
+19	.	.	PUNCT	_	_	15	punct	_	_
 
-# text = Foi o autor de uma emenda à lei que criou a Petrobras em virtude da qual, anos mais tarde, tornou-se possível a existência da Braspetro, subsidiária incumbida das operações da empresa no exterior.
 # sent_id = 10
+# text = Foi o autor de uma emenda à lei que criou a Petrobras em virtude da qual, anos mais tarde, tornou-se possível a existência da Braspetro, subsidiária incumbida das operações da empresa no exterior.
 1	Foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	cop	_	_
 2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
 3	autor	autor	NOUN	_	Gender=Masc|Number=Sing	0	root	_	_
@@ -385,8 +388,8 @@
 9	lei	lei	NOUN	_	Gender=Fem|Number=Sing	6	nmod	_	_
 10	que	que	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	11	nsubj	_	_
 11	criou	criar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	9	acl:relcl	_	_
-12	a	a	ADP	_	_	13	case	_	_
-13	Petrobras	Petrobra	NOUN	_	Gender=Fem|Number=Plur	11	obj	_	_
+12	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	13	det	_	_
+13	Petrobras	Petrobras	PROPN	_	Gender=Fem|Number=Sing	11	obj	_	_
 14	em	em	ADP	_	_	15	case	_	_
 15	virtude	virtude	NOUN	_	Gender=Fem|Number=Sing	11	obl	_	_
 16-17	da	_	_	_	_	_	_	_	_
@@ -394,7 +397,7 @@
 17	a	o	DET	_	Gender=Fem|Number=Sing|PronType=Art	18	det	_	_
 18	qual	qual	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	24	obl	_	SpaceAfter=No
 19	,	,	PUNCT	_	_	20	punct	_	_
-20	anos	ano	NOUN	_	Gender=Masc|Number=Plur	18	acl	_	_
+20	anos	ano	NOUN	_	Gender=Masc|Number=Plur	24	obl	_	_
 21	mais	mais	ADV	_	_	22	advmod	_	_
 22	tarde	tarde	ADV	_	_	20	advmod	_	SpaceAfter=No
 23	,	,	PUNCT	_	_	20	punct	_	_
@@ -407,14 +410,14 @@
 29-30	da	_	_	_	_	_	_	_	_
 29	de	de	ADP	_	_	31	case	_	_
 30	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	31	det	_	_
-31	Braspetro	Braspetro	PROPN	_	Number=Sing	28	nmod	_	SpaceAfter=No
+31	Braspetro	Braspetro	PROPN	_	Gender=Fem|Number=Sing	28	nmod	_	SpaceAfter=No
 32	,	,	PUNCT	_	_	33	punct	_	_
-33	subsidiária	subsidiário	NOUN	_	Gender=Fem|Number=Sing	28	appos	_	_
+33	subsidiária	subsidiária	NOUN	_	Gender=Fem|Number=Sing	31	appos	_	_
 34	incumbida	incumbir	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	33	acl	_	_
 35-36	das	_	_	_	_	_	_	_	_
 35	de	de	ADP	_	_	37	case	_	_
 36	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	37	det	_	_
-37	operações	operação	NOUN	_	Gender=Fem|Number=Plur	34	obl	_	_
+37	operações	operação	NOUN	_	Gender=Fem|Number=Plur	33	nmod	_	_
 38-39	da	_	_	_	_	_	_	_	_
 38	de	de	ADP	_	_	40	case	_	_
 39	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	40	det	_	_
@@ -422,12 +425,12 @@
 41-42	no	_	_	_	_	_	_	_	_
 41	em	em	ADP	_	_	43	case	_	_
 42	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	43	det	_	_
-43	exterior	exterior	NOUN	_	Gender=Masc|Number=Sing	34	obl	_	SpaceAfter=No
-44	.	.	PUNCT	_	_	3	punct	_	SpacesAfter=\n
+43	exterior	exterior	NOUN	_	Gender=Masc|Number=Sing	37	nmod	_	SpaceAfter=No
+44	.	.	PUNCT	_	_	3	punct	_	_
 
-# text = Reeleito em outubro de 1954, permaneceu na Câmara até janeiro de 1959.
 # sent_id = 11
-1	Reeleito	reeleger	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	7	acl	_	_
+# text = Reeleito em outubro de 1954, permaneceu na Câmara até janeiro de 1959.
+1	Reeleito	reeleger	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	7	advcl	_	_
 2	em	em	ADP	_	_	3	case	_	_
 3	outubro	outubro	NOUN	_	Gender=Masc|Number=Sing	1	obl	_	_
 4	de	de	ADP	_	_	5	case	_	_
@@ -437,15 +440,15 @@
 8-9	na	_	_	_	_	_	_	_	_
 8	em	em	ADP	_	_	10	case	_	_
 9	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	10	det	_	_
-10	Câmara	câmara	NOUN	_	Gender=Fem|Number=Sing	7	obj	_	_
+10	Câmara	câmara	NOUN	_	Gender=Fem|Number=Sing	7	obl	_	_
 11	até	até	ADP	_	_	12	case	_	_
 12	janeiro	janeiro	NOUN	_	Gender=Masc|Number=Sing	7	obl	_	_
 13	de	de	ADP	_	_	14	case	_	_
 14	1959	1959	NUM	_	NumType=Card	12	nmod	_	SpaceAfter=No
 15	.	.	PUNCT	_	_	7	punct	_	SpacesAfter=\n
 
-# text = Afastado da vida parlamentar, em 1960 foi nomeado pelo presidente Juscelino Kubitschek (1956-1961) presidente do Instituto Nacional do Mate.
 # sent_id = 12
+# text = Afastado da vida parlamentar, em 1960 foi nomeado pelo presidente Juscelino Kubitschek (1956-1961) presidente do Instituto Nacional do Mate.
 1	Afastado	afastar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	10	advcl	_	_
 2-3	da	_	_	_	_	_	_	_	_
 2	de	de	ADP	_	_	4	case	_	_
@@ -461,29 +464,28 @@
 11	por	por	ADP	_	_	13	case	_	_
 12	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	13	det	_	_
 13	presidente	presidente	NOUN	_	Gender=Masc|Number=Sing	10	obl:agent	_	_
-14	Juscelino	Juscelino	PROPN	_	Gender=Masc|Number=Sing	13	appos	_	_
+14	Juscelino	Juscelino	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	13	appos	_	_
 15	Kubitschek	Kubitschek	PROPN	_	Number=Sing	14	flat:name	_	_
-16	(	(	PUNCT	_	_	17	punct	_	SpaceAfter=No
-17	1956-1961	1956-1961	NUM	_	NumType=Card	13	appos	_	SpaceAfter=No
-18	)	)	PUNCT	_	_	17	punct	_	_
-19	presidente	presidente	NOUN	_	Gender=Masc|Number=Sing	13	appos	_	_
-20-21	do	_	_	_	_	_	_	_	_
-20	de	de	ADP	_	_	22	case	_	_
-21	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	22	det	_	_
-22	Instituto	Instituto	PROPN	_	Gender=Masc|Number=Sing	19	nmod	_	_
-23	Nacional	Nacional	PROPN	_	Number=Sing	22	flat:name	_	_
-24-25	do	_	_	_	_	_	_	_	_
-24	de	de	ADP	_	_	26	case	_	_
-25	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	26	det	_	_
-26	Mate	Mate	PROPN	_	Gender=Masc|Number=Sing	22	nmod	_	SpaceAfter=No
-27	.	.	PUNCT	_	_	10	punct	_	SpacesAfter=\n
+16	(1956-1961	(1956-1961	NUM	_	NumType=Card	14	flat:name	_	SpaceAfter=No
+17	)	)	PUNCT	_	_	10	punct	_	_
+18	presidente	presidente	NOUN	_	Gender=Masc|Number=Sing	10	nsubj:pass	_	_
+19-20	do	_	_	_	_	_	_	_	_
+19	de	de	ADP	_	_	21	case	_	_
+20	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	21	det	_	_
+21	Instituto	Instituto	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	18	nmod	_	_
+22	Nacional	Nacional	PROPN	_	Number=Sing	21	flat:name	_	_
+23-24	do	_	_	_	_	_	_	_	_
+23	de	de	ADP	_	_	25	case	_	_
+24	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	25	det	_	_
+25	Mate	Mate	PROPN	_	Number=Sing	21	nmod	_	SpaceAfter=No
+26	.	.	PUNCT	_	_	10	punct	_	_
 
-# text = A fim de expandir o consumo da bebida, criou as “casas do mate” em Minas Gerais, Bahia e Pernambuco, promovendo degustações da bebida em hotéis e restaurantes das maiores cidades do país.
 # sent_id = 13
-1	A	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	_	_
-2	fim	fim	NOUN	_	Gender=Masc|Number=Sing	11	nsubj	_	_
-3	de	de	SCONJ	_	_	4	mark	_	_
-4	expandir	expandir	VERB	_	VerbForm=Inf	2	acl	_	_
+# text = A fim de expandir o consumo da bebida, criou as “casas do mate” em Minas Gerais, Bahia e Pernambuco, promovendo degustações da bebida em hotéis e restaurantes das maiores cidades do país.
+1	A	a	ADP	_	ExtPos=CCONJ	4	mark	_	_
+2	fim	fim	NOUN	_	Gender=Masc|Number=Sing	1	fixed	_	_
+3	de	de	ADP	_	_	1	fixed	_	_
+4	expandir	expandir	VERB	_	VerbForm=Inf	11	advcl	_	_
 5	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	6	det	_	_
 6	consumo	consumo	NOUN	_	Gender=Masc|Number=Sing	4	obj	_	_
 7-8	da	_	_	_	_	_	_	_	_
@@ -493,22 +495,22 @@
 10	,	,	PUNCT	_	_	4	punct	_	_
 11	criou	criar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 12	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	14	det	_	_
-13	“	“	PUNCT	_	_	11	punct	_	SpaceAfter=No
+13	“	"	PUNCT	_	_	14	punct	_	SpaceAfter=No
 14	casas	casa	NOUN	_	Gender=Fem|Number=Plur	11	obj	_	_
 15-16	do	_	_	_	_	_	_	_	_
 15	de	de	ADP	_	_	17	case	_	_
 16	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	17	det	_	_
 17	mate	mate	NOUN	_	Gender=Masc|Number=Sing	14	nmod	_	SpaceAfter=No
-18	”	”	PUNCT	_	_	20	punct	_	_
+18	”	"	PUNCT	_	_	14	punct	_	_
 19	em	em	ADP	_	_	20	case	_	_
-20	Minas	Minas	PROPN	_	Gender=Masc|Number=Sing	14	nmod	_	_
+20	Minas	Minas	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	11	obl	_	_
 21	Gerais	Gerais	PROPN	_	Number=Sing	20	flat:name	_	SpaceAfter=No
 22	,	,	PUNCT	_	_	23	punct	_	_
 23	Bahia	Bahia	PROPN	_	Gender=Fem|Number=Sing	20	conj	_	_
 24	e	e	CCONJ	_	_	25	cc	_	_
 25	Pernambuco	Pernambuco	PROPN	_	Gender=Masc|Number=Sing	20	conj	_	SpaceAfter=No
 26	,	,	PUNCT	_	_	27	punct	_	_
-27	promovendo	promover	VERB	_	VerbForm=Ger	20	conj	_	_
+27	promovendo	promover	VERB	_	VerbForm=Ger	11	advcl	_	_
 28	degustações	degustação	NOUN	_	Gender=Fem|Number=Plur	27	obj	_	_
 29-30	da	_	_	_	_	_	_	_	_
 29	de	de	ADP	_	_	31	case	_	_
@@ -517,7 +519,7 @@
 32	em	em	ADP	_	_	33	case	_	_
 33	hotéis	hotel	NOUN	_	Gender=Masc|Number=Plur	27	obl	_	_
 34	e	e	CCONJ	_	_	35	cc	_	_
-35	restaurantes	restaurante	NOUN	_	Gender=Masc|Number=Plur	27	conj	_	_
+35	restaurantes	restaurante	NOUN	_	Gender=Masc|Number=Plur	33	conj	_	_
 36-37	das	_	_	_	_	_	_	_	_
 36	de	de	ADP	_	_	39	case	_	_
 37	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	39	det	_	_
@@ -529,8 +531,8 @@
 42	país	país	NOUN	_	Gender=Masc|Number=Sing	39	nmod	_	SpaceAfter=No
 43	.	.	PUNCT	_	_	11	punct	_	SpacesAfter=\n
 
-# text = Após ter deixado a presidência do instituto, ainda no início da década de 1960, regressou ao Ministério Público, já no cargo de curador-geral da comarca de Curitiba, aposentando-se como procurador de Justiça do estado, em novembro de 1965.
 # sent_id = 14
+# text = Após ter deixado a presidência do instituto, ainda no início da década de 1960, regressou ao Ministério Público, já no cargo de curador-geral da comarca de Curitiba, aposentando-se como procurador de Justiça do estado, em novembro de 1965.
 1	Após	após	SCONJ	_	_	3	mark	_	_
 2	ter	ter	AUX	_	VerbForm=Inf	3	aux	_	_
 3	deixado	deixar	VERB	_	VerbForm=Part	20	advcl	_	_
@@ -540,47 +542,47 @@
 6	de	de	ADP	_	_	8	case	_	_
 7	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	8	det	_	_
 8	instituto	instituto	NOUN	_	Gender=Masc|Number=Sing	5	nmod	_	SpaceAfter=No
-9	,	,	PUNCT	_	_	10	punct	_	_
+9	,	,	PUNCT	_	_	13	punct	_	_
 10	ainda	ainda	ADV	_	_	13	advmod	_	_
 11-12	no	_	_	_	_	_	_	_	_
 11	em	em	ADP	_	_	13	case	_	_
 12	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	13	det	_	_
-13	início	início	NOUN	_	Gender=Masc|Number=Sing	5	nmod	_	_
+13	início	início	NOUN	_	Gender=Masc|Number=Sing	3	obl	_	_
 14-15	da	_	_	_	_	_	_	_	_
 14	de	de	ADP	_	_	16	case	_	_
 15	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	16	det	_	_
 16	década	década	NOUN	_	Gender=Fem|Number=Sing	13	nmod	_	_
 17	de	de	ADP	_	_	18	case	_	_
 18	1960	1960	NUM	_	NumType=Card	16	nmod	_	SpaceAfter=No
-19	,	,	PUNCT	_	_	3	punct	_	_
+19	,	,	PUNCT	_	_	13	punct	_	_
 20	regressou	regressar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 21-22	ao	_	_	_	_	_	_	_	_
 21	a	a	ADP	_	_	23	case	_	_
 22	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	23	det	_	_
-23	Ministério	Ministério	PROPN	_	Gender=Masc|Number=Sing	20	obj	_	_
+23	Ministério	Ministério	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	20	obl	_	_
 24	Público	Público	PROPN	_	Number=Sing	23	flat:name	_	SpaceAfter=No
-25	,	,	PUNCT	_	_	29	punct	_	_
+25	,	,	PUNCT	_	_	20	punct	_	_
 26	já	já	ADV	_	_	29	advmod	_	_
 27-28	no	_	_	_	_	_	_	_	_
 27	em	em	ADP	_	_	29	case	_	_
 28	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	29	det	_	_
-29	cargo	cargo	NOUN	_	Gender=Masc|Number=Sing	23	appos	_	_
+29	cargo	cargo	NOUN	_	Gender=Masc|Number=Sing	20	obl	_	_
 30	de	de	ADP	_	_	31	case	_	_
 31	curador-geral	curador-geral	NOUN	_	Gender=Masc|Number=Sing	29	nmod	_	_
 32-33	da	_	_	_	_	_	_	_	_
 32	de	de	ADP	_	_	34	case	_	_
 33	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	34	det	_	_
-34	comarca	comarca	NOUN	_	Gender=Fem|Number=Sing	29	nmod	_	_
+34	comarca	comarca	NOUN	_	Gender=Fem|Number=Sing	31	nmod	_	_
 35	de	de	ADP	_	_	36	case	_	_
-36	Curitiba	Curitiba	PROPN	_	Gender=Masc|Number=Sing	34	nmod	_	SpaceAfter=No
+36	Curitiba	Curitiba	PROPN	_	Number=Sing	34	nmod	_	SpaceAfter=No
 37	,	,	PUNCT	_	_	38	punct	_	_
 38-39	aposentando-se	_	_	_	_	_	_	_	_
-38	aposentando	aposentar	VERB	_	VerbForm=Ger	29	advcl	_	_
-39	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	38	obj	_	_
+38	aposentando	aposentar	VERB	_	VerbForm=Ger	20	advcl	_	_
+39	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	38	expl	_	_
 40	como	como	ADP	_	_	41	case	_	_
 41	procurador	procurador	NOUN	_	Gender=Masc|Number=Sing	38	xcomp	_	_
 42	de	de	ADP	_	_	43	case	_	_
-43	Justiça	Justiça	NOUN	_	Gender=Fem|Number=Sing	41	nmod	_	_
+43	Justiça	justiça	NOUN	_	Gender=Fem|Number=Sing	41	nmod	_	_
 44-45	do	_	_	_	_	_	_	_	_
 44	de	de	ADP	_	_	46	case	_	_
 45	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	46	det	_	_
@@ -592,9 +594,9 @@
 51	1965	1965	NUM	_	NumType=Card	49	nmod	_	SpaceAfter=No
 52	.	.	PUNCT	_	_	20	punct	_	SpacesAfter=\n
 
-# text = Fixou residência no Rio de Janeiro, onde exerceu advocacia.
 # sent_id = 15
-1	Fixou	Fixar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+# text = Fixou residência no Rio de Janeiro, onde exerceu advocacia.
+1	Fixou	fixar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2	residência	residência	NOUN	_	Gender=Fem|Number=Sing	1	obj	_	_
 3-4	no	_	_	_	_	_	_	_	_
 3	em	em	ADP	_	_	5	case	_	_
@@ -602,45 +604,45 @@
 5	Rio	Rio	PROPN	_	Gender=Masc|Number=Sing	1	obl	_	_
 6	de	de	ADP	_	_	7	case	_	_
 7	Janeiro	Janeiro	PROPN	_	Number=Sing	5	nmod	_	SpaceAfter=No
-8	,	,	PUNCT	_	_	1	punct	_	_
+8	,	,	PUNCT	_	_	10	punct	_	_
 9	onde	onde	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	10	obl	_	_
-10	exerceu	exercer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	7	acl:relcl	_	_
+10	exerceu	exercer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	acl:relcl	_	_
 11	advocacia	advocacia	NOUN	_	Gender=Fem|Number=Sing	10	obj	_	SpaceAfter=No
-12	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
+12	.	.	PUNCT	_	_	1	punct	_	_
 
-# text = Em setembro de 2004, juntamente com outros ex-secretários de Agricultura do estado do Paraná, foi homenageado no Teatro Guairá, em Curitiba, por ocasião da passagem dos 60 anos da criação da secretaria da Agricultura e do Abastecimento do estado.
 # sent_id = 16
+# text = Em setembro de 2004, juntamente com outros ex-secretários de Agricultura do estado do Paraná, foi homenageado no Teatro Guairá, em Curitiba, por ocasião da passagem dos 60 anos da criação da secretaria da Agricultura e do Abastecimento do estado.
 1	Em	em	ADP	_	_	2	case	_	_
 2	setembro	setembro	NOUN	_	Gender=Masc|Number=Sing	20	obl	_	_
 3	de	de	ADP	_	_	4	case	_	_
 4	2004	2004	NUM	_	NumType=Card	2	nmod	_	SpaceAfter=No
 5	,	,	PUNCT	_	_	2	punct	_	_
-6	juntamente	juntamente	ADV	_	_	9	advmod	_	_
+6	juntamente	juntamente	ADV	_	_	20	advmod	_	_
 7	com	com	ADP	_	_	9	case	_	_
 8	outros	outro	DET	_	Gender=Masc|Number=Plur|PronType=Ind	9	det	_	_
-9	ex-secretários	ex-secretário	NOUN	_	Gender=Masc|Number=Plur	20	nsubj:pass	_	_
+9	ex-secretários	ex-secretário	NOUN	_	Gender=Masc|Number=Plur	6	obl	_	_
 10	de	de	ADP	_	_	11	case	_	_
-11	Agricultura	Agricultura	PROPN	_	Gender=Fem|Number=Sing	9	nmod	_	_
+11	Agricultura	agricultura	NOUN	_	Gender=Fem|Number=Sing	9	nmod	_	_
 12-13	do	_	_	_	_	_	_	_	_
 12	de	de	ADP	_	_	14	case	_	_
 13	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	14	det	_	_
-14	estado	estado	NOUN	_	Gender=Masc|Number=Sing	11	nmod	_	_
+14	estado	estado	NOUN	_	Gender=Masc|Number=Sing	9	nmod	_	_
 15-16	do	_	_	_	_	_	_	_	_
 15	de	de	ADP	_	_	17	case	_	_
 16	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	17	det	_	_
 17	Paraná	Paraná	PROPN	_	Gender=Masc|Number=Sing	14	nmod	_	SpaceAfter=No
-18	,	,	PUNCT	_	_	2	punct	_	_
+18	,	,	PUNCT	_	_	6	punct	_	_
 19	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	20	aux:pass	_	_
 20	homenageado	homenagear	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
 21-22	no	_	_	_	_	_	_	_	_
 21	em	em	ADP	_	_	23	case	_	_
 22	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	23	det	_	_
-23	Teatro	Teatro	PROPN	_	Gender=Masc|Number=Sing	20	obl	_	_
+23	Teatro	Teatro	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	20	obl	_	_
 24	Guairá	Guairá	PROPN	_	Number=Sing	23	flat:name	_	SpaceAfter=No
-25	,	,	PUNCT	_	_	27	punct	_	_
+25	,	,	PUNCT	_	_	20	punct	_	_
 26	em	em	ADP	_	_	27	case	_	_
-27	Curitiba	Curitiba	PROPN	_	Gender=Masc|Number=Sing	23	nmod	_	SpaceAfter=No
-28	,	,	PUNCT	_	_	27	punct	_	_
+27	Curitiba	Curitiba	PROPN	_	Gender=Masc|Number=Sing	20	obl	_	SpaceAfter=No
+28	,	,	PUNCT	_	_	20	punct	_	_
 29	por	por	ADP	_	_	30	case	_	_
 30	ocasião	ocasião	NOUN	_	Gender=Fem|Number=Sing	20	obl	_	_
 31-32	da	_	_	_	_	_	_	_	_
@@ -663,40 +665,40 @@
 44-45	da	_	_	_	_	_	_	_	_
 44	de	de	ADP	_	_	46	case	_	_
 45	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	46	det	_	_
-46	Agricultura	Agricultura	PROPN	_	Number=Sing	43	nmod	_	_
+46	Agricultura	Agricultura	PROPN	_	Gender=Fem|Number=Sing	43	nmod	_	_
 47	e	e	CCONJ	_	_	50	cc	_	_
 48-49	do	_	_	_	_	_	_	_	_
 48	de	de	ADP	_	_	50	case	_	_
 49	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	50	det	_	_
-50	Abastecimento	abastecimento	NOUN	_	Gender=Masc|Number=Sing	40	conj	_	_
+50	Abastecimento	Abastecimento	PROPN	_	Gender=Masc|Number=Sing	46	conj	_	_
 51-52	do	_	_	_	_	_	_	_	_
 51	de	de	ADP	_	_	53	case	_	_
 52	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	53	det	_	_
 53	estado	estado	NOUN	_	Gender=Masc|Number=Sing	50	nmod	_	SpaceAfter=No
 54	.	.	PUNCT	_	_	20	punct	_	SpacesAfter=\n
 
-# text = Casado com Jurê Pompeu Firman, teve um filho.
 # sent_id = 17
-1	Casado	casar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	7	acl	_	_
+# text = Casado com Jurê Pompeu Firman, teve um filho.
+1	Casado	casar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	7	advcl	_	_
 2	com	com	ADP	_	_	3	case	_	_
-3	Jurê	Jurê	PROPN	_	Gender=Masc|Number=Sing	1	obl	_	_
-4	Pompeu	pompeu	PROPN	_	Number=Sing	3	flat:name	_	_
+3	Jurê	Jurê	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	1	obl	_	_
+4	Pompeu	Pompeu	PROPN	_	Number=Sing	3	flat:name	_	_
 5	Firman	Firman	PROPN	_	Number=Sing	3	flat:name	_	SpaceAfter=No
 6	,	,	PUNCT	_	_	1	punct	_	_
 7	teve	ter	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
-8	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	9	det	_	_
+8	um	um	NUM	_	NumType=Card	9	nummod	_	_
 9	filho	filho	NOUN	_	Gender=Masc|Number=Sing	7	obj	_	SpaceAfter=No
-10	.	.	PUNCT	_	_	7	punct	_	SpacesAfter=\n
+10	.	.	PUNCT	_	_	7	punct	_	_
 
-# text = Viúvo, casou-se com Vanda Maria Bittencourt Firman, com quem também teve um filho.
 # sent_id = 18
-1	Viúvo	viúvo	PROPN	_	Gender=Masc|Number=Sing	3	advmod	_	SpaceAfter=No
+# text = Viúvo, casou-se com Vanda Maria Bittencourt Firman, com quem também teve um filho.
+1	Viúvo	viúvo	ADJ	_	Gender=Masc|Number=Sing	3	obl	_	SpaceAfter=No
 2	,	,	PUNCT	_	_	1	punct	_	_
 3-4	casou-se	_	_	_	_	_	_	_	_
 3	casou	casar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 4	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	3	expl	_	_
 5	com	com	ADP	_	_	6	case	_	_
-6	Vanda	Vanda	PROPN	_	Gender=Masc|Number=Sing	3	obl	_	_
+6	Vanda	Vanda	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	3	obl	_	_
 7	Maria	Maria	PROPN	_	Number=Sing	6	flat:name	_	_
 8	Bittencourt	Bittencourt	PROPN	_	Number=Sing	6	flat:name	_	_
 9	Firman	Firman	PROPN	_	Number=Sing	6	flat:name	_	SpaceAfter=No
@@ -705,7 +707,7 @@
 12	quem	quem	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	14	obl	_	_
 13	também	também	ADV	_	_	14	advmod	_	_
 14	teve	ter	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	acl:relcl	_	_
-15	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	16	det	_	_
+15	um	um	NUM	_	NumType=Card	16	nummod	_	_
 16	filho	filho	NOUN	_	Gender=Masc|Number=Sing	14	obj	_	SpaceAfter=No
 17	.	.	PUNCT	_	_	3	punct	_	SpacesAfter=\n
 

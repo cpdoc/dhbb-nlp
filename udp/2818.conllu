@@ -1,9 +1,12 @@
-# text = «José Carlos Leprevost» nasceu em Curitiba no dia 19 de novembro de 1940, filho de Nei Leprevost e de Estela Surugi Leprevost.
-# sent_id = 1
+# generator = UDPipe 2, https://lindat.mff.cuni.cz/services/udpipe
+# udpipe_model = portuguese-bosque-ud-2.12-230717
+# udpipe_model_licence = CC BY-NC-SA
+# newdoc
 # newpar
-# newdoc id = ../raw/2818.raw
-1	«	«	PUNCT	_	_	2	punct	_	SpaceAfter=No|SpacesBefore=\n
-2	José	José	PROPN	_	Gender=Masc|Number=Sing	6	nsubj	_	_
+# sent_id = 1
+# text = «José Carlos Leprevost» nasceu em Curitiba no dia 19 de novembro de 1940, filho de Nei Leprevost e de Estela Surugi Leprevost.
+1	«	«	PUNCT	_	_	2	punct	_	SpaceAfter=No
+2	José	José	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	6	nsubj	_	_
 3	Carlos	Carlos	PROPN	_	Number=Sing	2	flat:name	_	_
 4	Leprevost	Leprevost	PROPN	_	Number=Sing	2	flat:name	_	SpaceAfter=No
 5	»	»	PUNCT	_	_	2	punct	_	_
@@ -20,35 +23,34 @@
 15	de	de	ADP	_	_	16	case	_	_
 16	1940	1940	NUM	_	NumType=Card	14	nmod	_	SpaceAfter=No
 17	,	,	PUNCT	_	_	18	punct	_	_
-18	filho	filho	NOUN	_	Gender=Masc|Number=Sing	14	conj	_	_
+18	filho	filho	NOUN	_	Gender=Masc|Number=Sing	6	appos	_	_
 19	de	de	ADP	_	_	20	case	_	_
-20	Nei	Nei	PROPN	_	Gender=Masc|Number=Sing	18	nmod	_	_
+20	Nei	Nei	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	18	nmod	_	_
 21	Leprevost	Leprevost	PROPN	_	Number=Sing	20	flat:name	_	_
 22	e	e	CCONJ	_	_	24	cc	_	_
 23	de	de	ADP	_	_	24	case	_	_
-24	Estela	Estela	PROPN	_	Gender=Fem|Number=Sing	14	conj	_	_
+24	Estela	Estela	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	20	conj	_	_
 25	Surugi	Surugi	PROPN	_	Number=Sing	24	flat:name	_	_
 26	Leprevost	Leprevost	PROPN	_	Number=Sing	24	flat:name	_	SpaceAfter=No
 27	.	.	PUNCT	_	_	6	punct	_	_
 
-# text = Seu pai foi advogado e prefeito de Curitiba.
 # sent_id = 2
+# text = Seu pai foi advogado e prefeito de Curitiba.
 1	Seu	seu	DET	_	Gender=Masc|Number=Sing|PronType=Prs	2	det	_	_
 2	pai	pai	NOUN	_	Gender=Masc|Number=Sing	4	nsubj	_	_
 3	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	cop	_	_
-4	advogado	advogado	NOUN	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
+4	advogado	advogado	NOUN	_	Gender=Masc|Number=Sing	0	root	_	_
 5	e	e	CCONJ	_	_	6	cc	_	_
 6	prefeito	prefeito	NOUN	_	Gender=Masc|Number=Sing	4	conj	_	_
 7	de	de	ADP	_	_	8	case	_	_
-8	Curitiba	Curitiba	PROPN	_	Gender=Masc|Number=Sing	4	nmod	_	SpaceAfter=No
-9	.	.	PUNCT	_	_	4	punct	_	_
+8	Curitiba	Curitiba	PROPN	_	Gender=Masc|Number=Sing	6	nmod	_	SpaceAfter=No
+9	.	.	PUNCT	_	_	4	punct	_	SpacesAfter=\n
 
-# text = Bacharelou-se em ciências jurídicas e sociais na Faculdade de Direito da Universidade do Paraná em 1962.
 # sent_id = 3
-# newpar
+# text = Bacharelou-se em ciências jurídicas e sociais na Faculdade de Direito da Universidade do Paraná em 1962.
 1-2	Bacharelou-se	_	_	_	_	_	_	_	_
-1	Bacharelou	Bacharelar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
-2	se	se	PRON	_	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	1	expl	_	_
+1	Bacharelou	bacharelar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+2	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	1	expl	_	_
 3	em	em	ADP	_	_	4	case	_	_
 4	ciências	ciência	NOUN	_	Gender=Fem|Number=Plur	1	obl	_	_
 5	jurídicas	jurídico	ADJ	_	Gender=Fem|Number=Plur	4	amod	_	_
@@ -56,25 +58,24 @@
 7	sociais	social	ADJ	_	Gender=Fem|Number=Plur	5	conj	_	_
 8-9	na	_	_	_	_	_	_	_	_
 8	em	em	ADP	_	_	10	case	_	_
-9	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	10	det	_	_
+9	a	o	DET	_	Definite=Def|PronType=Art	10	det	_	_
 10	Faculdade	Faculdade	PROPN	_	Gender=Fem|Number=Sing	1	obl	_	_
 11	de	de	ADP	_	_	12	case	_	_
 12	Direito	Direito	PROPN	_	Number=Sing	10	nmod	_	_
 13-14	da	_	_	_	_	_	_	_	_
 13	de	de	ADP	_	_	15	case	_	_
 14	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	15	det	_	_
-15	Universidade	Universidade	PROPN	_	Number=Sing	12	nmod	_	_
+15	Universidade	Universidade	PROPN	_	Number=Sing	10	nmod	_	_
 16-17	do	_	_	_	_	_	_	_	_
 16	de	de	ADP	_	_	18	case	_	_
 17	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	18	det	_	_
-18	Paraná	Paraná	PROPN	_	Gender=Masc|Number=Sing	15	nmod	_	_
+18	Paraná	Paraná	PROPN	_	Number=Sing	15	nmod	_	_
 19	em	em	ADP	_	_	20	case	_	_
-20	1962	1962	NUM	_	NumType=Card	10	nmod	_	SpaceAfter=No
-21	.	.	PUNCT	_	_	1	punct	_	_
+20	1962	1962	NUM	_	NumType=Card	1	obl	_	SpaceAfter=No
+21	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
 
-# text = Ainda no Paraná, exerceu os cargos de assistente técnico da presidência do Tribunal de Contas do Estado (TCE), chefe de gabinete da Secretaria de Agricultura e oficial-de-gabinete da Secretaria do Interior e Justiça.
 # sent_id = 4
-# newpar
+# text = Ainda no Paraná, exerceu os cargos de assistente técnico da presidência do Tribunal de Contas do Estado (TCE), chefe de gabinete da Secretaria de Agricultura e oficial-de-gabinete da Secretaria do Interior e Justiça.
 1	Ainda	ainda	ADV	_	_	4	advmod	_	_
 2-3	no	_	_	_	_	_	_	_	_
 2	em	em	ADP	_	_	4	case	_	_
@@ -94,18 +95,18 @@
 15-16	do	_	_	_	_	_	_	_	_
 15	de	de	ADP	_	_	17	case	_	_
 16	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	17	det	_	_
-17	Tribunal	Tribunal	PROPN	_	Gender=Masc|Number=Sing	14	nmod	_	_
+17	Tribunal	tribunal	NOUN	_	Gender=Masc|Number=Sing	14	nmod	_	_
 18	de	de	ADP	_	_	19	case	_	_
-19	Contas	contas	PROPN	_	Number=Sing	17	nmod	_	_
+19	Contas	Contas	PROPN	_	Number=Sing	17	nmod	_	_
 20-21	do	_	_	_	_	_	_	_	_
 20	de	de	ADP	_	_	22	case	_	_
 21	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	22	det	_	_
-22	Estado	estado	NOUN	_	Gender=Masc|Number=Sing	17	nmod	_	_
+22	Estado	Estado	PROPN	_	Number=Sing	19	nmod	_	_
 23	(	(	PUNCT	_	_	24	punct	_	SpaceAfter=No
 24	TCE	TCE	PROPN	_	Gender=Masc|Number=Sing	17	appos	_	SpaceAfter=No
 25	)	)	PUNCT	_	_	24	punct	_	SpaceAfter=No
 26	,	,	PUNCT	_	_	27	punct	_	_
-27	chefe	chefe	NOUN	_	Gender=Masc|Number=Sing	17	appos	_	_
+27	chefe	chefe	NOUN	_	Gender=Masc|Number=Sing	10	conj	_	_
 28	de	de	ADP	_	_	29	case	_	_
 29	gabinete	gabinete	NOUN	_	Gender=Masc|Number=Sing	27	nmod	_	_
 30-31	da	_	_	_	_	_	_	_	_
@@ -115,7 +116,7 @@
 33	de	de	ADP	_	_	34	case	_	_
 34	Agricultura	Agricultura	PROPN	_	Number=Sing	32	nmod	_	_
 35	e	e	CCONJ	_	_	36	cc	_	_
-36	oficial-de-gabinete	oficial-de-gabinete	NOUN	_	_	32	conj	_	_
+36	oficial-de-gabinete	oficial-de-gabinete	NOUN	_	Gender=Masc|Number=Sing	10	conj	_	_
 37-38	da	_	_	_	_	_	_	_	_
 37	de	de	ADP	_	_	39	case	_	_
 38	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	39	det	_	_
@@ -123,14 +124,13 @@
 40-41	do	_	_	_	_	_	_	_	_
 40	de	de	ADP	_	_	42	case	_	_
 41	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	42	det	_	_
-42	Interior	interior	PROPN	_	_	39	nmod	_	_
+42	Interior	Interior	PROPN	_	Number=Sing	39	nmod	_	_
 43	e	e	CCONJ	_	_	42	flat:name	_	_
-44	Justiça	justiça	PROPN	_	Gender=Fem|Number=Sing	42	flat:name	_	SpaceAfter=No
-45	.	.	PUNCT	_	_	6	punct	_	_
+44	Justiça	Justiça	PROPN	_	Number=Sing	42	flat:name	_	SpaceAfter=No
+45	.	.	PUNCT	_	_	6	punct	_	SpacesAfter=\n
 
-# text = No pleito de novembro de 1966, elegeu-se deputado federal por seu estado na legenda da Aliança Renovadora Nacional (Arena), partido de sustentação política ao regime militar instaurado no país em abril de 1964.
 # sent_id = 5
-# newpar
+# text = No pleito de novembro de 1966, elegeu-se deputado federal por seu estado na legenda da Aliança Renovadora Nacional (Arena), partido de sustentação política ao regime militar instaurado no país em abril de 1964.
 1-2	No	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	3	case	_	_
 2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
@@ -143,11 +143,11 @@
 9-10	elegeu-se	_	_	_	_	_	_	_	_
 9	elegeu	eleger	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 10	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	9	expl	_	_
-11	deputado	deputado	NOUN	_	Gender=Masc|Number=Sing	9	nsubj	_	_
+11	deputado	deputado	NOUN	_	Gender=Masc|Number=Sing	9	xcomp	_	_
 12	federal	federal	ADJ	_	Gender=Masc|Number=Sing	11	amod	_	_
 13	por	por	ADP	_	_	15	case	_	_
 14	seu	seu	DET	_	Gender=Masc|Number=Sing|PronType=Prs	15	det	_	_
-15	estado	estado	NOUN	_	Gender=Masc|Number=Sing	11	nmod	_	_
+15	estado	estado	NOUN	_	Gender=Masc|Number=Sing	9	obl	_	_
 16-17	na	_	_	_	_	_	_	_	_
 16	em	em	ADP	_	_	18	case	_	_
 17	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	18	det	_	_
@@ -155,7 +155,7 @@
 19-20	da	_	_	_	_	_	_	_	_
 19	de	de	ADP	_	_	21	case	_	_
 20	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	21	det	_	_
-21	Aliança	Aliança	PROPN	_	Gender=Fem|Number=Sing	18	nmod	_	_
+21	Aliança	Aliança	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	18	nmod	_	_
 22	Renovadora	Renovadora	PROPN	_	Number=Sing	21	flat:name	_	_
 23	Nacional	Nacional	PROPN	_	Number=Sing	21	flat:name	_	_
 24	(	(	PUNCT	_	_	25	punct	_	SpaceAfter=No
@@ -169,7 +169,7 @@
 32-33	ao	_	_	_	_	_	_	_	_
 32	a	a	ADP	_	_	34	case	_	_
 33	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	34	det	_	_
-34	regime	regime	NOUN	_	Gender=Masc|Number=Sing	28	nmod	_	_
+34	regime	regime	NOUN	_	Gender=Masc|Number=Sing	30	nmod	_	_
 35	militar	militar	ADJ	_	Gender=Masc|Number=Sing	34	amod	_	_
 36	instaurado	instaurar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	34	acl	_	_
 37-38	no	_	_	_	_	_	_	_	_
@@ -182,8 +182,8 @@
 43	1964	1964	NUM	_	NumType=Card	41	nmod	_	SpaceAfter=No
 44	.	.	PUNCT	_	_	9	punct	_	_
 
-# text = Assumiu o mandato em fevereiro de 1967 e participou dos trabalhos legislativos como membro efetivo da Comissão de Relações Exteriores e como suplente das comissões de Minas e Energia e de Constituição e Justiça da Câmara.
 # sent_id = 6
+# text = Assumiu o mandato em fevereiro de 1967 e participou dos trabalhos legislativos como membro efetivo da Comissão de Relações Exteriores e como suplente das comissões de Minas e Energia e de Constituição e Justiça da Câmara.
 1	Assumiu	assumir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
 3	mandato	mandato	NOUN	_	Gender=Masc|Number=Sing	1	obj	_	_
@@ -196,42 +196,42 @@
 10-11	dos	_	_	_	_	_	_	_	_
 10	de	de	ADP	_	_	12	case	_	_
 11	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	12	det	_	_
-12	trabalhos	trabalho	NOUN	_	Gender=Masc|Number=Plur	9	obl	_	_
+12	trabalhos	trabalho	NOUN	_	Gender=Masc|Number=Plur	9	obj	_	_
 13	legislativos	legislativo	ADJ	_	Gender=Masc|Number=Plur	12	amod	_	_
 14	como	como	ADP	_	_	15	case	_	_
-15	membro	membro	NOUN	_	Gender=Masc|Number=Sing	12	nmod	_	_
+15	membro	membro	NOUN	_	Gender=Masc|Number=Sing	9	xcomp	_	_
 16	efetivo	efetivo	ADJ	_	Gender=Masc|Number=Sing	15	amod	_	_
 17-18	da	_	_	_	_	_	_	_	_
 17	de	de	ADP	_	_	19	case	_	_
 18	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	19	det	_	_
 19	Comissão	Comissão	PROPN	_	Gender=Fem|Number=Sing	15	nmod	_	_
 20	de	de	ADP	_	_	21	case	_	_
-21	Relações	Relações	PROPN	_	Number=Sing	19	nmod	_	_
+21	Relações	Relações	PROPN	_	ExtPos=PROPN|Number=Sing	19	nmod	_	_
 22	Exteriores	Exteriores	PROPN	_	Number=Sing	21	flat:name	_	_
 23	e	e	CCONJ	_	_	25	cc	_	_
-24	como	como	ADV	_	_	25	advmod	_	_
-25	suplente	suplente	ADJ	_	Gender=Masc|Number=Sing	15	conj	_	_
+24	como	como	ADP	_	_	25	case	_	_
+25	suplente	suplente	NOUN	_	Gender=Masc|Number=Sing	15	conj	_	_
 26-27	das	_	_	_	_	_	_	_	_
 26	de	de	ADP	_	_	28	case	_	_
 27	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	28	det	_	_
-28	comissões	comissão	NOUN	_	Gender=Fem|Number=Plur	25	obl	_	_
+28	comissões	comissão	NOUN	_	Gender=Fem|Number=Plur	25	nmod	_	_
 29	de	de	ADP	_	_	30	case	_	_
-30	Minas	minas	PROPN	_	Gender=Masc|Number=Sing	28	nmod	_	_
-31	e	e	CCONJ	_	_	32	cc	_	_
-32	Energia	Energia	PROPN	_	_	30	conj	_	_
+30	Minas	Minas	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	28	nmod	_	_
+31	e	e	CCONJ	_	_	30	flat:name	_	_
+32	Energia	Energia	PROPN	_	Number=Sing	30	flat:name	_	_
 33	e	e	CCONJ	_	_	35	cc	_	_
 34	de	de	ADP	_	_	35	case	_	_
-35	Constituição	constituição	PROPN	_	Gender=Fem|Number=Sing	30	conj	_	_
-36	e	e	CCONJ	_	_	37	cc	_	_
-37	Justiça	Justiça	PROPN	_	Gender=Fem|Number=Sing	30	conj	_	_
+35	Constituição	Constituição	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	30	conj	_	_
+36	e	e	CCONJ	_	_	35	flat:name	_	_
+37	Justiça	Justiça	PROPN	_	Number=Sing	35	flat:name	_	_
 38-39	da	_	_	_	_	_	_	_	_
 38	de	de	ADP	_	_	40	case	_	_
 39	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	40	det	_	_
-40	Câmara	câmara	NOUN	_	Gender=Fem|Number=Sing	37	nmod	_	SpaceAfter=No
+40	Câmara	câmara	NOUN	_	Gender=Fem|Number=Sing	35	nmod	_	SpaceAfter=No
 41	.	.	PUNCT	_	_	1	punct	_	_
 
-# text = Em novembro de 1970, foi reeleito na mesma legenda e empossado no início do ano seguinte.
 # sent_id = 7
+# text = Em novembro de 1970, foi reeleito na mesma legenda e empossado no início do ano seguinte.
 1	Em	em	ADP	_	_	2	case	_	_
 2	novembro	novembro	NOUN	_	Gender=Masc|Number=Sing	7	obl	_	_
 3	de	de	ADP	_	_	4	case	_	_
@@ -245,7 +245,7 @@
 10	mesma	mesmo	ADJ	_	Gender=Fem|Number=Sing	11	amod	_	_
 11	legenda	legenda	NOUN	_	Gender=Fem|Number=Sing	7	obl	_	_
 12	e	e	CCONJ	_	_	13	cc	_	_
-13	empossado	empossar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	7	conj	_	_
+13	empossado	empossar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	7	conj	_	_
 14-15	no	_	_	_	_	_	_	_	_
 14	em	em	ADP	_	_	16	case	_	_
 15	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	16	det	_	_
@@ -255,17 +255,16 @@
 18	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	19	det	_	_
 19	ano	ano	NOUN	_	Gender=Masc|Number=Sing	16	nmod	_	_
 20	seguinte	seguinte	ADJ	_	Gender=Masc|Number=Sing	19	amod	_	SpaceAfter=No
-21	.	.	PUNCT	_	_	7	punct	_	_
+21	.	.	PUNCT	_	_	7	punct	_	SpacesAfter=\n
 
-# text = Realizou viagem a Israel como representante do governo paranaense para a assinatura do contrato de financiamento das obras da Estrada de Ferro Central do Paraná.
 # sent_id = 8
-# newpar
+# text = Realizou viagem a Israel como representante do governo paranaense para a assinatura do contrato de financiamento das obras da Estrada de Ferro Central do Paraná.
 1	Realizou	realizar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2	viagem	viagem	NOUN	_	Gender=Fem|Number=Sing	1	obj	_	_
 3	a	a	ADP	_	_	4	case	_	_
-4	Israel	Israel	PROPN	_	Gender=Masc|Number=Sing	1	obl	_	_
+4	Israel	Israel	PROPN	_	Gender=Masc|Number=Sing	2	nmod	_	_
 5	como	como	ADP	_	_	6	case	_	_
-6	representante	representante	NOUN	_	Gender=Masc|Number=Sing	1	xcomp	_	_
+6	representante	representante	NOUN	_	Gender=Masc|Number=Sing	1	obl	_	_
 7-8	do	_	_	_	_	_	_	_	_
 7	de	de	ADP	_	_	9	case	_	_
 8	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	9	det	_	_
@@ -273,7 +272,7 @@
 10	paranaense	paranaense	ADJ	_	Gender=Masc|Number=Sing	9	amod	_	_
 11	para	para	ADP	_	_	13	case	_	_
 12	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	13	det	_	_
-13	assinatura	assinatura	NOUN	_	Gender=Fem|Number=Sing	9	nmod	_	_
+13	assinatura	assinatura	NOUN	_	Gender=Fem|Number=Sing	1	obl	_	_
 14-15	do	_	_	_	_	_	_	_	_
 14	de	de	ADP	_	_	16	case	_	_
 15	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	16	det	_	_
@@ -287,23 +286,23 @@
 22-23	da	_	_	_	_	_	_	_	_
 22	de	de	ADP	_	_	24	case	_	_
 23	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	24	det	_	_
-24	Estrada	estrada	PROPN	_	_	21	nmod	_	_
+24	Estrada	estrada	PROPN	_	Gender=Fem|Number=Sing	21	nmod	_	_
 25	de	de	ADP	_	_	26	case	_	_
-26	Ferro	Ferro	PROPN	_	Gender=Masc|Number=Sing	24	nmod	_	_
+26	Ferro	Ferro	PROPN	_	ExtPos=PROPN|Number=Sing	24	nmod	_	_
 27	Central	Central	PROPN	_	Number=Sing	26	flat:name	_	_
 28-29	do	_	_	_	_	_	_	_	_
 28	de	de	ADP	_	_	30	case	_	_
 29	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	30	det	_	_
-30	Paraná	Paraná	PROPN	_	Gender=Masc|Number=Sing	21	nmod	_	SpaceAfter=No
+30	Paraná	Paraná	PROPN	_	Gender=Masc|Number=Sing	24	nmod	_	SpaceAfter=No
 31	.	.	PUNCT	_	_	1	punct	_	_
 
-# text = Em janeiro de 1975, ao expirar seu segundo mandato, deixou definitivamente a Câmara dos Deputados.
 # sent_id = 9
+# text = Em janeiro de 1975, ao expirar seu segundo mandato, deixou definitivamente a Câmara dos Deputados.
 1	Em	em	ADP	_	_	2	case	_	_
 2	janeiro	janeiro	NOUN	_	Gender=Masc|Number=Sing	13	obl	_	_
 3	de	de	ADP	_	_	4	case	_	_
 4	1975	1975	NUM	_	NumType=Card	2	nmod	_	SpaceAfter=No
-5	,	,	PUNCT	_	_	2	punct	_	_
+5	,	,	PUNCT	_	_	8	punct	_	_
 6-7	ao	_	_	_	_	_	_	_	_
 6	a	a	ADP	_	_	8	mark	_	_
 7	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	8	det	_	_
@@ -315,35 +314,34 @@
 13	deixou	deixar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 14	definitivamente	definitivamente	ADV	_	_	13	advmod	_	_
 15	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	16	det	_	_
-16	Câmara	Câmara	PROPN	_	Gender=Fem|Number=Sing	13	nsubj	_	_
+16	Câmara	Câmara	PROPN	_	Gender=Fem|Number=Sing	13	obj	_	_
 17-18	dos	_	_	_	_	_	_	_	_
 17	de	de	ADP	_	_	19	case	_	_
 18	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	19	det	_	_
 19	Deputados	Deputados	PROPN	_	Number=Sing	16	nmod	_	SpaceAfter=No
-20	.	.	PUNCT	_	_	13	punct	_	_
+20	.	.	PUNCT	_	_	13	punct	_	SpacesAfter=\n
 
-# text = Afastado da política, passou a dedicar-se às atividades na área da mineração e constituiu as empresas Leprevost e Cia.
 # sent_id = 10
-# newpar
-1	Afastado	afastar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	8	dep	_	_
+# text = Afastado da política, passou a dedicar-se às atividades na área da mineração e constituiu as empresas Leprevost e Cia. Ltda., Mineração Morretes Ltda.
+1	Afastado	afastar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	6	advcl	_	_
 2-3	da	_	_	_	_	_	_	_	_
 2	de	de	ADP	_	_	4	case	_	_
 3	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	4	det	_	_
-4	política	política	NOUN	_	Gender=Fem|Number=Sing	1	obl	_	SpaceAfter=No
+4	política	política	NOUN	_	Gender=Fem|Number=Sing	1	obj	_	SpaceAfter=No
 5	,	,	PUNCT	_	_	1	punct	_	_
-6	passou	passar	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	8	aux	_	_
-7	a	a	ADP	_	_	8	obl	_	_
+6	passou	passar	VERB	_	ExtPos=AUX|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+7	a	a	SCONJ	_	_	8	mark	_	_
 8-9	dedicar-se	_	_	_	_	_	_	_	_
-8	dedicar	dedicar	VERB	_	VerbForm=Inf	0	root	_	_
+8	dedicar	dedicar	VERB	_	VerbForm=Inf	6	xcomp	_	_
 9	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	8	expl	_	_
 10-11	às	_	_	_	_	_	_	_	_
 10	a	a	ADP	_	_	12	case	_	_
 11	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	12	det	_	_
-12	atividades	atividade	NOUN	_	Gender=Fem|Number=Plur	8	obl	_	_
+12	atividades	atividade	NOUN	_	Gender=Fem|Number=Plur	8	obj	_	_
 13-14	na	_	_	_	_	_	_	_	_
 13	em	em	ADP	_	_	15	case	_	_
 14	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	15	det	_	_
-15	área	área	NOUN	_	Gender=Fem|Number=Sing	8	obl	_	_
+15	área	área	NOUN	_	Gender=Fem|Number=Sing	12	nmod	_	_
 16-17	da	_	_	_	_	_	_	_	_
 16	de	de	ADP	_	_	18	case	_	_
 17	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	18	det	_	_
@@ -352,41 +350,41 @@
 20	constituiu	constituir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	8	conj	_	_
 21	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	22	det	_	_
 22	empresas	empresa	NOUN	_	Gender=Fem|Number=Plur	20	obj	_	_
-23	Leprevost	Leprevost	PROPN	_	Gender=Masc|Number=Sing	22	conj	_	_
-24	e	e	CCONJ	_	_	25	cc	_	_
-25	Cia	cia	PROPN	_	Gender=Fem|Number=Sing	22	conj	_	SpaceAfter=No
-26	.	.	PUNCT	_	_	8	punct	_	_
+23	Leprevost	Leprevost	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	22	appos	_	_
+24	e	e	CCONJ	_	_	23	flat:name	_	_
+25	Cia	Cia	PROPN	_	Gender=Fem|Number=Sing	23	flat:name	_	SpaceAfter=No
+26	.	.	PUNCT	_	_	27	punct	_	_
+27	Ltda	Ltda	PROPN	_	Gender=Fem|Number=Sing	23	appos	_	SpaceAfter=No
+28	.	.	PUNCT	_	_	27	punct	_	SpaceAfter=No
+29	,	,	PUNCT	_	_	30	punct	_	_
+30	Mineração	Mineração	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	23	conj	_	_
+31	Morretes	Morretes	PROPN	_	Number=Sing	30	flat:name	_	_
+32	Ltda	Ltda	PROPN	_	Number=Sing	30	flat:name	_	SpaceAfter=No
+33	.	.	PUNCT	_	_	8	punct	_	_
 
-# text = Ltda., Mineração Morretes Ltda. e Mineração São Brás S.A., em associação ao grupo de assistência médica paulista Samcil.
 # sent_id = 11
-1	Ltda	Ltda	PROPN	_	Number=Sing	0	root	_	SpaceAfter=No
-2	.	.	PUNCT	_	_	1	punct	_	SpaceAfter=No
-3	,	,	PUNCT	_	_	1	punct	_	_
-4	Mineração	Mineração	PROPN	_	Number=Sing	1	flat:name	_	_
-5	Morretes	Morretes	PROPN	_	Number=Sing	1	flat:name	_	_
-6	Ltda	Ltda	PROPN	_	Number=Sing	1	flat:name	_	SpaceAfter=No
-7	.	.	PUNCT	_	_	1	punct	_	_
-8	e	e	CCONJ	_	_	1	flat:name	_	_
-9	Mineração	Mineração	PROPN	_	Number=Sing	1	flat:name	_	_
-10	São	São	PROPN	_	Number=Sing	1	flat:name	_	_
-11	Brás	Brás	PROPN	_	Number=Sing	1	flat:name	_	_
-12	S.A.	S.A.	PROPN	_	Number=Sing	1	flat:name	_	SpaceAfter=No
-13	,	,	PUNCT	_	_	1	punct	_	_
-14	em	em	ADP	_	_	15	case	_	_
-15	associação	associação	NOUN	_	Gender=Fem|Number=Sing	1	nmod	_	_
-16-17	ao	_	_	_	_	_	_	_	_
-16	a	a	ADP	_	_	18	case	_	_
-17	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	18	det	_	_
-18	grupo	grupo	NOUN	_	Gender=Masc|Number=Sing	15	nmod	_	_
-19	de	de	ADP	_	_	20	case	_	_
-20	assistência	assistência	NOUN	_	Gender=Fem|Number=Sing	18	nmod	_	_
-21	médica	médico	ADJ	_	Gender=Fem|Number=Sing	20	amod	_	_
-22	paulista	paulista	ADJ	_	Gender=Fem|Number=Sing	20	amod	_	_
-23	Samcil	Samcil	PROPN	_	Gender=Fem|Number=Sing	20	appos	_	SpaceAfter=No
-24	.	.	PUNCT	_	_	1	punct	_	_
+# text = e Mineração São Brás S.A., em associação ao grupo de assistência médica paulista Samcil.
+1	e	e	CCONJ	_	_	2	cc	_	_
+2	Mineração	Mineração	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	0	root	_	_
+3	São	São	PROPN	_	Number=Sing	2	flat:name	_	_
+4	Brás	Brás	PROPN	_	Number=Sing	2	flat:name	_	_
+5	S.A.	S.A.	PROPN	_	Number=Sing	2	flat:name	_	SpaceAfter=No
+6	,	,	PUNCT	_	_	2	punct	_	_
+7	em	em	ADP	_	_	8	case	_	_
+8	associação	associação	NOUN	_	Gender=Fem|Number=Sing	2	nmod	_	_
+9-10	ao	_	_	_	_	_	_	_	_
+9	a	a	ADP	_	_	11	case	_	_
+10	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	_	_
+11	grupo	grupo	NOUN	_	Gender=Masc|Number=Sing	8	nmod	_	_
+12	de	de	ADP	_	_	13	case	_	_
+13	assistência	assistência	NOUN	_	Gender=Fem|Number=Sing	11	nmod	_	_
+14	médica	médico	ADJ	_	Gender=Fem|Number=Sing	13	amod	_	_
+15	paulista	paulista	ADJ	_	Gender=Fem|Number=Sing	13	amod	_	_
+16	Samcil	Samcil	PROPN	_	Gender=Fem|Number=Sing	13	appos	_	SpaceAfter=No
+17	.	.	PUNCT	_	_	2	punct	_	_
 
-# text = Paralelamente às atividades nesse ramo, continuou no TCE.
 # sent_id = 12
+# text = Paralelamente às atividades nesse ramo, continuou no TCE.
 1	Paralelamente	paralelamente	ADV	_	_	9	advmod	_	_
 2-3	às	_	_	_	_	_	_	_	_
 2	a	a	ADP	_	_	4	case	_	_
@@ -402,11 +400,10 @@
 10	em	em	ADP	_	_	12	case	_	_
 11	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	12	det	_	_
 12	TCE	TCE	PROPN	_	Gender=Masc|Number=Sing	9	obl	_	SpaceAfter=No
-13	.	.	PUNCT	_	_	9	punct	_	_
+13	.	.	PUNCT	_	_	9	punct	_	SpacesAfter=\n
 
-# text = Em 1989, foi convidado pelo governador de Rondônia Jerônimo Santana (1987-1991) a assumir a Secretaria de Estado.
 # sent_id = 13
-# newpar
+# text = Em 1989, foi convidado pelo governador de Rondônia Jerônimo Santana (1987-1991) a assumir a Secretaria de Estado.
 1	Em	em	ADP	_	_	2	case	_	_
 2	1989	1989	NUM	_	NumType=Card	5	obl	_	SpaceAfter=No
 3	,	,	PUNCT	_	_	2	punct	_	_
@@ -418,12 +415,12 @@
 8	governador	governador	NOUN	_	Gender=Masc|Number=Sing	5	obl:agent	_	_
 9	de	de	ADP	_	_	10	case	_	_
 10	Rondônia	Rondônia	PROPN	_	Gender=Fem|Number=Sing	8	nmod	_	_
-11	Jerônimo	Jerônimo	PROPN	_	Number=Sing	10	flat:name	_	_
+11	Jerônimo	Jerônimo	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	10	flat:name	_	_
 12	Santana	Santana	PROPN	_	Number=Sing	10	flat:name	_	_
 13	(	(	PUNCT	_	_	14	punct	_	SpaceAfter=No
-14	1987-1991	1987-1991	NUM	_	NumType=Card	10	appos	_	SpaceAfter=No
+14	1987-1991	1987-1991	NUM	_	NumType=Card	10	parataxis	_	SpaceAfter=No
 15	)	)	PUNCT	_	_	14	punct	_	_
-16	a	a	ADP	_	_	17	mark	_	_
+16	a	a	SCONJ	_	_	17	mark	_	_
 17	assumir	assumir	VERB	_	VerbForm=Inf	5	advcl	_	_
 18	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	19	det	_	_
 19	Secretaria	Secretaria	PROPN	_	Gender=Fem|Number=Sing	17	obj	_	_
@@ -431,15 +428,15 @@
 21	Estado	Estado	PROPN	_	Number=Sing	19	nmod	_	SpaceAfter=No
 22	.	.	PUNCT	_	_	5	punct	_	_
 
-# text = Neste período ocupou o cargo de presidente da Companhia de Mineração de Rondônia (CMR).
 # sent_id = 14
+# text = Neste período ocupou o cargo de presidente da Companhia de Mineração de Rondônia (CMR).
 1-2	Neste	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	3	case	_	_
 2	este	este	DET	_	Gender=Masc|Number=Sing|PronType=Dem	3	det	_	_
 3	período	período	NOUN	_	Gender=Masc|Number=Sing	4	obl	_	_
 4	ocupou	ocupar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 5	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	6	det	_	_
-6	cargo	cargo	NOUN	_	Gender=Masc|Number=Sing	4	nsubj	_	_
+6	cargo	cargo	NOUN	_	Gender=Masc|Number=Sing	4	obj	_	_
 7	de	de	ADP	_	_	8	case	_	_
 8	presidente	presidente	NOUN	_	Gender=Masc|Number=Sing	6	nmod	_	_
 9-10	da	_	_	_	_	_	_	_	_
@@ -451,13 +448,12 @@
 14	de	de	ADP	_	_	15	case	_	_
 15	Rondônia	Rondônia	PROPN	_	Number=Sing	13	nmod	_	_
 16	(	(	PUNCT	_	_	17	punct	_	SpaceAfter=No
-17	CMR	CMR	PROPN	_	Gender=Masc|Number=Sing	11	appos	_	SpaceAfter=No
+17	CMR	CMR	PROPN	_	Gender=Fem|Number=Sing	11	appos	_	SpaceAfter=No
 18	)	)	PUNCT	_	_	17	punct	_	SpaceAfter=No
-19	.	.	PUNCT	_	_	4	punct	_	_
+19	.	.	PUNCT	_	_	4	punct	_	SpacesAfter=\n
 
-# text = De volta ao Paraná, retomou suas atividades no TCE, aposentando-se em 1993.
 # sent_id = 15
-# newpar
+# text = De volta ao Paraná, retomou suas atividades no TCE, aposentando-se em 1993.
 1	De	de	ADP	_	_	2	case	_	_
 2	volta	volta	NOUN	_	Gender=Fem|Number=Sing	7	obl	_	_
 3-4	ao	_	_	_	_	_	_	_	_
@@ -480,28 +476,28 @@
 17	1993	1993	NUM	_	NumType=Card	14	obl	_	SpaceAfter=No
 18	.	.	PUNCT	_	_	7	punct	_	_
 
-# text = A partir de então, passou a centralizar seus esforços para reativar a Metalurgia de Chumbo da Plumbum, implantada no vale da Ribeira.
 # sent_id = 16
-1	A	a	ADP	_	_	2	case	_	_
-2	partir	partir	NOUN	_	_	8	obl	_	_
-3	de	de	ADP	_	_	4	case	_	_
-4	então	então	ADV	_	Gender=Masc|Number=Sing	2	advmod	_	SpaceAfter=No
-5	,	,	PUNCT	_	_	2	punct	_	_
-6	passou	passar	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	8	aux	_	_
-7	a	a	ADP	_	_	8	obl	_	_
-8	centralizar	centralizar	VERB	_	VerbForm=Inf	0	root	_	_
+# text = A partir de então, passou a centralizar seus esforços para reativar a Metalurgia de Chumbo da Plumbum, implantada no vale da Ribeira.
+1	A	a	ADP	_	ExtPos=ADP	4	case	_	_
+2	partir	partir	NOUN	_	_	1	fixed	_	_
+3	de	de	ADP	_	_	1	fixed	_	_
+4	então	então	ADV	_	_	8	advmod	_	SpaceAfter=No
+5	,	,	PUNCT	_	_	4	punct	_	_
+6	passou	passar	VERB	_	ExtPos=AUX|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+7	a	a	SCONJ	_	_	8	mark	_	_
+8	centralizar	centralizar	VERB	_	VerbForm=Inf	6	xcomp	_	_
 9	seus	seu	DET	_	Gender=Masc|Number=Plur|PronType=Prs	10	det	_	_
 10	esforços	esforço	NOUN	_	Gender=Masc|Number=Plur	8	obj	_	_
-11	para	para	ADP	_	_	12	mark	_	_
-12	reativar	reativar	VERB	_	VerbForm=Inf	10	acl	_	_
+11	para	para	SCONJ	_	_	12	mark	_	_
+12	reativar	reativar	VERB	_	VerbForm=Inf	8	advcl	_	_
 13	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	14	det	_	_
 14	Metalurgia	Metalurgia	PROPN	_	Gender=Fem|Number=Sing	12	obj	_	_
 15	de	de	ADP	_	_	16	case	_	_
-16	Chumbo	chumbo	PROPN	_	Gender=Masc|Number=Sing	14	nmod	_	_
+16	Chumbo	Chumbo	PROPN	_	Number=Sing	14	nmod	_	_
 17-18	da	_	_	_	_	_	_	_	_
 17	de	de	ADP	_	_	19	case	_	_
 18	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	19	det	_	_
-19	Plumbum	Plumbum	PROPN	_	Gender=Fem|Number=Sing	14	nmod	_	SpaceAfter=No
+19	Plumbum	Plumbum	PROPN	_	Number=Sing	14	nmod	_	SpaceAfter=No
 20	,	,	PUNCT	_	_	21	punct	_	_
 21	implantada	implantar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	14	acl	_	_
 22-23	no	_	_	_	_	_	_	_	_
@@ -514,8 +510,8 @@
 27	Ribeira	Ribeira	PROPN	_	Gender=Fem|Number=Sing	24	nmod	_	SpaceAfter=No
 28	.	.	PUNCT	_	_	8	punct	_	_
 
-# text = Entretanto, não foi bem-sucedido em seu empreendimento, pois a empresa fechou as postas em 1995 em meio a acusações de danos ao meio-ambiente e à saúde dos habitantes do município de Adrianópolis, localizado na região.
 # sent_id = 17
+# text = Entretanto, não foi bem-sucedido em seu empreendimento, pois a empresa fechou as postas em 1995 em meio a acusações de danos ao meio-ambiente e à saúde dos habitantes do município de Adrianópolis, localizado na região.
 1	Entretanto	entretanto	ADV	_	_	5	advmod	_	SpaceAfter=No
 2	,	,	PUNCT	_	_	1	punct	_	_
 3	não	não	ADV	_	Polarity=Neg	5	advmod	_	_
@@ -525,24 +521,24 @@
 7	seu	seu	DET	_	Gender=Masc|Number=Sing|PronType=Prs	8	det	_	_
 8	empreendimento	empreendimento	NOUN	_	Gender=Masc|Number=Sing	5	obl	_	SpaceAfter=No
 9	,	,	PUNCT	_	_	5	punct	_	_
-10	pois	pois	SCONJ	_	_	13	advmod	_	_
+10	pois	pois	SCONJ	_	_	13	mark	_	_
 11	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	12	det	_	_
 12	empresa	empresa	NOUN	_	Gender=Fem|Number=Sing	13	nsubj	_	_
 13	fechou	fechar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	advcl	_	_
 14	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	15	det	_	_
-15	postas	posta	NOUN	_	Gender=Masc|Number=Plur	13	obj	_	_
+15	postas	posta	NOUN	_	Gender=Fem|Number=Plur	13	obj	_	_
 16	em	em	ADP	_	_	17	case	_	_
 17	1995	1995	NUM	_	NumType=Card	13	obl	_	_
 18	em	em	ADP	_	_	19	case	_	_
 19	meio	meio	NOUN	_	Gender=Masc|Number=Sing	13	obl	_	_
 20	a	a	ADP	_	_	21	case	_	_
-21	acusações	acusação	NOUN	_	Gender=Fem|Number=Plur	13	obl	_	_
+21	acusações	acusação	NOUN	_	Gender=Fem|Number=Plur	19	nmod	_	_
 22	de	de	ADP	_	_	23	case	_	_
 23	danos	dano	NOUN	_	Gender=Masc|Number=Plur	21	nmod	_	_
 24-25	ao	_	_	_	_	_	_	_	_
 24	a	a	ADP	_	_	26	case	_	_
 25	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	26	det	_	_
-26	meio-ambiente	meio-ambiente	NOUN	_	Gender=Masc|Number=Sing	21	nmod	_	_
+26	meio-ambiente	meio-ambiente	NOUN	_	Gender=Masc|Number=Sing	23	nmod	_	_
 27	e	e	CCONJ	_	_	30	cc	_	_
 28-29	à	_	_	_	_	_	_	_	_
 28	a	a	ADP	_	_	30	case	_	_
@@ -557,36 +553,35 @@
 35	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	36	det	_	_
 36	município	município	NOUN	_	Gender=Masc|Number=Sing	33	nmod	_	_
 37	de	de	ADP	_	_	38	case	_	_
-38	Adrianópolis	Adrianópolis	PROPN	_	Gender=Masc|Number=Sing	36	nmod	_	SpaceAfter=No
+38	Adrianópolis	Adrianópolis	PROPN	_	Number=Sing	36	nmod	_	SpaceAfter=No
 39	,	,	PUNCT	_	_	40	punct	_	_
-40	localizado	localizar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	33	acl	_	_
+40	localizado	localizar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	36	acl	_	_
 41-42	na	_	_	_	_	_	_	_	_
 41	em	em	ADP	_	_	43	case	_	_
 42	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	43	det	_	_
 43	região	região	NOUN	_	Gender=Fem|Number=Sing	40	obl	_	SpaceAfter=No
-44	.	.	PUNCT	_	_	5	punct	_	_
+44	.	.	PUNCT	_	_	5	punct	_	SpacesAfter=\n
 
-# text = Leprevost não abandonou, contudo, a militância política.
 # sent_id = 18
-# newpar
+# text = Leprevost não abandonou, contudo, a militância política.
 1	Leprevost	Leprevost	PROPN	_	Gender=Masc|Number=Sing	3	nsubj	_	_
 2	não	não	ADV	_	Polarity=Neg	3	advmod	_	_
 3	abandonou	abandonar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	SpaceAfter=No
-4	,	,	PUNCT	_	_	8	punct	_	_
-5	contudo	contudo	ADV	_	_	8	advmod	_	SpaceAfter=No
-6	,	,	PUNCT	_	_	5	punct	_	_
+4	,	,	PUNCT	_	_	3	punct	_	_
+5	contudo	contudo	CCONJ	_	_	3	cc	_	SpaceAfter=No
+6	,	,	PUNCT	_	_	3	punct	_	_
 7	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	8	det	_	_
 8	militância	militância	NOUN	_	Gender=Fem|Number=Sing	3	obj	_	_
 9	política	político	ADJ	_	Gender=Fem|Number=Sing	8	amod	_	SpaceAfter=No
 10	.	.	PUNCT	_	_	3	punct	_	_
 
-# text = Filiado ao Partido Republicano Progressista (PRP), tornou-se presidente regional da legenda.
 # sent_id = 19
-1	Filiado	Filiar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	11	dep	_	_
+# text = Filiado ao Partido Republicano Progressista (PRP), tornou-se presidente regional da legenda.
+1	Filiado	filiar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	11	advcl	_	_
 2-3	ao	_	_	_	_	_	_	_	_
 2	a	a	ADP	_	_	4	case	_	_
 3	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	4	det	_	_
-4	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	1	obl	_	_
+4	Partido	Partido	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	1	obj	_	_
 5	Republicano	Republicano	PROPN	_	Number=Sing	4	flat:name	_	_
 6	Progressista	Progressista	PROPN	_	Number=Sing	4	flat:name	_	_
 7	(	(	PUNCT	_	_	8	punct	_	SpaceAfter=No
@@ -596,7 +591,7 @@
 11-12	tornou-se	_	_	_	_	_	_	_	_
 11	tornou	tornar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 12	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	11	expl	_	_
-13	presidente	presidente	NOUN	_	Gender=Masc|Number=Sing	11	nsubj	_	_
+13	presidente	presidente	NOUN	_	Gender=Masc|Number=Sing	11	xcomp	_	_
 14	regional	regional	ADJ	_	Gender=Masc|Number=Sing	13	amod	_	_
 15-16	da	_	_	_	_	_	_	_	_
 15	de	de	ADP	_	_	17	case	_	_
@@ -604,8 +599,8 @@
 17	legenda	legenda	NOUN	_	Gender=Fem|Number=Sing	13	nmod	_	SpaceAfter=No
 18	.	.	PUNCT	_	_	11	punct	_	_
 
-# text = No pleito de outubro de 2002, tentou voltar à política ao candidatar-se a deputado federal pelo Partido Progressista (PP), mas teve sua candidatura indeferida pelo Tribunal Regional Eleitoral do Paraná.
 # sent_id = 20
+# text = No pleito de outubro de 2002, tentou voltar à política ao candidatar-se a deputado federal pelo Partido Progressista (PP), mas teve sua candidatura indeferida pelo Tribunal Regional Eleitoral do Paraná.
 1-2	No	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	3	case	_	_
 2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
@@ -622,18 +617,18 @@
 12	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	13	det	_	_
 13	política	política	NOUN	_	Gender=Fem|Number=Sing	10	obl	_	_
 14-15	ao	_	_	_	_	_	_	_	_
-14	a	a	ADP	_	_	16	mark	_	_
+14	a	a	SCONJ	_	_	16	mark	_	_
 15	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	16	det	_	_
 16-17	candidatar-se	_	_	_	_	_	_	_	_
 16	candidatar	candidatar	VERB	_	VerbForm=Inf	10	advcl	_	_
 17	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	16	expl	_	_
-18	a	o	DET	_	_	19	case	_	_
+18	a	a	ADP	_	_	19	case	_	_
 19	deputado	deputado	NOUN	_	Gender=Masc|Number=Sing	16	obl	_	_
 20	federal	federal	ADJ	_	Gender=Masc|Number=Sing	19	amod	_	_
 21-22	pelo	_	_	_	_	_	_	_	_
 21	por	por	ADP	_	_	23	case	_	_
 22	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	23	det	_	_
-23	Partido	Partido	PROPN	_	Gender=Masc|Number=Sing	16	obl	_	_
+23	Partido	Partido	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	16	obl	_	_
 24	Progressista	Progressista	PROPN	_	Number=Sing	23	flat:name	_	_
 25	(	(	PUNCT	_	_	26	punct	_	SpaceAfter=No
 26	PP	PP	PROPN	_	Gender=Masc|Number=Sing	23	appos	_	SpaceAfter=No
@@ -643,11 +638,11 @@
 30	teve	ter	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	9	conj	_	_
 31	sua	seu	DET	_	Gender=Fem|Number=Sing|PronType=Prs	32	det	_	_
 32	candidatura	candidatura	NOUN	_	Gender=Fem|Number=Sing	30	obj	_	_
-33	indeferida	indeferidar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	32	acl	_	_
+33	indeferida	indeferir	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	32	acl	_	_
 34-35	pelo	_	_	_	_	_	_	_	_
 34	por	por	ADP	_	_	36	case	_	_
 35	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	36	det	_	_
-36	Tribunal	Tribunal	PROPN	_	Gender=Masc|Number=Sing	33	obl:agent	_	_
+36	Tribunal	Tribunal	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	33	obl:agent	_	_
 37	Regional	Regional	PROPN	_	Number=Sing	36	flat:name	_	_
 38	Eleitoral	Eleitoral	PROPN	_	Number=Sing	36	flat:name	_	_
 39-40	do	_	_	_	_	_	_	_	_
@@ -656,20 +651,20 @@
 41	Paraná	Paraná	PROPN	_	Gender=Masc|Number=Sing	36	nmod	_	SpaceAfter=No
 42	.	.	PUNCT	_	_	9	punct	_	_
 
-# text = Em março de 2003, o Instituto Ambiental do Paraná (IAP) aplicou três multas à Plumbum e a seus ex-proprietários, entre os quais Leprevost, num total de R$ 204 mil por crime ambiental e contaminação dos habitantes de Adrianópolis.
 # sent_id = 21
+# text = Em março de 2003, o Instituto Ambiental do Paraná (IAP) aplicou três multas à Plumbum e a seus ex-proprietários, entre os quais Leprevost, num total de R$ 204 mil por crime ambiental e contaminação dos habitantes de Adrianópolis.
 1	Em	em	ADP	_	_	2	case	_	_
 2	março	março	NOUN	_	Gender=Masc|Number=Sing	15	obl	_	_
 3	de	de	ADP	_	_	4	case	_	_
 4	2003	2003	NUM	_	NumType=Card	2	nmod	_	SpaceAfter=No
 5	,	,	PUNCT	_	_	2	punct	_	_
 6	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	7	det	_	_
-7	Instituto	Instituto	PROPN	_	Gender=Masc|Number=Sing	15	nsubj	_	_
+7	Instituto	Instituto	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	15	nsubj	_	_
 8	Ambiental	Ambiental	PROPN	_	Number=Sing	7	flat:name	_	_
 9-10	do	_	_	_	_	_	_	_	_
 9	de	de	ADP	_	_	11	case	_	_
 10	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	_	_
-11	Paraná	Paraná	PROPN	_	Gender=Masc|Number=Sing	7	nmod	_	_
+11	Paraná	Paraná	PROPN	_	Number=Sing	7	nmod	_	_
 12	(	(	PUNCT	_	_	13	punct	_	SpaceAfter=No
 13	IAP	IAP	PROPN	_	Gender=Masc|Number=Sing	7	appos	_	SpaceAfter=No
 14	)	)	PUNCT	_	_	13	punct	_	_
@@ -679,71 +674,70 @@
 18-19	à	_	_	_	_	_	_	_	_
 18	a	a	ADP	_	_	20	case	_	_
 19	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	20	det	_	_
-20	Plumbum	Plumbum	PROPN	_	Gender=Fem|Number=Sing	15	obl	_	_
+20	Plumbum	Plumbum	PROPN	_	Gender=Fem|Number=Sing	15	iobj	_	_
 21	e	e	CCONJ	_	_	24	cc	_	_
-22	a	a	DET	_	_	24	det	_	_
+22	a	a	ADP	_	_	24	case	_	_
 23	seus	seu	DET	_	Gender=Masc|Number=Plur|PronType=Prs	24	det	_	_
-24	ex-proprietários	ex-proprietário	NOUN	_	Gender=Masc|Number=Plur	15	conj	_	SpaceAfter=No
+24	ex-proprietários	ex-proprietário	NOUN	_	Gender=Masc|Number=Plur	20	conj	_	SpaceAfter=No
 25	,	,	PUNCT	_	_	29	punct	_	_
-26	entre	entre	ADP	_	_	29	case	_	_
-27	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	29	det	_	_
-28	quais	qual	DET	_	Gender=Masc|Number=Plur|PronType=Rel	29	det	_	_
-29	Leprevost	Leprevost	PROPN	_	Gender=Masc|Number=Sing	24	nmod	_	SpaceAfter=No
+26	entre	entre	ADP	_	_	28	case	_	_
+27	os	o	DET	_	Gender=Masc|Number=Plur|PronType=Art	28	det	_	_
+28	quais	qual	PRON	_	Gender=Masc|Number=Plur|PronType=Rel	29	nmod	_	_
+29	Leprevost	Leprevost	PROPN	_	Gender=Masc|Number=Sing	24	appos	_	SpaceAfter=No
 30	,	,	PUNCT	_	_	29	punct	_	_
 31-32	num	_	_	_	_	_	_	_	_
 31	em	em	ADP	_	_	33	case	_	_
 32	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	33	det	_	_
-33	total	total	NOUN	_	Gender=Masc|Number=Sing	24	nmod	_	_
+33	total	total	NOUN	_	Gender=Masc|Number=Sing	15	obl	_	_
 34	de	de	ADP	_	_	35	case	_	_
-35	R$	R$	SYM	_	Gender=Masc|Number=Plur	33	nmod	_	_
-36	204	204	NUM	_	NumType=Card	37	nummod	_	_
-37	mil	mil	NUM	_	NumType=Card	35	nummod	_	_
+35	R$	R$	SYM	_	_	33	nmod	_	_
+36	204	204	NUM	_	NumType=Card	35	nummod	_	_
+37	mil	mil	NUM	_	NumType=Card	36	flat	_	_
 38	por	por	ADP	_	_	39	case	_	_
 39	crime	crime	NOUN	_	Gender=Masc|Number=Sing	33	nmod	_	_
 40	ambiental	ambiental	ADJ	_	Gender=Masc|Number=Sing	39	amod	_	_
 41	e	e	CCONJ	_	_	42	cc	_	_
-42	contaminação	contaminação	NOUN	_	Gender=Fem|Number=Sing	33	conj	_	_
+42	contaminação	contaminação	NOUN	_	Gender=Fem|Number=Sing	39	conj	_	_
 43-44	dos	_	_	_	_	_	_	_	_
 43	de	de	ADP	_	_	45	case	_	_
 44	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	45	det	_	_
 45	habitantes	habitante	NOUN	_	Gender=Masc|Number=Plur	42	nmod	_	_
 46	de	de	ADP	_	_	47	case	_	_
-47	Adrianópolis	Adrianópolis	PROPN	_	Gender=Masc|Number=Sing	45	nmod	_	SpaceAfter=No
-48	.	.	PUNCT	_	_	15	punct	_	_
+47	Adrianópolis	Adrianópolis	PROPN	_	Number=Sing	45	nmod	_	SpaceAfter=No
+48	.	.	PUNCT	_	_	15	punct	_	SpacesAfter=\n
 
-# text = Casou-se em primeiras núpcias com Marilene de Quadros Leprevost, com quem teve três filhas.
 # sent_id = 22
-# newpar
+# text = Casou-se em primeiras núpcias com Marilene de Quadros Leprevost, com quem teve três filhas.
 1-2	Casou-se	_	_	_	_	_	_	_	_
-1	Casou	Casar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
-2	se	se	PRON	_	Case=Acc|Gender=Unsp|PronType=Prs	1	nsubj	_	_
+1	Casou	casar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+2	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	1	expl	_	_
 3	em	em	ADP	_	_	5	case	_	_
 4	primeiras	primeiro	ADJ	_	Gender=Fem|Number=Plur|NumType=Ord	5	amod	_	_
 5	núpcias	núpcia	NOUN	_	Gender=Fem|Number=Plur	1	obl	_	_
 6	com	com	ADP	_	_	7	case	_	_
 7	Marilene	Marilene	PROPN	_	Gender=Fem|Number=Sing	1	obl	_	_
 8	de	de	ADP	_	_	9	case	_	_
-9	Quadros	Quadros	PROPN	_	Number=Sing	7	nmod	_	_
+9	Quadros	Quadros	PROPN	_	ExtPos=PROPN|Number=Sing	7	nmod	_	_
 10	Leprevost	Leprevost	PROPN	_	Number=Sing	9	flat:name	_	SpaceAfter=No
-11	,	,	PUNCT	_	_	1	punct	_	_
-12	com	com	ADP	_	_	14	mark	_	_
-13	quem	quem	PRON	_	Gender=Unsp|Number=Sing|PronType=Rel	14	nsubj	_	_
-14	teve	ter	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	1	advcl	_	_
+11	,	,	PUNCT	_	_	14	punct	_	_
+12	com	com	ADP	_	_	13	case	_	_
+13	quem	quem	PRON	_	Gender=Fem|Number=Sing|PronType=Rel	14	obl	_	_
+14	teve	ter	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	7	acl:relcl	_	_
 15	três	três	NUM	_	NumType=Card	16	nummod	_	_
 16	filhas	filha	NOUN	_	Gender=Fem|Number=Plur	14	obj	_	SpaceAfter=No
 17	.	.	PUNCT	_	_	1	punct	_	_
 
-# text = Posteriormente, uniu-se a Regina Gomes Guimarães Leprevost.
 # sent_id = 23
+# text = Posteriormente, uniu-se a Regina Gomes Guimarães Leprevost.
 1	Posteriormente	posteriormente	ADV	_	_	3	advmod	_	SpaceAfter=No
 2	,	,	PUNCT	_	_	1	punct	_	_
 3-4	uniu-se	_	_	_	_	_	_	_	_
 3	uniu	unir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 4	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	3	expl	_	_
-5	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	6	det	_	_
-6	Regina	Regina	PROPN	_	Gender=Fem|Number=Sing	3	nsubj	_	_
+5	a	a	ADP	_	_	6	case	_	_
+6	Regina	Regina	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	3	obj	_	_
 7	Gomes	Gomes	PROPN	_	Number=Sing	6	flat:name	_	_
 8	Guimarães	Guimarães	PROPN	_	Number=Sing	6	flat:name	_	_
 9	Leprevost	Leprevost	PROPN	_	Number=Sing	6	flat:name	_	SpaceAfter=No
-10	.	.	PUNCT	_	_	3	punct	_	_
+10	.	.	PUNCT	_	_	3	punct	_	SpacesAfter=\n
 

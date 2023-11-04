@@ -1,9 +1,12 @@
-# text = «Wanda Engel Aduan» nasceu no Rio de Janeiro, então Distrito Federal, no ano de 1944.
-# sent_id = 1
-# newpar
+# generator = UDPipe 2, https://lindat.mff.cuni.cz/services/udpipe
+# udpipe_model = portuguese-bosque-ud-2.12-230717
+# udpipe_model_licence = CC BY-NC-SA
 # newdoc
+# newpar
+# sent_id = 1
+# text = «Wanda Engel Aduan» nasceu no Rio de Janeiro, então Distrito Federal, no ano de 1944.
 1	«	«	PUNCT	_	_	2	punct	_	SpaceAfter=No
-2	Wanda	Wanda	PROPN	_	Gender=Fem|Number=Sing	6	nsubj	_	_
+2	Wanda	Wanda	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	6	nsubj	_	_
 3	Engel	Engel	PROPN	_	Number=Sing	2	flat:name	_	_
 4	Aduan	Aduan	PROPN	_	Number=Sing	2	flat:name	_	SpaceAfter=No
 5	»	»	PUNCT	_	_	2	punct	_	_
@@ -13,10 +16,10 @@
 8	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	9	det	_	_
 9	Rio	Rio	PROPN	_	Gender=Masc|Number=Sing	6	obl	_	_
 10	de	de	ADP	_	_	11	case	_	_
-11	Janeiro	Janeiro	PROPN	_	Number=Sing	9	flat:name	_	SpaceAfter=No
+11	Janeiro	Janeiro	PROPN	_	Number=Sing	9	nmod	_	SpaceAfter=No
 12	,	,	PUNCT	_	_	14	punct	_	_
-13	então	então	ADV	_	_	12	advmod	_	_
-14	Distrito	Distrito	PROPN	_	Gender=Masc|Number=Sing	9	acl	_	_
+13	então	então	ADV	_	_	14	advmod	_	_
+14	Distrito	Distrito	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	9	appos	_	_
 15	Federal	Federal	PROPN	_	Number=Sing	14	flat:name	_	SpaceAfter=No
 16	,	,	PUNCT	_	_	14	punct	_	_
 17-18	no	_	_	_	_	_	_	_	_
@@ -27,24 +30,24 @@
 21	1944	1944	NUM	_	NumType=Card	19	nmod	_	SpaceAfter=No
 22	.	.	PUNCT	_	_	6	punct	_	SpacesAfter=\n
 
-# text = Formada em geografia, mestre em educação pela Universidade Federal do Rio de Janeiro (UFRJ) em 1982, e doutora em educação pela Pontifícia Universidade Católica do Rio de Janeiro (PUC-Rio) em 1993.
 # sent_id = 2
-1	Formada	formar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	0	root	_	_
+# text = Formada em geografia, mestre em educação pela Universidade Federal do Rio de Janeiro (UFRJ) em 1982, e doutora em educação pela Pontifícia Universidade Católica do Rio de Janeiro (PUC-Rio) em 1993.
+1	Formada	formar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	5	acl	_	_
 2	em	em	ADP	_	_	3	case	_	_
 3	geografia	geografia	NOUN	_	Gender=Fem|Number=Sing	1	obl	_	SpaceAfter=No
-4	,	,	PUNCT	_	_	5	punct	_	_
-5	mestre	mestre	NOUN	_	Gender=Masc|Number=Sing	3	conj	_	_
+4	,	,	PUNCT	_	_	1	punct	_	_
+5	mestre	mestre	NOUN	_	Gender=Masc|Number=Sing	0	root	_	_
 6	em	em	ADP	_	_	7	case	_	_
 7	educação	educação	NOUN	_	Gender=Fem|Number=Sing	5	nmod	_	_
 8-9	pela	_	_	_	_	_	_	_	_
 8	por	por	ADP	_	_	10	case	_	_
 9	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	10	det	_	_
-10	Universidade	Universidade	PROPN	_	Gender=Fem|Number=Sing	7	nmod	_	_
+10	Universidade	Universidade	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	5	nmod	_	_
 11	Federal	Federal	PROPN	_	Number=Sing	10	flat:name	_	_
 12-13	do	_	_	_	_	_	_	_	_
 12	de	de	ADP	_	_	14	case	_	_
 13	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	14	det	_	_
-14	Rio	Rio	PROPN	_	Gender=Masc|Number=Sing	10	nmod	_	_
+14	Rio	Rio	PROPN	_	Number=Sing	10	nmod	_	_
 15	de	de	ADP	_	_	16	case	_	_
 16	Janeiro	Janeiro	PROPN	_	Number=Sing	14	nmod	_	_
 17	(	(	PUNCT	_	_	18	punct	_	SpaceAfter=No
@@ -52,15 +55,15 @@
 19	)	)	PUNCT	_	_	18	punct	_	_
 20	em	em	ADP	_	_	21	case	_	_
 21	1982	1982	NUM	_	NumType=Card	5	nmod	_	SpaceAfter=No
-22	,	,	PUNCT	_	_	26	punct	_	_
-23	e	e	CCONJ	_	_	26	cc	_	_
-24	doutora	doutora	ADV	_	_	26	advmod	_	_
+22	,	,	PUNCT	_	_	24	punct	_	_
+23	e	e	CCONJ	_	_	24	cc	_	_
+24	doutora	doutora	NOUN	_	Gender=Fem|Number=Sing	5	conj	_	_
 25	em	em	ADP	_	_	26	case	_	_
-26	educação	educação	NOUN	_	Gender=Fem|Number=Sing	1	conj	_	_
+26	educação	educação	NOUN	_	Gender=Fem|Number=Sing	24	nmod	_	_
 27-28	pela	_	_	_	_	_	_	_	_
 27	por	por	ADP	_	_	29	case	_	_
 28	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	29	det	_	_
-29	Pontifícia	Pontifícia	PROPN	_	Gender=Fem|Number=Sing	26	nmod	_	_
+29	Pontifícia	Pontifícia	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	24	nmod	_	_
 30	Universidade	Universidade	PROPN	_	Number=Sing	29	flat:name	_	_
 31	Católica	Católica	PROPN	_	Number=Sing	29	flat:name	_	_
 32-33	do	_	_	_	_	_	_	_	_
@@ -70,67 +73,72 @@
 35	de	de	ADP	_	_	36	case	_	_
 36	Janeiro	Janeiro	PROPN	_	Number=Sing	34	nmod	_	_
 37	(	(	PUNCT	_	_	38	punct	_	SpaceAfter=No
-38	PUC-Rio	PUC-Rio	PROPN	_	Gender=Masc|Number=Sing	29	appos	_	SpaceAfter=No
+38	PUC-Rio	PUC-Rio	PROPN	_	Gender=Fem|Number=Sing	29	appos	_	SpaceAfter=No
 39	)	)	PUNCT	_	_	38	punct	_	_
 40	em	em	ADP	_	_	41	case	_	_
-41	1993	1993	NUM	_	NumType=Card	29	nmod	_	SpaceAfter=No
-42	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
+41	1993	1993	NUM	_	NumType=Card	24	nmod	_	SpaceAfter=No
+42	.	.	PUNCT	_	_	5	punct	_	_
 
-# text = Fez ainda pós-graduação em pedagogia e civilização no Centre International D’Études Pedagogiques, em Sévres (França).
 # sent_id = 3
+# text = Fez ainda pós-graduação em pedagogia e civilização no Centre International D’Études Pedagogiques, em Sévres (França).
 1	Fez	fazer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
-2	ainda	ainda	ADV	_	_	3	advmod	_	_
+2	ainda	ainda	ADV	_	_	1	advmod	_	_
 3	pós-graduação	pós-graduação	NOUN	_	Gender=Fem|Number=Sing	1	obj	_	_
 4	em	em	ADP	_	_	5	case	_	_
-5	pedagogia	pedagogia	NOUN	_	Gender=Fem|Number=Sing	1	obl	_	_
+5	pedagogia	pedagogia	NOUN	_	Gender=Fem|Number=Sing	3	nmod	_	_
 6	e	e	CCONJ	_	_	7	cc	_	_
 7	civilização	civilização	NOUN	_	Gender=Fem|Number=Sing	5	conj	_	_
 8-9	no	_	_	_	_	_	_	_	_
 8	em	em	ADP	_	_	10	case	_	_
 9	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	10	det	_	_
-10	Centre	Centre	PROPN	_	Gender=Masc|Number=Sing	1	obl	_	_
+10	Centre	Centre	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	1	obl	_	_
 11	International	International	PROPN	_	Number=Sing	10	flat:name	_	_
-12	D’	d’	PROPN	_	Number=Sing	10	flat:name	_	SpaceAfter=No
-13	Études	Études	PROPN	_	Number=Sing	10	flat:name	_	_
-14	Pedagogiques	Pedagogiques	PROPN	_	Number=Sing	10	flat:name	_	SpaceAfter=No
-15	,	,	PUNCT	_	_	1	punct	_	_
-16	em	em	ADP	_	_	17	case	_	_
-17	Sévres	Sévres	PROPN	_	Gender=Masc|Number=Sing	1	obl	_	_
-18	(	(	PUNCT	_	_	19	punct	_	SpaceAfter=No
-19	França	França	PROPN	_	Gender=Fem|Number=Sing	17	appos	_	SpaceAfter=No
-20	)	)	PUNCT	_	_	19	punct	_	SpaceAfter=No
-21	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
+12	D	D	PROPN	_	Number=Sing	10	flat:name	_	SpaceAfter=No
+13	’	’	PROPN	_	Number=Sing	10	flat:name	_	SpaceAfter=No
+14	Études	Études	PROPN	_	Number=Sing	10	flat:name	_	_
+15	Pedagogiques	Pedagogiques	PROPN	_	Number=Sing	10	flat:name	_	SpaceAfter=No
+16	,	,	PUNCT	_	_	1	punct	_	_
+17	em	em	ADP	_	_	18	case	_	_
+18	Sévres	Sévres	PROPN	_	Gender=Masc|Number=Sing	1	obl	_	_
+19	(	(	PUNCT	_	_	20	punct	_	SpaceAfter=No
+20	França	França	PROPN	_	Gender=Fem|Number=Sing	18	parataxis	_	SpaceAfter=No
+21	)	)	PUNCT	_	_	20	punct	_	SpaceAfter=No
+22	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
 
-# text = Militante do movimento social e estudiosa da área, em 1986 fundou a Organização Não-Governamental (ONG) Roda Viva.
 # sent_id = 4
-1	Militante	militante	NOUN	_	Gender=Masc|Number=Sing	0	root	_	_
+# text = Militante do movimento social e estudiosa da área, em 1986 fundou a Organização Não-Governamental (ONG)
+1	Militante	militante	NOUN	_	Gender=Masc|Number=Sing	14	obl	_	_
 2-3	do	_	_	_	_	_	_	_	_
 2	de	de	ADP	_	_	4	case	_	_
 3	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	4	det	_	_
 4	movimento	movimento	NOUN	_	Gender=Masc|Number=Sing	1	nmod	_	_
 5	social	social	ADJ	_	Gender=Masc|Number=Sing	4	amod	_	_
 6	e	e	CCONJ	_	_	7	cc	_	_
-7	estudiosa	estudioso	ADJ	_	Gender=Fem|Number=Sing	4	conj	_	_
+7	estudiosa	estudioso	ADJ	_	Gender=Fem|Number=Sing	5	conj	_	_
 8-9	da	_	_	_	_	_	_	_	_
 8	de	de	ADP	_	_	10	case	_	_
 9	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	10	det	_	_
 10	área	área	NOUN	_	Gender=Fem|Number=Sing	4	nmod	_	SpaceAfter=No
-11	,	,	PUNCT	_	_	14	punct	_	_
+11	,	,	PUNCT	_	_	1	punct	_	_
 12	em	em	ADP	_	_	13	case	_	_
 13	1986	1986	NUM	_	NumType=Card	14	obl	_	_
-14	fundou	fundar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	acl:relcl	_	_
+14	fundou	fundar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 15	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	16	det	_	_
-16	Organização	Organização	PROPN	_	Gender=Fem|Number=Sing	14	obj	_	_
-17	Não-Governamental	Não-Governamental	PROPN	_	Number=Sing	16	flat:name	_	_
-18	(	(	PUNCT	_	_	19	punct	_	SpaceAfter=No
-19	ONG	ONG	PROPN	_	Gender=Fem|Number=Sing	16	appos	_	SpaceAfter=No
-20	)	)	PUNCT	_	_	19	punct	_	_
-21	Roda	Roda	PROPN	_	Gender=Fem|Number=Sing	16	appos	_	_
-22	Viva	Viva	PROPN	_	Number=Sing	21	flat:name	_	SpaceAfter=No
-23	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
+16	Organização	Organização	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	14	obj	_	_
+17	Não	não	ADV	_	Polarity=Neg	16	flat:name	_	SpaceAfter=No
+18	-Governamental	-Governamental	PROPN	_	Number=Sing	16	flat:name	_	_
+19	(	(	PUNCT	_	_	20	punct	_	SpaceAfter=No
+20	ONG	ONG	PROPN	_	Gender=Fem|Number=Sing	16	appos	_	SpaceAfter=No
+21	)	)	PUNCT	_	_	20	punct	_	_
 
-# text = Foi secretária de Desenvolvimento Social no município do Rio de Janeiro, entre 1992 e 1999, durante os governos de César Maia e de Luís Paulo Conde.
 # sent_id = 5
+# text = Roda Viva.
+1	Roda	Roda	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	0	root	_	_
+2	Viva	Viva	PROPN	_	Number=Sing	1	flat:name	_	SpaceAfter=No
+3	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
+
+# sent_id = 6
+# text = Foi secretária de Desenvolvimento Social no município do Rio de Janeiro, entre 1992 e 1999, durante os governos de César Maia e de Luís Paulo Conde.
 1	Foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	cop	_	_
 2	secretária	secretária	NOUN	_	Gender=Fem|Number=Sing	0	root	_	_
 3	de	de	ADP	_	_	4	case	_	_
@@ -146,27 +154,27 @@
 11	Rio	Rio	PROPN	_	Gender=Masc|Number=Sing	8	nmod	_	_
 12	de	de	ADP	_	_	13	case	_	_
 13	Janeiro	Janeiro	PROPN	_	Number=Sing	11	nmod	_	SpaceAfter=No
-14	,	,	PUNCT	_	_	16	punct	_	_
+14	,	,	PUNCT	_	_	2	punct	_	_
 15	entre	entre	ADP	_	_	16	case	_	_
-16	1992	1992	NUM	_	NumType=Card	8	nmod	_	_
+16	1992	1992	NUM	_	NumType=Card	2	nmod	_	_
 17	e	e	CCONJ	_	_	18	cc	_	_
 18	1999	1999	NUM	_	NumType=Card	16	conj	_	SpaceAfter=No
-19	,	,	PUNCT	_	_	16	punct	_	_
+19	,	,	PUNCT	_	_	2	punct	_	_
 20	durante	durante	ADP	_	_	22	case	_	_
 21	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	22	det	_	_
 22	governos	governo	NOUN	_	Gender=Masc|Number=Plur	2	nmod	_	_
 23	de	de	ADP	_	_	24	case	_	_
-24	César	César	PROPN	_	Gender=Masc|Number=Sing	22	nmod	_	_
+24	César	César	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	22	nmod	_	_
 25	Maia	Maia	PROPN	_	Number=Sing	24	flat:name	_	_
 26	e	e	CCONJ	_	_	28	cc	_	_
 27	de	de	ADP	_	_	28	case	_	_
-28	Luís	Luís	PROPN	_	Gender=Masc|Number=Sing	24	conj	_	_
+28	Luís	Luís	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	24	conj	_	_
 29	Paulo	Paulo	PROPN	_	Number=Sing	28	flat:name	_	_
 30	Conde	Conde	PROPN	_	Number=Sing	28	flat:name	_	SpaceAfter=No
-31	.	.	PUNCT	_	_	2	punct	_	SpacesAfter=\n
+31	.	.	PUNCT	_	_	2	punct	_	_
 
+# sent_id = 7
 # text = Na sua gestão implementou uma prática de parceria com as organizações sem fins lucrativos.
-# sent_id = 6
 1-2	Na	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	4	case	_	_
 2	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	4	det	_	_
@@ -179,14 +187,14 @@
 9	parceria	parceria	NOUN	_	Gender=Fem|Number=Sing	7	nmod	_	_
 10	com	com	ADP	_	_	12	case	_	_
 11	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	12	det	_	_
-12	organizações	organização	NOUN	_	Gender=Fem|Number=Plur	5	obl	_	_
+12	organizações	organização	NOUN	_	Gender=Fem|Number=Plur	9	nmod	_	_
 13	sem	sem	ADP	_	_	14	case	_	_
 14	fins	fim	NOUN	_	Gender=Masc|Number=Plur	12	nmod	_	_
 15	lucrativos	lucrativo	ADJ	_	Gender=Masc|Number=Plur	14	amod	_	SpaceAfter=No
 16	.	.	PUNCT	_	_	5	punct	_	SpacesAfter=\n
 
+# sent_id = 8
 # text = Em 1999, foi nomeada secretária de Assistência Social, com status de ministra.
-# sent_id = 7
 1	Em	em	ADP	_	_	2	case	_	_
 2	1999	1999	NUM	_	NumType=Card	5	obl	_	SpaceAfter=No
 3	,	,	PUNCT	_	_	2	punct	_	_
@@ -194,30 +202,30 @@
 5	nomeada	nomear	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
 6	secretária	secretária	NOUN	_	Gender=Fem|Number=Sing	5	nsubj:pass	_	_
 7	de	de	ADP	_	_	8	case	_	_
-8	Assistência	assistência	PROPN	_	Gender=Fem|Number=Sing	6	nmod	_	_
+8	Assistência	Assistência	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	6	nmod	_	_
 9	Social	Social	PROPN	_	Number=Sing	8	flat:name	_	SpaceAfter=No
 10	,	,	PUNCT	_	_	12	punct	_	_
 11	com	com	ADP	_	_	12	case	_	_
-12	status	statu	NOUN	_	Gender=Masc|Number=Plur	6	nmod	_	_
+12	status	status	NOUN	_	Gender=Masc|Number=Sing	5	obl	_	_
 13	de	de	ADP	_	_	14	case	_	_
 14	ministra	ministra	NOUN	_	Gender=Fem|Number=Sing	12	nmod	_	SpaceAfter=No
-15	.	.	PUNCT	_	_	5	punct	_	SpacesAfter=\n
+15	.	.	PUNCT	_	_	5	punct	_	_
 
+# sent_id = 9
 # text = Nessa pasta coordenou o Projeto Alvorada, que tinha como objetivo reduzir a pobreza e as desigualdades regionais no país e incluiu l6 programas sociais.
-# sent_id = 8
 1-2	Nessa	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	3	case	_	_
 2	essa	esse	DET	_	Gender=Fem|Number=Sing|PronType=Dem	3	det	_	_
-3	pasta	pasto	NOUN	_	Gender=Fem|Number=Sing	4	obl	_	_
+3	pasta	pasta	NOUN	_	Gender=Fem|Number=Sing	4	obl	_	_
 4	coordenou	coordenar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 5	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	6	det	_	_
-6	Projeto	Projeto	PROPN	_	Gender=Masc|Number=Sing	4	obj	_	_
+6	Projeto	Projeto	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	4	obj	_	_
 7	Alvorada	Alvorada	PROPN	_	Number=Sing	6	flat:name	_	SpaceAfter=No
 8	,	,	PUNCT	_	_	10	punct	_	_
 9	que	que	PRON	_	Gender=Masc|Number=Sing|PronType=Rel	10	nsubj	_	_
 10	tinha	ter	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	6	acl:relcl	_	_
-11	como	como	ADP	_	_	13	mark	_	_
-12	objetivo	objetivo	ADJ	_	Gender=Masc|Number=Sing	13	amod	_	_
+11	como	como	ADP	_	_	12	case	_	_
+12	objetivo	objetivo	NOUN	_	Gender=Masc|Number=Sing	10	xcomp	_	_
 13	reduzir	reduzir	VERB	_	VerbForm=Inf	10	xcomp	_	_
 14	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	15	det	_	_
 15	pobreza	pobreza	NOUN	_	Gender=Fem|Number=Sing	13	obj	_	_
@@ -228,16 +236,16 @@
 20-21	no	_	_	_	_	_	_	_	_
 20	em	em	ADP	_	_	22	case	_	_
 21	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	22	det	_	_
-22	país	país	NOUN	_	Gender=Masc|Number=Sing	15	nmod	_	_
+22	país	país	NOUN	_	Gender=Masc|Number=Sing	13	obl	_	_
 23	e	e	CCONJ	_	_	24	cc	_	_
-24	incluiu	incluir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	13	conj	_	_
+24	incluiu	incluir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	10	conj	_	_
 25	l6	l6	NUM	_	NumType=Card	26	nummod	_	_
 26	programas	programa	NOUN	_	Gender=Masc|Number=Plur	24	obj	_	_
 27	sociais	social	ADJ	_	Gender=Masc|Number=Plur	26	amod	_	SpaceAfter=No
-28	.	.	PUNCT	_	_	4	punct	_	SpacesAfter=\n
+28	.	.	PUNCT	_	_	4	punct	_	_
 
+# sent_id = 10
 # text = Nessa função, foi responsável ainda pela implantação do cadastro único de famílias pobres para os programas sociais do governo federal.
-# sent_id = 9
 1-2	Nessa	_	_	_	_	_	_	_	_
 1	Em	em	ADP	_	_	3	case	_	_
 2	essa	esse	DET	_	Gender=Fem|Number=Sing|PronType=Dem	3	det	_	_
@@ -245,7 +253,7 @@
 4	,	,	PUNCT	_	_	3	punct	_	_
 5	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	cop	_	_
 6	responsável	responsável	ADJ	_	Gender=Masc|Number=Sing	0	root	_	_
-7	ainda	ainda	ADV	_	_	10	advmod	_	_
+7	ainda	ainda	ADV	_	_	6	advmod	_	_
 8-9	pela	_	_	_	_	_	_	_	_
 8	por	por	ADP	_	_	10	case	_	_
 9	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	10	det	_	_
@@ -260,17 +268,17 @@
 17	pobres	pobre	ADJ	_	Gender=Fem|Number=Plur	16	amod	_	_
 18	para	para	ADP	_	_	20	case	_	_
 19	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	20	det	_	_
-20	programas	programa	NOUN	_	Gender=Masc|Number=Plur	16	nmod	_	_
+20	programas	programa	NOUN	_	Gender=Masc|Number=Plur	13	nmod	_	_
 21	sociais	social	ADJ	_	Gender=Masc|Number=Plur	20	amod	_	_
 22-23	do	_	_	_	_	_	_	_	_
 22	de	de	ADP	_	_	24	case	_	_
 23	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	24	det	_	_
 24	governo	governo	NOUN	_	Gender=Masc|Number=Sing	20	nmod	_	_
 25	federal	federal	ADJ	_	Gender=Masc|Number=Sing	24	amod	_	SpaceAfter=No
-26	.	.	PUNCT	_	_	6	punct	_	SpacesAfter=\n
+26	.	.	PUNCT	_	_	6	punct	_	_
 
+# sent_id = 11
 # text = Deixou o cargo em dezembro de 2002 ao final do governo de Fernando Henrique Cardoso.
-# sent_id = 10
 1	Deixou	deixar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
 3	cargo	cargo	NOUN	_	Gender=Masc|Number=Sing	1	obj	_	_
@@ -281,19 +289,19 @@
 8-9	ao	_	_	_	_	_	_	_	_
 8	a	a	ADP	_	_	10	case	_	_
 9	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	10	det	_	_
-10	final	final	NOUN	_	Gender=Masc|Number=Sing	5	nmod	_	_
+10	final	final	NOUN	_	Gender=Masc|Number=Sing	1	obl	_	_
 11-12	do	_	_	_	_	_	_	_	_
 11	de	de	ADP	_	_	13	case	_	_
 12	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	13	det	_	_
 13	governo	governo	NOUN	_	Gender=Masc|Number=Sing	10	nmod	_	_
 14	de	de	ADP	_	_	15	case	_	_
-15	Fernando	Fernando	PROPN	_	Gender=Masc|Number=Sing	13	nmod	_	_
+15	Fernando	Fernando	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	13	nmod	_	_
 16	Henrique	Henrique	PROPN	_	Number=Sing	15	flat:name	_	_
 17	Cardoso	Cardoso	PROPN	_	Number=Sing	15	flat:name	_	SpaceAfter=No
 18	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
 
+# sent_id = 12
 # text = Exerceu até 2006 a chefia da divisão de programas sociais do Desenvolvimento Social do Banco Interamericano de Desenvolvimento (BID) em Washington.
-# sent_id = 11
 1	Exerceu	exercer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2	até	até	ADP	_	_	3	case	_	_
 3	2006	2006	NUM	_	NumType=Card	1	obl	_	_
@@ -309,12 +317,12 @@
 12-13	do	_	_	_	_	_	_	_	_
 12	de	de	ADP	_	_	14	case	_	_
 13	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	14	det	_	_
-14	Desenvolvimento	Desenvolvimento	PROPN	_	Number=Sing	10	nmod	_	_
+14	Desenvolvimento	Desenvolvimento	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	10	nmod	_	_
 15	Social	Social	PROPN	_	Number=Sing	14	flat:name	_	_
 16-17	do	_	_	_	_	_	_	_	_
 16	de	de	ADP	_	_	18	case	_	_
 17	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	18	det	_	_
-18	Banco	Banco	PROPN	_	Gender=Masc|Number=Sing	14	nmod	_	_
+18	Banco	Banco	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	8	nmod	_	_
 19	Interamericano	Interamericano	PROPN	_	Number=Sing	18	flat:name	_	_
 20	de	de	ADP	_	_	21	case	_	_
 21	Desenvolvimento	Desenvolvimento	PROPN	_	Number=Sing	18	nmod	_	_
@@ -322,30 +330,30 @@
 23	BID	BID	PROPN	_	Gender=Masc|Number=Sing	18	appos	_	SpaceAfter=No
 24	)	)	PUNCT	_	_	23	punct	_	_
 25	em	em	ADP	_	_	26	case	_	_
-26	Washington	Washington	PROPN	_	Gender=Masc|Number=Sing	14	nmod	_	SpaceAfter=No
+26	Washington	Washington	PROPN	_	Gender=Masc|Number=Sing	18	nmod	_	SpaceAfter=No
 27	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
 
+# sent_id = 13
 # text = Foi também superintendente executiva do Instituto Unibanco e professora da Universidade do Estado do Rio de Janeiro (UERJ).
-# sent_id = 12
 1	Foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	cop	_	_
 2	também	também	ADV	_	_	3	advmod	_	_
-3	superintendente	superintendente	ADJ	_	Gender=Fem|Number=Sing	0	root	_	_
-4	executiva	executivo	NOUN	_	Gender=Fem|Number=Sing	3	nsubj	_	_
+3	superintendente	superintendente	NOUN	_	Gender=Masc|Number=Sing	0	root	_	_
+4	executiva	executivo	ADJ	_	Gender=Fem|Number=Sing	3	amod	_	_
 5-6	do	_	_	_	_	_	_	_	_
 5	de	de	ADP	_	_	7	case	_	_
 6	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	7	det	_	_
-7	Instituto	Instituto	PROPN	_	Gender=Masc|Number=Sing	4	nmod	_	_
+7	Instituto	Instituto	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	3	nmod	_	_
 8	Unibanco	Unibanco	PROPN	_	Number=Sing	7	flat:name	_	_
 9	e	e	CCONJ	_	_	10	cc	_	_
-10	professora	professora	NOUN	_	Gender=Fem|Number=Sing	7	conj	_	_
+10	professora	professor	NOUN	_	Gender=Fem|Number=Sing	3	conj	_	_
 11-12	da	_	_	_	_	_	_	_	_
 11	de	de	ADP	_	_	13	case	_	_
 12	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	13	det	_	_
-13	Universidade	universidade	PROPN	_	Gender=Fem|Number=Sing	10	nmod	_	_
+13	Universidade	Universidade	PROPN	_	Gender=Fem|Number=Sing	10	nmod	_	_
 14-15	do	_	_	_	_	_	_	_	_
 14	de	de	ADP	_	_	16	case	_	_
 15	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	16	det	_	_
-16	Estado	estado	NOUN	_	Gender=Masc|Number=Sing	13	nmod	_	_
+16	Estado	Estado	PROPN	_	Number=Sing	13	nmod	_	_
 17-18	do	_	_	_	_	_	_	_	_
 17	de	de	ADP	_	_	19	case	_	_
 18	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	19	det	_	_
@@ -357,8 +365,8 @@
 24	)	)	PUNCT	_	_	23	punct	_	SpaceAfter=No
 25	.	.	PUNCT	_	_	3	punct	_	SpacesAfter=\n
 
+# sent_id = 14
 # text = Participou ainda da elaboração do Estatuto da Criança e do Adolescente e dirigiu a primeira unidade do programa especial de educação do governo Brizola: o Centro Cultural Comunitário de São Cristóvão, conhecido como Brizolão da Mangueira, e outras ONGs, além da Roda Viva.
-# sent_id = 13
 1	Participou	participar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2	ainda	ainda	ADV	_	_	1	advmod	_	_
 3-4	da	_	_	_	_	_	_	_	_
@@ -372,14 +380,14 @@
 9-10	da	_	_	_	_	_	_	_	_
 9	de	de	ADP	_	_	11	case	_	_
 10	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	11	det	_	_
-11	Criança	Criança	PROPN	_	Gender=Fem|Number=Sing	8	nmod	_	_
+11	Criança	Criança	PROPN	_	Number=Sing	8	nmod	_	_
 12	e	e	CCONJ	_	_	15	cc	_	_
 13-14	do	_	_	_	_	_	_	_	_
 13	de	de	ADP	_	_	15	case	_	_
 14	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	15	det	_	_
-15	Adolescente	Adolescente	PROPN	_	Number=Sing	8	conj	_	_
+15	Adolescente	Adolescente	PROPN	_	Number=Sing	11	conj	_	_
 16	e	e	CCONJ	_	_	17	cc	_	_
-17	dirigiu	diriger	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	1	conj	_	_
+17	dirigiu	dirigir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	1	conj	_	_
 18	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	20	det	_	_
 19	primeira	primeiro	ADJ	_	Gender=Fem|Number=Sing|NumType=Ord	20	amod	_	_
 20	unidade	unidade	NOUN	_	Gender=Fem|Number=Sing	17	obj	_	_
@@ -393,15 +401,15 @@
 27-28	do	_	_	_	_	_	_	_	_
 27	de	de	ADP	_	_	29	case	_	_
 28	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	29	det	_	_
-29	governo	governo	NOUN	_	Gender=Masc|Number=Sing	23	nmod	_	_
+29	governo	governo	NOUN	_	Gender=Masc|Number=Sing	26	nmod	_	_
 30	Brizola	Brizola	PROPN	_	Gender=Masc|Number=Sing	29	appos	_	SpaceAfter=No
-31	:	:	PUNCT	_	_	1	punct	_	_
+31	:	:	PUNCT	_	_	33	punct	_	_
 32	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	33	det	_	_
-33	Centro	Centro	PROPN	_	Gender=Masc|Number=Sing	30	appos	_	_
+33	Centro	Centro	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	20	appos	_	_
 34	Cultural	Cultural	PROPN	_	Number=Sing	33	flat:name	_	_
 35	Comunitário	Comunitário	PROPN	_	Number=Sing	33	flat:name	_	_
 36	de	de	ADP	_	_	37	case	_	_
-37	São	São	PROPN	_	Number=Sing	33	nmod	_	_
+37	São	São	PROPN	_	ExtPos=PROPN|Number=Sing	33	nmod	_	_
 38	Cristóvão	Cristóvão	PROPN	_	Number=Sing	37	flat:name	_	SpaceAfter=No
 39	,	,	PUNCT	_	_	40	punct	_	_
 40	conhecido	conhecer	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	33	acl	_	_
@@ -410,22 +418,22 @@
 43-44	da	_	_	_	_	_	_	_	_
 43	de	de	ADP	_	_	45	case	_	_
 44	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	45	det	_	_
-45	Mangueira	Mangueira	PROPN	_	Gender=Fem|Number=Sing	42	nmod	_	SpaceAfter=No
+45	Mangueira	Mangueira	PROPN	_	Number=Sing	42	nmod	_	SpaceAfter=No
 46	,	,	PUNCT	_	_	40	punct	_	_
 47	e	e	CCONJ	_	_	49	cc	_	_
 48	outras	outro	DET	_	Gender=Fem|Number=Plur|PronType=Ind	49	det	_	_
-49	ONGs	ONGs	PROPN	_	Gender=Fem|Number=Plur	40	conj	_	SpaceAfter=No
+49	ONGs	ONGs	PROPN	_	Gender=Fem|Number=Plur	33	conj	_	SpaceAfter=No
 50	,	,	PUNCT	_	_	51	punct	_	_
 51	além	além	ADV	_	_	49	advmod	_	_
 52-53	da	_	_	_	_	_	_	_	_
 52	de	de	ADP	_	_	54	case	_	_
 53	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	54	det	_	_
-54	Roda	Roda	PROPN	_	Gender=Fem|Number=Sing	51	obl	_	_
+54	Roda	Roda	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	51	obl	_	_
 55	Viva	Viva	PROPN	_	Number=Sing	54	flat:name	_	SpaceAfter=No
-56	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
+56	.	.	PUNCT	_	_	1	punct	_	_
 
+# sent_id = 15
 # text = Foi também chefe da delegação brasileira na Conferência sobre Envelhecimento, ocorrida na Espanha e participou da Conferência do Desenvolvimento Social, da Conferência de Copenhaguen + 5 e da Conferência contra Racismo, Discriminação e Xenofobia.
-# sent_id = 14
 1	Foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	cop	_	_
 2	também	também	ADV	_	_	3	advmod	_	_
 3	chefe	chefe	NOUN	_	Gender=Masc|Number=Sing	0	root	_	_
@@ -437,11 +445,11 @@
 8-9	na	_	_	_	_	_	_	_	_
 8	em	em	ADP	_	_	10	case	_	_
 9	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	10	det	_	_
-10	Conferência	Conferência	NOUN	_	Gender=Fem|Number=Sing	6	nmod	_	_
-11	sobre	sobre	ADP	_	_	12	case	_	_
-12	Envelhecimento	envelhecimento	NOUN	_	Gender=Masc|Number=Sing	10	nmod	_	SpaceAfter=No
+10	Conferência	Conferência	PROPN	_	Gender=Fem|Number=Sing	3	nmod	_	_
+11	sobre	sobre	ADP	_	_	10	flat:name	_	_
+12	Envelhecimento	Envelhecimento	PROPN	_	Number=Sing	10	flat:name	_	SpaceAfter=No
 13	,	,	PUNCT	_	_	14	punct	_	_
-14	ocorrida	ocorrer	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	6	acl	_	_
+14	ocorrida	ocorrer	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	10	acl	_	_
 15-16	na	_	_	_	_	_	_	_	_
 15	em	em	ADP	_	_	17	case	_	_
 16	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	17	det	_	_
@@ -451,7 +459,7 @@
 20-21	da	_	_	_	_	_	_	_	_
 20	de	de	ADP	_	_	22	case	_	_
 21	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	22	det	_	_
-22	Conferência	Conferência	NOUN	_	Gender=Fem|Number=Sing	19	obj	_	_
+22	Conferência	Conferência	PROPN	_	Gender=Fem|Number=Sing	19	obj	_	_
 23-24	do	_	_	_	_	_	_	_	_
 23	de	de	ADP	_	_	25	case	_	_
 24	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	25	det	_	_
@@ -461,26 +469,26 @@
 28-29	da	_	_	_	_	_	_	_	_
 28	de	de	ADP	_	_	30	case	_	_
 29	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	30	det	_	_
-30	Conferência	Conferência	NOUN	_	Gender=Fem|Number=Sing	22	nmod	_	_
+30	Conferência	Conferência	PROPN	_	Gender=Fem|Number=Sing	22	conj	_	_
 31	de	de	ADP	_	_	32	case	_	_
-32	Copenhaguen	Copenhaguen	PROPN	_	Gender=Masc|Number=Sing	30	nmod	_	_
-33	+	+	SYM	_	_	30	appos	_	_
-34	5	5	NUM	_	NumType=Card	33	nummod	_	_
+32	Copenhaguen	Copenhaguen	PROPN	_	Number=Sing	30	nmod	_	_
+33	+	+	PUNCT	_	_	34	punct	_	_
+34	5	5	PROPN	_	Number=Sing	32	nmod	_	_
 35	e	e	CCONJ	_	_	38	cc	_	_
 36-37	da	_	_	_	_	_	_	_	_
 36	de	de	ADP	_	_	38	case	_	_
 37	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	38	det	_	_
-38	Conferência	Conferência	PROPN	_	Gender=Fem|Number=Sing	34	conj	_	_
-39	contra	contra	ADP	_	_	40	case	_	_
-40	Racismo	racismo	PROPN	_	Number=Sing	38	nmod	_	SpaceAfter=No
+38	Conferência	Conferência	PROPN	_	Gender=Fem|Number=Sing	22	conj	_	_
+39	contra	contra	ADP	_	_	38	flat:name	_	_
+40	Racismo	Racismo	PROPN	_	Number=Sing	38	flat:name	_	SpaceAfter=No
 41	,	,	PUNCT	_	_	42	punct	_	_
-42	Discriminação	discriminação	PROPN	_	Gender=Fem|Number=Sing	34	conj	_	_
-43	e	e	CCONJ	_	_	44	cc	_	_
-44	Xenofobia	Xenofobia	PROPN	_	Gender=Fem|Number=Sing	34	conj	_	SpaceAfter=No
+42	Discriminação	Discriminação	PROPN	_	Number=Sing	38	nmod	_	_
+43	e	e	CCONJ	_	_	42	flat:name	_	_
+44	Xenofobia	Xenofobia	PROPN	_	Number=Sing	42	flat:name	_	SpaceAfter=No
 45	.	.	PUNCT	_	_	3	punct	_	SpacesAfter=\n
 
-# text = Publicou inúmeros artigos acadêmicos e em jornais e revistas nacionais e internacionais, entre os quais destacam-se «Recent Experiences in inequality fighting in the region: The Alvorada Project in Brazil» (2003), «Scaling up Urban Upgrading in Brazil» (2004) e «Políticas Integrales de Reducción de la Pobreza: el Desafío de la Efectividad» (2004).
-# sent_id = 15
+# sent_id = 16
+# text = Publicou inúmeros artigos acadêmicos e em jornais e revistas nacionais e internacionais, entre os quais destacam-se «Recent Experiences in inequality fighting in the region:
 1	Publicou	publicar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
 2	inúmeros	inúmero	ADJ	_	Gender=Masc|Number=Plur	3	amod	_	_
 3	artigos	artigo	NOUN	_	Gender=Masc|Number=Plur	1	obj	_	_
@@ -489,66 +497,68 @@
 6	em	em	ADP	_	_	7	case	_	_
 7	jornais	jornal	NOUN	_	Gender=Masc|Number=Plur	3	conj	_	_
 8	e	e	CCONJ	_	_	9	cc	_	_
-9	revistas	revista	NOUN	_	Gender=Masc|Number=Plur	7	conj	_	_
-10	nacionais	nacional	ADJ	_	Gender=Masc|Number=Plur	7	amod	_	_
+9	revistas	revista	NOUN	_	Gender=Fem|Number=Plur	7	conj	_	_
+10	nacionais	nacional	ADJ	_	Gender=Fem|Number=Plur	9	amod	_	_
 11	e	e	CCONJ	_	_	12	cc	_	_
-12	internacionais	internacional	ADJ	_	Gender=Masc|Number=Plur	10	conj	_	SpaceAfter=No
+12	internacionais	internacional	ADJ	_	Gender=Fem|Number=Plur	10	conj	_	SpaceAfter=No
 13	,	,	PUNCT	_	_	17	punct	_	_
 14	entre	entre	ADP	_	_	16	case	_	_
 15	os	o	DET	_	Gender=Masc|Number=Plur|PronType=Art	16	det	_	_
 16	quais	qual	PRON	_	Gender=Masc|Number=Plur|PronType=Rel	17	obl	_	_
 17-18	destacam-se	_	_	_	_	_	_	_	_
-17	destacam	destacar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	7	acl:relcl	_	_
+17	destacam	destacar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	3	acl:relcl	_	_
 18	se	se	PRON	_	Case=Acc|Gender=Masc|Number=Plur|Person=3|PronType=Prs	17	expl	_	_
 19	«	«	PUNCT	_	_	20	punct	_	SpaceAfter=No
-20	Recent	Recent	PROPN	_	Gender=Masc|Number=Sing	17	nsubj	_	_
-21	Experiences	experiences	PROPN	_	Number=Sing	20	flat:name	_	_
+20	Recent	Recent	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	17	nsubj	_	_
+21	Experiences	Experiences	PROPN	_	Number=Sing	20	flat:name	_	_
 22	in	in	PROPN	_	Number=Sing	20	flat:name	_	_
 23	inequality	inequality	PROPN	_	Number=Sing	20	flat:name	_	_
 24	fighting	fighting	PROPN	_	Number=Sing	20	flat:name	_	_
 25	in	in	PROPN	_	Number=Sing	20	flat:name	_	_
 26	the	the	PROPN	_	Number=Sing	20	flat:name	_	_
-27	region	region	PROPN	_	Number=Sing	20	flat:name	_	SpaceAfter=No
-28	:	:	PUNCT	_	_	20	punct	_	_
-29	The	The	PROPN	_	Gender=Masc|Number=Sing	20	appos	_	_
-30	Alvorada	Alvorada	PROPN	_	Number=Sing	29	flat:name	_	_
-31	Project	Project	PROPN	_	Number=Sing	29	flat:name	_	_
-32	in	in	PROPN	_	Number=Sing	29	flat:name	_	_
-33	Brazil	Brazil	PROPN	_	Number=Sing	29	flat:name	_	SpaceAfter=No
-34	»	»	PUNCT	_	_	20	punct	_	_
-35	(	(	PUNCT	_	_	36	punct	_	SpaceAfter=No
-36	2003	2003	NUM	_	NumType=Card	20	parataxis	_	SpaceAfter=No
-37	)	)	PUNCT	_	_	36	punct	_	SpaceAfter=No
-38	,	,	PUNCT	_	_	40	punct	_	_
-39	«	«	PUNCT	_	_	40	punct	_	SpaceAfter=No
-40	Scaling	Scaling	PROPN	_	Gender=Masc|Number=Sing	20	appos	_	_
-41	up	up	PROPN	_	Number=Sing	40	flat:name	_	_
-42	Urban	Urban	PROPN	_	Number=Sing	40	flat:name	_	_
-43	Upgrading	Upgrading	PROPN	_	Number=Sing	40	flat:name	_	_
-44	in	in	PROPN	_	Number=Sing	40	flat:name	_	_
-45	Brazil	Brazil	PROPN	_	Number=Sing	40	flat:name	_	SpaceAfter=No
-46	»	»	PUNCT	_	_	40	punct	_	_
-47	(	(	PUNCT	_	_	48	punct	_	SpaceAfter=No
-48	2004	2004	NUM	_	NumType=Card	40	parataxis	_	SpaceAfter=No
-49	)	)	PUNCT	_	_	48	punct	_	_
-50	e	e	CCONJ	_	_	52	cc	_	_
-51	«	«	PUNCT	_	_	52	punct	_	SpaceAfter=No
-52	Políticas	Políticas	PROPN	_	Number=Sing	40	conj	_	_
-53	Integrales	Integrales	PROPN	_	Number=Sing	52	flat:name	_	_
-54	de	de	ADP	_	_	55	case	_	_
-55	Reducción	Reducción	PROPN	_	Number=Sing	52	nmod	_	_
-56	de	de	ADP	_	_	57	case	_	_
-57	la	la	PROPN	_	Number=Sing	55	nmod	_	_
-58	Pobreza	pobreza	PROPN	_	Number=Sing	57	flat:name	_	SpaceAfter=No
-59	:	:	PUNCT	_	_	52	punct	_	_
-60	el	el	PROPN	_	Gender=Masc|Number=Sing	52	appos	_	_
-61	Desafío	Desafío	PROPN	_	Number=Sing	60	flat:name	_	_
-62	de	de	ADP	_	_	63	case	_	_
-63	la	la	PROPN	_	Number=Sing	60	flat:name	_	_
-64	Efectividad	Efectividad	PROPN	_	Number=Sing	60	flat:name	_	SpaceAfter=No
-65	»	»	PUNCT	_	_	52	punct	_	_
-66	(	(	PUNCT	_	_	67	punct	_	SpaceAfter=No
-67	2004	2004	NUM	_	NumType=Card	52	parataxis	_	SpaceAfter=No
-68	)	)	PUNCT	_	_	67	punct	_	SpaceAfter=No
-69	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
+27	region:	region:	PROPN	_	Number=Sing	20	flat:name	_	_
+
+# sent_id = 17
+# text = The Alvorada Project in Brazil» (2003), «Scaling up Urban Upgrading in Brazil» (2004) e «Políticas Integrales de Reducción de la Pobreza: el Desafío de la Efectividad» (2004).
+1	The	The	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	0	root	_	_
+2	Alvorada	Alvorada	PROPN	_	Number=Sing	1	flat:name	_	_
+3	Project	Project	PROPN	_	Number=Sing	1	flat:name	_	_
+4	in	in	PROPN	_	Number=Sing	1	flat:name	_	_
+5	Brazil	Brazil	PROPN	_	Number=Sing	1	flat:name	_	SpaceAfter=No
+6	»	»	PUNCT	_	_	1	punct	_	_
+7	(	(	PUNCT	_	_	8	punct	_	SpaceAfter=No
+8	2003	2003	NUM	_	NumType=Card	1	nmod	_	SpaceAfter=No
+9	)	)	PUNCT	_	_	8	punct	_	SpaceAfter=No
+10	,	,	PUNCT	_	_	12	punct	_	_
+11	«	«	PUNCT	_	_	12	punct	_	SpaceAfter=No
+12	Scaling	Scaling	PROPN	_	ExtPos=PROPN|Gender=Masc|Number=Sing	1	conj	_	_
+13	up	up	PROPN	_	Number=Sing	12	flat:name	_	_
+14	Urban	Urban	PROPN	_	Number=Sing	12	flat:name	_	_
+15	Upgrading	Upgrading	PROPN	_	Number=Sing	12	flat:name	_	_
+16	in	in	PROPN	_	Number=Sing	12	flat:name	_	_
+17	Brazil	Brazil	PROPN	_	Number=Sing	12	flat:name	_	SpaceAfter=No
+18	»	»	PUNCT	_	_	12	punct	_	_
+19	(	(	PUNCT	_	_	20	punct	_	SpaceAfter=No
+20	2004	2004	NUM	_	NumType=Card	12	nmod	_	SpaceAfter=No
+21	)	)	PUNCT	_	_	20	punct	_	_
+22	e	e	CCONJ	_	_	24	cc	_	_
+23	«	«	PUNCT	_	_	24	punct	_	SpaceAfter=No
+24	Políticas	Políticas	PROPN	_	ExtPos=PROPN|Gender=Fem|Number=Sing	1	conj	_	_
+25	Integrales	Integrales	PROPN	_	Number=Sing	24	flat:name	_	_
+26	de	de	ADP	_	_	27	case	_	_
+27	Reducción	Reducción	PROPN	_	Number=Sing	24	nmod	_	_
+28	de	de	ADP	_	_	30	case	_	_
+29	la	la	PROPN	_	Number=Sing	27	nmod	_	_
+30	Pobreza	Pobreza	PROPN	_	Number=Sing	27	nmod	_	SpaceAfter=No
+31	:	:	PUNCT	_	_	32	punct	_	_
+32	el	el	PROPN	_	Gender=Masc|Number=Sing	24	appos	_	_
+33	Desafío	Desafío	PROPN	_	Gender=Masc|Number=Sing	32	flat:name	_	_
+34	de	de	ADP	_	_	36	case	_	_
+35	la	la	DET	_	Number=Sing	36	det	_	_
+36	Efectividad	Efectividad	PROPN	_	Number=Sing	32	nmod	_	SpaceAfter=No
+37	»	»	PUNCT	_	_	32	punct	_	_
+38	(	(	PUNCT	_	_	39	punct	_	SpaceAfter=No
+39	2004	2004	NUM	_	NumType=Card	24	nmod	_	SpaceAfter=No
+40	)	)	PUNCT	_	_	39	punct	_	SpaceAfter=No
+41	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
 
