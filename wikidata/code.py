@@ -96,6 +96,7 @@ def main2():
         fields = ['title','filename','verbete','seq','qid','qurl','qlabel','qcountry','qdescr']
         writer = csv.DictWriter(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_ALL,
                                 fieldnames = fields)
+        writer.writeheader()
 
         for e in ts.readlines():
             n, t = e.split('|')
