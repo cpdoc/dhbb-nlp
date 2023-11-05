@@ -2,6 +2,7 @@
 from collections import defaultdict
 import os
 import sys
+import re
 
 from functools import lru_cache
 
@@ -82,27 +83,49 @@ def main1():
         json.dump(result, outfile)
 
 
+
+def clean_title(t):
+    return re.sub("\((\w|\.|\-| )+\)", "", t, re.UNICODE).strip()
+    
+
 def main2():
     result = {}
 
-    with open('tematicos.txt') as l:
-        titles = [(int(s.split('|')[0]),
-                   s.split('|')[1].strip()) for s in l.readlines()]
+    with open('tematicos.txt') as ts, open("title-entidades.csv", "w", newline='') as csvfile:
 
-    with open("title-entidades.csv", "w", newline='') as csvfile:
-        writer = csv.writer(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_ALL)
+        fields = ['title','filename','verbete','seq','qid','qurl','qlabel','qcountry','qdescr']
+        writer = csv.DictWriter(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_ALL,
+                                fieldnames = fields)
 
-        for i, k in titles:
-            print('processing', k)
-            res = get(k,3)
-            result[k] = res
-            for n,a in enumerate(res):
-                qid = a.get('id','')
-                writer.writerow([k,f'https://github.com/cpdoc/dhbb/blob/master/text/{i}.text',n,
-                                 qid, a.get('concepturi',''), a.get('label',''), get_country(qid), a.get('description','')])
-    
+        for e in ts.readlines():
+            n, t = e.split('|')
+            t = t.strip()
+            tc = clean_title(t)
+            
+            print('processing', n, t)
+            res = get(tc,3)
+            result[n] = dict(wiki = res, title = t)
+            if res:
+                for k,a in enumerate(res):
+                    qid = a.get('id','')
+                    writer.writerow(dict(title = t,
+                                         filename = n,
+                                         verbete = f'https://github.com/cpdoc/dhbb/blob/master/text/{n}.text',
+                                         seq = k,
+                                         qid = qid,
+                                         qurl = a.get('concepturi',''),
+                                         qlabel = a.get('label',''),
+                                         qcountry = get_country(qid),
+                                         qdescr = a.get('description','')))
+            else:
+                writer.writerow(dict(title = t,
+                                     filename = n,
+                                     verbete = f'https://github.com/cpdoc/dhbb/blob/master/text/{n}.text'))
+                    
     with open("title-entidades.json", "w") as outfile:
         json.dump(result, outfile)
 
 
+
 main2()
+
