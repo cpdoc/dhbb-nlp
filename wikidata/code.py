@@ -1,6 +1,9 @@
 
 from collections import defaultdict
 import os
+import sys
+
+from functools import lru_cache
 
 import requests
 import json
@@ -11,6 +14,7 @@ import pt_core_news_sm
 
 nlp = spacy.load("pt_core_news_sm")
 nlp = pt_core_news_sm.load()
+
 
 
 def def_value(): 
@@ -26,6 +30,7 @@ def procfile(fn, fid, db):
     return db
 
 
+@lru_cache(maxsize=900)
 def get(v, n):
     base = "https://www.wikidata.org/w/api.php"
     url = f"{base}?action=wbsearchentities&format=json&language=pt&type=item&continue=0&search={v}"
@@ -36,6 +41,21 @@ def get(v, n):
             res.append(i)
     return res
 
+@lru_cache(maxsize=900)
+def get_country(q):
+    base = "https://www.wikidata.org/w/api.php"
+    url = f"{base}?action=wbgetentities&ids={q}&format=json"
+    res, r = None, requests.get(url)
+    r = r.json()
+    r = r['entities'][q]['claims']
+    p = r.get('P17', None) or r.get('P495',None)
+    if p:
+        try:
+            res = p[0]['mainsnak']['datavalue']['value']['id']
+        except:
+            res = None
+    return res
+    
 
 def main1():
     entities = defaultdict(def_value)
@@ -77,8 +97,9 @@ def main2():
             res = get(k,3)
             result[k] = res
             for n,a in enumerate(res):
+                qid = a.get('id','')
                 writer.writerow([k,f'https://github.com/cpdoc/dhbb/blob/master/text/{i}.text',n,
-                                 a.get('id',''), a.get('concepturi',''), a.get('description',''),a.get('label','')])
+                                 qid, a.get('concepturi',''), a.get('label',''), get_country(qid), a.get('description','')])
     
     with open("title-entidades.json", "w") as outfile:
         json.dump(result, outfile)
