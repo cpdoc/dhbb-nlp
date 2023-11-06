@@ -127,6 +127,38 @@ def main2():
         json.dump(result, outfile)
 
 
+def main3(fin, fout):
+    result = {}
 
-main2()
+    with open(fin) as ts, open(f'{fout}.csv', "w", newline='') as csvfile:
+
+        fields = ['title','seq','qid','qurl','qlabel','qcountry','qdescr']
+        writer = csv.DictWriter(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_ALL,
+                                fieldnames = fields)
+        writer.writeheader()
+
+        for t in ts.readlines():
+            t = t.strip()
+            
+            print('processing', t)
+            res = get(t,3)
+            result[t] = dict(wiki = res)
+            if res:
+                for k,a in enumerate(res):
+                    qid = a.get('id','')
+                    writer.writerow(dict(title = t,
+                                         seq = k,
+                                         qid = qid,
+                                         qurl = a.get('concepturi',''),
+                                         qlabel = a.get('label',''),
+                                         qcountry = get_country(qid),
+                                         qdescr = a.get('description','')))
+            else:
+                writer.writerow(dict(title = t))
+                    
+    with open(f"{fout}.json", "w") as outfile:
+        json.dump(result, outfile)
+
+        
+main3(sys.argv[1], sys.argv[2])
 
