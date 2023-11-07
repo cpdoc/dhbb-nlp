@@ -9,6 +9,18 @@
 
 (same for biográficos)
 
+* Fix names
+
+#+begin_src lisp
+  (with-open-file (out "biograficos.new" :direction :output :if-exists :supersede)
+    (mapc (lambda (r) 
+	    (let* ((n (cadr r))
+		   (p (position #\, n))) 
+	      (if p
+		  (format out "~a|~a~%" (car r) (string-trim '(#\Space) (format nil "~a ~a" (subseq n (1+ p)) (subseq n 0 p))))
+		  (format out "~a|~a~%" (car r) n)))) 
+	  (fare-csv:read-csv-file "biograficos.txt")))
+#+end_src
 
 * Files
 

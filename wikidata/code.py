@@ -4,6 +4,8 @@ import os
 import sys
 import re
 
+from wikimapper import WikiMapper
+
 from functools import lru_cache
 
 import requests
@@ -16,6 +18,8 @@ import pt_core_news_sm
 nlp = spacy.load("pt_core_news_sm")
 nlp = pt_core_news_sm.load()
 
+
+mapper = WikiMapper("data/index_ptwiki-latest.db")
 
 
 def def_value(): 
@@ -102,10 +106,12 @@ def main2(fin, fout):
             n, t = e.split('|')
             t = t.strip()
             tc = clean_title(t)
+
+            wikidata_id = mapper.title_to_id(tc)
             
             print('processing', n, t)
             res = get(tc,3)
-            result[n] = dict(wiki = res, title = t)
+            result[n] = dict(wiki = res, title = t, mapper = wikidata_id)
             if res:
                 for k,a in enumerate(res):
                     qid = a.get('id','')
@@ -114,6 +120,7 @@ def main2(fin, fout):
                                          verbete = f'https://github.com/cpdoc/dhbb/blob/master/text/{n}.text',
                                          seq = k,
                                          qid = qid,
+                                         mapper = wikidata_id,
                                          qurl = a.get('concepturi',''),
                                          qlabel = a.get('label',''),
                                          qcountry = get_country(qid),
@@ -121,7 +128,8 @@ def main2(fin, fout):
             else:
                 writer.writerow(dict(title = t,
                                      filename = n,
-                                     verbete = f'https://github.com/cpdoc/dhbb/blob/master/text/{n}.text'))
+                                     verbete = f'https://github.com/cpdoc/dhbb/blob/master/text/{n}.text',
+                                     mapper = wikidata_id))
                     
     with open(f"{fout}.json", "w") as outfile:
         json.dump(result, outfile)
@@ -160,6 +168,6 @@ def main3(fin, fout):
         json.dump(result, outfile)
 
         
-main1(sys.argv[1], sys.argv[2])
+main2(sys.argv[1], sys.argv[2])
 
 
