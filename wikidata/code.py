@@ -49,7 +49,7 @@ def get_country(q):
     res, r = None, requests.get(url)
     r = r.json()
     r = r['entities'][q]['claims']
-    p = r.get('P17', None) or r.get('P495',None)
+    p = r.get('P17', None) or r.get('P495',None) or r.get('P27',None)
     if p:
         try:
             res = p[0]['mainsnak']['datavalue']['value']['id']
@@ -58,28 +58,28 @@ def get_country(q):
     return res
     
 
-def main1():
+def main1(fin, fout):
     entities = defaultdict(def_value)
     result = {}
 
-    with open('tematicos.txt') as l:
+    with open(fin) as l:
         files = [int(s.split('|')[0]) for s in l.readlines()]
         for fn in files:
             print('processing', fn)
             procfile(f'../raw/{fn}.raw', fn, entities)
     
-    with open("entidades.csv", "w", newline='') as csvfile:
+    with open(f"{fout}.csv", "w", newline='') as csvfile:
         writer = csv.writer(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_ALL)
 
         for k in entities.keys():
             print('processing', k)
             res = get(k[0],3)
-            result[k] = dict(freq = entities[k], wd = res)
+            result[f'{k[0]}_{k[1]}'] = dict(freq = entities[k], wd = res)
             for n,a in enumerate(res):
                 writer.writerow([k[0],k[1],len(entities[k]), '|'.join([str(i) for i in entities[k]]),
                                  n, a.get('id',''), a.get('concepturi',''), a.get('description',''),a.get('label','')])
 
-    with open("entidades.json", "w") as outfile:
+    with open(f"{fout}.json", "w") as outfile:
         json.dump(result, outfile)
 
 
@@ -88,10 +88,10 @@ def clean_title(t):
     return re.sub("\((\w|\.|\-| )+\)", "", t, re.UNICODE).strip()
     
 
-def main2():
+def main2(fin, fout):
     result = {}
 
-    with open('tematicos.txt') as ts, open("title-entidades.csv", "w", newline='') as csvfile:
+    with open(fin) as ts, open(f"{fout}.csv", "w", newline='') as csvfile:
 
         fields = ['title','filename','verbete','seq','qid','qurl','qlabel','qcountry','qdescr']
         writer = csv.DictWriter(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_ALL,
@@ -123,7 +123,7 @@ def main2():
                                      filename = n,
                                      verbete = f'https://github.com/cpdoc/dhbb/blob/master/text/{n}.text'))
                     
-    with open("title-entidades.json", "w") as outfile:
+    with open(f"{fout}.json", "w") as outfile:
         json.dump(result, outfile)
 
 
@@ -160,5 +160,6 @@ def main3(fin, fout):
         json.dump(result, outfile)
 
         
-main3(sys.argv[1], sys.argv[2])
+main1(sys.argv[1], sys.argv[2])
+
 
