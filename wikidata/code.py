@@ -97,17 +97,18 @@ def main2(fin, fout):
 
     with open(fin) as ts, open(f"{fout}.csv", "w", newline='') as csvfile:
 
-        fields = ['title','filename','verbete','seq','qid','qurl','qlabel','qcountry','qdescr']
+        fields = ['title','filename','verbete','seq','qid','mapper','qurl','qlabel','qcountry','qdescr']
         writer = csv.DictWriter(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_ALL,
                                 fieldnames = fields)
         writer.writeheader()
 
         for e in ts.readlines():
-            n, t = e.split('|')
-            t = t.strip()
+            r = e.split('|')
+            n = r[0]
+            t = r[1].strip()
             tc = clean_title(t)
 
-            wikidata_id = mapper.title_to_id(tc)
+            wikidata_id = mapper.title_to_id(tc.replace(" ","_"))
             
             print('processing', n, t)
             res = get(tc,3)
