@@ -1,9 +1,23 @@
+
 import csv
 import sys
+import random
+from urllib.parse import urlencode
 
 import sqlite3
 from wikimapper import WikiMapper
 
+# title = "Cícero_de_Vasconcelos"
+# mapper = WikiMapper("data/index_ptwiki-latest.db")
+# wikidata_id = mapper.title_to_id(title)
+# print(title, wikidata_id) 
+
+# pending: para cada tipo temático/biográfico, selecionar 25 com
+# wikidata e 25 sem wikidata. construir google docs com 4 abas, a
+# partir qid produzir links https://www.wikidata.org/wiki/Q10299222
+#
+# Para casos sem qid, podemos criar URL
+# https://www.google.com/search?q=CONSELHO+NACIONAL+DE+MINAS+E+METALURGIA&ie=UTF-8&oe=UTF-8
 
 conn = sqlite3.connect('data/index_ptwiki-latest.db')
 
@@ -14,7 +28,7 @@ def q(s):
     res = cursor.execute(query, (f"{s}",))
     return list(set([a[0] for a in res]))
     
-def read_tsv_file(file_path):
+def read_tsv(file_path):
     data = []
     with open(file_path, 'r', newline='', encoding='utf-8') as tsvfile:
         reader = csv.reader(tsvfile, delimiter='\t')
@@ -22,34 +36,64 @@ def read_tsv_file(file_path):
             data.append(row)
     return data
 
-data = read_tsv_file('dhbb-full.tsv')
-stops = 'de do da dos e o a das na nos em'
 
-for d in data:
-    try:
-        title = d[1]
-        if d[2] == 'biográfico':
-            tmp = title.split(',')
-            tmp = tmp[::-1]
-            tmp = [w.strip().lower().split(' ') for w in tmp]
-            res = []
-            for p in tmp:
-                p1 = [w for w in p if w not in stops.split(' ')]
-                res.append('%'.join(p1))
-            tmp = "%".join(res)
+def sample(regs, filename):
+    print("log",filename, len(regs))
+    assert len(regs) > 25
+    rs = random.sample(regs, 25)
+    out = []
+
+    for r in rs:
+        encoded_title = urlencode({"q": r[1]})
+        url_full = "https://www.google.com/search?{}".format(encoded_title)
+        fst = True
+
+        if len(r[4]) == 0:
+            line = [r[0], r[1], url_full, r[2], r[3], "-"]
+            out.append(line)
         else:
-            tmp = title.split(' ')
-            tmp = [w.strip().lower() for w in tmp]
-            tmp = [w for w in tmp if w not in stops.split(' ')]
-            tmp = [w for w in tmp if not w.startswith('(')]
-            tmp = "%".join(tmp)
-    except TypeError as e:
-        print(e, d, tmp)
-        sys.exit(1)
-    print(f"{d[0]}\t[{d[1]}]\t[{tmp}]\t{q(tmp)}\t{d[2]}")
+            for q in r[4]:
+                if fst:
+                    line = [r[0], r[1], url_full, r[2], r[3], f"https://www.wikidata.org/wiki/{q}"]
+                    fst = False
+                else:
+                    line = ["-" , "-" , "-"     , "-" , "-" , f"https://www.wikidata.org/wiki/{q}"]
+                out.append(line)
+        
+    with open(filename, 'w', newline='') as csvfile:
+        csv_writer = csv.writer(csvfile)
+        csv_writer.writerows(out)
+        
     
-    
-# title = "Cícero_de_Vasconcelos"
-# mapper = WikiMapper("data/index_ptwiki-latest.db")
-# wikidata_id = mapper.title_to_id(title)
-# print(title, wikidata_id) 
+
+data = read_tsv('dhbb-full.tsv')
+stops = 'de do da dos e o a das na nos em'.split(' ')
+
+regs = []
+for d in data:
+
+    title = d[1]
+    if d[2] == 'biográfico':
+        tmp = title.split(',')
+        tmp = tmp[::-1]
+        tmp = [w.strip().lower().split(' ') for w in tmp]
+        tmp = [item.strip() for sublist in tmp for item in sublist] # flat
+        tmp = [w for w in tmp if w not in stops and not w.startswith('(')]
+        tmp = "%".join(tmp)
+    else:
+        tmp = title.split(' ')
+        tmp = [w.strip().lower() for w in tmp]
+        tmp = [w for w in tmp if w not in stops and not w.startswith('(')]
+        tmp = "%".join(tmp)
+
+    qids = q(tmp)
+    r = (d[0], d[1], d[2], tmp, qids)
+    print("processing", r)            
+    regs.append(r)
+
+
+sample([r for r in regs if r[2] == 'biográfico' and len(r[4]) > 0], "bq.csv")
+sample([r for r in regs if r[2] == 'biográfico' and len(r[4]) == 0], "bnq.csv")
+sample([r for r in regs if r[2] == 'temático' and len(r[4]) == 0], "tnq.csv")
+sample([r for r in regs if r[2] == 'temático' and len(r[4]) > 0], "tq.csv")
+
